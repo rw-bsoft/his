@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_BHXX" table="WL_BHXX">
+			<id name="BHXH" type="java.lang.Long">
+            	<column name="BHXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="KFXH" type="java.lang.Integer" length="8" />
+        	<property name="BHZH" type="java.lang.Long" length="18" />
+        	<property name="WZXH" type="java.lang.Long" length="18" />
+        	<property name="CJXH" type="java.lang.Long" length="12" />
+        	<property name="DWXH" type="java.lang.Long" length="18" />
+        	<property name="BHSL" type="java.lang.Integer" length="6" />
+        	<property name="BHDJ" type="java.lang.Double" length="18" />
+        	<property name="SCPH" type="java.lang.String" length="30" />
+        	<property name="ZCZH" type="java.lang.String" length="40" />
+        	<property name="BHTM" type="java.lang.String" length="60" />
+        	<property name="BHZT" type="java.lang.Integer" length="1" />
+        	<property name="DJGH" type="java.lang.String" length="10" />
+        	<property name="DJSJ" type="date"  />
+        	<property name="BHBZ" type="java.lang.Integer" length="1" />
+        	<property name="KCXH" type="java.lang.Long" length="18" />
+        	<property name="SYKS" type="java.lang.Long" length="18" />
+        	<property name="DJXH" type="java.lang.Long" length="18" />
+        	<property name="BKBZ" type="java.lang.Integer" length="1" />
+        	<property name="SXRQ" type="date"  />
+        	<property name="QRBZ" type="java.lang.Integer" length="1" />
+        	<property name="QCBZ" type="java.lang.Integer" length="1" />
+        	<property name="TMXX" type="java.lang.String" length="240" />
+</class>
+</hibernate-mapping>

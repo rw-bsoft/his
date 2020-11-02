@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<!-- below are id loader. -->
+	<bean id="chis.abstractIdLoader" class="chis.source.ehrview.AbstractIdLoader"
+		abstract="true" />
+	<bean id="chis.healthRecordIdLoader" class="chis.source.ehrview.HealthRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.debilityChildrenIdLoader" class="chis.source.ehrview.DebilityChildrenIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.diabetesRecordIdLoader" class="chis.source.ehrview.DiabetesRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.diabetesFixGroupIdLoader" class="chis.source.ehrview.DiabetesFixGroupIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.diabetesInquireIdLoader" class="chis.source.ehrview.DiabetesInquireIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.diabetesRiskIdLoader" class="chis.source.ehrview.DiabetesRiskIdLoader"
+		parent="chis.abstractIdLoader" />
+	
+	<bean id="chis.healthCardIdLoader" class="chis.source.ehrview.HealthCardIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.empiLoader" class="chis.source.ehrview.EmpiLoader" />
+	<bean id="chis.hypertensionRecordIdLoader" class="chis.source.ehrview.HypertensionRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.hypertensionVisitPlanIdLoader" class="chis.source.ehrview.HypertensionVisitPlanIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.hypertensionRiskIdLoader" class="chis.source.ehrview.HypertensionRiskIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.pregnantRecordIdLoader" class="chis.source.ehrview.PregnantRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.tumourRecordIdLoader" class="chis.source.ehrview.TumourRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.vaccinateRecordIdLoader" class="chis.source.ehrview.VaccinateRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.psychosisRecordIdLoader" class="chis.source.ehrview.PsychosisRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.checkupRecordIdLoader" class="chis.source.ehrview.CheckupRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.rabiesRecordIdLoader" class="chis.source.ehrview.RabiesRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.schistospmaRecordIdLoader" class="chis.source.ehrview.SchistospmaRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.oldPeopleRecordIdLoader" class="chis.source.ehrview.OldPeopleRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.deformityRecordLimbIdLoader" class="chis.source.ehrview.DeformityRecordLimbIdLoader"
+		parent="chis.abstractIdLoader" >
+	</bean>
+	<bean id="chis.deformityRecordBrainIdLoader" class="chis.source.ehrview.DeformityRecordBrainIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.deformityRecordIntellectIdLoader" class="chis.source.ehrview.DeformityRecordIntellectIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.poorPeopleRecordIdLoader" class="chis.source.ehrview.PoorPeopleRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.healthCheckIdLoader" class="chis.source.ehrview.HealthCheckIdLoader"
+		parent="chis.abstractIdLoader" />	
+	<bean id="chis.IDR_ReportIdLoader" class="chis.source.ehrview.IDR_ReportIdLoader"
+		parent="chis.abstractIdLoader" >
+	</bean>	
+	<bean id="chis.tumourHighRiskIdLoader" class="chis.source.ehrview.TumourHighRiskIdLoader"
+		parent="chis.abstractIdLoader" >
+	</bean>	
+	<bean id="chis.tumourConfirmedIdLoader" class="chis.source.ehrview.TumourConfirmedIdLoader"
+		parent="chis.abstractIdLoader" >
+	</bean>	
+	<bean id="chis.tumourPatientReportCardIdLoader" class="chis.source.ehrview.TumourPatientReportCardIdLoader"
+		parent="chis.abstractIdLoader" >
+	</bean>	
+	
+	<bean id="chis.retiredVeteranCadresRecordIdLoader" class="chis.source.ehrview.RetiredVeteranCadresRecordIdLoader"
+		parent="chis.abstractIdLoader" />
+	
+	<bean id="chis.idsLoader" class="chis.source.ehrview.IdsLoader">
+		<property name="healthRecordIdLoader" ref="chis.healthRecordIdLoader" />
+		<property name="empiLoader" ref="chis.empiLoader" />
+	</bean>
+	<bean id="chis.wprogestationaskIdLoader" class="chis.source.ehrview.wprogestationaskIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.mprogestationaskIdLoader" class="chis.source.ehrview.mprogestationaskIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.jkxwrecordIdLoader" class="chis.source.ehrview.mprogestationaskIdLoader"
+		parent="chis.abstractIdLoader" />
+	<bean id="chis.highRiskRecordIdLoader" class="chis.source.ehrview.HighRiskRecordIdLoader"
+		parent="chis.abstractIdLoader" />		
+	<bean id="chis.hIVSRecordIdLoader" class="chis.source.ehrview.HIVSRecordIdLoader"
+		parent="chis.abstractIdLoader" /> 
+	<bean id="chis.mZFRecordIdLoader" class="chis.source.ehrview.MZFRecordIdLoader"
+		parent="chis.abstractIdLoader" /> 
+	<!-- 家医服务 -->	
+	<bean id="chis.JYFWRecordIdLoader" class="chis.source.ehrview.JYFWRecordIdLoader"
+		parent="chis.abstractIdLoader" /> 
+	<!-- 家医服务 -->	
+	<bean id="chis.FdsrRecordIdLoader" class="chis.source.ehrview.FdsrRecordIdLoader"
+		parent="chis.abstractIdLoader" /> 
+</beans>

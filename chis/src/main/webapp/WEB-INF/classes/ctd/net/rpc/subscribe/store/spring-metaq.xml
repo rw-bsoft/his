@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="metaqMessageSessionFactory" class="ctd.net.rpc.subscribe.MetaSessionFactory">
+		<property name="zkSessionTimeoutMs" value="30000" />
+		<property name="zkConnectionTimeoutMs" value="30000" />
+		<property name="zkSyncTimeMs" value="5000" />
+		<!--
+		<property name="zkConnect" value="127.0.0.1:2181"/>
+		-->
+	</bean>
+	
+	<bean id="metaMessageBodyConverter" 
+		class="com.taobao.metamorphosis.client.extension.spring.JavaSerializationMessageBodyConverter" />
+
+	<bean id="metaqTemplate" class="ctd.net.rpc.subscribe.LocalMetaqTemplate">
+		<property name="messageSessionFactory" ref="metaqMessageSessionFactory" />
+		<property name="messageBodyConverter" ref="metaMessageBodyConverter" />
+		<property name="shareProducer" value="true" />
+		<property name="defaultTopic" value="platform*"/>
+	</bean>
+	
+	<bean id="metaMessageStore" class="ctd.net.rpc.subscribe.store.MetaQMessageStore">
+		<property name="sessionFactory" ref="metaqMessageSessionFactory"/>
+		<property name="metaqTemplate" ref="metaqTemplate"/>
+		<property name="doSendLog" value="true"/>
+	</bean>
+
+	<bean id="rocketmqMessageStore" class="ctd.net.rpc.subscribe.store.RocketmqMessageStore">
+		 <property name="businessName" value="A1"/>   <!-- 集群的项目，配置该属性，且属性值不要相同 -->
+         <property name="mqConsumer">
+         <bean id="mqConsumer" class="com.alibaba.rocketmq.client.consumer.DefaultMQPushConsumer" destroy-method="shutdown">
+           <property name="namesrvAddr" value="127.0.0.1:9876"/>         <!--RocketMQ所在的服务器ip:9876-->
+         </bean>
+        </property>
+        <property name="mqProducer">
+          <bean class="com.alibaba.rocketmq.client.producer.DefaultMQProducer" init-method="start"
+           destroy-method="shutdown">
+           <property name="namesrvAddr" value="127.0.0.1:9876"/>         <!--RocketMQ所在的服务器ip:9876-->
+          <property name="producerGroup" value="dataSyncProducer"/>
+         </bean>
+       </property>
+    </bean>
+	
+	<bean id="messageCenter" class="ctd.util.message.MessageCenter">
+		<!--  <property name="store" ref="rocketmqMessageStore"/>-->
+		<property name="store" ref="metaMessageStore"/>                  <!--使用metaq用这个配置-->
+	</bean>
+	
+</beans>

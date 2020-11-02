@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.tr.schemas.MDC_TumourPatientBaseCase" table="MDC_TumourPatientBaseCase">
+			<id name="firstVisitId" type="java.lang.String">
+            	<column name="firstVisitId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="TPRCID" type="java.lang.String" length="16" />
+        	<property name="censusRegisterCheck" type="java.lang.String" length="1" />
+        	<property name="noCheckReason" type="java.lang.String" length="1" />
+        	<property name="liveAddressCheck" type="java.lang.String" length="1" />
+        	<property name="LANocheckReason" type="java.lang.String" length="1" />
+        	<property name="hight" type="java.lang.Integer" length="3" />
+        	<property name="smokingCode" type="java.lang.String" length="1" />
+        	<property name="passiveSmoking" type="java.lang.String" length="100" />
+        	<property name="smokingStartAge" type="java.lang.Integer" length="2" />
+        	<property name="stopSmokingAge" type="java.lang.Integer" length="2" />
+        	<property name="smokingNumber" type="java.lang.Integer" length="2" />
+        	<property name="tumourFamilyHistory" type="java.lang.String" length="1" />
+        	<property name="relationshipCode" type="java.lang.String" length="20" />
+        	<property name="tumourType" type="java.lang.String" length="20" />
+        	<property name="firstHaveSymptomDate" type="date"  />
+        	<property name="firstSeeDoctorDate" type="date"  />
+        	<property name="surgery1" type="java.lang.String" length="50" />
+        	<property name="surgery2" type="java.lang.String" length="50" />
+        	<property name="surgery3" type="java.lang.String" length="50" />
+        	<property name="chemotherapy1" type="java.lang.String" length="50" />
+        	<property name="chemotherapy2" type="java.lang.String" length="50" />
+        	<property name="chemotherapy3" type="java.lang.String" length="50" />
+        	<property name="radiotherapy1" type="java.lang.String" length="50" />
+        	<property name="radiotherapy2" type="java.lang.String" length="50" />
+        	<property name="radiotherapy3" type="java.lang.String" length="50" />
+        	<property name="firstSurgeryUnit" type="java.lang.String" length="50" />
+        	<property name="firstSurgeryDate" type="date"  />
+        	<property name="firstSurgeryNature" type="java.lang.String" length="1" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="用户组合字典" class="ComposeDictionary" navDic="platform.@manageUnit" 
+	searchField="a.manageUnitId" searchFieldEx="c.pyCode" iconCls="user"
+	entry="User b,UserRoleToken a,SYS_Personnel c" keyField="b.id" textField="c.personName" queryOnly="true"
+	filter="['and',['eq',['$','a.userId'],['$','b.id']],['eq',['$','a.userId'],['$','c.personId']]]">
+	<properties>
+		<p name="a.manageUnitId">manageUnit</p>
+		<p name="a.roleId">roleId</p>
+<!-- 		use in remote -->
+		<p name="c.pyCode">mCode</p>
+	</properties>
+</dic>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YK_YPKZZC" table="YK_YPKZZC">
+			<id name="CSDM" type="java.lang.String">
+            	<column name="CSDM"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="CSMC" type="java.lang.String" length="20" />
+        	<property name="QFYP" type="java.lang.String" length="1" />
+        	<property name="QFXZ" type="java.lang.String" length="1" />
+        	<property name="QFMK" type="java.lang.String" length="1" />
+        	<property name="TSXX" type="java.lang.String" length="100" />
+        	<property name="KZDJ" type="java.lang.String" length="1" />
+</class>
+</hibernate-mapping>

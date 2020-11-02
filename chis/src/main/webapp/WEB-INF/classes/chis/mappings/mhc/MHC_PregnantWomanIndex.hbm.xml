@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.mhc.schemas.MHC_PregnantWomanIndex"
+		table="MHC_PregnantWomanIndex">
+		<id name="indexId" type="java.lang.String">
+			<column name="indexId" />
+			<generator class="assigned" />
+		</id>
+		<property name="pregnantId" type="java.lang.String" length="30" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="indexType" type="java.lang.String" />
+		<property name="indexName" type="java.lang.String" length="100" />
+		<property name="exceptionDesc" type="java.lang.String"
+			length="200" />
+		<property name="indexValue" type="java.lang.String" />
+		<property name="ifException" type="java.lang.String" />
+		<property name="referenceValue" type="java.lang.String" />
+		<property name="indexSourceId" type="java.lang.String"
+			length="50" />
+		<property name="indexSourceType" type="java.lang.String" />
+		<property name="indexCode" type="java.lang.String" length="50" />
+		<property name="indexCreateDate" type="date" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="indexUnit" type="java.lang.String" length="20" />
+		<property name="visitId" type="java.lang.String" length="30" />
+    	<property name="createUser" type="java.lang.String" length="20"/>
+    	<property name="createDate" type="timestamp"/>
+		<property name="lastModifyUnit" type="java.lang.String" length="20"/>
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

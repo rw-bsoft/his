@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.pub.schemas.PUB_PelpleHealthDiagnose"
+		table="PUB_PelpleHealthDiagnose">
+		<id name="diagnoseId" type="java.lang.String">
+			<column name="diagnoseId" />
+			<generator class="assigned" />
+		</id>
+		<property name="recordId" type="java.lang.String" length="16" />
+		<property name="diagnoseName" type="java.lang.String" length="200" />
+		<property name="diagnoseNamePy" type="java.lang.String" length="100" />
+		<property name="ICD10" type="java.lang.String" length="50" />
+		<property name="diagnoseType" type="java.lang.String" length="20" />
+		<property name="inputDate" type="date" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="date" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

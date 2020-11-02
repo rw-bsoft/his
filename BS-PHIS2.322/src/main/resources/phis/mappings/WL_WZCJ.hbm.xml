@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_WZCJ" table="WL_WZCJ">
+    	<composite-id>
+			<key-property name="WZXH" column="WZXH" type="java.lang.Long"/>
+			<key-property name="CJXH" column="CJXH" type="java.lang.Long"/>
+		</composite-id>
+		
+    	<property name="WZJG" type="java.lang.Double" length="18" />
+    	<property name="SYZT" type="java.lang.Integer" length="1" />
+        <property name="LSJG" type="java.lang.Double" length="18" />
+        <property name="JGBL" type="java.lang.Double" length="18" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_LSKSZC" table="WL_LSKSZC">
+			<id name="JLXH" type="java.lang.Long">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="JZXH" type="java.lang.Long" length="18" />
+        	<property name="CWYF" type="java.lang.String" length="6" />
+        	<property name="KSDM" type="java.lang.Long" length="18" />
+        	<property name="KFXH" type="java.lang.Integer" length="8" />
+        	<property name="ZBLB" type="java.lang.Integer" length="8" />
+        	<property name="KCXH" type="java.lang.Long" length="18" />
+        	<property name="WZXH" type="java.lang.Long" length="18" />
+        	<property name="CJXH" type="java.lang.Long" length="12" />
+        	<property name="SCRQ" type="date"  />
+        	<property name="SXRQ" type="date"  />
+        	<property name="WZPH" type="java.lang.String" length="20" />
+        	<property name="WZSL" type="java.lang.Double" length="18" />
+        	<property name="WZJG" type="java.lang.Double" length="18" />
+        	<property name="WZJE" type="java.lang.Double" length="18" />
+        	<property name="ZRRQ" type="date"  />
+        	<property name="YKSL" type="java.lang.Double" length="18" />
+</class>
+</hibernate-mapping>

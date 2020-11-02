@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="WL_ZJMX" table="WL_ZJMX">
+		<id name="JLXH" type="java.lang.Long">
+			<column name="JLXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="ZJXH" type="java.lang.Long" length="18" />
+		<property name="KFXH" type="java.lang.Integer" length="8" />
+		<property name="ZBLB" type="java.lang.Long" length="8" />
+		<property name="WZXH" type="java.lang.Long" length="18" />
+		<property name="CJXH" type="java.lang.Long" length="12" />
+		<property name="ZBXH" type="java.lang.Long" length="18" />
+		<property name="ZYKS" type="java.lang.Long" length="18" />
+		<property name="GZL" type="java.lang.Integer" length="8" />
+		<property name="ZJFF" type="java.lang.Integer" length="6" />
+		<property name="ZJJE" type="java.lang.Double" length="18" />
+		<property name="ZCXZ" type="java.lang.Double" length="18" />
+		<property name="LJZJ" type="java.lang.Double" length="18" />
+		<property name="JLLX" type="java.lang.Integer" length="1" />
+		<property name="LYXH" type="java.lang.Long" length="18" />
+		<property name="ZJRQ" type="date"  />
+		<property name="ZXRQ" type="date"  />
+		<property name="ZJSM" type="java.lang.String" length="50" />
+	</class>
+</hibernate-mapping>

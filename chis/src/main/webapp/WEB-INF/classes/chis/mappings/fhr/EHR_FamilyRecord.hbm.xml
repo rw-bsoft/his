@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.fhr.schemas.EHR_FamilyRecord" table="EHR_FamilyRecord"> 
+			<id name="familyId" type="java.lang.String">
+			<column name="familyId" />
+			<generator class="assigned" />
+			</id>
+		<property name="ownerName" type="java.lang.String" length="20" />
+		<property name="familyHome" type="java.lang.String" length="50" />
+		<property name="familyAddr" type="java.lang.String" length="100" />
+		<property name="regionCode" type="java.lang.String" length="25" />
+		<property name="regionCode_text" type="java.lang.String" length="200" />		
+		<property name="totalNumber" type="java.lang.Integer"/>
+		<property name="liveNumber" type="java.lang.Integer"/>		
+		<property name="aveIncome" type="java.lang.String" length="2"/>
+		<property name="roomTypeCode" type="java.lang.String" length="6" />
+		<property name="roomArea" type="java.lang.Double" length="8"/>		
+		<property name="fuelType" type="java.lang.String" length="6" />	
+		<property name="cookAirTool" type="java.lang.String" length="6" />		
+		<property name="waterSourceCode" type="java.lang.String" length="6" />
+		<property name="washroom" type="java.lang.String" length="2" />
+		<property name="livestockColumn" type="java.lang.String" length="2" />		
+		<property name="economicalStatus" type="java.lang.String" length="2" />	
+		<property name="internetModeCode" type="java.lang.String" length="6" />		
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="manaDoctorId" type="java.lang.String" length="20" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp" />
+		
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="writeOffUser" type="java.lang.String" length="20" />
+		<property name="writeOffUnit" type="java.lang.String" length="20" />
+		<property name="writeOffDate" type="date" />
+		<property name="status" type="java.lang.String" length="1" />
+		<property name="memo" type="java.lang.String" length="500" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hy.schemas.MDC_HypertensionRisk"
+		table="MDC_HypertensionRisk">
+		<id name="riskId" type="java.lang.String">
+			<column name="riskId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="phrId" type="java.lang.String" length="32" />
+		<property name="constriction" type="java.lang.Integer" length="8" />
+		<property name="diastolic" type="java.lang.Integer" length="8" />
+		<property name="firstAssessmentDate" type="date" length="1" />
+		<property name="dataSource" type="java.lang.String" length="1" />
+		<property name="otherDataSource" type="java.lang.String" length="20" />
+		<property name="hospital" type="java.lang.String" length="1" />
+		<property name="stopDate" type="timestamp" />
+		<property name="riskiness" type="java.lang.String" length="64" />
+		<property name="age" type="java.lang.Integer" />
+		<property name="weight" type="java.lang.Double" length="8" />
+		<property name="height" type="java.lang.Double" length="8" />
+		<property name="bmi" type="java.lang.Double" length="8" />
+		<property name="waistLine" type="java.lang.Double" length="8" />
+		<property name="smokeCount" type="java.lang.Integer" />
+		<property name="smokeYears" type="java.lang.Integer" />
+		<property name="drinkTimes" type="java.lang.Integer" />
+		<property name="drinkCount" type="java.lang.Integer" />
+		<property name="saltCount" type="java.lang.Integer" />
+		<property name="tc" type="java.lang.Double" length="8" />
+		<property name="td" type="java.lang.Double" length="8" />
+		<property name="ldl" type="java.lang.Double" length="8" />
+		<property name="hdl" type="java.lang.Double" length="8" />
+		<property name="fbs" type="java.lang.Double" length="8" />
+		<property name="pbs" type="java.lang.Double" length="8" />
+		
+		<property name="effect" type="java.lang.String" length="1" />
+		<property name="status" type="java.lang.String" length="1" />
+		<property name="createFlag" type="java.lang.String" length="1" />
+		<property name="effectCase" type="java.lang.String" length="1" />
+		<property name="statusCase" type="java.lang.String" length="1" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="inputDate" type="date" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="registerUnit" type="java.lang.String" length="20" />
+		<property name="registerDate" type="date" />
+		<property name="registerUser" type="java.lang.String" length="20" />
+		<property name="closeUnit" type="java.lang.String" length="20" />
+		<property name="closeDate" type="date" />
+		<property name="closeUser" type="java.lang.String" length="20" />
+		<property name="confirmUnit" type="java.lang.String" length="20" />
+		<property name="confirmDate" type="date" />
+		<property name="confirmUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="date" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+		<property name="cancellationReason" type="java.lang.String" length="1" />
+		<property name="deadReason" type="java.lang.String" length="100" />
+		<property name="deadDate" type="date"/>
+	</class>
+</hibernate-mapping>

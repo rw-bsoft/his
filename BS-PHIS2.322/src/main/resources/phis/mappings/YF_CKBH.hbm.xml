@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YF_CKBH" table="YF_CKBH">
+		<composite-id>
+			<key-property name="YFSB" column="YFSB" type="java.lang.Long"/>
+			<key-property name="CKBH" column="CKBH" type="java.lang.Integer" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="CKMC" type="java.lang.String" length="12" />
+		<property name="XYQX" type="java.lang.Integer" length="1" />
+		<property name="ZYQX" type="java.lang.Integer" length="1" />
+		<property name="CYQX" type="java.lang.Integer" length="1" />
+		<property name="QYPB" type="java.lang.Integer" length="1" />
+		<property name="YXPB" type="java.lang.Integer" length="1" />
+		<property name="PDCF" type="java.lang.Long" length="18" />
+		<property name="JSJM" type="java.lang.String" length="20" />
+		<property name="MACDZ" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

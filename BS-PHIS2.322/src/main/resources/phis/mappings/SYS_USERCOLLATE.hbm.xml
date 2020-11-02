@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="SYS_USERCOLLATE" table="SYS_USERCOLLATE">
+			<id name="SBXH" type="java.lang.String">
+			<column name="SBXH" />
+			<generator class="assigned" />
+	    	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="YGDM" type="java.lang.String" length="20" />
+        	<property name="USERID" type="java.lang.String" length="20" />
+        	<property name="USERNAME" type="java.lang.String" length="80" />
+        	<property name="PASSWORD" type="java.lang.String" length="50" />
+        	<property name="MANAUNITID" type="java.lang.String" length="20" />
+        	<property name="MANAUNITID_TEXT" type="java.lang.String" length="100" />
+        	<property name="JOBID" type="java.lang.String" length="2" />
+        	<property name="JOBID_TEXT" type="java.lang.String" length="50" />
+</class>
+</hibernate-mapping>

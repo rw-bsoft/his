@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YK_RK02" table="YK_RK02">
+		<id name="SBXH" type="java.lang.Long">
+			<column name="SBXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="XTSB" type="java.lang.Long" length="18" />
+		<property name="RKFS" type="java.lang.Integer" length="4" />
+		<property name="RKDH" type="java.lang.Integer" length="6" />
+		<property name="YPXH" type="java.lang.Long" length="18" />
+		<property name="YPCD" type="java.lang.Long" length="18" />
+		<property name="YPCJ" type="java.lang.String" length="12" />
+		<property name="YPPH" type="java.lang.String" length="10" />
+		<property name="YPXQ" type="timestamp"  />
+		<property name="PFJG" type="java.lang.Double" length="12" />
+		<property name="LSJG" type="java.lang.Double" length="12" />
+		<property name="RKSL" type="java.lang.Double" length="10" />
+		<property name="HGSL" type="java.lang.Double" length="10" />
+		<property name="JHJG" type="java.lang.Double" length="12" />
+		<property name="JHHJ" type="java.lang.Double" length="12" />
+		<property name="YSDH" type="java.lang.Integer" length="6" />
+		<property name="YSGH" type="java.lang.String" length="10" />
+		<property name="YSRQ" type="timestamp"  />
+		<property name="FKGH" type="java.lang.String" length="10" />
+		<property name="PZHM" type="java.lang.String" length="150" />
+		<property name="FKRQ" type="timestamp"  />
+		<property name="FPHM" type="java.lang.String" length="10" />
+		<property name="TYPE" type="java.lang.Integer" length="6" />
+		<property name="ZRJE" type="java.lang.Double" length="10" />
+		<property name="SHHM" type="java.lang.String" length="12" />
+		<property name="PFJE" type="java.lang.Double" length="12" />
+		<property name="LSJE" type="java.lang.Double" length="12" />
+		<property name="BZLJ" type="java.lang.Double" length="12" />
+		<property name="KCSB" type="java.lang.Long" length="18" />
+		<property name="DJFS" type="java.lang.Integer" length="1" />
+		<property name="DJGS" type="java.lang.String" length="250" />
+		<property name="FKJE" type="java.lang.Double" length="12" />
+		<property name="YFJE" type="java.lang.Double" length="12" />
+		<property name="FKGS" type="java.lang.String" length="100" />
+		<property name="YPKL" type="java.lang.Double" length="3" />
+		<property name="JBYWBZ" type="java.lang.Integer" length="1" />
+		<property name="JHSBXH" type="java.lang.Long" length="18" />
+		<property name="CJHJ" type="java.lang.Double" length="12" />
+	</class>
+</hibernate-mapping>

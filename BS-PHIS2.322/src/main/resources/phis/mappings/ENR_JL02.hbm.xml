@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="ENR_JL02" table="ENR_JL02">
+			<id name="MXBH" type="java.lang.Long">
+            	<column name="MXBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JLBH" type="java.lang.Long" length="18" />
+        	<property name="XMBH" type="java.lang.Long" length="18" />
+        	<property name="XMMC" type="java.lang.String" length="20" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="XSMC" type="java.lang.String" length="20" />
+        	<property name="XMQZ" type="java.lang.String" length="4000" />
+        	<property name="KSLH" type="java.lang.Long" length="2" />
+        	<property name="JSLH" type="java.lang.Long" length="2" />
+        	<property name="HDBZ" type="java.lang.Long" length="1" />
+        	<property name="YMCLFS" type="java.lang.Long" length="1" />
+        	<property name="HHJG" type="java.lang.Long" length="1" />
+        	<property name="XGBZ" type="java.lang.Long" length="1" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YF_YFRB" table="YF_YFRB">
+        	
+			<composite-id>
+			<key-property name="YFSB" column="YFSB" type="java.lang.Long"/>
+			<key-property name="RBRQ" column="RBRQ" type="timestamp"/>
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="QSSJ" type="timestamp"  />
+        	<property name="ZZSJ" type="timestamp"  />
+        	<property name="BZ" type="java.lang.String" length="300" />
+</class>
+</hibernate-mapping>

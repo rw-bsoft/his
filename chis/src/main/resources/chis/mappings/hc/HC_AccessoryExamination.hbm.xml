@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class entity-name="chis.application.hc.schemas.HC_AccessoryExamination" table="HC_AccessoryExamination">
+		<id name="recordId" length="16" type="java.lang.String">
+			<column name="recordId"/>
+			<generator class="assigned"/>
+		</id>
+		<property name="healthCheck" length="16" type="java.lang.String"/>
+		
+		<property name="denture" type="java.lang.String"/>
+		<property name="leftUp" type="java.lang.Integer"/>
+		<property name="leftDown" type="java.lang.Integer"/>
+		<property name="rightUp" type="java.lang.Integer"/>
+		<property name="rightDown" type="java.lang.Integer"/>
+		<property name="leftUp2" type="java.lang.Integer"/>
+		<property name="leftDown2" type="java.lang.Integer"/>
+		<property name="rightUp2" type="java.lang.Integer"/>
+		<property name="rightDown2" type="java.lang.Integer"/>
+		<property name="leftUp3" type="java.lang.Integer"/>
+		<property name="leftDown3" type="java.lang.Integer"/>
+		<property name="rightUp3" type="java.lang.Integer"/>
+		<property name="rightDown3" type="java.lang.Integer"/>
+		<property name="hypodontia" type="java.lang.String"/>
+		<property name="decay" type="java.lang.String"/>
+		<property name="falsethooh" type="java.lang.String"/>
+		<property name="lip" type="java.lang.String"/>
+		<property name="pharyngeal" type="java.lang.String"/>
+		<property name="leftEye"  type="java.lang.Double"/>
+		<property name="rightEye"  type="java.lang.Double"/>
+		<property name="recLeftEye"  type="java.lang.Double"/>
+		<property name="recRightEye"  type="java.lang.Double"/>
+		<property name="hearing" type="java.lang.String"/>
+		<property name="motion" type="java.lang.String"/>
+		
+		<property name="hgb"  type="java.lang.Double"/>
+		<property name="wbc"  type="java.lang.Double"/>
+		<property name="platelet"  type="java.lang.Double"/>
+		<property name="bloodOther" type="java.lang.String"/>
+		<property name="proteinuria" type="java.lang.String"/>
+		<property name="glu" type="java.lang.String"/>
+		<property name="dka" type="java.lang.String"/>
+		<property name="oc" type="java.lang.String"/>
+		<property name="leu" type="java.lang.String"/>
+		<property name="urineOther" type="java.lang.String"/>
+		<property name="fbs"  type="java.lang.Double"/>
+		<property name="fbs2"  type="java.lang.Double"/>
+		<property name="fbs3"  type="java.lang.Double"/>
+		<property name="ecg" type="java.lang.String"/>
+		<property name="ecgText" type="java.lang.String"/>
+		<property name="malb"  type="java.lang.Double"/>
+		<property name="fob" type="java.lang.String"/>
+		<property name="hba1c" type="java.lang.Double"/>
+		<property name="hbsag" type="java.lang.String"/>
+		<property name="alt"  type="java.lang.Double"/>
+		<property name="ast"  type="java.lang.Double"/>
+		<property name="alb"  type="java.lang.Double"/>
+		<property name="tbil"  type="java.lang.Double"/>
+		<property name="dbil"  type="java.lang.Double"/>
+		<property name="cr"  type="java.lang.Double"/>
+		<property name="bun"  type="java.lang.Double"/>
+		<property name="kalemia"  type="java.lang.Double"/>
+		<property name="natremia"  type="java.lang.Double"/>
+		<property name="tc"  type="java.lang.Double"/>
+		<property name="tg"  type="java.lang.Double"/>
+		<property name="ldl"  type="java.lang.Double"/>
+		<property name="hdl"  type="java.lang.Double"/>
+		<property name="x"  type="java.lang.String"/>
+		<property name="xText"  type="java.lang.String"/>
+		<property name="b"  type="java.lang.String"/>
+		<property name="bText"  type="java.lang.String"/>
+		<property name="ps"  type="java.lang.String"/>
+		<property name="psText"  type="java.lang.String"/>
+		<property name="fuOther"  type="java.lang.String"/>
+		<property name="createUnit" length="20" type="java.lang.String"/>
+		<property name="createDate" type="timestamp"/>
+		<property name="createUser" length="20" type="java.lang.String"/>
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="xjc" type="java.lang.String" length="1" />
+	</class>
+</hibernate-mapping>

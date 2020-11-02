@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.mh.schemas.SQ_PACS"
+		table="SQ_PACS">
+		<id name="JLXH" type="java.lang.String">
+			<column name="JLXH" />
+			<generator class="assigned" />
+		</id>
+		<property name="YCBZ" type="int" length="2" />
+		<property name="JKKH" type="java.lang.String" length="20" />
+		<property name="GRBM" type="java.lang.String" length="30" />
+		<property name="EMPIID" type="java.lang.String" length="32" />
+		<property name="JCH" type="java.lang.String" length="40" />
+		<property name="JCYY" type="java.lang.String" length="40" />
+		<property name="ZDYY" type="java.lang.String" length="40" />
+		<property name="HZLX" type="int" length="2" />
+		<property name="YXH" type="java.lang.String" length="40" />
+		<property name="SQDH" type="java.lang.String" length="40" />
+		<property name="SBLX" type="java.lang.String" length="40" />
+		<property name="SBMX" type="java.lang.String" length="40" />
+		<property name="JCBWFF" type="java.lang.String" length="100" />
+		<property name="JCSJ" type="date" />		
+		<property name="JCZT" type="java.lang.String" length="20" />
+		<property name="SFYX" type="java.lang.String" length="10" />
+		<property name="BGMS" type="java.lang.String" length="4000" />
+		<property name="BGZD" type="java.lang.String" length="2000" />
+		<property name="BGJY" type="java.lang.String" length="1000" />
+		<property name="BGYS" type="java.lang.String" length="40" />
+		<property name="BGSJ" type="date" />	
+		<property name="SFRQ" type="date" />	
+		<property name="INTIME" type="date" />	
+		<property name="CZGH" type="java.lang.String" length="20" />
+		<property name="YRBZ" type="int" length="1" />
+
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

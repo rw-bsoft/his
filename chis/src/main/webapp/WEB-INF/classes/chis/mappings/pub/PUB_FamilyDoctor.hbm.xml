@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.pub.schemas.PUB_FamilyDoctor" table="PUB_FamilyDoctor">
+		<id name="autoId" type="java.lang.String">
+			<column name="autoId" />
+			<generator class="assigned" />
+		</id>
+		<property name="familyDoctorId" type="java.lang.String" length="20" />
+		<property name="familyTeamId" type="java.lang.String" length="30" />
+		<property name="status" type="java.lang.String" length="1" />
+	</class>
+</hibernate-mapping>

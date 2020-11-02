@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class entity-name="chis.application.hy.schemas.MDC_HypertensionSimilarityC" table="MDC_HypertensionSimilarityC">
+    <id name="recordId" type="java.lang.String">
+      <column name="recordId"/>
+      <generator class="assigned" />
+    </id>
+    <property name="similarityId" type="java.lang.String" length="16" />
+    <property name="phrId" type="java.lang.String" length="30" />
+    <property name="empiId" type="java.lang.String" length="32" />
+    <property name="hypertensionLevel" type="java.lang.Integer" />
+    <property name="constriction" type="java.lang.Integer" length="8" />
+	<property name="diastolic" type="java.lang.Integer" length="8" />
+    <property name="weight" type="java.lang.Double" length="8" />
+	<property name="height" type="java.lang.Double" length="8" />
+	<property name="bmi" type="java.lang.Double" length="8" />
+ 	<property name="manaUnitId" type="java.lang.String" length="20" />
+    <property name="inputUnit" type="java.lang.String" length="20" />
+    <property name="inputDate" type="date"  />
+    <property name="inputUser" type="java.lang.String" length="20" />
+    <property name="diagnosisUnit" type="java.lang.String" length="20" />
+    <property name="diagnosisDate" type="date"  />
+    <property name="diagnosisDoctor" type="java.lang.String" length="20" />
+    <property name="registerDate" type="date"  />
+  </class>
+</hibernate-mapping>

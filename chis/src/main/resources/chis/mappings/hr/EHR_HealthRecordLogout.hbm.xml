@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hr.schemas.EHR_HealthRecordLogout"
+		table="EHR_HealthRecord">
+		<id name="phrId" type="java.lang.String">
+			<column name="phrId" />
+			<generator class="assigned" />
+		</id>
+		
+		<property name="cancellationDate" type="date" />
+		<property name="cancellationReason" type="java.lang.String"
+			length="1" />
+		<property name="cancellationUser" type="java.lang.String" length="20" />
+		<property name="deadReason" type="java.lang.String" length="100" />
+		<property name="deadDate" type="date" />
+		<property name="status" type="java.lang.String" length="1" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

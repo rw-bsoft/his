@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="ZX_SMK_GA" table="ZX_SMK_GA">
+		<id name="centerCode" type="java.lang.String">
+			<column name="centerCode" />
+			<generator class="assigned" />
+		</id>
+		<property name="xm" type="java.lang.String" length="40" />
+		<property name="sfzh" type="java.lang.String" length="18" />
+		<property name="rynbid" type="java.lang.Double" />
+		<property name="xxdz"  type="java.lang.String" length="200"/>
+		<property name="ryid" type="java.lang.Double" />
+		<property name="xb" type="java.lang.String" length="1" />
+		<property name="cym" type="java.lang.String" length="40" />
+		<property name="hb" type="java.lang.String" length="1" />
+		<property name="hh" type="java.lang.String" length="32" />
+		<property name="yhzgx" type="java.lang.String" length="6" />
+		<property name="mz" type="java.lang.String" length="2" />
+		<property name="csdssxq" type="java.lang.String" length="6" />
+		<property name="csrq" type="java.lang.String" length="8" />
+		<property name="cssj" type="java.lang.String" length="6" />
+		<property name="pcs" type="java.lang.String" length="9" />
+		<property name="jlx" type="java.lang.String" length="12" />
+		<property name="mlph" type="java.lang.String" length="20" />
+		<property name="jgssxq" type="java.lang.String" length="6" />
+		<property name="jggjdq" type="java.lang.String" length="6" />
+		<property name="swrq" type="java.lang.String" length="8" />
+		<property name="qcrq" type="java.lang.String" length="8" />
+		<property name="hkszqx" type="java.lang.String" length="6" />
+		<property name="xzjd" type="java.lang.String" length="20" />
+		<property name="jcwh" type="java.lang.String" length="20" />
+		<property name="mlxz" type="java.lang.String" length="200" />
+		<property name="whcd" type="java.lang.String" length="2" />
+		<property name="hyzk" type="java.lang.String" length="2" />
+		<property name="ryzt" type="java.lang.String" length="2" />
+		<property name="zjgxsj" type="date" />
+	</class>
+</hibernate-mapping>

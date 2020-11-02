@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="monitorRpcUpload" class="ctd.net.rpc.subscribe.store.MonitorRpcUpload"/>
+
+	<bean id="monInfoJobDetailBean" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="name" value="monInfoJobDetailBean"/>
+		<property name="jobClass" value="ctd.monitor.ScheduleUpload"/>
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="store" value-ref="monitorRpcUpload"/>
+			</map>
+		</property>
+	</bean>
+	<!--  
+	<bean id="monInfoTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="monInfoJobDetailBean" />
+		<property name="cronExpression" value="0 0/15 * ? * * *" />
+	</bean>
+	-->
+	<bean id="monInfoTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="monInfoJobDetailBean" />
+		<property name="startDelay" value="60000" />
+		<property name="repeatInterval" value="6000" />
+		<property name="repeatCount" value="-1" />
+	</bean>
+	<bean id="scheduler"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean"
+		lazy-init="false" autowire="no" >
+		<property name="triggers">
+			<list>
+				<ref bean="monInfoTrigger"/>
+			</list>
+		</property>	
+	</bean>
+	<bean id="schedulerExecutor" class="ctd.util.task.schedule.ScheduleExecutor">
+		<property name="scheduler" ref="scheduler" />
+	</bean>
+</beans>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.mobileApp.schemas.MDC_HypertensionDetailApp"
+		table="MDC_HypertensionRecord">
+		<id name="phrId" type="java.lang.String">
+			<column name="phrId" />
+			<generator class="assigned" />
+		</id>
+		<property name="manaDoctorId" type="java.lang.String" length="20" />
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="recordSource" type="java.lang.String" length="1" />
+		<property name="riskLevel" type="java.lang.String" length="1" />
+		<property name="hypertensionGroup" type="java.lang.String" length="2" />
+		<property name="clinicAddress" type="java.lang.String" length="1" />
+		<property name="viability" type="java.lang.String" length="1" />
+		<property name="height" type="java.lang.Double" />
+		<property name="weight" type="java.lang.Double" />
+		<property name="constriction" type="java.lang.Integer" />
+		<property name="diastolic" type="java.lang.Integer" />
+		<property name="smoke" type="java.lang.String" length="1" />
+       	<property name="drink" type="java.lang.String" length="2" />
+       	
+		<property name="drinkOver" type="java.lang.String" length="1" />
+       	
+       	<property name="train" type="java.lang.String" length="2" />
+       	<property name="eateHabit"  type="java.lang.String" length="64"  />
+		<property name="familyHistroy" type="java.lang.String" length="64" />
+		<property name="familyHistroyOther" type="java.lang.String" length="100" />
+		<property name="riskiness" type="java.lang.String" length="64" />
+		<property name="complication" type="java.lang.String" length="64" />
+		<property name="targetHurt" type="java.lang.String" length="64" />
+		<property name="smokeCount" type="java.lang.Integer" />
+		<property name="drinkCount" type="java.lang.Integer" />
+		<property name="drinkTypeCode" type="java.lang.String" length="64"/>
+		
+		<property name="afterMedicine" type="java.lang.String" length="20"/>
+
+		<property name="SFNRXJGL" type="java.lang.String" length="2"/>
+		<property name="XJGLDXBH" type="java.lang.String" length="32"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MPI_DemographicInfo_S06" table="MPI_DemographicInfo">
+		<id name="empiId" type="java.lang.String" length="32">
+			<column name="empiId" />
+			<generator class="assigned" />
+		</id>
+    <property name="personName"      			type="java.lang.String" length="20"/>
+    <property name="phoneNumber"      			type="java.lang.String" length="20"/>
+    <property name="photo"      				type="java.lang.String" length="100"/>
+    <property name="idCard" 					type="java.lang.String" length="20"/>	
+    <property name="zipCode" 					type="java.lang.String" length="6"/>
+    <property name="address" 					type="java.lang.String" length="100"/>
+    <property name="contact"	 				type="java.lang.String" length="20" />
+	<property name="contactPhone"				type="java.lang.String" length="20" />
+    <property name="sexCode"           	  		type="java.lang.String" length="1"/>
+    <property name="registeredPermanent" 		type="java.lang.String" length="1"/>
+    <property name="bloodTypeCode"      		type="java.lang.String" length="1"/>
+    <property name="homePlace"           		type="java.lang.String" length="100"/>
+    <property name="mobileNumber"      		  	type="java.lang.String" length="20"/>
+    <property name="email"            		  	type="java.lang.String" length="30"/>
+    <property name="birthday"         			type="date"/>
+    <property name="nationalityCode"  	  		type="java.lang.String" length="3"/>
+    <property name="nationCode"     	   		type="java.lang.String" length="2"/>
+    <property name="rhBloodCode"      			type="java.lang.String" length="1"/>
+    <property name="maritalStatusCode" 		  	type="java.lang.String" length="1"/>
+    <property name="startWorkDate"      	  	type="date"/>
+    <property name="workCode"           		type="java.lang.String" length="3"/>
+    <property name="educationCode"      		type="java.lang.String" length="2"/>
+    <property name="insuranceCode"       		type="java.lang.String" length="2"/>
+    <property name="createUnit"         		type="java.lang.String" length="16"/>
+    <property name="createUser"        	  		type="java.lang.String" length="20"/>
+    <property name="createTime"           		type="date"/>
+    <property name="lastModifyUnit"     		type="java.lang.String" length="16"/>
+    <property name="lastModifyTime"    	  		type="date"/>
+    <property name="lastModifyUser"    	  		type="java.lang.String" length="20"/>
+    <property name="status"             		type="java.lang.String" length="1"/>
+    <property name="workPlace"   				type="string" 			length="50" />
+    <property name="insuranceType"				type="string" 			length="2"/>
+     <property name="insuranceText"				type="string" 			length="50"/>
+</class>
+</hibernate-mapping>

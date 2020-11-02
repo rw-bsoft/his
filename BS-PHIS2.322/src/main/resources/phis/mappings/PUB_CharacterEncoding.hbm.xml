@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="PUB_CharacterEncoding" table="PUB_CharacterEncoding">
+			<id name="codeId" type="java.lang.String">
+            	<column name="codeid"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="hzCode" type="java.lang.String"  />
+        	<property name="pyCode" type="java.lang.String"  />
+        	<property name="sjCode" type="java.lang.String"  />
+            <property name="jhCode" type="java.lang.String" />
+        	<property name="jxCode" type="java.lang.String"  />
+        	<property name="wbCode" type="java.lang.String"  />
+        	<property name="bhCode" type="java.lang.String"  />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class entity-name="chis.application.idr.schemas.IDR_Report" table="IDR_Report">
+        <id name="RecordID" type="java.lang.Long">
+            <column name="RecordID"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="empiId" type="java.lang.String" length="32"/>
+        <property name="phrId" type="java.lang.String" length="30"/>
+        <property name="cardCategory" type="java.lang.String" length="1"/>
+        <property name="parentsName" type="java.lang.String" length="30"/>
+        <property name="fullAge" type="java.lang.String"/>
+        <property name="patientJob" type="java.lang.String" length="2"/>
+        <property name="otherPatientJob" type="java.lang.String" length="20"/>
+        <property name="birthPlace" type="java.lang.String" length="1"/>
+        <property name="casemixCategory1" type="java.lang.String" length="1"/>
+        <property name="casemixCategory2" type="java.lang.String" length="1"/>
+        <property name="dateAccident" type="timestamp"/>
+        <property name="diagnosedDate" type="timestamp"/>
+        <property name="deathDate" type="date"/>
+        <property name="categoryAInfectious" type="java.lang.String" length="4"/>
+        <property name="categoryBInfectious" type="java.lang.String" length="4"/>
+        <property name="categoryCInfectious" type="java.lang.String" length="4"/>
+        <property name="viralHepatitis" type="java.lang.String" length="4"/>
+        <property name="anthrax" type="java.lang.String" length="4"/>
+        <property name="dysentery" type="java.lang.String" length="4"/>
+        <property name="phthisis" type="java.lang.String" length="4"/>
+        <property name="typhia" type="java.lang.String" length="4"/>
+        <property name="syphilis" type="java.lang.String" length="4"/>
+        <property name="malaria" type="java.lang.String" length="4"/>
+        <property name="otherCategoryInfectious" type="java.lang.String" length="20"/>
+        <property name="correctionProblems" type="java.lang.String" length="20"/>
+        <property name="returnReason" type="java.lang.String" length="20"/>
+        <property name="reportUnit" type="java.lang.String" length="70"/>
+        <property name="unitPhone" type="java.lang.String" length="20"/>
+        <property name="reportDoctor" type="java.lang.String" length="20"/>
+        <property name="fillDate" type="timestamp"/>
+        <property name="comments" type="java.lang.String" length="200"/>
+        <property name="status" type="java.lang.String" length="1"/>
+        <property name="createUnit" type="java.lang.String" length="20"/>
+        <property name="createDate" type="timestamp"/>
+        <property name="createUser" type="java.lang.String" length="20"/>
+        <property name="lastModifyUser" type="java.lang.String" length="20"/>
+        <property name="lastModifyUnit" type="java.lang.String" length="20"/>
+        <property name="lastModifyDate" type="timestamp"/>
+        <property name="cancellationUser" type="java.lang.String" length="20"/>
+        <property name="cancellationDate" type="date"/>
+        <property name="cancellationUnit" type="java.lang.String" length="20"/>
+        <property name="cancellationReason" type="java.lang.String" length="1"/>
+        <property name="deadReason" type="java.lang.String" length="100"/>
+        <property name="MS_BRZD_JLBH" type="java.lang.String" length="20"/>
+		<property name="icd10" type="java.lang.String" length="20"/>
+        <property name="finishStatus" type="java.lang.String" length="1"/>
+        <property name="finishDate" type="date"/>
+        <property name="finishReason" type="java.lang.String" length="200"/>
+       <property name="reportUnitName" type="java.lang.String" length="50"/>
+      
+    </class>
+</hibernate-mapping>

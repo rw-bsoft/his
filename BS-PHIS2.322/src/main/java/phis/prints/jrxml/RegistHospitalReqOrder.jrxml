@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RegistHospitalReqOrder" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="194" y="28" width="158" height="32"/>
+				<textElement textAlignment="Center">
+					<font fontName="黑体" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[住院转诊申请单]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="278" splitType="Stretch">
+			<staticText>
+				<reportElement x="21" y="12" width="156" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[北京市儿童医院：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="32" width="105" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[现有我社区患者]]></text>
+			</staticText>
+			<line>
+				<reportElement x="127" y="51" width="110" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="241" y="32" width="296" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[因病情需要，需转入贵院，请予以接诊。请接诊医]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="52" width="331" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[生填写回执单，交我中心双向转诊管理办公室。]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="132" y="32" width="105" height="19"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{BRXM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="72" width="65" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[患者性别]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="85" y="72" width="35" height="19"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{BRXB}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="72" width="31" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[年龄]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="151" y="72" width="25" height="19"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{NL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="179" y="72" width="63" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[家庭地址]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="242" y="72" width="157" height="19"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{LXDZ}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="399" y="72" width="62" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[联系电话]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="461" y="72" width="93" height="19"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{LXDH}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="92" width="65" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[初步诊断]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="85" y="92" width="149" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{MSZD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="239" y="92" width="70" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[转诊原因]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="309" y="92" width="245" height="19"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ZZYY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="20" y="113" width="78" height="19"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[病情描述：]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="98" y="114" width="456" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{BQMS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="20" y="132" width="78" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[治疗经过：]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="98" y="134" width="456" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ZLJG}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="309" y="154" width="135" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[经治医生（签字）：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="444" y="156" width="100" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{SQYS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="174" width="78" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[联系电话：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="98" y="174" width="100" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{YSDH}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="309" y="215" width="209" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[社区卫生服务中心（转诊章）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="256" width="78" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[申请日期：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="98" y="256" width="133" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ZRRQ}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="85" y="91" width="35" height="1"/>
+			</line>
+			<line>
+				<reportElement x="151" y="91" width="28" height="1"/>
+			</line>
+			<line>
+				<reportElement x="242" y="91" width="157" height="1"/>
+			</line>
+			<line>
+				<reportElement x="461" y="91" width="74" height="1"/>
+			</line>
+			<line>
+				<reportElement x="86" y="112" width="145" height="1"/>
+			</line>
+			<line>
+				<reportElement x="309" y="111" width="226" height="1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+</jasperReport>

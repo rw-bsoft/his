@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YK_FK01" table="YK_FK01">
+			<id name="FKJL" type="java.lang.Long">
+            	<column name="FKJL"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="YKSB" type="java.lang.Long" length="18" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="PZHM" type="java.lang.String" length="10" />
+        	<property name="FKGH" type="java.lang.String" length="10" />
+        	<property name="FKSJ" type="timestamp"/>
+        	<property name="FKJE" type="java.lang.Double" length="12" />
+</class>
+</hibernate-mapping>

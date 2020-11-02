@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="WL_WXBG" table="WL_WXBG">
+		<id name="WXXH" type="java.lang.Long">
+			<column name="WXXH" />
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="18" />
+		<property name="KFXH" type="java.lang.Integer" length="8" />
+		<property name="ZBXH" type="java.lang.Long" length="18" />
+		<property name="WXBH" type="java.lang.String" length="20" />
+		<property name="WZXH" type="java.lang.Long" length="12" />
+		<property name="CJXH" type="java.lang.Long" length="18" />
+		<property name="SYKS" type="java.lang.Long" length="18" />
+		<property name="FZGH" type="java.lang.String" length="10" />
+		<property name="SQGH" type="java.lang.String" length="10" />
+		<property name="LXDH" type="java.lang.String" length="20" />
+		<property name="QYRQ" type="date" />
+		<property name="SXRQ" type="date" />
+		<property name="GZMS" type="java.lang.String" length="200" />
+		<property name="JJCD" type="java.lang.Integer" length="1" />
+		<property name="GZXZ" type="java.lang.String" length="200" />
+		<property name="GZXX" type="java.lang.String" length="200" />
+		<property name="GZYY" type="java.lang.String" length="200" />
+		<property name="GZNR" type="java.lang.String" length="200" />
+		<property name="SBXZ" type="java.lang.Integer" length="2" />
+		<property name="WXLB" type="java.lang.Integer" length="1" />
+		<property name="WXDW" type="java.lang.Long" length="18" />
+		<property name="WXRC" type="java.lang.Integer" length="4" />
+		<property name="KSRQ" type="date" />
+		<property name="JSRQ" type="date" />
+		<property name="WXSJ" type="java.lang.Double" length="8" />
+		<property name="WXFY" type="java.lang.Double" length="18" />
+		<property name="CLFY" type="java.lang.Double" length="18" />
+		<property name="ZJFY" type="java.lang.Double" length="18" />
+		<property name="FPHM" type="java.lang.String" length="30" />
+		<property name="TJRQ" type="date" />
+		<property name="SHGH" type="java.lang.String" length="10" />
+		<property name="SHRQ" type="date" />
+		<property name="YSGH" type="java.lang.String" length="10" />
+		<property name="YSRQ" type="date" />
+		<property name="ZFGH" type="java.lang.String" length="10" />
+		<property name="ZFRQ" type="date" />
+		<property name="WXZT" type="java.lang.Integer" length="1" />
+		<property name="GLXH" type="java.lang.Long" length="18" />
+		<property name="GLLB" type="java.lang.Integer" length="1" />
+		<property name="BZXX" type="java.lang.String" length="200" />
+		<property name="JSCD" type="java.lang.Integer" length="1" />
+		<property name="MYCD" type="java.lang.Integer" length="1" />
+	</class>
+</hibernate-mapping>

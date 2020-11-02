@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_GNJ" table="GY_GNJ">
+			<id name="GROUPID" type="java.lang.String">
+            	<column name="GROUPID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="GROUPNAME" type="java.lang.String" length="60" />
+        	<property name="SYBZ" type="java.lang.Integer" length="1" />
+        	<property name="QTTJ" type="java.lang.Integer" length="8" />
+</class>
+</hibernate-mapping>

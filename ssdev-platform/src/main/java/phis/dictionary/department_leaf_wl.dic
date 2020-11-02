@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="部门_leaf_wl" searchField="ORGANIZCODE" entry="SYS_Office"
+	class="TableDictionary" supportRemote="false"
+	filter="['and',['and',['notin',['$','OFFICECODE'],
+		[
+			['concat',['s','select PARENTID from SYS_Office where ORGANIZCODE != PARENTID and LOGOFF=0 and ORGANIZCODE='],'\'',['$','%user.manageUnit.ref'],'\'']
+		]
+	],['eq',['$','ORGANIZCODE'],['$','%user.manageUnit.ref']]],['ne',['$','LOGOFF'],['s','1']]]"
+	keyField="ID" textField="OFFICENAME" CodeRule="3,3,2" queryOnly="true">
+	<properties>
+		<p name="ORGANIZCODE" />
+		<p name="PYCODE" />
+	</properties>
+</dic>

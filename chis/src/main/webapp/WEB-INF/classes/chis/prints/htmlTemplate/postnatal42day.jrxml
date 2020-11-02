@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="postnatal42day" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ae66eb1e-8f19-4354-a8fb-686c0a4ab12d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="263"/>
+	<parameter name="healthState" class="java.lang.String"/>
+	<parameter name="psychologyState" class="java.lang.String"/>
+	<parameter name="other" class="java.lang.String"/>
+	<parameter name="checkDoctor" class="java.lang.String"/>
+	<parameter name="year" class="java.lang.String"/>
+	<parameter name="month" class="java.lang.String"/>
+	<parameter name="day" class="java.lang.String"/>
+	<parameter name="constriction" class="java.lang.String"/>
+	<parameter name="diastolic" class="java.lang.String"/>
+	<parameter name="breastText" class="java.lang.String"/>
+	<parameter name="lochiaText" class="java.lang.String"/>
+	<parameter name="uterusText" class="java.lang.String"/>
+	<parameter name="woundText" class="java.lang.String"/>
+	<parameter name="classificationText" class="java.lang.String"/>
+	<parameter name="suggestionText" class="java.lang.String"/>
+	<parameter name="reason" class="java.lang.String"/>
+	<parameter name="doccol" class="java.lang.String"/>
+	<parameter name="personName" class="java.lang.String"/>
+	<parameter name="breast" class="java.lang.String"/>
+	<parameter name="lochia" class="java.lang.String"/>
+	<parameter name="uterus" class="java.lang.String"/>
+	<parameter name="wound" class="java.lang.String"/>
+	<parameter name="classification" class="java.lang.String"/>
+	<parameter name="suggestion_1" class="java.lang.String"/>
+	<parameter name="suggestion_2" class="java.lang.String"/>
+	<parameter name="suggestion_3" class="java.lang.String"/>
+	<parameter name="suggestion_4" class="java.lang.String"/>
+	<parameter name="treat" class="java.lang.String"/>
+	<parameter name="pregnantId" class="java.lang.String"/>
+	<background>
+		<band height="562" splitType="Stretch">
+			<textField>
+				<reportElement uuid="f75ee618-ea67-47f1-9fc4-b10df4171d93" x="101" y="84" width="454" height="19"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{checkDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3fb0121a-501d-4e1f-bc78-5a386f59227b" x="529" y="475" width="15" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{treat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b8cab078-8426-4bf1-8e52-102a7668f864" x="102" y="263" width="84" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[1未见异常  2异常]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="15a46a73-74df-4041-a172-d46d4fb171d7" x="380" y="55" width="41" height="26"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[编号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71897b79-af8e-4504-91d2-2dfc8a5ea99e" x="102" y="283" width="84" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[1未见异常  2异常]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6249358b-8fac-4a17-8b7c-77107351c96d" x="102" y="304" width="84" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[1未见异常  2异常]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4241300a-866a-491b-b30e-0e013ea00754" x="529" y="265" width="15" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{lochia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c602466b-8a6c-4ce8-b6a3-f3617380bed2" x="529" y="373" width="15" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{classification}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="40ba5a8b-ebfb-4fd2-9653-6d69beac803e" x="529" y="285" width="15" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{uterus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="adaecfbb-9dbc-4640-84c0-c54e07d98844" x="421" y="55" width="134" height="26"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pregnantId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7f6e794a-feff-427a-8c3e-a34ecbabd498" x="1" y="323" width="100" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[其  他]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="0890f9cd-4e5d-47cc-9fa5-765214ca8a5e" x="520" y="263" width="36" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="0e529054-0277-48e6-9400-45280c451105" x="101" y="535" width="454" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{checkDoctor_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fcedcdef-2b64-4429-92df-93c80e6b3d80" x="177" y="513" width="341" height="18"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{doccol}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="c55454d3-f769-458b-b1dd-bdc39b089c82" x="102" y="403" width="453" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="fbc8c933-89da-4d9f-a74b-ec05144e1edd" x="520" y="243" width="35" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="98bdc9c2-6b2b-4cfa-b9a6-c0cf3034e25b" x="529" y="410" width="15" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{suggestion_4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="92a798df-f1e0-4933-bdeb-d918ce9c4914" x="186" y="243" width="334" height="16"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{breastText}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2e6cbadd-908e-4555-abf6-3e29b5fc69b1" x="1" y="363" width="100" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[分  类]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c6735559-6664-4d46-8429-628557f7edaa" x="186" y="263" width="334" height="16"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{lochiaText}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dba234f1-7002-4002-aea5-db61daaa1029" x="101" y="323" width="454" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{other}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="3b027392-8fc5-44f0-9c28-03e480d34e26" x="1" y="223" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[血  压]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="841774e5-cf39-4298-9e77-19fc4c64cc17" x="200" y="373" width="320" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{classificationText}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a3caa5c9-8f1a-4202-a508-d7bfb00d4d80" x="187" y="440" width="333" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{suggestionText}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8f88ff7f-059c-4215-b3b0-76cf9b5da22d" x="1" y="263" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[恶  露]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="43e385f2-c7a6-49b2-8eec-92b05a185476" x="1" y="243" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[乳  房]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="184ef209-b256-47e5-be4b-171d3f8d1e6e" x="101" y="103" width="454" height="60"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{healthState}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="dd6799e1-fc81-43e5-bc71-ab3b3ac1270e" x="1" y="84" width="100" height="19"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[随访日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="049b524d-cc52-4904-9976-74b2c38c7c77" x="102" y="464" width="74" height="71"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[1结案
+2转诊　
+     原因：
+     机构及科室]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="6b83d2a7-5c3e-43f4-ad90-00e9734a1322" x="101" y="163" width="454" height="60"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{psychologyState}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="46239a02-774a-4411-af5e-8198578f96f3" x="186" y="303" width="334" height="16"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{woundText}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="90ff08e8-01a9-4383-a2de-16d593e6c1c5" x="177" y="493" width="341" height="18"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{reason}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="fb4e8266-03b3-4c1b-9383-38edb5f71064" x="0" y="0" width="555" height="42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[产后42天健康检查记录表]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b79a8bff-6199-42cf-a5ba-75a4feeede32" x="102" y="224" width="49" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{constriction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="82a27a1a-6522-46ca-9a03-5a048fa2188a" x="529" y="305" width="15" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{wound}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="386d6aef-2a65-4178-b570-e01b909185cf" x="469" y="410" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8542db32-d25a-420b-b0af-dea2395250e5" x="102" y="404" width="84" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[1性保健
+2避孕
+3婴儿喂养及营养
+4其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9e42b8e1-94be-49f9-a7f6-3e2562847b43" x="1" y="463" width="100" height="72"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[处  理]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="48061dd6-25e0-45ed-9aac-f9ba56cb7b7d" x="520" y="283" width="36" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="b3bf26ca-8914-4fd3-b665-52c7db5e00a3" x="102" y="243" width="84" height="20"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[1未见异常  2异常]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="e57cb563-04ff-493a-964f-a66db823e281" x="520" y="303" width="35" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="dbb0e8ca-8c55-4c17-88db-3ed8ecf656ad" x="1" y="535" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[随访医生签名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="51272c1c-0123-467c-a961-d318423a1443" x="1" y="163" width="100" height="60"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[一般心理状况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="386d6aef-2a65-4178-b570-e01b909185cf" x="494" y="410" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="820607f6-91fc-4b67-87c3-1b1196212648" x="44" y="55" width="107" height="26"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{personName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e9336e40-7531-4b99-8f21-bb7f402278ff" x="1" y="303" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[伤  口]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7cd8c340-f6a6-4874-9d22-29450fd4fc4c" x="1" y="403" width="100" height="60"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[指  导]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="154a028c-4307-4e06-8694-b9d90dad135d" x="504" y="410" width="15" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{suggestion_3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5fba008c-d86f-4683-ab44-2ff09f6114df" x="1" y="103" width="100" height="60"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[一般健康情况]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="24367ea9-3a59-4c3c-a47c-6686030460f8" x="555" y="223" width="1" height="100"/>
+			</line>
+			<staticText>
+				<reportElement uuid="386d6aef-2a65-4178-b570-e01b909185cf" x="151" y="223" width="13" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="84f2c1ae-7c04-4049-9eb8-912bbbdb8e7b" x="1" y="283" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[子  宫]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a32ef0d7-5196-49fa-beff-2efa2defa2c9" x="102" y="363" width="97" height="40"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[1已恢复     2未恢复]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="05bc46a8-b88b-4f8d-9f6b-d245d33a9095" x="164" y="224" width="52" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{diastolic}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="714cd0e3-7ed6-4e06-85b1-5355f7f03f39" x="555" y="363" width="1" height="172"/>
+			</line>
+			<staticText>
+				<reportElement uuid="cbf3db64-5488-4402-a3d4-6728c80a2096" x="1" y="55" width="43" height="26"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="e5b380fa-b349-48d4-aee0-f7eae9fa1387" x="102" y="463" width="453" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="6e048280-14fe-455c-b285-27c5c27f92dc" x="529" y="245" width="15" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{breast}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e1ce8d97-2395-435d-98f0-6d4cccbd5a7f" x="216" y="223" width="38" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[mmHg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="386d6aef-2a65-4178-b570-e01b909185cf" x="519" y="410" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1d3de8f9-50ea-4be0-be7f-384e04fb4b73" x="454" y="410" width="15" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{suggestion_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="80db2bd9-226f-404b-afbd-df6a77434f82" x="186" y="283" width="334" height="16"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{uterusText}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e3054422-f931-460f-bbfc-84cb32ba7b72" x="479" y="410" width="15" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{suggestion_2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+</jasperReport>

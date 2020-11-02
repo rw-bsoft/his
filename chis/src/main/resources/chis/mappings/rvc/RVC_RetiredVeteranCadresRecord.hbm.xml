@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.rvc.schemas.RVC_RetiredVeteranCadresRecord" table="RVC_RetiredVeteranCadresRecord">
+		<id name="phrId" type="java.lang.String">
+			<column name="phrId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="manaDoctorId" type="java.lang.String" length="20" />
+		<property name="manaUnitId" type="java.lang.String" length="22" />
+		<property name="onceDisease" type="java.lang.String" length="50" />
+		<property name="other" type="java.lang.String" length="200" />
+		<property name="surgicalHistory" type="java.lang.String" length="1" />
+		<property name="rtaumaHistory" type="java.lang.String" length="1" />
+		<property name="traumaPsychic" type="java.lang.String" length="1" />
+		<property name="allergicHistory" type="java.lang.String" length="1" />
+		<property name="sleepTime" type="java.lang.Integer"  />
+		<property name="insomnia" type="java.lang.String" length="100" />
+		<property name="acography" type="java.lang.String" length="255" />
+		<property name="smoke" type="java.lang.String" length="1" />
+		<property name="tea" type="java.lang.String" length="1" />
+		<property name="drink" type="java.lang.String" length="1" />
+		<property name="coffee" type="java.lang.String" length="1" />
+		<property name="menophania" type="date"  />
+		<property name="period" type="java.lang.Integer"  />
+		<property name="leucorrhea" type="java.lang.String" length="20" />
+		<property name="menopause" type="date"  />
+		<property name="parity" type="java.lang.Integer"  />
+		<property name="mature" type="java.lang.Integer"  />
+		<property name="prematureDelivery" type="java.lang.Integer"  />
+		<property name="abortion" type="java.lang.Integer"  />
+		<property name="familyDiseasesHistory" type="java.lang.String" length="255" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createUnit" type="java.lang.String" length="22" />
+		<property name="createDate" type="timestamp"  />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="22" />
+		<property name="lastModifyDate" type="timestamp"  />
+		<property name="status" type="java.lang.String" length="1" />
+		<property name="planTypeCode" type="java.lang.String" length="1" />
+		<property name="cancellationUser" type="java.lang.String" length="20" />
+		<property name="cancellationDate" type="date" />
+		<property name="cancellationUnit" type="java.lang.String" length="20" />
+		<property name="cancellationReason" type="java.lang.String" length="1" />
+		<property name="deadReason" type="java.lang.String" length="100" />
+	</class>
+</hibernate-mapping>

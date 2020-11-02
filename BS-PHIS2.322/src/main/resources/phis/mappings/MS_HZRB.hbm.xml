@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="MS_HZRB" table="MS_HZRB">
+		<composite-id>
+			<key-property name="CZGH" column="CZGH" type="java.lang.String" length="10"/>
+			<key-property name="JZRQ" column="JZRQ" type="timestamp" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="QZPJ" type="java.lang.String" length="255" />
+		<property name="ZJJE" type="java.lang.Double" length="12" />
+		<property name="ZPJE" type="java.lang.Double" length="12" />
+		<property name="ZFZF" type="java.lang.Double" length="12" />
+		<property name="QTYS" type="java.lang.Double" length="2" />
+		<property name="JJZFJE" type="java.lang.Double" length="2" />
+		<property name="HBWC" type="java.lang.Double" length="2" />
+		<property name="HZRQ" type="timestamp" />
+		<property name="FPZS" type="java.lang.Integer" length="8" />
+		<property name="MZLB" type="java.lang.Long" length="18" />
+		<property name="ZFFP" type="java.lang.String" length="255" />
+		<property name="ZFJE" type="java.lang.Double" length="12" />
+		<property name="XJJE" type="java.lang.Double" length="12" />
+		<property name="ZFZS" type="java.lang.Integer" length="8" />
+		<property name="YSQTFB" type="java.lang.String" length="100" />
+		<property name="ZFFSHJ" type="java.lang.Double" length="12" />
+		<property name="NHZFHJ" type="java.lang.Double" length="12" />
+		<property name="YBZFHJ" type="java.lang.Double" length="12" />
+		<property name="NHJZ" type="java.lang.Double" length="12" />
+		<property name="YBJZ" type="java.lang.Double" length="12" />
+		<property name="JZJEST" type="java.lang.Double" length="12" />
+		<property name="JZZE" type="java.lang.Double" length="12" />
+		<property name="WXHJ" type="java.lang.Double" length="12" />
+		<property name="ZFBHJ" type="java.lang.Double" length="12" />
+		<property name="APPWXHJ" type="java.lang.Double" length="12" />
+		<property name="APPZFBHJ" type="java.lang.Double" length="12" />
+	</class>
+</hibernate-mapping>

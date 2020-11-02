@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.mhc.schemas.MHC_EndManagement" table="MHC_EndManagement">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="pregnantId" type="java.lang.String" length="30" />
+		<property name="gestationMode" type="java.lang.String" length="20" />
+		<property name="remark" type="java.lang.String" length="200" />
+		<property name="endDate" type="date" />
+		<property name="endUnit" type="java.lang.String" length="20" />
+		<property name="endDoctor" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20"/>
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

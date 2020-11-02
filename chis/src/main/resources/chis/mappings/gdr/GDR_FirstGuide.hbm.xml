@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.gdr.schemas.GDR_FirstGuide" table="GDR_FirstGuide">
+			<id name="recordId" type="java.lang.String">
+            	<column name="recordId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="gdrId" type="java.lang.String" length="20" />
+        	<property name="numOfChef" type="java.lang.Integer"  />
+        	<property name="numOfCheckedChef" type="java.lang.Integer"  />
+        	<property name="numOfHelper" type="java.lang.Integer"  />
+        	<property name="numOfCheckedHelper" type="java.lang.Integer"  />
+        	<property name="disinfectants" type="java.lang.String" length="50" />
+        	<property name="disinfectionMeasures" type="java.lang.String" length="100" />
+        	<property name="teacher" type="java.lang.String" length="20" />
+        	<property name="teachDate" type="date"  />
+        	<property name="teachView" type="java.lang.String" length="500" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="lastModifyDate" type="timestamp"  />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

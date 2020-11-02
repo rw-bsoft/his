@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.cvd.schemas.CVD_Category" table="CVD_Category">
+			<id name="categoryCode" type="java.lang.String">
+            	<column name="categoryCode"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="categoryName" type="java.lang.String" length="16" />
+</class>
+</hibernate-mapping>

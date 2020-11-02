@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_HSLB" table="WL_HSLB">
+			<id name="HSLB" type="java.lang.Long">
+            	<column name="HSLB"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="HSMC" type="java.lang.String" length="30" />
+        	<property name="ZBLB" type="java.lang.Integer" length="8" />
+        	<property name="SJHS" type="java.lang.Integer" length="8" />
+        	<property name="PLSX" type="java.lang.String" length="4" />
+        	<property name="KFXH" type="java.lang.Integer" length="8" />
+        	<property name="HSBM" type="java.lang.String" length="40" />
+        	<property name="ZBMC" type="java.lang.String" length="30" />
+</class>
+</hibernate-mapping>

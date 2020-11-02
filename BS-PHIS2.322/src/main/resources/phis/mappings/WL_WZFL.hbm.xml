@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_WZFL" table="WL_WZFL">
+			<id name="FLXH" type="java.lang.Long">
+            	<column name="FLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="LBXH" type="java.lang.Integer" length="8" />
+        	<property name="ZDXH" type="java.lang.Long" length="12" />
+        	<property name="WZXH" type="java.lang.Long" length="18" />
+</class>
+</hibernate-mapping>

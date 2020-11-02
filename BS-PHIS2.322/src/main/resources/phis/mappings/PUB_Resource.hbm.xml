@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="PUB_Resource" table="PUB_Resource">
+			<id name="id" type="java.lang.String">
+            	<column name="id"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="areaGrid" type="java.lang.String"/>
+        	<property name="manaUnitId" type="java.lang.String"/>
+        	<property name="checkDate" type="java.lang.String"  />
+        	<property name="season" type="java.lang.String" length="20"/>
+        	<property name="KPICode" type="java.lang.String" />
+        	<property name="KPI" type="java.lang.Double"/>
+        	
+        	<property name="inputUser" type="java.lang.String" length="20"/>
+        	<property name="inputDate" type="java.util.Date" />
+        	<property name="inputUnit" type="java.lang.String"/>
+</class>
+</hibernate-mapping>

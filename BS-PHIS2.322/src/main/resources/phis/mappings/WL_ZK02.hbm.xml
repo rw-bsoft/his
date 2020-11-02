@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_ZK02" table="WL_ZK02">
+			<id name="JLXH" type="java.lang.Long">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="DJXH" type="java.lang.Long" length="18" />
+        	<property name="WZXH" type="java.lang.Long" length="18" />
+        	<property name="CJXH" type="java.lang.Long" length="12" />
+        	<property name="WZSL" type="java.lang.Double" length="18" />
+        	<property name="WZJG" type="java.lang.Double" length="18" />
+        	<property name="WZJE" type="java.lang.Double" length="18" />
+        	<property name="WZPH" type="java.lang.String" length="20" />
+        	<property name="SCRQ" type="date"  />
+        	<property name="SXRQ" type="date"  />
+        	<property name="KCXH" type="java.lang.Long" length="18" />
+        	<property name="ZBXH" type="java.lang.Long" length="18" />
+            <property name="WZBH" type="java.lang.String" length="40" />
+</class>
+</hibernate-mapping>

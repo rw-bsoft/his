@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YF_RKFS" table="YF_RKFS">
+		<composite-id>
+			<key-property name="RKFS" column="RKFS" type="java.lang.Integer"/>
+			<key-property name="YFSB" column="YFSB" type="java.lang.Long" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String"  />
+		<property name="FSMC" type="java.lang.String"  />
+		<property name="RKDH" type="java.lang.Integer" />
+		<property name="PYDM" type="java.lang.String" />
+		<property name="XGPB" type="java.lang.Integer"/>
+		<property name="DYFS" type="java.lang.Integer"  />
+	</class>
+</hibernate-mapping>

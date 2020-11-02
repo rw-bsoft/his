@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="医保疾病编码" codeRule="4,2,3,3" class="TableDictionary"
+	supportRemote="false" searchField="PYDM" entry="YB_JBBM"
+	filter="['and',['eq',['$','ZFPB'],['s','0']]]" keyField="JBBM" textField="JBBM||'-'||JBMC" queryOnly="true"  sortField="JBMC,JBBM">
+	<properties>
+		<p name="PYDM" />
+		<p name="JBBM" />
+	</properties>
+</dic>
+<!--filter="['and',['not in',['$','item.properties.ID'],['select PARENTID 
+	from SYS_Office']],['eq',['$','OUTPATIENTCLINIC'],['s','1']]]" -->

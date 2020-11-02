@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.ppvr.schemas.EHR_PoorPeopleVisit"
+		table="EHR_PoorPeopleVisit">
+		<id name="visitId" type="java.lang.String">
+			<column name="visitId" />
+			<generator class="assigned" />
+		</id>
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		
+		<property name="isWork" type="java.lang.String" />
+		<property name="houseHoldIncome" type="java.lang.Double"  />
+		<property name="incomeSource" type="java.lang.String"  />
+		<property name="povertyReason" type="java.lang.String"  />
+		<property name="consortHealth" type="java.lang.String"  />
+		<property name="childAmount" type="java.lang.Integer"  />
+		<property name="oldAmount" type="java.lang.Integer"  />
+		<property name="oldHealth" type="java.lang.String"  />
+		<property name="personalHealth" type="java.lang.String"  />
+		<property name="isSick" type="java.lang.String"  />
+		<property name="diseaseType" type="java.lang.String"  />
+		<property name="otherDisease" type="java.lang.String"  />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputDate" type="timestamp" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+		<property name="visitDate" type="date" />
+		<property name="visitUser" type="java.lang.String"
+			length="20" />
+		<property name="visitInfo" type="java.lang.String"/>
+		
+		
+	</class>
+</hibernate-mapping>

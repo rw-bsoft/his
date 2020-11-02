@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="GY_YWLB" table="GY_YWLB">
+		<id name="YWXH" type="java.lang.String">
+			<column name="YWXH" />
+			<generator class="assigned" />
+		</id>
+		<property name="YWMC" type="java.lang.String" length="50" />
+		<property name="YWSDSC" type="java.lang.Integer" length="3" />
+		<property name="HCYW" type="java.lang.String" length="200" />
+		<property name="YWJB" type="java.lang.String" length="1" />
+	</class>
+</hibernate-mapping>

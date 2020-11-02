@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if lt IE 7]>
+  <script type="text/javascript" src="util.iepngfix.jsc"></script>
+<![endif]-->
+
+<title>基层医疗卫生信息系统-插件安装助手</title>
+<style type="text/css">
+.table {
+	width: 80%;
+	padding: 0;
+	margin: 0;
+}
+
+th {
+	font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 14px;
+	font-size: 16px;
+	background: #CAE8EA no-repeat;
+}
+
+td {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	font-size: 14px;
+	padding: 6px 6px 6px 12px;
+	color: #4f6b72;
+}
+
+td.alt {
+	background: #F5FAFA;
+	color: #797268;
+}
+
+th.spec,td.spec {
+	border-left: 1px solid #C1DAD7;
+}
+/*---------for IE 5.x bug*/
+html>body td {
+	font-size: 14px;
+}
+</style>
+<script type="text/javascript">
+	function initBody() {
+		var plugins = [];//classid name url note
+		var ua = navigator.userAgent.toLowerCase(), check = function(r) {
+			return r.test(ua);
+		}
+		var isOpera = check(/opera/), isIE = !isOpera && check(/msie/);
+		// 火狐activex代理插件
+		var ffPlug = {
+			type : "app",
+			name : "火狐代理插件",
+			url : getUrl() + "resources/phis/resources/component/ffactivex-setup-r39.exe",
+			desc : '<font color=red>必要插件，火狐环境引用其它插件时必须先安装此插件！</font>'
+		}
+		var lodopPlug = {
+			type : "app",
+			name : "lodop打印插件",
+			url : getUrl() + "resources/component/lodop/install_lodop32.exe",
+			desc : "打印插件"
+		}
+		var emrPlug = {
+			type : "class",
+			name : "电子病历插件",
+			url : getUrl() + "resources/phis/resources/component/ActiveX.exe",
+			desc : "医生站（或护士）使用结构化电子病历需要此控件"
+		}
+		if (!isIE) {
+			//火狐环境是否安装代理插件	
+			var ffactive = navigator.mimeTypes["application/x-itst-activex"];
+			if (ffactive) {
+				ffPlug.install = true;
+			}
+			plugins.push(ffPlug);
+			// 打印插件
+			var lodop = navigator.mimeTypes["application/x-print-lodop"];
+			if (lodop) {
+				lodopPlug.install = true;
+			}
+			plugins.push(lodopPlug);
+			// 电子病历插件
+			var p = document.createElement("div");
+			p.innerHTML = "<object	id='emrOcx' TYPE='application/x-itst-activex' WIDTH=0 HEIGHT=0 clsid='{FFAA1970-287B-4359-93B5-644F6C8190BB}'/>";
+			document.body.appendChild(p);
+			var emr = document.getElementById("emrOcx");
+			try {
+				if (emr
+						&& emr.FunActiveXInterface("BsGetFileVersion", '', '') == 0) {
+					emrPlug.install = true;
+					emrPlug.name += emr.StrReturnData;
+				}
+			} catch (e) {
+				alert(e)
+			}
+			plugins.push(emrPlug);
+
+		} else { // IE环境
+			try {
+				var lodop = new ActiveXObject("Lodop.LodopX"); //打印插件
+				if (lodop) {
+					lodopPlug.install = true;
+				}
+			} catch (e) {
+			}
+			plugins.push(lodopPlug);
+			// 电子病历插件
+			var p = document.createElement("div");
+			p.innerHTML = "<OBJECT id='emrOcx' name='emrOcx' classid='clsid:FFAA1970-287B-4359-93B5-644F6C8190BB'  WIDTH=100 HEIGHT=100 ></OBJECT>";
+			// document.body.appendChild(p);
+			var emr = document.getElementById("emrOcx");
+			try {
+				if (emr
+						&& emr.FunActiveXInterface("BsGetFileVersion", '', '') == 0) {
+					emrPlug.install = true;
+					emrPlug.name += emr.StrReturnData;
+				}
+			} catch (e) {
+				alert(e)
+			}
+			plugins.push(emrPlug);
+
+		}
+
+		initTable(plugins);
+	}
+
+	function initTable(plugins) {
+		var table = document.getElementById('pluginTable');
+		for ( var i = 0; i < plugins.length; i++) {
+			var p = plugins[i];
+			var row = table.insertRow();
+			var cell_1 = row.insertCell();
+			cell_1.innerHTML = i + 1;
+			cell_1.setAttribute("class", "spec")
+			var cell_2 = row.insertCell();
+			cell_2.innerHTML = p.name;
+			var cell_3 = row.insertCell();
+			cell_3.innerHTML = p.desc;
+			var cell_4 = row.insertCell();
+			cell_4.innerHTML = (p.install ? "<font color=green>已安装</font>"
+					: ("<font color=red>未安装</font>（<a href='"+p.url+"'>点击下载</a>）"));
+		}
+	}
+	function getUrl() {
+		var protocol = location.protocol;
+		var host = location.host;
+		var pathname = location.pathname;
+		return protocol + "//" + host
+				+ pathname.substring(0, pathname.substr(1).indexOf('/') + 2);
+	}
+</script>
+</head>
+<body scroll="no" oncontextmenu="return true" onhelp="return false"
+	onload="initBody()">
+	<div align="center">
+		<table id="pluginTable" class="table" cellspacing="0"
+			summary="The technical specifications of the Apple PowerMac G5 series">
+			<tr>
+				<th colspan="4">插件列表</th>
+			</tr>
+			<tr>
+				<th class="spec" width="5%">序号</th>
+				<th>插件名称</th>
+				<th>插件使用场景</th>
+				<th>是否安装</th>
+			</tr>
+		</table>
+		<p class="bosft">版权所有：创业软件股份有限公司 Copyright &copy; 2009-2014 B-Soft
+			Corporation, All Rights Reserved</p>
+	</div>
+</body>
+</html>

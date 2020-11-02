@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class entity-name="chis.application.mov.schemas.MOV_ManaInfoChange" table="MOV_ManaInfoChange">
+    <id name="archiveMoveId" type="java.lang.String">
+      <column name="archiveMoveId" />
+      <generator class="assigned" />
+    </id>
+    <property name="moveType" type="java.lang.String" length="1" />
+    <property name="status" type="java.lang.String" length="1" />
+    <property name="applyUser" type="java.lang.String" length="20" />
+    <property name="empiId" type="java.lang.String" length="32" />
+    <property name="applyDate" type="timestamp" />
+    <property name="applyReason" type="java.lang.String" length="500" />
+    <property name="applyUnit" type="java.lang.String" length="20" />
+    <property name="affirmUser" type="java.lang.String" length="20" />
+    <property name="affirmType" type="java.lang.String" length="1" />
+    <property name="affirmUnit" type="java.lang.String" length="20" />
+    <property name="affirmDate" type="timestamp" />
+    <property name="affirmView" type="java.lang.String" length="500" />
+    <property name="lastModifyDate" type="timestamp" />
+    <property name="lastModifyUser" type="java.lang.String"
+      length="20" />
+    <property name="lastModifyUnit" type="java.lang.String" length="20" />
+  </class>
+</hibernate-mapping>

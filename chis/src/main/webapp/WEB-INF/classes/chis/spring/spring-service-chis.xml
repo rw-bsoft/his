@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="chis.simpleLoad" class="chis.source.BizSimpleLoad" />
+	<bean id="chis.simpleQuery" class="chis.source.BizSimpleQuery" />
+	<bean id="chis.simpleSave" class="chis.source.BizSimpleSave" />
+	<bean id="chis.simpleRemove" class="chis.source.BizSimpleRemove" />
+	<bean id="simpleLoad" class="ctd.service.dao.SimpleLoad" />
+	<bean id="simpleQuery" class="ctd.service.dao.SimpleQuery" />
+	
+	<bean id="chis.simpleQuery4HealthRecord" class="chis.source.phr.SimpleQuery4HealthRecord" />
+	<bean id="chis.familyListQuery" class="chis.source.fhr.FamilyRecordListQuery" />
+	<bean id="chis.subFormLoad" class="chis.source.phr.SubFormLoad" />
+	<bean id="chis.simpleGrid" class="chis.source.phr.SimpleGrid" />
+	<bean id="chis.restarContext" class="chis.source.util.RestarContext" />
+	<bean id="chis.areaGridExcelFileUpload" class="chis.source.admin.AreaGridExcelFileUpload"
+		parent="chis.abstractActionService" />
+	<bean id="chis.excelFileUploader" class="chis.source.service.ExcelFileUploader">
+		<property name="tempDirectory" value="temp" />
+		<property name="fileUploadMaxSize" value="100M" />
+	</bean>
+	<bean id="chis.areaGridProgress" class="chis.source.admin.AreaGridProgress"
+		parent="chis.abstractActionService" />
+	<bean id="chis.healthRecordService" class="chis.source.phr.HealthRecordService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.familyRecordService" class="chis.source.fhr.FamilyRecordService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.familyRecordService1" class="chis.source.fhr.FamilyRecordService1"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.publicService" class="chis.source.pub.PublicService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.abstractService2" class="chis.source.service.AbstractService"
+		abstract="true" />
+	<bean id="chis.actionExecutor2" class="chis.source.service.DefaultActionExecutor" />
+	<bean id="chis.abstractActionService" class="chis.source.service.AbstractActionService"
+		abstract="true" parent="chis.abstractService2">
+		<property name="actionExecutor" ref="chis.actionExecutor2" />
+		<property name="vLogService" ref="chis.vindicateLogService" />
+		<property name="transactedActions">
+			<list>
+			    <value>add*</value>
+				<value>save*</value>
+				<value>update*</value>
+				<value>batch*</value>
+				<value>remove*</value>
+				<value>revert*</value>
+				<value>logout*</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="chis.empiService" class="chis.source.empi.EmpiService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.mdcService" class="chis.source.mdc.MDCService"
+		parent="chis.abstractActionService" />
+	<!-- ChenXianRui begin -->
+	<bean id="chis.myPageService" class="chis.source.mypage.MyPageService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.hypertensionService" class="chis.source.mdc.HypertensionService"
+		parent="chis.mdcService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.hypertensionVisitService" class="chis.source.mdc.HypertensionVisitService"
+		parent="chis.mdcService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.basicPersonalInformationService" class="chis.source.phr.BasicPersonalInformationService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.hypertensionInquireService" class="chis.source.mdc.HypertensionInquireService"
+		parent="chis.mdcService" />
+	<bean id="chis.hypertensionFirstService" class="chis.source.mdc.HypertensionFirstService"
+		parent="chis.mdcService" />
+	<bean id="chis.hypertensionFCBPService" class="chis.source.mdc.HypertensionFCBPService"
+		parent="chis.mdcService" />
+	<bean id="chis.hypertensionSimilarityService" class="chis.source.mdc.HypertensionSimilarityService"
+		parent="chis.hypertensionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.hypertensionRiskService" class="chis.source.mdc.HypertensionRiskService"
+		parent="chis.hypertensionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.hypertensionRiskConfigManageService" class="chis.source.conf.HypertensionRiskConfigManageService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<!-- 上面是高血压模块的服务==下面是精神病模块的服务 -->
+	<bean id="chis.psychosisRecordService" class="chis.source.psy.PsychosisRecordService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.psychosisVisitService" class="chis.source.psy.PsychosisVisitService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.psychosisRecordPaperService" class="chis.source.psy.PsychosisRecordPaperService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.psychosisAnnualAssessmentService" class="chis.source.psy.PsychosisAnnualAssessmentService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.idrReportService" class="chis.source.idr.IdrReportService"
+		parent="chis.abstractActionService" />
+	<!-- 下面是 体检管理 的服务 -->
+	<bean id="chis.checkupRecordService" class="chis.source.per.CheckupRecordService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.checkupDictionaryService" class="chis.source.per.CheckupDictionaryService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.checkupSetMealService" class="chis.source.per.CheckupSetMealService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.checkupProjectOfficeService" class="chis.source.per.CheckupProjectOfficeService"
+		parent="chis.abstractActionService" />
+	<!-- 健康教育问卷 -->
+	<bean id="chis.patientHealthQuestionnaireService" class="chis.source.phq.PatientHealthQuestionnaireService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.tumourHealthEducationCourseService" class="chis.source.tr.TumourHealthEducationCourseService"
+		parent="chis.abstractActionService" />
+	<!-- 肿瘤相关 -->
+	<bean id="chis.tumourInspectionItemService" class="chis.source.tr.TumourInspectionItemService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.tumourQuestionnaireService" class="chis.source.tr.TumourQuestionnaireService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.tumourCriterionService" class="chis.source.tr.TumourCriterionService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.TumourSeeminglyService" class="chis.source.tr.TumourSeeminglyService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.tumourScreeningService" class="chis.source.tr.TumourScreeningService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.tumourHighRiskService" class="chis.source.tr.TumourHighRiskService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.tumourHighRiskVisitService" class="chis.source.tr.TumourHighRiskVisitService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.tumourHighRiskConfigManageService" class="chis.source.conf.TumourHighRiskConfigManageService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.tumourConfirmedService" class="chis.source.tr.TumourConfirmedService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.tumourPatientVisitConfigManageService" class="chis.source.conf.TumourPatientVisitConfigManageService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.tumourPatientReportCardService" class="chis.source.tr.TumourPatientReportCardService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.tumourPatientVisitService" class="chis.source.tr.TumourPatientVisitService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.tumourPastMedicalHistoryService" class="chis.source.tr.TumourPastMedicalHistoryService"
+		parent="chis.abstractActionService" />
+	<!-- ChenXianRui end -->
+	<!-- xuexichong begin -->
+	<bean id="chis.schistospmaService" class="chis.source.sch.SchistospmaService"
+		parent="chis.abstractActionService" />
+	<!-- xuexichong end -->
+	<!-- yuhua begin -->
+	<bean id="chis.diabetesService" class="chis.source.mdc.DiabetesService"
+		parent="chis.mdcService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.diabetesRecordService" class="chis.source.mdc.DiabetesRecordService"
+		parent="chis.diabetesService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.diabetesVisitService" class="chis.source.mdc.DiabetesVisitService"
+		parent="chis.diabetesService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.diabetesSimilarityService" class="chis.source.mdc.DiabetesSimilarityService"
+		parent="chis.diabetesService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.diabetesRiskService" class="chis.source.mdc.DiabetesRiskService"
+		parent="chis.diabetesService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.diabetesOGTTService" class="chis.source.mdc.DiabetesOGTTService"
+		parent="chis.diabetesService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.defService" class="chis.source.def.DefService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.defLimbService" class="chis.source.def.DefLimbService"
+		parent="chis.defService">
+	</bean>
+	<bean id="chis.defBrainService" class="chis.source.def.DefBrainService"
+		parent="chis.defService">
+	</bean>
+	<bean id="chis.defIntellectService" class="chis.source.def.DefIntellectService"
+		parent="chis.defService">
+	</bean>
+	<bean id="chis.abstractTaskListService" class="chis.source.task.AbstractTaskListService"
+		parent="chis.abstractActionService" abstract="true" />
+	<bean id="chis.commonTaskListService" class="chis.source.task.CommonTaskListService"
+		parent="chis.abstractTaskListService" />
+	<bean id="chis.mhcTaskListService" class="chis.source.task.MHCTaskListService"
+		parent="chis.abstractTaskListService" />
+	<bean id="chis.cdhTaskListService" class="chis.source.task.CDHTaskListService"
+		parent="chis.abstractTaskListService" />
+	<bean id="chis.myWorkListService" class="chis.source.worklist.MyWorkListService"
+		parent="chis.abstractActionService" />
+	<!-- yuhua end -->
+	<bean id="chis.childrenHealthRecordService" class="chis.source.cdh.ChildrenHealthRecordService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.childrenCheckupService" class="chis.source.cdh.ChildrenCheckupService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.debilityChildrenService" class="chis.source.cdh.DebilityChildrenService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.birthCertificateService" class="chis.source.cdh.BirthCertificateService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.childrenOneYearSummaryService" class="chis.source.cdh.ChildrenOneYearSummaryService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.mhcService" class="chis.source.mhc.MHCService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.pregnantRecordService" class="chis.source.mhc.PregnantRecordService"
+		parent="chis.mhcService" />
+	<bean id="chis.pregnantVisitService" class="chis.source.mhc.PregnantVisitService"
+		parent="chis.mhcService" />
+	<bean id="chis.visitPlanCreator" class="chis.source.visitplan.VisitPlanCreatorImpl">
+		<property name="adapterFactory">
+			<bean class="chis.source.visitplan.adapter.AdapterFactory">
+				<property name="adapters">
+					<map>
+						<entry key="1">
+							<bean class="chis.source.visitplan.adapter.HypertensionAdapter" />
+						</entry>
+						<entry key="2">
+							<bean class="chis.source.visitplan.adapter.DiabetesAdapter" />
+						</entry>
+						<entry key="4">
+							<bean class="chis.source.visitplan.adapter.OldPeopleAdapter" />
+						</entry>
+						<entry key="14">
+							<bean class="chis.source.visitplan.adapter.RetiredVeteranCadresAdapter" />
+						</entry>
+						<entry key="5">
+							<bean class="chis.source.visitplan.adapter.ChildrenAdapter" />
+						</entry>
+						<entry key="6">
+							<bean class="chis.source.visitplan.adapter.ChildrenAdapter" />
+						</entry>
+						<entry key="7">
+							<bean class="chis.source.visitplan.adapter.DebilityChildrenAdapter" />
+						</entry>
+						<entry key="8">
+							<bean class="chis.source.visitplan.adapter.PregnantAdapter" />
+						</entry>
+						<entry key="9">
+							<bean class="chis.source.visitplan.adapter.HighRiskPregnantAdapter" />
+						</entry>
+						<entry key="10">
+							<bean class="chis.source.visitplan.adapter.PsychosisAdapter" />
+						</entry>
+						<entry key="11">
+							<bean class="chis.source.visitplan.adapter.HypertensionInquireAdapter" />
+						</entry>
+						<entry key="planMode=2">
+							<bean class="chis.source.visitplan.adapter.CreateByReserveDateAdapter" />
+						</entry>
+						<entry key="8_planMode=2">
+							<bean
+								class="chis.source.visitplan.adapter.PregnantByReserveDateAdapter" />
+						</entry>
+						<entry key="9_planMode=2">
+							<bean
+								class="chis.source.visitplan.adapter.PregnantByReserveDateAdapter" />
+						</entry>
+						<entry key="15">
+							<bean class="chis.source.visitplan.adapter.TumourHighRiskAdapter" />
+						</entry>
+						<entry key="16">
+							<bean class="chis.source.visitplan.adapter.TumourPatientVisitAdapter" />
+						</entry>
+					</map>
+				</property>
+			</bean>
+		</property>
+		<property name="planScheduleArranger">
+			<bean class="chis.source.visitplan.schedule.DefaultPlanScheduleArranger" />
+		</property>
+		<property name="planScheduleProcessor">
+			<bean class="chis.source.visitplan.schedule.DefaultPlanScheduleProcessor" />
+		</property>
+		<property name="preconditions">
+			<list>
+				<bean class="chis.source.visitplan.precondition.HypertensionPrecondition" />
+				<bean class="chis.source.visitplan.precondition.DiabetesPrecondition" />
+				<bean class="chis.source.visitplan.precondition.OldPeoplePrecondition" />
+				<bean
+					class="chis.source.visitplan.precondition.ChildrenCheckUpPrecondition" />
+				<bean
+					class="chis.source.visitplan.precondition.ChildrenInquirePrecondition" />
+				<bean
+					class="chis.source.visitplan.precondition.DebilityChildrenPrecondition" />
+				<bean class="chis.source.visitplan.precondition.PregnantPrecondition" />
+				<bean
+					class="chis.source.visitplan.precondition.HighRiskPregnantPrecondition" />
+				<bean
+					class="chis.source.visitplan.precondition.HypertensionInquirePrecondition" />
+				<bean
+					class="chis.source.visitplan.precondition.CreateByReserveDatePrecondition" />
+				<bean
+					class="chis.source.visitplan.precondition.PregnantByReserveDatePrecondition" />
+				<bean class="chis.source.visitplan.precondition.PsychosisPrecondition" />
+				<bean
+					class="chis.source.visitplan.precondition.TumourHighRiskPrecondition" />
+				<bean
+					class="chis.source.visitplan.precondition.TumourPatientVisitPrecondition" />
+			</list>
+		</property>
+	</bean>
+	<!--yaosq begin -->
+	<!--<bean id="chis.areaGridService" class="chis.source.admin.AreaGridManagement" 
+		parent="chis.abstractActionService" /> -->
+	<bean id="chis.groupDinnerService" class="chis.source.gdr.GroupDinnerRecordService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.rabiesRecordService" class="chis.source.dc.RabiesRecordService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.publicInfoService" class="chis.source.admin.PublicInfoService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.schistospmaManageService" class="chis.source.sch.SchistospmaManageService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.snailBaseInfoService" class="chis.source.sch.SnailBaseInfoService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.porblemCollectService" class="chis.source.admin.PorblemCollectService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.systemGuideService" class="chis.source.conf.SystemGuideService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.masterplateMaintainService" class="chis.source.mpm.MasterplateMaintainService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.hospitalDischargeService" class="chis.source.his.HospitalDischargeService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.chineseMedicineManageService" class="chis.source.ohr.ChineseMedicineManageService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.drugManageService" class="chis.source.pub.DrugManageService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.systemManageTypeService" class="chis.source.conf.SystemManageTypeService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.customQuery" class="chis.source.CustomQuery"
+		parent="chis.abstractActionService" />
+	<!--yaosq end -->
+	<!--liyunt begin -->
+	<bean id="chis.communityBasicSituationService" class="chis.source.admin.CommunityBasicSituationService"
+		parent="chis.abstractActionService" />
+	<!--liyunt end -->
+	<!-- system config start 系统配置<chb> -->
+	<bean id="chis.childrenConfigManageService" class="chis.source.conf.ChildrenConfigManageService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.rvcConfigManageService" class="chis.source.conf.RVCConfigManageService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.debilityChildrenConfigManageService" class="chis.source.conf.DebilityChildrenConfigManageService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.diabetesConfigManageService" class="chis.source.conf.DiabetesConfigManageService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.diabetesRiskConfigManageService" class="chis.source.conf.DiabetesRiskConfigManageService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.hypertensionConfigManageService" class="chis.source.conf.HypertensionConfigManageService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.interfaceManageService" class="chis.source.conf.InterfaceManageService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.zookeeperManageService" class="chis.source.conf.ZookeeperManageService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.oldPeopleConfigManageService" class="chis.source.conf.OldPeopleConfigManageService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.planTypeManageService" class="chis.source.conf.PlanTypeManageService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.pregnantConfigManageService" class="chis.source.conf.PregnantConfigManageService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.psychosisConfigManageService" class="chis.source.conf.PsychosisConfigManageService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.systemCommonManageService" class="chis.source.conf.SystemCommonManageService"
+		parent="chis.abstractActionService">
+		<property name="noDBActions">
+			<list>
+				<value>getConfig</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="chis.configControllorService" class="chis.source.conf.control.ConfigControllorService">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<bean id="chis.oldPeopleRecordService" class="chis.source.ohr.OldPeopleRecordService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.revertRecordService" class="chis.source.phr.RevertRecordService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+	<bean id="chis.poorPeopleRecordService" class="chis.source.poor.PoorPeopleRecordService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.normalPopulationService" class="chis.source.nor.NormalPopulationService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.pastHistorySearchService" class="chis.source.phr.PastHistorySearchService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.healthCheckService" class="chis.source.check.HealthCheckService"
+		parent="chis.abstractActionService">
+	</bean>
+	<bean id="chis.healthEducationService" class="chis.source.her.HealthEducationService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.educationMaterialService" class="chis.source.her.EducationMaterialService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.healthRecipelManageService" class="chis.source.her.HealthRecipelManageService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.systemUserService" class="chis.source.admin.SystemUserService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.ehrMoveService" class="chis.source.mov.EHRMoveService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.cdhMoveService" class="chis.source.mov.CDHMoveService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.mhcMoveService" class="chis.source.mov.MHCMoveService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.manaInfoBatchChangeService" class="chis.source.mov.ManaInfoBatchChangeService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.manaInfoChangeService" class="chis.source.mov.ManaInfoChangeService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.statService" class="chis.source.pub.StatService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.testService" class="chis.source.test.TestService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.demographicController" class="chis.source.controller.DemographicController" />
+	<bean id="chis.webServiceLogonController" class="chis.source.controller.WebServiceLogonController" />
+	<bean id="chis.emDownLoadController" class="chis.source.controller.EMDownLoadController" />
+	<bean id="chis.deathReportCardService" class="chis.source.dea.DeathReportCardService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.agService" class="chis.source.admin.AreaGridService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.oldPeopleSelfCareService" class="chis.source.ohr.OldPeopleSelfCareService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.cvdService" class="chis.source.cvd.CVDService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.cvdTestService" class="chis.source.cvd.CVDTestService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.categorySave" class="chis.source.cvd.CategorySave"
+		parent="chis.abstractActionService" />
+	<bean id="chis.categoryRemove" class="chis.source.cvd.CategoryRemove" />
+	<bean id="mvcPrintLoaderCHIS" class="chis.source.print.base.PrintLoaderCHIS" />
+	<bean id="chis.medicalHistoryService" class="chis.source.his.MedicalHistoryService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.retiredVeteranCadresService" class="chis.source.rvc.RetiredVeteranCadresService"
+		parent="chis.abstractActionService">
+		<property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	</bean>
+    <bean id="chis.drApplyService" class="chis.source.dr.DrApplyService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.templateService" class="chis.source.fhr.TemplateService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.incompleteRecordService" class="chis.source.inc.IncompleteRecordService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.consultationRecordService" class="chis.source.cons.ConsultationRecordService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.relevanceManageService" class="chis.source.rel.RelevanceManageService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.pelpleHealthTeachService" class="chis.source.pub.PelpleHealthTeachService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.CommonService" class="chis.source.common.CommonService"
+		parent="chis.abstractActionService" />
+	<!-- xuzb质控 -->
+	<bean id="chis.qualityControlService" class="chis.source.quality.QualityControlService"
+		parent="chis.abstractActionService" />
+	<bean id="chis.mobileAppService" class="chis.source.mobilempi.MobileAppService" 
+	    parent="chis.abstractActionService">
+	    <property name="visitPlanCreator" ref="chis.visitPlanCreator" />
+	    </bean>
+		<bean id="chis.managemdcfromhis" class="chis.source.task.Managemdcfromhis"
+		parent="chis.abstractActionService" />
+		<bean id="chis.hqQueryService" class="chis.source.hq.HqQueryService"
+		parent="chis.abstractActionService" />	
+		<bean id="chis.desedeService" class="chis.source.ehr.DESedeService"
+		parent="chis.abstractActionService" />
+	<!-- 签约管理==SCM==S========= -->
+	<bean id="chis.signContractRecordService" class="chis.source.scm.SignContractRecordService"
+		  parent="chis.abstractActionService" >
+	</bean>
+	<!-- 签约管理==SCM==E========= -->
+	<bean id="chis.contractService" class="chis.source.scm.ContractService" parent="chis.abstractActionService">
+	</bean>
+	<!--手动履约保存-->
+	<bean id="chis.manualPerformanceService" class="chis.source.scm.ManualPerformanceService"
+		  parent="chis.abstractActionService" />
+	<!--挂号一般诊疗履约保存-->
+	<bean id="chis.registeredPerformanceService" class="chis.source.scm.RegisteredPerformanceService"
+		  parent="chis.abstractActionService" />	
+	<!--HIV筛查-->
+	<bean id="chis.hIVSScreeningService" class="chis.source.hivs.HIVSScreeningService"
+		  parent="chis.abstractActionService" />	
+	<!--慢阻肺-->
+	<bean id="chis.mZFRecordService" class="chis.source.mdc.MZFRecordService"
+		  parent="chis.abstractActionService" />
+	<bean id="chis.mZFVisitService" class="chis.source.mdc.MZFVisitService"
+		  parent="chis.abstractActionService" />
+	<!--高血压基线调查表-->
+	<bean id="chis.hypertensionBaselineService" class="chis.source.mdc.HypertensionBaselineService"
+		parent="chis.mdcService" />		  
+</beans>

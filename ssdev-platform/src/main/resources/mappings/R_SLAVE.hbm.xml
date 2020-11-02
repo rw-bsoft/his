@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="R_SLAVE" table="R_SLAVE">
+		<id name="ID_SLAVE" type="long">
+	    	<column name="ID_SLAVE"/>
+			<generator class="assigned" />
+		</id>
+		<property name="NAME" type="java.lang.String" length="30" />
+		<property name="HOST_NAME" type="java.lang.String" length="30" />
+		<property name="PORT" type="java.lang.String" length="10" />
+		<property name="PROXY_HOST_NAME" type="java.lang.String" length="30" />
+		<property name="PROXY_PORT" type="java.lang.String" length="10" />
+		<property name="NON_PROXY_HOSTS" type="java.lang.String" length="30" />
+		<property name="UNAME" type="java.lang.String" length="20" />
+		<property name="UPASSWORD" type="java.lang.String" length="255" />
+		<property name="MASTER" type="java.lang.String" length="1"/>
+		<property name="DICCODE" type="java.lang.String" length="1"/>
+		<property name="WEB_APP_NAME" type="java.lang.String" length="20" />
+		<property name="DESCRIPTION" type="java.lang.String" length="255" />
+		<property name="ISACCREDIT" type="java.lang.String" length="1"/>
+		<property name="FLAG" type="java.lang.String" length="1"/>
+	</class>
+</hibernate-mapping>

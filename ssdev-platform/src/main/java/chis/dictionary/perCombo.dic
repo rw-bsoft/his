@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic class="CustomDictionary" alias="体检套餐" className="chis.source.dic.per.CheckupComboDic" method="dic"  filter="['or',['contains',['s','#'],['substring',['$','%user.prop.manaUnitId'],0,9]],['eq',['s','#'],['$','%server.manage.topUnit']]]" >
+<properties>
+		<p name="manaUnitId" />
+	</properties>
+</dic>
+<!-- 
+<dic>
+	<arg name="class">chis.source.dic.per.CheckupComboDic</arg>
+	<arg name="method">dic</arg>
+	<arg name="filter">
+		<prop name="manaUnitId">['or',['contains',['s','#'],['substring',['$','%user.prop.manaUnitId'],0,9]],['eq',['s','#'],['$','%server.manage.topUnit']]]</prop>
+	</arg>
+</dic>
+ -->

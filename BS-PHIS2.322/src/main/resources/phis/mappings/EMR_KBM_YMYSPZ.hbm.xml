@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_KBM_YMYSPZ" table="EMR_KBM_YMYSPZ">
+			<id name="JLXH" type="java.lang.Integer">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MBBH" type="java.lang.Integer" length="9" />
+        	<property name="YSMC" type="java.lang.String" length="50" />
+        	<property name="YSLX" type="java.lang.Integer" length="2" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<script type='text/javascript'>
+function proxyFunc() {
+window.parent.emr_this[getQueryString('mKey')].emrCallBackFunc();
+}
+function getQueryString(name) {    
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");    
+	var r = window.location.search.substr(1).match(reg);    
+	if (r != null) return unescape(r[2]); 
+	return null;    
+}
+</script>
+</head>
+<BODY>
+
+<object	id="emrOcx" event_onclick="proxyFunc" TYPE="application/x-itst-activex" WIDTH="1024" HEIGHT="450" clsid="{FFAA1970-287B-4359-93B5-644F6C8190BB}"/>
+</BODY>
+</HTML>

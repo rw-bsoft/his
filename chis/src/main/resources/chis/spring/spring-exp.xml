@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <bean id="expr_set_base" class="ctd.util.exp.ExpressionSet">
+    <property name="name" value="base"/>
+    <property name="expressions">
+      <list>
+        <bean class="ctd.util.exp.standard.AND"/>
+        <bean class="ctd.util.exp.standard.CONCAT"/>
+        <bean class="ctd.util.exp.standard.CONTAINS"/>
+        <bean class="ctd.util.exp.standard.DATE"/>
+        <bean class="ctd.util.exp.standard.DEC"/>
+        <bean class="ctd.util.exp.standard.DIV"/>
+        <bean class="ctd.util.exp.standard.EQ"/>
+        <bean class="ctd.util.exp.standard.GE"/>
+        <bean class="ctd.util.exp.standard.GT"/>
+        <bean class="ctd.util.exp.standard.IF"/>
+        <!-- 
+        <bean class="ctd.util.exp.standard.IN"/>
+         -->
+        <bean class="ctd.util.exp.standard.INT"/>
+        <bean class="ctd.util.exp.standard.ISNULL"/>
+        <bean class="ctd.util.exp.standard.LE"/>
+        <bean class="ctd.util.exp.standard.LEN"/>
+        <bean class="ctd.util.exp.standard.LIKE"/>
+        <bean class="ctd.util.exp.standard.LONG"/>
+        <bean class="ctd.util.exp.standard.LT"/>
+        <bean class="ctd.util.exp.standard.MUL"/>
+        <bean class="ctd.util.exp.standard.NE"/>
+         
+        <bean class="ctd.util.exp.standard.NOTIN"/>
+         
+        <bean class="ctd.util.exp.standard.NOTNULL"/>
+        <bean class="ctd.util.exp.standard.NUM"/>
+        <bean class="ctd.util.exp.standard.OR"/>
+        <bean class="ctd.util.exp.standard.PY"/>
+        <bean class="ctd.util.exp.standard.REF"/>
+        <bean class="ctd.util.exp.standard.STR"/>
+        <bean class="ctd.util.exp.standard.SUBSTR"/>
+        <bean class="ctd.util.exp.standard.SUM"/>
+        <bean class="ctd.util.exp.standard.TOCHAR"/>
+        <bean class="ctd.util.exp.standard.TODATE"/>
+        <!--
+          <bean id="EXP.GetValueByKeyFromMap" class="ctd.util.exp.standard.GetValueByKeyFromMap"/>
+          -->
+          
+        <bean  class="chis.source.ctd.exp.IN"/>
+        <!-- <bean  class="chis.source.ctd.exp.NOTIN"/> -->
+        <bean  class="chis.source.ctd.exp.CHISREF"/>
+        <bean  class="chis.source.ctd.exp.DATEDEC"/>
+        <bean  class="chis.source.ctd.exp.LASTREC"/>
+        <bean  class="chis.source.ctd.exp.NOREC"/>
+        <bean  class="chis.source.ctd.exp.EXISTS"/>
+        <bean  class="chis.source.ctd.exp.SAMECENTER"/>
+        <bean class="chis.source.ctd.exp.LONG"/>
+      </list>
+    </property>
+  </bean>
+  <bean id="exprProcessor" class="ctd.util.exp.ExpressionProcessor">
+    <property name="expressionSets">
+      <list>
+        <ref bean="expr_set_base"/>
+      </list>
+    </property>
+  </bean>
+</beans>

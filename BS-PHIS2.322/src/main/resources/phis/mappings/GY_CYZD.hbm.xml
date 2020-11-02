@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="GY_CYZD" table="GY_CYZD">
+		<id name="JLBH" type="java.lang.Integer">
+			<column name="JLBH" />
+			<generator class="assigned" />
+		</id>
+		<property name="SSLB" type="java.lang.Integer" length="18" />
+		<property name="YGDM" type="java.lang.String" length="10" />
+		<property name="KSDM" type="java.lang.Long" length="18" />
+		<property name="ZDXH" type="java.lang.Integer" length="6" />
+		<property name="ZDMC" type="java.lang.String" length="60" />
+		<property name="ICD10" type="java.lang.String" length="20" />
+		<property name="PYDM" type="java.lang.String" length="10" />
+		<property name="JGID" type="java.lang.String" length="20"/>
+		<property name="CFLX" type="java.lang.Integer" length="1" />
+		<property name="WBDM" type="java.lang.String" length="10" />
+	</class>
+</hibernate-mapping>

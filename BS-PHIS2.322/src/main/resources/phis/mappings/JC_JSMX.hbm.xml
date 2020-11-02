@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_JSMX" table="JC_JSMX">
+		<composite-id>
+			<key-property name="ZYH" column="ZYH" type="java.lang.Long"/>
+			<key-property name="JSCS" column="JSCS" type="java.lang.Integer" />
+			<key-property name="KSDM" column="KSDM" type="java.lang.Long"/>
+			<key-property name="FYXM" column="FYXM" type="java.lang.Long" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="ZJJE" type="java.lang.Double" length="12" />
+		<property name="ZFJE" type="java.lang.Double" length="12" />
+		<property name="ZLJE" type="java.lang.Double" length="12" />
+	</class>
+</hibernate-mapping>

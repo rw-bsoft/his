@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PHE报告人 -->
+<dic class="ctd.service.configure.dictionary.ComposeDictionaryEx" navDic="chis.@manageUnit"  distinct="true" 
+	searchField="a.manageUnitId" iconCls="user"   searchFieldEx="c.pyCode" alias="用户(市妇幼)" 
+	entry="UserRoleToken a,User b,SYS_Personnel c" keyField="a.userId" textField="b.name" queryOnly="true"
+	filter="['and',['in',['$','a.roleId'],['chis.09']],['and',['eq',['$','a.userId'],['$','b.id']],['eq',['$','a.userId'],['$','c.personId']]],['eq',['$','a.domain'],['s','chis']],['eq',['$','a.logoff'],['s','0']]]">
+	<properties>
+		<p name="a.manageUnitId">manageUnit</p>
+		<p name="c.pyCode">mCode</p>
+	</properties>
+</dic>
+<!-- 
+<dic class="ComposeDictionary"  navDic="manageUnit" 
+	searchField="b.manaUnitId" iconCls="user" searchFieldEx="a.pyCode"
+	entry="SYS_USERS a, SYS_UserProp b" keyField="a.userId" textField="a.userName" queryOnly="false"
+	filter="['and',['in',['$','b.jobId'],['09']],['$','a.userId=b.userId']] ">
+	<prop field="b.manaUnitId"/>
+</dic>
+ -->

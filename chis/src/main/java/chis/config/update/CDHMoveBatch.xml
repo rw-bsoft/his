@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf id="CDHMoveBatch">
+  <table name="CDH_HealthCard" queryField="phrId" queryParam="archiveId" fullName="chis.application.cdh.schemas.CDH_HealthCard"><!-- 默认包含字段名字和id一致 -->
+    <column name="manaUnitId" param="manaUnitId"/>
+    <column name="cdhDoctorId" param="cdhDoctorId"/>
+    <column name="lastModifyUser" param="lastModifyUser"/>
+    <column name="lastModifyUnit" param="lastModifyUnit"/>
+    <column name="lastModifyDate" param="lastModifyDate"/>
+  </table> 
+  <table name="CDH_Accident" queryField="phrId" queryParam="archiveId" fullName="chis.application.cdh.schemas.CDH_Accident">
+    <column name="manaUnitId" param="manaUnitId"/>
+    <column name="lastModifyUser" param="lastModifyUser"/>
+    <column name="lastModifyUnit" param="lastModifyUnit"/>
+    <column name="lastModifyDate" param="lastModifyDate"/>
+  </table>
+  <table name="CDH_CheckupInOne" queryField="phrId" queryParam="archiveId" fullName="chis.application.cdh.schemas.CDH_CheckupInOne">
+    <column name="manaUnitId" param="manaUnitId"/>
+    <column name="lastModifyUser" param="lastModifyUser"/>
+    <column name="lastModifyUnit" param="lastModifyUnit"/>
+    <column name="lastModifyDate" param="lastModifyDate"/>
+  </table>
+    <table name="CDH_CheckupOneToTwo" queryField="phrId" queryParam="archiveId" fullName="chis.application.cdh.schemas.CDH_CheckupOneToTwo">
+    <column name="manaUnitId" param="manaUnitId"/>
+    <column name="lastModifyUser" param="lastModifyUser"/>
+    <column name="lastModifyUnit" param="lastModifyUnit"/>
+    <column name="lastModifyDate" param="lastModifyDate"/>
+  </table>
+    <table name="CDH_CheckupThreeToSix" queryField="phrId" queryParam="archiveId" fullName="chis.application.cdh.schemas.CDH_CheckupThreeToSix">
+    <column name="manaUnitId" param="manaUnitId"/>
+    <column name="lastModifyUser" param="lastModifyUser"/>
+    <column name="lastModifyUnit" param="lastModifyUnit"/>
+    <column name="lastModifyDate" param="lastModifyDate"/>
+  </table>
+  <table name="CDH_DeadRegister" queryField="phrId" queryParam="archiveId" fullName="chis.application.cdh.schemas.CDH_DeadRegister">
+    <column name="cdhDoctorId" param="cdhDoctorId"/>
+    <column name="manaUnitId" param="manaUnitId"/>
+    <column name="lastModifyUser" param="lastModifyUser"/>
+    <column name="lastModifyUnit" param="lastModifyUnit"/>
+    <column name="lastModifyDate" param="lastModifyDate"/>
+  </table>
+  <table name="CDH_DefectRegister" queryField="phrId" queryParam="archiveId" fullName="chis.application.cdh.schemas.CDH_DefectRegister">
+    <column name="manaUnitId" param="manaUnitId"/>
+    <column name="lastModifyUser" param="lastModifyUser"/>
+    <column name="lastModifyUnit" param="lastModifyUnit"/>
+    <column name="lastModifyDate" param="lastModifyDate"/>
+  </table>
+  <table name="CDH_Inquire" queryField="phrId" queryParam="archiveId" fullName="chis.application.cdh.schemas.CDH_Inquire">
+    <column name="manaUnitId" param="manaUnitId"/>
+    <column name="lastModifyUser" param="lastModifyUser"/>
+    <column name="lastModifyUnit" param="lastModifyUnit"/>
+    <column name="lastModifyDate" param="lastModifyDate"/>
+  </table>
+  <table name="CDH_OneYearSummary" queryField="phrId" queryParam="archiveId" fullName="chis.application.cdh.schemas.CDH_OneYearSummary">
+    <column name="manaUnitId" param="manaUnitId"/>
+    <column name="lastModifyUser" param="lastModifyUser"/>
+    <column name="lastModifyUnit" param="lastModifyUnit"/>
+    <column name="lastModifyDate" param="lastModifyDate"/>
+  </table>
+</conf>

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="V_LIS_TESTRESULT" table="V_LIS_TESTRESULT">
+	<composite-id>
+		<key-property name="SAMPLENO" column="SAMPLENO" type="java.lang.String"/>
+		<key-property name="TESTID" column="TESTID" type="java.lang.String" />
+	</composite-id>
+	<property name="PATIENTID" type="java.lang.String"/>
+	<property name="VISITID" type="java.lang.String"/>
+	<property name="CHINESENAME" type="java.lang.String"/>
+	<property name="TESTRESULT" type="java.lang.String"/>
+	<property name="UNIT" type="java.lang.String"/>
+	<property name="HINT" type="java.lang.String"/>
+	<property name="CHECKTIME" type="timestamp"  />
+
+</class>
+</hibernate-mapping>

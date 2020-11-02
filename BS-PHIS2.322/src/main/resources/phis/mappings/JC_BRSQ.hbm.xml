@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_BRSQ" table="JC_BRSQ">
+		<id name="ID" type="java.lang.Long" />
+		<property name="SQYS" type="string"/> <!-- 申请医生 -->
+		<property name="BQZY" type="string"/>
+		<property name="JCYJ" type="string"/>
+		<property name="SQZT" type="string"/>
+		<property name="BRID" type="java.lang.Long"/>
+		
+		<property name="LXR" type="string"/>
+		<property name="YHGX" type="string"/>
+		<property name="LXDH" type="string"/>		
+		<property name="SQRQ" type="date"/>		
+		<property name="ZDRQ" type="date"/>		
+		<property name="JGID" type="string"/>
+				
+		<property name="JCZD" type="string"/>
+		<property name="ICD10" type="string"/>
+		<property name="MZHM" type="string"/>
+		<property name="ZYHM" type="string"/>
+		
+		<property name="LXDZ" type="string"/>
+		<property name="BRXZ" type="string"/>
+		<property name="SQFS" type="java.lang.Long"/>	
+			
+		<property name="BRXM" type="string"/>		
+		<property name="BRXB" type="java.lang.Long"/>		
+		<property name="CSNY" type="date"/>
+		<property name="SFZH" type="string"/>	
+		<property name="BRNL" type="string"/>		
+		
+	</class>
+</hibernate-mapping>

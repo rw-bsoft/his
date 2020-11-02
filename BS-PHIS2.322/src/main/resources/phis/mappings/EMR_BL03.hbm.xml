@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_BL03" table="EMR_BL03">
+			<id name="WDBH" type="java.lang.Long">
+            	<column name="WDBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="ZYMZ" type="java.lang.Integer" length="2" />
+        	<property name="BLBH" type="java.lang.Long" length="18" />
+        	<property name="WDLX" type="java.lang.Integer" length="4" />
+       		<property name="WDNR" type="blob"  />
+        	<property name="JGID" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

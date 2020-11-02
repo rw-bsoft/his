@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MS_YJ01" table="MS_YJ01">
+			<id name="YJXH" type="java.lang.Long">
+            	<column name="YJXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="8" />
+        	<property name="TJHM" type="java.lang.String" length="10" />
+        	<property name="FPHM" type="java.lang.String" length="20" />
+        	<property name="MZXH" type="java.lang.Long" length="18" />
+        	<property name="BRID" type="java.lang.Long" length="18" />
+        	<property name="BRXM" type="java.lang.String" length="40" />
+        	<property name="KDRQ" type="timestamp"  />
+        	<property name="KSDM" type="java.lang.Long" length="18" />
+        	<property name="YSDM" type="java.lang.String" length="10" />
+        	<property name="ZXRQ" type="timestamp"  />
+        	<property name="ZXKS" type="java.lang.Long" length="18" />
+        	<property name="ZXYS" type="java.lang.String" length="10" />
+        	<property name="ZXPB" type="java.lang.Integer" length="1" />
+        	<property name="HJGH" type="java.lang.String" length="10" />
+        	<property name="ZYSX" type="java.lang.String" length="250" />
+        	<property name="YJGL" type="java.lang.Long" length="18" />
+        	<property name="ZFPB" type="java.lang.Integer" length="1" />
+        	<property name="CFBZ" type="java.lang.Integer" length="1" />
+        	<property name="HYMX" type="java.lang.String" length="250" />
+        	<property name="YJPH" type="java.lang.String" length="20" />
+        	<property name="SQWH" type="java.lang.Long" length="18" />
+        	<property name="JZXH" type="java.lang.Long" length="18" />
+        	<property name="FJGL" type="java.lang.Long" length="18" />
+        	<property name="FJLB" type="java.lang.Long" length="18" />
+        	<property name="BWID" type="java.lang.Long" length="9" />
+        	<property name="JBID" type="java.lang.Long" length="18" />
+        	<property name="DJZT" type="java.lang.Integer" length="1" />
+        	<property name="JZKH" type="java.lang.String" length="20" />
+        	<property name="SQID" type="java.lang.Long" length="18" />
+        	<property name="XML" type="java.lang.String" length="1024" />
+        	<property name="SQDMC" type="java.lang.String" length="40" />
+        	<property name="FYLY" type="java.lang.String" length="4" />
+        	<property name="TJFL" type="java.lang.Integer" length="2" />
+        	<property name="ZFSJ" type="timestamp"  />
+        	<property name="DJLY" type="java.lang.Integer" length="8" />
+        	<property name="BGSJ" type="timestamp"  />
+</class>
+</hibernate-mapping>

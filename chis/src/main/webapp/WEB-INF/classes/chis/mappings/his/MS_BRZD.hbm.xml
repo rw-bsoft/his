@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MS_BRZD" table="MS_BRZD">
+			<id name="JLBH" type="java.lang.Long">
+            	<column name="JLBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="25" />
+        	<property name="ZDXH" type="java.lang.Long" length="18" />
+        	<property name="BRID" type="java.lang.Long" length="18" />
+        	<property name="JZXH" type="java.lang.Long" length="18" />
+        	<property name="PLXH" type="java.lang.Integer" length="4" />
+        	<property name="ZDSJ" type="timestamp"  />
+        	<property name="ZDLB" type="java.lang.Integer" length="2" />
+        	<property name="ZZBZ" type="java.lang.Integer" length="1" />
+        	<property name="ICD10" type="java.lang.String" length="10" />
+        	<property name="ZDMC" type="java.lang.String" length="60" />
+        	<property name="ZDBW" type="java.lang.Integer" length="8" />
+        	<property name="ZDYS" type="java.lang.String" length="8" />
+        	<property name="ZGQK" type="java.lang.String" length="8" />
+        	<property name="ZGSJ" type="timestamp"  />
+        	<property name="SJZD" type="java.lang.Integer" length="18" />
+        	<property name="DEEP" type="java.lang.Integer" length="2" />
+        	<property name="FZBZ" type="java.lang.Integer" length="1" />
+        	<property name="FBRQ" type="timestamp"  />
+        	<property name="CFLX" type="java.lang.Integer" length="1" />
+        	<property name="JBPB" type="java.lang.String" length="1" />
+</class>
+</hibernate-mapping>

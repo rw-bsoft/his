@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="PUB_PlanType" table="PUB_PlanType">
+			<id name="planTypeCode" type="java.lang.String">
+            	<column name="PlanTypeCode"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="planTypeName" type="java.lang.String" length="20" />
+        	<property name="minStep" type="java.lang.Integer"  />
+        	<property name="frequency" type="java.lang.String"  />
+            <property name="cycle" type="java.lang.Integer" length="1" />
+        	<property name="times" type="java.lang.Integer"  />
+        	<property name="planTypeDesc" type="java.lang.String" length="50" />
+        	<property name="precedeDays" type="java.lang.Integer"/>
+        	<property name="delayDays" type="java.lang.Integer"/>
+</class>
+</hibernate-mapping>

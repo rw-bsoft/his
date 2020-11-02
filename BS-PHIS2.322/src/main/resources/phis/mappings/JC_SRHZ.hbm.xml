@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_SRHZ" table="JC_SRHZ">
+		<composite-id>
+			<key-property name="JGID" column="JGID" type="java.lang.String"/>
+			<key-property name="HZRQ" column="HZRQ" type="java.util.Date" />
+			<key-property name="KSLB" column="KSLB" type="java.lang.Integer" />
+			<key-property name="KSDM" column="KSDM" type="java.lang.Long" />
+			<key-property name="SFXM" column="SFXM" type="java.lang.Long" />
+		</composite-id>
+		<property name="ZJJE" type="java.lang.Double" length="12" />
+		<property name="ZFJE" type="java.lang.Double" length="12" />
+	</class>
+</hibernate-mapping>

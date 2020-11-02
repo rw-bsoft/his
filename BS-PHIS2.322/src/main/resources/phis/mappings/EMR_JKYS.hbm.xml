@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_JKYS" table="EMR_JKYS">
+			<id name="JKYS" type="java.lang.String">
+            	<column name="JKYS"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="GLYS" type="java.lang.String" length="255" />
+        	<property name="BZXX" type="java.lang.String" length="255" />
+        	<property name="JKLB" type="java.lang.Integer" length="2" />
+        	<property name="JKKZ" type="java.lang.String" length="255" />
+</class>
+</hibernate-mapping>

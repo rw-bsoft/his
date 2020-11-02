@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.cvd.schemas.CVD_Suggestion" table="CVD_Suggestion">
+		<id name="recordId" type="java.lang.String">
+			<column name="recordId" />
+			<generator class="assigned" />
+		</id>
+		<property name="type" type="java.lang.String" length="1" />
+		<property name="riskFactor" type="java.lang.String" length="1" />
+		<property name="category" type="java.lang.String" length="16" />
+		<property name="content" type="text" length="524288000" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

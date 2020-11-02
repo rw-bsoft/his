@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="杭州市恶性肿瘤患者随访管理表" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<background>
+		<band height="555" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="13" width="197" height="20"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[杭州市恶性肿瘤患者管理卡]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="45" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[患者姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="75" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[工作单位]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="105" width="74" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[实际居住地址]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="135" width="74" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[首次诊断日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="165" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[诊断依据]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="195" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[报告单位]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="225" width="98" height="20"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[首次访视内容：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="255" width="98" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[首次出现症状日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="285" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[治疗项目]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="315" width="74" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[首次手术医院]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="345" width="74" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[首次手术性质]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="375" width="62" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[肿瘤家族史]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="405" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[指导内容]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="435" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[初访日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="465" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[死亡日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="45" width="25" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[性别]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="45" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="45" width="25" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[民族]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="616" y="45" width="25" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[职业]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="75" width="74" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[常住户口地址]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="105" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[联系电话]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="135" width="74" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[疾病诊断名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="616" y="135" width="62" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[病理学类型]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="195" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[报告医师]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="195" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[报告日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="255" width="74" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[首次就诊日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="616" y="255" width="62" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[治疗情况：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="616" y="315" width="74" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[首次手术日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="315" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[住院号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="315" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[病理号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="345" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[有无转移]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="616" y="345" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[转移部位]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="375" width="121" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[如有家族史：关系谓称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="377" y="375" width="25" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[瘤别]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="566" y="375" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[目前情况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="405" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[卡氏评分]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="616" y="405" width="74" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[初访医师签名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="435" width="74" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[撤销管理日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="435" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[撤销原因]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="465" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[死亡原因]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="465" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[生存期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="465" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[随访情况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="519" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[随访医师]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="616" y="519" width="50" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[随访日期]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="45" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{personName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="75" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{workPlace}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="105" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement x="94" y="135" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{diagnosisDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="165" width="124" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{diagnosisBasis_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="195" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{reportUnit_text}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement x="118" y="255" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{firstSymptomDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="285" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{treatWay_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="315" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{firstOperationUnit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="345" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{operationType_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="375" width="73" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{familyTumour_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="405" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{guidance_text}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement x="70" y="435" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{visitDate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement x="70" y="465" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{deadDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="45" width="52" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{sexCode_text}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="336" y="45" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{birthday}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="641" y="45" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{workCode_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="45" width="32" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{nationCode_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="75" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="552" y="105" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{contactPhone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="135" width="125" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ICD10Code_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="678" y="135" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{pathologyType}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement x="552" y="195" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{reportDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="195" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{reportDoctor_text}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement x="360" y="255" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{firstClinicDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="678" y="255" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{treatment_text}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement x="690" y="315" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{firstOperationDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="666" y="345" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{metastasisRegion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="616" y="375" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currentStatus_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="690" y="405" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{visitDoctor_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="552" y="435" width="114" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{cancellationReason_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="666" y="519" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{visitDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="552" y="465" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{visitStatus_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="519" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{visitDoctor_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="465" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{lifeTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="236" y="465" width="87" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{deadReason_text}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement x="360" y="435" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{cancellationDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="405" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{KPS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="375" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{familyICD10Code_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="375" width="74" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{relation_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="345" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{metastasis_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="315" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{hospitalNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="315" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{pathologyNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+</jasperReport>

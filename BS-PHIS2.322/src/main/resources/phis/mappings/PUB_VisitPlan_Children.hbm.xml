@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="PUB_VisitPlan_Children" table="PUB_VisitPlan">
+		<id name="planId" type="java.lang.String">
+			<column name="planId" />
+			<generator class="assigned" />
+		</id>
+		<property name="sn" type="java.lang.Integer"/>
+		<property name="recordId" type="java.lang.String" length="30" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="businessType" type="java.lang.String" length="1" />
+		<property name="groupCode" type="java.lang.String" length="2" />
+		<property name="visitId" type="java.lang.String" length="16" />
+		<property name="fixGroupDate" type="date" />
+		<property name="beginDate" type="date" />
+		<property name="endDate" type="date" />
+		<property name="beginVisitDate" type="date" />
+		<property name="planDate" type="date" />
+		<property name="planStatus" type="java.lang.String" length="1" />
+		<property name="visitDate" type="date" />
+		<property name="remark" type="java.lang.String" length="500"/>
+		<property name="extend1" type="java.lang.Integer" length="60"/>
+		<property name="extend2" type="java.lang.String" length="60"/>
+	</class>
+</hibernate-mapping>

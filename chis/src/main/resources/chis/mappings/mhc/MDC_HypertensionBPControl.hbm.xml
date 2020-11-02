@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hy.schemas.MDC_HypertensionBPControl" table="MDC_HypertensionBPControl">
+		<id name="recordId" type="java.lang.String">
+			<column name="recordId"/>
+			<generator class="assigned" />
+		</id>
+		<property name="groups" type="java.lang.String" length="2" />
+		<property name="visitCount" type="java.lang.Integer"  />
+		<property name="SBP" type="java.lang.Integer"  />
+		<property name="xg" type="java.lang.String" length="1" />
+		<property name="DBP" type="java.lang.Integer"  />
+		<property name="controlCondition" type="java.lang.String" length="1" />
+	</class>
+</hibernate-mapping>

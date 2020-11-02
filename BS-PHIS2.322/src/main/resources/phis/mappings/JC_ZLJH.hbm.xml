@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_ZLJH" table="JC_ZLJH">
+		<id name="JLBH" type="java.lang.Long">
+	    	<column name="JLBH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="ZYH" type="java.lang.Long" length="18" />
+		<property name="YPZH" type="java.lang.Integer" length="3" />
+		<property name="XMBH" type="java.lang.Long" length="18" />
+		<property name="XMMC" type="java.lang.String" length="100" />
+		<property name="XMLX" type="java.lang.Integer" length="1" />
+		<property name="YSDM" type="java.lang.String" length="50" />
+		<property name="YCJL" type="java.lang.Double" length="10" />
+		<property name="SYPC" type="java.lang.String" length="12" />
+		<property name="GYTJ" type="java.lang.Integer" length="9" />
+		<property name="KSSJ" type="date"  />
+		<property name="JSSJ" type="date"  />
+		<property name="BZXX" type="java.lang.String" length="200" />
+		<property name="JGID" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

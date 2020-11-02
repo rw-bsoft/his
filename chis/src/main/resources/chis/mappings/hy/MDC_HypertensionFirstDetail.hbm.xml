@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hy.schemas.MDC_HypertensionFirstDetail"
+		table="MDC_HypertensionFirstDetail">
+		<id name="detailID" type="java.lang.String">
+			<column name="detailId" />
+			<generator class="assigned" />
+		</id>
+		<property name="recordNumber" type="java.lang.String"
+			length="16" />
+		<property name="constriction1" type="java.lang.Integer" />
+		<property name="diastolic1" type="java.lang.Integer" />
+		<property name="hypertensionLevel1" type="java.lang.Integer" />
+		<property name="measureDate1" type="date" />
+		<property name="measureDoctor1" type="java.lang.String"
+			length="20" />
+		<property name="measureUnit1" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+	</class>
+</hibernate-mapping>

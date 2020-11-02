@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report id="MedicalTechnologyChat" title="现金收入分析" mode="unit">
+	<field id="manageUnit"/>
+	<chart template="SimpleMSline" chartType="MSLine"/>
+	
+	<define class="phis.report.CountReportDefine">
+		<headers>
+			<item renderIndex="1" id="KDRQ" alias="日期" expr="to_char(a.KDRQ,'yyyy-mm-dd') as KDRQ" type="string"/>
+			<item renderIndex="2" id="MZJE" alias="门诊" expr="b.HJJE" type="double" func="sum"/>
+		</headers>
+		<sort id="KDRQ"/>
+		<src>
+			<entry name="MS_YJ01 "/>
+			<entry name="MS_YJ02 "/>
+		</src>
+		<datelimit>
+			a.KDRQ,7
+		</datelimit>
+		<condition>
+		['and',
+		['and',
+		['eq',['$','a.YSDM'],['$','%user.userId']],
+		['eq',['$','a.JGID'],['$','%user.manageUnit.id']]
+		]
+		,['eq',['$','a.YJXH'],['$','b.YJXH']]]
+		</condition>
+	</define>
+	<define class="phis.report.CountReportDefine">
+		<headers>
+			<item renderIndex="1" id="KDRQ" alias="日期" expr="to_char(a.KDRQ,'yyyy-mm-dd') as KDRQ" type="string"/>
+			<item renderIndex="3" id="ZYJE" alias="住院" expr="b.YLDJ*b.YLSL" type="double" func="sum"/>
+		</headers>
+		<sort id="KDRQ"/>
+		<src>
+			<entry name="YJ_ZY01 "/>
+			<entry name="YJ_ZY02 "/>
+		</src>
+		<datelimit>
+			a.KDRQ,7
+		</datelimit>
+		<condition>
+		['and',
+		['and',
+		['eq',['$','a.YSDM'],['$','%user.userId']],
+		['eq',['$','a.JGID'],['$','%user.manageUnit.id']]
+		]
+		,['eq',['$','a.YJXH'],['$','b.YJXH']]]
+		</condition>
+	</define>
+	<queryArgs>
+		<arg id="manageUnit" alias="管辖机构" type="string" defaultValue="%user.manageUnit.id">
+			<dic id="phis.dictionary.manageUnit" render="Tree"/>
+		</arg>
+	</queryArgs>
+</report>

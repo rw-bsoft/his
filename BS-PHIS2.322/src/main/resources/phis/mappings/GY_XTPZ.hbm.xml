@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_XTPZ" table="GY_XTPZ">
+			<id name="DMLB" type="java.lang.Integer">
+            	<column name="DMLB"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="DMSB" type="java.lang.Integer" length="8" />
+        	<property name="PZBH" type="java.lang.Integer" length="8" />
+        	<property name="DMMC" type="java.lang.String" length="40" />
+        	<property name="SRDM" type="java.lang.String" length="10" />
+        	<property name="CPLB" type="java.lang.Integer" length="6" />
+        	<property name="BZXX" type="java.lang.String" length="255" />
+</class>
+</hibernate-mapping>

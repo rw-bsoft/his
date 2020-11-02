@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="NH_BSOFT_NHDJ" table="NH_BSOFT_NHDJ">
+	<composite-id>
+		<key-property name="JGID" column="JGID" type="java.lang.String"/>
+		<key-property name="JZLB" column="JZLB" type="java.lang.Double" />
+		<key-property name="DJHM" column="DJHM" type="java.lang.String" />
+	</composite-id>
+<property name="DJRQ" type="date"/>
+<property name="BRID" type="java.lang.Double"/>
+<property name="CBHM" type="java.lang.String"/>
+<property name="BRXM" type="java.lang.String"/>
+<property name="BRXB" type="java.lang.String"/>
+<property name="BRNL" type="java.lang.String"/>
+<property name="RYLB" type="java.lang.String"/>
+<property name="CSNY" type="java.lang.String"/>
+<property name="SFZH" type="java.lang.String"/>
+<property name="LXDZ" type="java.lang.String"/>
+<property name="BRKS" type="java.lang.String"/>
+<property name="BRCH" type="java.lang.String"/>
+<property name="JZYS" type="java.lang.String"/>
+<property name="RYZD" type="java.lang.String"/>
+<property name="RYQK" type="java.lang.Double"/>
+<property name="BRQK" type="java.lang.Double"/>
+<property name="RYRQ" type="date"/>
+<property name="CYRQ" type="date"/>
+<property name="CYZDBM" type="java.lang.String"/>
+<property name="CYZDMC" type="java.lang.String"/>
+<property name="ZJJE" type="java.lang.Double"/>
+<property name="YHJE" type="java.lang.Double"/>
+<property name="BCJE" type="java.lang.Double"/>
+<property name="DKJE" type="java.lang.Double"/>
+<property name="HDJE" type="java.lang.Double"/>
+<property name="JZJE" type="java.lang.Double"/>
+<property name="ZFPB" type="java.lang.Double"/>
+<property name="DBZ" type="java.lang.Double"/>
+<property name="NHKH" type="java.lang.String"/>
+<property name="RYLX" type="java.lang.String"/>
+<property name="REGTYPE" type="java.lang.String"/>
+<property name="DJLSH" type="java.lang.String"/>
+</class>
+</hibernate-mapping>

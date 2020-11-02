@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="650" pageHeight="920" columnWidth="610" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="86">
+			<textField>
+				<reportElement x="0" y="0" width="610" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{TITLE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="61" width="50" height="25"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[方式：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="61" width="103" height="25"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{TJFS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="481" y="61" width="56" height="25"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[类型：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="537" y="61" width="73" height="25"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{YPLX}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="30" width="610" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{CXSJ}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28">
+			<staticText>
+				<reportElement x="492" y="0" width="118" height="28"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[平均处方额]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="0" width="54" height="28"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[比例]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="0" width="108" height="28"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[金额]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="0" width="109" height="28"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[处方张数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="0" width="220" height="28"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[项目名称]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26">
+			<textField>
+				<reportElement x="492" y="0" width="118" height="26"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PJCFE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="0" width="220" height="26"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YPMC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="0" width="109" height="26"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CFZS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="0" width="54" height="26"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="0" width="108" height="26"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{FYJE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="25">
+			<staticText>
+				<reportElement x="359" y="0" width="94" height="25"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[制表日期：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="0" width="86" height="25"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<text><![CDATA[制表人：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="453" y="0" width="127" height="25"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ZBRQ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="87" y="0" width="79" height="25"/>
+				<textElement>
+					<font fontName="宋体" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ZBR}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

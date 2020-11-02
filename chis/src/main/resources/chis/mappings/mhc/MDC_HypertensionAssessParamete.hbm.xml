@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hy.schemas.MDC_HypertensionAssessParamete" table="MDC_HypertensionAssessParamete">
+		<id name="recordId" type="java.lang.String">
+			<column name="recordId"/>
+			<generator class="assigned" />
+		</id>
+		<property name="assessType" type="java.lang.String" length="1" />
+		<property name="recordWriteOff" type="java.lang.String" length="5" />
+		<property name="newPatient" type="java.lang.String" length="5" />
+		<property name="notNormPatient" type="java.lang.String" length="5" />
+		<property name="oneGroup" type="java.lang.String" length="5" />
+		<property name="oneGroupProportion" type="java.lang.Integer"  />
+		<property name="twoGroup" type="java.lang.String" length="5" />
+		<property name="twoGroupProportion" type="java.lang.Integer"  />
+		<property name="threeGroup" type="java.lang.String" length="5" />
+		<property name="threeGroupProportion" type="java.lang.Integer"  />
+		
+		<property name="assessDays" type="java.lang.Integer"  />
+		<property name="assessHour1" type="java.lang.Integer"  />
+		<property name="assessHour2" type="java.lang.Integer"  />
+	</class>
+</hibernate-mapping>

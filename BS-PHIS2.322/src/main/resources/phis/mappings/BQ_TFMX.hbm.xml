@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="BQ_TFMX" table="BQ_TFMX">
+			<id name="FYXH" type="java.lang.Long">
+            	<column name="FYXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="ZYH" type="java.lang.Long" length="18" />
+        	<property name="SQRQ" type="date"/>
+        	<property name="JGID" type="java.lang.String" length="8" />
+        	<property name="TFRQ" type="date"  />
+        	<property name="FYDW" type="java.lang.String" length="4" />
+        	<property name="FYJG" type="java.lang.Double" length="12" />
+
+        	<property name="TFSL" type="java.lang.Double" length="8" />
+        	<property name="ZFBL" type="java.lang.Double" length="4" />
+
+        	<property name="YEPB" type="java.lang.Long" length="1" />
+        	<property name="TFBQ" type="java.lang.Long" length="18" />
+        	<property name="CZGH" type="java.lang.String" length="10" />
+
+        	<property name="YZID" type="java.lang.Long" length="18" />
+        	<property name="FYXM" type="java.lang.Long" length="18" />
+</class>
+</hibernate-mapping>

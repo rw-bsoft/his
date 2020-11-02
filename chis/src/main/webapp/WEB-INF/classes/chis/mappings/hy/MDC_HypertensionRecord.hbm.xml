@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hy.schemas.MDC_HypertensionRecord"
+		table="MDC_HypertensionRecord">
+		<id name="phrId" type="java.lang.String">
+			<column name="phrId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="manaDoctorId" type="java.lang.String" length="20" />
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="recordSource" type="java.lang.String" length="1" />
+		<property name="riskLevel" type="java.lang.String" length="1" />
+		<property name="hypertensionGroup" type="java.lang.String" length="2" />
+		<property name="clinicAddress" type="java.lang.String" length="1" />
+		<property name="viability" type="java.lang.String" length="1" />
+		<property name="height" type="java.lang.Double" />
+		<property name="weight" type="java.lang.Double" />
+		<property name="constriction" type="java.lang.Integer" />
+		<property name="diastolic" type="java.lang.Integer" />
+		<property name="smoke" type="java.lang.String" length="1" />
+       	<property name="drink" type="java.lang.String" length="2" />
+       	
+		<property name="drinkOver" type="java.lang.String" length="1" />
+       	
+       	<property name="train" type="java.lang.String" length="2" />
+       	<property name="eateHabit"  type="java.lang.String" length="64"  />
+		<property name="familyHistroy" type="java.lang.String" length="64" />
+		<property name="familyHistroyOther" type="java.lang.String" length="100" />
+		<property name="riskiness" type="java.lang.String" length="64" />
+		<property name="complication" type="java.lang.String" length="64" />
+		<property name="targetHurt" type="java.lang.String" length="64" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp"/>
+		<property name="createUnit" type="java.lang.String" length="20" />
+		
+		<property name="cancellationCheckUnit" type="java.lang.String" length="16" />
+		<property name="cancellationCheckUser" type="java.lang.String" length="20" />
+		<property name="cancellationCheckDate" type="date" />
+		<property name="status" type="java.lang.String" length="1" />
+		<property name="yearEstimate" type="date"/>
+		<property name="planTypeCode" type="java.lang.String"/>
+		<!-- 需求新加 add by yuhua 2009 10 30-->
+		<property name="confirmDate" type="date"/>
+		<property name="smokeCount" type="java.lang.Integer" />
+		<property name="drinkCount" type="java.lang.Integer" />
+		<property name="drinkTypeCode" type="java.lang.String" length="64"/>
+		
+		<property name="afterMedicine" type="java.lang.String" length="20"/>
+
+		<property name="SFNRXJGL" type="java.lang.String" length="2"/>
+		<property name="XJGLDXBH" type="java.lang.String" length="32"/>
+		
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="cancellationUser" type="java.lang.String" length="20" />
+		<property name="cancellationDate" type="date" />
+		<property name="cancellationUnit" type="java.lang.String" length="20" />
+		<property name="cancellationReason" type="java.lang.String" length="1" />
+		<property name="deadReason" type="java.lang.String" length="100" />
+		<property name="endCheck" type="java.lang.String" length="1" />
+		<property name="visitEffect" type="java.lang.String" length="1" />
+		<property name="noVisitReason" type="java.lang.String" length="1" />
+		<property name="visitDate" type="date"/>
+		<property name="deadDate" type="date"/>
+		<property name="lastFixGroupDate" type="date"/>
+		<property name="nextVisitDate" type="date"/>
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputDate" type="timestamp" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

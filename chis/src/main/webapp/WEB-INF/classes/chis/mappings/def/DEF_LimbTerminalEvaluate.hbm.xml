@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.def.schemas.DEF_LimbTerminalEvaluate" table="DEF_LimbTerminalEvaluate">
+		<id name="id" type="java.lang.String">
+			<column name="id"/>
+			<generator class="assigned" />
+		</id>
+		<property name="defId" type="java.lang.String" length="1" />
+		<property name="lastScore" type="java.lang.Integer"  />
+		<property name="updateScore" type="java.lang.Integer"  />
+		<property name="trainEffect" type="java.lang.String" length="1" />
+		<property name="healingTarget" type="java.lang.String" length="100" />
+		<property name="recoverSuggestion" type="java.lang.String" length="100" />
+		<property name="evaluateUser" type="java.lang.String" length="20" />
+		<property name="evaluateDate" type="date"  />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="inputDate" type="timestamp"  />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp"  />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

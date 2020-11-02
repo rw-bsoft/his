@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="EMR查看导航">
+	<item key="A" text="健康档案" pkey="phrId">
+		<item key="A01" text="个人健康档案" requireKeys="empiId" ref="chis.ehrViewNav/B_01,chis.ehrViewNav/B_02,chis.ehrViewNav/B_03,chis.ehrViewNav/B_04" paperRef="chis.ehrViewNav/B_011" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="GRDA" icosTitle="个人健康档案" icosColumnName="GRDA"/>
+		<item key="A0101" text="健康检查表" requireKeys="empiId" ref="chis.ehrViewNav/B_10" type="ehrView" controlKey="EHR_HealthRecord_readOnly" />
+		<item key="A010101" text="健康检查表" requireKeys="empiId" ref="chis.ehrViewNav/B_10_HTML" type="ehrView" controlKey="EHR_HealthRecord_readOnly" />
+		<item key="A02" text="高血压首诊测压" requireKeys="empiId" ref="chis.application.diseasemanage.DISEASEMANAGE/HY/C32" type="module" autoOpen="false" controlKey="EHR_HealthRecord_readOnly" />
+		<item key="A0202" text="高血压疑似核实" requireKeys="empiId" ref="chis.application.diseasemanage.DISEASEMANAGE/HY/C20-2" type="module" controlKey="EHR_HealthRecord_readOnly" />
+		<item key="A03" text="高血压档案" requireKeys="empiId" ref="chis.ehrViewNav/C_01" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="GAO" icosTitle="高血压" icosColumnName="GAO"/>	
+		<item key="A04" text="高血压评估" requireKeys="empiId" ref="chis.ehrViewNav/C_02" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>	
+		<item key="A05" text="高血压随访" requireKeys="empiId" ref="chis.ehrViewNav/C_03" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>	
+		<item key="A0501" text="高血压高危随访" requireKeys="empiId" ref="chis.ehrViewNav/C_07" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>
+		<!--<item key="A06" text="糖尿病疑似病例登记" requireKeys="empiId" ref="chis.ehrViewNav/D_01" type="module" controlKey="EHR_HealthRecord_readOnly"/> -->
+		<item key="A0701" text="糖尿病高危筛查" requireKeys="empiId" ref="chis.ehrViewNav/D_0101" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>	
+		<item key="A07" text="糖尿病档案" requireKeys="empiId" ref="chis.ehrViewNav/D_01" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="TANG" icosTitle="糖尿病" icosColumnName="TANG"/>	
+		<item key="A08" text="糖尿病随访" requireKeys="empiId" ref="chis.ehrViewNav/D_03" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>	
+		<item key="A0801" text="糖尿病疑似核实" requireKeys="empiId" ref="chis.application.diseasemanage.DISEASEMANAGE/DBS/D20-2" type="module" controlKey="EHR_HealthRecord_readOnly"/>	
+		
+		<item key="A09" text="老年人档案" requireKeys="empiId" ref="chis.ehrViewNav/B_07" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="LAO" icosTitle="老年人" icosColumnName="LAO"/>	
+		<item key="A10" text="老年人随访" requireKeys="empiId" ref="chis.ehrViewNav/B_06" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>
+		<!--<item key="A11" text="高血压质控随访" requireKeys="empiId" ref="chis.ehrViewNav/QCM_02" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>-->
+		<!--<item key="A12" text="糖尿病质控随访" requireKeys="empiId" ref="chis.ehrViewNav/QCM_03" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>-->
+		<!--<item key="A13" text="肿瘤质控随访" requireKeys="empiId" ref="chis.ehrViewNav/QCM_04" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>-->
+			
+		<item key="A15" text="儿童档案" requireKeys="empiId" ref="chis.ehrViewNav/H_01" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="ER" icosTitle="儿童档案" icosColumnName="ER"/>	
+		<item key="A16" text="儿童体格检查" requireKeys="empiId" ref="chis.ehrViewNav/H_97" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>	
+		<item key="A17" text="儿童体格检查" requireKeys="empiId" ref="chis.ehrViewNav/H_98" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>	
+		<item key="A18" text="儿童体格检查" requireKeys="empiId" ref="chis.ehrViewNav/H_99" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>	
+		<item key="A19" text="儿童询问记录" requireKeys="empiId" ref="chis.ehrViewNav/H_03" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>
+		<!--
+		<item key="A18" text="体弱儿童档案" requireKeys="empiId" ref="chis.ehrViewNav/H_09" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>
+		<item key="A19" text="体弱儿童随访" requireKeys="empiId" ref="chis.ehrViewNav/H_10" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>
+		<item key="A20" text="疑似残疾儿童信息报告" requireKeys="empiId" ref="chis.ehrViewNav/H_14" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>
+		-->
+		<!--<item key="A25" text="传染病报告卡" requireKeys="empiId" ref="chis.ehrViewNav/DCIDR_02" type="ehrView" controlKey="EHR_HealthRecord_readOnly"/>	
+		-->
+		<item key="A31" text="个人签约" requireKeys="empiId" ref="chis.ehrViewNav/JY_01" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="GRQY" icosTitle="个人签约" icosColumnName="GRQY"/>	
+		<item key="A32" text="离休干部档案" requireKeys="empiId" ref="chis.ehrViewNav/R_01" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="LI" icosTitle="离休干部" icosColumnName="LI"/>	
+		<!--
+		<item key="A33" text="肿瘤易患" requireKeys="empiId" ref="chis.ehrViewNav/T_01" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="YI" icosTitle="肿瘤" icosColumnName="YI"/>	
+		<item key="A34" text="肿瘤现患" requireKeys="empiId" ref="chis.ehrViewNav/T_06" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="YI" icosTitle="肿瘤" icosColumnName="XIAN"/>	
+		-->
+		<item key="A35" text="精神病档案" requireKeys="empiId" ref="chis.ehrViewNav/P_01" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="JING" icosTitle="精神病" icosColumnName="JING"/>	
+		<item key="A36" text="体弱儿童档案" requireKeys="empiId" ref="chis.ehrViewNav/H_09" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="RUO" icosTitle="体弱儿童" icosColumnName="RUO"/>	
+		<item key="A37" text="孕产妇" requireKeys="empiId" ref="chis.ehrViewNav/G_01" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="FU" icosTitle="孕产妇档案" icosColumnName="FU"/>	
+		<item key="A38" text="残疾人肢体" requireKeys="empiId" ref="chis.ehrViewNav/DEF_01" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="CAN" icosTitle="残疾人" icosColumnName="CANZT"/>	
+		<item key="A39" text="残疾人脑" requireKeys="empiId" ref="chis.ehrViewNav/DEF_02" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="CAN" icosTitle="残疾人" icosColumnName="CANN"/>	
+		<item key="A40" text="残疾人智力" requireKeys="empiId" ref="chis.ehrViewNav/DEF_03" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="CAN" icosTitle="残疾人" icosColumnName="CANZL"/>	
+		<!--
+		<item key="A41" text="肿瘤报告卡" requireKeys="empiId" ref="chis.ehrViewNav/T_04" type="ehrView" controlKey="EHR_HealthRecord_readOnly" icos="YI" icosTitle="肿瘤" icosColumnName="BAO"/>	
+	    -->
+	    <item key="A60" text="自检信息" requireKeys="empiId" ref="chis.ehrViewNav/ZJ_JKXW" type="ehrView" controlKey="EHR_HealthRecord_readOnly" />
+	</item>
+	<!--
+	<item key="C" text="家庭病床" pkey="phrId">
+		<item key="C01" text="家床申请" requireKeys="empiId" ref="phis.application.fsb.FSB/FSB/FSB0201" showWinOnly="true" controlKey="EHR_HealthRecord_readOnly"/>
+		<item key="C02" text="申请单管理" requireKeys="empiId" ref="phis.application.fsb.FSB/FSB/FSB01" controlKey="EHR_HealthRecord_readOnly"/>
+	</item>
+	-->
+	<item key="D" text="双向转诊" pkey="phrId">
+		<item key="D01" text="门诊转诊申请列表" requireKeys="empiId" ref="phis.application.cic.CIC/CIC/CIC40" controlKey="EHR_HealthRecord_readOnly"/>
+		<item key="D02" text="检查转诊申请列表" requireKeys="empiId" ref="phis.application.cic.CIC/CIC/CIC41" controlKey="EHR_HealthRecord_readOnly"/>
+		<item key="D03" text="住院转诊申请列表" requireKeys="empiId" ref="phis.application.cic.CIC/CIC/CIC42" controlKey="EHR_HealthRecord_readOnly"/>
+		<!--
+		<item key="D04" text="住院回转登记" requireKeys="empiId" ref="phis.application.cic.CIC/CIC/CIC270203" showWinOnly="true" controlKey="EHR_HealthRecord_readOnly"/>	
+		-->
+	</item>	
+</dic>

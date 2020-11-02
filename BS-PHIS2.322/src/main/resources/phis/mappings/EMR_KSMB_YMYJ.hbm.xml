@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="EMR_KSMB_YMYJ" table="EMR_KSMB_YMYJ">
+		<id name="JLXH" type="java.lang.Long">
+			<column name="JLXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="KSDM" type="java.lang.Long"   length="8"/>
+		<property name="MBBH" type="java.lang.Long" length="18" />
+		<property name="KSFL" type="java.lang.Integer" length="1" />
+		<property name="JGID" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

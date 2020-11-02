@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_FPRK" table="GY_FPRK">
+			<id name="FPXH" type="java.lang.String">
+            	<column name="FPXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="8" />
+        	<property name="FPLB" type="java.lang.String" length="2" />
+        	<property name="QSHM" type="java.lang.String" length="12" />
+        	<property name="ZZHM" type="java.lang.String" length="12" />
+        	<property name="FPZS" type="java.lang.String" length="8" />
+        	<property name="SLBZ" type="java.lang.String" length="2" />
+        	<property name="CZGH" type="java.lang.String" length="10" />
+        	<property name="RKRQ" type="timestamp"  />
+</class>
+</hibernate-mapping>

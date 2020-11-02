@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 20, 2007 3:34:08 PM by Hibernate Tools 3.2.0.b11 -->
+<hibernate-mapping>
+	<class entity-name="CHTEMPLATE" table="CHTEMPLATE">
+		<id name="CHTCODE" type="java.lang.Long" />
+		<property name="CHTNAME" type="string"/>
+		<property name="VERSIONNO" type="java.lang.Long"/>
+		<property name="DEPTGROUPCODE" type="string"/>
+		<property name="XMLTEXTPAT" type="blob"/>
+		<property name="XMLTEXTILLHIS" type="blob"/>
+		<property name="XMLTEXTILLHISCUR" type="blob"/>
+		<property name="XMLTEXTPERSON" type="blob"/>
+		<property name="XMLTEXTFAMILY" type="blob"/>
+		<property name="USED" type="java.lang.Long"/>
+		<property name="ICD10CODE" type="string"/>
+		<property name="INOROUTTYPE" type="java.lang.Integer"/>
+		<property name="FRAMEWORKCODE" type="string"/>
+		<property name="ISHDRFTRTEMP" type="java.lang.Integer"/>
+		<property name="TEMPLATETYPE" type="string"/>
+		<property name="NOTAVAILABLE" type="java.lang.Integer"/>
+		<property name="SSZK" type="java.lang.Long"/>
+		<property name="SSQY" type="java.lang.Long"/>
+		<property name="PYDM" type="string"/>
+	</class>
+</hibernate-mapping>

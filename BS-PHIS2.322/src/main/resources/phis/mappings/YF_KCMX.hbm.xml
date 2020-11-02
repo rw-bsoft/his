@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YF_KCMX" table="YF_KCMX">
+		<id name="SBXH" type="java.lang.Long">
+			<column name="SBXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="8" />
+		<property name="YFSB" type="java.lang.Long" length="18" />
+		<property name="CKBH" type="java.lang.Integer" length="2" />
+		<property name="YPXH" type="java.lang.Long" length="18" />
+		<property name="YPCD" type="java.lang.Long" length="18" />
+		<property name="YPPH" type="java.lang.String" length="20" />
+		<property name="YPXQ" type="date"  />
+		<property name="YPSL" type="java.lang.Double" length="10" />
+		<property name="JYBZ" type="java.lang.Integer" length="1" />
+		<property name="LSJG" type="java.lang.Double" length="12" />
+		<property name="PFJG" type="java.lang.Double" length="12" />
+		<property name="JHJG" type="java.lang.Double" length="12" />
+		<property name="LSJE" type="java.lang.Double" length="12" />
+		<property name="PFJE" type="java.lang.Double" length="12" />
+		<property name="JHJE" type="java.lang.Double" length="12" />
+		<property name="YKJH" type="java.lang.Double" length="12" />
+		<property name="YKLJ" type="java.lang.Double" length="12" />
+		<property name="YKJJ" type="java.lang.Double" length="12" />
+		<property name="YKPJ" type="java.lang.Double" length="12" />
+		<property name="YWSJ" type="timestamp"  />
+		<property name="YWLX" type="java.lang.Integer" length="8" />
+		<property name="YKKCSB" type="java.lang.Long" length="18" />
+	</class>
+</hibernate-mapping>

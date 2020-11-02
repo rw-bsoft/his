@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ssdev="http://www.bsoft.com.cn/schema/ssdev"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+				http://www.springframework.org/schema/beans/spring-beans.xsd         
+				http://www.bsoft.com.cn/schema/ssdev
+				http://www.bsoft.com.cn/schema/ssdev/ssdev.xsd">
+	<ssdev:applicationDomain name="platform" registryAddress="zookeeper://localhost:2181"
+		rpcServerWorkUrl="hessian://localhost:8080/platform/rpc/" enableLogger="true"/>
+
+	<!-- role -->
+	<ssdev:reference interface="ctd.controller.ConfigurableLoader" id="platform.remoteRoleLoader" />
+	<bean id="roleController" class="ctd.account.role.RoleController">
+		<property name="roleHome" value="roles"/>
+		<property name="loader" ref="platform.remoteRoleLoader"/>
+	</bean>
+	<bean id="roleWatcher" class="ctd.account.role.RoleWatcher" init-method="startWatch">
+		<property name="controller" ref="roleController" />
+	</bean>
+	<ssdev:service ref="roleWatcher" subscribe="platform.roleUpdate" />
+
+	<!-- user -->
+	<ssdev:reference interface="ctd.controller.ConfigurableLoader" id="platform.remoteUserLoader" />
+	<bean id="userController" class="ctd.account.user.UserController" >
+		<property name="loader" ref="platform.remoteUserLoader"/>
+	</bean>
+	<bean id="userWatcher" class="ctd.account.user.UserWatcher" init-method="startWatch">
+		<property name="controller" ref="userController" />
+	</bean>
+	<ssdev:service ref="userWatcher" subscribe="platform.userUpdate" />
+
+	<!-- organ -->
+	<ssdev:reference interface="ctd.controller.ConfigurableLoader" id="platform.remoteOrganLoader" />
+	<bean id="organController" class="ctd.account.organ.OrganController" >
+		<property name="loader" ref="platform.remoteOrganLoader"/>
+	</bean>
+	<bean id="organWatcher" class="ctd.account.organ.OrganWatcher" init-method="startWatch">
+		<property name="controller" ref="organController" />
+	</bean>
+	<ssdev:service ref="organWatcher" subscribe="platform.organUpdate" />
+
+	<!-- schema -->
+	<ssdev:reference interface="ctd.controller.ConfigurableLoader" id="platform.remoteSchemaLoader" />
+	<bean id="schemaController" class="ctd.schema.SchemaController" >
+		<property name="loader" ref="platform.remoteSchemaLoader"/>
+	</bean>
+	<bean id="schemaWatcher" class="ctd.schema.SchemaWatcher" init-method="startWatch">
+		<property name="controller" ref="schemaController" />
+	</bean>
+	<ssdev:service ref="schemaWatcher" subscribe="platform.schemaUpdate" />
+
+	<!-- dictionary -->
+	<ssdev:reference interface="ctd.controller.ConfigurableLoader" id="platform.remoteDictionaryLoader" />
+	<bean id="dictionaryController" class="ctd.dictionary.DictionaryController" >
+		<property name="loader" ref="platform.remoteDictionaryLoader"/>
+	</bean>
+	<bean id="dictionaryWatcher" class="ctd.dictionary.DictionaryWatcher" init-method="startWatch">
+		<property name="controller" ref="dictionaryController" />
+	</bean>
+	<ssdev:service ref="dictionaryWatcher" subscribe="platform.dictionaryUpdate" />
+
+	<!-- application -->
+	<ssdev:reference interface="ctd.controller.ConfigurableLoader" id="platform.remoteApplicationLoader" />
+	<bean id="applicationController" class="ctd.app.ApplicationController" >
+		<property name="loader" ref="platform.remoteApplicationLoader"/>
+	</bean>
+	<bean id="applicationWatcher" class="ctd.app.ApplicationWatcher" init-method="startWatch">
+		<property name="controller" ref="applicationController" />
+	</bean>
+	<ssdev:service ref="applicationWatcher" subscribe="platform.applicationUpdate" />
+
+	<!-- category -->
+	<ssdev:reference interface="ctd.controller.ConfigurableLoader" id="platform.remoteCategoryNodeLoader" />
+	<bean id="categoryNodeController" class="ctd.security.CategoryNodeController" >
+		<property name="loader" ref="platform.remoteCategoryNodeLoader"/>
+	</bean>
+	<bean id="categoryNodeWatcher" class="ctd.security.CategoryNodeWatcher" init-method="startWatch">
+		<property name="controller" ref="categoryNodeController" />
+	</bean>
+	<ssdev:service ref="categoryNodeWatcher" subscribe="platform.categoryNodeUpdate" />
+
+	<ssdev:service id="resourceLocator" class="ctd.mvc.resource.service.ResourceLocateService" />
+	<ssdev:service id="daoService" class="ctd.dao.support.HibernateSupportDAOService" />
+
+	<ssdev:service id="serviceProxy" class="ctd.service.core.proxy.OriginalServiceProxy" />
+	
+	<ssdev:reference interface="ctd.service.remote.base.DomainLoader" id="platform.domainLoader" />
+	
+	<ssdev:service id="tableDicLoader" class="ctd.service.remote.TableDicLoaderImp" />
+</beans>

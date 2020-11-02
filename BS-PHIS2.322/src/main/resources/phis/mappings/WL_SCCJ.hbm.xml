@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_SCCJ" table="WL_SCCJ">
+			<id name="CJXH" type="java.lang.Long">
+            	<column name="CJXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="KFXH" type="java.lang.Integer" length="8" />
+        	<property name="CJMC" type="java.lang.String" length="60" />
+        	<property name="QYXZ" type="java.lang.Integer" length="6" />
+        	<property name="FRDB" type="java.lang.String" length="20" />
+        	<property name="PYDM" type="java.lang.String" length="10" />
+        	<property name="WBDM" type="java.lang.String" length="10" />
+        	<property name="JXDM" type="java.lang.String" length="10" />
+        	<property name="QTDM" type="java.lang.String" length="10" />
+        	<property name="KHYH" type="java.lang.String" length="90" />
+        	<property name="YHZH" type="java.lang.String" length="30" />
+        	<property name="LXDZ" type="java.lang.String" length="90" />
+        	<property name="YZBM" type="java.lang.String" length="6" />
+        	<property name="LXRY" type="java.lang.String" length="20" />
+        	<property name="DHHM" type="java.lang.String" length="20" />
+        	<property name="SJHM" type="java.lang.String" length="20" />
+        	<property name="CZHM" type="java.lang.String" length="20" />
+        	<property name="HLWZ" type="java.lang.String" length="30" />
+        	<property name="DZYJ" type="java.lang.String" length="30" />
+        	<property name="QYJJ" type="java.lang.String" length="1000" />
+        	<property name="CJZT" type="java.lang.Integer" length="1" />
+</class>
+</hibernate-mapping>

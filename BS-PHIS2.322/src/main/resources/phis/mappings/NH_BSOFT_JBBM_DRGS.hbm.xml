@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="NH_BSOFT_JBBM_DRGS" table="NH_BSOFT_JBBM_DRGS">
+	<id name="CODE" type="java.lang.Long">
+    	<column name="CODE"/>
+        	<generator class="assigned" />
+    </id>
+<property name="NAME" type="java.lang.String"/>
+<property name="PYDM" type="java.lang.String"/>
+<property name="ICD10" type="java.lang.String"/>
+<property name="BCJEFD" type="java.lang.Double"/>
+<property name="JGLB" type="java.lang.String"/>
+<property name="MZFS" type="java.lang.Double"/>
+<property name="JGID" type="java.lang.String"/>
+</class>
+</hibernate-mapping>

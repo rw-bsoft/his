@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="EMR_SXSJ" table="EMR_SXSJ">
+		<id name="GZXH" type="java.lang.Long">
+			<column name="GZXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="GZMC" type="java.lang.String" length="50"/>
+		<property name="KSSJ" type="java.lang.String" length="50"/>
+		<property name="SXSX" type="java.lang.Integer" length="9"/>
+		<property name="WCBL" type="java.lang.Integer" length="9"/>
+		<property name="JGID" type="java.lang.String" length="20"/>
+	</class>
+</hibernate-mapping>

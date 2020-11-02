@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YJ_BG01" table="YJ_BG01">
+			<id name="YJXH" type="java.lang.Long">
+            	<column name="YJXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MZZY" type="java.lang.Long" length="1" />
+        	<property name="JGID" type="java.lang.Long" length="8" />
+        	<property name="MBXH" type="java.lang.Long" length="18" />
+        	<property name="TJHM" type="java.lang.String" length="10" />
+        	<property name="BRHM" type="java.lang.String" length="32" />
+        	<property name="ZYH" type="java.lang.Long" length="18" />
+        	<property name="BRXM" type="java.lang.String" length="40" />
+        	<property name="BRXB" type="java.lang.String" length="2" />
+        	<property name="BRNL" type="java.lang.Long" length="3" />
+        	<property name="SJYS" type="java.lang.String" length="10" />
+        	<property name="SJKS" type="java.lang.Long" length="18" />
+        	<property name="JCYS" type="java.lang.String" length="10" />
+        	<property name="JCKS" type="java.lang.Long" length="18" />
+        	<property name="JCRQ" type="timestamp"  />
+        	<property name="XMXH" type="java.lang.Long" length="18" />
+        	<property name="XMMC" type="java.lang.String" length="80" />
+        	<property name="HJJE" type="java.math.BigDecimal" length="10" />
+        	<property name="ZDDM" type="java.lang.String" length="10" />
+        	<property name="YQDH" type="java.lang.String" length="10" />
+        	<property name="BBBM" type="java.lang.String" length="4" />
+        	<property name="YJPH" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

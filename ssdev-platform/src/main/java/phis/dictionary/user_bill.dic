@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<dic searchFieldEx="b.PYDM" entry="GY_QXKZ a, SYS_Personnel b" keyField="b.YGDM" textField="b.YGXM" filter="['and',['eq',['$','a.YWLB'],['s','3']],['eq',['$','a.YGDM'],['$','b.YGDM']]]" queryOnly="true">
+	<prop field="a.JGID"/>
+	<prop field="b.PYDM"/>
+</dic>
+-->
+<!-- 
+<dic searchField="b.manaUnitId" searchFieldEx="pyCode" distinct="true" entry="SYS_USERS a, SYS_UserProp b" keyField="a.userId" textField="a.userName" queryOnly="true" extral=" group by a.logonName,b.manaUnitId,a.userId" filter="['and',['and',['in',['$','b.jobId'],['50','55','63']],['$','a.userId=b.userId']],['eq',['$','a.status'],['s','0']]]">
+	<prop field="b.manaUnitId"/>
+</dic>
+ -->
+<dic alias="用户_bill" class="ComposeDictionary" supportRemote="false" navDic="phis.@manageUnit"
+	searchField="a.manageUnitId" iconCls="user"   searchFieldEx="c.pyCode"
+	entry="UserRoleToken a,User b,SYS_Personnel c" keyField="c.PERSONID" textField="c.PERSONNAME" queryOnly="false"
+	filter="['and',['and',['in',['$','a.roleId'],['phis.50','phis.55','phis.60']],['and',['eq',['$','a.userId'],['$','b.id']],['eq',['$','a.userId'],['$','c.PERSONID']],['eq',['$','a.logoff'],['s','0']]]],['$','a.userId=b.id']]]" >
+	<properties>
+		<p name="a.manageUnitId">manageUnit</p>
+		<p name="a.roleId">roleId</p>
+	</properties>
+</dic>

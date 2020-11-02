@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="MS_YYGH" table="MS_YYGH">
+		<id name="YYXH" type="java.lang.Long">
+			<column name="YYXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String"  />
+		<property name="YYMM" type="java.lang.String"  />
+		<property name="BRID" type="java.lang.Long"/>
+		<property name="GHRQ" type="timestamp"/>
+		<property name="KSDM" type="java.lang.Long"  />
+		<property name="ZBLB" type="java.lang.Integer"  />
+		<property name="YSDM" type="java.lang.String"  />
+		<property name="YYLB" type="java.lang.Integer"  />
+		<property name="GHBZ" type="java.lang.Integer"  />
+		<property name="YYRQ" type="timestamp"/>
+		<property name="JZXH" type="java.lang.Long"  />
+		<property name="SBXH" type="java.lang.Long"  />
+		<property name="ZCID" type="java.lang.Long"  />
+		<property name="DJGH" type="java.lang.String"  />
+	</class>
+</hibernate-mapping>

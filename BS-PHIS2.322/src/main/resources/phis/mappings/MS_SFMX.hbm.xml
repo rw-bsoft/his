@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="MS_SFMX" table="MS_SFMX">
+		<composite-id>
+			<key-property name="MZXH" column="MZXH" type="java.lang.Long" length="18"/>
+			<key-property name="SFXM" column="SFXM" type="java.lang.Long" length="18"/>
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20"/>
+		<property name="ZJJE" type="java.lang.Double" length="12"/>
+		<property name="ZFJE" type="java.lang.Double" length="12"/>
+		<property name="FPHM" type="java.lang.String" length="20"/>
+	</class>
+</hibernate-mapping>

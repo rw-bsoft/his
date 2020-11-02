@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.scm.schemas.SCM_ServiceProtocol" table="SCM_ServiceProtocol">
+		<id name="PRID" type="java.lang.String">
+			<column name="PRID"/>
+			<generator class="assigned" />
+		</id>
+		<property name="protocolNo" type="java.lang.String" length="50" />
+		<property name="protocolName" type="java.lang.String" length="50" />
+		<property name="intro" type="java.lang.String" length="2000" />
+	</class>
+</hibernate-mapping>

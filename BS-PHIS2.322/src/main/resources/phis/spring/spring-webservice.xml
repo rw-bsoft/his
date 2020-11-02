@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ssdev-esb="http://www.bsoft.com.cn/schema/ssdev-esb"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd   
+		http://www.bsoft.com.cn/schema/ssdev-esb 	
+		http://www.bsoft.com.cn/schema/ssdev-esb/ssdev-esb.xsd">
+
+	<bean id="abstractWsService" class="phis.source.ws.AbstractWsService"
+		abstract="true">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<!-- <bean id="abstractEsbDispatcher" class="phis.source.ws.AbstractEsbDispatcher"
+		abstract="true">
+	</bean>-->
+	<!-- <bean id="getEmpiIdService" class="chis.source.ws.GetEmpiIdService" 
+		parent="abstractWsService"> <property name="pixProxy" ref="pixProxy" /> </bean> -->
+
+	<bean id="phisWSProxyService" class="phis.source.ws.PhisWSProxyService"
+		parent="abstractWsService">
+		<property name="desKey" value="bsphis" />
+	</bean>
+	<bean id="WebServiceEntry" class="phis.source.ws.WebServiceEntry">
+	</bean>
+	<bean id="testWsService" class="phis.source.ws.TestWsService"
+		parent="abstractWsService"/>
+	<!-- 预约挂号接口 
+	<bean id="hyglService" class="phis.application.reg.ws.HyglService"
+		parent="abstractWsService"/>
+		-->
+	<!--康复预约-->	
+	<bean id="KfyyService" class="phis.source.ws.KfyyService" />
+	<!--捷士达接口-->
+	<bean id="JsdService" class="phis.source.ws.JsdService" />
+	<!--分时预约接口-->
+	<bean id="FsyyService" class="phis.application.reg.ws.FsyyService">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>	<!-- 诊间支付接口 -->
+	<bean id="zjzfService" class="phis.source.ws.ZjzfWsService"
+		parent="abstractWsService"/>
+		
+	<!-- 实名制接口 -->	
+	<bean id="smzInfoService" class="phis.source.ws.SMZInfoService" parent="abstractWsService"/>
+	
+	<!-- EHRPDF打印 -->	
+	<bean id="ehrPDF" class="phis.source.ws.ehrPDF" parent="abstractWsService"/>
+	
+	<!-- 高血压防控 -->	
+	<bean id="gxyfkAPP" class="phis.source.ws.gxyfkAPP" parent="abstractWsService"/>
+	
+	<ssdev-esb:protocol id="phis.wsEntry0" port="12308"  protocol="webservice" ref="phisWSProxyService" />
+	<ssdev-esb:protocol id="phis.wsEntry1" port="12309"  protocol="webservice" ref="WebServiceEntry" />
+	<!--
+	<ssdev-esb:protocol id="phis.wsEntry2" port="12310"  protocol="webservice" ref="hyglService" />
+	-->
+	<ssdev-esb:protocol id="phis.wsEntry3" port="12580"  protocol="webservice" ref="KfyyService" />
+	<ssdev-esb:protocol id="phis.wsEntry4" port="12582"  protocol="webservice" ref="JsdService" />
+	<ssdev-esb:protocol id="phis.wsEntry5" port="12586"  protocol="webservice" ref="FsyyService" />
+	<!-- 诊间支付接口 -->
+	<ssdev-esb:protocol id="phis.wsEntry6" port="12305"  protocol="webservice" ref="zjzfService" />
+	<!-- 实名制接口 -->	
+	<ssdev-esb:protocol id="phis.wsEntry7" port="12307"  protocol="webservice" ref="smzInfoService" />
+	 <!-- 健康档案PDF打印 -->	
+	<ssdev-esb:protocol id="phis.wsEntry9" port="12399"  protocol="webservice" ref="ehrPDF" />
+	<!-- 高血压APP防控 -->	
+	<ssdev-esb:protocol id="phis.wsEntry10" port="12377"  protocol="webservice" ref="gxyfkAPP" />
+</beans>

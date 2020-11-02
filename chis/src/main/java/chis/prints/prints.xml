@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+<!DOCTYPE prints SYSTEM "../dtd/prints.dtd">
+-->
+<prints>
+	<print id="chis.prints.template.cover" alias="健康档案封面" bean="cover" >
+		<template>chis.prints.template.cover</template>
+	</print>
+	<print id="chis.prints.template.info" alias="个人基本信息表" bean="personalFile" >
+		<template>chis.prints.template.info</template>
+	</print>
+	
+	<print id="chis.prints.template.family" alias="家族档案情况登记表" bean="personalFile">
+		<template>chis.prints.template.family</template>
+	</print>
+
+	<print id="chis.prints.template.physical" alias="健康体检表" bean="healthCheckFile">
+		<template>chis.prints.template.healthCheck</template>
+		<template>chis.prints.template.healthCheck3</template>
+		<template>chis.prints.template.healthCheck4</template>
+		<template>chis.prints.template.healthCheck5</template>
+	</print>
+	
+	<print id="chis.prints.template.admit" alias="接诊记录卡" bean="incompleteRecordField">
+		<template>chis.prints.template.admit</template>
+	</print>
+
+	<print id="chis.prints.template.consultation" alias="会诊记录卡" bean="consultationRecordFile">
+		<template>chis.prints.template.consultation</template>
+	</print>
+
+	<print id="chis.prints.template.doubleaction" alias="双向转诊单" bean="personalFile">
+		<template>chis.prints.template.doubleaction1</template>
+		<template>chis.prints.template.doubleaction2</template>
+	</print>
+	<print id="chis.prints.template.card" alias="居民健康档案信息卡" bean="personalFile">
+		<template>chis.prints.template.card</template>
+	</print>
+
+	<print id="chis.prints.template.traditional" alias="居民中医健康档案" bean="personalFile">
+		<template>chis.prints.template.traditional</template>
+	</print>
+	<!-- 
+		<print id="chis.prints.template.personalmove" alias="个人健康档案迁移申请表"
+			bean="personalFile">
+			<template>personalmove</template>
+		</print>
+
+		<print id="chis.prints.template.familymove" alias="家庭健康档案迁移申请表" bean="personalFile">
+			<template>familymove</template>
+		</print>
+		<print id="chis.prints.template.onesix" alias="0~6岁儿童预防接种卡" bean="personalFile">
+			<template>onesix1</template>
+			<template>onesix2</template>
+		</print>
+-->
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.0-6" alias="0-6岁儿童基本情况登记表" bean="childrenFile">
+		<template>chis.prints.template.0-6</template>
+	</print>
+	<print id="chis.prints.template.checkupOne" alias="1岁以内儿童健康检查记录表"
+		bean="childrenFile">
+		<!--<template>checkupOne1</template>
+			<template>checkupOne2</template>
+			<template>checkupOne3</template>-->
+		<template>chis.prints.template.childCheckupInOne</template>
+	</print>
+	<print id="chis.prints.template.checkupOnePaper" alias="1岁以内儿童健康检查记录表(纸质版)"
+		bean="childrenFilePaper">
+		<template>chis.prints.template.childCheckupInOnePaper</template>
+	</print>
+	<print id="chis.prints.template.checkupTwoPaper" alias="1～2岁儿童健康检查记录表(纸质版)"
+		bean="childrenFilePaper">
+		<template>chis.prints.template.childCheckupOneToTwoPaper</template>
+	</print>
+	<print id="chis.prints.template.checkupThreePaper" alias="3～6岁儿童健康检查记录表(纸质版)"
+		bean="childrenFilePaper">
+		<template>chis.prints.template.childCheckupThreeToSixPaper</template>
+	</print>
+	
+	<print id="chis.prints.template.checkupTwo" alias="1～2岁儿童健康检查记录表"
+		bean="childrenFile">
+		<!--<template>checkupTwo1</template>
+			<template>checkupTwo2</template>
+			<template>checkupTwo3</template>-->
+		<template>chis.prints.template.childCheckupOneToTwo</template>
+	</print>
+
+	<print id="chis.prints.template.checkupThree" alias="3～6岁儿童健康检查记录表"
+		bean="childrenFile">
+		<!--<template>checkupThree1</template>
+			<template>checkupThree2</template>
+			<template>checkupThree3</template>-->
+		<template>chis.prints.template.childCheckupThreeToSix</template>
+	</print>
+
+	<print id="chis.prints.template.thick" alias="体弱儿管理记录表" bean="childrenFile"
+		fill="ds">
+		<template>chis.prints.template.thick</template>
+	</print>
+
+	<print id="chis.prints.template.onethreesummary" alias="0—3岁儿童健康体检小结卡"
+		bean="childrenFile">
+		<template>chis.prints.template.onethreesummary</template>
+	</print>
+
+	<print id="chis.prints.template.deadRegister" alias="儿童死亡报告卡" bean="childrenFile">
+		<template>chis.prints.template.deadRegister1</template>
+		<template>chis.prints.template.deadRegister2</template>
+	</print>
+
+	<print id="chis.prints.template.accident" alias="儿童意外伤害报告卡" bean="childrenFile">
+		<template>chis.prints.template.accident1</template>
+		<template>chis.prints.template.accident2</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.0-3DisabilityChildrenMonitor" alias="新发疑似残疾儿童信息报告" bean="childrenFile">
+		<template>chis.prints.template.0-3DisabilityChildrenMonitor</template>
+	</print>
+	<print id="chis.prints.template.healthCheckup01" alias="0-1岁儿童体检表" bean="healthCheckupFile">
+		<template>chis.prints.template.healthCheckupALL</template>
+		<template>chis.prints.template.healthCheckup01</template>
+	</print>
+	<print id="chis.prints.template.healthCheckup64" alias="市64岁及以下成人全民健康体检表" bean="healthCheckupFile">
+		<template>chis.prints.template.healthCheckupALL</template>
+		<template>chis.prints.template.healthCheckup641</template>
+		<template>chis.prints.template.healthCheckup642</template>
+	</print>
+	<print id="chis.prints.template.healthCheckup65" alias="市65岁及以上人群全民健康体检表" bean="healthCheckupFile">
+		<template>chis.prints.template.healthCheckupALL</template>
+		<template>chis.prints.template.healthCheckup651</template>
+		<template>chis.prints.template.healthCheckup652</template>
+	</print>
+	<print id="chis.prints.template.healthCheckupALL" alias="市全民健康体检居民基本情况自填表" bean="healthCheckupFile">
+		<template>chis.prints.template.healthCheckupALL</template>
+	</print>
+	<print id="chis.prints.template.healthCheckupPregnant" alias="市育龄妇女全民健康体检表" bean="healthCheckupFile">
+		<template>chis.prints.template.healthCheckupALL</template>
+		<template>chis.prints.template.healthCheckupPregnant</template>
+	</print>
+	<print id="chis.prints.template.healthCheckupStudent" alias="市中小学在校学生健康检查表" bean="healthCheckupFile">
+		<template>chis.prints.template.healthCheckupALL</template>
+		<template>chis.prints.template.healthCheckupStudent1</template>
+		<template>chis.prints.template.healthCheckupStudent2</template>
+	</print>
+	<print id="chis.prints.template.healthCheckup16" alias="1-6岁儿童体检表" bean="healthCheckupFile">
+		<template>chis.prints.template.healthCheckupALL</template>
+		<template>chis.prints.template.healthCheckup16</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.healthCheck" alias="健康检查" bean="healthCheckFile">
+		<template>chis.prints.template.healthCheck</template>
+		<template>chis.prints.template.healthCheck3</template>
+		<template>chis.prints.template.healthCheck4</template>
+		<template>chis.prints.template.healthCheck5</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.manaEffective" alias="管理目标" bean="manaEffectiveFile">
+		<template>chis.prints.template.manaEffective</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.pregnant" alias="孕产妇基本情况登记表" bean="pregnantFile">
+		<template>chis.prints.template.pregnant1</template>
+		<template>chis.prints.template.pregnant2</template>
+	</print>
+
+	<print id="chis.prints.template.first" alias="第1次产前随访服务记录表" bean="pregnantFile">
+		<template>chis.prints.template.first1</template>
+	</print>
+
+	<print id="chis.prints.template.secondfifth" alias="第2~5次产前随访服务记录表"
+		bean="pregnantFile">
+		<template>chis.prints.template.secondfifth1</template>
+	</print>
+	
+	<print id="chis.prints.template.secondfifthPaper" alias="第2~5次产前随访服务记录表(纸质版)"
+		bean="pregnantFilePaper">
+		<template>chis.prints.template.secondfifth1Paper</template>
+	</print>
+
+	<print id="chis.prints.htmlTemplate.antepartum" alias="产前检查记录汇总表" bean="pregnantFile"
+		fill="ds">
+		<template>chis.prints.template.antepartum</template>
+	</print>
+	<!--
+	<print id="chis.prints.template.postpartum" alias="产后访视记录表" bean="pregnantFile" fill="ds">
+		<template>chis.prints.template.postpartum</template>
+	</print>
+	-->
+	<print id="chis.prints.htmlTemplate.postnatalVisit" alias="产后访视记录表" bean="postnatalVisitFile">
+		<template>chis.prints.htmlTemplate.postnatalVisit</template>
+	</print>
+	<!--
+	<print id="chis.prints.template.postpartum42" alias="产后42天健康检查记录表"
+		bean="pregnantFile" >
+		<template>chis.prints.template.postpartum42</template>
+	</print>
+	-->
+	<print id="chis.prints.htmlTemplate.postnatal42day" alias="产后42天健康检查记录表"
+		bean="postnatal42dayFile" >
+		<template>chis.prints.htmlTemplate.postnatal42day</template>
+	</print>
+
+	<print id="chis.prints.template.born" alias="新生儿家庭访视记录表" bean="pregnantFile" fill="ds">
+		<template>chis.prints.template.born</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.hypertensioncard" alias="高血压患者管理卡"
+		bean="hypertensionFile">
+		<template>chis.prints.template.hypertensioncard</template>
+	</print>
+	<!-- 分········割········线 -->
+	<!--<print id="chis.prints.template.hypertensionrecord" alias="高血压患者随访服务记录表"
+		bean="hypertensionRecordFile" fill="ds">
+		<template>chis.prints.template.hypertensionrecord1</template>
+		<template>chis.prints.template.hypertensionrecord2</template>
+	</print>-->
+	<print id="chis.prints.htmlTemplate.hypertensionVisit" alias="高血压患者随访服务记录表"
+		bean="hypertensionVisitFile">
+		<template>chis.prints.htmlTemplate.hypertensionVisit</template>
+	</print>
+	
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.diabetescard" alias="糖尿病患者管理卡" bean="diabetesFile">
+		<template>chis.prints.template.diabetescard</template>
+	</print>
+	<print id="chis.prints.htmlTemplate.diabetesVisit" alias="糖尿病患者随访服务记录表"
+		bean="diabetesVisitFile">
+		<template>chis.prints.htmlTemplate.diabetesVisit</template>
+	</print>
+	<!--<print id="chis.prints.template.diabetesVisit" alias="糖尿病患者随访服务记录表"
+		bean="diabetesFile">
+		<template>chis.prints.template.diabetesVisit1</template>
+		<template>chis.prints.template.diabetesVisit2</template>
+	</print>-->
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.psychosisinfo" alias="重性精神病患者个人信息补充表"
+		bean="psychosisRecordFile">
+		<template>chis.prints.template.psychosisinfo</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.psychosisrecord" alias="重性精神病患者随访服务记录表"
+		bean="psychosisVisitFile">
+		<template>chis.prints.template.psychosisrecord</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.Zkfwtj" alias="杭州市健康服务统计分析" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.Zkfwtj</template>
+	</print>
+	
+	<print id="chis.prints.template.Hzzdmbgyfkb1" alias="杭州市重点慢病干预防控社区居民建档情况汇总表(男)" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.Hzzdmbgyfkb</template>
+	</print>
+	
+	<print id="chis.prints.template.Hzzdmbgyfkb2" alias="杭州市重点慢病干预防控社区居民建档情况汇总表(女)" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.Hzzdmbgyfkb</template>
+	</print>
+	
+	<print id="chis.prints.template.Hzzdmbgyfkb" alias="杭州市重点慢病干预防控社区居民建档情况汇总表" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.Hzzdmbgyfkb</template>
+	</print>
+	
+	<print id="chis.prints.template.Hzzdmbgyfkedhzb" alias="杭州市重点慢病干预防控月度汇总表" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.Hzzdmbgyfkedhzb</template>
+	</print>
+	
+	<print id="chis.prints.template.grgzl" alias="个人工作量统计" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.Gzl</template>
+	</print>
+	<print id="chis.prints.template.mbfzhzb" alias="社区卫生服务中心慢病防治管理汇总" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.mbfzhzb</template>
+	</print>
+
+	<print id="chis.prints.template.gqsjlr" alias="项目推进进度一览表" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.gqsjlr</template>
+	</print>
+
+	<print id="chis.prints.template.ehrMdcTj" alias="健康档案慢病档案统计" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.ehrMdcTj</template>
+	</print>
+
+	<print id="chis.prints.template.mhcCdhTj" alias="孕妇档案儿童档案统计" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.mhcCdhTj</template>
+	</print>
+
+	<print id="chis.prints.template.MHC_ycfbj" alias="孕产妇保健情况调查表-1" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.MHC_ycfbj</template>
+	</print>
+
+	<print id="chis.prints.template.MHC_ycfbj-2" alias="孕产妇保健情况调查表-2" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.MHC_ycfbj-2</template>
+	</print>
+
+	<print id="chis.prints.template.hisStat" alias="his系统统计" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.hisStat</template>
+	</print>
+	
+	<print id="chis.prints.template.EHR_jktjfx" alias="健康服务统计分析" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.EHR_jktjfx</template>
+	</print>
+	
+	<print id="chis.prints.template.MHC_ycfxtgl" alias="杭州市孕产系统管理工作报表" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.MHC_ycfxtgl</template>
+	</print>
+	<print id="chis.prints.template.GZLEhr" alias="健康档案工作量统计" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.GZLEhr</template>
+	</print>
+	
+	<print id="chis.prints.template.GZLMdc" alias="慢病工作量统计" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.GZLMdc</template>
+	</print>
+	
+	<print id="chis.prints.template.GZLMhc" alias="妇幼保健工作量统计" bean="reportBeans"
+		fill="ds">
+		<template>chis.prints.template.GZLMhc</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.GSQZkfwtj" alias="杭州市健康服务统计分析" bean="reportFile">
+		<template>chis.prints.template.GSQZkfwtj</template>
+	</print>
+
+	<print id="chis.prints.template.Sqjmrk" alias="杭州市健康服务统计分析" bean="reportFile">
+		<template>chis.prints.template.Sqjmrk</template>
+	</print>
+
+	<print id="chis.prints.template.Sqjmyssh" alias="杭州市社区居民饮食嗜好" bean="reportFile">
+		<template>chis.prints.template.Sqjmyssh</template>
+	</print>
+
+	<print id="chis.prints.template.Sqjmxyyj" alias="杭州市居民吸烟、饮酒状况" bean="reportFile">
+		<template>chis.prints.template.Sqjmxyyj</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.0-3SuspectedDisabledChildren" alias="0—3岁新发疑似残疾儿童信息月报表"
+		bean="suspectedDisabledChildren" fill="ds">
+		<template>chis.prints.template.0-3SuspectedDisabledChildren</template>
+	</print>
+	<!-- chb 下面几个在系统中没有用到
+			<print id="chis.prints.template.0-3DisabledChildren" alias="0—3岁新发残疾儿童信息月报表"
+				bean="disabledChildren" fill="ds">
+				<template>chis.prints.template.0-3DisabledChildren</template>
+			</print>
+
+			<print id="chis.prints.template.0-3ChildrenSystem" alias="0—3岁儿童系统管理报表"
+				bean="childrenSystemFile" fill="ds">
+				<template>0-3ChildrenSystem</template>
+			</print>
+
+			<print id="chis.prints.template.0-4ChildrenDeathMonitor" alias="0-4岁儿童死亡监测报表"
+				bean="childrenDeathMonitor" fill="ds">
+				<template>chis.prints.template.0-4ChildrenDeathMonitor</template>
+			</print>
+
+			<print id="chis.prints.template.7ChildrenCasualty" alias="7岁以下儿童意外伤害监测报表"
+				bean="childrenCasualty" fill="ds">
+				<template>chis.prints.template.7ChildrenCasualty</template>
+			</print>
+		 -->
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.0-3DefectChildren" alias="杭州市0-3岁儿童残疾监测"
+		bean="defectChildrenFile" fill="ds">
+		<template>chis.prints.template.0-3DefectChildren</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.childrenCheckup" alias="杭州市0-3岁儿童体检体检指导单"
+		bean="childrenCheckupFile" fill="ds">
+		<template>chis.prints.template.childrenCheckup</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.physicalExamination" alias="社区卫生服务中心体检报告"
+		bean="physicalExaminationFile" fill="ds">
+		<!-- 
+			-->
+		<template>chis.prints.template.examination_cover</template>
+		<template>chis.prints.template.examination_item</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.cvd" alias="心血管" bean="cvdFile" fill="ds">
+		<template>chis.prints.template.cvd</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.pregnantHighRiskVisit" alias="孕妇高危随访"
+		bean="pregnantHighRiskVisitFile" fill="ds">
+		<template scriptlet="chis.source.print.scriptlet.PregnantVisitScriptlet">chis.prints.template.pregnantHighRiskVisit</template>
+	</print>
+	<print id="chis.prints.template.deathReport" alias="孕产妇死亡登记报告卡"
+		bean="womanCheckup">
+		<template>chis.prints.template.deathReport1</template>
+		<template>chis.prints.template.deathReport2</template>
+	</print>
+	<!-- 分········割········线 -->
+	<print id="chis.prints.template.0-3tiluozhuifangdan" alias="儿童体弱儿追访单"
+		bean="tiRuoRrZhuiFangDan" fill="ds">
+		<template>chis.prints.template.0-3tiluozhuifangdan</template>
+	</print>
+	<print id="chis.prints.template.healthEducation" alias="健康教育活动记录表"
+		bean="healthEducation">
+		<template>chis.prints.template.healthEducation</template>
+	</print>
+	<print id="chis.prints.template.infectiousDisease" alias="传染病报告卡"
+		bean="publicHealth">
+		<template>chis.prints.template.infectiousDisease</template>
+	</print>
+	<print id="chis.prints.template.burstPublicHealth" alias="突发公共卫生事件相关信息报告卡"
+		bean="publicHealth">
+		<template>chis.prints.template.burstPublicHealth1</template>
+		<template>chis.prints.template.burstPublicHealth2</template>
+	</print>
+	<print id="chis.prints.template.sanitationEvent" alias="环境卫生事件相关信息表"
+		bean="publicHealth">
+		<template>chis.prints.template.sanitationEvent</template>
+	</print>
+	
+	<print id="chis.prints.template.familyContractBase" alias="家庭签约协议书"
+		bean="familyContractBasePrint" fill="ds">
+		<template>chis.prints.template.familyContractBase</template>
+	</print>
+	
+	<print id="chis.prints.template.chineseMedicineManage" alias="中医药保健"
+		bean="chineseMedicineManage">
+		<template>chis.prints.template.chineseMedicineManage1</template>
+		<template>chis.prints.template.chineseMedicineManage2</template>
+		<template>chis.prints.template.chineseMedicineManage3</template>
+	</print>
+	<print id="chis.prints.template.childrenCheckupDescription1" alias="1岁以内儿童中医药保健"
+		bean="childrenCheckupDescription">
+		<template>chis.prints.template.childrenCheckupDescription1</template>
+	</print>
+	<print id="chis.prints.template.childrenCheckupDescription2" alias="1-2岁儿童中医药保健"
+		bean="childrenCheckupDescription">
+		<template>chis.prints.template.childrenCheckupDescription2</template>
+	</print>
+	<print id="chis.prints.template.childrenCheckupDescription3" alias="3-6岁儿童中医药保健"
+		bean="childrenCheckupDescription">
+		<template>chis.prints.template.childrenCheckupDescription3</template>
+	</print>
+		<print id="chis.prints.template.HealthTeachReport" alias="健康教育"
+		bean="healthTeachReport">
+		<template>chis.prints.template.HealthTeachReport</template>
+	</print>
+	<print id="chis.prints.template.HealthRecipelManage" alias="健康处方"
+		bean="healthRecipelManage">
+		<template>chis.prints.template.HealthRecipelManage</template>
+	</print>
+	<print id="chis.prints.template.OldPeopleSelfCare" alias="老年人自理评估"
+		bean="oldPeopleSelfCare" fill="ds">
+		<template>chis.prints.template.OldPeopleSelfCare</template>
+	</print>
+	<print id="chis.prints.template.EHR_HealthRecord_JBXX" alias="个人基本信息"
+		bean="EHR_HealthRecord_JBXX" >
+		<template>chis.prints.template.EHR_HealthRecord_JBXX1</template>
+		<template>chis.prints.template.EHR_HealthRecord_JBXX2</template>
+	</print>
+	<print id="chis.prints.template.ChildVisitInfoAndRecord" alias="新生儿家庭访视"
+		bean="childVisitInfoAndRecord" >
+		<template>chis.prints.template.ChildVisitInfoAndRecord</template>
+	</print>
+	<print id="chis.prints.template.FirstVisitRecord" alias="第一次孕妇随访记录表"
+		bean="firstVisitRecord" >
+		<template>chis.prints.template.FirstVisitRecord</template>
+	</print>
+	<print id="chis.prints.template.PrenatalChildrenRecord" alias="妇幼新生儿访视"
+		bean="prenatalChildrenRecord" >
+		<template>chis.prints.template.PrenatalChildrenRecord</template>
+	</print>
+	
+	<print id="chis.prints.template.ReferralInfoFile" alias="上转申请"
+		bean="ReferralInfoFile">
+		<template>chis.prints.template.ReferralInfoFile</template>
+	</print>
+	<print id="chis.prints.template.ReferralInfoReportFile" alias="下转申请"
+		bean="ReferralInfoReportFile">
+		<template>chis.prints.template.ReferralInfoReportFile</template>
+	</print>
+	<!-- 
+			<print id="chis.prints.template.tumourrecord" alias="杭州市恶性肿瘤患者管理卡"
+				bean="tumourFile">
+				<template>chis.prints.template.tumourrecord</template>
+			</print>
+
+			<print id="chis.prints.template.malignancyrecordlist" alias="杭州市恶性肿瘤患者随访管理表"
+				bean="tumourFile">
+				<template>malignancyrecordlist</template>
+			</print>
+
+			<print id="chis.prints.template.malignancy" alias="杭州市恶性肿瘤病例随访质量评价表"
+				bean="tumourFile">
+				<template>malignancy</template>
+			</print>
+		 -->
+	<!--<print id="chis.prints.template.familyContractBaseLy" alias="家庭签约协议书"
+		bean="familyContractBaseLyPrint" fill="ds">
+		<template>chis.prints.template.familyContractBaseLy</template>
+	</print>	  
+	  <print id="chis.prints.template.xieyishu" alias="签约协议书"
+		bean="SignContract">
+		<template>chis.prints.template.xieyishu</template>
+		<template>chis.prints.template.xieyishu1</template>
+		<template>chis.prints.template.xieyishu3</template>
+	</print>-->
+	
+	<print id="chis.prints.template.familyContractBaseLs" alias="家庭签约协议书"
+		bean="familyContractBaseLsPrint" fill="ds">
+		<template>chis.prints.template.familyContractBase1</template>
+		 <template>chis.prints.template.familyContractBase2</template>
+	</print>
+	<print id="chis.prints.template.familyContractBaseLs1" alias="家庭签约协议书"
+		bean="familyContractBaseLsPrint" fill="ds">
+		  <template>chis.prints.template.familyContractBase1</template>
+		  <template>chis.prints.template.familyContractBase2</template>
+		  <template>chis.prints.template.familyContractBase_GX1</template>
+		  <template>chis.prints.template.familyContractBase_GX2</template>
+		  <template>chis.prints.template.familyContractBase_GX3</template>
+		  <template>chis.prints.template.familyContractBase_JB</template>
+		  <template>chis.prints.template.familyContractBase_JB2</template>
+	</print>
+	<print id="chis.prints.template.familyContractBaseLs2" alias="家庭签约协议书"
+		bean="familyContractBaseLsPrint" fill="ds">
+		 <template>chis.prints.template.familyContractBase1</template>
+		 <template>chis.prints.template.familyContractBase2</template>
+		 <template>chis.prints.template.familyContractBase_JB</template> 
+		 <template>chis.prints.template.familyContractBase_JB2</template> 
+	</print>
+	<print id="chis.prints.template.familyContractBaseLs3" alias="家庭签约协议书"
+		bean="familyContractBaseLsPrint" fill="ds">
+		  <template>chis.prints.template.familyContractBase_GX1</template>
+		  <template>chis.prints.template.familyContractBase_GX2</template>
+		  <template>chis.prints.template.familyContractBase_GX3</template>
+	</print>
+	<print id="chis.prints.template.familyContractBaseLs4" alias="家庭签约协议书"
+		bean="familyContractBaseLsPrint" fill="ds">
+		  <template>chis.prints.template.familyContractBase1</template>
+		  <template>chis.prints.template.familyContractBase2</template>
+		  <template>chis.prints.template.familyContractBase_GX1</template>
+		  <template>chis.prints.template.familyContractBase_GX2</template>
+		  <template>chis.prints.template.familyContractBase_GX3</template>
+		  <template>chis.prints.template.familyContractBase_JB</template> 
+		  <template>chis.prints.template.familyContractBase_JB2</template>
+	</print>
+	<print id="chis.prints.template.familyContractBaseLs5" alias="家庭签约协议书"
+		bean="familyContractBaseLsPrint" fill="ds">
+		  <template>chis.prints.template.familyContractBase_JB</template>  
+		  <template>chis.prints.template.familyContractBase_JB2</template>
+	</print>
+	<print id="chis.prints.template.familyContractBaseLs6" alias="家庭签约协议书"
+		bean="familyContractBaseLsPrint" fill="ds">
+		  <template>chis.prints.template.familyContractBase_GX1</template>
+		  <template>chis.prints.template.familyContractBase_GX2</template>
+		  <template>chis.prints.template.familyContractBase_GX3</template>
+	</print>
+</prints>

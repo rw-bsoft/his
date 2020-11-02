@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_ZFBL" table="GY_ZFBL">
+		<composite-id>
+            <key-property name="SFXM" column="SFXM" type="java.lang.Long"/>
+            <key-property name="BRXZ" column="BRXZ" type="java.lang.Long"/>
+       </composite-id>
+       <property name="ZFBL" type="java.lang.Double" length="6" />
+</class>
+</hibernate-mapping>

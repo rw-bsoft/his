@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		name="report8"
+
+		language="groovy"		 columnCount="1"
+		printOrder="Vertical"
+		orientation="Portrait"
+		pageWidth="690"
+		pageHeight="720"
+		columnWidth="686"
+		columnSpacing="0"
+		leftMargin="2"
+		rightMargin="2"
+		topMargin="2"
+		bottomMargin="2"
+		whenNoDataType="NoPages"
+		isTitleNewPage="false"
+		isSummaryNewPage="false">
+	<property name="ireport.zoom" value="1.0000000000000004" />
+	<property name="ireport.x" value="0" />
+	<property name="ireport.y" value="0" />
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+
+	<field name="name" class="java.lang.String"/>
+
+	<background>
+		<band height="0"   >
+		</band>
+	</background>
+	<title>
+		<band height="79"   >
+			<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="375"
+						y="-24"
+						width="0"
+						height="0"
+						key="image-1"/>
+				<box></box>
+				<graphicElement stretchType="NoStretch"/>
+				<imageExpression class="java.lang.String"><![CDATA[]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement
+						x="1"
+						y="10"
+						width="680"
+						height="35"
+						key="staticText-1"/>
+				<box>					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[溧 水 区 永 阳 街 道 社 区 服 务 中 心
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="1"
+						y="45"
+						width="680"
+						height="34"
+						key="staticText-20"/>
+				<box>					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[口 腔 科 牙 周 治 疗 知 情 同 意 书]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="620"   >
+			<staticText>
+				<reportElement
+						x="1"
+						y="0"
+						width="120"
+						height="38"
+						key="staticText-2"/>
+				<box>					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[疾病诊断]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="1"
+						y="38"
+						width="120"
+						height="38"
+						key="staticText-3"/>
+				<box>					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[拟施手术]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="1"
+						y="76"
+						width="680"
+						height="263"
+						key="staticText-4"/>
+				<box>					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="19"/>
+				</textElement>
+				<text><![CDATA[    术中、术后可能发生的并发症：
+1.麻醉意外：过敏、休克、呼吸心跳骤停；
+2.术中、术后疼痛、出血、血肿；
+3.神经损伤、引起麻木；               4.术中充填体、修复体脱落；
+5.术中器械滑脱造成唇舌腭口底粘膜及面部皮肤损伤；
+6.术后全身发热；                    7.术后牙齿冷酸敏感咬合乏力；
+8.术后牙周及颌面部肿痛；             9.口腔粘膜及牙龈溃疡；
+10.术后颞下颌关节疼痛、开口受阻；
+11.术后牙龈退缩、牙间隙增大、食物嵌塞的可能；
+12.费用：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+13.其他：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="1"
+						y="339"
+						width="680"
+						height="174"
+						key="staticText-5"/>
+				<box>					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Top" lineSpacing="Double">
+					<font fontName="宋体" size="19"/>
+				</textElement>
+				<text><![CDATA[    患者（家属）需据实向医师汇报自己的全身情况（包括患病史、治疗史、过敏史、药物服用史等）并详细阅读手术议定书的所有条款（包括手写条款），本人理解上述条款内容的含意，如发生并发症本人表示谅解。经慎重考虑同意手术。本同意书一式两份，医患双方各执一份。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="1"
+						y="513"
+						width="120"
+						height="38"
+						key="staticText-6"/>
+				<box>					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[患者（家属）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="1"
+						y="551"
+						width="120"
+						height="38"
+						key="staticText-7"/>
+				<box>					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[关  系]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="341"
+						y="0"
+						width="120"
+						height="38"
+						key="staticText-11"/>
+				<box>					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[手术日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="341"
+						y="38"
+						width="120"
+						height="38"
+						key="staticText-12"/>
+				<box>					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[经治医师]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="461"
+						y="0"
+						width="220"
+						height="38"
+						key="staticText-13"/>
+				<box>					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[年   月   日]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="121"
+						y="0"
+						width="220"
+						height="38"
+						key="textField-1"/>
+				<box>					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{DIAGNOSIS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="121"
+						y="38"
+						width="220"
+						height="38"
+						key="textField-2"/>
+				<box>					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{PROPOSED}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="461"
+						y="38"
+						width="220"
+						height="38"
+						key="textField-3"/>
+				<box>					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{DOCTORNAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="121"
+						y="513"
+						width="220"
+						height="38"
+						key="staticText-14"/>
+				<box>					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="121"
+						y="551"
+						width="220"
+						height="38"
+						key="staticText-15"/>
+				<box>					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="341"
+						y="513"
+						width="120"
+						height="38"
+						key="staticText-16"/>
+				<box>					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[联系方式]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="341"
+						y="551"
+						width="120"
+						height="38"
+						key="staticText-17"/>
+				<box>					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[日  期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="461"
+						y="513"
+						width="220"
+						height="38"
+						key="staticText-18"/>
+				<box>					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="461"
+						y="551"
+						width="220"
+						height="38"
+						key="staticText-19"/>
+				<box>					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[年   月   日]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="0"   >
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="0"   >
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="0"   >
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="0"   >
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="0"   >
+		</band>
+	</summary>
+</jasperReport>

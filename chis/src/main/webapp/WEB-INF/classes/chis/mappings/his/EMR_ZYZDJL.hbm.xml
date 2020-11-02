@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="EMR_ZYZDJL" table="VIEW_ZYZDJL">
+		<id name="JLXH" type="java.lang.Long">
+			<column name="JLXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JZXH" type="java.lang.Long" length="18"/>
+		<property name="BRID" type="java.lang.Long" length="18"/>
+		<property name="JGID" type="java.lang.String" length="20"/>
+		<property name="ZXLB" type="java.lang.Integer" length="1"/>
+		<property name="ZDLB" type="java.lang.Long" length="9"/>
+		<property name="ZNXH" type="java.lang.Integer" length="2"/>
+		<property name="ZZBZ" type="java.lang.Integer" length="1"/>
+		<property name="JBXH" type="java.lang.Long" length="18"/>
+		<property name="JBBM" type="java.lang.String" length="20"/>
+		<property name="JBFJM" type="java.lang.String" length="20"/>
+		<property name="MSZD" type="java.lang.String" length="200"/>
+		<property name="JBBW" type="java.lang.Long" length="18"/>
+		<property name="FJBS" type="java.lang.Long" length="18"/>
+		<property name="RYBQDM" type="java.lang.Integer" length="1"/>
+		<property name="CYZGDM" type="java.lang.Integer" length="1"/>
+		<property name="ZDYS" type="java.lang.String" length="10"/>
+		<property name="ZDRQ" type="date"/>
+		<property name="XTSJ" type="timestamp"/>
+		<property name="ZFBZ" type="java.lang.Integer" length="1"/>
+		<property name="ZFYS" type="java.lang.String" length="10"/>
+		<property name="ZFSJ" type="timestamp"/>
+		<property name="JBMC" type="java.lang.String" length="200"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.hr.schemas.EHR_LifeCycle" table="EHR_LifeCycle">
+			<id name="cycleId" type="java.lang.String">
+            	<column name="cycleId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="cycleName" type="java.lang.String" length="20" />
+        	<property name="startAge" type="java.lang.Integer"  />
+        	<property name="endAge" type="java.lang.Integer"  />
+</class>
+</hibernate-mapping>

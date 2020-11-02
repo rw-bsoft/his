@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="部门_zy" class="TableDictionary" codeRule="4,2,3,3"
+	supportRemote="false" searchField="ORGANIZCODE" entry="SYS_Office"
+	filter="['and',
+	['eq',['$','ORGANIZCODE'],['$','%user.manageUnit.ref']],
+	['eq',['$','LOGOFF'],['s','0']],
+	['eq',['$','HOSPITALDEPT'],['s','1']],
+	['notin',['$','OFFICECODE'],
+		[
+			['concat',['s','select PARENTID from SYS_Office where ORGANIZCODE != PARENTID and LOGOFF=0 and ORGANIZCODE='],'\'',['$','%user.manageUnit.ref'],'\'']
+		]
+	]
+]"
+	keyField="id" textField="OFFICENAME" queryOnly="true">
+	<properties>
+		<p name="PARENTID" />
+		<p name="ORGANIZCODE" />
+		<p name="PYCODE" />
+	</properties>
+</dic>

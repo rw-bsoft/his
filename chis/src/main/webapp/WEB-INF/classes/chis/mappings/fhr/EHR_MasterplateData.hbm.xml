@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.fhr.schemas.EHR_MasterplateData" table="MPM_MasterplateData">
+		<id name="recordId" type="java.lang.String">
+			<column name="recordId"/>
+			<generator class="assigned" />
+		</id>
+		<property name="masterplateId" type="java.lang.String" length="16" />
+		<property name="masterplateName" type="java.lang.String" length="100" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="inputDate" type="date"  />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="date"  />
+	</class>
+</hibernate-mapping>

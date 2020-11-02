@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="医生_处方权限_跨机构"  codeRule="4,2,3,3,3,3,3,3" navDic="manageUnit" class="TableDictionary" supportRemote="false" filter="['and',['and',['and',['eq',['$','a.PRESCRIBERIGHT'],['s','1']],['ne',['$','a.LOGOFF'],['i','1']]],['eq',['$','b.manageUnitId'],['$','%user.manageUnit.id']]],['eq',['$','a.PERSONID'],['$','b.userId']]]" distinct="true" entry="SYS_Personnel a,UserRoleToken b" keyField="a.PERSONID" textField="a.PERSONNAME" queryOnly="true">
+	<properties>
+		<p name="a.PERSONID">PERSONID</p>
+		<p name="a.PYCODE">PYCODE</p>
+	</properties>
+</dic>

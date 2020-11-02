@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.inc.schemas.INC_IncompleteRecord" 
+		table="INC_IncompleteRecord">
+		<id name="recordId" type="java.lang.String">
+			<column name="recordId"/>
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="serialNumber" type="java.lang.String" length="50" />
+		<property name="subjectivityData" type="java.lang.String" length="1000" />
+		<property name="ImpersonalityData" type="java.lang.String" length="1000" />
+		<property name="assessment" type="java.lang.String" length="1000" />
+		<property name="disposePlan" type="java.lang.String" length="1000" />
+		<property name="advices" type="java.lang.String" length="1000" />
+		<property name="doctor" type="java.lang.String" length="25" />
+		<property name="clinicalReceptionDate" type="date"  />
+		<property name="lastModifyDate" type="timestamp"  />
+		<property name="lastModifyUser" type="java.lang.String" length="25" />
+		<property name="lastModifyUnit" type="java.lang.String" length="25" />
+		<property name="createUser" type="java.lang.String" length="25" />
+		<property name="createUnit" type="java.lang.String" length="25" />
+		<property name="createDate" type="timestamp"  />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.her.schemas.HER_HealthEducationRecipel" table="HER_HealthEducationRecipel">
+		<id name="herId" type="java.lang.String">
+			<column name="herId"/>
+			<generator class="assigned" />
+		</id>
+		<property name="setId" type="java.lang.String" length="16" />
+        <property name="exeId" type="java.lang.String" length="16" />
+        <property name="recordId" type="java.lang.String" length="16" />
+		<property name="recipelContent" type="binary" />
+		
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp"/>
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

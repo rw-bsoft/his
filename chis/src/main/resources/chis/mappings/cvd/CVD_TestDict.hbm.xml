@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.cvd.schemas.CVD_TestDict" table="CVD_TestDict">
+			<id name="testId" type="java.lang.String">
+            	<column name="testId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="testName" type="java.lang.String" length="200" />
+        	<!-- 
+        	<property name="testItemA" type="java.lang.String" length="200" />
+        	<property name="testItemB" type="java.lang.String" length="200" />
+        	<property name="testItemC" type="java.lang.String" length="200" />
+        	<property name="testItemD" type="java.lang.String" length="200" />
+        	 -->
+        	<property name="result" type="java.lang.String" length="64" />
+        	<property name="part" type="java.lang.Integer" length="1" />
+        	<property name="num" type="java.lang.Integer" length="3" />
+</class>
+</hibernate-mapping>

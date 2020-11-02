@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.ohr.schemas.MDC_ChineseMedicineManage" table="MDC_ChineseMedicineManage">
+		<id name="id" type="java.lang.String">
+			<column name="id" length="16" />
+			<generator class="assigned"></generator>
+		</id>
+		<property name="phrId" type="java.lang.String" length="30"/>
+		<property name="empiId" type="java.lang.String" length="32"/>
+		<property name="energyFull" type="java.lang.String" length="1"/>
+		<property name="easyWeary" type="java.lang.String" length="1"/>
+		<property name="easyPant" type="java.lang.String" length="1"/>
+		<property name="voiceWeak" type="java.lang.String" length="1"/>
+		<property name="moodiness" type="java.lang.String" length="1"/>
+		<property name="nervous" type="java.lang.String" length="1"/>
+		<property name="loneliness" type="java.lang.String" length="1"/>
+		<property name="easyScare" type="java.lang.String" length="1"/>
+		<property name="overweight" type="java.lang.String" length="1"/>
+		<property name="eyeDry" type="java.lang.String" length="1"/>
+		<property name="footFearCold" type="java.lang.String" length="1"/>
+		<property name="backFearCold" type="java.lang.String" length="1"/>
+		<property name="fearCold" type="java.lang.String" length="1"/>
+		<property name="cold" type="java.lang.String" length="1"/>
+		<property name="rhinobyon" type="java.lang.String" length="1"/>
+		<property name="mouthGreasy" type="java.lang.String" length="1"/>
+		<property name="allergy" type="java.lang.String" length="1"/>
+		<property name="skinUrticaria" type="java.lang.String" length="1"/>
+		<property name="skinBleeding" type="java.lang.String" length="1"/>
+		<property name="skinRed" type="java.lang.String" length="1"/>
+		<property name="skinDry" type="java.lang.String" length="1"/>
+		<property name="limbsNumb" type="java.lang.String" length="1"/>
+		<property name="faceGreasy" type="java.lang.String" length="1"/>
+		<property name="faceDim" type="java.lang.String" length="1"/>
+		<property name="skinEczema" type="java.lang.String" length="1"/>
+		<property name="mouthDry" type="java.lang.String" length="1"/>
+		<property name="bitterTaste" type="java.lang.String" length="1"/>
+		<property name="bellyLarge" type="java.lang.String" length="1"/>
+		<property name="fearCool" type="java.lang.String" length="1"/>
+		<property name="stoolStiction" type="java.lang.String" length="1"/>
+		<property name="stoolDry" type="java.lang.String" length="1"/>
+		<property name="furStodgily" type="java.lang.String" length="1"/>
+		<property name="stasisPurple" type="java.lang.String" length="1"/>
+		<property name="score1" type="java.lang.Integer" length="5"/>
+		<property name="physiqueIdentify1" type="java.lang.String" length="1"/>
+		<property name="healthGuide1" type="java.lang.String" length="20"/>
+		<property name="other1" type="java.lang.String" length="200"/>
+		<property name="score2" type="java.lang.Integer" length="5"/>
+		<property name="physiqueIdentify2" type="java.lang.String" length="1"/>
+		<property name="healthGuide2" type="java.lang.String" length="20"/>
+		<property name="other2" type="java.lang.String" length="200"/>
+		<property name="score3" type="java.lang.Integer" length="5"/>
+		<property name="physiqueIdentify3" type="java.lang.String" length="1"/>
+		<property name="healthGuide3" type="java.lang.String" length="20"/>
+		<property name="other3" type="java.lang.String" length="200"/>
+		<property name="score4" type="java.lang.Integer" length="5"/>
+		<property name="physiqueIdentify4" type="java.lang.String" length="1"/>
+		<property name="healthGuide4" type="java.lang.String" length="20"/>
+		<property name="other4" type="java.lang.String" length="200"/>
+		<property name="score5" type="java.lang.Integer" length="5"/>
+		<property name="physiqueIdentify5" type="java.lang.String" length="1"/>
+		<property name="healthGuide5" type="java.lang.String" length="20"/>
+		<property name="other5" type="java.lang.String" length="200"/>
+		<property name="score6" type="java.lang.Integer" length="5"/>
+		<property name="physiqueIdentify6" type="java.lang.String" length="1"/>
+		<property name="healthGuide6" type="java.lang.String" length="20"/>
+		<property name="other6" type="java.lang.String" length="200"/>
+		<property name="score7" type="java.lang.Integer" length="5"/>
+		<property name="physiqueIdentify7" type="java.lang.String" length="1"/>
+		<property name="healthGuide7" type="java.lang.String" length="20"/>
+		<property name="other7" type="java.lang.String" length="200"/>
+		<property name="score8" type="java.lang.Integer" length="5"/>
+		<property name="physiqueIdentify8" type="java.lang.String" length="1"/>
+		<property name="healthGuide8" type="java.lang.String" length="20"/>
+		<property name="other8" type="java.lang.String" length="200"/>
+		<property name="score9" type="java.lang.Integer" length="5"/>
+		<property name="physiqueIdentify9" type="java.lang.String" length="1"/>
+		<property name="healthGuide9" type="java.lang.String" length="20"/>
+		<property name="other9" type="java.lang.String" length="200"/>
+		<property name="reportDate" type="java.util.Date"/>
+		<property name="reportUser" type="java.lang.String" length="20"/>
+		<property name="status" type="java.lang.String" length="1"/>
+		<property name="bodyType" type="java.lang.String" length="20"/>
+		<property name="createUnit" type="java.lang.String" length="20"/>
+		<property name="createUser" type="java.lang.String" length="20"/>
+		<property name="createDate" type="java.util.Date"/>
+		<property name="lastModifyUser" type="java.lang.String" length="20"/>
+		<property name="lastModifyDate" type="java.util.Date"/>
+		<property name="lastModifyUnit" type="java.lang.String" length="20"/>
+		<property name="year" type="java.lang.String" length="20"/>
+	</class>
+</hibernate-mapping>

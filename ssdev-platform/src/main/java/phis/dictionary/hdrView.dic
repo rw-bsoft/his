@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="HDR视图导航">
+	<item key="C" text="住院医生站" pkey="phrId">
+		<item key="C01" text="医嘱录入" requireKeys="empiId" ref="phis.application.war.WAR/WAR/WAR09" readOnlyKey="EHR_HealthRecord_readOnly"/>
+		<item key="C02" text="病人信息" requireKeys="empiId" ref="phis.application.war.WAR/WAR/WAR1001" showWinOnly="true" readOnlyKey="EHR_HealthRecord_readOnly"/>
+		<item key="C03" text="出院证" requireKeys="empiId" ref="phis.application.war.WAR/WAR/WAR10" showWinOnly="true" readOnlyKey="EHR_HealthRecord_readOnly"/>
+		<item key="C04" text="会诊申请" requireKeys="empiId" ref="phis.application.war.WAR/WAR/WAR13" readOnlyKey="EHR_HealthRecord_readOnly"/>
+		<item key="C05" text="抗菌药申请" requireKeys="empiId" ref="phis.application.war.WAR/WAR/WAR39" readOnlyKey="EHR_HealthRecord_readOnly"/>
+		<item key="C06" text="家床申请" requireKeys="empiId" ref="phis.application.fsb.FSB/FSB/FSB0201" showWinOnly="true" controlKey="EHR_HealthRecord_readOnly"/>
+		<item key="C07" text="申请单管理" requireKeys="empiId" ref="phis.application.fsb.FSB/FSB/FSB01" controlKey="EHR_HealthRecord_readOnly"/>
+		<item key="C08" text="门诊就诊历史" requireKeys="empiId" ref="phis.application.cic.CIC/CIC/CIC3201" controlKey="EHR_HealthRecord_readOnly"/>
+		<!--EHR zhaojian 2017-10-25-->
+		<item key="C09" text="EHR" requireKeys="empiId" ref="phis.application.cic.CIC/CIC/CIC50" controlKey="EHR_HealthRecord_readOnly"/>
+		<!--家医签约 Wangjl 2018-09-18-->
+		<item key="C10" text="家医签约" requireKeys="empiId" ref="phis.application.cic.CIC/CIC/CIC51" controlKey="EHR_HealthRecord_readOnly"/>
+		<item key="C11" text="签约服务" requireKeys="empiId" ref="phis.application.cic.CIC/CIC/CIC52" controlKey="EHR_HealthRecord_readOnly"/>
+	</item>
+	<item key="E" text="护理文书" pkey="hlId">
+		<item key="E03" text="护理计划" requireKeys="empiId" ref="phis.application.war.WAR/WAR/WAR66"  readOnlyKey="EHR_HealthRecord_readOnly"/>
+		<item key="E01" text="护理记录" requireKeys="empiId" ref="phis.application.war.WAR/WAR/WAR15"  readOnlyKey="EHR_HealthRecord_readOnly"/>
+		<item key="E02" text="体温单" requireKeys="empiId" ref="phis.application.war.WAR/WAR/WAR45" readOnlyKey="EHR_HealthRecord_readOnly"/>
+	</item>
+	<item key="G" text="体检检验" pkey="hlId">
+		<item key="G01" text="检验开单" requireKeys="empiId" ref="phis.application.war.WAR/WAR/WAR16" readOnlyKey="EHR_HealthRecord_readOnly"/>
+		<item key="G02" text="检验报告" requireKeys="empiId" ref="phis.application.war.WAR/WAR/WAR19" readOnlyKey="EHR_HealthRecord_readOnly"/>
+	</item>
+</dic>

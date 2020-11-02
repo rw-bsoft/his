@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_FYKS" table="GY_FYKS">
+			<id name="FYXH" type="java.lang.Long">
+            	<column name="FYXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="FYKS" type="java.lang.Long" length="18" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="MRSY" type="java.lang.Long" length="1" />
+</class>
+</hibernate-mapping>

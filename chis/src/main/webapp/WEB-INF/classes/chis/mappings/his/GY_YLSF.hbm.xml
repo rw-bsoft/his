@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_YLSF" table="GY_YLSF">
+			<id name="FYXH" type="java.lang.Long">
+            	<column name="FYXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="FYMC" type="java.lang.String" length="80" />
+        	<property name="FYDW" type="java.lang.String" length="4" />
+        	<property name="FYGB" type="java.lang.Integer" length="18" />
+        	<property name="PYDM" type="java.lang.String" length="10" />
+        	<property name="WBDM" type="java.lang.String" length="10" />
+        	<property name="JXDM" type="java.lang.String" length="10" />
+        	<property name="BHDM" type="java.lang.String" length="10" />
+        	<property name="QTDM" type="java.lang.String" length="10" />
+        	<property name="MZSY" type="java.lang.Integer" length="1" />
+        	<property name="ZYSY" type="java.lang.Integer" length="1" />
+        	<property name="YJSY" type="java.lang.Integer" length="1" />
+        	<property name="TJFY" type="java.lang.Integer" length="1" />
+        	<property name="TXZL" type="java.lang.Integer" length="1" />
+        	<property name="ZFPB" type="java.lang.Integer" length="1" />
+        	<property name="XMBM" type="java.lang.String" length="20" />
+        	<property name="BZJG" type="java.lang.Double" length="8" />
+        	<property name="XMLX" type="java.lang.Integer" length="2" />
+        	<property name="YJJK" type="java.lang.Integer" length="9" />
+        	<property name="JCSQ" type="java.lang.Integer" length="18" />
+        	<property name="MZSQ" type="java.lang.Integer" length="18" />
+        	<property name="TSTS" type="java.lang.String" length="255" />
+        	<property name="LISLX" type="java.lang.Integer" length="2" />
+        	<property name="XMFL" type="java.lang.String" length="16" />
+        	<property name="BASYGB" type="java.lang.Integer" length="4" />
+</class>
+</hibernate-mapping>

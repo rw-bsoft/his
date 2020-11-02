@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_SFXM" table="GY_SFXM">
+			<id name="SFXM" type="java.lang.Long">
+            	<column name="SFXM"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="SFMC" type="java.lang.String" length="20" />
+        	<property name="MCSX" type="java.lang.String" length="10" />
+        	<property name="FYFL" type="java.lang.Integer" length="1" />
+        	<property name="MZSY" type="java.lang.String" length="1" />
+        	<property name="ZYSY" type="java.lang.String" length="1" />
+        	<property name="MZGB" type="java.lang.Integer" length="4" />
+        	<property name="ZYGB" type="java.lang.Integer" length="4" />
+        	<property name="FYLB" type="java.lang.Integer" length="4" />
+        	<property name="PYDM" type="java.lang.String" length="6" />
+        	<property name="BXXM" type="java.lang.Integer" length="4" />
+        	<property name="KMBM" type="java.lang.String" length="10" />
+        	<property name="PLSX" type="java.lang.String" length="10" />
+        	<property name="LBDM" type="java.lang.String" length="18" />
+        	<property name="BASYGB" type="java.lang.Integer" length="4" />
+        	<property name="ZYPL" type="java.lang.String" length="10" />
+        	<property name="MZPL" type="java.lang.String" length="10" />
+        	<property name="ZBLB" type="java.lang.Integer" length="1" />
+        	
+</class>
+</hibernate-mapping>

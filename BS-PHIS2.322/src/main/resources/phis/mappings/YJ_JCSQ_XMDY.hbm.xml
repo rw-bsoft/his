@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="phis.application.ccl.schemas.YJ_JCSQ_XMDY" table="YJ_JCSQ_XMDY">
+		<composite-id>
+			<key-property name="LBID" column="LBID" type="java.lang.Long"/>
+			<key-property name="BWID" column="BWID" type="java.lang.Long"/>
+			<key-property name="XMID" column="XMID" type="java.lang.Long"/>
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		
+	</class>
+</hibernate-mapping>

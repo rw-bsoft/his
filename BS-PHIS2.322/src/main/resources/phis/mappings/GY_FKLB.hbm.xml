@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_FKLB" table="GY_FKLB">
+			<id name="FKLB" type="java.lang.Long">
+            	<column name="FKLB"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="LBMC" type="java.lang.String" length="40" />
+        	<property name="MZSY" type="java.lang.Integer" length="8" />
+        	<property name="ZYSY" type="java.lang.Integer" length="8" />
+</class>
+</hibernate-mapping>

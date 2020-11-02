@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YB_GHJS" table="YB_GHJS">
+	<!--医保卡信息表,其他的字段根据各地医保卡返回值添加-->
+			<id name="SBXH" type="java.lang.Long">
+            	<column name="SBXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="GHGL" type="java.lang.Long" length="18" />
+        	<property name="ZFPB" type="java.lang.Integer" length="1" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

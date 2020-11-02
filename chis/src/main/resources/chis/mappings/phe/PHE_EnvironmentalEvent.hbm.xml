@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.phe.schemas.PHE_EnvironmentalEvent" table="PHE_EnvironmentalEvent">
+			<id name="RecordID" type="java.lang.String">
+            	<column name="RecordID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="reportUnit" type="java.lang.String" length="20" />
+        	<property name="reportDate" type="date"  />
+        	<property name="eventName" type="java.lang.String" length="20" />
+        	<property name="eventType" type="java.lang.String" length="20" />
+        	<property name="pathogenicFactor" type="java.lang.String" length="20" />
+        	<property name="air" type="java.lang.String" length="20" />
+        	<property name="water" type="java.lang.String" length="20" />
+        	<property name="eventReason" type="java.lang.String" length="20" />
+        	<property name="biologicReason" type="java.lang.String" length="20" />
+        	<property name="indoorPollution" type="java.lang.String" length="20" />
+        	<property name="industrialPollution" type="java.lang.String" length="20" />
+        	<property name="otherReason" type="java.lang.String" length="20" />
+        	<property name="triggerTarget" type="java.lang.String" length="20" />
+        	<property name="contaminatedEnviroment" type="java.lang.String" length="20" />
+        	<property name="accountabilityUnit" type="java.lang.String" length="20" />
+        	<property name="treatmentProcess" type="java.lang.String" length="20" />
+        	<property name="controlMeasures" type="java.lang.String" length="50" />
+  		 	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  /> 
+
+</class>
+</hibernate-mapping>

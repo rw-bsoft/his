@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="phis.application.cic.schemas.PUB_PelpleHealthTeach_MB"
+		table="PUB_PelpleHealthTeach_MB">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+		<property name="recordId" type="java.lang.String" length="16" />
+		<property name="JLXH" type="java.lang.String" length="18" />
+		<property name="recipeName" type="java.lang.String" length="200" />
+		<property name="diagnoseId" type="java.lang.String" length="16" />
+		<property name="diagnoseName" type="java.lang.String" length="200" />
+		<property name="recipeNamePy" type="java.lang.String" length="200" />
+		<property name="diagnoseNamePy" type="java.lang.String" length="200" />
+		<property name="ICD10" type="java.lang.String" length="50" />
+		<property name="healthTeach" type="java.lang.String" length="4000" />
+		<property name="inputDate" type="date" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="date" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

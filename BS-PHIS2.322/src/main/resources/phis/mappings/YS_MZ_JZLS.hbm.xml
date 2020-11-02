@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YS_MZ_JZLS" table="YS_MZ_JZLS">
+			<id name="JZXH" type="java.lang.Long">
+            	<column name="JZXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="25" />
+        	<property name="GHXH" type="java.lang.Long" length="18" />
+        	<property name="BRBH" type="java.lang.Long" length="18" />
+        	<property name="KSDM" type="java.lang.Long" length="18" />
+        	<property name="YSDM" type="java.lang.String" length="10" />
+        	<property name="ZYZD" type="java.lang.Long" length="18" />
+        	<property name="KSSJ" type="timestamp"  />
+        	<property name="JSSJ" type="timestamp"  />
+        	<property name="JZZT" type="java.lang.Integer" length="1" />
+        	<property name="YYXH" type="java.lang.Long" length="18" />
+        	<property name="FZRQ" type="timestamp"  />
+        	<property name="GHFZ" type="java.lang.String" length="1" />
+        	<property name="SFDY" type="java.lang.Integer" length="1" />
+</class>
+</hibernate-mapping>

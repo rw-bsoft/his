@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hr.schemas.EHR_LifeStyle"
+		table="EHR_LifeStyle">
+		<id name="lifeStyleId" type="java.lang.String">
+			<column name="lifeStyleId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<!-- property name="smokeFlag"  type="java.lang.String" length="2"  /-->
+		<property name="smokeFreqCode"  type="java.lang.String" length="1"  />
+		<property name="smokeTypeCode"  type="java.lang.String" length="2"  />
+		<property name="smokeCount"  type="java.lang.Integer" length="3"  />
+		<property name="smokeStartAge"  type="java.lang.Integer" length="2"  />
+		<property name="smokeAddiAge"  type="java.lang.Integer" length="2"  />
+		<property name="smokeYears"  type="java.lang.Integer" length="2"  />
+		<property name="smokeEndAge"  type="java.lang.Integer" length="2"  />
+		<property name="dryOutMethodCode"  type="java.lang.String" length="2"  />
+		<property name="secondSmoke"  type="java.lang.String" length="1"  />
+		<property name="secondSmokeDays"  type="java.lang.Integer" length="1"  />
+		<property name="secondSmokeSiteCode"  type="java.lang.String" length="1"  />
+		<!-- property name="drinkFlag"  type="java.lang.String" length="1"  /-->
+		<property name="drinkFreqCode"  type="java.lang.String" length="2"  />
+		<property name="drinkTypeCode"  type="java.lang.String" length="20"  />
+		<property name="drinkCount"  type="java.lang.Integer" length="4"  />
+		<property name="drinkStartAge"  type="java.lang.Integer" length="2"  />
+		<property name="drinkEndAge"  type="java.lang.Integer" length="2"  />
+		<property name="eateHabit"  type="java.lang.String" length="64"  />
+		<property name="foodTypeCode1"  type="java.lang.String" length="2"  />
+		<property name="foodFreq1"  type="java.lang.Integer" length="2"  />
+		<property name="foodTypeCode2"  type="java.lang.String" length="2"  />
+		<property name="foodFreq2"  type="java.lang.Integer" length="2"  />
+		<property name="foodTypeCode3"  type="java.lang.String" length="2"  />
+		<property name="foodFreq3"  type="java.lang.Integer" length="2"  />
+		<property name="foodTypeCode4"  type="java.lang.String" length="2"  />
+		<property name="foodFreq4"  type="java.lang.Integer" length="2"  />
+		
+		<property name="tobacco"  type="java.lang.String" length="20"/>
+		<property name="tabooFood"  type="java.lang.String" length="100"  />
+		
+		<property name="saltCount"  type="java.lang.Integer" length="3"  />
+		<property name="oilCount"  type="java.lang.Integer" length="2"  />
+		<property name="eateCount"  type="java.lang.Integer" length="1"  />
+		<property name="trainFreqCode"  type="java.lang.String" length="2"  />
+		<property name="trainMinute"  type="java.lang.Integer" length="3"  />
+		<property name="trainYear" type="java.lang.Integer" length="2"  />
+		<property name="trainModeCode"  type="java.lang.String" length="2"  />
+		<property name="trainSiteCode"  type="java.lang.String" length="1"  />
+		<property name="workTypeCode"  type="java.lang.String" length="1"  />
+		<property name="workIntenCode"  type="java.lang.String" length="1"  />
+		<property name="workFreqCode"  type="java.lang.String" length="2"  />
+		<property name="sitHour"  type="java.lang.Integer" length="2"  />
+		<property name="siestaHour"  type="java.lang.Integer" length="2"  />
+		<property name="sackTime"  type="java.lang.Integer" length="2"  />
+		<property name="psychosisCode"  type="java.lang.String" length="2"  />
+		<property name="confideCode"  type="java.lang.String" length="2"  />
+		<property name="pressureCode"  type="java.lang.String" length="2"  />
+		<property name="temperamentCode"  type="java.lang.String" length="1"  />
+		<property name="doingsCode"  type="java.lang.String" length="1"  />
+		<property name="memo" type="java.lang.String" length="500"  />
+		<property name="isDrinkEnd"  type="java.lang.String" length="1"  />
+		<property name="drunk"  type="java.lang.String" length="1"  />
+		
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+	</class>
+</hibernate-mapping>

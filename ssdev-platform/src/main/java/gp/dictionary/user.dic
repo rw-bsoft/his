@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic class="ComposeDictionary" navDic="gp.@manageUnit" 
+	searchField="a.manageUnitId" iconCls="user"   searchFieldEx="c.pyCode" alias="用户"
+	entry="UserRoleToken a,User b,SYS_Personnel c" keyField="a.userId" textField="b.name" queryOnly="true"
+	filter="['and',['eq',['$','a.userId'],['$','b.id']],['eq',['$','a.userId'],['$','c.personId']]]" >
+	<properties>
+		<p name="a.manageUnitId">manageUnit</p>
+		<p name="a.roleId">roleId</p>
+		<p name="c.pyCode">mCode</p>
+	</properties>
+</dic>
+
+
+<!-- 
+<dic class="ComposeDictionary"  navDic="manageUnit" 
+	searchField="b.manaUnitId" iconCls="user" searchFieldEx="a.pyCode"
+	entry="SYS_USERS a, SYS_UserProp b" keyField="a.userId" textField="a.userName" queryOnly="false"
+	filter="['$','a.userId=b.userId']">
+	<prop field="b.manaUnitId"/>
+</dic>
+ -->

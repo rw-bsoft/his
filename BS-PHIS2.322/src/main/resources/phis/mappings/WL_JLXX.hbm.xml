@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="WL_JLXX" table="WL_JLXX">
+		<id name="JLXH" type="java.lang.Long">
+			<column name="JLXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="KFXH" type="java.lang.Integer" length="8" />
+		<property name="JLBH" type="java.lang.String" length="12" />
+		<property name="ZBXH" type="java.lang.Long" length="10" />
+		<property name="WZXH" type="java.lang.Long" length="10" />
+		<property name="CJXH" type="java.lang.Long" length="12" />
+		<property name="KSDM" type="java.lang.Long" length="18" />
+		<property name="DWXH" type="java.lang.Long" length="12" />
+		<property name="CCBH" type="java.lang.String" length="50" />
+		<property name="WZDW" type="java.lang.String" length="10" />
+		<property name="WZDJ" type="java.lang.Double" length="18" />
+		<property name="GRRQ" type="date"  />
+		<property name="GRGH" type="java.lang.String" length="10" />
+		<property name="JLQJFL" type="java.lang.Integer" length="2" />
+		<property name="JLLB" type="java.lang.Integer" length="1" />
+		<property name="CLFW" type="java.lang.String" length="30" />
+		<property name="ZQDJ" type="java.lang.String" length="10" />
+		<property name="FDZ" type="java.lang.String" length="10" />
+		<property name="QJBZ" type="java.lang.Integer" length="1" />
+		<property name="DDMC" type="java.lang.String" length="50" />
+		<property name="CCRQ" type="date"  />
+		<property name="SJQD" type="java.lang.String" length="14" />
+		<property name="BGGH" type="java.lang.String" length="10" />
+		<property name="JDZQ" type="java.lang.Integer" length="2" />
+		<property name="XCJD" type="date"  />
+		<property name="DQJDXH" type="java.lang.Integer" length="10" />
+		<property name="JDRQ" type="date"  />
+		<property name="JDJG" type="java.lang.Integer" length="1" />
+		<property name="JDJL" type="java.lang.Integer" length="1" />
+		<property name="HGZH" type="java.lang.String" length="20" />
+		<property name="ZFBZ" type="java.lang.Integer" length="1" />
+	</class>
+</hibernate-mapping>

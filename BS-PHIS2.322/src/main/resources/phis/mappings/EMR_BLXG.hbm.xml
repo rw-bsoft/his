@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="EMR_BLXG" table="EMR_BLXG">
+		<id name="JLXH" type="java.lang.Long">
+			<column name="JLXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="BLBH" type="java.lang.Long" length="18" />
+		<property name="XGGH" type="java.lang.String" length="8" />
+		<property name="XGSJ" type="timestamp"  />
+		<property name="HJNR" type="blob"  />
+		<property name="JGID" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

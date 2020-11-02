@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 20, 2007 3:34:08 PM by Hibernate Tools 3.2.0.b11 -->
+<hibernate-mapping>
+    <class entity-name="EMRFRAMEWORK" table="EMRFRAMEWORK">
+    	<id name="FRAMEWORKCODE" type="java.lang.String" length="50">
+			<column name="FRAMEWORKCODE"/>
+			<generator class="assigned" />
+		</id>
+        <property name="FRAMEWORKNAME" type="java.lang.String" length="20" />
+    </class>
+</hibernate-mapping>

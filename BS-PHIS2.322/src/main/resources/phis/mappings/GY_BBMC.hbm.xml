@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="GY_BBMC" table="GY_BBMC">
+		<id name="BBBH" type="java.lang.Long">
+			<column name="BBBH"/>
+			<generator class="assigned"/>
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="BBMC" type="java.lang.String" length="40" />
+		<property name="BBLX" type="java.lang.Long" length="2" />
+		<property name="BBHS" type="java.lang.Long" length="3" />
+		<property name="BBLS" type="java.lang.Long" length="3" />
+		<property name="WIND" type="java.lang.String" length="40" />
+		<property name="BZXX" type="java.lang.String" length="250" />
+		<property name="MAIN_TITLE" type="java.lang.String" length="250" />
+		<property name="SUB_TITLE1" type="java.lang.String" length="250" />
+		<property name="SUB_TITLE2" type="java.lang.String" length="250" />
+		<property name="SUB_TITLE3" type="java.lang.String" length="250" />
+		<property name="TABLEMAKER" type="java.lang.Long" length="1" />
+		<property name="PRINTDAY" type="java.lang.Long" length="1" />
+		<property name="PRINTPAGE" type="java.lang.Long" length="1" />
+		<property name="FONTFACE_TITLE" type="java.lang.String" length="40" />
+		<property name="FONTHEIGHT_TITLE" type="java.lang.String" length="10" />
+		<property name="FONTWEIGHT_TITLE" type="java.lang.String" length="40" />
+		<property name="FONTITALIC_TITLE" type="java.lang.String" length="1" />
+		<property name="FONTUNDERLINE_TITLE" type="java.lang.String" length="1" />
+		<property name="FONTCOLOR_TITLE" type="java.lang.Long" length="8" />
+		<property name="FONTFACE_SUBTITLE" type="java.lang.String" length="40" />
+		<property name="FONTHEIGHT_SUBTITLE" type="java.lang.String" length="10" />
+		<property name="FONTWEIGHT_SUBTITLE" type="java.lang.String" length="40" />
+		<property name="FONTITALIC_SUBTITLE" type="java.lang.String" length="1" />
+		<property name="FONTUNDERLINE_SUBTITLE" type="java.lang.String" length="1" />
+		<property name="FONTCOLOR_SUBTITLE" type="java.lang.Long" length="8" />
+		<property name="GROUPBYFYLB" type="java.lang.Long" length="1" />
+		<property name="DISPLAYSUM" type="java.lang.Long" length="1" />
+		<property name="ZFHJ" type="java.lang.Long" length="1" />
+		<property name="YSHJ" type="java.lang.Long" length="1" />
+		<property name="XGPB" type="java.lang.Long" length="1" />
+        	
+	</class>
+</hibernate-mapping>

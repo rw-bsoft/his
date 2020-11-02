@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.rvc.schemas.RVC_RetiredVeteranCadresVisit" table="RVC_RetiredVeteranCadresVisit">
+		<id name="visitId" type="java.lang.String">
+			<column name="visitId"/>
+			<generator class="assigned" />
+		</id>
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="visitDate" type="date"  />
+		<property name="diet" type="java.lang.String" length="1" />
+		<property name="sleep" type="java.lang.String" length="1" />
+		<property name="excrement" type="java.lang.String" length="1" />
+		<property name="excrementOther" type="java.lang.String" length="100" />
+		<property name="pee" type="java.lang.String" length="1" />
+		<property name="emotion" type="java.lang.String" length="100" />
+		<property name="other" type="java.lang.String" length="100" />
+		<property name="communityActivity" type="java.lang.String" length="1" />
+		<property name="currentStatus" type="java.lang.String" length="100" />
+		<property name="otherStatus" type="java.lang.String" length="100" />
+		<property name="sbp" type="java.lang.Integer"  />
+		<property name="dbp" type="java.lang.Integer"  />
+		<property name="heartRateN" type="java.lang.Integer"  />
+		<property name="heartRate" type="java.lang.String" length="1" />
+		<property name="suggest" type="java.lang.String" length="255" />
+		<property name="visitUser" type="java.lang.String" length="20" />
+		<property name="visitUnit" type="java.lang.String" length="20" />
+		<property name="visitWay" type="java.lang.String" length="1" />
+		<property name="visitResult" type="java.lang.String" length="1" />
+		<property name="visitResultExplain" type="java.lang.String" length="100" />
+		<property name="nextDate" type="date" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createUnit" type="java.lang.String" length="22" />
+		<property name="createDate" type="timestamp"  />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="22" />
+		<property name="lastModifyDate" type="timestamp"  />
+	</class>
+</hibernate-mapping>

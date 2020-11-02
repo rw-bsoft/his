@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.his.schemas.HIS_Recipe" table="HIS_Recipe">
+		<id name="recipeId" type="java.lang.String">
+			<column name="recipeId" />
+			<generator class="assigned" />
+		</id>
+		<property name="clinicRecordId" type="java.lang.String"
+			length="16" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="recipeNo" type="java.lang.String" length="20" />
+		<property name="recipeType" type="java.lang.String" length="1" />
+		<property name="shareNum" type="java.lang.Integer" />
+		<property name="createDept" type="java.lang.String" length="8" />
+		<property name="createDoctor" type="java.lang.String"
+			length="20" />
+		<property name="createDate" type="date" />
+		<property name="putoutDruggist" type="java.lang.String"
+			length="20" />
+		<property name="putoutDate" type="date" />
+		<property name="status" type="java.lang.String" length="1" />
+		<property name="memo" type="java.lang.String" length="500" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

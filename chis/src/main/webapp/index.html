@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if lt IE 7]>
+  <script type="text/javascript" src="util.iepngfix.jsc"></script>
+<![endif]-->
+
+<title>基层医疗卫生信息系统</title>
+<link rel="Bookmark"  type="resources/chis/css/images/x-icon"  href="resources/chis/css/images/minilogo.ico"/>  
+<link rel="icon"  type="resources/chis/css/images/x-icon" href="resources/chis/css/images/minilogo.ico" />  
+<link rel="shortcut icon"  type="resources/chis/css/images/x-icon" href="resources/chis/css/images/minilogo.ico" />  
+<link href="resources/chis/css/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"  src="boot.jsc"></script>
+<script type="text/javascript" >
+	function getBrowserInfo()
+{
+var agent = navigator.userAgent.toLowerCase() ;
+
+var regStr_ie = /msie [\d.]+;/gi ;
+var regStr_ff = /firefox\/[\d.]+/gi
+var regStr_chrome = /chrome\/[\d.]+/gi ;
+var regStr_saf = /safari\/[\d.]+/gi ;
+//IE
+if(agent.indexOf("msie") > 0)
+{
+	var msie=(agent.match(regStr_ie)+"").replace(/[^0-9.]/ig,"") ;
+	if(msie<"8.0"){
+		alert("当前浏览器版本ie:"+msie +",浏览器版本过低，请联系医院管理员更新浏览器");
+	}
+}
+
+//firefox
+if(agent.indexOf("firefox") > 0)
+{
+	var firefox=(agent.match(regStr_ff)+"").replace(/[^0-9.]/ig,"");
+	if(firefox<"30.0"){
+		alert("当前浏览器版本firefox:"+firefox +";浏览器版本过低，请联系医院管理员更新浏览器");
+	}
+}
+
+//Chrome
+if(agent.indexOf("chrome") > 0)
+{
+//alert( agent.match(regStr_chrome)) ;
+}
+
+//Safari
+if(agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0)
+{
+//alert( agent.match(regStr_saf)) ;
+}
+
+}
+</script>
+</head>
+<body style="height:100%;background:#2c5898 url(resources/chis/css/images/login_bg.png) repeat left top;" scroll="no" oncontextmenu="return true" onhelp="return false" onload="getBrowserInfo()">
+	<div class="login_bg">
+		<img src="resources/chis/css/images/logo.png" class="logo" />
+		<ul class="login">
+			<li class="inputs"><img src="resources/chis/css/images/user.png" class="ico2" /><label>
+			<div id="usertext" /></label></li>
+			<li class="inputs"><img src="resources/chis/css/images/key.png" class="ico2" /><label><input
+					id="pwd" name="pwd" type="password" style="width:182px;height:28px" />
+			</label>
+			</li>
+			<li class="inputs"><img src="resources/chis/css/images/jiao.png" class="ico2" /><label>
+			<div id='select-role' /></label>
+			</li>
+			<li class="inputs"><img src="resources/chis/css/images/ji.png" class="ico2" /><label><div id="select-org" /></label></li>
+			<li class="chex"><label><input type="checkbox" id="forget" name="forget" />记住密码</label></li>
+			<li><label><a name="logon" id="logon" href="javascript:void(0);" class="loginBtn"></a> </label><label><a
+					name="clear" id="clear" href="javascript:void(0);" class="reset">重&nbsp;&nbsp;置</a> </label>
+			</li>
+		</ul>
+		<p class="bosft">Copyright © 2009-2019 B-Soft Corporation, All Rights Reserved</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="V_EMR_BLMB" table="V_EMR_BLMB">
+		<id name="MBBH" type="java.lang.Integer">
+			<column name="MBBH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="MBBM" type="java.lang.String" length="20" />
+		<property name="MBFL" type="java.lang.String" length="8" />
+		<property name="MBLB" type="java.lang.String" length="20" />
+		<property name="MBMC" type="java.lang.String" length="30" />
+		<property name="SSKS" type="java.lang.String" length="30" />
+		<property name="SSZK" type="java.lang.String" length="18" />
+		<property name="BLLB" type="java.lang.Integer" length="10" />
+		<property name="PYDM" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

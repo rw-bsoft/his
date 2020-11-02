@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.cdh.schemas.CDH_DisabilityMonitor"
+		table="CDH_DisabilityMonitor">
+		<id name="phrId" type="java.lang.String">
+			<column name="phrId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="disabilityType" type="java.lang.String"
+			length="64" />
+		<property name="disabilityReason" type="java.lang.String"
+			length="64" />
+		<property name="otherReason" type="java.lang.String"
+			length="100" />
+		<property name="details" type="java.lang.String" length="200" />
+		<property name="reportUnit" type="java.lang.String" length="16" />
+		<property name="reportDep" type="java.lang.String" length="20" />
+		<property name="reportDoctor" type="java.lang.String"
+			length="20" />
+		<property name="reportDate" type="date" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputDate" type="timestamp" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

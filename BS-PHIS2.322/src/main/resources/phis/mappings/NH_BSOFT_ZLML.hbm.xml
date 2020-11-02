@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="NH_BSOFT_ZLML" table="NH_BSOFT_ZLML">
+	<id name="FYXH" type="java.lang.String">
+    	<column name="FYXH"/>
+        	<generator class="assigned" />
+    </id>
+<property name="FYMC" type="java.lang.String"/>
+<property name="FYDW" type="java.lang.String"/>
+<property name="DJXE" type="java.lang.Double"/>
+<property name="ZFBL" type="java.lang.Double"/>
+<property name="PYDM" type="java.lang.String"/>
+<property name="FYDJ" type="java.lang.Double"/>
+<property name="MZZFBL" type="java.lang.Double"/>
+<property name="VERSION" type="java.lang.String"/>
+<property name="XETYPE" type="java.lang.Double"/>
+<property name="XYBBH" type="java.lang.String"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.scm.schemas.JYFWJL" table="JYFWJL">
+		<id name="recodeId" type="java.lang.String">
+			<column name="recodeId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="phrId" type="java.lang.String" length="18" />
+		<property name="recodeDate" type="date" length="200"/>
+		<property name="name" type="java.lang.String" length="30" />
+		<property name="sex" type="java.lang.String" length="10" />
+		<property name="age" type="java.lang.String" length="3" />
+		<property name="telephone" type="java.lang.String" length="30" />
+		
+		<property name="isjkgl" type="java.lang.String" length="1"/>
+		<property name="jkgl" type="java.lang.String" length="200"/>
+		<property name="isjksj" type="java.lang.String" length="1"/>
+		<property name="jksj" type="java.lang.String" length="200"/>
+		<property name="ishlyy" type="java.lang.String" length="1"/>
+		<property name="hlyy" type="java.lang.String" length="200"/>
+		<property name="ispsyz" type="java.lang.String" length="1"/>
+		<property name="psyz" type="java.lang.String" length="200"/>
+		<property name="islxdc" type="java.lang.String" length="1"/>
+		<property name="lxdc" type="java.lang.String" length="200"/>
+		<property name="isfyjk" type="java.lang.String" length="1"/>
+		<property name="fyjk" type="java.lang.String" length="200"/>
+		<property name="iskzmx" type="java.lang.String" length="1"/>
+		<property name="kzmx" type="java.lang.String" length="200"/>
+		<property name="iszyyj" type="java.lang.String" length="1"/>
+		<property name="zyyj" type="java.lang.String" length="200"/>
+		<property name="isbyzd" type="java.lang.String" length="1"/>
+		<property name="byzd" type="java.lang.String" length="200"/>
+		<property name="iszzyy" type="java.lang.String" length="1"/>
+		<property name="zzyy" type="java.lang.String" length="200"/>
+		<property name="isyytj" type="java.lang.String" length="1"/>
+		<property name="yytj" type="java.lang.String" length="200"/>
+		<property name="isjdtj" type="java.lang.String" length="1"/>
+		<property name="jdtj" type="java.lang.String" length="200"/>
+		<property name="isxlgh" type="java.lang.String" length="1"/>
+		<property name="xlgh" type="java.lang.String" length="200"/>
+		<property name="iskzjy" type="java.lang.String" length="1"/>
+		<property name="kzjy" type="java.lang.String" length="200"/>
+		<property name="isqt" type="java.lang.String" length="1"/>
+		<property name="qt" type="java.lang.String" length="200"/>
+		
+		<property name="createUser" type="java.lang.String" length="20"/>
+		<property name="createUnit" type="java.lang.String" length="20"/>
+		<property name="createDate" type="date"/>
+		<property name="lastModifyUser" type="java.lang.String" length="20"/>
+		<property name="lastModifyUnit"  type="java.lang.String" length="20"/>
+		<property name="lastModifyDate" type="date"/>
+	</class>
+</hibernate-mapping>

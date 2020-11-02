@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="PAYRECORD" table="PAYRECORD">
+		<id name="ID" type="java.lang.Long">
+			<column name="ID"/>
+			<generator class="assigned" />
+		</id>
+		<property name="PAYSERVICE" type="java.lang.String" length="4"/>
+		<property name="IP" type="java.lang.String" length="50"/>
+		<property name="ORGANIZATIONCODE" type="java.lang.String" length="50"/>
+		<property name="COMPUTERNAME" type="java.lang.String" length="50"/>
+		<property name="HOSPNO" type="java.lang.String" length="50"/>
+		<property name="PAYMONEY" type="java.lang.Double" length="12"/>
+		<property name="VOUCHERNO" type="java.lang.String" length="50"/>
+		<property name="PATIENTYPE" type="java.lang.String" length="4"/>
+		<property name="PATIENTID" type="java.lang.String" length="50"/>
+		<property name="NAME" type="java.lang.String" length="50"/>
+		<property name="SEX" type="java.lang.String" length="1"/>
+		<property name="IDCARD" type="java.lang.String" length="18"/>
+		<property name="BIRTHDAY" type="timestamp" />		
+		<property name="PAYTIME" type="timestamp"/>
+		<property name="VERIFYNO" type="java.lang.String" length="50"/>
+		<property name="BANKTYPE" type="java.lang.String" length="2"/>
+		<property name="BANKCODE" type="java.lang.String" length="50"/>
+		<property name="BANKNO" type="java.lang.String" length="50"/>
+		<property name="PAYTYPE" type="java.lang.String" length="2"/>
+		<property name="AUTH_CODE" type="java.lang.String" length="50"/>	
+		<property name="PAYSOURCE" type="java.lang.String" length="1"/>
+		<property name="TERMINALNO" type="java.lang.String" length="50"/>
+		<property name="PAYNO" type="java.lang.String" length="50"/>
+		<property name="COLLECTFEESCODE" type="java.lang.String" length="50"/>
+		<property name="COLLECTFEESNAME" type="java.lang.String" length="50"/>
+		<property name="CARDTYPE" type="java.lang.String" length="1"/>
+		<property name="CARDNO" type="java.lang.String" length="50"/>
+		<property name="STATUS" type="java.lang.String" length="1"/>
+		<property name="SENDXML" type="blob" />
+		<property name="RETNRNXML" type="blob" />
+		<property name="RETURN_CODE" type="java.lang.String" length="16"/>
+		<property name="RETURN_MSG" type="java.lang.String" length="128"/>		
+		<property name="TRADENO" type="java.lang.String" length="100"/>
+		<property name="TKBZ" type="java.lang.String" length="1"/>
+		<property name="REFUND_FEE" type="java.lang.Double" length="12"/>
+		<property name="HOSPNO_ORG" type="java.lang.String" length="50"/>
+	</class>
+</hibernate-mapping>

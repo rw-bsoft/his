@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YS_MZ_ZT02" table="YS_MZ_ZT02">
+			<id name="JLBH" type="java.lang.Integer">
+            	<column name="JLBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="ZTBH" type="java.lang.Long" length="18" />
+        	<property name="YPZH" type="java.lang.Integer" length="3" />
+        	<property name="XMBH" type="java.lang.Integer" length="10" />
+        	<property name="XMMC" type="java.lang.String" length="100" />
+        	<property name="XMSL" type="java.lang.Double" length="10" />
+        	<property name="YCJL" type="java.lang.Double" length="10" />
+        	<property name="SYPC" type="java.lang.String" length="12" />
+        	<property name="MRCS" type="java.lang.Integer" length="3" />
+        	<property name="YYTS" type="java.lang.Integer" length="3" />
+        	<property name="GYTJ" type="java.lang.Integer" length="9" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MS_GRCF" table="YS_MZ_ZT">
+			<id name="XH" type="java.lang.Integer">
+            	<column name="XH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="TZMC" type="java.lang.String" length="8" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="心血管" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1f368c1-84dc-4f73-bd7e-28b97d1c999c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="226"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Documents and Settings\\Administrator\\workspace\\CTD-HZ\\src\\config\\print\\"]]></defaultValueExpression>
+	</parameter>
+	<background>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c932f4e0-e292-4f40-9be6-4e895f8bd944" x="0" y="46" width="79" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="85063dfd-f980-4a09-a6a0-24499817f838" x="222" y="46" width="41" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[性别]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c6b7a850-2e7c-4169-b294-9f8a6011b673" x="352" y="46" width="84" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[出生日期]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1ceb3087-2b59-453e-a4b0-060bb4238770" x="79" y="46" width="143" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{personName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c1952447-7459-4caf-b935-7aeb262f88d9" x="263" y="46" width="89" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sexCode_text}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement uuid="ce76e7fd-8ab0-4e74-808e-b446a196ffb3" x="436" y="46" width="119" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{birthday}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="186d72af-d2a6-411f-b5f9-d14ea18d4b00" x="0" y="66" width="79" height="60"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[危险因素]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b7a6b7eb-93e5-4eb4-9744-abb9fc22afe5" x="79" y="66" width="143" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[总胆固醇(mmol/L)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3df17183-55f4-4c7e-82f7-8af4f7f38a96" x="79" y="106" width="39" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e41eb436-12ee-4835-9e2b-4bc53228f96f" x="79" y="86" width="39" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[个体值]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6620e319-55ec-4859-b5dd-c8b19a82156f" x="118" y="86" width="39" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[参考值]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3b48fb07-c913-4390-8e9f-f010f1ae44a9" x="157" y="86" width="65" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[是否正常]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ba3b66c8-1488-46e7-846d-b594d33208d2" x="222" y="66" width="130" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[血糖(空腹)(mmol/L)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="100d4c43-9cd9-467d-a520-2041df71acda" x="352" y="66" width="167" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[收缩压/舒张压（mmHg）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bb50e99c-5e20-4c1c-9315-256406b36c0d" x="519" y="66" width="36" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[吸烟]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6b5b4471-1af8-4a11-a3e3-f87a3331b111" x="222" y="86" width="41" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[个体值]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f434163b-bbeb-4fd7-a122-d966b56fc1b8" x="263" y="86" width="39" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[参考值]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="206185b9-185e-49cb-a49c-3834e0d3f212" x="302" y="86" width="50" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[是否正常]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d0c2a91e-e731-4ecf-874a-bd3b1debf2be" x="352" y="86" width="59" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[个体值]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0a06138c-9b10-4732-bb7f-a350fe2abd23" x="460" y="86" width="59" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[是否正常]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3c5675fb-c136-4d5e-a716-fd8e463c7d0b" x="411" y="86" width="49" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[参考值]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3b49e6ba-b209-4797-92fb-921d06e710ef" x="157" y="106" width="65" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{isTc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0f421998-3ef2-4af3-8939-f1a917a93232" x="222" y="106" width="41" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fbs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8d1f4b22-2348-459b-875d-4d14f2e666f1" x="302" y="106" width="50" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{isDiabetes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7137b3a8-0950-4b4f-9be1-f1aa8fea5d62" x="460" y="106" width="59" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{isBp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="130fe483-2067-4339-a692-b67ff4129916" x="352" y="106" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{constriction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="02844123-7554-4e88-a6d4-36b9a29491fe" x="519" y="106" width="36" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{smoke_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="60f31d4e-fcfd-4204-863d-5812f336dd45" x="118" y="106" width="39" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[<4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="78867aa7-8663-4de9-a1cb-12ac896b44a4" x="263" y="106" width="39" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[<6.1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cc083342-6862-4f64-afc3-1645c2a930a7" x="411" y="106" width="49" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[140 / 90]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a3a6d588-970d-46a8-a8b6-c06716faf5d3" x="0" y="126" width="79" height="118"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[危险度预测]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="10791e3f-b2a4-4ad2-9697-d37c42636fdc" x="79" y="126" width="476" height="118"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{riskPrediction}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8368a060-c468-4e3a-b549-525e67f54361" x="0" y="381" width="79" height="352"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[建
+
+
+
+
+
+议]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="11893a7c-165e-4632-91ff-ac7ec9c0d30c" x="79" y="669" width="107" height="64"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[医嘱]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d95812a3-a44c-4e57-9021-8bf97df20261" x="186" y="669" width="369" height="64"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{drugs}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="777763be-3c63-4db1-bb5e-34102c922ca2" x="45" y="782" width="73" height="20"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[工作人员]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="522f3fad-41ad-455a-8d91-5d4f873b3f84" x="338" y="782" width="73" height="20"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[报告日期]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3bcbae4e-8e9d-4e60-afc0-39b46f8b75cf" x="118" y="782" width="84" height="20"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{inputUser_text}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="yyyy/MM/dd">
+				<reportElement uuid="d6fa6a33-bae6-4ac0-a62a-709fe7733e86" x="411" y="782" width="84" height="20"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{printDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="54d2025e-8dfd-4d87-b69f-bed9f3c52484" x="52" y="0" width="476" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[心血管危险度预测]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6acf4378-cfd0-42ee-bb46-56c96aa4a073" x="372" y="106" width="19" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="702f181f-60a7-40b2-8256-91d8e14ca017" x="391" y="106" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{diastolic}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1cdec9e7-7815-458d-89e4-802b68acf5d0" x="0" y="244" width="79" height="57"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[危险度
+评价
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3311928e-4d7c-41e4-be06-de19b7df7006" x="79" y="244" width="476" height="57"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{riskAssessment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cc2816e0-5713-4c4e-bafc-f1cf222b4212" x="79" y="381" width="476" height="288"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lifeStyle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3c8b30f4-c96c-4d57-933c-8dbe3bd4968b" x="79" y="301" width="476" height="80"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{riskiness_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5db1c5dc-5c9c-415e-863b-328d2dfdda71" x="0" y="301" width="79" height="80"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[伴有的
+增加危险度的因素
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8862b037-53c0-43e4-8d2c-f82d25e23eab" x="0" y="733" width="79" height="32"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[健康评分]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="fcde1727-af8d-4231-a081-9ceb14341ce9" x="79" y="733" width="476" height="32"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{score}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+</jasperReport>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_KCYJ" table="WL_KCYJ">
+        	<composite-id>
+				<key-property name="WZXH" column="WZXH" type="java.lang.Long"/>
+				<key-property name="KFXH" column="KFXH" type="java.lang.Integer"/>
+			</composite-id>
+		
+        	<property name="GCSL" type="java.lang.Double" length="18" />
+        	<property name="DCSL" type="java.lang.Double" length="18" />
+</class>
+</hibernate-mapping>

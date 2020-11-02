@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="phis.application.ccl.schemas.YJ_JCSQ_JCLB" table="YJ_JCSQ_JCLB">
+			<id name="LBID" type="java.lang.Long">
+            	<column name="LBID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="LBMC" type="java.lang.String" length="50" />
+        	<property name="PYDM" type="java.lang.String" length="20" />
+        	<property name="SSLX" type="java.lang.Integer" length="2" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

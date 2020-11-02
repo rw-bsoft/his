@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.dc.schemas.DC_RabiesRecord_list" table="DC_RabiesRecord">
+		<id name="rabiesId" type="java.lang.String">
+			<column name="rabiesId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="injuryPosition" type="java.lang.String" length="20" />
+		<property name="animalInfo" type="java.lang.String" length="1" />
+		<property name="immuneYN" type="java.lang.String" length="1" />
+		<property name="injuryDegree" type="java.lang.String" length="1" />
+		<property name="injuryAnimal" type="java.lang.String" length="1" />
+		<property name="woundTreatment" type="java.lang.String" length="1" />
+		<property name="vaccinationDate1" type="date" />
+		<property name="vaccinationDate2" type="date" />
+		<property name="vaccinationDate3" type="date" />
+		<property name="vaccinationDate4" type="date" />
+		<property name="vaccinationDate5" type="date" />
+		<property name="hospital" type="java.lang.String" length="16" />
+		<property name="vaccinationMill" type="java.lang.String" length="100" />
+		<property name="vaccinationBathNum" type="java.lang.String" length="20" />
+		<property name="antiserumMill" type="java.lang.String" length="100" />
+		<property name="antiserumBathNum" type="java.lang.String" length="50" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="discoverDate" type="date" />
+		<property name="createDate" type="timestamp" />
+		<property name="treatmentDate" type="date" />
+		<property name="lastModifyDate" type="date" />
+		<property name="others" type="java.lang.String"
+			length="30" />
+		<property name="status" type="java.lang.String"
+			length="1" />
+        	<property name="closeFlag" type="java.lang.String" length="1" />
+        	<property name="closedDate" type="date" />
+			<property name="closedDoctor" type="java.lang.String" length="20" />
+			<property name="closedUnit" type="java.lang.String" length="20" />
+		<property name="cancellationUser" type="java.lang.String"
+			length="20" />
+		<property name="cancellationDate" type="timestamp" />
+		<property name="cancellationUnit" type="java.lang.String"
+			length="16" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="cancellationReason" type="java.lang.String"
+			length="1" />
+		<property name="deadReason" type="java.lang.String" length="100" />
+		<property name="manaUnitId" type="java.lang.String"
+			length="16" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ssdev="http://www.bsoft.com.cn/schema/ssdev"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd         
+	http://www.bsoft.com.cn/schema/ssdev
+	http://www.bsoft.com.cn/schema/ssdev/ssdev.xsd">
+	<!--<bean id="PersonalFile" class="com.bsoft.hzehr.print.instance.PersonalFile" 
+		/> -->
+	<bean id="consultationManageList" class="phis.prints.bean.ConsultationManageList" />
+	<bean id="storageOfMaterialsFile" class="phis.prints.bean.StorageOfMaterialsFile" />
+	<bean id="storageOfTransferFile" class="phis.prints.bean.StorageOfTransferFile" />
+	<bean id="storageOfFaultyFile" class="phis.prints.bean.StorageOfFaultyFile" />
+	<bean id="storageOfInventoryFile" class="phis.prints.bean.StorageOfInventoryFile" />
+	<bean id="storageOfInventoryKsFile" class="phis.prints.bean.StorageOfInventoryKsFile" />
+	<bean id="storageOfInventoryTzFile" class="phis.prints.bean.StorageOfInventoryTzFile" />
+	<bean id="storageOfInventoryEjFile" class="phis.prints.bean.StorageOfInventoryEjFile" />
+	<bean id="SuppliesOutFile" class="phis.prints.bean.SuppliesOutFile" />
+	<bean id="OrderCardsMouthCard" class="phis.prints.bean.OrderCardsMouthCard" />
+	<bean id="OrderCardsMouthCardZX" class="phis.prints.bean.OrderCardsMouthCardZX" />
+	<bean id="OrderCardsInjectionCard" class="phis.prints.bean.OrderCardsInjectionCard" />
+	<bean id="OrderCardsStillDripCard" class="phis.prints.bean.OrderCardsStillDripCard" />
+	<bean id="OrderCardsTransfusionPatrolCard" class="phis.prints.bean.OrderCardsTransfusionPatrolCard" />
+	<bean id="WarehousingSummaryServlet" class="phis.prints.bean.WarehousingSummaryServlet" />
+	<bean id="DepartmentBooksDetailsFile" class="phis.prints.bean.DepartmentBooksDetailsFile"></bean>
+	<bean id="PropertiesAccountingServlet" class="phis.prints.bean.PropertiesAccountingServlet"></bean>
+	<bean id="DepartmentBooksFile" class="phis.prints.bean.DepartmentBooksFile"></bean>
+	<bean id="SuppliesStockYjSearchFile" class="phis.prints.bean.SuppliesStockYjSearchFile"></bean>
+	<bean id="SuppliesStockYjSearchDetailsFile" class="phis.prints.bean.SuppliesStockYjSearchDetailsFile"></bean>
+	<bean id="FixedAssetsSearchFile" class="phis.prints.bean.FixedAssetsSearchFile"></bean>
+	<bean id="HospMediRecordFile" class="phis.prints.bean.HospMediRecordFile" />
+	<bean id="FamilySickBedMediRecordFile" class="phis.prints.bean.FamilySickBedMediRecordFile" />
+	<bean id="EMRMedicalRecordsFile" class="phis.prints.bean.EMRMedicalRecordsFile"></bean>
+	<bean id="InventoryLedgerEjFile" class="phis.prints.bean.InventoryLedgerEjFile"></bean>
+	<bean id="HospitalBedManagementFile" class="phis.prints.bean.HospitalBedManagementFile"></bean>
+	<bean id="HospitalPaymentQueriesFile" class="phis.prints.bean.HospitalPaymentQueriesFile"></bean>
+	<bean id="Payment" class="phis.prints.bean.PaymentFile"></bean>
+	<bean id="ChargesDailyFile" class="phis.prints.bean.ChargesDailyFile" />
+	<bean id="MedicalTechnologyFile" class="phis.prints.bean.MedicalTechnologyFile" />
+	<bean id="OutstandingChargesSummary" class="phis.prints.bean.OutstandingChargesSummaryFile" />
+	<bean id="CostAccountingDetail" class="phis.prints.bean.CostAccountingDetailPrint" />
+	<bean id="LibrarySummaryServlet" class="phis.prints.bean.LibrarySummaryServlet" />
+	<bean id="DepartmentCollectServlet" class="phis.prints.bean.DepartmentCollectServlet" />
+	<bean id="TransferAccountingServlet" class="phis.prints.bean.TransferAccountingServlet" />
+	<bean id="StoreMonthlyServlet" class="phis.prints.bean.StoreMonthlyServlet" />
+
+	<bean id="SuppliesStockEjSearchFile" class="phis.prints.bean.SuppliesStockEjSearchFile" />
+	<bean id="SuppliesStockEjSearchDetailsFile" class="phis.prints.bean.SuppliesStockEjSearchDetailsFile" />
+	<bean id="InventoryLedgerFile" class="phis.prints.bean.InventoryLedgerFile" />
+	<bean id="DayList" class="phis.prints.bean.DayListFile" />
+	<bean id="FamilySickBedDayList" class="phis.prints.bean.FamilySickBedDayListFile" />
+	<bean id="HospitalInvoiceByxFile" class="phis.prints.bean.HospitalInvoiceByxFile"></bean>
+	<bean id="FamilySickBedInvoiceByxFile" class="phis.prints.bean.FamilySickBedInvoiceByxFile"></bean>
+	<bean id="HospitalDebtDueList" class="phis.prints.bean.HospitalDebtDueList"></bean>
+	<bean id="HospitalPromptManagement" class="phis.prints.bean.HospitalPromptManagement"></bean>
+	<bean id="StorehouseStoreManBookReportFile" class="phis.prints.bean.StorehouseStoreManBookReportFile" />
+	<bean id="SuppliesxhmxFile" class="phis.prints.bean.SuppliesxhmxFile" />
+	<bean id="NurseRecordPrintFile" class="phis.prints.bean.NurseRecordPrintFile" />
+	<bean id="NursePlanPrintFile" class="phis.prints.bean.NursePlanPrintFile" />
+	<bean id="HospProveFile" class="phis.prints.bean.HospProveFile" />
+	<bean id="PatientDepartmentChargesDailyPrint" class="phis.prints.bean.PatientDepartmentChargesDailyPrint"></bean>
+	<bean id="FamilySickBedChargesDailyPrint" class="phis.prints.bean.FamilySickBedChargesDailyPrint"></bean>
+	<bean id="PatientDepartmentDailyFile" class="phis.prints.bean.PatientDepartmentDailyFile" />
+	<bean id="FsbPatientDepartmentDailyFile" class="phis.prints.bean.FsbPatientDepartmentDailyFile" />
+	<bean id="DrugStoreMonthlyReportFile" class="phis.prints.bean.DrugStoreMonthlyReportFile" />
+	<bean id="StorehouseMonthlyReportFile" class="phis.prints.bean.StorehouseMonthlyReportFile" />
+	<bean id="DoctorAdviceSubmitFile" class="phis.prints.bean.DoctorAdviceSubmitFile" />
+	<bean id="WarehousingEjSummaryFile" class="phis.prints.bean.WarehousingEjSummaryFile" />
+	<bean id="DoctorsAccountingServlet" class="phis.prints.bean.DoctorsAccountingServlet" />
+	<bean id="LibraryEjSummaryFile" class="phis.prints.bean.LibraryEjSummaryFile" />
+	<bean id="ItemizeSummaryFile" class="phis.prints.bean.ItemizeSummaryFile" />
+	<bean id="ChargesSummaryFile" class="phis.prints.bean.ChargesSummaryFile" />
+	<bean id="ChargesSummarySearchFile" class="phis.prints.bean.ChargesSummarySearchFile" />
+	<bean id="BasicMediMsgPrint" class="phis.prints.bean.BasicMediMsgPrintFile"></bean>
+	<bean id="MediPackageMsgPrint" class="phis.prints.bean.MediPackageMsgPrintFile"></bean>
+	<bean id="DrugsExpireTipsFile" class="phis.prints.bean.DrugsExpireTipsFile"></bean>
+	<bean id="SummaryofincomeFile" class="phis.prints.bean.SummaryofincomeFile"></bean>
+	<bean id="FsbSummaryofincomeFile" class="phis.prints.bean.FsbSummaryofincomeFile"></bean>
+	<bean id="SummarycategoryHospitalFile" class="phis.prints.bean.SummarycategoryHospitalFile"></bean>
+	<bean id="FsbSummarycategoryHospitalFile" class="phis.prints.bean.FsbSummarycategoryHospitalFile"></bean>
+	<bean id="SummarycategoryHospitalFile1" class="phis.prints.bean.SummarycategoryHospitalFile1"></bean>
+	<bean id="FsbSummarycategoryHospitalFile1" class="phis.prints.bean.FsbSummarycategoryHospitalFile1"></bean>
+	<bean id="PatientDepartmentChargesSummaryFile" class="phis.prints.bean.PatientDepartmentChargesSummaryFile"></bean>
+	<bean id="FamilySickBedChargesSummaryFile" class="phis.prints.bean.FamilySickBedChargesSummaryFile"></bean>
+	<bean id="SummarycategoryHospitalForFile" class="phis.prints.bean.SummarycategoryHospitalForFile"></bean>
+	<bean id="FsbSummarycategoryHospitalForFile" class="phis.prints.bean.FsbSummarycategoryHospitalForFile"></bean>
+	<bean id="SummaryMedicinesOutOfStorageDetailFile" class="phis.prints.bean.SummaryMedicinesOutOfStorageDetailFile"></bean>
+	<bean id="SummaryMedicinesInOfStorageFile" class="phis.prints.bean.SummaryMedicinesInOfStorageFile"></bean>
+	<bean id="SummaryMedicinesOutOfStorageFile" class="phis.prints.bean.SummaryMedicinesOutOfStorageFile"></bean>
+	<bean id="SummaryMedicinesInOfStorageDetailFile" class="phis.prints.bean.SummaryMedicinesInOfStorageDetailFile"></bean>
+	<bean id="PatientYJZDJGPrint" class="phis.prints.bean.PatientYJZDJGPrint"></bean>
+	<bean id="InvoiceByxFile" class="phis.prints.bean.InvoiceByxFile"></bean>
+	<bean id="PatientMedicalRecordsFile" class="phis.prints.bean.PatientMedicalRecordsFile"></bean>
+	<bean id="InvoiceByxFileNew" class="phis.prints.bean.InvoiceByxFileNew"></bean>
+	<bean id="InvoiceFile" class="phis.prints.bean.InvoiceFile" />
+	<bean id="OutpatientListFile" class="phis.prints.bean.OutpatientListFile" />
+	<bean id="SecurityClinicFile" class="phis.prints.bean.SecurityClinicFile"></bean>
+	<bean id="Prescription" class="phis.prints.bean.PrescriptionFile" />
+	<bean id="PrescriptionChine" class="phis.prints.bean.PrescriptionChineFile" />
+	<bean id="TreatmentPrint" class="phis.prints.bean.TreatmentPrintFile" />
+	<bean id="PharmacyDispensing" class="phis.prints.bean.PharmacyDispensingFile" />
+	<bean id="InjectionCard" class="phis.prints.bean.InjectionCardFile" />
+	<bean id="StorehousePaymentFile" class="phis.prints.bean.StorehousePaymentFile"></bean>
+	<bean id="StorehousePaymentDetailsFile" class="phis.prints.bean.StorehousePaymentDetailsFile"></bean>
+	<bean id="PaymentProcessingFile" class="phis.prints.bean.PaymentProcessingFile"></bean>
+	<bean id="RegistrationFormPrint" class="phis.prints.bean.RegistrationFormFile" />
+	<bean id="TrendsReportServlet" class="phis.prints.bean.TrendsReportServlet"></bean>
+	<bean id="ChargeSummaryZYFile" class="phis.prints.bean.ChargeSummaryZYFile" />
+	<bean id="ChargeSummaryMZFile" class="phis.prints.bean.ChargeSummaryMZFile" />
+	<bean id="ClinicPublicFile" class="phis.prints.bean.ClinicPublicFile" />
+	<bean id="InventoryDetailsFile" class="phis.prints.bean.InventoryDetailsFile" />
+	<bean id="OutpatientWorkLogFile" class="phis.prints.bean.OutpatientWorkLogFile" />
+	<bean id="StorehouseInFile" class="phis.prints.bean.StorehouseInFile" />
+	<bean id="MedicinesPriceBooksInventoryFile" class="phis.prints.bean.MedicinesPriceBooksInventoryFile" />
+	<bean id="MedicinesPricePhysicalDetailsFile" class="phis.prints.bean.MedicinesPricePhysicalDetailsFile"></bean>
+	<bean id="PharmacyInFile" class="phis.prints.bean.PharmacyInFile" />
+	<bean id="PharmacyOutFile" class="phis.prints.bean.PharmacyOutFile" />
+	<bean id="StorehouseOutFile" class="phis.prints.bean.StorehouseOutFile" />
+	<bean id="MedicinalCheckFile" class="phis.prints.bean.MedicinalCheckFile" />
+	<bean id="PharmacySendMedicinesFile" class="phis.prints.bean.PharmacySendMedicinesFile" />
+	<bean id="PharmacySendMedicinesDetailsFile" class="phis.prints.bean.PharmacySendMedicinesDetailsFile" />
+	<bean id="DispensingDetailsFile" class="phis.prints.bean.DispensingDetailsFile"></bean>
+	<bean id="DispensingDetailsBRFile" class="phis.prints.bean.DispensingDetailsBRFile"></bean>
+	<bean id="DispensingDetailsHZFile" class="phis.prints.bean.DispensingDetailsHZFile"></bean>
+	<!-- <bean id="WarNursesAssessServlet" class="phis.prints.bean.WarNursesAssessServlet" 
+		/> -->
+	<bean id="HerbEntryFile" class="phis.prints.bean.HerbEntryFile" />
+	<bean id="PatientMedicalAdviceQueryPrintFile" class="phis.prints.bean.PatientMedicalAdviceQueryPrintFile"></bean>
+	<bean id="HospitalPharmacyMedicineHZFile" class="phis.prints.bean.HospitalPharmacyMedicineHZFile"></bean>
+	<bean id="HospitalPharmacyMedicineBRFile" class="phis.prints.bean.HospitalPharmacyMedicineBRFile"></bean>
+	<bean id="HospitalPharmacyMedicineBackHZFile" class="phis.prints.bean.HospitalPharmacyMedicineBackHZFile"></bean>
+	<bean id="HospitalPharmacyMedicineBackBRFile" class="phis.prints.bean.HospitalPharmacyMedicineBackBRFile"></bean>
+	<bean id="HospitalDepartmentChargesSummaryFile" class="phis.prints.bean.HospitalDepartmentChargesSummaryFile"></bean>
+	<bean id="HospitalSpecialDrugsFile" class="phis.prints.bean.HospitalSpecialDrugsFile"></bean>
+	<bean id="DepartmentConsumptionSummaryFile" class="phis.prints.bean.DepartmentConsumptionSummaryFile"></bean>
+	<bean id="InHospiatlPatientCollectServlet" class="phis.prints.bean.InHospiatlPatientCollectServlet" />
+	<bean id="HospiatlNatureSummaryServlet" class="phis.prints.bean.HospiatlNatureSummaryServlet" />
+
+	<bean id="WarNursesAssessServlet" class="phis.prints.bean.WarNursesAssessServlet" />
+	<bean id="EssentialDrugs" class="phis.prints.bean.EssentialDrugsFile" />
+	<bean id="StorehouseGDCFile" class="phis.prints.bean.StorehouseGDCFile" />
+	<bean id="NurseRecordServlet" class="phis.prints.bean.NurseRecordServlet" />
+	<bean id="HospiatlPatientCollectServlet" class="phis.prints.bean.HospiatlPatientCollectServlet" />
+	<bean id="OutHospiatlPatientCollectServlet" class="phis.prints.bean.OutHospiatlPatientCollectServlet" />
+	<bean id="DepartmentConsumptionDetailsFile" class="phis.prints.bean.DepartmentConsumptionDetailsFile"></bean>
+	<bean id="WardDoctorPrintFile" class="phis.prints.bean.WardDoctorPrintFile" />
+	<bean id="AdditionalProjectsSubmitFile" class="phis.prints.bean.AdditionalProjectsSubmitFile" />
+	<bean id="AdditionalProjectsFile" class="phis.prints.bean.AdditionalProjectsFile" />
+	<bean id="PrescriptionCommentsTjMXFile" class="phis.prints.bean.PrescriptionCommentsTjMXFile" />
+	<bean id="StorehouseProcurementPlanFile" class="phis.prints.bean.StorehouseProcurementPlanFile" />
+	<bean id="PharmacyCustodianBooksFile" class="phis.prints.bean.PharmacyCustodianBooksFile" />
+	<bean id="StorehouseAccountingBooksFile" class="phis.prints.bean.StorehouseAccountingBooksFile" />
+	<bean id="StorehouseAccountingBooksDetailFile" class="phis.prints.bean.StorehouseAccountingBooksDetailFile" />
+	<bean id="PharmacyGDCFile" class="phis.prints.bean.PharmacyGDCFile" />
+	<bean id="PharmacyDrugsExpireTipsFile" class="phis.prints.bean.PharmacyDrugsExpireTipsFile" />
+	<bean id="DischargedPatientsDividedDiseaseStatisticsFile"
+		class="phis.prints.bean.DischargedPatientsDividedDiseaseStatisticsFile" />
+
+	<bean id="AntimicrobialDrugUseInformationFile" class="phis.prints.bean.AntimicrobialDrugUseInformationFile" />
+	<bean id="AntimicrobialDrugDoctorUseInformationFile"
+		class="phis.prints.bean.AntimicrobialDrugDoctorUseInformationFile" />
+	<bean id="AntimicrobialDrugDepartmentUseInformationFile"
+		class="phis.prints.bean.AntimicrobialDrugDepartmentUseInformationFile" />
+	<bean id="AntimicrobialDrugUseIntensityInformationFile"
+		class="phis.prints.bean.AntimicrobialDrugUseIntensityInformationFile" />
+	<bean id="AntimicrobialDrugDoctorUseInformation_ZYFile"
+		class="phis.prints.bean.AntimicrobialDrugDoctorUseInformation_ZYFile" />
+	<bean id="StorehouseStoreroomInventoryFile" class="phis.prints.bean.StorehouseStoreroomInventoryFile" />
+	<bean id="StorehouseMedicinesPriceAdjustFile" class="phis.prints.bean.StorehouseMedicinesPriceAdjustFile" />
+	<bean id="MaintenanceMsgSearchFile" class="phis.prints.bean.MaintenanceMsgSearchFile" />
+	<bean id="HospitalCostMxgs" class="phis.prints.bean.HospitalCostMxgs" />
+	<bean id="HospitalCostHzgs" class="phis.prints.bean.HospitalCostHzgs" />
+	<bean id="HospitalCostYzgs" class="phis.prints.bean.HospitalCostYzgs" />
+	<bean id="FamilySickBedCostMxgs" class="phis.prints.bean.FamilySickBedCostMxgs" />
+	<bean id="FamilySickBedCostHzgs" class="phis.prints.bean.FamilySickBedCostHzgs" />
+	<bean id="FamilySickBedCostYzgs" class="phis.prints.bean.FamilySickBedCostYzgs" />
+	<bean id="HospitalAppointmentFile" class="phis.prints.bean.HospitalAppointmentFile" />
+
+	<bean id="FsbMediRecordFile" class="phis.prints.bean.FsbMediRecordFile" />
+	<bean id="FsbPaymentFile" class="phis.prints.bean.FsbPaymentFile" />
+	<bean id="FsbCostAccountingDetail" class="phis.prints.bean.FsbCostAccountingDetailPrint" />
+	<bean id="JcsqFormFile" class="phis.prints.bean.JcsqFormFile" />
+	<bean id="HospitalBedTurnoverFile" class="phis.prints.bean.HospitalBedTurnoverFile" />
+	<bean id="ClinicOutpatientWorkloadFile" class="phis.prints.bean.ClinicOutpatientWorkloadFile" />
+	<bean id="HospiatlPatientJbflFile" class="phis.prints.bean.HospiatlPatientJbflServlet" />
+	<bean id="TwoWayReferralStubFile" class="phis.prints.bean.TwoWayReferralStubFile" />
+	<bean id="TwoWayReferralUploadFile" class="phis.prints.bean.TwoWayReferralUploadFile" />
+	<bean id="TwoWayReferralNextTurnFile" class="phis.prints.bean.TwoWayReferralNextTurnFile" />
+	<bean id="FamilySickBedStatisticalFile" class="phis.prints.bean.FamilySickBedStatisticalFile" />
+	<bean id="FamilySickBedCostStatisticalFile" class="phis.prints.bean.FamilySickBedCostStatisticalFile" />
+	<bean id="FamilySickBedDispensingDetailsFile" class="phis.prints.bean.FamilySickBedDispensingDetailsFile" />
+	<bean id="JCAdditionalProjectsFile" class="phis.prints.bean.JCAdditionalProjectsFile" />
+	<bean id="JCDoctorAdviceSubmitFile" class="phis.prints.bean.JCDoctorAdviceSubmitFile" />
+	<bean id="RegisterReqOrder" class="phis.prints.bean.RegisterReqOrder" />
+	
+	<bean id="RegistHospitalReqOrder" class="phis.prints.bean.RegistHospitalReqOrder" />
+	<bean id="RegisterCheckReqOrder" class="phis.prints.bean.RegisterCheckReqOrder" />
+	
+	<bean id="FamilySickBedCancelBedFile" class="phis.prints.bean.FamilySickBedCancelBedFile" />
+	<bean id="FsbNursePlanPrintFile" class="phis.prints.bean.FsbNursePlanPrintFile" />
+	<bean id="FsbNurseRecordPrintFile" class="phis.prints.bean.FsbNurseRecordPrintFile" />
+	<bean id="FamilySickBedPatientPlanFile" class="phis.prints.bean.FamilySickBedPatientPlanFile" />
+	<bean id="reportForOutBoundAnalysis" class="phis.prints.bean.ReportForOutBoundAnalysis"/>
+	<bean id="reportForPurchaseAnalysis" class="phis.prints.bean.ReportForPurchaseAnalysis"/>
+	<bean id="ReportForAntiMicrobialPurchaseAnalysis" class="phis.prints.bean.ReportForAntiMicrobialPurchaseAnalysis"/>
+	<bean id="ReportForAntiMicrobialOutBoundAnalysis" class="phis.prints.bean.ReportForAntiMicrobialOutBoundAnalysis"/>
+	<bean id="NhclinicallChargesFile" class="phis.prints.bean.NhclinicallChargesFile" />
+	<bean id="NhclinicallChargesjmFile" class="phis.prints.bean.NhclinicallChargesjmFile" />
+	<bean id="NhHosChargedetailsFile" class="phis.prints.bean.NhHosChargedetailsFile" />
+	
+	<bean id="InitialBooksListFile" class="phis.prints.bean.InitialBooksListFile" />
+	<bean id="InitialTransferFile" class="phis.prints.bean.InitialTransferFile" />
+	<bean id="ClinicallhyChargesFile" class="phis.prints.bean.ClinicallhyChargesFile" />
+	<!-- add by zhaojian 2017-06-07  -->
+	<bean id="CheckApplyBillForRAD" class="phis.prints.bean.CheckApplyBillForRADFile" />
+	<bean id="CheckApplyBillForECG" class="phis.prints.bean.CheckApplyBillForECGFile" />
+	<bean id="CheckApplyBillForBC" class="phis.prints.bean.CheckApplyBillForBCFile" />
+	<bean id="CheckApplyBillForWCJ" class="phis.prints.bean.CheckApplyBillForWCJFile" />
+
+	<!-- add by zhaojian 2017-08-24 溧水收费汇总查询 -->
+	<bean id="ChargesSummary_lsFile" class="phis.prints.bean.ChargesSummary_lsFile" />
+	<bean id="HospitalChargesSummaryFile" class="phis.prints.bean.HospitalChargesSummaryFile" />
+	<bean id="CountryChargesFile" class="phis.prints.bean.CountryChargesFile" />
+	<bean id="HospitalAntibioticDrugsFile" class="phis.prints.bean.HospitalAntibioticDrugsFile" />
+	<bean id="ChineseMedicineProjectFile" class="phis.prints.bean.ChineseMedicineProjectFile" />
+	<bean id="PkCountryChargesFile" class="phis.prints.bean.PkCountryChargesFile" />
+	<bean id="ClinicChargesSummaryFile" class="phis.prints.bean.ClinicChargesSummaryFile" />
+	<bean id="AntimicrobialDrugClinicDoctorUseDetailsFile"
+		class="phis.prints.bean.AntimicrobialDrugClinicDoctorUseDetailsFile" />
+	<bean id="HospitalSpecialDrugsDetailsFile" class="phis.prints.bean.HospitalSpecialDrugsDetailsFile" />
+	<bean id="PharmacyHistoryDispensingCollectFile" class="phis.prints.bean.PharmacyHistoryDispensingCollectFile" />
+	<bean id="StorehousePurchaseHistoryFile" class="phis.prints.bean.StorehousePurchaseHistoryFile" />
+	
+	<bean id="InpatientCertificateFile" class="phis.prints.bean.InpatientCertificateFile" />
+	<bean id="BedCardFile" class="phis.prints.bean.BedCardFile" />
+	<bean id="publicHealth" class="phis.prints.bean.PublicHealth" />
+	<bean id="YbDrugListFile" class="phis.prints.bean.YbDrugListFile" />
+	<bean id="YbYlxmListFile" class="phis.prints.bean.YbYlxmListFile" />
+	<bean id="MedicalRecordHomePageQueryFile" class="phis.prints.bean.MedicalRecordHomePageQueryFile" />	
+	
+	<!-- 医患沟通 -->
+	<bean id="DebridementAgreementFile" class="phis.prints.bean.DebridementAgreementFile" />
+	<bean id="ExtractionAgreementFile" class="phis.prints.bean.ExtractionAgreementFile" />
+	<bean id="FixedAgreementFile" class="phis.prints.bean.FixedAgreementFile" />
+	<bean id="ActivityAgreementFile" class="phis.prints.bean.ActivityAgreementFile" />
+	<bean id="PeriodontalAgreementFile" class="phis.prints.bean.PeriodontalAgreementFile" />
+	
+	<!-- add by renwei 2020-08-07   门诊基本药物使用统计 -->
+	<bean id="BasicDrugUseStatistics_MZFile" class="phis.prints.bean.BasicDrugUseStatistics_MZFile" />
+	<bean id="ReportForBasicDrugOutAnalysis" class="phis.prints.bean.ReportForBasicDrugOutAnalysis"/>
+																								 
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_FPSL" table="GY_FPSL">
+			<id name="JLXH" type="java.lang.String">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="8" />
+        	<property name="FPXH" type="java.lang.String" length="18" />
+        	<property name="QSHM" type="java.lang.String" length="12" />
+        	<property name="ZZHM" type="java.lang.String" length="12" />
+        	<property name="SYZS" type="java.lang.String" length="8" />
+        	<property name="SLGH" type="java.lang.String" length="10" />
+        	<property name="SLRQ" type="timestamp"  />
+        	<property name="ZXBZ" type="java.lang.String" length="2" />
+        	<property name="SYBZ" type="java.lang.String" length="2" />
+        	<property name="BZXX" type="java.lang.String" length="255" />
+</class>
+</hibernate-mapping>

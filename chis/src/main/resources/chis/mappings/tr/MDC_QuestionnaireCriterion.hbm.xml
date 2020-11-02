@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.tr.schemas.MDC_QuestionnaireCriterion" table="MDC_QuestionnaireCriterion">
+			<id name="recordId" type="java.lang.String">
+            	<column name="recordId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="hrcId" type="java.lang.String" length="16" />
+        	<property name="year" type="java.lang.Integer" length="4" />
+        	<property name="QMId" type="java.lang.String" length="16" />
+        	<property name="highRiskType" type="java.lang.String" length="2" />
+        	<property name="highRiskSource" type="java.lang.String" length="2" />
+        	<property name="criterionType" type="java.lang.String" length="2" />
+        	<property name="masterplateName" type="java.lang.String" length="100" />
+        	<property name="criterionExplain" type="java.lang.String" length="1" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

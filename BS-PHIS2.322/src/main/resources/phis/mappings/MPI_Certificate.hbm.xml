@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MPI_Certificate" table="MPI_Certificate">
+		<id name="certificateId" type="java.lang.String" length="16">
+			<column name="certificateId" />
+			<generator class="assigned" />
+		</id>
+   <property name="empiId"            		type="java.lang.String" length="32"/>
+   <property name="certificateTypeCode"		type="java.lang.String" length="2"/>
+   <property name="certificateNo"      		type="java.lang.String" length="32"/>
+</class>
+</hibernate-mapping>

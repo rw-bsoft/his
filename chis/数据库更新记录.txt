@@ -1,0 +1,232 @@
+
+alter table EHR_HealthRecord add familyDoctorId varchar2(20); 
+--2016.4.11之前的更新记不太清了。
+--2016.4.11
+alter table mdc_hypertensionrecord add dataSource varchar2(1);
+alter table MDC_DiabetesVisit add dataSource varchar2(1);
+alter table MDC_HypertensionVisit add dataSource varchar2(1);
+alter table MDC_DiabetesRecord add dataSource varchar2(1);
+alter table EHR_HealthRecord add dataSource varchar2(1);
+--2016.4.12
+ehr库建新表ehr_haszlls 用于存放有诊疗数据的身份证
+create table ehr_haszlls(
+idcard varchar2(20) primary key ,
+tojkda varchar2(1)
+)
+alter table MPI_DemographicInfo add zlls varchar2(1)--标记诊疗历史;
+--增加标记有无返回信息给家庭医生app(1回传成功,2回传不成功)
+alter table MDC_HypertensionVisit add toapp varchar2(1);
+alter table MDC_DiabetesVisit add toapp varchar2(1);
+alter table MDC_OldPeopleVisit add toapp varchar2(1);
+alter table MDC_DiabetesRecord add toapp varchar2(1);
+alter table MDC_HypertensionRecord add toapp varchar2(1);
+alter table EHR_HealthRecord add toapp varchar2(1);
+--增加居民知晓字段，用于标记和统计
+alter table ehr_healthrecord add  KNOWFLAG varchar2(1);
+
+--体检主表增加几个标记字段
+alter table hc_healthcheck add inhospitalFlag varchar2(1);
+alter table hc_healthcheck add medicineFlag varchar2(1);
+alter table hc_healthcheck add nonimmuneFlag varchar2(1);
+alter table hc_healthcheck add infamilybedFlag varchar2(1);
+update hc_healthcheck a set a.inhospitalflag='n' ;
+update hc_healthcheck a set a.medicineFlag='n' ;
+update hc_healthcheck a set a.nonimmuneFlag='n' ;
+update hc_healthcheck a set a.infamilybedFlag='n' ;
+update hc_healthcheck a set a.inhospitalflag='y' where  exists(
+select 1 from hc_inhospitalsituation b where a.healthcheck=b.healthcheck and b.type='1');
+update hc_healthcheck a set a.infamilybedFlag='y' where  exists(
+select 1 from hc_inhospitalsituation b where a.healthcheck=b.healthcheck and b.type='2');
+update hc_healthcheck a set a.medicineFlag='y' where  exists(
+select 1 from hc_medicinesituation b where a.healthcheck=b.healthcheck);
+update hc_healthcheck a set a.nonimmuneFlag='y' where  exists(
+select 1 from hc_nonimmuneinoculation b where a.healthcheck=b.healthcheck);
+--糖尿病增加其他检查字段
+alter table MDC_DiabetesVisit  add othercheck varchar2(100);
+--高血压糖尿病档案加评估时间和下次随访时间
+alter table MDC_DiabetesRecord add lastFixGroupDate date;
+alter table MDC_DiabetesRecord add nextVisitDate date;
+alter table mdc_hypertensionrecord add lastFixGroupDate date;
+alter table mdc_hypertensionrecord add nextVisitDate date;
+--糖尿病随访足背动脉搏动修改
+update MDC_DIABETESVISIT set PULSATION='5' where PULSATION='1';
+update MDC_DIABETESVISIT set PULSATION='1' where PULSATION='2';
+alter table MDC_DIABETESVISIT modify PULSATION VARCHAR2(20);
+
+--自检表-b
+create table ZJ_RECORD
+(
+  ID      NUMBER not null,
+  EMPIID  VARCHAR2(64),
+  ZJRQ    DATE,
+  YQDM    VARCHAR2(20),
+  YQMC    VARCHAR2(200),
+  JG      VARCHAR2(800),
+  XMDW    VARCHAR2(200),
+  CKFW    VARCHAR2(200),
+  JCRQ    DATE,
+  ORGCODE VARCHAR2(255),
+  INTIME  DATE,
+  XMBH    VARCHAR2(200),
+  XMMC    VARCHAR2(300)
+);
+alter table ZJ_RECORD add primary key (ID);
+--自检表-e
+----体检查重视图--b
+create or replace view v_healthcheck_repeat as
+select min(a.healthCheck) as healthCheck,
+         b.empiid as empiId,
+         b.idcard as idcard,
+         to_char(a.checkdate,'yyyy') as year,
+				 b.personname,count(1)-1 as repeat
+				from hc_healthcheck a ,mpi_demographicinfo b
+				 where a.empiid=b.empiid
+         group by   b.empiid  ,b.idcard , b.personname,to_char(a.checkdate,'yyyy')
+         having count(1) >1;
+----体检查重视图--e  
+----家医签约
+alter table ehr_healthrecord add SXSJ TIMESTAMP(6);
+comment on column  ehr_healthrecord.SXSJ is '生效时间';
+alter table ehr_healthrecord add ZZSJ TIMESTAMP(6);
+comment on column  ehr_healthrecord.ZZSJ is '终止时间';
+----家医签约
+----糖尿病随访
+alter table MDC_DIABETESVISIT add notes VARCHAR2(50);
+comment on column MDC_DIABETESVISIT.notes is '备注';
+----
+----糖尿病随访-随机血糖
+alter table MDC_DIABETESVISIT add rbs NUMBER(8,2);
+alter table MDC_DIABETESVISIT add rbsTest CHAR(1);
+comment on column MDC_DIABETESVISIT.rbs is '随机血糖';
+comment on column MDC_DIABETESVISIT.rbsTest is '随机测量方式';
+----
+----
+alter table MDC_DIABETESVISIT add needdoublevisit CHAR(1);
+comment on column MDC_DIABETESVISIT.needdoublevisit is '是否增加二次随访';
+alter table MDC_HypertensionVisit add needdoublevisit CHAR(1);
+comment on column MDC_HypertensionVisit.needdoublevisit is '是否增加二次随访';
+----
+----
+alter table EHR_FAMILYCONTRACTBASE add FC_FamilyDoctorId VARCHAR2(20);
+alter table EHR_FAMILYCONTRACTBASE add FC_FamilyTeamId VARCHAR2(20);
+alter table EHR_FAMILYCONTRACTBASE add FC_SingingType VARCHAR2(20);
+comment on column EHR_FAMILYCONTRACTBASE.FC_FamilyDoctorId is '家庭医生';
+comment on column EHR_FAMILYCONTRACTBASE.FC_FamilyTeamId is '家庭团队';
+comment on column EHR_FAMILYCONTRACTBASE.FC_SingingType is '签约服务类型';
+----
+----家庭团队表
+create table PUB_FamilyTeam(
+AUTOID varchar2(16)  primary key ,
+FamilyTeamId varchar2(20)  not null ,
+FamilyTeamName varchar2(50)  not null ,
+manaunitid  varchar2(20)  not null,
+pyCode varchar2(20)  not null,
+Status char(1)
+)
+ALTER TABLE PUB_FamilyTeam ADD CONSTRAINT PUB_FamilyTeam_FamilyTeamId UNIQUE (FamilyTeamId);
+----
+----家庭医生表
+create table PUB_FamilyDoctor(
+aUTOID varchar2(16)  primary key ,
+familyDoctorId varchar2(20)  not null ,
+familyTeamId varchar2(20)  not null ,
+status char(1)
+);
+ALTER TABLE PUB_FamilyDoctor ADD CONSTRAINT PUB_FamilyDoctor_unique UNIQUE (familyDoctorId,FamilyTeamId);
+----
+----
+alter table EHR_FamilyRecord add bookletNumber VARCHAR2(50);
+comment on column EHR_FamilyRecord.bookletNumber is '户口簿号';
+----
+----
+alter table EHR_FamilyContractBase add villageDoctorId VARCHAR2(20);
+comment on column EHR_FamilyContractBase.villageDoctorId is '签约乡村医生';
+alter table EHR_FamilyContractBase add villageUnitId VARCHAR2(20);
+comment on column EHR_FamilyContractBase.villageUnitId is '签约乡村医生机构';
+alter table EHR_FamilyContractBase add villageDoctorPhone VARCHAR2(20);
+comment on column EHR_FamilyContractBase.villageDoctorPhone is '乡村医生服务电话';
+alter table EHR_FamilyContractBase add hospitalDoctorId VARCHAR2(20);
+comment on column EHR_FamilyContractBase.hospitalDoctorId is '签约卫生院医生';
+alter table EHR_FamilyContractBase add hospitalUnitId VARCHAR2(20);
+comment on column EHR_FamilyContractBase.hospitalUnitId is '签约卫生院医生机构';
+alter table EHR_FamilyContractBase add hospitalDoctorPhone VARCHAR2(20);
+comment on column EHR_FamilyContractBase.hospitalDoctorPhone is '卫生院医生服务电话';
+alter table EHR_FAMILYCONTRACTBASE add FC_RepreName VARCHAR2(20);
+comment on column EHR_FAMILYCONTRACTBASE.FC_RepreName is '家庭代表名称';
+----
+alter table ehr_healthrecord add isPovertyAlleviation char(1);
+comment on column ehr_healthrecord.isPovertyAlleviation is '是否扶贫对象';
+----
+----高危档案表
+create table MDC_HIGHRISKRECORD
+(
+  PHRID              VARCHAR2(20) primary key,
+  EMPIID             CHAR(32) not null,
+  HIGHRISKTYPE       VARCHAR2(20),
+  MANAUNITID         VARCHAR2(20),
+  MANADOCTORID       VARCHAR2(20),
+  CREATEUSER         VARCHAR2(20),
+  CREATEDATE         DATE,
+  CREATEUNIT         VARCHAR2(20),
+  CANCELLATIONUSER   VARCHAR2(20),
+  CANCELLATIONDATE   DATE,
+  CANCELLATIONREASON CHAR(1),
+  CANCELLATIONUNIT   VARCHAR2(20),
+  LASTMODIFYUSER     VARCHAR2(20),
+  LASTMODIFYUNIT     VARCHAR2(20),
+  LASTMODIFYDATE     DATE,
+  STATUS             CHAR(1),
+  CONSTRICTION       INTEGER,
+  DIASTOLIC          INTEGER,
+  ISSMOKE            CHAR(1),
+  SMOKECOUNT         INTEGER,
+  TC                 NUMBER(8,2),
+  WAISTLINE          NUMBER(8,2),
+  FBS                NUMBER(8,2),
+  FINDWAY            CHAR(1)
+)
+----
+----高危随访表
+create table MDC_HighRiskVisit(
+VISITID  CHAR(16) primary key,
+phrId VARCHAR2(30) ,
+empiId CHAR(32),
+visitDate DATE,
+visitWay CHAR(1),
+VISITEFFECT CHAR(1),
+noVisitReason VARCHAR2(100),
+currentSymptoms VARCHAR2(64),
+OTHERSYMPTOMS VARCHAR2(100),
+constriction INTEGER,
+DIASTOLIC INTEGER,
+isSmoke CHAR(1),
+fbs NUMBER(8,2),
+smokeCount INTEGER,
+tc NUMBER(8,2),
+waistLine NUMBER(8,2),
+nextDate DATE,
+visitDoctor VARCHAR2(20),
+VISITUNIT VARCHAR2(20),
+INPUTUNIT VARCHAR2(20),
+inputUser VARCHAR2(20),
+inputDate DATE,
+lastModifyUser VARCHAR2(20),
+lastModifyUnit VARCHAR2(20),
+lastModifyDate DATE,
+INTERVENTIONS   VARCHAR2(64)
+)
+----
+----yx-2018-05-16-责任医生助理管理责任医生表
+create table REL_ResponsibleDoctor(
+recordid CHAR(16) primary key,
+Assistantid varchar2(20),
+Doctorid varchar2(20),
+createdate date,
+createuser varchar2(20),
+updatedate date,
+updateuser varchar2(20),
+status varchar2(1),
+CREATEUNIT varchar2(20)
+)
+----
+

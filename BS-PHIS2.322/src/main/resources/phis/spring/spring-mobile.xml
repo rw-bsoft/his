@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean id="phis.getRoleListService" class="phis.source.mobile.GetRoleListService" parent="phisAbstractActionService"/>
+	<bean id="phis.logonService" class="phis.source.mobile.LogonService" parent="phisAbstractActionService"/>
+	<bean id="phis.getPublicKeyService" class="phis.source.mobile.GetPublicKeyService" />
+	<bean id="phis.clinicManageMobileService" class="phis.source.mobile.ClinicManageMobileService"
+		parent="phisAbstractActionService">
+	</bean>
+	<bean id="phis.permissionsVerifyMobileService" class="phis.source.mobile.PermissionsVerifyMobileService"
+		parent="phisAbstractActionService">
+	</bean>
+</beans>

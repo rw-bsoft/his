@@ -1,0 +1,1251 @@
+<rules>
+	<rule id="manaDoctorMatch">
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','0']],
+				['eq',['$','manaDoctorId'],['$','%user.properties.refUserId']],
+				['or',
+				['eq',['s','chis.01'],['$','%user.properties.refRoleId']],
+				['eq',['s','chis.05'],['$','%user.properties.refRoleId']]]
+				]
+			</condition>
+		</action>
+	</rule>
+
+	<rule id="cdhDoctorMatch">
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','0']],
+				['eq',['s','chis.07'],['$','%user.properties.refRoleId']],
+				['eq',['$','chis.application.cdh.schemas.CDH_HealthCard.endManageFlag'],['s','n']]
+				]
+			</condition>
+		</action>
+		<action name="create">
+			<condition>
+				['and',
+					['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+					['eq',['s','chis.07'],['$','%user.properties.refRoleId']]
+				]
+			</condition>
+		</action>
+	</rule>
+
+	<rule id="chis.application.hr.schemas.EHR_HealthRecord" extend="manaDoctorMatch" />
+
+	<rule id="chis.application.ppvr.schemas.EHR_PoorPeopleVisit">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['and',
+				['contains',['$','chis.application.hr.schemas.EHR_HealthRecord.incomeSource'],['s','1']],
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','inputUser'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+	</rule>
+
+	<rule id="chis.application.npvr.schemas.EHR_NormalPopulationVisit">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','createUser'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+	</rule>
+
+	<rule id="chis.application.fhr.schemas.EHR_FamilyRecord">
+		<action name="update">
+			<condition>
+				<!--
+				['and',
+				['eq',['$','manaDoctorId'],['$','%user.properties.refUserId']],
+				['or', ['eq',['s','chis.01'],['$','%user.roleId']],
+				['eq',['s','chis.05'],['$','%user.roleId']]]
+				]
+				-->
+				['in',['$','manaDoctorId'],[["$",'%user.properties.refUserId']]]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.ohr.schemas.MDC_OldPeopleRecord">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','0']],
+				['eq',['$','manaDoctorId'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.ohr.schemas.MDC_OldPeopleVisit">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.ohr.schemas.MDC_OldPeopleRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.ohr.schemas.MDC_OldPeopleRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.ohr.schemas.MDC_OldPeopleRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.ohr.schemas.MDC_OldPeopleRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.ohr.schemas.MDC_OldPeopleSelfCare" extend="chis.application.ohr.schemas.MDC_OldPeopleVisit" />
+	<rule id="chis.application.hc.schemas.HC_HealthCheck">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['or',
+					['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']],
+					['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.manaDoctorId'],['$','%user.properties.refUserId']]
+				]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','createUser'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.hc.schemas.HC_HealthExamination">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','createUser'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+	</rule>
+	
+	<!-- add by chenxr begin -->
+	<rule id="chis.application.hy.schemas.MDC_HypertensionRecord">
+		<action name="create">
+			<condition>
+				['and',
+				['ne',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','1']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+			['or',['and',
+				['ne',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','1']],
+				['eq',['$','status'],['s','0']],
+				['eq',['$','manaDoctorId'],['$','%user.properties.refUserId']]],
+				['eq',['s','chis.14'],['$','%user.properties.refRoleId']]
+			]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.hy.schemas.MDC_HypertensionMedicine">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaDoctorId'],['$','%user.properties.refUserId']],
+				['sameCenter',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaDoctorId'],['$','%user.properties.refUserId']],
+				['sameCenter',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaUnitId'],['$','%user.manageUnit.id']],
+				['like',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaUnitId'],['concat',['$','%user.manageUnit.id'],['s','%']]],
+				['gt',['$','recordNum'],['i',0]]
+				]
+			</condition>
+		</action>
+		<action name="visitCreate">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="visitUpdate">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaUnitId'],['$','%user.manageUnit.id']],
+				['gt',['$','recordNum'],['i',0]]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.hy.schemas.MDC_HypertensionFixGroup">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaDoctorId'],['$','%user.properties.refUserId']],
+				['sameCenter',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaDoctorId'],['$','%user.properties.refUserId']],
+				['if',['eq',['$','fixType'],['s','1']],
+				['isNull',['$','hypertensionGroup']],
+				['isNull',['$','fixId']]
+				],
+				['sameCenter',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaUnitId'],['$','%user.manageUnit.id']],
+				['like',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaUnitId'],['concat',['$','%user.manageUnit.id'],['s','%']]]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.hy.schemas.MDC_HypertensionInquire" extend="chis.application.hy.schemas.MDC_HypertensionMedicine" />
+	<rule id="chis.application.hy.schemas.MDC_HypertensionVisit">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.status'],['s','0']],
+				['notNull',['$','planId']],
+				['sameCenter',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRecord.status'],['s','0']],
+				['notNull',['$','visitId']],
+				['sameCenter',['$','chis.application.hy.schemas.MDC_HypertensionRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.hy.schemas.MDC_HyperVisitDescription" extend="chis.application.hy.schemas.MDC_HypertensionVisit" />
+	<rule id="chis.application.hy.schemas.MDC_HyperVisitHealthTeach" extend="chis.application.hy.schemas.MDC_HypertensionVisit" />
+	<!-- add by chenxr end -->
+
+	<rule id="chis.application.hy.schemas.MDC_HypertensionRisk">
+		<action name="update">
+			<condition>
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']]
+			</condition>
+		</action>
+	</rule>
+	
+	<rule id="chis.application.hy.schemas.MDC_HypertensionRiskAssessment">
+		<action name="create">
+			<condition>
+			['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRisk.status'],['s','0']]
+			]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.hy.schemas.MDC_HypertensionRisk.status'],['s','0']]
+			</condition>
+		</action>
+	</rule>
+	
+	<rule id="chis.application.hy.schemas.MDC_HypertensionRiskVisit" extend="chis.application.hy.schemas.MDC_HypertensionRiskAssessment" />
+
+	<!-- add by chenxr begin -->
+	<rule id="chis.application.psy.schemas.PSY_PsychosisRecord">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.psy.schemas.PSY_PsychosisRecord.status'],['s','0']],
+				['eq',['$','chis.application.psy.schemas.PSY_PsychosisRecord.manaDoctorId'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.psy.schemas.PSY_PsychosisVisit">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.psy.schemas.PSY_PsychosisRecord.status'],['s','0']],
+				['eq',['$','chis.application.psy.schemas.PSY_PsychosisRecord.manaDoctorId'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.psy.schemas.PSY_PsychosisRecord.status'],['s','0']],
+				['eq',['$','chis.application.psy.schemas.PSY_PsychosisRecord.manaDoctorId'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.psy.schemas.PSY_RecordPaper" extend="chis.application.psy.schemas.PSY_PsychosisVisit" />
+	<rule id="chis.application.psy.schemas.PSY_AnnualAssessment" extend="chis.application.psy.schemas.PSY_PsychosisVisit" />
+
+	<rule id="chis.application.per.schemas.PER_CheckupRegister">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['and',
+				['eq',['$','status'],['s','0']],
+				['sameCenter',['$','checkupOrganization'],['$','%user.manageUnit.id']],
+				['isNull',['$','totalCheckupDate']]
+				]
+				]
+			</condition>
+		</action>
+		<action name="finalCheck">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['and',
+				['eq',['$','status'],['s','0']],
+				['sameCenter',['$','checkupOrganization'],['$','%user.manageUnit.id']],
+				['isNull',['$','totalCheckupDate']]
+				]
+				]
+			</condition>
+		</action>
+		<action name="print">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['and',
+				['eq',['$','status'],['s','0']],
+				['sameCenter',['$','checkupOrganization'],['$','%user.manageUnit.id']],
+				['notNull',['$','totalCheckupDate']]
+
+				]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.per.schemas.PER_ICD">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['if',['isNull',['$','chis.application.per.schemas.PER_CheckupRegister.checkupNo']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']],
+				['and',
+				['eq',['$','chis.application.per.schemas.PER_CheckupRegister.status'],['s','0']],
+				['isNull',['$','chis.application.per.schemas.PER_CheckupRegister.totalCheckupDate']]
+				]
+				]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['if',['isNull',['$','chis.application.per.schemas.PER_CheckupRegister.checkupNo']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']],
+				['and',
+				['eq',['$','chis.application.per.schemas.PER_CheckupRegister.status'],['s','0']],
+				['isNull',['$','chis.application.per.schemas.PER_CheckupRegister.totalCheckupDate']]
+				]
+				],
+				['gt',['$','recordNum'],['i',0]]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.per.schemas.PER_CheckupSummary">
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['and',
+				['notNull',['$','chis.application.per.schemas.PER_CheckupRegister.checkupNo']],
+				['eq',['$','chis.application.per.schemas.PER_CheckupRegister.status'],['s','0']],
+				['isNull',['$','chis.application.per.schemas.PER_CheckupRegister.totalCheckupDate']],
+				['sameCenter',['$','chis.application.per.schemas.PER_CheckupRegister.checkupOrganization'],['$','%user.manageUnit.id']]
+				]
+				]
+			</condition>
+		</action>
+	</rule>
+	<!-- add by chenxr end -->
+
+	<rule id="chis.application.cdh.schemas.CDH_HealthCard" extend="cdhDoctorMatch" />
+	<rule id="chis.application.cdh.schemas.CDH_BirthCertificate" extend="cdhDoctorMatch" />
+	<rule id="chis.application.cdh.schemas.CDH_DeadRegister" extend="cdhDoctorMatch" />
+	<rule id="chis.application.cdh.schemas.CDH_DebilityChildren">
+		<action name="create">
+			<condition>
+				['and',
+					['or',['noRec'],
+						['lastRec',
+							['or',
+								['and',
+									['eq',['$','status'],['s','1']],
+									['eq',['$','cancellationReason'],['s','6']]
+								],
+								['and',
+									['eq',['$','closeFlag'],['s','y']],
+									['or',
+										['and',
+											['eq',['$','status'],['s','1']],
+											['eq',['$','cancellationReason'],['s','6']]
+										],
+										['eq',['$','status'],['s','0']]
+									]
+								]
+							]
+						]
+					],
+				['eq',['s','chis.07'],['$','%user.properties.refRoleId']],
+				['eq',['$','chis.application.cdh.schemas.CDH_HealthCard.status'],['s','0']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','0']],
+				['eq',['$','closeFlag'],['s','n']],
+				['eq',['s','chis.07'],['$','%user.properties.refRoleId']],
+				['eq',['$','chis.application.cdh.schemas.CDH_HealthCard.status'],['s','0']]
+				]
+			</condition>
+		</action>
+		<action name="close">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','0']],
+				['eq',['$','closeFlag'],['s','n']],
+				['eq',['s','chis.07'],['$','%user.properties.refRoleId']],
+				['eq',['$','chis.application.cdh.schemas.CDH_HealthCard.status'],['s','0']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.mhc.schemas.MHC_PregnantRecord">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				<!-- 最后一条记录的状态是注销、或者状态正常，但是末次月经时间到现在已经过了310天 -->
+				<!-- chisDec 是社区业务扩展的减号，支持多种数据类型相减,日期相减返回相隔天数 -->
+				<!-- 若没有记录返回true -->
+				['or',
+				['noRec'],<!-- 若果没有记录,返回true,这就是个完整的表单时.根据empiId查找 -->
+				['lastRec',<!-- 查询出最后一条记录.根据empiId查询,根据createDate排序 -->
+				['or',
+				['ne',['$','status'],['s','0']],
+				['and',
+				['eq',['$','status'],['s','0']],
+				['gt',
+				['dateDec',
+				['$','lastMenstrualPeriod'],['$','%server.date.today']
+				],
+				310
+				]
+				]
+				]
+				]
+				]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','0']],
+				['or',
+				['eq',['s','chis.07'],['$','%user.properties.refRoleId']],
+				['eq',['s','chis.08'],['$','%user.properties.refRoleId']]]
+				]
+			</condition>
+		</action>
+	</rule>
+
+	<rule id="chis.application.mhc.schemas.DEA_DeathReportCard">
+		<action name="create">
+			<condition>
+				['in',['$','%user.properties.refRoleId'],['chis.08']]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','createUnit'],['$','%user.manageUnit.id']],
+				['in',['$','%user.properties.refRoleId'],['chis.08']]
+				]
+			</condition>
+		</action>
+	</rule>
+
+	<!-- add by yuhua begin -->
+
+	<rule id="chis.application.dbs.schemas.MDC_DiabetesRecord">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['noRec'],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+			['or',
+				['and',
+					['eq',['$','status'],['s','0']],
+					['eq',['$','manaDoctorId'],['$','%user.properties.refUserId']]
+				],
+				['eq',['s','chis.14'],['$','%user.properties.refRoleId']]
+			]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.dbs.schemas.MDC_DiabetesVisit">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.dbs.schemas.MDC_DiabetesRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.dbs.schemas.MDC_DiabetesRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.dbs.schemas.MDC_DiabetesRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.dbs.schemas.MDC_DiabetesRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+
+	<rule id="chis.application.dbs.schemas.MDC_DiabetesInquire">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.dbs.schemas.MDC_DiabetesRecord.manaDoctorId'],['$','%user.properties.refUserId']],
+				['eq',['$','chis.application.dbs.schemas.MDC_DiabetesRecord.status'],['s','0']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.dbs.schemas.MDC_DiabetesRecord.manaDoctorId'],['$','%user.properties.refUserId']],
+				['eq',['$','chis.application.dbs.schemas.MDC_DiabetesRecord.status'],['s','0']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.dbs.schemas.MDC_DiabetesRiskAssessment">
+		<action name="create">
+			<condition>
+				['and',
+					['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+					['eq',['$','chis.application.dbs.schemas.MDC_DiabetesRisk.status'],['s','1']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+					['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+					['eq',['$','chis.application.dbs.schemas.MDC_DiabetesRisk.status'],['s','1']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.dbs.schemas.MDC_DiabetesRiskVisit" extend="chis.application.dbs.schemas.MDC_DiabetesRiskAssessment" />
+	
+	<rule id="chis.application.def.schemas.DEF_LimbDeformityRecord">
+		<action name="create">
+			<condition>
+				['and',
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']],
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['or',
+				['noRec'],
+				['lastRec',
+				['or',
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['$','cancellationReason'],['s','6']]
+				],
+				['and',
+				['eq',['$','closeFlag'],['s','y']],
+				['or',
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['$','cancellationReason'],['s','6']]
+				],
+				['eq',['$','status'],['s','0']]
+				]
+				]
+				]
+				]
+				]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['and',
+				['eq',['$','status'],['s','0']],
+				['eq',['$','manaDoctorId'],['$','%user.properties.refUserId']],
+				['eq',['$','closeFlag'],['s','n']]
+				]
+				]
+			</condition>
+		</action>
+	</rule>
+
+	<rule id="chis.application.def.schemas.DEF_BrainDeformityRecord">
+		<action name="create">
+			<condition>
+				['and',
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']],
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['or',
+				['noRec'],
+				['lastRec',
+				['or',
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['$','cancellationReason'],['s','6']]
+				],
+				['and',
+				['eq',['$','closeFlag'],['s','y']],
+				['or',
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['$','cancellationReason'],['s','6']]
+				],
+				['eq',['$','status'],['s','0']]
+				]
+				]
+				]
+				]
+				]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['and',
+				['eq',['$','status'],['s','0']],
+				['eq',['$','manaDoctorId'],['$','%user.properties.refUserId']],
+				['eq',['$','closeFlag'],['s','n']]
+				]
+				]
+			</condition>
+		</action>
+	</rule>
+
+	<rule id="chis.application.def.schemas.DEF_IntellectDeformityRecord">
+		<action name="create">
+			<condition>
+				['and',
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']],
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['or',
+				['noRec'],
+				['lastRec',
+				['or',
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['$','cancellationReason'],['s','6']]
+				],
+				['and',
+				['eq',['$','closeFlag'],['s','y']],
+				['or',
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['$','cancellationReason'],['s','6']]
+				],
+				['eq',['$','status'],['s','0']]
+				]
+				]
+				]
+				]
+				]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['and',
+				['eq',['$','status'],['s','0']],
+				['eq',['$','manaDoctorId'],['$','%user.properties.refUserId']],
+				['eq',['$','closeFlag'],['s','n']]
+				]
+				]
+			</condition>
+		</action>
+	</rule>
+	<!--add by yuhua end -->
+	<rule id="chis.application.dc.schemas.DC_RabiesRecord">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['s','chis.15'],['$','%user.properties.refRoleId']],
+				['sameCenter', ['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],
+				['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['and',
+				['eq',['$','status'],['s','0']],
+				['eq',['s','chis.15'],['$','%user.properties.refRoleId']]
+				],
+				['sameCenter',
+				['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],
+				['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.dc.schemas.DC_Vaccination" extend="chis.application.dc.schemas.DC_RabiesRecord" />
+	<rule id="GDR_GroupDinnerRecord">
+		<action name="create">
+			<condition>
+				['eq',['s','chis.01'],['$','%user.properties.refRoleId']]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['and',
+				['eq',['$','status'],['s','0']],
+				['eq',['s','chis.01'],['$','%user.properties.refRoleId']]
+				],
+				['eq',['$','a.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.sch.schemas.SCH_SchistospmaManage">
+		<action name="create">
+			<condition>
+				['eq',['s','chis.16'],['$','%user.properties.refRoleId']]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['s','chis.16'],['$','%user.properties.refRoleId']],
+				['like',['$','a.inputUnit'],['concat',['$','%user.manageUnit.id'],['s','%']]]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.sch.schemas.SCH_SnailBaseInfomation" extend="chis.application.sch.schemas.SCH_SchistospmaManage" />
+	<rule id="chis.application.sch.schemas.SCH_SnailFindInfomation" extend="chis.application.sch.schemas.SCH_SchistospmaManage" />
+	<rule id="chis.application.sch.schemas.SCH_SnailKillInfomation" extend="chis.application.sch.schemas.SCH_SchistospmaManage" />
+	<!-- 可以继承预先定义的规则，如慢病档案规则基本一致,可以继承和覆盖 -->
+	<!-- 过于复杂的逻辑可以定义一个实现类,类中定义的方法都会返回一个<action:boolean>形式的值 如有覆盖以java类中的配置为最高优先级 
+		,未定义的角色返回false -->
+	<rule id="EHR_HyertensionRecord" extend="manaDoctorMatch"
+		class="com.bsoft.rule.HypertensionRecordRule">
+		<mappings>
+			<mapping>EHR_HyertensionRecord.empiId =
+				chis.application.hr.schemas.EHR_HealthRecord.empiId
+			</mapping>
+		</mappings>
+
+		<action name="_create">
+			<!-- 若condition中用到其他表数据作为判断依据，需要告诉表之间的关联关系, 若不配默认使用EMPIID去做关联，mappings可以配在entryName,或者action下， 
+				底层配置能够继承和覆盖 -->
+			<condition>
+				<!-- 对于多条档案,只要有一条记录正常就返回false -->
+
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.mov.schemas.MOV_EHR">
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['or',
+				['eq',['$','applyUser'],['$','%user.properties.refUserId']],
+				['eq',['$','applyUser'],['$','%user.properties.userId']]
+				]
+				]
+			</condition>
+		</action>
+		<action name="confirm">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['s','chis.14'],['$','%user.properties.refRoleId']],
+				['if',['eq',['$','moveType'],['s','1']],
+				['eq',['substring',['$','sourceUnit'],0,9],['$','%user.manageUnit.id']],
+				['eq',['substring',['$','targetUnit'],0,9],['$','%user.manageUnit.id']]
+				]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.mov.schemas.MOV_CDH">
+		<action name="apply">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['$','applyUser'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+		<action name="confirm">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['s','chis.14'],['$','%user.properties.refRoleId']],
+				['if',
+				['eq',['$','moveType'],['s','1']],
+				['eq',['$','sourceManaUnitId'],['$','%user.manageUnit.id']],
+				['eq',['$','targetManaUnitId'],['$','%user.manageUnit.id']]
+				]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.mov.schemas.MOV_MHC">
+		<action name="apply">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['$','applyUser'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+		<action name="confirm">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['s','chis.14'],['$','%user.properties.refRoleId']],
+				['if',
+				['eq',['$','moveType'],['s','1']],
+				['eq',['$','sourceManaUnitId'],['$','%user.manageUnit.id']],
+				['eq',['$','targetManaUnitId'],['$','%user.manageUnit.id']]
+				]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.mov.schemas.MOV_ManaInfoBatchChange">
+		<action name="apply">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['or',
+				['eq',['$','applyUser'],['$','%user.properties.refUserId']],
+				['eq',['$','applyUser'],['$','%user.properties.userId']]
+				]
+				]
+			</condition>
+		</action>
+		<action name="confirm">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['s','chis.14'],['$','%user.properties.refRoleId']],
+				['like',['$','applyUnit'],['concat',['$','%user.manageUnit.id'],['s','%']]]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.mov.schemas.MOV_Manachangebyareagrid">
+		<action name="apply">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['or',
+				['eq',['$','applyUser'],['$','%user.properties.refUserId']],
+				['eq',['$','applyUser'],['$','%user.properties.userId']]
+				]
+				]
+			</condition>
+		</action>
+		<action name="confirm">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['s','chis.14'],['$','%user.properties.refRoleId']],
+				['like',['$','applyUnit'],['concat',['$','%user.manageUnit.id'],['s','%']]]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.mov.schemas.MOV_Changeareagrid">
+		<action name="apply">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['or',
+				['eq',['$','applyUser'],['$','%user.properties.refUserId']],
+				['eq',['$','applyUser'],['$','%user.properties.userId']]
+				]
+				]
+			</condition>
+		</action>
+		<action name="confirm">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['s','chis.14'],['$','%user.properties.refRoleId']],
+				['like',['$','applyUnit'],['concat',['$','%user.manageUnit.id'],['s','%']]]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.mov.schemas.MOV_ManaInfoChange">
+		<action name="apply">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['or',
+				['eq',['$','applyUser'],['$','%user.properties.refUserId']],
+				['eq',['$','applyUser'],['$','%user.properties.userId']]
+				]
+				]
+			</condition>
+		</action>
+		<action name="confirm">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','1']],
+				['eq',['s','chis.14'],['$','%user.properties.refRoleId']],
+				['like',['$','applyUnit'],['concat',['$','%user.manageUnit.id'],['s','%']]]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.her.schemas.HER_EducationRecord">
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.her.schemas.HER_EducationPlanExe.executePerson'],['$','%user.properties.refUserId']],
+				['lt',['$','chis.application.her.schemas.HER_EducationPlanSet.beginDate'],['$','%server.date.today']],
+				['gt',['$','chis.application.her.schemas.HER_EducationPlanSet.endDate'],['$','%server.date.today']],
+				['eq',['$','chis.application.her.schemas.HER_EducationPlanSet.status'],['s','0']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.her.schemas.HER_EducationPlanExe">
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','executePerson'],['concat',['concat',['$','%user.manageUnit.id'],['s','@']],['$','%user.properties.refUserId']]],
+				['eq',['$','chis.application.her.schemas.HER_EducationPlanSet.status'],['s','0']]
+				]
+			</condition>
+		</action>
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','executePerson'],['concat',['concat',['$','%user.manageUnit.id'],['s','@']],['$','%user.properties.refUserId']]],
+				['eq',['$','chis.application.her.schemas.HER_EducationPlanSet.status'],['s','0']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.idr.schemas.IDR_Report">
+		<action name="create">
+			<condition>
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','status'],['s','0']],
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['substring',['$','reportUnit'],0,9],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+
+	<rule id="chis.application.cvd.schemas.CVD_AssessRegister">
+		<action name="create">
+			<condition>
+				['and',
+					['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+					['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.manaDoctorId'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+					['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+					['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.manaDoctorId'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.rvc.schemas.RVC_RetiredVeteranCadresRecord"
+		extend="chis.application.ohr.schemas.MDC_OldPeopleRecord" />
+	<rule id="chis.application.rvc.schemas.RVC_RetiredVeteranCadresVisit">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.rvc.schemas.RVC_RetiredVeteranCadresRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.rvc.schemas.RVC_RetiredVeteranCadresRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.rvc.schemas.RVC_RetiredVeteranCadresRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.rvc.schemas.RVC_RetiredVeteranCadresRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.tr.schemas.MDC_TumourHighRisk">
+		<action name="create">
+			<condition>
+				['and',
+				['ne',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','1']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['ne',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','1']],
+				['eq',['$','status'],['s','0']],
+				['eq',['$','nature'],['s','3']],
+				['eq',['$','manaDoctorId'],['$','%user.properties.refUserId']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.tr.schemas.MDC_TumourHighRiskVisit">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.tr.schemas.MDC_TumourHighRisk.status'],['s','0']],
+				['eq',['$','chis.application.tr.schemas.MDC_TumourHighRisk.nature'],['s','3']],
+				['notNull',['$','planId']],
+				['sameCenter',['$','chis.application.tr.schemas.MDC_TumourHighRisk.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.tr.schemas.MDC_TumourHighRisk.status'],['s','0']],
+				['eq',['$','chis.application.tr.schemas.MDC_TumourHighRisk.nature'],['s','3']],
+				['notNull',['$','visitId']],
+				['sameCenter',['$','chis.application.tr.schemas.MDC_TumourHighRisk.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.tr.schemas.MDC_TumourConfirmed">
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.tr.schemas.MDC_TumourConfirmed.status'],['s','0']],
+				['eq',['$','chis.application.tr.schemas.MDC_TumourConfirmed.nature'],['s','4']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.tr.schemas.MDC_TumourExpertReview"  extend="chis.application.tr.schemas.MDC_TumourConfirmed" />
+	<rule id="chis.application.tr.schemas.MDC_TumourPatientReportCard">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']],
+				['eq',['$','status'],['s','0']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.tr.schemas.MDC_TumourPatientVisit">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.tr.schemas.MDC_TumourPatientReportCard.status'],['s','0']],
+				['notNull',['$','planId']],
+				['sameCenter',['$','chis.application.tr.schemas.MDC_TumourPatientReportCard.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['eq',['$','chis.application.tr.schemas.MDC_TumourPatientReportCard.status'],['s','0']],
+				['notNull',['$','visitId']],
+				['sameCenter',['$','chis.application.tr.schemas.MDC_TumourPatientReportCard.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.hc.schemas.hc_w_progestationask">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.hc.schemas.hc_m_progestationask">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+	<rule id="chis.application.hq.schemas.MDC_HighRiskRecord">
+		<action name="create">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hr.schemas.EHR_HealthRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hr.schemas.EHR_HealthRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+		<action name="update">
+			<condition>
+				['and',
+				['eq',['$','chis.application.hq.schemas.MDC_HighRiskRecord.status'],['s','0']],
+				['sameCenter',['$','chis.application.hq.schemas.MDC_HighRiskRecord.manaUnitId'],['$','%user.manageUnit.id']]
+				]
+			</condition>
+		</action>
+	</rule>
+</rules>
+  

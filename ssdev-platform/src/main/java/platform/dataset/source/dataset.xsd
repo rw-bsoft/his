@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:attributeGroup name="Attributes">
+		<xs:annotation>
+			<xs:documentation>数据元属性引用</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="de" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="20"/>
+					<xs:pattern value=".+"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="text" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="20"/>
+					<xs:pattern value=".+"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:element name="Request">
+		<xs:annotation>
+			<xs:documentation>请求消息</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="DocInfo"/>
+							<xs:element ref="Patient"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Body">
+					<xs:complexType>
+						<xs:sequence>
+						</xs:sequence>
+						<xs:attribute name="DocFormat" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Response">
+		<xs:annotation>
+			<xs:documentation>响应消息</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Code"/>
+				<xs:element name="Message"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DocInfo">
+		<xs:annotation>
+			<xs:documentation>文档信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RecordClassifying">
+					<xs:annotation>
+						<xs:documentation>记录分类</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value=".+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="RecordTitle">
+					<xs:annotation>
+						<xs:documentation>记录名称</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value=".+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="EffectiveTime">
+					<xs:annotation>
+						<xs:documentation>记录时间</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:dateTime">
+							<xs:pattern value=".+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Authororganization">
+					<xs:annotation>
+						<xs:documentation>创建机构</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value=".+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="SourceID" minOccurs="1">
+					<xs:annotation>
+						<xs:documentation>来源标识</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value=".+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="VersionNumber" minOccurs="1">
+					<xs:annotation>
+						<xs:documentation>版本号</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="6"/>
+							<xs:pattern value=".+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="AuthorID" minOccurs="1">
+					<xs:annotation>
+						<xs:documentation>创建人编号</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value=".+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Author" minOccurs="1">
+					<xs:annotation>
+						<xs:documentation>创建人</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SystemTime">
+					<xs:annotation>
+						<xs:documentation>创建时间</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:dateTime">
+							<xs:pattern value=".+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Patient">
+		<xs:annotation>
+			<xs:documentation>MPI信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PersonName">
+					<xs:annotation>
+						<xs:documentation>姓名</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value=".+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="SexCode">
+					<xs:annotation>
+						<xs:documentation>性别代码</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="1"/>
+							<xs:minLength value="1"/>
+							<xs:pattern value=".+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Birthday">
+					<xs:annotation>
+						<xs:documentation>出生日期</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:date">
+							<xs:pattern value=".+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="IdCard" type="xs:string" minOccurs="0"/>
+				<xs:element name="IdType" type="xs:string" minOccurs="0"/>
+				<xs:element name="CardNo" type="xs:string" minOccurs="0"/>
+				<xs:element name="CardType" type="xs:string" minOccurs="0"/>
+				<xs:element name="RegisteredPermanent" type="xs:string" minOccurs="0"/>
+				<xs:element name="AddressType" type="xs:string" minOccurs="0"/>
+				<xs:element name="Address" type="xs:string" minOccurs="0"/>
+				<xs:element name="ContactNo" type="xs:string" minOccurs="0"/>
+				<xs:element name="NationalityCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="NationCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="BloodTypeCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="RhBloodCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="MaritalStatusCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="StartWorkDate" type="xs:string" minOccurs="0"/>
+				<xs:element name="WorkCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="EducationCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="InsuranceCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="InsuranceType" type="xs:string" minOccurs="0"/>
+				<xs:element name="WorkPlace" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

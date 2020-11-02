@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.cvd.schemas.CVD_DiseaseVerification" table="CVD_DISEASEVERIFICATION">
+			<id name="recordId" type="java.lang.String">
+            	<column name="recordId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="precordId" type="java.lang.String" length="16" />
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="dcys" type="java.lang.String" length="20" />
+        	<property name="dcjg" type="java.lang.String" length="32" />
+        	<property name="sf" type="java.lang.String" length="1" />
+        	<property name="fbdcrq" type="date" />
+			<property name="swdcrq" type="date" />        	
+        	<property name="fwsbyy" type="java.lang.String" length="1" />
+        	<property name="sfyyOther" type="java.lang.String" length="100" />
+        	
+        	<property name="ngs" type="java.lang.String" length="2" />
+        	<property name="ncx" type="java.lang.String" length="2" />
+        	<property name="zzbfx" type="java.lang.String" length="2" />
+        	<property name="qxxngs" type="java.lang.String" length="2" />
+        	<property name="zwmxqcx" type="java.lang.String" length="2" />
+        	<property name="xjgs" type="java.lang.String" length="2" />
+        	<property name="swdd" type="java.lang.String" length="2" />
+        	
+        	<property name="swddOther" type="java.lang.String" length="100" />
+        	<property name="zjsy" type="java.lang.String" length="30" />
+        	<property name="zjsyOther" type="java.lang.String" length="32" />
+        	
+        	<property name="ccfbhswyy" type="java.lang.String" length="30" />
+        	<property name="ccfbhswyyOther" type="java.lang.String" length="32" />
+        	
+        	<property name="fzhchsj" type="date" />     
+        	<property name="zlly" type="java.lang.String" length="1" />
+        	<property name="zllyOther" type="java.lang.String" length="32" />
+        	
+        	<property name="gxy" type="java.lang.String" length="1" />
+        	<property name="tnb" type="java.lang.String" length="1" />
+        	<property name="gzxz" type="java.lang.String" length="1" />
+        	<property name="tia" type="java.lang.String" length="1" />
+        	<property name="gxb" type="java.lang.String" length="1" />
+        	<property name="fc" type="java.lang.String" length="1" />
+        	<property name="jdmbkhxz" type="java.lang.String" length="1" />
+        	
+
+      
+        	<property name="xzbOther" type="java.lang.String" length="32" />
+        	<property name="sfczxy" type="java.lang.String" length="1" />
+        	<property name="mtksxynl" type="java.lang.String" length="3" />
+        	<property name="rjxyzs" type="java.lang.String" length="3" />
+        	<property name="fpcz" type="java.lang.String" length="1" />
+        	<property name="bmi" type="java.lang.String" length="32" />
+        	<property name="qfyd" type="java.lang.String" length="1" />
+			
+        	
+        	
+        	<property name="yjs" type="java.lang.String" length="1" />
+        	<property name="ryjl" type="java.lang.String" length="32" />
+        	<property name="yjzl" type="java.lang.String" length="1" />
+        	<property name="glyj" type="java.lang.String" length="1" />
+        	<property name="zzjzs" type="java.lang.String" length="1" />
+        	<property name="gxyjzs" type="java.lang.String" length="1" />
+        	<property name="gxbjzs" type="java.lang.String" length="1" />
+        	<property name="wxysOther" type="java.lang.String" length="100" />
+        	
+        	
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="32" />   
+			<property name="createDate" type="date" /> 
+			<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="32" />   
+			<property name="lastModifyDate" type="date" /> 			
+</class>
+</hibernate-mapping>

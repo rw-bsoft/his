@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="MS_XZMX" table="MS_XZMX" >
+		<composite-id>
+				<key-property name="CZGH" column="CZGH" type="java.lang.String" length="10"/>
+				<key-property name="JZRQ" column="JZRQ" type="timestamp" />
+				<key-property name="BRXZ" column="BRXZ" type="java.lang.Long" length="18" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="SFJE" type="java.lang.Double" length="12" />
+		<property name="FPZS" type="java.lang.Integer" length="4" />
+	</class>
+</hibernate-mapping>

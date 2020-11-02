@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_JZXX" table="JC_JZXX">
+		<composite-id>
+			<key-property name="JZRQ" column="JZRQ" type="timestamp"/>
+			<key-property name="CZGH" column="CZGH" type="java.lang.String" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="CYSR" type="java.lang.Double" length="12" />
+		<property name="YJJE" type="java.lang.Double" length="12" />
+		<property name="YJXJ" type="java.lang.Double" length="12" />
+		<property name="YJZP" type="java.lang.Double" length="12" />
+		<property name="TPJE" type="java.lang.Double" length="12" />
+		<property name="FPZS" type="java.lang.Integer" length="4" />
+		<property name="SJZS" type="java.lang.Integer" length="4" />
+		<property name="YSJE" type="java.lang.Double" length="12" />
+		<property name="YSXJ" type="java.lang.Double" length="12" />
+		<property name="YSZP" type="java.lang.Double" length="12" />
+		<property name="ZPZS" type="java.lang.Integer" length="4" />
+		<property name="TYJJ" type="java.lang.Double" length="12" />
+		<property name="TJKS" type="java.lang.Integer" length="4" />
+		<property name="KBJE" type="java.lang.Double" length="12" />
+		<property name="KBZP" type="java.lang.Integer" length="4" />
+		<property name="HZRQ" type="timestamp"  />
+		<property name="YJQT" type="java.lang.Double" length="12" />
+		<property name="YSQT" type="java.lang.Double" length="12" />
+		<property name="QTZS" type="java.lang.Integer" length="4" />
+		<property name="SRJE" type="java.lang.Double" length="6" />
+		<property name="YJYHK" type="java.lang.Double" length="12" />
+		<property name="YSYHK" type="java.lang.Double" length="12" />
+		<property name="YSYH" type="java.lang.Double" length="12" />
+		<property name="QZPJ" type="java.lang.String" length="255" />
+		<property name="QZSJ" type="java.lang.String" length="255" />
+		<property name="TCZC" type="java.lang.Double" length="6" />
+		<property name="DBZC" type="java.lang.Double" length="6" />
+		<property name="ZXJZFY" type="java.lang.Double" length="6" />
+		<property name="GRXJZF" type="java.lang.Double" length="6" />
+		<property name="BCZHZF" type="java.lang.Double" length="6" />
+		<property name="AZQGFY" type="java.lang.Double" length="6" />
+		<property name="QTYSFB" type="java.lang.String" length="100" />
+
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class entity-name="chis.application.wl.schemas.MDC_Ehr" table="MDC_Ehr">
+    <id name="mdcid" type="java.lang.String">
+      <column name="mdcid" />
+      <generator class="assigned" />
+    </id>   
+    <property name="ehrjgdm" type="java.lang.String" length="30" />
+    <property name="workType" type="java.lang.String" length="500" />
+  </class>
+</hibernate-mapping>

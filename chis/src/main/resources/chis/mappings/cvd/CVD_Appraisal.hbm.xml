@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.cvd.schemas.CVD_Appraisal" table="CVD_Appraisal">
+		<id name="recordId" type="java.lang.String">
+			<column name="recordId" />
+			<generator class="assigned" />
+		</id>
+		<property name="inquireId" type="java.lang.String" length="16" />
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="riskPrediction" type="java.lang.String"
+			length="2000" />
+		<property name="riskPredictionResult" type="java.lang.String"
+			length="1" />
+		<property name="riskAssessment" type="java.lang.String"
+			length="200" />
+		<property name="otherRisk" type="java.lang.String" length="200" />
+		<property name="lifeStyle" type="text" length="524288000" />
+		<property name="drugs" type="text" length="524288000" />
+		<property name="modified" type="java.lang.String"/>
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

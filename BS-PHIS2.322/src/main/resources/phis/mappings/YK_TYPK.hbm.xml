@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YK_TYPK" table="YK_TYPK">
+		<id name="YPXH" type="java.lang.Long">
+			<column name="YPXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="YPMC" type="java.lang.String"  />
+		<property name="TYMC" type="java.lang.String"  />
+		<property name="YPGG" type="java.lang.String"  />
+		<property name="BFGG" type="java.lang.String"  />
+		<property name="YPSX" type="java.lang.Long" />
+		<property name="TSYP" type="java.lang.Integer" />
+		<property name="YPDW" type="java.lang.String" />
+		<property name="ZXDW" type="java.lang.String"/>
+		<property name="YFBZ" type="java.lang.Integer"/>
+		<property name="YFDW" type="java.lang.String"/>
+		<property name="BFBZ" type="java.lang.Integer"/>
+		<property name="BFDW" type="java.lang.String"/>        	
+		<property name="PSPB" type="java.lang.Integer"/>      	
+		<property name="FYFS" type="java.lang.Long"/>
+		<property name="PYDM" type="java.lang.String"/>
+		<property name="BHDM" type="java.lang.String"/>
+		<property name="JXDM" type="java.lang.String"/>
+		<property name="QTDM" type="java.lang.String"/>
+		<property name="YPXQ" type="java.lang.Integer"/>
+		<property name="GYFF" type="java.lang.Long"/>
+		<property name="TYPE" type="java.lang.Integer"/>
+		<property name="YPDC" type="java.lang.Integer"/>
+		<property name="YPJL" type="java.lang.Double"/>
+		<property name="YCJL" type="java.lang.Double"/>
+		<property name="JLDW" type="java.lang.String"/>
+		<property name="ABC" type="java.lang.String"/>	
+		<property name="KSBZ" type="java.lang.Integer"/>
+		<property name="YCYL" type="java.math.BigDecimal"/>
+		<property name="JBYWBZ" type="java.lang.Integer"/>
+		<property name="YFGG" type="java.lang.String"/>
+		<property name="ZXBZ" type="java.lang.Integer"/>
+		<property name="YPZC" type="java.lang.Integer"/>
+		<property name="YBFL" type="java.lang.Integer"/>
+		<property name="CFYP" type="java.lang.Integer"/> 	
+		<property name="YPDM" type="java.lang.String"/>
+		<property name="KSSDJ" type="java.lang.Integer"/>
+		<property name="DDDZ" type="java.math.BigDecimal"/>
+		<property name="WBDM" type="java.lang.String"/>
+		<property name="XZSJ" type="date"/>
+		<property name="ZFPB" type="java.lang.Integer"/>
+		<property name="QZCL" type="java.lang.Integer"/>
+		<property name="MESS" type="text" length="524288000"/>
+		<property name="ZSSF" type="java.lang.Integer"/>
+		<property name="JYLX" type="java.lang.Integer"/>
+		<property name="ZBLB" type="java.lang.Long"/>
+		<property name="YQSYFS" type="java.lang.Integer"/>
+		<property name="SFSP" type="java.lang.Integer"/>
+		<property name="ZFYP" type="java.lang.Integer"/>
+		
+		<property name="YYBS" type="java.lang.Integer"/>
+		<property name="GMYWLB" type="java.lang.Integer"/>
+		<property name="YCXL" type="java.lang.Double"/>
+		<property name="NHBM_BSOFT" type="java.lang.String"/>
+		<property name="NHBM_SH" type="java.lang.String"/>
+		
+		<property name="JSBZ" type="java.lang.Integer"/>
+		<property name="XNXGBZ" type="java.lang.Integer"/>
+		<property name="ZYJMBZ" type="java.lang.Integer"/>
+		
+       	<!-- add by lizhi 2017-07-14 增加药品级别，对应机构级别 -->
+		<property name="GRADE" type="java.lang.String"/>
+		<!-- 
+
+			<property name="yybz" type="java.lang.String"/>
+			<property name="bxlc" type="java.lang.String"/>
+			<property name="ydysy" type="java.lang.String"/>
+			<property name="zxcd" type="java.lang.String"/>
+			<property name="zblb" type="java.lang.String"/>
+
+
+			<property name="djjb" type="java.lang.String"/>
+			<property name="ypbh" type="java.lang.String"/>
+
+
+
+			<property name="ylxz" type="java.lang.String"/>
+			<property name="jzyy" type="java.lang.String"/>
+			<property name="qzcl" type="java.lang.String"/>
+			
+			 -->
+		 <property name="SBM" type="java.lang.String"/>
+	 
+	</class>
+</hibernate-mapping>

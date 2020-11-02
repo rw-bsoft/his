@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MS_GRCF02" table="YS_MZ_ZT02">
+			<id name="YPMC" type="java.lang.String">
+            	<column name="YPMC"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MCJL" type="java.lang.Integer" length="10" />
+        	<property name="PC" type="java.lang.String" length="10" />
+        	<property name="TS" type="java.lang.Integer" length="10" />
+        	<property name="GYTJ" type="java.lang.String" length="10" />
+</class>
+</hibernate-mapping>

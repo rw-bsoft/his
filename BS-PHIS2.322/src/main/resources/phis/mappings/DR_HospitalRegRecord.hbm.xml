@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="DR_HOSPITALREGRECORD" table="DR_HOSPITALREGRECORD">
+			<id name="ID" type="java.lang.String">
+            	<column name="ID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="EMPIID" type="java.lang.String"  />
+        	<property name="MZHM" type="java.lang.String"  />
+        	<property name="ZHUANZHENDH" type="java.lang.String"  />
+        	<property name="STATUS" type="java.lang.String"  />
+            <property name="SUBMITAGENCY" type="java.lang.String"  />
+            <property name="SUBMITORDOCTOR" type="java.lang.String"  />
+            <property name="SUBMITDATE" type="date"  />
+            <property name="BINGRENXM" type="java.lang.String"  />
+            <property name="MARK" type="java.lang.String"  />
+</class>
+</hibernate-mapping>

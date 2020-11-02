@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class entity-name="SCM_INCREASEITEMS" table="SCM_INCREASEITEMS">
+        <id name="SCIID" type="java.lang.Long">
+            <column name="SCIID"/>
+            <generator class="sequence">
+			<param name="sequence">SEQ_SCM_INCREASEITEMS</param>
+			</generator>
+        </id>
+        <property name="SCINID" type="java.lang.Long"/>
+        <property name="FYXH" type="java.lang.String"/>
+        <property name="SCID" type="java.lang.Long"/>
+        <property name="SPIID" type="java.lang.String"/>
+        <property name="SPID" type="java.lang.String"/>
+        <property name="TASKCODE" type="java.lang.String"/>
+         <property name="TASKID" type="java.lang.Long"/>
+        <property name="ZFBL" type="java.lang.Double"/>
+        <property name="SERVICETIMES" type="java.lang.Integer"/>
+        <property name="TOTSERVICETIMES" type="java.lang.Integer"/>
+        <property name="DISCOUNT" type="java.lang.Double"/>
+        <property name="LOGOFF" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

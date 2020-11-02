@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="WL_ZBXH" table="WL_ZBXH">
+		<id name="ZBXH" type="java.lang.Long">
+			<column name="ZBXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="BZ" type="java.lang.Integer" length="8" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.conf.schemas.ADMIN_PregnantConfigDetail" table="PUB_PlanInstance">
+			<id name="instanceId" type="java.lang.String">
+            	<column name="instanceId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="instanceName" type="java.lang.String" length="60" />
+        	<property name="instanceType" type="java.lang.String" length="1" />
+        	<property name="expression" type="java.lang.String" length="200" />
+        	<property name="planTypeCode" type="java.lang.String" length="2" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="0-3ChildrenSystem" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<background>
+		<band height="555" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="48"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[杭州市0—3岁儿童系统管理报表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="48" width="54" height="20"/>
+				<textElement/>
+				<text><![CDATA[单位：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="77" y="48" width="162" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+			</textField>
+			<textField>
+				<reportElement x="347" y="48" width="54" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+			</textField>
+			<staticText>
+				<reportElement x="401" y="48" width="81" height="20"/>
+				<textElement/>
+				<text><![CDATA[年        报表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="74" width="224" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[应检人数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="74" width="224" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[实检人数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="74" width="224" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[管理率%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="139" width="168" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[当年系统管理数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="139" width="168" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[当年系统管理率%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="139" width="168" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[标准系统管理数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="139" width="168" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[标准系统管理率%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[0岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[2岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[3岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[0岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[3岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[2岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[0岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="639" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[3岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="583" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[2岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="94" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[0岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[3岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[2岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[0岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[3岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[2岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[0岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[3岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[2岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[0岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="653" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[3岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="611" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[2岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="569" y="159" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1岁]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="23" y="114" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countY0}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="114" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countY1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="114" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countY2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="114" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countY3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="114" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countS0}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="114" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countS2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="114" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countS3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="114" width="56" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countS1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0%" isBlankWhenNull="false">
+				<reportElement x="471" y="114" width="56" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{p0}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0%" isBlankWhenNull="false">
+				<reportElement x="583" y="114" width="56" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{p2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0%" isBlankWhenNull="false">
+				<reportElement x="639" y="114" width="56" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{p3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0%" isBlankWhenNull="false">
+				<reportElement x="527" y="114" width="56" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{p1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="23" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countC0}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countC2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countC3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countC1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0 %">
+				<reportElement x="191" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{cp0}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0 %">
+				<reportElement x="275" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{cp2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0 %">
+				<reportElement x="317" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{cp3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0 %">
+				<reportElement x="233" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{cp1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countN1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countN3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countN4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{countN2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0 %">
+				<reportElement x="527" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{np0}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0 %">
+				<reportElement x="611" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{np2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0 %">
+				<reportElement x="653" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{np3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0 %">
+				<reportElement x="569" y="179" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{np1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="23" y="204" width="252" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[评价]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="204" width="210" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[6个月母乳喂养]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="298" width="672" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[疾病]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="224" width="126" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[身高]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="224" width="126" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[体重]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="244" width="42" height="29"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[M+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="244" width="42" height="29"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[M-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="244" width="42" height="29"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[＜X-2
+SD
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="244" width="42" height="29"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[M+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="244" width="42" height="29"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[M-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="244" width="42" height="29"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[＜X-2
+SD
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="224" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[6个月内婴儿数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="224" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[母乳喂养人数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="224" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[纯母乳喂养人数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="224" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[母乳喂养率%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="224" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[纯母乳喂养率%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="318" width="42" height="64"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[肺炎
+人次
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="318" width="42" height="64"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[腹泻
+人次
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="318" width="210" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[营养不良]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="338" width="42" height="44"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[合计]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="338" width="42" height="44"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[体重
+低下
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="338" width="42" height="44"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[生长
+迟缓
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="338" width="42" height="44"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[消瘦]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="338" width="42" height="44"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[严重
+不良
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="318" width="210" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[肥胖]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="364" width="42" height="18"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[轻度]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="364" width="42" height="18"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[轻度]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="364" width="42" height="18"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[重度]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="338" width="42" height="44"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[超重]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="364" width="42" height="18"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[合计]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="338" width="168" height="26"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[肥胖]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="653" y="338" width="42" height="44"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[恢复]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="611" y="338" width="42" height="44"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[活动]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="318" width="168" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[佝偻病]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="338" width="42" height="44"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[合计]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="569" y="338" width="42" height="44"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[早期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="204" width="210" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[血色素（克/L）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="224" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[检查
+人数
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="653" y="224" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[≥110]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="224" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[＜
+60
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="611" y="224" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[｜
+110
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="569" y="224" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[｜
+90
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="409" width="126" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[5岁以下儿童死亡 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="429" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[死亡总数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="429" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[婴儿数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="429" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[新生儿数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="409" width="294" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[基层儿保人员]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="429" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[合计]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="429" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[高
+级
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="429" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[中
+级
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="429" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[初
+级
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="429" width="126" height="30"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[已参加上岗培训]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="459" width="42" height="19"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[参加人数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="459" width="42" height="19"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[合格人数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="459" width="42" height="19"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[合格率%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="429" width="84" height="30"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[2年内参加提高班]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="459" width="42" height="19"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[人数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="459" width="42" height="19"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[率%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="409" width="168" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[儿保门诊数
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="429" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[街道
+乡数
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="569" y="429" width="42" height="49"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[街道
+乡数
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="233" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{weightX2sd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{weightM2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{nutritionStatus7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="23" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{illnessType3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="23" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{heightM1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{weightM1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0 %">
+				<reportElement x="359" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{feedWayP1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{heightX2sd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{nutritionStatus6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{nutritionStatus6789}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{feedWay2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{illnessType4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{heightM2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{feedWayCount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0 %">
+				<reportElement x="443" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{feedWayP2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{feedWay1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{nutritionStatus2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{nutritionStatus8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{nutritionStatus9}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{nutritionStatus3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{nutritionStatus345}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="527" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{electronicDiagnostic4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{nutritionStatus4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{nutritionStatus5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="611" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="569" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="653" y="382" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{haemoglobinCount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="653" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{haemoglobin4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{deadCount2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="569" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{haemoglobin2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="23" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{deadCount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="611" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{haemoglobin3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="527" y="273" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{haemoglobin1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{deadCount1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="527" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="569" y="478" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="54" y="517" width="53" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[单位负责人]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="517" width="36" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[填报人]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="517" width="53" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[上报时间]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="317" y="517" width="42" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{user}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="538" y="517" width="84" height="20"/>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+</jasperReport>

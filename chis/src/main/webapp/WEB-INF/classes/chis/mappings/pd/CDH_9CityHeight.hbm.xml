@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.pd.schemas.CDH_9CityHeight" table="CDH_9CityHeight">
+			<id name="recordId" type="java.lang.String">
+            	<column name="recordId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="height" type="java.lang.Double" length="5"/>
+        	<property name="sexCode" type="java.lang.String" length="1" />
+        	<property name="sD3neg" type="java.lang.Double" length="5" />
+        	<property name="sD2neg" type="java.lang.Double" length="5" />
+        	<property name="sD1neg" type="java.lang.Double" length="5" />
+        	<property name="sD0" type="java.lang.Double" length="5" />
+        	<property name="sD1" type="java.lang.Double" length="5" />
+        	<property name="sD2" type="java.lang.Double" length="5" />
+        	<property name="sD3" type="java.lang.Double" length="5" />
+</class>
+</hibernate-mapping>

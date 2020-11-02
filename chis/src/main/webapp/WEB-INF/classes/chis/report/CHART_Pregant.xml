@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report id="Pregant" title="孕产妊娠图">
+	<define class="ctd.chart.define.UnionReportDefine">
+		<headers>
+			<item renderIndex="1" id="checkWeek" alias="孕周" expr="to_char(round((a.diagnosisdate-b.lastMenstrualPeriod+1)/7,0)) checkWeek" type="string"/>
+			<item renderIndex="2" id="heightFundusUterus" alias="检测值" expr="heightFundusUterus:select a.checkWeek,a.heightFundusUterus from MHC_VISITRECORD a,Mhc_Pregnantrecord b" type="int" func="union"/>
+		</headers>
+		<sort id="checkWeek"/>
+		<src>
+		    <entry name="MHC_FirstVisitRecord"/>
+		    <entry name="Mhc_Pregnantrecord"/>
+			<join>
+				<field src="a.pregnantId" dest="b.pregnantId" />
+			</join>
+		</src>
+		<condition>
+			['and',
+			['eq',['$','a.pregnantId'],['$','%q.pregnantId']],
+			['notNull',['$','heightFundusUterus']]
+			]
+		</condition>
+	</define>
+	
+	<chart template="MHC_Spline" chartType="MSSpline"/>
+	<queryArgs>
+		<arg id="pregnantId" alias="孕妇档案编号" type="string">
+		</arg>
+	</queryArgs>
+</report>

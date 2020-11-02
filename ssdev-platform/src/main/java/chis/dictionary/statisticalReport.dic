@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic searchKey="pyCode" alias="复合报表分析">
+	<item key="EHR" text="健康档案" path="健康档案" >
+		<item key="EHR_grjds" text="个人健康档案数" path="建档数 "/>
+		<item key="EHR_gldas" text="个人健康档案管理数" path="辖区可以管理人数"/>
+		<item key="EHR_lnrsfcs" text="老年人随访次数" path="老年人随访次数 "/>
+	</item>
+	<item key="MHC" text="围产保健管理" path="围产保健管理">
+		<item key="MHC_ycjdrs" text="孕册建卡人数" path="建档人数"/>
+		<item key="MHC_ycjkrs13zq" text="孕册建卡人数-13周前" path="13周前孕册建卡人数"/>
+		<item key="MHC_ycjkrs13zh" text="孕册建卡人数-13周后" path="13周后孕册建卡人数"/>
+		<item key="MHC_ycglrs" text="孕册管理人数" path="辖区可以管理孕册人数"/>
+		<item key="MHC_chfsrs" text="产后访视人数" path="产后访视的档案数，做过一次就统计在内"/>
+		<item key="MHC_chfs2rs"  text="产后访视2次人数" path="做过2次及以上产后访视人数"/>
+		<item key="MHC_gwcfs"  text="高危产妇数" path="高危评分>0"/>
+		<item key="MHC_gwcfglrs"  text="高危产妇管理人数" path="高危评分>0"/>
+		<!--<item key="MHC_ycjkrsbsh" text="孕册建卡人数-本市" path="MHC"/>
+			<item key="MHC_ycjkrsbsws" text="孕册建卡人数-本省外市" path="MHC"/>
+			<item key="MHC_ycjkrsws" text="孕册建卡人数-外省" path="MHC"/>
+			<item key="MHC_ycjkrshjdbs" text="孕册建卡人数-婚嫁到本市" path="MHC"/>
+		<item key="MHCPER_jcl"  text="建册率" path="该年该地区孕期建卡人数/该地区产妇数×100%"/>
+		<item key="MHCPER_sjjcl"  text="实际建册率" path="该年该地区孕期建卡人数/该地区产妇数×100%"/>
+		<item key="MHC_cjrs" text="产检人数" path="产检人数"/>
+		<item key="MHC_zjrs1" text="早检人数" path="妊娠确诊时孕周少于13周"/>
+		<item key="MHC_zjrs" text="实际早检人数" path="MHC"/>
+		<item key="MHC_zdqtxpxs" text="孕产期中重度缺铁性贫血数" path="孕检中血红蛋白检验中有指标值小于90g/L，只要确认有一次贫血就统计在内"/>
+		<item key="MHC_azbdjcs" text="孕产妇艾滋病病毒检测数" path="孕检中HIV抗体检测不为空"/>
+		<item key="MHC_azbyxs"  text="孕产妇艾滋病阳性数" path="孕检中HIV抗体检测为阳性"/>
+		<item key="MHC_mdjcs"  text="梅毒检测数" path="梅毒血清试验不为空"/>
+		<item key="MHC_mdyx"  text="梅毒阳性" path="梅毒血清试验为阳性的数"/>
+		<item key="MHC_cqcyxrs"  text="产前筛查阳性人数" path="产前筛查结果等于高风险"/>
+		<item key="MHC_cqzdrs"  text="产前诊断人数" path="产前诊断日期和产前诊断结果不为空的"/>
+		<item key="MHC_xtglrs" text="系统管理人数" path="13周以前早孕建册的，4次产前检查以上含4次、产后访视至少1次的孕册人数"/>
+		<item key="MHC_gwcfbl"  text="高危产妇比例" path="高危产妇数/产妇数"/>
+		<item key="MHCPER_gwcfgll"  text="高危产妇管理率" path="高危产妇管理人数/高危产妇总数"/>
+		<item key="MHC_cqzdyxrs" text="产前诊断阳性人数" path="产前诊断为阳性的人"/>
+		-->
+	</item>
+	<item key="CDH" text="儿童保健管理" path="儿童保健管理">
+		<item key="CDH_sjrs" text="实检人数" path="档案数"/>
+		<item key="CDH_sgmjiam" text="身高M+" path="大于等于SD0"/>
+		<item key="CDH_sgmjian" text="身高M-" path="小于SD0"/>
+		<item key="CDH_sgxyx2sd" text="身高＜X-2SD" path="小于-SD2"/>
+		<item key="CDH_tzmjiam" text="体重M+" path="大于等于SD0"/>
+		<item key="CDH_tzmjian" text="体重M-" path="小于SD0"/>
+		<item key="CDH_tzxyx2sd" text="体重＜X-2SD" path="小于-SD2"/>
+		<item key="CDH_6gynyes" text="6个月内婴儿数" path="0-6个月的儿童档案数"/>
+		<item key="CDH_6gymrwyrs" text="6个月母乳喂养人数" path="询问记录最后一次的喂养访视为纯母乳喂养、主要母乳喂养、辅助喂养人数"/>
+		<item key="CDHPER_6gymrwyl" text="6个月母乳喂养率" path="母乳喂养人数/6个月内婴儿数"/>
+		<item key="CDH_6gycmrwyrs" text="6个月纯母乳喂养人数" path="询问记录最后一次的喂养访视为纯母乳喂养、主要母乳喂养人数"/>
+		<item key="CDHPER_6gycmrwyl" text="6个月纯母乳喂养率" path="母乳喂养人数/6个月内婴儿数"/>
+		<item key="CDH_fyrc" text="肺炎人次" path="询问记录里患病情况为肺炎的人次"/>
+		<item key="CDH_fxrc" text="腹泻人次" path="询问记录里患病情况为腹泻的人次"/>
+		<item key="CDH_yyblhjrs" text="营养不良合计人数" path="当年范围内检查出营养不良的人数"/>
+		<item key="CDH_yzyyblrs" text="严重营养不良人数" path="当年范围内体格检查第一次检查出营养不良的原因为严重不良的人数"/>
+		<item key="CDH_tzdxrs" text="体重低下人数" path="当年范围内体格检查第一次检查出营养不良的原因为体重低下的人数"/>
+		<item key="CDH_czrs" text="超重人数" path="当年范围内体格检查第一次检查出营养不良的原因为超重的人数"/>
+		<item key="CDH_szchrs" text="生长迟缓人数" path="当年范围内体格检查第一次检查出营养不良的原因为生长迟缓的人数"/>
+		<item key="CDH_xsrs" text="消瘦人数" path="当年范围内体格检查第一次检查出营养不良的原因为消瘦的人数"/>
+		<item key="CDH_fphjrs" text="肥胖合计人数" path="当年范围内检查出肥胖的人数(轻度肥胖、中度肥胖、重度肥胖)"/>
+		<item key="CDH_qdfprs" text="轻度肥胖人数" path="当年范围内体格检查第一次检查出轻度肥胖的人数"/>
+		<item key="CDH_zdfprs" text="中度肥胖人数" path="当年范围内体格检查第一次检查出中度肥胖的人数"/>
+		<item key="CDH_zddfbrs" text="重度肥胖人数" path="当年范围内体格检查第一次检查出重度肥胖的人数"/>
+		<!--  
+			<item key="CDHPER_gll" text="管理率" path="实检人数/应检人数"/>
+			<item key="CDH_ylbhjrs" text="佝偻病合计人数" path="MHC"/>
+			<item key="CDH_zqylbrs" text="早期佝偻病人数" path="MHC"/>
+			<item key="CDH_hdqylbrs" text="活动期佝偻病人数" path="MHC"/>
+			<item key="CDH_hfqylbrs" text="恢复期佝偻病人数" path="MHC"/>
+			<item key="CDH_xssjcrs" text="血色素检查人数" path="MHC"/>
+			<item key="CDH_xssxy60gl" text="血色素＜60(g/l)" path="MHC"/>
+			<item key="CDH_xssxy90gl" text="60≤血色素＜90(g/l)" path="MHC"/>
+			<item key="CDH_xssxy110gl" text="90≤血色素＜110(g/l)" path="MHC"/>
+			<item key="CDH_5syxetswzs" text="5岁以下儿童死亡总数" path="MHC"/>
+			<item key="CDH_yesws" text="婴儿死亡数" path="MHC"/>
+			<item key="CDH_xsesws" text="新生儿死亡数" path="MHC"/>
+			<item key="CDH_xsetlsczrs" text="新生儿听力筛查总人数" path="MHC"/>
+			<item key="CDHPER_xsetlscl" text="新生儿听力筛查率" path="MHC"/>
+			<item key="CDH_tlscycrs" text="听力筛查异常人数" path="MHC"/>
+			<item key="CDH_tlsckyrs" text="听力筛查可疑人数" path="MHC"/>
+			<item key="CDH_xsejbscrs" text="新生儿疾病筛查人数" path="MHC"/>
+			<item key="CDHPER_xsejbscl" text="新生儿疾病筛查率"  path="MHC"/>
+			<item key="CDH_jcebyg" text="基层儿保员工" path="MHC"/>
+			<item key="CDH_ebmz" text="儿保门诊" path="MHC"/>
+			<item key="CDH_bdhkhcs" text="本地户口活产数" path="MHC"/>-->
+	</item>
+	<item key="MDC" text="慢病管理" path="慢病管理">
+		<item key="MDC_jmxyrs" text="居民吸烟人数" path="居民吸烟人数"/>
+		<item key="MDC_yjrs" text="饮酒人数" path="饮酒人数"/>
+		
+		<item key="MDC_ysshwph" text="饮食嗜好-无偏好" path="饮食嗜好-无偏好"/>
+		<item key="MDC_ysshpx" text="饮食嗜好-偏咸" path="饮食嗜好-偏咸"/>
+		<item key="MDC_ysshpt" text="饮食嗜好-偏甜" path="饮食嗜好-偏甜"/>
+		<item key="MDC_ysshpy" text="饮食嗜好-偏油" path="饮食嗜好-偏油"/>
+		<item key="MDC_ysshpl" text="饮食嗜好-偏辣" path="饮食嗜好-偏辣"/>
+		<item key="MDC_ysshps" text="饮食嗜好-偏酸" path="饮食嗜好-偏酸"/>
+		
+		<item key="MDC_ydqkmt" text="运动情况-每天" path="运动情况-每天"/>
+		<item key="MDC_ydqkmz" text="运动情况-每周一次以上" path="运动情况-每周一次以上"/>
+		<item key="MDC_ydqkoe" text="运动情况-偶尔" path="运动情况-偶尔"/>
+		<item key="MDC_ydqkbyd" text="运动情况-不运动" path="运动情况-不运动"/>
+		<item key="MDC_gxyhzrs" text="高血压患者人数" path="高血压建档人数"/>
+		<item key="MDC_tnbhzrs" text="糖尿病患者人数" path="糖尿病建档人数"/>
+		<item key="MDC_gxyhzxyrs" text="高血压患者吸烟人数" path="高血压患者吸烟人数"/>
+		<item key="MDC_gxyhzyjrs" text="高血压患者饮酒人数" path="高血压患者饮酒人数"/>
+		<!--
+		<item key="MDC_gxyhzysqk1" text="高血压患者饮食情况-无偏好" path="高血压患者饮食情况-无偏好"/>
+		<item key="MDC_gxyhzysqk2" text="高血压患者饮食情况-偏咸" path="高血压患者饮食情况-偏咸"/>
+		<item key="MDC_gxyhzysqk3" text="高血压患者饮食情况-偏甜" path="高血压患者饮食情况-偏甜"/>
+		<item key="MDC_gxyhzysqk4" text="高血压患者饮食情况-偏油" path="高血压患者饮食情况-偏油"/>
+		<item key="MDC_gxyhzysqk5" text="高血压患者饮食情况-偏辣" path="高血压患者饮食情况-偏辣"/>
+		<item key="MDC_gxyhzysqk6" text="高血压患者饮食情况-偏酸" path="高血压患者饮食情况-偏酸"/>
+		-->
+	</item>
+		<!-- 
+			<item key="MDC_ssy" text="收缩压">
+				<item key="MDC_ssy_year" text="建档时间" kpicode="MDC_ssy" entryName="MHC/year" path="MHC" title="收缩压"/>
+				<item key="MDC_ssy_demograhpic" text="人口学" kpicode="MDC_ssy" entryName="MHC/year" path="MHC" title="收缩压"/>
+				<item key="MDC_ssy_unit" text="管辖机构" kpicode="MDC_ssy" entryName="MHC/District_region" path="MHC" title="收缩压"/>
+			</item>
+			<item key="MDC_szy" text="舒张压">
+				<item key="MDC_szy_year" text="建档时间" kpicode="MDC_szy" entryName="MHC/year" path="MHC" title="舒张压"/>
+				<item key="MDC_szy_demograhpic" text="人口学" kpicode="MDC_szy" entryName="MHC/year" path="MHC" title="舒张压"/>
+				<item key="MDC_szy_unit" text="管辖机构" kpicode="MDC_szy" entryName="MHC/District_region" path="MHC" title="舒张压"/>
+			</item>
+
+			<item key="MDC_xydj1" text="血压等级-1级高血压（轻度）" path="MHC"/>
+			<item key="MDC_xydj2" text="血压等级-2级高血压（中度）" path="MHC"/>
+			<item key="MDC_xydj3" text="血压等级-3级高血压（重度）" path="MHC"/>
+			<item key="MDC_xydj4" text="血压等级-理想血压" path="MHC"/>
+			<item key="MDC_xydj5" text="血压等级-正常血压" path="MHC"/>
+			<item key="MDC_xydj6" text="血压等级-正常高值" path="MHC"/>
+			<item key="MDCPER_gxygll" text="高血压管理率" path="MHC"/>
+			<item key="MDCPER_tnbgll" text="糖尿病管理率" path="MHC"/>
+			<item key="MDC_gxyhzbmizs" text="高血压患者BMI指数" path="MHC"/>
+			<item key="MDC_xydj7" text="血压等级-单纯收缩性高血压" path="MHC"/>
+		<item key="MDC_gxyrs" text="高血压人数" path="总人口数*8%"/>
+		<item key="MDC_gxygfgls" text="高血压规范管理数" path="档案内容填写无漏项，随访按计划完成，且内容无遗漏（测量血压、血糖，用药指导，生活方式等非药物指导）"/>
+		<item key="MDC_tnbrs" text="糖尿病人数" path="总人口数*2%"/>
+		<item key="MDC_tnbgfgls" text="糖尿病规范管理数" path="档案内容填写无漏项，随访按计划完成，且内容无遗漏（测量血压、血糖，用药指导，生活方式等非药物指导）"/>
+
+			<item key="MDC_gxyhzysrl" text="高血压患者盐摄入量">
+			<item key="MDC_tnbhzbmizs" text="糖尿病患者BMI指数" path="MHC"/>
+					<item key="MDC_tnbhzysrl" text="糖尿病患者盐摄入量" path="MHC"/>
+			<item key="MDC_gxyhzbfzqk" text="高血压患者并发症情况" path="MHC"/>
+			<item key="MDC_tnbhzbfzqk" text="糖尿病患者并发症情况" path="MHC"/>
+				<item key="MDC_gxyhzysrl_year" text="建档时间" kpicode="MDC_gxyhzysrl" entryName="MHC/year" path="MHC" title="高血压患者盐摄入量"/>
+				<item key="MDC_gxyhzysrl_demograhpic" text="人口学" kpicode="MDC_gxyhzysrl" entryName="MHC/year" path="MHC" title="高血压患者盐摄入量"/>
+				<item key="MDC_gxyhzysrl_unit" text="管辖机构" kpicode="MDC_gxyhzysrl" entryName="MHC/District_region" path="MHC" title="高血压患者盐摄入量"/>
+			</item>
+		
+		<item key="MDC_tnbhzxyrs" text="糖尿病患者吸烟人数" path="糖尿病患者吸烟人数"/>
+		<item key="MDC_tnbhzyjrs" text="糖尿病患者饮酒人数" path="糖尿病患者饮酒人数"/>
+		<item key="MDC_tnbhzysxg1" text="糖尿病患者饮食习惯-无偏好" path="糖尿病患者饮食习惯-无偏好"/>
+		<item key="MDC_tnbhzysxg2" text="糖尿病患者饮食习惯-偏咸" path="糖尿病患者饮食习惯-偏咸"/>
+		<item key="MDC_tnbhzysxg3" text="糖尿病患者饮食习惯-偏甜" path="糖尿病患者饮食习惯-偏甜"/>
+		<item key="MDC_tnbhzysxg4" text="糖尿病患者饮食习惯-偏油" path="糖尿病患者饮食习惯-偏油"/>
+		<item key="MDC_tnbhzysxg5" text="糖尿病患者饮食习惯-偏辣" path="糖尿病患者饮食习惯-偏辣"/>
+		<item key="MDC_tnbhzysxg6" text="糖尿病患者饮食习惯-偏酸" path="糖尿病患者饮食习惯-偏酸"/>
+
+	<item key="EHR_1" text="健康服务统计分析" path="健康服务统计分析">
+		<item key="EHR_grjds" text="健康档案数" path="建档数"/>
+		<item key="EHR_gldas" text="管理档案数" path="管理数"/>
+		<item key="EHR_lnrsfcs" text="老年人随访次数" path="老年人随访次数"/>
+		<item key="EHR_gxyjds" text="高血压建档数" path="高血压建档数"/>
+		<item key="EHR_gxysfrc1" text="高血压分级随访人次（一级）" path="高血压分级随访人次（一级）"/>
+		<item key="EHR_gxysfrc2" text="高血压分级随访人次（二级）" path="高血压分级随访人次（二级）"/>
+		<item key="EHR_gxysfrc3" text="高血压分级随访人次（三级）" path="高血压分级随访人次（三级）"/>
+		<item key="EHR_gxysfrc4" text="高血压分级随访人次(一般管理对像）" path="高血压分级随访人次(一般管理对像）"/>
+		<item key="EHR_tnbjds" text="糖尿病建档数" path="MHC"/>
+		<item key="EHR_tnbsfrc1" text="糖尿病分级随访人次（一级）" path="糖尿病分级随访人次（一级）"/>
+		<item key="EHR_tnbsfrc2" text="糖尿病分级随访人次（二级）" path="糖尿病分级随访人次（二级）"/>
+		<item key="EHR_tnbsfrc3" text="糖尿病分级随访人次（三级）" path="糖尿病分级随访人次（二级）"/>
+		<item key="EHR_tnbsfrc4" text="糖尿病分级随访人次（一般管理对像）" path="糖尿病分级随访人次（一般管理对像）"/>
+		<item key="EHR_etjds" text="儿童建档数" path="儿童建档数"/>
+		<item key="EHR_etxwrc" text="儿童询问人次" path="儿童询问人次"/>
+		<item key="EHR_tretdas" text="体弱儿档案数" path="体弱儿档案数"/>
+		<item key="EHR_tgjcrc" text="体格检查人次" path="体格检查人次"/>
+		<item key="EHR_tretsfrc" text="体弱儿随访人次" path="体弱儿随访人次"/>
+		<item key="EHR_ycfjds" text="孕产妇建档数" path="孕产妇建档数"/>
+		<item key="EHR_ycfsfrc" text="孕产妇随访人次" path="孕产妇随访人次"/>
+		<item key="EHR_gwycfsfrc" text="高危孕产妇随访人次" path="高危孕产妇随访人次"/>
+		<item key="EHR_tjjcs" text="体检检查数" path="体检检查数"/>
+		<item key="EHR_jsbdas" text="精神病档案数" path="精神病档案数"/>
+		<item key="EHR_jsbsfrc" text="精神病随访人次" path="精神病随访人次"/>
+		<item key="EHR_xxgjcs" text="心血管监测数" path="心血管监测数"/>
+		<item key="EHR_lnrs" text="老年人数" path="老年人数"/>
+		<item key="EHR_jtdas" text="家庭档案数" path="家庭档案数"/>
+	</item>
+	 -->
+</dic>
+

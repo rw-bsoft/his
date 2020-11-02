@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="挂号" language="groovy" pageWidth="360" pageHeight="352" orientation="Landscape" columnWidth="360" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<subDataset name="dataset1"/>
+	<subDataset name="dataset2"/>
+	<columnFooter>
+		<band height="352" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="254" width="53" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[门诊号:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="27" width="97" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{jzhm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="52" width="97" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{xm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="77" width="97" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{rq}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="102" width="97" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ghf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="126" width="97" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{zlf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="254" width="114" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{mzhm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="11" y="319" width="146" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="193" y="254" width="53" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[门诊号:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="27" width="97" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{jzhm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="52" width="97" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{xm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="77" width="97" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{rq}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="102" width="97" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ghf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="126" width="97" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{zlf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="319" width="144" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="254" width="113" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{mzhm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="11" y="299" width="53" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ghks}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="299" width="50" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ampm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="299" width="29" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{mzxh}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="143" y="299" width="25" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[号]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="193" y="299" width="53" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ghks}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="299" width="50" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ampm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="296" y="299" width="25" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{mzxh}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="321" y="299" width="27" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[号]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="21" y="154" width="147" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{BNZHZF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="174" width="147" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{LNZHZF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="194" width="147" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{TCJJ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="214" width="147" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{KNJZJJ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="234" width="147" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{GRXJZF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="194" width="147" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{TCJJ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="154" width="147" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{BNZHZF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="174" width="147" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{LNZHZF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="214" width="147" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{KNJZJJ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="234" width="147" height="20"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{GRXJZF}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

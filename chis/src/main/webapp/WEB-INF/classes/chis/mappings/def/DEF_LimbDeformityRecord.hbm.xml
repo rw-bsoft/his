@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.def.schemas.DEF_LimbDeformityRecord" table="DEF_LimbDeformityRecord">
+		<id name="id" type="java.lang.String">
+			<column name="id"/>
+			<generator class="assigned" />
+		</id>
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="contactPhone" type="java.lang.String" length="20" />
+		<property name="parentName" type="java.lang.String" length="20" />
+		<property name="relation" type="java.lang.String" length="2" />
+		<property name="deformityType" type="java.lang.String" length="20" />
+		<property name="deformityPosition" type="java.lang.String" length="20" />
+		<property name="withOtherDeformity" type="java.lang.String" length="20" />
+		<property name="deformityReason" type="java.lang.String" length="100" />
+		<property name="deformityDate" type="date"  />
+		<property name="pastMedicalTreatment" type="java.lang.String" length="100" />
+		<property name="explanation" type="java.lang.String" length="500" />
+		<property name="closeFlag" type="java.lang.String" length="1" />
+		<property name="status" type="java.lang.String" length="1" />
+		<property name="cancellationReason" type="java.lang.String"  />
+		<property name="cancellationUnit" type="java.lang.String"  />
+		<property name="cancellationDate" type="date"  />
+		<property name="cancellationUser" type="java.lang.String"  />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp"  />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp"  />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="manaDoctorId" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_YSXG_GRCS" table="EMR_YSXG_GRCS">
+	   <id name="DZXH" type="java.lang.Long">
+			<column name="DZXH" />
+			<generator class="assigned" />
+		</id>
+        	<property name="YHBH" type="java.lang.String" length="30" />
+        	<property name="TZYS" type="java.lang.String" length="1" />
+        	<property name="BCJG" type="java.lang.Integer" length="3" />
+        	<property name="XSBL" type="java.lang.String" length="10" />
+</class>
+</hibernate-mapping>

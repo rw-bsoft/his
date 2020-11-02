@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.sch.schemas.SCH_SnailFindInfomation" table="SCH_SnailFindInfomation">
+			<id name="snailFindInfoId" type="java.lang.String">
+            	<column name="snailFindInfoId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="snailBaseInfoId" type="java.lang.String" length="16" />
+        	<property name="snailFindUser" type="java.lang.String" length="20" />
+        	<property name="snailFindDate" type="date" />
+        	<property name="snailPersonTime" type="java.lang.Integer"  />
+        	<property name="snaiFindType" type="java.lang.String" length="50" />
+        	<property name="snailArea" type="java.lang.Double"  />
+        	<property name="findCount" type="java.lang.Double"  />
+        	<property name="snailFindCount" type="java.lang.Integer"  />
+        	<property name="densityAverage" type="java.lang.Double"  />
+        	<property name="densityMaximum" type="java.lang.Double"  />
+        	<property name="snailNegative" type="java.lang.Integer"  />
+        	<property name="snailWithoutKill" type="java.lang.Double"  />
+        	<property name="snailWithoutFind" type="java.lang.Double"  />
+        	<property name="snailDiffuse" type="java.lang.Double"  />
+        	<property name="snailOther" type="java.lang.Double"  />
+        	<property name="inputUnit" type="java.lang.String" length="20" />
+        	<property name="inputDate" type="timestamp"  />
+        	<property name="inputUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20"/>
+        	<property name="lastModifyDate" type="timestamp"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

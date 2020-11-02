@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.mpm.schemas.MPM_MasterplateData" table="MPM_MasterplateData">
+			<id name="recordId" type="java.lang.String">
+            	<column name="recordId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="masterplateId" type="java.lang.String" length="16" />
+        	<property name="masterplateName" type="java.lang.String" length="100" />
+        	<property name="masterplateType" type="java.lang.String"  />	
+        	<property name="masterplateTypezb" type="java.lang.String"   length="2"/>
+        	<property name="dateValue" type="date"  />
+        	<property name="dateType" type="java.lang.String"  />
+        	<property name="regionCode" type="java.lang.String"   length="25"/>
+        	<property name="manaUnitId" type="java.lang.String" length="20" />
+        	<property name="manageDoctor" type="java.lang.String" length="20" />
+        	<property name="remark" type="java.lang.String" length="500" />
+        	<property name="inputUser" type="java.lang.String" length="20" />
+        	<property name="inputUnit" type="java.lang.String" length="20" />
+        	<property name="inputDate" type="date"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="date"  />
+        	<property name="ServiceFlag"  type="java.lang.String" length="1" />
+</class>
+</hibernate-mapping>

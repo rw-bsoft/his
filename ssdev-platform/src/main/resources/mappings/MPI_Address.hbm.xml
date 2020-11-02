@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MPI_Address" table="MPI_Address">
+			<id name="addressId" type="java.lang.String" length="16">
+			<column name="addressId" />
+			<generator class="assigned" />
+		</id>
+   <property name="empiId"             	type="java.lang.String" length="32"/>
+   <property name="addressTypeCode"   	type="java.lang.String" length="2"/>
+   <property name="address"           	type="java.lang.String" length="100"/>
+   <property name="postalCode"         	type="java.lang.String" length="6"/>
+   <property name="createUnit"         		type="java.lang.String" length="16"/>
+   <property name="createUser"        	  		type="java.lang.String" length="20"/>
+   <property name="createTime"           		type="date"/>
+   <property name="lastModifyUnit"     		type="java.lang.String" length="16"/>
+   <property name="lastModifyTime"    	  		type="date"/>
+   <property name="lastModifyUser"    	  		type="java.lang.String" length="20"/>
+</class>
+</hibernate-mapping>

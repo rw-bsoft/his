@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YF_MZ_SFJL" table="YF_MZ_SFJL">
+		<id name="JLXH" type="java.lang.Long">
+			<column name="JLXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+	   	<property name="BRID" type="java.lang.Long" length="18" />
+	   	<property name="YPXH" type="java.lang.Long" length="18" />
+	   	<property name="YPMC" type="java.lang.String" />
+	   	<property name="SBXH" type="java.lang.Long" length="18" />
+	   	<property name="CFZH" type="java.lang.Long" length="18" />
+	   	<property name="SFBZ" type="java.lang.Integer" length="1" />
+	   	<property name="SFGH" type="java.lang.String" />
+	   	<property name="SFSJ" type="timestamp" />
+	   	<property name="SFYJ" type="java.lang.String" />
+	   	<property name="YFSB" type="java.lang.Long" length="18" />
+   	</class>
+</hibernate-mapping>

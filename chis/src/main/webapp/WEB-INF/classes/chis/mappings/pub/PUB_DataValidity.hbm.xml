@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.pub.schemas.PUB_DataValidity" table="PUB_DataValidity">
+		<id name="registerId" type="java.lang.String">
+			<column name="registerId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="serviceBusiness" type="java.lang.String" length="30" />
+		<property name="service" type="java.lang.String" length="30" />
+        <property name="serviceTarget" type="java.lang.String" length="30" />
+		<property name="organization" type="java.lang.String" length="50" />
+		<property name="serviceDate" type="date" />
+		<property name="GPS" type="java.lang.String" length="30" />
+        <property name="location" type="java.lang.String" length="255" />
+		<property name="validityFlag" type="java.lang.String" length="5"/>
+	</class>
+</hibernate-mapping>

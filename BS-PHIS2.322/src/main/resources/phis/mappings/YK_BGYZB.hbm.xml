@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YK_BGYZB" table="YK_BGYZB">
+		<composite-id>
+			<key-property name="YPCD" column="YPCD" type="java.lang.Long"/>
+			<key-property name="YPXH" column="YPXH" type="java.lang.Long" />
+		</composite-id>
+		<property name="YPMC" type="java.lang.String" />
+		<property name="YPGG" type="java.lang.String"  />
+		<property name="CDMC" type="java.lang.String"  />
+		<property name="SWKC" type="java.lang.Double"  />
+		<property name="KCSL" type="java.lang.Double"  />
+		<property name="PYDM" type="java.lang.String"  />
+		<property name="WBDM" type="java.lang.String"  />
+		<property name="JXDM" type="java.lang.String"  />
+		<property name="QTDM" type="java.lang.String"  />
+		<property name="YPDM" type="java.lang.String"  />
+		<property name="KWBM" type="java.lang.String"  />
+		<property name="YKZF" type="java.lang.Integer"  />
+		<property name="ZFPB" type="java.lang.Integer"  />
+		<property name="ZBLB" type="java.lang.Integer"  />
+        
+	</class>
+</hibernate-mapping>

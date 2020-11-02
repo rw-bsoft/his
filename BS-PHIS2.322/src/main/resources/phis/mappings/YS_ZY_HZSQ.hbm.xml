@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YS_ZY_HZSQ" table="YS_ZY_HZSQ">
+		<id name="SQXH" type="java.lang.Long">
+				<column name="SQXH"/>
+            	<generator class="assigned" />
+		</id>
+		<property name="JZHM" type="java.lang.String" length="18" />
+		<property name="SQKS" type="java.lang.String" length="8" />
+		<property name="SQYS" type="java.lang.String" length="10" />
+		<property name="SQSJ" type="timestamp"  />
+		<property name="HZMD" type="java.lang.String" length="255" />
+		<property name="HZMD2" type="java.lang.String" length="255" />
+		<property name="HZSJ" type="timestamp"  />
+		<property name="YQDX" type="java.lang.String" length="255" />
+		<property name="JJBZ" type="java.lang.String" length="1" />
+		<property name="TJBZ" type="java.lang.String" length="1" />
+		<property name="TJYS" type="java.lang.String" length="10" />
+		<property name="TJSJ" type="timestamp"  />
+		<property name="ZFBZ" type="java.lang.String" length="1" />
+		<property name="JSBZ" type="java.lang.String" length="1" />
+		<property name="JSSJ" type="timestamp"  />
+		<property name="TXRY" type="java.lang.String" length="10" />
+		<property name="JGID" type="java.lang.String" length="20" />
+				<property name="BQZL" type="java.lang.String" length="255" />
+
+		
+	</class>
+</hibernate-mapping>

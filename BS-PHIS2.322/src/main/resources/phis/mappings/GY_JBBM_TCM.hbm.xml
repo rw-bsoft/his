@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="GY_JBBM_TCM" table="GY_JBBM_TCM">
+		<id name="JBXH" type="java.lang.Long">
+			<column name="JBXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JBMC" type="java.lang.String" length="80" />
+		<property name="PYDM" type="java.lang.String" length="8" />
+		<property name="ICD10" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

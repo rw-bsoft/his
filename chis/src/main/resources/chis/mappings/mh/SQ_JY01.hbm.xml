@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.mh.schemas.SQ_JY01"
+		table="SQ_JY01">
+		<id name="JLXH" type="java.lang.String">
+			<column name="JLXH" />
+			<generator class="assigned" />
+		</id>
+		<property name="ID" type="java.lang.String" length="50" />
+		<property name="YCBZ" type="int" length="2" />
+		<property name="JKKH" type="java.lang.String" length="20" />
+		<property name="GRBM" type="java.lang.String" length="30" />
+		<property name="EMPIID" type="java.lang.String" length="32" />
+		<property name="JYDH" type="java.lang.String" length="64" />
+		<property name="JYRQ" type="date" />		
+		<property name="JYFF" type="java.lang.String" length="20" />
+		<property name="KDRQ" type="date" />		
+		<property name="KDKS" type="java.lang.String" length="20" />
+		<property name="KDYS" type="java.lang.String" length="20" />
+		<property name="JYKS" type="java.lang.String" length="20" />
+		<property name="JYYS" type="java.lang.String" length="20" />
+		<property name="FHYS" type="java.lang.String" length="20" />
+		<property name="YYMC" type="java.lang.String" length="100" />
+		<property name="SFRQ" type="date" />	
+		<property name="INTIME" type="date" />	
+		<property name="CZGH" type="java.lang.String" length="20" />
+		<property name="YRBZ" type="int" length="1" />
+		<property name="UPD" type="int" length="1" />
+
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

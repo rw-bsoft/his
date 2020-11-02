@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="DR_CLINICREGISTERREQHISTORY" table="DR_CLINICREGISTERREQHISTORY">
+			<id name="ID" type="java.lang.String">
+            	<column name="ID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="EMPIID" type="java.lang.String"  />
+        	<property name="GUAHAOXH" type="java.lang.String"  />
+        	<property name="JIUZHENSJ" type="java.lang.String"  />
+            <property name="FEIYONGMX" type="java.lang.String"  />
+            <property name="QUHAOMM" type="java.lang.String"  />
+</class>
+</hibernate-mapping>

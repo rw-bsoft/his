@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic class="TableDictionary" alias="团队名称" supportRemote="false" codeRule="4,2,3,3,3,3,3,3"  
+	searchField="pyCode" entry="PUB_FamilyTeam" keyField="familyTeamId" 
+	textField="familyTeamName" queryOnly="true"
+	filter="['like', ['$','manaunitId'], ['concat',['substring',['$','%user.manageUnit.id'], 0,9],['s','%']]]"
+	>
+	<properties>
+		<p name="manaunitId">manaunitId</p>
+		<p name="pyCode">pyCode</p>
+	</properties>
+</dic>

@@ -1,0 +1,148 @@
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace modules "com.bsoft.hais.modules.*";
+@namespace combobox "com.bsoft.hais.components.combobox.*";
+@namespace button "com.bsoft.hais.components.button.*";
+@namespace date "com.bsoft.hais.components.date.*";
+@namespace login "com.bsoft.hais.modules.login.*";
+@namespace header "com.bsoft.hais.modules.header.*";
+@namespace dropdown "com.bsoft.hais.components.dropdown.*";
+@namespace menu "com.bsoft.hais.components.menu.*";
+@namespace tree "com.bsoft.hais.components.tree.*";
+@namespace renderer "com.bsoft.hais.components.grid.renderer.*";
+@namespace field "com.bsoft.hais.components.form.field.*";
+		
+dropdown|BaseComboBox{
+	arrowButtonWidth: 18;
+	disabledSkin: ClassReference("mx.skins.halo.ComboBoxArrowSkin");
+	downSkin: ClassReference("mx.skins.halo.ComboBoxArrowSkin");
+	editableDisabledSkin: ClassReference("mx.skins.halo.ComboBoxArrowSkin");
+	editableDownSkin: ClassReference("mx.skins.halo.ComboBoxArrowSkin");
+	editableOverSkin: ClassReference("mx.skins.halo.ComboBoxArrowSkin");
+	editableUpSkin: ClassReference("mx.skins.halo.ComboBoxArrowSkin");
+	leading: 0;
+	borderColor:#999999;
+	overSkin: ClassReference("mx.skins.halo.ComboBoxArrowSkin");
+	paddingLeft: 5;
+	upSkin: ClassReference("mx.skins.halo.ComboBoxArrowSkin");
+}
+
+mx|HSlider{
+	dataTipStyleName:"MyDataTip";
+}
+
+date|MonthChooser {
+	headerColors: #f3f6fb, #f3f6fb;
+	borderColor: #ccdbf0;
+	
+	/* Previous Month */
+	prevMonthUpSkin: Embed("/../assets/images/resultset_previous.png");
+	prevMonthOverSkin: Embed("/../assets/images/resultset_previous.png");
+	prevMonthDownSkin: Embed("/../assets/images/resultset_previous.png");
+	prevMonthDisabledSkin: Embed("/../assets/images/resultset_previous.png");
+	
+	/* Next Month */
+	nextMonthUpSkin: Embed("/../assets/images/resultset_next.png");
+	nextMonthOverSkin: Embed("/../assets/images/resultset_next.png");
+	nextMonthDownSkin: Embed("/../assets/images/resultset_next.png");
+	nextMonthDisabledSkin: Embed("/../assets/images/resultset_next.png");
+}
+
+.MyDataTip {
+	backgroundAlpha: 1.0;
+	backgroundColor: haloBlue;
+	color: white;
+	fontWeight: bold;
+}
+
+mx|Alert{
+	titleBackgroundSkin:ClassReference("com.bsoft.hais.skin.AlertSkin");
+	borderColor:#A3B6C5;
+	cornerRadius:4;
+}
+
+s|TitleWindow{
+	cornerRadius:4;
+	skinClass:ClassReference("com.bsoft.hais.skin.window.TitleWindowSkin");
+}
+
+s|BorderContainer{
+	borderColor:#A3B6C5;
+}
+
+
+
+button|IconButtonSkin{
+	skinClass:ClassReference("com.bsoft.hais.components.button.IconButtonSkin")
+}
+
+s|DataGrid{
+   borderColor:#A3B6C5;
+}
+
+.maxBtn{
+	skinClass:ClassReference("com.bsoft.hais.skin.button.TitleWindowMaxButtonSkin");
+}
+
+.minBtn{
+	skinClass:ClassReference("com.bsoft.hais.skin.button.TitleWindowMinButtonSkin");
+}
+
+menu|Menu{
+	skinClass:ClassReference("com.bsoft.hais.skin.menu.MenuSkin");
+}
+
+mx|ToolTip {
+	backgroundAlpha:0.9;
+	backgroundColor: white;
+	color: black ;
+	fontSize: 12;
+}
+
+login|Login{
+	skinClass:ClassReference("com.bsoft.hais.skin.login.BasicLoginSkin");
+}
+
+header|HeaderGroup{
+	logoImage: "assets/images/logo.png";
+}
+
+tree|AsyncTree{
+	tbarborderColor:#E1E3E5;
+	tbarbackgroundColor:#E3EAF0;
+}
+
+mx|DateField {  
+	contentBackgroundColor: #FFFFFF;  
+	/*更改此项文本框边框颜色,DateChooser标题栏颜色及dateField不接受交互时颜色均改变*/  
+	borderColor: #DFEAEE;   
+	/*当前日期背景颜色*/  
+	todayColor: #DFEAEE;  
+	/*设置dateField图标*/  
+	skin: ClassReference(null);
+	/* null the skins defined in default.css */ 
+	upSkin: ClassReference(null); 
+	overSkin: ClassReference(null); 
+	downSkin: ClassReference(null); 
+	disabledSkin: ClassReference(null); 
+}  
+
+mx|AdvancedDataGrid{
+	headerStyleName:"advancedGridHeader";
+}
+
+.advancedGridHeader{
+	fontWeight:bold;
+	textAlign:center;
+}
+
+renderer|GridDefaultRenderer{
+	/*钻取显示为链接样式*/  
+	diggerAsLink:0;
+}
+
+field|MultiDateField{
+	/*默认起始时间范围跨度*/  
+	defaultDistance:3;
+}
+

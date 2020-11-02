@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hr.schemas.EHR_HealthRecord" table="EHR_HealthRecord">
+		<id name="phrId" type="java.lang.String">
+			<column name="phrId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="regionCode" type="java.lang.String" length="25" />
+		<property name="regionCode_text" type="java.lang.String" length="200" />
+		<!-- 
+			<property name="homeAddress" type="java.lang.String" length="21" />
+		-->
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="manaDoctorId" type="java.lang.String"
+			length="20" />
+		<property name="manaNurse" type="java.lang.String" length="20" />
+		<property name="healthDoctor" type="java.lang.String"
+			length="20" />
+		<property name="familyId" type="java.lang.String" length="30" />
+		<property name="relaCode" type="java.lang.String" length="2" />
+		<property name="masterFlag" type="java.lang.String" length="1" />
+		<property name="fatherId" type="java.lang.String" length="32" />
+		<property name="fatherName" type="java.lang.String" length="20" />
+		<property name="motherId" type="java.lang.String" length="32" />
+		<property name="motherName" type="java.lang.String" length="20" />
+		<property name="partnerId" type="java.lang.String" length="32" />
+		<property name="partnerName" type="java.lang.String"
+			length="20" />
+		<property name="signFlag" type="java.lang.String" length="1" />
+		<property name="isAgrRegister" type="java.lang.String"
+			length="1" />
+		<property name="deadFlag" type="java.lang.String" length="1" />
+		<property name="deadReason" type="java.lang.String" length="100" />
+		<property name="deadDate" type="date" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+		<property name="cancellationUser" type="java.lang.String"
+			length="20" />
+		<property name="cancellationDate" type="date" />
+		<property name="cancellationUnit" type="java.lang.String"
+			length="20" />
+		<property name="status" type="java.lang.String" length="1" />
+		<property name="cancellationReason" type="java.lang.String"
+			length="1" />
+		<property name="oldlastVisitDate" type="date" />
+		<property name="isDiabetes" type="java.lang.String" length="1" />
+		<property name="isHypertension" type="java.lang.String" length="1" />
+		<property name="incomeSource" type="java.lang.String" length="1" />
+		<property name="existHealthCheck" type="java.lang.String" length="1" />
+		<property name="familyDoctorId" type="java.lang.String" length="20" />
+		<property name="dataSource" type="java.lang.String" length="1" />
+		<property name="knowFlag" type="java.lang.String" length="1" />
+		<property name="sxsj" type="date" />
+		<property name="zzsj" type="date" />
+		<property name="isPovertyAlleviation" type="java.lang.String" length="1" />
+		<property name="isOffer" type="java.lang.String" length="1" />
+		<property name="offerLastModifyPerson" type="java.lang.String"
+			length="20" />
+		<property name="offerLastModifyDate" type="timestamp" />
+		<property name="isFirstVerify" type="java.lang.String" length="1" />
+		<property name="firstVerifyPerson" type="java.lang.String"
+			length="20" />
+		<property name="firstVerifyDate" type="timestamp" />
+		<property name="isSecondVerify" type="java.lang.String" length="1" />
+		<property name="secondVerifyPerson" type="java.lang.String"
+			length="20" />
+		<property name="secondVerifyDate" type="timestamp" />
+		<!--<property name="isRemarked" type="java.lang.String" length="1" />
+		<property name="remarkPerson" type="java.lang.String"
+			length="20" />
+		<property name="remarkDate" type="timestamp" />-->
+		<property name="unOfferLastModifyPerson" type="java.lang.String"
+			length="20" />
+		<property name="unOfferLastModifyDate" type="timestamp" />
+		<property name="unFirstVerifyPerson" type="java.lang.String"
+			length="20" />
+		<property name="unFirstVerifyDate" type="timestamp" />
+		<property name="unSecondVerifyPerson" type="java.lang.String"
+			length="20" />
+		<property name="unSecondVerifyDate" type="timestamp" /> 
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputDate" type="timestamp" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

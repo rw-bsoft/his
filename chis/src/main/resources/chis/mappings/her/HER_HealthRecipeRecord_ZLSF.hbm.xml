@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.her.schemas.HER_HealthRecipeRecord_ZLSF"
+		table="HER_HealthRecipeRecord_ZLSF">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="recordId" type="java.lang.String" length="16" />
+		<property name="diagnoseId" type="java.lang.String" length="16" />
+		<property name="wayId" type="java.lang.String" length="32" />
+		<property name="recipeName" type="java.lang.String" length="200" />
+		<property name="examineUnit" type="java.lang.String" length="100" />
+		<property name="diagnoseName" type="java.lang.String" length="200" />
+		<property name="ICD10" type="java.lang.String" length="50" />
+		<property name="healthTeach" type="java.lang.String" length="4000" />
+		<property name="guideDate" type="date" />
+		<property name="guideUser" type="java.lang.String" length="20" />
+		<property name="guideWay" type="java.lang.String" length="2" />
+		<property name="inputDate" type="date" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="date" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

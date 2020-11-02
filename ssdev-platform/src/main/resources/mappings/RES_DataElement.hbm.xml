@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="RES_DataElement" table="RES_DataElement">
+		<id name="DataElementId" type="java.lang.Integer">
+	    	<column name="DataElementId"/>
+			<generator class="sequence">
+            	<param name="sequence">SEQ_RES_DataElement</param>
+           	</generator>
+		</id>
+		<property name="DataStandardId" type="java.lang.String" length="16" />
+		<property name="StandardIdentify" type="java.lang.String" length="50" />
+		<property name="CustomIdentify" type="java.lang.String" length="50" />
+		<property name="DName" type="java.lang.String" length="50" />
+		<property name="DataType" type="java.lang.String" length="2" />
+		<property name="DataLength" type="java.lang.String" length="15" />
+		<property name="CodeSystem" type="java.lang.String" length="50" />
+		<property name="Maximum" type="java.lang.String" length="16" />
+		<property name="Minimum" type="java.lang.String" length="16" />
+		<property name="Category" type="java.lang.Integer"  />
+		<property name="DComment" type="java.lang.String" length="500" />
+		<property name="StandardRule" type="java.lang.String" length="100" />
+		<property name="LastModifytime" type="timestamp"  />
+	</class>
+</hibernate-mapping>

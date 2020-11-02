@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.mhc.schemas.MHC_DeliveryRecord"
+		table="MHC_DeliveryRecord">
+		<id name="deliveryId" type="java.lang.String">
+			<column name="deliveryId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="formCode" type="java.lang.String" length="32" />
+		<property name="certificateId" type="java.lang.String"
+			length="10" />
+		<property name="deliveryCode" type="java.lang.String"
+			length="32" />
+		<property name="inHospitalCode" type="java.lang.String"
+			length="32" />
+		<property name="babyName" type="java.lang.String" length="32" />
+		<property name="babySex" type="java.lang.String" length="1" />
+		<property name="babyBirthday" type="date" />
+		<property name="gestation" type="java.lang.Integer" />
+		<property name="birthHeight" type="java.lang.Integer" />
+		<property name="birthWeight" type="java.lang.Integer" />
+		<property name="headSize" type="big_decimal" length="8" />
+		<property name="circumference" type="big_decimal" length="8" />
+		<property name="motherName" type="java.lang.String" length="32" />
+		<property name="motherNationality" type="java.lang.String"
+			length="3" />
+		<property name="motherNation" type="java.lang.String"
+			length="2" />
+		<property name="motherCardNo" type="java.lang.String"
+			length="18" />
+		<property name="fatherName" type="java.lang.String" length="30" />
+		<property name="fatherNationality" type="java.lang.String"
+			length="3" />
+		<property name="fatherNation" type="java.lang.String"
+			length="2" />
+		<property name="fatherCardNo" type="java.lang.String"
+			length="18" />
+		<property name="fetusNo" type="java.lang.Integer" />
+		<property name="parity" type="java.lang.Integer" />
+		<property name="expectedDate" type="date" />
+		<property name="deliveryPlace" type="java.lang.String"
+			length="32" />
+		<property name="gestationalweeksDelivery"
+			type="java.lang.Integer" />
+		<property name="deliveryTime" type="date" />
+		<property name="modeOfDelivery" type="java.lang.String"
+			length="2" />
+		<property name="modeOfDeliveryDesc" type="java.lang.String"
+			length="100" />
+		<property name="totalLabor" type="java.lang.Integer" />
+		<property name="firstLabor" type="java.lang.Integer" />
+		<property name="secondLabor" type="java.lang.Integer" />
+		<property name="thirdlabor" type="java.lang.Integer" />
+		<property name="deliverybleeding" type="java.lang.Integer" />
+		<property name="totalbleeding" type="java.lang.Integer" />
+		<property name="afterBleeding" type="java.lang.Integer" />
+		<property name="perineum" type="java.lang.String" length="1" />
+		<property name="perineumStatus" type="java.lang.String"
+			length="1" />
+		<property name="perinatalcomplications" type="java.lang.String"
+			length="2" />
+		<property name="dbp" type="java.lang.Integer" />
+		<property name="sbp" type="java.lang.Integer" />
+		<property name="openMilkTime" type="java.lang.Integer" />
+		<property name="outcomeOfPregnancy" type="java.lang.String"
+			length="50" />
+		<property name="deadTime" type="java.lang.String" length="1" />
+		<property name="dischargedDate" type="date" />
+		<property name="apgar1" type="java.lang.Integer" />
+		<property name="apgar5" type="java.lang.Integer" />
+		<property name="apgar10" type="java.lang.Integer" />
+		<property name="birthDefect" type="java.lang.String" length="2" />
+		<property name="neonatalcomplications" type="java.lang.String"
+			length="7" />
+		<property name="neonatalRescue" type="java.lang.String"
+			length="1" />
+		<property name="neonatalDisposition" type="java.lang.String"
+			length="100" />
+		<property name="neonataldeathsreason" type="java.lang.String"
+			length="100" />
+		<property name="neonataldeathsTime" type="date" />
+		<property name="hospitalCode" type="java.lang.String"
+			length="8" />
+		<property name="hospitalName" type="java.lang.String"
+			length="70" />
+		<property name="drdeliveryCode" type="java.lang.String"
+			length="32" />
+		<property name="drdeliveryName" type="java.lang.String"
+			length="30" />
+		<property name="vaccinate1" type="java.lang.String" length="1" />
+		<property name="vaccinateDate1" type="date" />
+		<property name="vaccinateNo1" type="java.lang.String"
+			length="32" />
+		<property name="reasonOfNotVaccinated1" type="java.lang.String"
+			length="32" />
+		<property name="vaccinate2" type="java.lang.String" length="1" />
+		<property name="vaccinateDate2" type="date" />
+		<property name="vaccinateNo2" type="java.lang.String"
+			length="32" />
+		<property name="reasonOfNotVaccinated2" type="java.lang.String"
+			length="100" />
+		<property name="vaccinate3" type="java.lang.String" length="1" />
+		<property name="vaccinateDate3" type="date" />
+		<property name="vaccinateNo3" type="java.lang.String"
+			length="32" />
+		<property name="reasonOfNotVaccinated3" type="java.lang.String"
+			length="100" />
+		<property name="modifydate" type="date" length="1" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

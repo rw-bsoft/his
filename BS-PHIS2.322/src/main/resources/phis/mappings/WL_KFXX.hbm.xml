@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="WL_KFXX" table="WL_KFXX">
+		<id name="KFXH" type="java.lang.Long">
+			<column name="KFXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="KFMC" type="java.lang.String" length="40" />
+		<property name="KFLB" type="java.lang.Integer" length="1" />
+		<property name="KFZB" type="java.lang.String" length="40" />
+		<property name="LBXH" type="java.lang.Integer" length="8" />
+		<property name="EJKF" type="java.lang.Long" length="18" />
+		<property name="KFZT" type="java.lang.Integer" length="1" />
+		<property name="GLKF" type="java.lang.Integer" length="1" />
+		<property name="WXKF" type="java.lang.Integer" length="1" />
+		<property name="CKFS" type="java.lang.Integer" length="1" />
+		<property name="CSBZ" type="java.lang.Integer" length="1" />
+		<property name="ZJBZ" type="java.lang.Integer" length="1" />
+		<property name="ZJYF" type="java.lang.String" length="6" />
+		<property name="SXH" type="java.lang.Long" length="18" />
+		<property name="HZPD" type="java.lang.Integer" length="1" />
+		<property name="PDZT" type="java.lang.Integer" length="1" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hy.schemas.MDC_HypertensionVisit"
+		table="MDC_HypertensionVisit">
+		<id name="visitId" type="java.lang.String">
+			<column name="visitId" />
+			<generator class="assigned" />
+		</id>
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="visitDate" type="date" />
+		<property name="visitDoctor" type="java.lang.String"
+			length="20" />
+		<property name="visitUnit" type="java.lang.String" length="20" />
+		<property name="visitWay" type="java.lang.String" length="1" />
+		<property name="visitEffect" type="java.lang.String" length="1" />
+		<property name="noVisitReason" type="java.lang.String"
+			length="100" />
+		<property name="riskLevel" type="java.lang.String" length="1" />
+		<property name="hypertensionGroup" type="java.lang.String"
+			length="2" />
+		<property name="constriction" type="java.lang.Integer" />
+		<property name="diastolic" type="java.lang.Integer" />
+		<property name="treatEffect" type="java.lang.String" length="2" />
+		<property name="weight" type="java.lang.Double" />
+		<property name="targetWeight" type="java.lang.Double" />
+		<property name="heartRate" type="java.lang.Integer" />
+		<property name="targetHeartRate" type="java.lang.Integer" />
+		<property name="otherSigns" type="java.lang.String" length="20" />
+		<property name="smokeCount" type="java.lang.Integer" />
+		<property name="diet" type="java.lang.String" />
+		<property name="targetSmokeCount" type="java.lang.Integer" />
+		<property name="drinkCount" type="java.lang.Integer" />
+		<property name="targetDrinkCount" type="java.lang.Integer" />
+		<property name="trainTimesWeek" type="java.lang.Integer" />
+		<property name="targetTrainTimesWeek" type="java.lang.Integer" />
+		<property name="trainMinute" type="java.lang.Integer" />
+		<property name="targetTrainMinute" type="java.lang.Integer" />
+		<property name="salt" type="java.lang.Integer" />
+		<property name="targetSalt" type="java.lang.Integer" />
+		<property name="psychologyChange" type="java.lang.String"
+			length="1" />
+		<property name="obeyDoctor" type="java.lang.String" length="1" />
+		<property name="auxiliaryCheck" type="java.lang.String"
+			length="50" />
+		<property name="visitEvaluate" type="java.lang.String"
+			length="1" />
+		<property name="medicine" type="java.lang.String" length="1" />
+		<property name="medicineNot" type="java.lang.String" length="2" />
+		<property name="medicineOtherNot" type="java.lang.String" length="200" />
+		<property name="nextDate" type="date" />
+		<property name="complication" type="java.lang.String"
+			length="64" />
+		<property name="complicationIncrease" type="java.lang.String"
+			length="1" />
+		<property name="currentSymptoms" type="java.lang.String"
+			length="64" />
+		<property name="incorrectMedicine" type="java.lang.String"
+			length="64" />
+		<property name="noMedicine" type="java.lang.String" length="64" />
+		<property name="otherReason" type="java.lang.String"
+			length="100" />
+		<property name="healthRecipe" type="java.lang.String"
+			length="64" />
+		<property name="acceptDegree" type="java.lang.String"
+			length="1" />
+		<property name="nonMedicineWay" type="java.lang.String"
+			length="64" />
+		<property name="riskiness" type="java.lang.String" length="64" />
+		<property name="targetHurt" type="java.lang.String" length="64" />
+		<property name="cardiovascularEvent" type="java.lang.String"
+			length="1" />
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="manaDoctorId" type="java.lang.String"
+			length="20" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="inputDate" type="date" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="notes" type="java.lang.String"
+			length="50" />
+		
+
+		<!-- addby yuhua -->
+		<property name="drinkTypeCode" type="java.lang.String"
+			length="1" />
+		<property name="loseWeight" type="java.lang.String" length="1" />
+		<property name="bmi" type="java.lang.Double" />
+		<property name="targetBmi" type="java.lang.Double" />
+		<property name="waistLine" type="java.lang.Double" />
+
+		<property name="otherSymptoms" type="java.lang.String"
+			length="64" />
+		<property name="referralReason" type="java.lang.String"
+			length="64" />
+		<property name="agencyAndDept" type="java.lang.String"
+			length="64" />
+		<property name="healthProposal" type="java.lang.String"
+			length="100" />
+		
+
+		<property name="medicineBadEffect" type="java.lang.String"
+			length="1" />
+		<property name="medicineBadEffectText" type="java.lang.String"
+			length="200" />
+		<property name="lateInput" type="java.lang.String" length="1" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+		<property name="dataSource" type="java.lang.String" length="1" />	
+		<property name="needdoublevisit" type="java.lang.String" length="1" />
+		
+		 <!--增加移动随访血氧、心电、体温记录 wangjl-->
+		<property name="bloodOxygen" type="java.lang.String" length="10" />
+		<property name="electrocardiogram" type="java.lang.String" length="100" />
+		<property name="temperature" type="java.lang.String" length="10" />	
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.gdr.schemas.GDR_GroupDinnerRecord" table="GDR_GroupDinnerRecord">
+			<id name="gdrId" type="java.lang.String">
+            	<column name="gdrId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="personName" type="java.lang.String" length="20" />
+        	<property name="idCard" type="java.lang.String" length="18" />
+        	<property name="phone" type="java.lang.String" length="20" />
+        	<property name="numOfPeople" type="java.lang.Integer"  />
+        	<property name="meetingDate" type="date"  />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="reason" type="java.lang.String" length="2000" />
+        	<property name="applyDate" type="date"  />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="villageView" type="java.lang.String" length="200" />
+        	<property name="grovermentView" type="java.lang.String" length="200" />
+        	<property name="manaUnitId" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="regionCode" type="java.lang.String" length="25" />
+        	<property name="regionCode_text" type="java.lang.String" length="200" />
+        	<property name="lastModifyDate" type="timestamp"  />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

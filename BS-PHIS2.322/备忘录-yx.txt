@@ -1,0 +1,1027 @@
+--开始创建视图nh_bsoft_zl_needsp
+create or replace view nh_bsoft_zl_needsp as
+select a.fyxh as fyxh ,a.fymc,a.fydw,a.bzjg,a.nhbm_bsoft,t.jgid as jgid,t.fyxh as icode
+from gy_ylmx t
+ join gy_ylsf a on t.fyxh=a.fyxh
+where not exists (select 1 from nh_bsoft_spml p where a.fyxh=p.yybm  and t.jgid=p.jgid and p.spjg='1')
+and a.nhbm_bsoft is not null;
+--结束创建视图nh_bsoft_zl_needsp
+
+----开始创建表NH_BSOFT_YPML农合药品目录
+create table NH_BSOFT_YPML
+(
+  YPXH    VARCHAR2(18) not null,
+  YPMC    VARCHAR2(80),
+  YPLX    VARCHAR2(2),
+  YPDW    VARCHAR2(12),
+  YPGG    VARCHAR2(40),
+  YPSX    VARCHAR2(60),
+  ZFBL    NUMBER(4,2),
+  ZFPB    NUMBER(1),
+  PYDM    VARCHAR2(12),
+  TYMC    VARCHAR2(80),
+  MZZFBL  NUMBER(4,2),
+  VERSION VARCHAR2(20),
+  ZBM     VARCHAR2(30),
+  SCQY    VARCHAR2(100),
+  ZBJG    NUMBER(18,4),
+  SFJY    NUMBER(1),
+  BZ      VARCHAR2(100),
+  XYBBH   VARCHAR2(18)
+)
+tablespace PHIS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64
+    next 1
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table NH_BSOFT_YPML
+  add constraint PRI_YPXH primary key (YPXH)
+  using index 
+  tablespace PHIS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+----结束创建表NH_BSOFT_YPML
+
+----开始创建表NH_BSOFT_ZLML 农合诊疗目录
+create table NH_BSOFT_ZLML
+(
+  FYXH    VARCHAR2(18) not null,
+  FYMC    VARCHAR2(80),
+  FYDW    VARCHAR2(12),
+  DJXE    NUMBER(12,2),
+  ZFBL    NUMBER(4,2),
+  PYDM    VARCHAR2(12),
+  FYDJ    NUMBER(12,4),
+  MZZFBL  NUMBER(4,2),
+  VERSION VARCHAR2(20),
+  XETYPE  NUMBER(1),
+  XYBBH   VARCHAR2(18)
+)
+tablespace PHIS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    next 8
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table NH_BSOFT_ZLML
+  add constraint PRI_FYXH primary key (FYXH)
+  using index 
+  tablespace PHIS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 256K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+----结束创建表
+----开始创建表 NH_BSOFT_JBBM
+-- Create table
+create table NH_BSOFT_JBBM
+(
+  CODE  NUMBER(16) not null,
+  NAME  VARCHAR2(200),
+  PYDM  VARCHAR2(30),
+  ICD10 VARCHAR2(10),
+  WBDM  VARCHAR2(30)
+)
+tablespace PHIS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    next 8
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table NH_BSOFT_JBBM
+  add constraint PRI_NH_BSOFT_JBBM primary key (CODE)
+  using index 
+  tablespace PHIS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 640K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+----结束创建表 NH_BSOFT_JBBM
+
+----开始创建表 NH_BSOFT_JBBM_DRGS
+-- Create table
+create table NH_BSOFT_JBBM_DRGS
+(
+  CODE   NUMBER(6) not null,
+  NAME   VARCHAR2(40),
+  PYDM   VARCHAR2(8),
+  ICD10  VARCHAR2(10),
+  BCJEFD NUMBER(10,2),
+  JGLB   VARCHAR2(10) not null,
+  MZFS   NUMBER(1) not null,
+  JGID   VARCHAR2(20) not null
+)
+tablespace PHIS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    next 8
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table NH_BSOFT_JBBM_DRGS
+  add constraint PRI_NH_JBBM_DRGS primary key (JGID, CODE)
+  using index 
+  tablespace PHIS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate indexes 
+create unique index NH_BSFOFT_JBBM_DRGS_X on NH_BSOFT_JBBM_DRGS (CODE, JGLB, MZFS)
+  tablespace PHIS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+----结束创建表 NH_BSOFT_JBBM_DRGS
+
+----开始创建视图 nh_bsoft_yp_needsp
+create or replace view nh_bsoft_yp_needsp as
+select a.ypxh*10000+b.ypcd as ypxh ,a.ypmc,b.ypcd,c.cdmc,a.ypgg,b.lsjg,a.nhbm_bsoft,t.jgid as jgid,t.ypxh as icode
+from yk_ypxx t
+ join yk_typk a on t.ypxh=a.ypxh
+ join yk_ypcd b on a.ypxh=b.ypxh
+ join yk_cddz c on b.ypcd=c.ypcd
+where not exists (select 1 from nh_bsoft_spml p where a.ypxh*10000+b.ypcd=p.yybm  and t.jgid=p.jgid and p.spjg='1')
+and a.nhbm_bsoft is not null;
+----结束创建视图
+----开始创建表NH_BSOFT_JSJL
+-- Create table
+create table NH_BSOFT_JSJL
+(
+  BXID  VARCHAR2(30) not null,
+  YEAR  VARCHAR2(4) not null,
+  ZYH   NUMBER(18),
+  JSCS  NUMBER(3),
+  MZXH  NUMBER(18),
+  JGID  VARCHAR2(20),
+  JZLB  CHAR(1) not null,
+  JSRQ  DATE,
+  DJID  VARCHAR2(20),
+  JYSJ  DATE,
+  ZJJE  NUMBER(12,2),
+  ZFJE  NUMBER(12,2),
+  BCJE  NUMBER(12,2),
+  BZ    VARCHAR2(255),
+  ZFRQ  DATE,
+  ZFPB  NUMBER(1) default 0 not null,
+  XM    VARCHAR2(20),
+  BRXB  VARCHAR2(4),
+  GRBH  VARCHAR2(20),
+  ICKH  VARCHAR2(20),
+  SUM01 NUMBER(12,2) default 0,
+  SUM02 NUMBER(12,2) default 0,
+  SUM03 NUMBER(12,2) default 0,
+  SUM04 NUMBER(12,2) default 0,
+  SUM05 NUMBER(12,2) default 0,
+  SUM06 NUMBER(12,2) default 0,
+  SUM07 NUMBER(12,2) default 0,
+  SUM08 NUMBER(12,2) default 0,
+  SUM09 NUMBER(12,2) default 0,
+  SUM10 NUMBER(12,2) default 0,
+  SUM11 NUMBER(12,2) default 0,
+  SUM12 NUMBER(12,2) default 0,
+  SUM13 NUMBER(12,2) default 0,
+  SUM14 NUMBER(12,2) default 0,
+  SUM15 NUMBER(12,2) default 0,
+  SUM16 NUMBER(12,2) default 0,
+  SUM17 NUMBER(12,2) default 0,
+  SUM18 NUMBER(12,2) default 0,
+  SUM19 NUMBER(12,2) default 0,
+  SUM20 NUMBER(12,2) default 0,
+  SUM21 NUMBER(12,2) default 0,
+  SUM22 NUMBER(12,2) default 0,
+  SUM23 NUMBER(12,2) default 0,
+  SUM24 NUMBER(12,2) default 0,
+  SUM25 NUMBER(12,2) default 0,
+  SUM26 NUMBER(12,2) default 0,
+  SUM27 NUMBER(12,2) default 0,
+  SUM28 NUMBER(12,2) default 0,
+  SUM29 NUMBER(12,2) default 0,
+  SUM30 NUMBER(12,2) default 0,
+  SUM31 NUMBER(12,2) default 0,
+  SUM32 NUMBER(12,2) default 0,
+  SUM33 NUMBER(12,2) default 0,
+  SUM34 NUMBER(12,2) default 0,
+  SUM35 NUMBER(12,2) default 0,
+  SUM36 NUMBER(12,2) default 0,
+  SUM37 NUMBER(12,2) default 0,
+  SUM38 NUMBER(12,2) default 0,
+  SUM39 NUMBER(12,2) default 0,
+  SUM40 NUMBER(12,2) default 0,
+  SUM41 NUMBER(12,2) default 0,
+  SUM42 NUMBER(12,2) default 0,
+  SUM43 NUMBER(12,2) default 0,
+  SUM44 NUMBER(12,2) default 0,
+  SUM45 NUMBER(12,2) default 0,
+  SUM46 NUMBER(12,2) default 0,
+  SUM47 NUMBER(12,2) default 0,
+  SUM48 NUMBER(12,2) default 0,
+  SUM49 NUMBER(12,2) default 0,
+  SUM50 NUMBER(12,2) default 0
+)
+tablespace PHIS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    next 8
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table NH_BSOFT_JSJL
+  add constraint PRI_NH_BSOFT_JSJL primary key (BXID, YEAR)
+  using index 
+  tablespace PHIS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 40M
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+----结束创建表NH_BSOFT_JSJL
+
+alter table zy_brry add nhdjid number(18);
+alter table ZY_FYMX add nhscbz char(1) default 0;
+comment on column ZY_FYMX.nhscbz is '上传标志:0未上传,1已上传';
+alter table ZY_FYMX_JS add nhscbz char(1) default 0;
+comment on column ZY_FYMX_JS.nhscbz is '上传标志:0未上传,1已上传';
+alter table zy_zyjs add nhbxid varchar2(20) ;
+comment on column zy_zyjs.nhbxid is '农合报销id';
+alter table zy_zyjs add drgs varchar2(20) ;
+comment on column zy_zyjs.drgs is '单病种';
+alter table MS_MZXX add BXID varchar2(20) ;
+alter table MS_MZXX add YLJZJE number(12,2) ;
+
+alter table MS_HZRB add ZFFSHJ NUMBER(12,2);
+alter table MS_HZRB add NHZFHJ NUMBER(12,2);
+alter table MS_HZRB add YBZFHJ NUMBER(12,2);
+alter table MS_HZRB add NHJZ NUMBER(12,2);
+alter table MS_HZRB add YBJZ NUMBER(12,2);
+alter table MS_HZRB add JZJEST NUMBER(12,2);
+alter table MS_HZRB add JZZE NUMBER(12,2);
+
+alter table YK_TYPK add ZYJMBZ NUMBER(1) default 0 ;
+comment on column YK_TYPK.ZYJMBZ is '中药静脉注射药品';
+alter table YK_TYPK add XNXGBZ NUMBER(1) default 0 ;
+comment on column YK_TYPK.XNXGBZ is '心脑血管药品';
+alter table YK_TYPK add JSBZ NUMBER(1) default 0 ;
+comment on column YK_TYPK.JSBZ is '激素药品';
+alter table MS_YJ02 add JCBWMC VARCHAR2(100);
+comment on column MS_YJ02.JCBWMC is '检查部位名称';
+
+------南京金保增加-b------
+create table njjb_qd(
+       userid varchar2(20),
+       ywzqh VARCHAR2(36)
+);
+alter table njjb_qd add QDSJ date;
+alter table njjb_qd add constraint  njjb_qd_userid primary key(userid);
+
+create table njjb_kxx(
+shbzkh  varchar2(20),
+dwbh  varchar2(14),
+dwmc  varchar2(200),
+sfzh   varchar2(18),
+xm  varchar2(20),
+xb  varchar2(3),
+ylrylb  varchar2(3),
+ydrybz   varchar2(3),
+tcqh  varchar2(20),
+dqzhye   varchar2(16),
+zyzt   varchar2(3),
+bnzycs   varchar2(3),
+dyxsbz   varchar2(3),
+dybxsyy    varchar2(100),
+bzdjqk    varchar2(400),
+ybmmzg   varchar2(3),
+ybmmbz varchar2(400),
+ybmjzg  varchar2(3),
+ybmjbz  varchar2(400),
+ybmazg  varchar2(3),
+ybmabz   varchar2(400),
+ybbggrszg  varchar2(3),
+ybbggrsbz  varchar2(400),
+ybmzxybzg   varchar2(3),
+ybmzxybbz  varchar2(400),
+ybmtzg  varchar2(3),
+ybmtbz  varchar2(400),
+ybtyzg   varchar2(3),
+ybtybz varchar2(400),
+ybtymcbm  varchar2(400),
+jmmdzg   varchar2(3),
+jmmdbz varchar2(400),
+jmmzxybzg  varchar2(3),
+jmmzxybbz  varchar2(400),
+jmtyzg varchar2(3),
+jmtybz varchar2(400),
+jmtymcbm  varchar2(400),
+nmgmdzg varchar2(3),
+nmgmdbz varchar2(400),
+nmgtyzg varchar2(3),
+nmgtybz varchar2(400),
+nmgtymcbm varchar2(400),
+nfxszgmztc 	varchar2(3),
+sysplx 	varchar2(3),
+fsyy 	VARCHAR2(3),
+mmsykbje varchar2(16),
+mtfzzlsykbje 	varchar2(16)
+);
+alter table njjb_kxx add constraint  njjb_kxx_shbzkh primary key(shbzkh);
+comment on column njjb_kxx.shbzkh is '社会保障卡号';
+comment on column njjb_kxx.dwbh is '单位编号';
+comment on column njjb_kxx.dwmc is '单位名称';
+comment on column njjb_kxx.sfzh is '身份证号';
+comment on column njjb_kxx.xm is '姓名';
+comment on column njjb_kxx.xb is '性别';
+comment on column njjb_kxx.ylrylb is '医疗人员类别';
+comment on column njjb_kxx.ydrybz is '异地人员标志';
+comment on column njjb_kxx.tcqh is '统筹区号';
+comment on column njjb_kxx.dqzhye is '当前帐户余额';
+comment on column njjb_kxx.zyzt is '在院状态';
+comment on column njjb_kxx.bnzycs is '本年住院次数';
+comment on column njjb_kxx.dyxsbz is '待遇享受标志';
+comment on column njjb_kxx.dybxsyy is '待遇不享受原因';
+comment on column njjb_kxx.bzdjqk is '病种登记情况';
+comment on column njjb_kxx.ybmmzg is '医保门慢资格';
+comment on column njjb_kxx.ybmmbz is '医保门慢病种';
+comment on column njjb_kxx.ybmjzg is '医保门精资格';
+comment on column njjb_kxx.ybmjbz is '医保门精病种';
+comment on column njjb_kxx.ybmazg is '医保门艾资格';
+comment on column njjb_kxx.ybmabz is '医保门艾病种';
+comment on column njjb_kxx.ybbggrszg is '医保丙肝干扰素资格';
+comment on column njjb_kxx.ybbggrsbz is '医保丙肝干扰素病种';
+comment on column njjb_kxx.ybmzxybzg is '医保门诊血友病资格';
+comment on column njjb_kxx.ybmzxybbz is '医保门诊血友病病种';
+comment on column njjb_kxx.ybmtzg is '医保门特资格';
+comment on column njjb_kxx.ybmtbz is '医保门特病种';
+comment on column njjb_kxx.ybtyzg is '医保特药资格';
+comment on column njjb_kxx.ybtybz is '医保特药病种';
+comment on column njjb_kxx.ybtymcbm is '医保特药名称编码';
+comment on column njjb_kxx.jmmdzg is '居民门大资格';
+comment on column njjb_kxx.jmmdbz is '居民门大病种';
+comment on column njjb_kxx.jmmzxybzg is '居民门诊血友病资格';
+comment on column njjb_kxx.jmmzxybbz is '居民门诊血友病病种';
+comment on column njjb_kxx.jmtyzg is '居民特药资格';
+comment on column njjb_kxx.jmtybz is '居民特药病种';
+comment on column njjb_kxx.jmtymcbm is '居民特药名称编码';
+comment on column njjb_kxx.nmgmdzg is '农民工门大资格';
+comment on column njjb_kxx.nmgmdbz is '农民工门大病种';
+comment on column njjb_kxx.nmgtyzg is '农民工特药资格';
+comment on column njjb_kxx.nmgtybz is '农民工特药病种';
+comment on column njjb_kxx.nmgtymcbm is '农民工特药名称编码';
+comment on column njjb_kxx.nfxszgmztc is '能否享受职工门诊统筹';
+comment on column njjb_kxx.sysplx is '生育审批类型';
+comment on column njjb_kxx.fsyy is '封锁原因';
+comment on column njjb_kxx.mmsykbje is '门慢剩余可报金额';
+comment on column njjb_kxx.mtfzzlsykbje is '门特辅助治疗剩余可报金额';
+
+create sequence SEQ_NJJb_LSH
+minvalue 1
+maxvalue 9999999999
+start with 1
+increment by 1
+cache 20;
+
+alter table ms_ghmx add NJJBLSH varchar2(20);
+alter table ms_brda add SHBZKH varchar2(20);
+alter table ms_ghmx add NJJBYLLB varchar2(20);
+
+create table njjb_cfmx(
+cfmxid number(18),
+lsh    VARCHAR2(20),
+cflsh    VARCHAR2(30),
+cfrq    VARCHAR2(14),
+zbm    VARCHAR2(20),
+ze    VARCHAR2(16),
+zfje    VARCHAR2(16),
+zlje    VARCHAR2(16),
+zfbl    VARCHAR2(5),
+zfsx    VARCHAR2(16),
+sfxmdj    VARCHAR2(3),
+smxx    VARCHAR2(1000),
+by2    VARCHAR2(100),
+by3    VARCHAR2(100),
+by4    VARCHAR2(200),
+by5    VARCHAR2(200),
+by6  	VARCHAR2(4000)
+);
+alter table njjb_cfmx add constraint  njjb_cfmx_cfmxid primary key(cfmxid);
+comment on column  njjb_cfmx.lsh is '处方号';
+comment on column  njjb_cfmx.cflsh is '处方流水号';
+comment on column  njjb_cfmx.cfrq is '处方日期';
+comment on column  njjb_cfmx.zbm is '医院收费项目自编码';
+comment on column  njjb_cfmx.ze is '金额';
+comment on column  njjb_cfmx.zfje is '自付金额';
+comment on column  njjb_cfmx.zlje is '自理金额';
+comment on column  njjb_cfmx.zfbl is '自付比例';
+comment on column  njjb_cfmx.zfsx is '支付上限';
+comment on column  njjb_cfmx.sfxmdj is '收费项目等级';
+comment on column  njjb_cfmx.smxx is '说明信息';
+comment on column  njjb_cfmx.by2 is '备用2';
+comment on column  njjb_cfmx.by3 is '备用3';
+comment on column  njjb_cfmx.by4 is '备用4';
+comment on column  njjb_cfmx.by5 is '备用5';
+comment on column  njjb_cfmx.by6 is '备用6';
+
+--结算信息
+create table njjb_jsxx (
+jsxxid number(18),
+fphm varchar2(18),
+mzxh  number(18),
+zyh number(18),
+jssj date,
+bcylfze    VARCHAR2(16),
+bctczfje    VARCHAR2(16),
+bcdbjzzf    VARCHAR2(16),
+bcdbbxzf    VARCHAR2(16),
+bcmzbzzf    VARCHAR2(16),
+bczhzfze    VARCHAR2(16),
+bcxzzfze    VARCHAR2(16),
+bczhzfzf    VARCHAR2(16),
+bczhzfzl    VARCHAR2(16),
+bcxjzfzf    VARCHAR2(16),
+bcxjzfzl    VARCHAR2(16),
+ybfwnfy    VARCHAR2(16),
+zhxfhye    VARCHAR2(16),
+dbzbzbm    VARCHAR2(20),
+smxx    VARCHAR2(1000),
+yfhj    VARCHAR2(16),
+zlxmfhj    VARCHAR2(16),
+bbzf    VARCHAR2(16),
+yllb    VARCHAR2(3),
+by6    VARCHAR2(4000)
+);
+alter table njjb_jsxx add jssj date;
+alter table njjb_jsxx add jgid varchar2(30);
+alter table njjb_jsxx add jylsh varchar2(100);
+alter table njjb_jsxx add constraint  njjb_jsxx_jsxxid primary key(jsxxid);
+
+comment on column  njjb_jsxx.bcylfze is '本次医疗费总额';
+comment on column  njjb_jsxx.bctczfje is '本次统筹支付金额';
+comment on column  njjb_jsxx.bcdbjzzf is '本次大病救助支付';
+comment on column  njjb_jsxx.bcdbbxzf is '本次大病保险支付';
+comment on column  njjb_jsxx.bcmzbzzf is '本次民政补助支付';
+comment on column  njjb_jsxx.bczhzfze is '本次帐户支付总额';
+comment on column  njjb_jsxx.bcxzzfze is '本次现金支付总额';
+comment on column  njjb_jsxx.bczhzfzf is '本次帐户支付自付';
+comment on column  njjb_jsxx.bczhzfzl is '本次帐户支付自理';
+comment on column  njjb_jsxx.bcxjzfzf is '本次现金支付自付';
+comment on column  njjb_jsxx.bcxjzfzl is '本次现金支付自理';
+comment on column  njjb_jsxx.ybfwnfy is '医保范围内费用';
+comment on column  njjb_jsxx.zhxfhye is '帐户消费后余额';
+comment on column  njjb_jsxx.dbzbzbm is '单病种病种编码';
+comment on column  njjb_jsxx.smxx is '说明信息';
+comment on column  njjb_jsxx.yfhj is '药费合计';
+comment on column  njjb_jsxx.zlxmfhj is '诊疗项目费合计';
+comment on column  njjb_jsxx.bbzf is '补保支付';
+comment on column  njjb_jsxx.yllb is '医疗类别';
+comment on column  njjb_jsxx.by6 is '备用6';
+
+--医疗类别
+create table yb_yllb (
+yllb varchar2(4) ,
+lbmc varchar2(50) ,
+pydm varchar2(20) 
+);
+alter table yb_yllb add constraint  yb_yllb_yllb primary key(yllb);
+
+insert into yb_yllb(yllb,lbmc,pydm) values('11','普通门诊','pymz');
+insert into yb_yllb(yllb,lbmc,pydm) values('13','门诊统筹','mztc');
+insert into yb_yllb(yllb,lbmc,pydm) values('14','门诊精神病','mzjsb');
+insert into yb_yllb(yllb,lbmc,pydm) values('15','门诊艾滋病','mzajb');
+insert into yb_yllb(yllb,lbmc,pydm) values('16','门诊慢性病','mzmxb');
+insert into yb_yllb(yllb,lbmc,pydm) values('171','门特','mt');
+insert into yb_yllb(yllb,lbmc,pydm) values('172','门诊血友病','mzxyb');
+insert into yb_yllb(yllb,lbmc,pydm) values('18','门诊大病','mzdb');
+insert into yb_yllb(yllb,lbmc,pydm) values('191','家庭病床','jtbc');
+insert into yb_yllb(yllb,lbmc,pydm) values('21','普通住院','ptzy');
+insert into yb_yllb(yllb,lbmc,pydm) values('41','药店购药','ydgy');
+insert into yb_yllb(yllb,lbmc,pydm) values('42','特药','ty');
+insert into yb_yllb(yllb,lbmc,pydm) values('51','职工计划生育','zgjhsy');
+insert into yb_yllb(yllb,lbmc,pydm) values('52','生育住院','syzy');
+insert into yb_yllb(yllb,lbmc,pydm) values('53','产前检查','cqjc');
+insert into yb_yllb(yllb,lbmc,pydm) values('61','工伤门诊职业病','gsmzzyb');
+insert into yb_yllb(yllb,lbmc,pydm) values('62','工伤门诊康复治疗','gsmzkfzl');
+insert into yb_yllb(yllb,lbmc,pydm) values('63','工伤门诊肢体伤残','gsmzztsc');
+insert into yb_yllb(yllb,lbmc,pydm) values('64','工伤住院职业病','gszyzyb');
+insert into yb_yllb(yllb,lbmc,pydm) values('65','工伤住院康复治疗','gszykfzl');
+insert into yb_yllb(yllb,lbmc,pydm) values('66','工伤住院肢体伤残','gszyztsc');
+insert into yb_yllb(yllb,lbmc,pydm) values('81','退休体检','txtj');
+insert into yb_yllb(yllb,lbmc,pydm) values('82','离休体检','lxtj');
+insert into yb_yllb(yllb,lbmc,pydm) values('83','妇女体检','fntj');
+insert into yb_yllb(yllb,lbmc,pydm) values('84','农民工体检','nmgtj');
+insert into yb_yllb(yllb,lbmc,pydm) values('85','工伤体检','gstj');
+insert into yb_yllb(yllb,lbmc,pydm) values('86','急诊','jz');
+insert into yb_yllb(yllb,lbmc,pydm) values('54','职工产前检查','zgcqjc');
+
+alter table ZY_BRRY add NJJBLSH VARCHAR2(20);
+alter table ZY_BRRY add NJJBYLLb VARCHAR2(20);
+------南京金保增加-e------
+------预约病人
+create table MS_YYBR
+(
+  ZCID  NUMBER(18) not null,
+  ZCRQ  DATE not null,
+  BRXM  VARCHAR2(40) not null,
+  BRXB  NUMBER(1) not null,
+  BRNL  NUMBER(3) not null,
+  BRXZ  NUMBER(4) not null,
+  LXDH  VARCHAR2(20) not null,
+  LXDZ  VARCHAR2(40),
+  YYZS  NUMBER(4) not null,
+  SYZS  NUMBER(4) default 0 not null,
+  SYCS  NUMBER(4) default 0 not null,
+  BRID  NUMBER(18),
+  CZGH  VARCHAR2(10),
+  BEDID VARCHAR2(32),
+  SFZH  VARCHAR2(18),
+  QRBZ  VARCHAR2(1) default 0
+);
+alter table MS_YYBR add constraint PK_MS_YYBR primary key (ZCID);
+------
+alter table GY_YLSF add ZYCJGB char(1);
+comment on column  GY_YLSF.ZYCJGB is '中医创建归并';
+------
+----检验结果病历引用-b
+--现在lis数据库创建视图
+create  or replace view V_LIS_testresult as 
+select a.sampleno,b.testid,c.chinesename,b.testresult,b.unit,a.patientid,a.visitid 
+from l_patientinfo a ,l_testresult b,l_testdescribe c 
+where a.sampleno=b.sampleno and b.testid=c.testid and b.jgid=c.jgid 
+--然后在his数据库创建视图
+先建外链接数据库lis
+create or replace view V_LIS_testresult as 
+select * from V_LIS_testresult@lis;
+----检验结果病历引用-e
+----义诊减免
+alter table MS_GHMX add yzjm NUMBER(10,2) default 0;
+comment on column  MS_GHMX.yzjm is '义诊减免';
+alter table MS_GHMX add yzbz char(1) default 0;
+comment on column  MS_GHMX.yzbz is '义诊标志';
+----
+----门诊记录增加 症状和症状名称
+alter table MS_BCJL  add ZZDM varchar2(20);
+alter table MS_BCJL  add ZZMC varchar2(100);
+----
+----病案首页录入取消数据库限制
+alter table EMR_BASY modify YLJGDM null;
+alter table EMR_BASY modify JMJKKH null;
+alter table EMR_BASY modify YBKH null;
+alter table EMR_BASY modify MZHM null;
+alter table EMR_BASY modify YL null;
+alter table EMR_BASY modify XSECSTZ null;
+alter table EMR_BASY modify XSERYTZ null;
+alter table EMR_BASY modify CSD_S null;
+alter table EMR_BASY modify CSD_X null;
+alter table EMR_BASY modify JGDM_S null;
+alter table EMR_BASY modify XZZ_S null;
+alter table EMR_BASY modify XZZ_X null;
+alter table EMR_BASY modify XZZ_DZ null;
+alter table EMR_BASY modify XZZ_YB null;
+alter table EMR_BASY modify HKDZ_SQS null;
+alter table EMR_BASY modify HKDZ_S null;
+alter table EMR_BASY modify HKDZ_X null;
+alter table EMR_BASY modify HKDZ_DZ null;
+alter table EMR_BASY modify HKDZ_YB null;
+alter table EMR_BASY modify LXRXM null;
+alter table EMR_BASY modify LXRGX null;
+alter table EMR_BASY modify LXRDZ null;
+alter table EMR_BASY modify LXRDH null;
+alter table EMR_BASY modify MZDM null;
+alter table EMR_BASY modify SFZJLB null;
+alter table EMR_BASY modify SFZJHM null;
+alter table EMR_BASY modify ZYDM null;
+alter table EMR_BASY modify HYDM null;
+alter table EMR_BASY modify RYTJ null;
+alter table EMR_BASY modify RYRQ null;
+alter table EMR_BASY modify RYKS null;
+alter table EMR_BASY modify RYBF null;
+alter table EMR_BASY modify ZKKSMC null;
+alter table EMR_BASY modify CYRQ null;
+alter table EMR_BASY modify CYKS null;
+alter table EMR_BASY modify CYBQ null;
+alter table EMR_BASY modify SJZYYS null;
+alter table EMR_BASY modify BLH null;
+alter table EMR_BASY modify GMYWBZ null;
+alter table EMR_BASY modify GMYWMC null;
+alter table EMR_BASY modify SJBZ null;
+alter table EMR_BASY modify ABOXXDM null;
+alter table EMR_BASY modify RHXXDM null;
+alter table EMR_BASY modify LYFS null;
+alter table EMR_BASY modify NJSYLJLMC null;
+alter table EMR_BASY modify CY31ZYBZ null;
+alter table EMR_BASY modify CY31ZYMD null;
+alter table EMR_BASY modify RYQHMSJ null;
+alter table EMR_BASY modify RYHHMSJ null;
+alter table EMR_BASY modify ZDFH_MZZY null;
+alter table EMR_BASY modify ZDFH_RYCY null;
+alter table EMR_BASY modify ZDFH_SQSH null;
+alter table EMR_BASY modify ZDFH_LCBL null;
+alter table EMR_BASY modify ZDFH_FSBL null;
+alter table EMR_BASY modify QJCS null;
+alter table EMR_BASY modify CGCS null;
+alter table EMR_BASY modify LCLJBZ null;
+alter table EMR_BASY modify YLFYDM null;
+alter table EMR_BASY modify YLJGMC null;
+alter table EMR_BASY modify ZYCS null;
+alter table EMR_BASY modify ZYHN null;
+alter table EMR_BASY modify BAHM null;
+alter table EMR_BASY modify BRXM null;
+alter table EMR_BASY modify BRXB null;
+alter table EMR_BASY modify CSNY null;
+alter table EMR_BASY modify BRNL null;
+alter table EMR_BASY modify GJDM null;
+alter table EMR_BASY modify CSD_SQS null;
+alter table EMR_BASY modify JGDM_SQS null;
+alter table EMR_BASY modify XZZ_SQS null;
+----
+----
+alter table EMR_BASY modify YLJGDM VARCHAR2(30);
+----
+----
+alter table MS_BCJL add JKJYNR VARCHAR2(1000);
+alter table MS_BCJL add GMS VARCHAR2(1000);
+comment on column MS_BCJL.JKJYNR is '健康教育内容';
+comment on column MS_BCJL.GMS is '过敏史';
+----
+----
+alter table GY_BLMB add JKJYNR VARCHAR2(1000);
+alter table GY_BLMB add GMS VARCHAR2(1000);
+comment on column GY_BLMB.JKJYNR is '健康教育内容';
+comment on column GY_BLMB.GMS is '过敏史';
+----
+----
+alter table NH_BSOFT_SPML add MZZFBL NUMBER(4,3);
+comment on column NH_BSOFT_SPML.MZZFBL is '门诊自费比例';
+----
+--医保卡信息增加字段
+alter table NJJB_KXX add GSDYZG VARCHAR2(3);
+alter table NJJB_KXX add GSDYBZ VARCHAR2(400);
+alter table NJJB_KXX add GSZDJL VARCHAR2(400);
+alter table NJJB_KXX add DKSYKBJE VARCHAR2(16);
+alter table NJJB_KXX add MTSYKBJE VARCHAR2(16);
+alter table NJJB_KXX add YBJCZG VARCHAR2(3);
+-- Add comments to the columns 
+comment on column NJJB_KXX.GSDYZG
+  is '工伤待遇资格';
+comment on column NJJB_KXX.GSDYBZ
+  is '工伤待遇病种';
+comment on column NJJB_KXX.GSZDJL
+  is '工伤诊断结论';
+comment on column NJJB_KXX.DKSYKBJE
+  is '大卡剩余可报金额';
+comment on column NJJB_KXX.MTSYKBJE
+  is '门统剩余可报金额';
+comment on column NJJB_KXX.YBJCZG
+  is '医保家床资格';
+  --
+  
+  alter table MS_GHMX add YBMC VARCHAR2(50);
+-- Add comments to the columns 
+comment on column MS_GHMX.YBMC
+  is '医保疾病编码';
+    alter table zy_brry add YBMC VARCHAR2(50);
+-- Add comments to the columns 
+comment on column zy_brry.YBMC
+  is '医保疾病编码';
+  alter table zy_brry add ZSESHBZKH VARCHAR2(50);
+-- Add comments to the columns 
+comment on column zy_brry.ZSESHBZKH
+  is '准生儿社会保障卡号';
+alter table YB_YLLB add MZKZ VARCHAR2(1);
+alter table YB_YLLB add ZYKZ VARCHAR2(1);
+-- Add comments to the columns 
+comment on column YB_YLLB.MZKZ
+  is '门诊开展';
+comment on column YB_YLLB.ZYKZ
+  is '住院开展';
+alter table NJJB_QD add QTSJ date;
+alter table NJJB_QD add Status VARCHAR2(1) default 0;
+alter table NJJB_QD add JGID VARCHAR2(20);
+-- Add comments to the columns 
+comment on column NJJB_QD.QDSJ
+  is '签到时间';
+comment on column NJJB_QD.QTSJ
+  is '签退时间';
+comment on column NJJB_QD.Status
+  is '状态';
+comment on column NJJB_QD.JGID
+  is '机构编码';
+  
+----医保转院
+create table njjb_zy (
+yybm varchar2(10) primary key,
+yymc varchar2(50),
+pybm varchar2(50)
+)
+
+alter table MS_GHMX add YBZY VARCHAR2(20);
+-- Add comments to the columns 
+comment on column MS_GHMX.YBZY
+  is '医保转院医院';
+----医保特殊病种
+create table yb_tsbz(
+jbbm varchar2(10) primary key,
+jbmc varchar2(100),
+yllb int
+)
+alter table njjb_jsxx add ZFPB VARCHAR2(3);
+alter table njjb_jsxx add GHXH NUMBER(18);
+alter table njjb_jsxx add LSH NUMBER(18);
+alter table  zy_brry add NJJBLSH VARCHAR2(50);
+alter table  zy_brry add NJJBYLLB VARCHAR2(50);
+alter table  zy_brry add YBZY VARCHAR2(50);
+
+----2018-09-15-预约挂号增加字段-b
+alter table MS_KSPB add YYKSSJ VARCHAR2(5);
+alter table MS_KSPB add YYJSSJ VARCHAR2(5);
+comment on column MS_KSPB.YYKSSJ is '预约开始时间';
+comment on column MS_KSPB.YYJSSJ is '预约结束时间';
+alter table MS_KSPB add YYJG VARCHAR2(2);
+comment on column MS_KSPB.YYJG is '预约间隔';
+alter table ms_yspb add YYKSSJ VARCHAR2(5);
+alter table ms_yspb add YYJSSJ VARCHAR2(5);
+comment on column ms_yspb.YYKSSJ is '预约开始时间';
+comment on column ms_yspb.YYJSSJ is '预约结束时间';
+alter table ms_yspb add YYJG VARCHAR2(2);
+comment on column ms_yspb.YYJG is '预约间隔';
+--号源表
+create table ms_yyghhy(
+hyxh number(18) primary key,
+ZBLB VARCHAR2(1),
+hyks  NUMBER(18),
+hyjg VARCHAR2(20),
+hyys VARCHAR2(20),
+hysj date ,
+hyzt VARCHAR2(1),
+brid NUMBER(18),
+sfzh VARCHAR2(18),
+tysj date
+);
+create sequence SEQ_MS_YYGHHY
+minvalue 1
+maxvalue 9999999999
+start with 1
+increment by 1
+cache 20;
+alter table ms_yyghhy add  Source number(2);
+alter table ms_yyghhy add   CardId varchar2(20);
+alter table ms_yyghhy add   CardType varchar2(2);
+alter table ms_yyghhy add   LoginUserCardType varchar2(2);
+alter table ms_yyghhy add    LoginUserIdCard varchar2(20);
+alter table ms_yyghhy add   PatientName varchar2(20);
+alter table ms_yyghhy add   PatientGender number(2);
+alter table ms_yyghhy add   PatientBirthday varchar2(10);
+alter table ms_yyghhy add   TelePhoneNo varchar2(30);
+alter table ms_yyghhy add   Address varchar2(30);
+alter table ms_yyghhy add   sdxh varchar2(30);--锁定序号
+alter table MS_YYGHHY add sdsj date;--锁定时间
+alter table MS_GHMX add hyxh NUMBER(10);
+comment on column MS_GHMX.hyxh is '号源序号';
+alter table MS_GHMX add toapp char(1);
+comment on column MS_GHMX.toapp is '返回是否就诊给app标识';
+alter table MS_YYGHHY add ghf NUMBER(6,2);
+alter table MS_YYGHHY add zlf NUMBER(6,2);
+comment on column MS_YYGHHY.ghf is '挂号费';
+comment on column MS_YYGHHY.zlf is '诊疗费';
+alter table MS_YYGHHY add ZFJE NUMBER(6,2);
+comment on column MS_YYGHHY.ZFJE is '支付金额';
+alter table MS_YYGHHY add ghxh NUMBER(18);
+comment on column MS_YYGHHY.ghxh is '挂号序号';
+create index ind_ms_yyghhy_hysj on ms_yyghhy(hysj);
+create index ind_ms_yyghhy_mainhyks on ms_yyghhy(hyjg,hyks,hysj);
+create index ind_ms_yyghhy_mainhyys on ms_yyghhy(hyjg,hyks,hyys,hysj); 
+create index ind_ms_yyghhy_sdxh on ms_yyghhy(sdxh);
+create index ind_ms_ghmx_hyxh on ms_ghmx(hyxh);
+alter table ms_ghmx add payType varchar2(2);
+alter table MS_YYGHHY add ddh varchar2(32);
+alter table MS_YYGHHY add ddsj varchar2(32);
+----2018-09-15-预约挂号增加字段-e
+-----------------任伟 2020-09-18家医服务记录表及序列-----------------------
+-- Create sequence
+create sequence SEQ_JYFWJL
+minvalue 1
+maxvalue 9999999999999999999
+start with 1
+increment by 1
+cache 20;
+
+-- Create table
+create table JYFWJL
+(
+  PHRID          VARCHAR2(30),
+  EMPIID         VARCHAR2(32),
+  RECODEID       VARCHAR2(20),
+  NAME           VARCHAR2(20),
+  SEX            VARCHAR2(2),
+  AGE            VARCHAR2(3),
+  TELEPHONE      VARCHAR2(11),
+  ISJKGL         VARCHAR2(2),
+  JKGL           VARCHAR2(100),
+  ISJKSJ         VARCHAR2(2),
+  JKSJ           VARCHAR2(100),
+  ISHLYY         VARCHAR2(2),
+  HLYY           VARCHAR2(100),
+  ISPSYZ         VARCHAR2(2),
+  PSYZ           VARCHAR2(100),
+  ISLXDC         VARCHAR2(2),
+  LXDC           VARCHAR2(100),
+  ISFYJK         VARCHAR2(2),
+  FYJK           VARCHAR2(100),
+  ISKZMX         VARCHAR2(2),
+  KZMX           VARCHAR2(100),
+  ISZYYJ         VARCHAR2(2),
+  ZYYJ           VARCHAR2(100),
+  ISBYZD         VARCHAR2(2),
+  BYZD           VARCHAR2(100),
+  ISZZYY         VARCHAR2(2),
+  ZZYY           VARCHAR2(100),
+  ISYYTJ         VARCHAR2(2),
+  YYTJ           VARCHAR2(100),
+  ISJDTJ         VARCHAR2(2),
+  JDTJ           VARCHAR2(100),
+  ISXLGH         VARCHAR2(2),
+  XLGH           VARCHAR2(100),
+  ISKZJY         VARCHAR2(2),
+  KZJY           VARCHAR2(100),
+  ISQT           VARCHAR2(2),
+  QT             VARCHAR2(100),
+  CREATEUNIT     VARCHAR2(16),
+  CREATEUSER     VARCHAR2(20),
+  CREATEDATE     DATE,
+  LASTMODIFYUNIT VARCHAR2(16),
+  LASTMODIFYUSER VARCHAR2(20),
+  LASTMODIFYDATE DATE,
+  RECODEDATE     DATE
+)
+tablespace PHIS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    next 8
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table JYFWJL
+  is '家庭医生工作室服务记录表';
+-- Add comments to the columns
+comment on column JYFWJL.PHRID
+  is 'phrid';
+comment on column JYFWJL.EMPIID
+  is 'empiid';
+comment on column JYFWJL.RECODEID
+  is '记录id';
+comment on column JYFWJL.NAME
+  is '姓名';
+comment on column JYFWJL.SEX
+  is '性别';
+comment on column JYFWJL.AGE
+  is '年龄';
+comment on column JYFWJL.TELEPHONE
+  is '电话';
+comment on column JYFWJL.ISJKGL
+  is '是否健康管理服务';
+comment on column JYFWJL.JKGL
+  is '健康管理服务';
+comment on column JYFWJL.ISJKSJ
+  is '是否健康数据监测';
+comment on column JYFWJL.JKSJ
+  is '健康数据监测';
+comment on column JYFWJL.ISHLYY
+  is '是否合理用药指导';
+comment on column JYFWJL.HLYY
+  is '合理用药指导';
+comment on column JYFWJL.ISPSYZ
+  is '是否配送医嘱内药品';
+comment on column JYFWJL.PSYZ
+  is '配送医嘱内药品';
+comment on column JYFWJL.ISLXDC
+  is '是否联系代采购药品';
+comment on column JYFWJL.LXDC
+  is '联系代采购药品';
+comment on column JYFWJL.ISFYJK
+  is '是否妇幼健康项目咨询服务';
+comment on column JYFWJL.FYJK
+  is '妇幼健康项目咨询服务';
+comment on column JYFWJL.ISKZMX
+  is '是否开展慢性病等重点人群自我管理小组活动';
+comment on column JYFWJL.KZMX
+  is '开展慢性病等重点人群自我管理小组活动';
+comment on column JYFWJL.ISZYYJ
+  is '是否中医药健康管理';
+comment on column JYFWJL.ZYYJ
+  is '中医药健康管理';
+comment on column JYFWJL.ISBYZD
+  is '是否避孕指导、药具发放';
+comment on column JYFWJL.BYZD
+  is '避孕指导、药具发放';
+comment on column JYFWJL.ISZZYY
+  is '是否转诊、预约就诊等联络';
+comment on column JYFWJL.ZZYY
+  is '转诊、预约就诊等联络';
+comment on column JYFWJL.ISYYTJ
+  is '是否预约体检时间';
+comment on column JYFWJL.YYTJ
+  is '预约体检时间';
+comment on column JYFWJL.ISJDTJ
+  is '是否解读体检报告';
+comment on column JYFWJL.JDTJ
+  is '解读体检报告';
+comment on column JYFWJL.ISXLGH
+  is '是否心理关怀';
+comment on column JYFWJL.XLGH
+  is '心理关怀';
+comment on column JYFWJL.ISKZJY
+  is '是否开展家医签约';
+comment on column JYFWJL.KZJY
+  is '开展家医签约';
+comment on column JYFWJL.ISQT
+  is '是否其他';
+comment on column JYFWJL.QT
+  is '其他';
+comment on column JYFWJL.CREATEUNIT
+  is '创建机构';
+comment on column JYFWJL.CREATEUSER
+  is '创建人';
+comment on column JYFWJL.CREATEDATE
+  is '创建时间';
+comment on column JYFWJL.LASTMODIFYUNIT
+  is '最后修改机构';
+comment on column JYFWJL.LASTMODIFYUSER
+  is '最后修改人';
+comment on column JYFWJL.LASTMODIFYDATE
+  is '最后修改时间';
+comment on column JYFWJL.RECODEDATE
+  is '记录日期';
+-----------------hujian 2020-10-06 自动对账日志表增加两个字段-----------------------
+alter table zddz_rz
+add (jgid varchar2(32),czgh varchar2(32));

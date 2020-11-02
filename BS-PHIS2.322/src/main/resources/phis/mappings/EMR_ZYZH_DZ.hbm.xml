@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="EMR_ZYZH_DZ" table="EMR_ZYZH_DZ">
+		<composite-id>
+			<key-property name="ZHBS" column="ZHBS" type="java.lang.Long" />
+			<key-property name="ZHBS_TCM" column="ZHBS_TCM" type="java.lang.Long" />
+		</composite-id>
+		<property name="ZHDM" type="java.lang.String" length="20"/>
+		<property name="ZHMC" type="java.lang.String" length="60"/>
+		<property name="PYDM" type="java.lang.String" length="10"/>
+		<property name="ZHDM_TCM" type="java.lang.String" length="20"/>
+		<property name="ZHMC_TCM" type="java.lang.String" length="60"/>
+		<property name="PYDM_TCM" type="java.lang.String" length="10"/>
+	</class>
+</hibernate-mapping>

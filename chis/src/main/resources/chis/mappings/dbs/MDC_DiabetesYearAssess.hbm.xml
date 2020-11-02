@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.dbs.schemas.MDC_DiabetesYearAssess"
+		table="MDC_DiabetesYearAssess">
+		<id name="recordId" type="java.lang.String">
+			<column name="recordId" />
+			<generator class="assigned" />
+		</id>
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="visitCount" type="java.lang.Integer"/>
+		<property name="fixDate" type="date" />
+		<property name="diabetesGroup" type="java.lang.String"
+			length="2" />
+		<property name="normManage" type="java.lang.String"
+			length="1" />
+		<property name="oldGroup" type="java.lang.String" length="2" />
+		<property name="inputUnit" length="20" type="java.lang.String"/>
+		<property name="inputDate" type="date"/>
+		<property name="inputUser" length="20" type="java.lang.String"/>
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="date" />
+	</class>
+</hibernate-mapping>

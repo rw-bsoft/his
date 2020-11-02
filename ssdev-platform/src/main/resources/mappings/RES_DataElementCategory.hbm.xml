@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="RES_DataElementCategory" table="RES_DataElementCategory">
+		<id name="DataElementCategoryId" type="java.lang.Integer">
+	    	<column name="DataElementCategoryId"/>
+			<generator class="sequence">
+            	<param name="sequence">SEQ_RES_DataElementCategory</param>
+           	</generator>
+		</id>
+		<property name="DataStandardId" type="java.lang.String" length="16" />
+		<property name="StandardIdentify" type="java.lang.String" length="50" />
+		<property name="CustomIdentify" type="java.lang.String" length="50" />
+		<property name="DName" type="java.lang.String" length="50" />
+		<property name="DeType" type="java.lang.String" length="1" />
+	</class>
+</hibernate-mapping>

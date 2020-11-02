@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_JSZF" table="JC_JSZF">
+		<composite-id>
+			<key-property name="ZYH" column="ZYH" type="java.lang.Long"/>
+			<key-property name="JSCS" column="JSCS" type="java.lang.Integer" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="ZFGH" type="java.lang.String" length="10" />
+		<property name="ZFRQ" type="timestamp"  />
+		<property name="JZRQ" type="timestamp"  />
+		<property name="HZRQ" type="timestamp"  />
+	</class>
+</hibernate-mapping>

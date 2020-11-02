@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="JXML_TEMP" language="groovy" pageWidth="900" pageHeight="842" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<parameter name="TITLE" class="java.lang.String"/>
+	<field name="CFHM" class="java.lang.String"/>
+	<field name="KFRQ" class="java.lang.String"/>
+	<field name="NL" class="java.lang.String"/>
+	<field name="ZDMC" class="java.lang.String"/>
+	<field name="YPPZ" class="java.lang.String"/>
+	<field name="KJYW" class="java.lang.String"/>
+	<field name="ZSYW" class="java.lang.String"/>
+	<field name="JBYW" class="java.lang.String"/>
+	<field name="TYMS" class="java.lang.String"/>
+	<field name="CFJE" class="java.lang.String"/>
+	<field name="YSGH_text" class="java.lang.String"/>
+	<field name="PYGH_text" class="java.lang.String"/>
+	<field name="FYGH_text" class="java.lang.String"/>
+	<field name="SFHL" class="java.lang.String"/>
+	<field name="WTDM" class="java.lang.String"/>
+	<field name="DPGH_text" class="java.lang.String"/>
+	<field name="DPRQ" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="860" height="50"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="34"/>
+				</textElement>
+				<text><![CDATA[处方点评统计明细]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="54" height="37"/>
+				<box>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[处方号码]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="0" width="50" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[处方日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="0" width="34" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[年龄]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="0" width="109" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[诊断名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="0" width="51" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[药品种数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="0" width="37" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[抗菌药(0/1)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="0" width="40" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[注射剂(0/1)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="0" width="39" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[基本药物数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="0" width="38" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[通用名数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="0" width="53" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[处方金额]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="0" width="53" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[处方医生]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="558" y="0" width="53" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[调配药师]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="611" y="0" width="50" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[发药药师]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="661" y="0" width="31" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[是否合理]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="692" y="0" width="50" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[存在问题(代码)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="742" y="0" width="44" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[点评人]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="786" y="0" width="73" height="37"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[点评日期]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="54" height="25"/>
+				<box>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CFHM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="0" width="50" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{KFRQ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="104" y="0" width="34" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="109" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ZDMC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="0" width="51" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YPPZ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="298" y="0" width="37" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{KJYW}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="335" y="0" width="40" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ZSYW}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="0" width="39" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{JBYW}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="0" width="38" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TYMS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="0" width="53" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CFJE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="505" y="0" width="53" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YSGH_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="558" y="0" width="53" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PYGH_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="611" y="0" width="50" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{FYGH_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="661" y="0" width="31" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SFHL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="692" y="0" width="50" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{WTDM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="742" y="0" width="44" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DPGH_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="786" y="0" width="73" height="25"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{DPRQ}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

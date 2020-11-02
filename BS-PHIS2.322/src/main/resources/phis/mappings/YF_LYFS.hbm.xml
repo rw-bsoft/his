@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YF_LYFS" table="YF_LYFS">
+		<composite-id>
+			<key-property name="YKSB" column="YKSB" type="java.lang.Long"/>
+			<key-property name="YFSB" column="YFSB" type="java.lang.Long" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="LYFS" type="java.lang.Integer" length="18" />
+	</class>
+</hibernate-mapping>

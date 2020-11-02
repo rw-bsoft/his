@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report id="ChargesSummaryChart" title="现金收入分析" mode="unit">
+	<field id="manageUnit"/>
+	<chart template="SimpleMSline" chartType="MSLine"/>
+	
+	<define class="phis.report.CountReportDefine">
+		<headers>
+			<item renderIndex="1" id="SFRQ" alias="日期" expr="to_char(SFRQ,'yyyy-mm-dd') as SFRQ" type="string"/>
+			<item renderIndex="2" id="ZJJE" alias="金额" expr="ZJJE" type="int" func="sum"/>
+		</headers>
+		<sort id="SFRQ"/>
+		<src>
+			<entry name="MS_MZXX "/>
+		</src>
+		<datelimit>
+			SFRQ,7
+		</datelimit>
+		<condition>
+		['and',
+		['and',
+		['eq',['$','CZGH'],['$','%user.userId']],
+		['eq',['$','ZFPB'],['i',0]]
+		]
+		,['eq',['$','THPB'],['i',0]]]
+		</condition>
+	</define>
+	<queryArgs>
+		<arg id="manageUnit" alias="管辖机构" type="string" defaultValue="%user.manageUnit.id">
+			<dic id="phis.dictionary.manageUnit" render="Tree"/>
+		</arg>
+	</queryArgs>
+</report>

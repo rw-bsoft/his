@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class entity-name="chis.application.hc.schemas.V_HealthCheck_Repeat" table="V_HealthCheck_Repeat">
+		<id name="healthCheck" length="16" type="java.lang.String">
+			<column name="healthCheck"/>
+			<generator class="assigned"/>
+		</id>
+		<property name="empiId" length="32" type="java.lang.String"/>
+		<property name="year" type="java.lang.String"/>
+		<property name="personName" length="1" type="java.lang.String"/>
+		<property name="idCard" length="1" type="java.lang.String"/>
+		<property name="repeat" length="1" type="java.lang.String"/>
+	</class>
+</hibernate-mapping>

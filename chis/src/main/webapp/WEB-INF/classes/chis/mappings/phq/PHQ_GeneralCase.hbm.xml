@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.phq.schemas.PHQ_GeneralCase" table="PHQ_GeneralCase">
+			<id name="gcId" type="java.lang.String">
+            	<column name="gcId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="phrId" type="java.lang.String" length="32" />
+        	<property name="JZXH" type="java.lang.Double" length="18" />
+        	<property name="courseId" type="java.lang.String" length="16" />
+        	<property name="content" type="java.lang.String" length="2" />
+        	<property name="masterplateType" type="java.lang.String" length="2" />
+        	<property name="masterplateId" type="java.lang.String" length="16" />
+        	<property name="informedConsent" type="java.lang.String" length="1" />
+        	<property name="personName" type="java.lang.String" length="50" />
+        	<property name="idCard" type="java.lang.String" length="20" />
+        	<property name="sexCode" type="java.lang.String" length="1" />
+        	<property name="birthday" type="date"  />
+        	<property name="mobileNumber" type="java.lang.String" length="20" />
+        	<property name="nativePlace" type="java.lang.String" length="20" />
+        	<property name="domicilePlace" type="java.lang.String" length="100" />
+        	<property name="residentialAddress" type="java.lang.String" length="100" />
+        	<property name="educationCode" type="java.lang.String" length="2" />
+        	<property name="maritalStatusCode" type="java.lang.String" length="2" />
+        	<property name="averageRevenue" type="java.lang.String" length="2" />
+        	<property name="unitNature" type="java.lang.String" length="2" />
+        	<property name="highRiskType" type="java.lang.String" length="1" />
+        	<property name="source" type="java.lang.String" length="1" />
+        	<property name="modality" type="java.lang.String" length="50" />
+        	<property name="surveyUser" type="java.lang.String" length="20" />
+        	<property name="surveyUnit" type="java.lang.String" length="20" />
+        	<property name="surveyDate" type="date"  />
+        	<property name="status" type="java.lang.String" length="1" />
+        	<property name="cancellationReason" type="java.lang.String"
+				length="1" />
+			<property name="cancellationUser" type="java.lang.String"
+				length="20" />
+			<property name="cancellationDate" type="date" />
+			<property name="cancellationUnit" type="java.lang.String"
+				length="20" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

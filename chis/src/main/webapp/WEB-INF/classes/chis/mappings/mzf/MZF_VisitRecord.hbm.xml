@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.mzf.schemas.MZF_VisitRecord" table="MZF_VISITRECORD">
+		<id name="visitId" type="java.lang.String">
+			<column name="visitId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="phrId" type="java.lang.String" length="32" />
+		<property name="cancellationUser" type="java.lang.String" length="20" />
+		<property name="cancellationDate" type="timestamp" length="200"/>	
+		<property name="cancellationUnit" type="java.lang.String" length="20"/>
+		<property name="cancellationReason" type="java.lang.String" length="20"/>		
+		<property name="SFRQ" type="timestamp" length="100"/>
+		<property name="SFFS" type="java.lang.String" length="100"/>
+		<property name="ZZ" type="java.lang.String" length="100"/>
+		<property name="QTZZ" type="java.lang.String" length="50"/>
+		<property name="SG" type="java.lang.String" length="10"/>
+		<property name="DQTZ" type="java.lang.String" length="10"/>
+		<property name="MBTZ" type="java.lang.String" length="10"/>
+		<property name="SSY" type="java.lang.String" length="100"/>
+		<property name="SZY" type="java.lang.String" length="100"/>
+		<property name="XL" type="java.lang.String" length="100"/>
+		<property name="HXPL" type="java.lang.String" length="100"/>
+		<property name="QTTZ" type="java.lang.String" length="100"/>
+		<property name="QTQTTZ" type="java.lang.String" length="50"/>
+		<property name="NNJXJZCS" type="java.lang.String" length="100"/>
+		<property name="NNYJXJZZYCS" type="java.lang.String" length="100"/>
+		<property name="DQRXYL" type="java.lang.String" length="50"/>
+		<property name="MBRXYL" type="java.lang.String" length="50"/>
+		<property name="DQYDZ" type="java.lang.String" length="50"/>
+		<property name="MBYDZ" type="java.lang.String" length="50"/>
+		<property name="DQYDC" type="java.lang.String" length="50"/>
+		<property name="MBYDC" type="java.lang.String" length="50"/>
+		<property name="XLTZ" type="java.lang.String" length="50"/>
+		<property name="ZYXW" type="java.lang.String" length="50"/>
+		<property name="FEV1" type="java.lang.String" length="100"/>
+		<property name="FEV1ANDFVC" type="java.lang.String" length="100"/>
+		<property name="FEV1ANDYJZ" type="java.lang.String" length="100"/>
+		<property name="SP02" type="java.lang.String" length="100"/>
+		<property name="XHDB" type="java.lang.String" length="100"/>
+		<property name="HXB" type="java.lang.String" length="100"/>
+		<property name="BXB" type="java.lang.String" length="100"/>
+		<property name="XXB" type="java.lang.String" length="100"/>
+		<property name="LBXB" type="java.lang.String" length="100"/>
+		<property name="ZXLXB" type="java.lang.String" length="100"/>
+		<property name="SSXXB" type="java.lang.String" length="100"/>
+		<property name="XXXPBG" type="java.lang.String" length="100"/>
+		<property name="XDTBG" type="java.lang.String" length="100"/>
+		<property name="CATPGDF" type="java.lang.String" length="100"/>
+		<property name="MMRCDF" type="java.lang.String" length="100"/>
+		<property name="QLSXGOLDFJ" type="java.lang.String" length="100"/>
+		<property name="GOLDZHPGFZ" type="java.lang.String" length="100"/>
+		<property name="MZFGLDJ" type="java.lang.String" length="100"/>
+		<property name="FYYCX" type="java.lang.String" length="100"/>
+		<property name="YWBLFY" type="java.lang.String" length="100"/>
+		<property name="XRYWZZSY" type="java.lang.String" length="100"/>
+		<property name="XJZZZD" type="java.lang.String" length="100"/>
+		<property name="FKFZL" type="java.lang.String" length="100"/>
+		<property name="YL" type="java.lang.String" length="100"/>
+		<property name="WCHXJZL" type="java.lang.String" length="100"/>
+		<property name="YMJZ" type="java.lang.String" length="100"/>
+		<property name="JKJYANDZD" type="java.lang.String" length="100"/>
+		<property name="YWMC1" type="java.lang.String" length="100"/>
+		<property name="YFYL1" type="java.lang.String" length="100"/>
+		<property name="YWMC2" type="java.lang.String" length="100"/>
+		<property name="YFYL2" type="java.lang.String" length="100"/>
+		<property name="YWMC3" type="java.lang.String" length="100"/>
+		<property name="YFYL3" type="java.lang.String" length="100"/>
+		<property name="YY" type="java.lang.String" length="100"/>
+		<property name="JGJKB" type="java.lang.String" length="100"/>
+		<property name="XCSFRQ" type="timestamp" length="100"/>
+		<property name="SFYSQM" type="java.lang.String" length="100"/>
+		<property name="createUser" type="java.lang.String" length="20"/>
+		<property name="createUnit" type="java.lang.String" length="20"/>
+		<property name="createDate" type="timestamp"/>
+		<property name="lastModifyUser" type="java.lang.String" length="20"/>
+		<property name="lastModifyUnit"  type="java.lang.String" length="20"/>
+		<property name="lastModifyDate" type="timestamp"/>
+	</class>
+</hibernate-mapping>

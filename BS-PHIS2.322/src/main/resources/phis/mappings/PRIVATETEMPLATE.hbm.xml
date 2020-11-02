@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="PRIVATETEMPLATE" table="PRIVATETEMPLATE">
+			<id name="PTID" type="java.lang.Long">
+            	<column name="PTID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="PTTYPE" type="java.lang.Integer" length="1" />
+        	<property name="PTNAME" type="java.lang.String" length="50" />
+        	<property name="FRAMEWORKCODE" type="java.lang.String" length="20" />
+        	<property name="TEMPLATETYPE" type="java.lang.String" length="20" />
+        	<property name="SPTTYPE" type="java.lang.Integer" length="1" />
+        	<property name="SPTCODE" type="java.lang.String" length="20" />
+        	<property name="PTTEMPLATE" type="blob"  />
+        	<property name="PTTEMPLATETEXT" type="blob"  />
+        	<property name="TEMPLATECODE" type="java.lang.Long" length="18" />
+        	<property name="REGISTRAR" type="java.lang.String" length="20" />
+        	<property name="PTSTATE" type="java.lang.Integer" length="1" />
+        	<property name="DISEASEID" type="java.lang.Integer" length="9" />
+        	<property name="DISEASETYPE" type="java.lang.String" length="100" />
+        	<property name="SJBZ" type="java.lang.Integer" length="1" />
+        	<property name="BZMBBH" type="java.lang.Long" length="18" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_BRRY" table="JC_BRRY">
+		<id name="ZYH" type="java.lang.Long">
+	    	<column name="ZYH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="BRID" type="java.lang.Long" length="18" />
+		<property name="ZYHM" type="java.lang.String" length="10" />
+		<property name="JCBH" type="java.lang.String" length="32" />
+		<property name="MZHM" type="java.lang.String" length="32" />
+		<property name="BRXZ" type="java.lang.Long" length="18" />
+		<property name="BRXM" type="java.lang.String" length="40" />
+		<property name="BRXB" type="java.lang.Integer" length="4" />
+		<property name="CSNY" type="date"  />
+		<property name="SFZH" type="java.lang.String" length="20" />
+		<property name="LXRM" type="java.lang.String" length="20" />
+		<property name="LXGX" type="java.lang.Integer" length="4" />
+		<property name="LXDZ" type="java.lang.String" length="100" />
+		<property name="LXDH" type="java.lang.String" length="16" />
+		<property name="DJRQ" type="date"  />
+		<property name="RYRQ" type="date"  />
+		<property name="CYRQ" type="date"  />
+		<property name="CYPB" type="java.lang.Integer" length="2" />
+		<property name="CYFS" type="java.lang.Integer" length="1" />
+		<property name="CZGH" type="java.lang.String" length="10" />
+		<property name="RYQK" type="java.lang.Integer" length="4" />
+		<property name="BRQK" type="java.lang.Integer" length="4" />
+		<property name="HLJB" type="java.lang.Integer" length="4" />
+		<property name="YSDM" type="java.lang.Integer" length="4" />
+		<property name="ZRYS" type="java.lang.String" length="10" />
+		<property name="ZRHS" type="java.lang.String" length="10" />
+		<property name="QZRQ" type="date"  />
+		<property name="KSRQ" type="date"  />
+		<property name="JSRQ" type="date"  />
+		<property name="JSCS" type="java.lang.Integer" length="3" />
+		<property name="JZRQ" type="date"  />
+		<property name="HZRQ" type="date"  />
+		<property name="YBKH" type="java.lang.String" length="20" />
+		<property name="JZKH" type="java.lang.String" length="40" />
+		<property name="SPJE" type="java.lang.Double" length="12" />
+		<property name="BZ" type="java.lang.String" length="250" />
+		<property name="CSD_SQS" type="java.lang.Long" length="18" />
+		<property name="CSD_S" type="java.lang.Long" length="18" />
+		<property name="CSD_X" type="java.lang.Long" length="18" />
+		<property name="JGDM_SQS" type="java.lang.Long" length="18" />
+		<property name="JGDM_S" type="java.lang.Long" length="18" />
+		<property name="XZZ_SQS" type="java.lang.Long" length="18" />
+		<property name="XZZ_S" type="java.lang.Long" length="18" />
+		<property name="XZZ_X" type="java.lang.Long" length="18" />
+		<property name="XZZ_YB" type="java.lang.String" length="20" />
+		<property name="XZZ_DH" type="java.lang.String" length="20" />
+		<property name="HKDZ_SQS" type="java.lang.Long" length="18" />
+		<property name="HKDZ_S" type="java.lang.Long" length="18" />
+		<property name="HKDZ_X" type="java.lang.Long" length="18" />
+		<property name="XZZ_QTDZ" type="java.lang.String" length="60" />
+		<property name="HKDZ_QTDZ" type="java.lang.String" length="60" />
+		<property name="RYNL" type="java.lang.String" length="20" />
+		<property name="RYZD" type="java.lang.String" length="255" />
+		<property name="MQZD" type="java.lang.String" length="255" />
+		<property name="ZYZD" type="java.lang.String" length="255" />
+		<property name="MZZD" type="java.lang.Long" length="18" />
+		<property name="JCLX" type="java.lang.Integer" length="1" />
+		<property name="JCZD" type="java.lang.String" length="255" />
+		<property name="ICD10" type="java.lang.String" length="20" />
+		<property name="ZDRQ" type="date"  />
+		<property name="BQZY" type="java.lang.String" length="255" />
+		<property name="JCYJ" type="java.lang.String" length="255" />
+		<property name="CCQK" type="java.lang.String" length="255" />
+		<property name="SQFS" type="java.lang.Integer" length="1" />
+		<property name="CCJSRQ" type="date"  />
+	</class>
+</hibernate-mapping>

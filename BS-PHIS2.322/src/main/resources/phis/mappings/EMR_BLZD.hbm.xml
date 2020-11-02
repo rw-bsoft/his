@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_BLZD" table="EMR_BLZD">
+			<id name="XMBH" type="java.lang.Long">
+            	<column name="XMBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="YWLB" type="java.lang.Integer" length="1" />
+        	<property name="XMLX" type="java.lang.String" length="12" />
+        	<property name="XMMC" type="java.lang.String" length="30" />
+        	<property name="PYDM" type="java.lang.String" length="6" />
+        	<property name="XMQZ" type="java.lang.String" length="255" />
+        	<property name="PLCX" type="java.lang.Integer" length="9" />
+</class>
+</hibernate-mapping>

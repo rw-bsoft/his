@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xieyishu" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.1000000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="193"/>
+	<parameter name="createUnit" class="java.lang.String"/>
+	<parameter name="createUser" class="java.lang.String"/>
+	<parameter name="SecondPartyName" class="java.lang.String"/>
+	<parameter name="phoneNumber" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="idCard" class="java.lang.String"/>
+	<parameter name="SPID_LNR" class="java.lang.String"/>
+	<title>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="350" y="15" width="76" height="20"/>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[协议编号:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="555" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="67" width="309" height="35"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[家庭医生（团队）签约服务协议书]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="102" width="193" height="20"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[（签约内容可自行增加）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="169" width="66" height="31"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[甲方：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="169" width="149" height="31"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[社区卫生服务中心（站）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="169" width="153" height="31"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[全科医生（团队）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="200" width="555" height="11"/>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="211" width="206" height="28"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[乙方：（家庭成员代表人）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="239" width="555" height="11"/>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="250" width="100" height="38"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[家庭电话：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="250" width="113" height="38"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 住址：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="299" width="113" height="36"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[身份证号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="288" width="555" height="11"/>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="299" width="138" height="36"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="299" width="117" height="36"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[健康档案号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="346" width="122" height="31"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="346" width="187" height="31"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement lineSpacing="Single">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="335" width="555" height="11"/>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="346" width="113" height="31"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[成员姓名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="346" width="133" height="31"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[家庭成员人数：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="377" width="555" height="11"/>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="388" width="316" height="30"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[全科医生（团队）为乙方的家庭签约服务团队。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="388" width="145" height="30"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[甲、乙双方共同确定]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="429" width="455" height="31"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement lineSpacing="Single">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="418" width="555" height="11"/>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="429" width="100" height="31"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[团队成员：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="471" width="100" height="30"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[服务电话：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="460" width="555" height="11"/>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="471" width="455" height="30"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement lineSpacing="Single">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="501" width="555" height="49"/>
+				<textElement lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[甲、乙双方本着平等、尊重和自愿的原则，签订此协议，接受以下条款的约定：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="550" width="555" height="15"/>
+				<textElement lineSpacing="Single">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="565" width="555" height="20"/>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[    一、甲方作为服务的提供者，免费提供以下基本医疗和基本公共卫生服务：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="600" width="555" height="20"/>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[    1、建立居民健康档案，开展个人健康评估及健康知识指导。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="620" width="555" height="70"/>
+				<textElement lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[    2、提供分类服务——根据居民健康状况和需求，重点是65周岁及以上老年人、高血压及糖尿病病人、孕产妇、0-6岁儿童、严重精神障碍患者提供主动健康咨询和分类指导服务。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="707" width="555" height="95"/>
+				<textElement textAlignment="Justified" lineSpacing="Single">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[    65周岁及以上老年人服务内容：每年提供生活方式和健康状况评估、中医体质辨识1次、提供体格检查1次、提供常规辅助检查（含血常规、尿常规、空腹血糖、肝功、肾功、血脂、心电图、腹部黑白B超检查）1次，告知健康体检结果并进行相应健康指导。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="585" width="555" height="15"/>
+				<textElement lineSpacing="Single">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="66" y="169" width="93" height="31"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{createUnit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="169" width="94" height="31"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{createUser}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="211" width="349" height="28"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{SecondPartyName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="250" width="155" height="38"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{phoneNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="250" width="187" height="38"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="299" width="187" height="36"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{idCard}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="388" width="94" height="30"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{createUser}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="692" width="16" height="13"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{SPID_LNR}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

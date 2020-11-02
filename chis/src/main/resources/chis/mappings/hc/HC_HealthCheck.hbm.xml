@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class entity-name="chis.application.hc.schemas.HC_HealthCheck" table="HC_HealthCheck">
+		<id name="healthCheck" length="16" type="java.lang.String">
+			<column name="healthCheck"/>
+			<generator class="assigned"/>
+		</id>
+		<property name="empiId" length="32" type="java.lang.String"/>
+		<property name="phrId" length="30" type="java.lang.String"/>
+		<property name="checkDate" type="date"/>
+		<property name="manaDoctor" length="20" type="java.lang.String"/>
+		<property name="personalCode" length="30" type="java.lang.String"/>
+		<property name="symptom" length="80" type="java.lang.String"/>
+		<property name="symptomOt" length="100" type="java.lang.String"/>
+		<property name="temperature" length="5" precision="2" type="java.lang.Double"/>
+		<property name="breathe" type="java.lang.Integer"/>
+		<property name="pulse" type="java.lang.Integer"/>
+		<property name="diastolic" type="java.lang.Integer"/>
+		<property name="constriction" type="java.lang.Integer"/>
+		<property name="diastolic_L" type="java.lang.Integer"/>
+		<property name="constriction_L" type="java.lang.Integer"/>
+		<property name="height" length="8" precision="2" type="java.lang.Double"/>
+		<property name="weight" length="8" precision="2" type="java.lang.Double"/>
+		<property name="waistline" length="8" precision="2" type="java.lang.Double"/>
+		<property name="bmi" length="8" precision="2" type="java.lang.Double"/>
+		<property name="healthStatus" length="1" type="java.lang.String"/>
+		<property name="selfCare" length="1" type="java.lang.String"/>
+		<property name="cognitive" length="20" type="java.lang.String"/>
+		<property name="cognitiveZf" length="5" precision="2" type="java.lang.Double"/>
+		<property name="emotion" length="20" type="java.lang.String"/>
+		<property name="emotionZf" length="5" precision="2" type="java.lang.Double"/>
+		<property name="cerebrovascularDiseases" length="20" type="java.lang.String"/>
+		<property name="othercerebrovascularDiseases" length="50" type="java.lang.String"/>
+		<property name="heartDisease" length="20" type="java.lang.String"/>
+		<property name="otherheartDisease" length="50" type="java.lang.String"/>
+		<property name="kidneyDiseases" length="20" type="java.lang.String"/>
+		<property name="otherkidneyDiseases" length="50" type="java.lang.String"/>
+		<property name="VascularDisease" length="20" type="java.lang.String"/>
+		<property name="otherVascularDisease" length="50" type="java.lang.String"/>
+		<property name="eyeDiseases" length="20" type="java.lang.String"/>
+		<property name="othereyeDiseases" length="50" type="java.lang.String"/>
+		<property name="neurologicalDiseases" length="1" type="java.lang.String"/>
+		<property name="neurologicalDiseasesDesc" length="100" type="java.lang.String"/>
+		<property name="otherDiseasesone" length="1" type="java.lang.String"/>
+		<property name="otherDiseasesoneDesc" length="100" type="java.lang.String"/>
+		<property name="createUnit" length="20" type="java.lang.String"/>
+		<property name="createDate" type="timestamp"/>
+		<property name="createUser" length="20" type="java.lang.String"/>
+		<property name="lastModifyUser" length="20" type="java.lang.String"/>
+		<property name="lastModifyUnit" length="20" type="java.lang.String"/>
+		<property name="lastModifyDate" type="timestamp"/>
+		<property name="manaDoctorId" length="20" type="java.lang.String"/>
+		<property name="manaUnitId" length="20" type="java.lang.String"/>
+		<property name="checkWay" length="1" type="java.lang.String"/>
+		<property name="inhospitalFlag" length="1" type="java.lang.String"/>
+		<property name="medicineFlag" length="1" type="java.lang.String"/>
+		<property name="nonimmuneFlag" length="1" type="java.lang.String"/>
+		<property name="infamilybedFlag" length="1" type="java.lang.String"/>
+		<property name="year" length="10" type="java.lang.String"/>
+		<property name="tjlx" length="10" type="java.lang.String"/>
+		<property name="tjcs" length="20" type="java.lang.String"/>
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="NH_BSOFT_ZL_NEEDSP" table="NH_BSOFT_ZL_NEEDSP">
+	<composite-id>
+		<key-property name="FYXH" column="FYXH" type="java.lang.Long"/>
+		<key-property name="JGID" column="JGID" type="java.lang.String" />
+	</composite-id>
+	<property name="FYMC" type="java.lang.String"/>
+	<property name="FYDW" type="java.lang.String"/>
+	<property name="BZJG" type="java.lang.Double"/>
+	<property name="NHBM_BSOFT" type="java.lang.String"/>
+	<property name="ICODE" type="java.lang.String"/>
+</class>
+</hibernate-mapping>

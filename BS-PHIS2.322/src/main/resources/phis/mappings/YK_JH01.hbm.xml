@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YK_JH01" table="YK_JH01">
+		<id name="SBXH" type="java.lang.Long">
+			<column name="SBXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="XTSB" type="java.lang.Long" length="18" />
+		<property name="JHDH" type="java.lang.Integer" length="6" />
+		<property name="BZRQ" type="date" />
+		<property name="BZGH" type="java.lang.String" length="10" />
+		<property name="SPRQ" type="date" />
+		<property name="SPGH" type="java.lang.String" length="10" />
+		<property name="ZXRQ" type="date" />
+		<property name="ZXGH" type="java.lang.String" length="10" />
+		<property name="DWXH" type="java.lang.Long" length="18" />
+		<property name="JHBZ" type="java.lang.String" length="40" />
+		<property name="SCBZ" type="java.lang.Integer" length="1" />
+		<property name="SCRQ" type="date" />
+	</class>
+</hibernate-mapping>

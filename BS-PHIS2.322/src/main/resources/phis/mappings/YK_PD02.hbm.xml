@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YK_PD02" table="YK_PD02">
+		<id name="SBXH" type="java.lang.Long">
+			<column name="SBXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" length="20" type="java.lang.String"/>
+		<property name="XTSB" length="18" type="java.lang.Long"/>
+		<property name="PDDH" length="12" type="java.lang.String"/>
+		<property name="YPXH" length="18" type="java.lang.Long"/>
+		<property name="YPCD" length="18" type="java.lang.Long"/>
+		<property name="YPPH" length="20" type="java.lang.String"/>
+		<property name="YPXQ" type="timestamp"/>
+		<property name="ZMSL" length="10" type="java.lang.Double"/>
+		<property name="SPSL" length="10" type="java.lang.Double"/>
+		<property name="JHJG" length="12" type="java.lang.Double"/>
+		<property name="PFJG" length="12" type="java.lang.Double"/>
+		<property name="LSJG" length="12" type="java.lang.Double"/>
+		<property name="JHJE" length="12" type="java.lang.Double"/>
+		<property name="PFJE" length="12" type="java.lang.Double"/>
+		<property name="LSJE" length="12" type="java.lang.Double"/>
+		<property name="BZLJ" length="12" type="java.lang.Double"/>
+		<property name="KCSB" length="18" type="java.lang.Long"/>
+		<property name="TYPE" length="6" type="java.lang.Integer"/>
+		<property name="BZXX" length="50" type="java.lang.String"/>
+	</class>
+</hibernate-mapping>

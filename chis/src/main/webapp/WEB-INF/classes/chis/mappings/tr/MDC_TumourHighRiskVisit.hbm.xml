@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.tr.schemas.MDC_TumourHighRiskVisit" table="MDC_TumourHighRiskVisit">
+			<id name="visitId" type="java.lang.String">
+            	<column name="visitId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="THRID" type="java.lang.String" length="16" />
+        	<property name="highRiskType" type="java.lang.String" length="2" />
+        	<property name="fixGroup" type="java.lang.String" length="1" />
+        	<property name="lastVisitDate" type="date"  />
+        	<property name="visitDate" type="date"  />
+        	<property name="nextDate" type="date"  />
+        	<property name="year" type="java.lang.Integer" length="4" />
+        	<property name="visitWay" type="java.lang.String" length="2" />
+        	<property name="visitEffect" type="java.lang.String" length="2" />
+        	<property name="lostVisitReason" type="java.lang.String" length="100" />
+        	<property name="terminatedReason" type="java.lang.String" length="1" />
+        	<property name="deadDate" type="date"  />
+        	<property name="deadReason" type="java.lang.String" length="100" />
+        	
+        	<property name="gynecologySymptom" type="java.lang.String" length="20" />
+        	<property name="irregularVaginalBleeding" type="java.lang.String" length="100" />
+        	<property name="intermittentBackache" type="java.lang.String" length="100" />
+        	<property name="vaginalDischarge" type="java.lang.String" length="100" />
+        	<property name="urgentUrinationAnusDrop" type="java.lang.String" length="100" />
+        	<property name="lowerAbdomenPain" type="java.lang.String" length="100" />
+        	<property name="edemaOfLowerLimbs" type="java.lang.String" length="100" />
+        	<property name="anorectalSymptom" type="java.lang.String" length="50" />
+        	<property name="frequent" type="java.lang.String" length="100" />
+        	<property name="constipation" type="java.lang.String" length="100" />
+        	<property name="tenesmus" type="java.lang.String" length="100" />
+        	<property name="DCAA" type="java.lang.String" length="100" />
+        	<property name="brightRedStool" type="java.lang.String" length="100" />
+        	<property name="jamSamplesThen" type="java.lang.String" length="100" />
+        	<property name="mucousStool" type="java.lang.String" length="100" />
+        	<property name="shitAttenuateOrVariant" type="java.lang.String" length="100" />
+        	<property name="unKnownCausesAnemia" type="java.lang.String" length="100" />
+        	<property name="abdominalFixedSitePain" type="java.lang.String" length="100" />
+        	<property name="respiratorySystemSymptom" type="java.lang.String" length="50" />
+        	<property name="cough" type="java.lang.String" length="100" />
+        	<property name="expectoration" type="java.lang.String" length="100" />
+        	<property name="bloodySputum" type="java.lang.String" length="100" />
+        	<property name="pectoralgia1" type="java.lang.String" length="100" />
+        	<property name="chestCongestion" type="java.lang.String" length="100" />
+        	<property name="symptomsOfChest" type="java.lang.String" length="50" />
+        	<property name="pectoralgia2" type="java.lang.String" length="100" />
+        	<property name="breastLump" type="java.lang.String" length="100" />
+        	<property name="breastPartFixedPain" type="java.lang.String" length="100" />
+        	<property name="nippleErosion" type="java.lang.String" length="100" />
+        	<property name="nippleDischarge" type="java.lang.String" length="100" />
+        	<property name="bilateralBreastAsymmetry" type="java.lang.String" length="100" />
+        	<property name="stomachSymptoms" type="java.lang.String" length="50" />
+        	<property name="belching" type="java.lang.String" length="100" />
+        	<property name="acidRegurgitation" type="java.lang.String" length="100" />
+        	<property name="epigastricPain" type="java.lang.String" length="100" />
+        	<property name="haematemesisMelena" type="java.lang.String" length="100" />
+        	<property name="bodySymptom" type="java.lang.String" length="20" />
+        	<property name="weak" type="java.lang.String" length="100" />
+        	<property name="anorexia" type="java.lang.String" length="100" />
+        	<property name="hepatalgia" type="java.lang.String" length="100" />
+        	<property name="emaciation" type="java.lang.String" length="100" />
+        	<property name="fever" type="java.lang.String" length="100" />
+        	<property name="diagnoseHospital" type="java.lang.String" length="2" />
+        	<property name="superviseMyself" type="java.lang.String" length="1" />
+        	<property name="checkResultIds" type="java.lang.String" length="2000" />
+        	<property name="checkResult" type="java.lang.String" length="500" />
+        	<property name="visitNorm" type="java.lang.String" length="1" />
+        	<property name="familyHistory" type="java.lang.String" length="1" />
+        	<property name="part" type="java.lang.String" length="20" />
+        	<property name="relationship" type="java.lang.String" length="20" />
+        	<property name="relationRemark" type="java.lang.String" length="200" />
+        	<property name="height" type="java.lang.Integer" length="3" />
+        	<property name="weight" type="java.lang.Integer" length="3" />
+        	<property name="BMI" type="java.lang.Double" length="6" />
+        	<property name="waistLine" type="java.lang.Integer" length="3" />
+        	<property name="smoke" type="java.lang.String" length="1" />
+        	<property name="bakeryProduct" type="java.lang.String" length="1" />
+        	<property name="drink" type="java.lang.String" length="1" />
+        	<property name="moodSwing" type="java.lang.String" length="1" />
+        	<property name="takeExerciseCase" type="java.lang.String" length="1" />
+        	<property name="visitProposal" type="java.lang.String" length="20" />
+        	<property name="visitReferral" type="java.lang.String" length="1" />
+        	<property name="transferTreatment" type="java.lang.String" length="1" />
+        	<property name="offerOther" type="java.lang.String" length="200" />
+        	<property name="visitDoctor" type="java.lang.String" length="20" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

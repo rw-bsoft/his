@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_FYHZ" table="JC_FYHZ">
+		<composite-id>
+			<key-property name="JGID" column="JGID" type="java.lang.String"/>
+			<key-property name="FYXM" column="FYXM" type="java.lang.Long" />
+			<key-property name="HZRQ" column="HZRQ" type="java.util.Date" />
+		</composite-id>
+		<property name="SQJC" type="java.lang.Double" length="12" />
+		<property name="BQFS" type="java.lang.Double" length="12" />
+		<property name="BQJS" type="java.lang.Double" length="12" />
+		<property name="BQJC" type="java.lang.Double" length="12" />
+		<property name="SJJC" type="java.lang.Double" length="12" />
+	</class>
+</hibernate-mapping>

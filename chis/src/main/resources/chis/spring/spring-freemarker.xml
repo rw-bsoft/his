@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by Sean220 (Sean220) -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="freeMarkerConfigurer"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath" value="classpath:component/ftl/" />
+		<property name="freemarkerSettings">
+			<props>
+				<prop key="default_encoding">UTF-8</prop>
+				<prop key="locale">zh_CN</prop>
+				<prop key="template_update_delay">5</prop>
+				<prop key="number_format">0.##</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- 
+	<bean id="templateLoader" class="freemarker.cache.ClassTemplateLoader">
+		<constructor-arg type="java.lang.Class" value="ctd.util.MappingFileMaker"/>
+		<constructor-arg type="java.lang.String" value="//component//ftl//"/>
+	</bean>
+	<bean id="freemarkerConfig" class="freemarker.template.Configuration">
+		<property name="templateLoader" ref="templateLoader"/>
+		<property name="locale">
+			<bean class="java.util.Locale">
+				<constructor-arg type="java.lang.String" value="zh_CN"/>
+			</bean>
+		</property>
+		<property name="defaultEncoding" value="UTF-8"/>
+		<property name="templateUpdateDelay" value="5"/>
+		<property name="numberFormat" value="0.##"/>
+		<property name="objectWrapper">
+			<bean id="freemarker.template.ObjectWrapper.DEFAULT_WRAPPER" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+		</property>
+		<property name="templateExceptionHandler">
+			<bean id="freemarker.template.TemplateExceptionHandler.HTML_DEBUG_HANDLER" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+		</property>
+	</bean>
+	 -->
+</beans>

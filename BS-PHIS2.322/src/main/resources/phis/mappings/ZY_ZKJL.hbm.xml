@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="ZY_ZKJL" table="ZY_ZKJL">
+			<id name="JLXH" type="java.lang.Long">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="ZYH" type="java.lang.Long" length="18" />
+        	<property name="HCLX" type="java.lang.Integer" length="1" />
+        	<property name="YSSQRQ" type="date"  />
+        	<property name="YSSQGH" type="java.lang.String" length="10" />
+        	<property name="BQSQRQ" type="date"  />
+        	<property name="BQSQGH" type="java.lang.String" length="10" />
+        	<property name="BQZXRQ" type="date"  />
+        	<property name="BQZXGH" type="java.lang.String" length="10" />
+        	<property name="YSZXRQ" type="date"  />
+        	<property name="YSZXGH" type="java.lang.String" length="10" />
+        	<property name="ZXBZ" type="java.lang.Integer" length="1" />
+        	<property name="HQCH" type="java.lang.String" length="12" />
+        	<property name="HHCH" type="java.lang.String" length="12" />
+        	<property name="HQBQ" type="java.lang.Long" length="18" />
+        	<property name="HHBQ" type="java.lang.Long" length="18" />
+        	<property name="HQKS" type="java.lang.Long" length="18" />
+        	<property name="HHKS" type="java.lang.Long" length="18" />
+        	<property name="HQYS" type="java.lang.String" length="10" />
+        	<property name="HHYS" type="java.lang.String" length="10" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

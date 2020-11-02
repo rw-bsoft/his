@@ -1,0 +1,1922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="born" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="21f437c5-841d-4c89-88ab-aec73d0bb412">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="135"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e5a4812d-4bfe-4cba-ad21-d4fbe4419f03" x="300" y="43" width="36" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[编号：]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="7f1e5d86-442e-4512-854f-eab60dad1cae" x="73" y="43" width="116" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{babyName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="4239b04d-9ece-4c46-bb82-3e84c59cfe50" x="0" y="0" width="555" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[新生儿家庭访视记录表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2e3750f3-7308-47ac-ade4-3859195d3fb7" x="37" y="43" width="36" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="891ae378-8aae-43a0-ad48-b696d37e006d" x="336" y="43" width="125" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{babyNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="680" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8c98080b-df0f-4d82-a3d3-b0e37a9f22f8" x="73" y="13" width="153" height="39"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[  0未知的性别  1男  2女
+  9未说明的性别]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2819e4cd-08f3-4247-8dc4-a94ea994eb9f" x="256" y="13" width="54" height="39"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7f5afbbd-fccc-4f06-a0b1-b1b20cf9ba98" x="151" y="92" width="25" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[职业]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0026ae27-048c-4327-926f-b55712ce7c7f" x="14" y="13" width="59" height="39"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[性   别]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="47cf6d0f-c958-415e-a70a-88b6aeb42239" x="14" y="52" width="59" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生证号]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="81658f8b-d01d-48d3-82e3-0ef6c84f2710" x="73" y="52" width="183" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{certificateNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1344634a-e370-4b16-9482-3b0c12d7efb8" x="256" y="52" width="54" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[家庭地址]]></text>
+			</staticText>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement uuid="da102285-870b-4510-8c3c-bbc36dbcf2c6" x="310" y="13" width="233" height="39"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{babyBirth}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="39e11ff0-94b5-4f7b-affd-a7644728cf2a" x="256" y="92" width="54" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[联系电话]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5ee78942-2aa2-4b32-bccd-be17343a3537" x="14" y="112" width="76" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[母亲身份证号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="56668598-1345-4271-b88a-1dbbc548d6c3" x="14" y="72" width="31" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[父亲]]></text>
+			</staticText>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement uuid="f1c191b2-8153-4fe9-9d75-a89c513eab24" x="458" y="72" width="85" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fatherBirth}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="123a7a1b-4940-46a6-8384-5a7c4f47211c" x="151" y="72" width="25" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[职业]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="76d95d06-9a4a-4072-b9c6-22ab12ce9d40" x="453" y="296" width="30" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{eatCount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="73476b28-0102-45e9-9510-9686646d200a" x="280" y="296" width="30" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{eatNum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3cb9f702-2951-44b3-93d1-b067aaeeeae6" x="453" y="336" width="30" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{respiratoryFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="690a8692-38a3-4f59-9e9a-6ea08cb5607b" x="453" y="316" width="30" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stoolTimes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5ff6db05-7e6d-40a5-affb-06e4e6aa3aa7" x="280" y="336" width="30" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pulse}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="47257360-54cf-4fab-b685-af3f5cf47754" x="45" y="92" width="28" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="93ef40be-738a-4108-b41d-54cc392d56d3" x="310" y="92" width="94" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{motherPhone}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="096c47a8-9a19-4379-a64e-ab9aa5b681f2" x="73" y="72" width="78" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fatherName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="067ee786-808a-425f-8c57-247f62c7d57d" x="404" y="72" width="54" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生日期]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="fd669086-be7e-4347-b1a1-a84cec903f06" x="310" y="52" width="233" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{babyAddress}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="df8542da-ec8c-4439-bfdf-8591a093e612" x="310" y="72" width="94" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fatherPhone}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="eee7a2bd-b8b1-43ba-8668-e2608f91d07e" x="176" y="72" width="80" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fatherJob_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2595719e-9c19-4825-8195-7334e6b49e17" x="90" y="112" width="453" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{motherCardNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="763a65c8-4c22-487a-9927-05a9829f7056" x="226" y="13" width="30" height="39"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{babySex}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d9a5d658-c3d9-496d-9792-62a9e7d80dfb" x="73" y="92" width="78" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{motherName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9838f58e-e62f-43f7-a56a-c1c93352105a" x="176" y="92" width="80" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{motherJob_text}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement uuid="5df4781d-2368-4d08-a3d5-67655767002e" x="458" y="92" width="85" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{motherBirth}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="588f8314-cad7-4487-a35a-7e88d84243e0" x="256" y="72" width="54" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[联系电话]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b9b262c0-3161-4dd6-9e01-6cdf36135192" x="45" y="72" width="28" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6bb1a248-e0d1-45a1-a570-dd3544f103b4" x="14" y="92" width="31" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[母亲]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e9d8426b-1baa-479d-9ba0-21f82aa784c5" x="404" y="92" width="54" height="20" isPrintInFirstWholeBand="true"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[出生日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f2a381e8-5c56-469a-9c76-a5cbe209ad71" x="14" y="132" width="59" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生孕周]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3f9dea55-701b-47f0-a5fe-1fcb1ffd777b" x="280" y="196" width="134" height="40"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[是否有畸型　    1无    2有]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9cde36c0-1e4b-40ae-a293-583d821d53b6" x="73" y="132" width="26" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gestation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="582a2053-0dcf-4741-9205-3d28ac80fb76" x="226" y="196" width="54" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{asphyxia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c72e0812-c478-4dae-b5d9-d24f66e2669f" x="394" y="132" width="114" height="18"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{otherDisease}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a31fe175-02ea-4384-85ca-a61168e97cf3" x="425" y="152" width="118" height="44"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{birthStatus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2d821de8-5b5a-4689-a6bd-22bd6cfa840a" x="14" y="196" width="212" height="40"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[新生儿窒息　 1无  2有
+(Apgar评分：1分钟    5分钟    不详）]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d5183e0e-ea50-479a-948b-5f13d202356f" x="414" y="196" width="94" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{malforMation}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="fab95767-a056-481e-908c-415d155b2240" x="122" y="132" width="272" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[母亲妊娠期患病情况  1糖尿病    2妊娠期高血压   3其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8a6b17dd-580c-4136-b7c0-e5acd8467178" x="207" y="152" width="218" height="44"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生情况:  1顺产  2胎头吸引  3产钳  4剖宫  5双多胎   6臀位  ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="13a94669-8082-4163-a40f-4c8497a93254" x="508" y="196" width="35" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{malforMation_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2cbf05d6-127e-4d14-9dc8-be0349328ff9" x="99" y="152" width="108" height="44"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deliveryUnit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c0aad5b1-a255-40dd-a092-8c9cd326043e" x="508" y="132" width="35" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pregnancyDisease}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="49d0ea10-85e2-404c-b828-1265e03f705f" x="14" y="152" width="85" height="44"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[助产机构名称：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="19f2c9b2-2625-43bc-8906-f9d3bc9ee6dc" x="99" y="132" width="23" height="20"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[周]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9639f694-b8ee-4e3b-ab4d-e4b5355d0ae5" x="382" y="276" width="71" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生身长]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5ecfa6fc-6507-40a1-bd28-030cea035f25" x="126" y="276" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[kg]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="727404ec-4074-4914-a88a-2c9e65a1e878" x="453" y="276" width="30" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{length}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7fe79a0e-6a40-4f29-a9ca-342ddc6ddd6f" x="14" y="256" width="266" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[新生儿疾病筛查：1甲低 2 苯丙酮尿症 3其他遗传代谢病]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ba687411-a1d7-490f-a381-278f50c62c01" x="508" y="236" width="35" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hearingTest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f86c5d00-3b01-4cb4-a4cd-e25c19d71b26" x="280" y="276" width="30" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{weight1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e7f71c43-832d-487d-a3af-164c16844fb5" x="310" y="276" width="69" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[kg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3bb7ccce-fa42-45c3-a0a1-77527e662e78" x="14" y="236" width="494" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[新生儿听力筛查  1通过  2未通过  3未筛查4不详]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="25b6ecd8-1693-4e42-a486-94b046a13602" x="190" y="296" width="37" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{feedWay}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0f973f8a-9ab1-4972-bea6-38f4fa28a928" x="14" y="296" width="176" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[喂养方式 1纯母乳 2混合 3人工]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9f6d39bf-38c3-4c98-b4a3-ebc46921198a" x="96" y="276" width="30" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{weight}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d064feee-624d-43b2-ad3d-8cf6239b0a5a" x="310" y="296" width="72" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[ml/次]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ef68f216-60e3-4462-816d-239a907edbce" x="280" y="256" width="228" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{otherIllness}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="feecae1b-989c-4f50-a813-0859e2c08ca6" x="508" y="256" width="35" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{illnessScreening}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="60a06228-623d-46da-93aa-1c439b7d8880" x="483" y="276" width="60" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[cm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="69fe2a12-2f8e-414a-897c-457a449b4416" x="382" y="296" width="71" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[吃奶次数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="13764718-0578-49db-a6e2-7b1bbc4b040c" x="227" y="296" width="53" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[吃奶量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="056ec3c7-ccc4-4626-a3e7-5c059c289619" x="227" y="276" width="53" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[目前体重]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="19deab56-3a51-471f-b25c-00b7e2e73650" x="483" y="296" width="60" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[次/日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6ea2ad3d-e169-47de-9191-836b760f9e40" x="14" y="276" width="82" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[新生儿出生体重]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="038e679d-9f9f-42c6-99f0-89474a4c9bde" x="227" y="356" width="53" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{face}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e7ef6f04-33df-4b51-b1ed-c0e5cb295840" x="227" y="336" width="53" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[脉率]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dcb0bbaf-4035-400f-a75e-5bc5ffd7f853" x="14" y="336" width="74" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[体温]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c6e5c4e6-7792-4450-8522-4a58ae271f6f" x="382" y="336" width="71" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[呼吸频率]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="04c7bd57-1896-4f8c-85be-d9236dfb6a10" x="133" y="336" width="94" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[℃]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1f2d30e1-c279-48aa-93a1-153b1f3bbc5d" x="14" y="356" width="137" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[面色1红润  2黄染 3其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9f35fddb-d439-4dee-be18-e20dcb727d69" x="382" y="316" width="71" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[大便次数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="af5161a0-2f3c-4d05-adb4-675ca66959a2" x="227" y="316" width="118" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[大便  1糊状 2 稀]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b581cf04-e9b7-4ef4-a5bf-23c3373c36d6" x="190" y="316" width="37" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vomit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9cd6a0f5-fc67-4d2c-a727-2b14781036c3" x="483" y="316" width="60" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[次/日]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="6ced5c85-72ce-4122-967e-f1409620e7ad" x="88" y="336" width="45" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{temperature}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="777628d4-d2e4-4d31-a995-3e1d38c7b897" x="490" y="356" width="53" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jaundice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c1cfea12-2836-49c9-9820-00242fb860c9" x="280" y="356" width="210" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[黄疸部位1面部 2躯干 3四肢4 手足]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6225f80c-ef3f-4182-b928-c7d2d10fc2f9" x="483" y="336" width="60" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[次/分钟]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e2409ca2-3656-4e8a-96c6-16dd775a217c" x="345" y="316" width="37" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hearingTest}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="124d3fb2-8018-4ddc-bb09-06b5d13a5c57" x="14" y="316" width="176" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[呕吐   1 无 2 有]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ceda9090-08b1-4f4a-9a9b-045d1c7fac69" x="310" y="336" width="72" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[次/分钟]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1470e79b-ea8c-4bd0-b02f-4aee5e077792" x="151" y="356" width="76" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{faceOther}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f9d613e1-2edc-443e-8a01-45ad87f5bec7" x="490" y="416" width="53" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{neck}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1c8d8eb5-2e27-46c7-ba6b-31834cea2f5a" x="105" y="376" width="28" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[cm×]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b39c9dad-ffdf-4d8b-bdf1-6b0275451b10" x="14" y="416" width="137" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[耳外观   1未见异常  2异常]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7d01fdb5-6444-4b08-ba0a-9fcfa01037da" x="201" y="376" width="144" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1正常 2膨隆 3凹陷 4其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e594e75-f768-41bb-a2ff-c541a9f528e5" x="163" y="376" width="18" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[cm]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0bcdec61-d2f5-4120-bc05-085599b10266" x="425" y="416" width="65" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{neck1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1a64ffe9-4533-45c9-b17f-28fe8d2fde2c" x="151" y="416" width="75" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{earAbnormal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="50d3d67d-248b-4f70-9635-0bc077061497" x="133" y="376" width="30" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bregmaLongitudinal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e70496e2-7b78-4694-9742-2f9fb31de951" x="226" y="416" width="54" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="51d9cf45-a0ef-4e07-8d75-1abc8c5f223b" x="425" y="396" width="65" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{limbsAbnormal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="31752fc2-170b-4e69-9b3c-f57cf508fdec" x="280" y="396" width="145" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[四肢活动度 1未见异常 2异常]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c0a6c243-3530-47ef-9d99-992a2c2f0004" x="490" y="396" width="53" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{limbs}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="192ef13b-95a8-4859-8efe-29b887b357e4" x="14" y="376" width="61" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[前囟]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c38f825a-2335-4d02-b338-e9de41fad575" x="490" y="376" width="53" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bregmaStatus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b2dc1c20-9bf4-4d5e-8605-2a2a9f0cf456" x="280" y="416" width="145" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[颈部包块   1无       2有 ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="8f0e2741-9b47-4bb6-9c32-34c6ee47969a" x="75" y="376" width="30" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bregmaTransverse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="633f2c1f-7b14-4299-bb99-3e37742c16ee" x="151" y="396" width="75" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{earAbnormal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e55d1544-1d39-466f-b869-59a9b55a7e43" x="226" y="396" width="54" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{eye}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="db21eca3-59d6-459a-98c6-555925e48217" x="345" y="376" width="145" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{otherStatus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="991227e4-c3df-404b-996b-99c3298a3980" x="14" y="396" width="137" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[眼外观   1未见异常  2异常]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d4cc578e-5670-45ca-8cbe-b41af7d75908" x="151" y="436" width="75" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{noseAbnormal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dbc05f6c-4170-42c5-8136-9e3cb7c27202" x="490" y="496" width="53" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{genitalia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="cbebe98d-46f7-4ee6-b07e-3e510355bfa3" x="280" y="516" width="145" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[脊柱       1未见异常 2异常]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a6a4151-7a8b-4a54-824c-0b7310524c19" x="14" y="516" width="137" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[腹部触诊 1未见异常  2异常]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f7cc94c1-5cc7-4ffa-97a6-b9a022568361" x="14" y="436" width="137" height="40"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[鼻       1未见异常  2异常]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2d8afdd8-4f1c-4f5c-a731-2402881bdb27" x="280" y="476" width="145" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[肛门       1未见异常 2异常]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="cf46c73d-ce86-4613-9422-612190bdfd27" x="226" y="516" width="54" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{abdominal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="88930037-f60b-4dd5-a129-1c87016578d5" x="226" y="496" width="54" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{heartlung}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="041de1f5-29e4-4415-b5d2-e3d9d914f0a5" x="425" y="476" width="65" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{analAbnormal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="efe16de6-15fb-417a-848e-10e557ef41ba" x="425" y="516" width="65" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spineAbnormal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="4894a201-d552-4264-8f65-a805804d08ef" x="280" y="436" width="145" height="40"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[皮肤  1未见异常 2湿疹
+      3糜烂 4其他 ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="47e5e69c-7c83-4047-84c1-9a35d5b24cc7" x="490" y="476" width="53" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{anal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="696fcc64-f4fb-485e-b8db-72fd13351152" x="14" y="476" width="137" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[口  腔   1未见异常  2异常]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="6b1a058d-34c2-4492-ac83-9f086bc0c59c" x="490" y="436" width="53" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="55bb6263-6eb5-437f-a242-0fd5ef3f5360" x="490" y="516" width="53" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spine}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="49fc9da7-95da-4d04-b564-a3aaf9b77605" x="151" y="476" width="75" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mouseAbnormal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="29c11011-9597-4993-bd8b-38bc867572a5" x="14" y="496" width="137" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[心肺听诊 1未见异常  2异常]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="8c23812a-7865-4701-ac39-296eb335e6d1" x="151" y="516" width="75" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{abdominalabnormal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e930aef3-3050-4a7a-80ef-fbfcb7ae427b" x="425" y="496" width="65" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{genitaliaAbnormal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f4a4b078-2172-4648-9a67-e480d69f1010" x="280" y="496" width="145" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[外生殖器   1未见异常 2异常]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="228462e9-d1d9-4a51-9377-c10f361b4baf" x="425" y="436" width="65" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{skinAbnormal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2ebf03d6-8d5c-4343-b548-ec2d9a919ed4" x="226" y="436" width="54" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nose}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b6f3640a-3149-422b-a814-2916b4842bb2" x="151" y="496" width="75" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{heartLungAbnormal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9035859a-9890-493e-af9c-629c6d655409" x="226" y="476" width="54" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mouse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="13a0ebed-62a1-4a7c-aabf-33ffc37f94d1" x="226" y="536" width="212" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{umbilicalOther}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d2166234-57a3-4ff2-8278-4acf9fcb3535" x="438" y="536" width="105" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{umbilical}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="4366d432-2baf-4a1b-a1b7-9a2f6323584f" x="14" y="556" width="135" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[ 转诊建议         1无   2有  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3df0c64f-5852-4f82-8c1c-12222568032a" x="14" y="597" width="105" height="23"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[机构及科室：]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="78785604-7d0c-4ec6-9cb3-4876aefc2e5d" x="490" y="620" width="53" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guide}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9a557678-1fab-4bbe-9214-61b71cb807a6" x="14" y="536" width="212" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[脐带     1未脱 2脱落 3脐部有渗出 4其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bce58630-a026-419c-bc83-53eacc83f478" x="14" y="576" width="74" height="21"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[原因：]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e4513917-a088-4fb0-8537-88979a534fa7" x="88" y="576" width="192" height="20"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{referralReason}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fdd24316-51f2-4b7f-93a7-e34ce2923a71" x="490" y="556" width="53" height="64"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{referral}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c0caa28d-2bc6-49f4-aeda-dc3c6719452d" stretchType="RelativeToBandHeight" x="119" y="597" width="201" height="20"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="10" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{referralUnit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d845108c-6a82-4303-8722-e5c7190e2b87" x="14" y="620" width="476" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[指导 1喂养指导  2发育指导 3防病指导 4预防伤害指导 5口腔保健指导]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2de2ea9b-8d2f-4b2a-b498-69e226e60e95" x="252" y="640" width="85" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[下次随访地点]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e1ce6b93-3351-4b0e-b957-3d61b81081f0" x="337" y="660" width="206" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{visitDoctor_text}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement uuid="122a33cf-f577-472d-905a-0d8086b8714e" x="103" y="640" width="149" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{visitDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2295ac24-c341-4dfe-8e81-8ae658d2673f" x="14" y="640" width="89" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[本次访视日期]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c81de4ef-0b69-4373-aea2-5d2c4b5fd10a" x="337" y="640" width="206" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nextVisitAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="667f4f12-b97c-4d7c-bd14-1bce2f48918f" x="252" y="660" width="85" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[随访医生签名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5a388b8e-1bd2-400f-921d-3fed1a3c2b76" x="14" y="660" width="89" height="20"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[下次随访日期]]></text>
+			</staticText>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement uuid="65065d4f-a0b4-4210-80db-71c2cbc0d5bb" x="103" y="660" width="149" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nextVisitDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ssdev="http://www.bsoft.com.cn/schema/ssdev"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd         
+    http://www.bsoft.com.cn/schema/ssdev
+    http://www.bsoft.com.cn/schema/ssdev/ssdev.xsd">
+    <bean id="abstractService2" class="phis.source.service.AbstractService"
+        abstract="true" />
+    <bean id="phisActionExecutor2" class="phis.source.service.DefaultActionExecutor" />
+    <bean id="phisAbstractActionService" class="phis.source.service.AbstractActionService"
+        abstract="true" parent="phisActionExecutor2">
+        <property name="actionExecutor" ref="phisActionExecutor2" />
+        <property name="transactedActions">
+            <list>
+                <value>save*</value>
+                <value>update*</value>
+                <value>batch*</value>
+                <value>remove*</value>
+                <value>revert*</value>
+                <value>logout*</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="phis.publicService" class="phis.application.pub.source.PublicService"
+        parent="phisAbstractActionService" />
+    <!-- add by gejj start -->
+    <bean id="phis.clinicManageService" class="phis.application.cic.source.ClinicManageService"
+        parent="phisAbstractActionService" />
+    <bean id="clinicManageService" class="phis.application.cic.source.ClinicManageService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.clinicChargesProcessingService"
+        class="phis.application.ivc.source.ClinicChargesProcessingService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.clinicComboService" class="phis.application.cic.source.ClinicComboService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.clinicComboNameService" class="phis.application.cic.source.ClinicComboNameService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.clinicProjectComboUserService"
+        class="phis.application.cic.source.ClinicProjectComboUserService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.clinicStencilNameService" class="phis.application.cic.source.ClinicStencilNameService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.clinicTreatmentProgramsNameService"
+        class="phis.application.cic.source.ClinicTreatmentProgramsNameService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.patientQuery" class="phis.application.cic.source.PatientQuery" />
+    <bean id="phis.paramterQuery" class="phis.application.cfg.source.ParamterQuery" />
+    <bean id="phis.outPharmacySave" class="phis.application.cic.source.OutPharmacySave" />
+    <bean id="phis.outPharmacyLoad" class="phis.application.cic.source.OutPharmacyLoad" />
+    <bean id="phis.medicineQuery" class="phis.application.cic.source.MedicineQuery" />
+    <bean id="phis.clinicPerscriptionService" class="phis.application.cic.source.ClinicPerscriptionService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.clinicDiagnossisService" class="phis.application.cic.source.ClinicDiagnossisService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.clinicDisposalEntryService" class="phis.application.cic.source.ClinicDisposalEntryService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.referralService" class="phis.application.twr.source.ReferralService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.ReceiveRecordService" class="phis.application.twr.source.ReceiveRecordService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.emrTreeService" class="phis.application.cic.source.EMRTreeService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hisGetPatientDiagnoseRecordService"
+        class="phis.application.lis.source.HISGetPatientDiagnoseRecordService"
+        parent="phisAbstractActionService" />
+
+    <bean id="phis.HISAbstractService" class="phis.application.lis.source.HISAbstractService"
+        abstract="true" />
+    <bean id="phis.getHISPatientInfoService" class="phis.application.lis.source.GetHISPatientInfoService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.updateHISClinicPatientInfoService"
+        class="phis.application.lis.source.UpdateHISClinicPatientInfoService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.updateHISInhospPatientInfoService"
+        class="phis.application.lis.source.UpdateHISInhospPatientInfoService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.clinicLisCancelExecuteRecordService"
+        class="phis.application.lis.source.ClinicLisCancelExecuteRecordService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.clinicLisExecuteRecordService"
+        class="phis.application.lis.source.ClinicLisExecuteRecordService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.clinicLisInvalidRecordService"
+        class="phis.application.lis.source.ClinicLisInvalidRecordService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.clinicLisUnInvalidRecordService"
+        class="phis.application.lis.source.ClinicLisUnInvalidRecordService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.clinicLisRecordStatusService"
+        class="phis.application.lis.source.ClinicLisRecordStatusService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.clinicLisSubmitRecordService"
+        class="phis.application.lis.source.ClinicLisSubmitRecordService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.inhospLisCancelExecuteRecordService"
+        class="phis.application.lis.source.InhospLisCancelExecuteRecordService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.inhospLisExecuteRecordService"
+        class="phis.application.lis.source.InhospLisExecuteRecordService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.inhospLisInvalidRecordService"
+        class="phis.application.lis.source.InhospLisInvalidRecordService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.inhospLisUnInvalidRecordService"
+        class="phis.application.lis.source.InhospLisUnInvalidRecordService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.inhospLisRecordStatusService"
+        class="phis.application.lis.source.InhospLisRecordStatusService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.inhospLisSubmitRecordService"
+        class="phis.application.lis.source.InhospLisSubmitRecordService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.queryHISFeeInfoService" class="phis.application.lis.source.QueryHISFeeInfoService"
+        parent="phis.HISAbstractService" />
+    <bean id="phis.getHISTablePrimaryKeyService"
+        class="phis.application.lis.source.GetHISTableNewPrimaryKeyService"
+        parent="phis.HISAbstractService" />
+
+
+    <bean id="phisService" class="phis.application.lis.source.rpc.CommonPHISService">
+        <property name="sessionFactory" ref="mySessionFactory" />
+        <property name="services">
+            <map>
+                <entry key="getbrda" value-ref="phis.getHISPatientInfoService" />
+                <entry key="mzbrxxxg" value-ref="phis.updateHISClinicPatientInfoService" />
+                <entry key="mzyjtj" value-ref="phis.clinicLisSubmitRecordService" />
+                <entry key="mzyjzf" value-ref="phis.clinicLisInvalidRecordService" />
+                <entry key="mzyjqxzf" value-ref="phis.clinicLisUnInvalidRecordService" />
+                <entry key="mzyjzx" value-ref="phis.clinicLisExecuteRecordService" />
+                <entry key="mzyjqxzx" value-ref="phis.clinicLisCancelExecuteRecordService" />
+                <entry key="mzyjztcx" value-ref="phis.clinicLisRecordStatusService" />
+
+                <entry key="zybrxxxg" value-ref="phis.updateHISInhospPatientInfoService" />
+                <entry key="zyyztj" value-ref="phis.inhospLisSubmitRecordService" />
+                <entry key="zyyzzf" value-ref="phis.inhospLisInvalidRecordService" />
+                <entry key="zyyzqxzf" value-ref="phis.inhospLisUnInvalidRecordService" />
+                <entry key="zyyzzx" value-ref="phis.inhospLisExecuteRecordService" />
+                <entry key="zyyzqxzx" value-ref="phis.inhospLisCancelExecuteRecordService" />
+                <entry key="zyyzztcx" value-ref="phis.inhospLisRecordStatusService" />
+
+                <entry key="getfyxx" value-ref="phis.queryHISFeeInfoService" />
+                <entry key="getTablePKey" value-ref="phis.getHISTablePrimaryKeyService" />
+            </map>
+        </property>
+    </bean>
+    <!-- add by gejj end -->
+
+    <bean id="phis.empiLoader" class="phis.application.pix.source.EmpiLoader" />
+    <!-- add by zhangyq -->
+    <bean id="phis.userFulExpressionsService" class="phis.application.war.source.UserFulExpressionsService"
+        parent="phisAbstractActionService" />
+
+    <bean id="phis.changeDoctorOrDepartmentService"
+        class="phis.application.ivc.source.ChangeDoctorOrDepartmentService"
+        parent="phisAbstractActionService" />
+
+    <bean id="phis.hospitalCompensationNumberService"
+        class="phis.application.hos.source.HospitalCompensationNumberService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.chargesProduce" class="phis.application.ivc.source.ChargesProduce"
+        parent="phisAbstractActionService" />
+    <bean id="phis.chargesCheckout" class="phis.application.ivc.source.ChargesCheckout"
+        parent="phisAbstractActionService" />
+    <bean id="phis.emrTemperatureService" class="phis.application.emr.source.EmrTemperatureService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.medicalRecordsQueryService" class="phis.application.war.source.MedicalRecordsQueryService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.wardPatientQuery" class="phis.application.war.source.WardPatientQuery" />
+    <bean id="phis.wardAdviceQuery" class="phis.application.war.source.WardAdviceQuery" />
+    <bean id="phis.wardPatientLoad" class="phis.application.war.source.WardPatientLoad" />
+    <bean id="phis.wardOutPharmacySetService" class="phis.application.war.source.WardOutPharmacySetService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.wardTransferDeptService" class="phis.application.war.source.WardTransferDeptService"
+        parent="phisAbstractActionService" />
+
+    <bean id="phis.nurseRecordService" class="phis.application.war.source.NurseRecordService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.leaveHospitalLoad" class="phis.application.war.source.LeaveHospitalLoad" />
+    <bean id="phis.orderCardsListService" class="phis.application.war.source.OrderCardsListService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.remainService" class="phis.application.war.source.RemainService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.doctorCustomMadeService" class="phis.application.war.source.DoctorCustomMadeService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.emrMedicalRecordsService" class="phis.application.emr.source.EmrMedicalRecordsService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.emrManageService" class="phis.application.emr.source.EmrManageService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.doctorAdviceExecuteService" class="phis.application.war.source.DoctorAdviceExecuteService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.wardProjectService" class="phis.application.med.source.WardProjectService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.doctorAdviceSubmitQueryService"
+        class="phis.application.war.source.DoctorAdviceSubmitQueryService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.wardPatientManageService" class="phis.application.war.source.WardPatientManageService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.anAppointmentService" class="phis.application.reg.source.AnAppointmentService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.registrationDepartmentService"
+        class="phis.application.reg.source.RegistrationDepartmentService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.invoiceNumberService" class="phis.application.ivc.source.InvoiceNumberService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.treatmentNumberService" class="phis.application.ivc.source.TreatmentNumberService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.outPatientNumberService" class="phis.application.ivc.source.OutPatientNumberService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.registeredManagementService" class="phis.application.reg.source.RegisteredManagementService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.departmentSchedulingService" class="phis.application.reg.source.DepartmentSchedulingService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.officeDataService" class="phis.application.reg.source.OfficeDataService" />
+    <!-- <bean id="phis.medicinesPrivateManageService" class ="phis.application.sto.source.MedicinesPrivateManageService"/> -->
+    <!--add by caijy -->
+    <bean id="phis.medicinesManageService" class="phis.application.mds.source.MedicinesManageService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.OperationCodeService" class="phis.application.cfg.source.OperationCodeService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.storehouseManageService" class="phis.application.sto.source.StorehouseManageService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.essentialGraphService" class="phis.application.sto.source.EssentialGraphService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.storeDepartmentConsumptionservice"
+        class="phis.application.sto.source.StoreDepartmentConsumptionservice"
+        parent="phisAbstractActionService" />
+    <bean id="phis.pharmacyManageService" class="phis.application.pha.source.PharmacyManageService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalPharmacyService" class="phis.application.hph.source.HospitalPharmacyService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.medicareService" class="phis.application.yb.source.MedicareService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.wardDoctorPrintService" class="phis.application.war.source.WardDoctorPrintService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.prescriptionCommentsService" class="phis.application.pcm.source.PrescriptionCommentsService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.ownedDrugManageService" class="phis.application.odm.source.OwnedDrugManageService"
+        parent="phisAbstractActionService" />
+    <!-- add by taojh -->
+    <bean id="phis.hospitalPharmacyMedicineService"
+        class="phis.application.hph.source.HospitalPharmacyMedicineService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.medicalTechnologyProjectService"
+        class="phis.application.med.source.MedicalTechnologyProjectService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.diagnosisMaintainService" class="phis.application.med.source.DiagnosisMaintainService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.medicalTechnicalSectionService"
+        class="phis.application.med.source.MedicalTechnicalSectionService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.chargesDailyService" class="phis.application.ivc.source.ChargesDailyService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.chargesSummaryService" class="phis.application.ivc.source.ChargesSummaryService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.reportSettingService" class="phis.application.ivc.source.ReportSettingService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.accountsStatisticsService" class="phis.application.ivc.source.AccountsStatisticsService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.registeredManagementTurnDeptService"
+        class="phis.application.reg.source.RegisteredManagementTurnDeptService"
+        parent="phisAbstractActionService" />
+
+    <bean id="phis.registrationDoctorPlanService"
+        class="phis.application.reg.source.RegistrationDoctorPlanService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configConsociateControlService"
+        class="phis.application.cfg.source.ConfigConsociateControlService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configCommBusPermissionService"
+        class="phis.application.cfg.source.ConfigCommBusPermissionService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.permissionsVerifyService" class="phis.application.pub.source.PermissionsVerifyService"
+        parent="phisAbstractActionService" />
+
+    <!-- add by yaosq -->
+    <bean id="phis.configPatientPropertiesService"
+        class="phis.application.cfg.source.ConfigPatientPropertiesService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configCostService" class="phis.application.cfg.source.ConfigCostService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalAdmissionService" class="phis.application.hos.source.HospitalAdmissionService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configDoseFrequencyService" class="phis.application.cfg.source.ConfigDoseFrequencyService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configDiseaseNumberService" class="phis.application.cfg.source.ConfigDiseaseNumberService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.codeGeneratorService" class="phis.application.cfg.source.CodeGeneratorService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configRouteAdministrationService"
+        class="phis.application.cfg.source.ConfigRouteAdministrationService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configChargingProjectsDelService"
+        class="phis.application.cfg.source.ConfigChargingProjectsDelService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configChargingProjectsDetailDelService"
+        class="phis.application.cfg.source.ConfigChargingProjectsDetailDelService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configChargingProjectsService"
+        class="phis.application.cfg.source.ConfigChargingProjectsService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configChargingProjectsSaveService"
+        class="phis.application.cfg.source.ConfigChargingProjectsSaveService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configPaymentCategoryService"
+        class="phis.application.cfg.source.ConfigPaymentCategoryService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configPaymentTypeService" class="phis.application.cfg.source.ConfigPaymentTypeService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configDeptCostService" class="phis.application.cfg.source.ConfigDeptCostService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.systemInitializationService" class="phis.application.cfg.source.SystemInitializationService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.caseHistoryControlService" class="phis.application.cfg.source.CaseHistoryControlService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.medicalExpMaintainService" class="phis.application.cfg.source.MedicalExpMaintainService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.PHSAPeopleInfoService" class="phis.application.phsa.source.PHSAPeopleInfoService"
+        parent="phisAbstractActionService" />
+
+    <!-- sup by ding -->
+    <bean id="phis.storageOfMaterialsService" class="phis.application.sup.source.StorageOfMaterialsService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.applyRegisterService" class="phis.application.sup.source.ApplyRegisterService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.resetBusinessService" class="phis.application.sup.source.ResetBusinessService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.procurementPlanService" class="phis.application.sup.source.ProcurementPlanService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.secondaryStorageOfMaterialsService"
+        class="phis.application.sup.source.SecondaryStorageOfMaterialsService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.consumptionService" class="phis.application.sup.source.ConsumptionService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.faultyService" class="phis.application.sup.source.FaultyService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.applyManagementService" class="phis.application.sup.source.ApplyManagementService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.storageConfirmeService" class="phis.application.sup.source.StorageConfirmeService"
+        parent="phisAbstractActionService" />
+
+    <!-- sup by shiwy -->
+    <bean id="phis.configBooksCategoryService" class="phis.application.cfg.source.ConfigBooksCategoryService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configAccountingCategoryModuleService"
+        class="phis.application.cfg.source.ConfigAccountingCategoryModuleService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configSupplyUnitService" class="phis.application.cfg.source.ConfigSupplyUnitService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configTreasuryInformationService"
+        class="phis.application.cfg.source.ConfigTreasuryInformationService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configClassifyService" class="phis.application.cfg.source.ConfigClassifyService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.materialInformationManagement"
+        class="phis.application.cfg.source.ConfigMaterialInformationManagementService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configHsqxYgService" class="phis.application.cfg.source.ConfigHsqxYgService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.circulationMethodsModuleService"
+        class="phis.application.cfg.source.circulationMethodsModuleService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configInventoryInitialService"
+        class="phis.application.cfg.source.ConfigInventoryInitialService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configLogisticsInventoryControlService"
+        class="phis.application.cfg.source.ConfigLogisticsInventoryControlService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.materialsOutService" class="phis.application.sup.source.MaterialsOutService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.treasuryMonthlyService" class="phis.application.sup.source.TreasuryMonthlyService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configSubstancesClassService"
+        class="phis.application.cfg.source.ConfigSubstancesClassService"
+        parent="phisAbstractActionService" />
+
+
+
+
+    <!-- add by zhangxw -->
+    <bean id="phis.hospitalDebtDueService" class="phis.application.hos.source.HospitalDebtDueService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.invoiceNumberConfigService" class="phis.application.hos.source.InvoiceNumberConfigService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.paymentReceiptNumberConfigService"
+        class="phis.application.hos.source.PaymentReceiptNumberConfigService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalizationCheckoutService"
+        class="phis.application.hos.source.HospitalizationCheckoutService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.familySickBedizationCheckoutService"
+        class="phis.application.fsb.source.FamilySickBedizationCheckoutService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalCostProcessingService"
+        class="phis.application.hos.source.HospitalCostProcessingService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.familySickBedCostProcessingService"
+        class="phis.application.fsb.source.FamilySickBedCostProcessingService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalBedspaceToBedService"
+        class="phis.application.hos.source.HospitalBedspaceToBedService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalToBedInfoService" class="phis.application.hos.source.HospitalToBedInfoService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalBedVerificationService"
+        class="phis.application.hos.source.HospitalBedVerificationService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalBedInfoService" class="phis.application.hos.source.HospitalBedInfoService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalPaymentProcessingService"
+        class="phis.application.hos.source.HospitalPaymentProcessingService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalPatientManagementService"
+        class="phis.application.hos.source.HospitalPatientManagementService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.familySickBedPatientManagementService"
+        class="phis.application.fsb.source.FamilySickBedPatientManagementService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalPatientSelectionService"
+        class="phis.application.hos.source.HospitalPatientSelectionService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.familySickBedPatientSelectionService"
+        class="phis.application.fsb.source.FamilySickBedPatientSelectionService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.empiService" class="phis.application.pix.source.EmpiService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.suppliesxhmxInfoService" class="phis.application.hos.source.SuppliesxhmxInfoService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalBrryInfoService" class="phis.application.hos.source.HospitalBrryInfoService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalRetreatBedVerificationService"
+        class="phis.application.hos.source.HospitalRetreatBedVerificationService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalBedSetService" class="phis.application.hos.source.HospitalBedSetService"
+        parent="phisAbstractActionService" />
+    <!-- yub -->
+    <bean id="phis.configManufacturerForWZService"
+        class="phis.application.cfg.source.ConfigManufacturerForWZService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.secondaryMaterialsOutService"
+        class="phis.application.sup.source.SecondaryMaterialsOutService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.transferManagementService" class="phis.application.sup.source.TransferManagementService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.inventoryService" class="phis.application.sup.source.InventoryService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.suppliesStockSearchService" class="phis.application.sas.source.SuppliesStockSearchService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.hospitalGenerateVerificationService"
+        class="phis.application.hos.source.HospitalGenerateVerificationService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.familySickBedGenerateVerificationService"
+        class="phis.application.fsb.source.FamilySickBedGenerateVerificationService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.caseHistoryReviewService" class="phis.application.war.source.CaseHistoryReviewService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.systemParamsSave" class="phis.application.cfg.source.SystemParamsSave" />
+    <bean id="phis.systemParamsRemove" class="phis.application.cfg.source.SystemParamsRemove" />
+    <bean id="phis.configAntibioticsPermissionsService"
+        class="phis.application.cfg.source.ConfigAntibioticsPermissionsService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.sqService" class="phis.application.war.source.WardConsultationSqService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.wardConsultationYService" class="phis.application.war.source.WardConsultationYService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.unSubmitAdviceQuery" class="phis.application.war.source.UnSubmitAdviceQuery" />
+    <ssdev:reference id="dr.drProvider"
+        interface="com.bsoft.dr.server.rpc.IDRProvider" />
+
+    <bean id="phis.searchService" class="phis.application.pub.source.SearchService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.userDataBoxService" class="phis.application.emr.source.UserDataBoxService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.configChineseDiseaseService" class="phis.application.cfg.source.ConfigChineseDiseaseService"
+        parent="phisAbstractActionService" />
+
+    <bean id="phis.storehouseheightstoreservice"
+        class="phis.application.sto.source.StorehouseHeightStoreService"
+        parent="phisAbstractActionService" />
+
+    <!-- 全院查询 strat -->
+    <bean id="phis.PHSAManageService" class="phis.application.phsa.source.PHSAManageService"
+        parent="phisAbstractActionService" />
+    <!-- 全院查询end -->
+    <!-- 抗菌药物 -->
+    <bean id="phis.hospitalAntibacterialService"
+        class="phis.application.hos.source.HospitalAntibacterialService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.amqcLoad" class="phis.application.hos.source.AntibacterialLoad" />
+
+    <!--皮试管理 -->
+    <bean id="phis.skintestQuery" class="phis.application.stm.source.SkintestQuery" />
+    <bean id="phis.skintestManageService" class="phis.application.stm.source.SkinTestManageService"
+        parent="phisAbstractActionService" />
+    <!--家庭病床 -->
+    <bean id="phis.familySickBedManageService" class="phis.application.fsb.source.FamilySickBedManageService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.familySickBedAdviceQuery" class="phis.application.fsb.source.FamilySickBedAdviceQuery" />
+    <bean id="phis.jczxManageService" class="phis.application.fsb.source.JczxManageService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.familyPatientLoad" class="phis.application.fsb.source.FamilyPatientLoad" />
+    <bean id="phis.fsbPaymentProcessingService" class="phis.application.fsb.source.FsbPaymentProcessingService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.fsbNurseRecordService" class="phis.application.fsb.source.FSBNurseRecordService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.fsbCostProcessingService" class="phis.application.fsb.source.FsbCostProcessingService"
+        parent="phisAbstractActionService" />
+
+    <bean id="phis.depreciatedManagementService"
+        class="phis.application.sup.source.DepreciatedManagementService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.equipmentWeighingManagementService"
+        class="phis.application.sup.source.EquipmentWeighingManagementService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.meteringEquipmentTestService"
+        class="phis.application.sup.source.MeteringEquipmentTestService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.repairRequestrService" class="phis.application.sup.source.RepairRequestrService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.AntimicrobialDrugUseCausesService"
+        class="phis.application.cfg.source.AntimicrobialDrugUseCausesService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.clinicHospitalAppointmentService"
+        class="phis.application.cic.source.ClinicHospitalAppointmentService"
+        parent="phisAbstractActionService" />
+        
+    <!-- and by shiwy -->
+    <bean id="phis.configSystemParameterService"
+        class="phis.application.cfg.source.ConfigSystemParameterService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.clinicOutpatientExpensesInfoService"
+        class="phis.application.cic.source.ClinicOutpatientExpensesInfoService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.jcInvoiceNumberConfigService"
+        class="phis.application.fsb.source.JcInvoiceNumberConfigService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.jcPaymentReceiptNumberConfigService"
+        class="phis.application.fsb.source.JcPaymentReceiptNumberConfigService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.jcOutPharmacySetService" class="phis.application.fsb.source.JcOutPharmacySetService"
+        parent="phisAbstractActionService" />
+        
+    <bean id="phis.PhisToChisService" class="phis.application.chis.source.PhisToChisService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.medicalTechnologyService" class="phis.application.med.source.MedicalTechnologyService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.wjzManageService" class="phis.application.wjz.source.WjzManageService" 
+        parent="phisAbstractActionService" />
+        
+    <bean id="phis.yBService" class="phis.application.yb.source.YBService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.healthCardService" class="phis.application.reg.source.HealthCardService"
+        parent="phisAbstractActionService" />
+    <!-- 新农合接口类 --> 
+    <bean id="phis.xnhService" class="phis.application.xnh.source.XnhService"
+        parent="phisAbstractActionService" />
+    <bean id="phis.jckdService" class="phis.application.pacs.source.JckdService" /> 
+    <bean id="phis.jykdService" class="phis.application.lis.source.JykdService" />      
+    
+    <!-- add by zhaojian 检查开单 --> 
+    <bean id="phis.checkApplyService" class="phis.application.ccl.source.CheckApplyService"
+        parent="phisAbstractActionService" />
+    <!-- zhaojian 2017-10-25 【浦口】大数据健康档案浏览器接口传参加密 --> 
+    <bean id="phis.DESedeService"
+        class="phis.application.ehr.source.DESedeService"
+        parent="phisAbstractActionService" />
+	 <!-- 金保接口类 -->
+	<bean id="phis.NjjbService" class="phis.application.njjb.source.NjjbService"
+        parent="phisAbstractActionService" />
+    <!-- zhaojian 2018-07-11 【中医馆服务】 --> 
+    <bean id="phis.TcmService"
+        class="phis.application.tcm.source.TcmService"
+        parent="phisAbstractActionService" /> 
+     <!-- zhaojian 2018-10-19 【东软智能提示及健康档案浏览器】 --> 
+    <bean id="phis.ZntsService"
+        class="phis.application.znts.source.ZntsService"
+        parent="phisAbstractActionService" /> 		
+    <!-- zhaojian 2018-09-14 【移动支付】 --> 
+    <bean id="phis.mobilePaymentService"
+        class="phis.application.pay.source.MobilePaymentService"
+        parent="phisAbstractActionService" />
+    <!-- zhaojian 2019-03-13 【短信通知】 --> 
+    <bean id="phis.messageService" class="phis.application.pub.source.MessageService"
+        parent="phisAbstractActionService" />
+    <!-- 家庭医生签约 -->
+    <bean id="phis.GeneralPractitionersService" class="phis.application.gp.source.GeneralPractitionersService"
+          parent="phisAbstractActionService"/>
+     <bean id="phis.SptService" class="phis.application.spt.source.SptService"
+          parent="phisAbstractActionService"/>	
+    <!--清创缝合手术同意书-->
+	<bean id="phis.DebridementAgreementService" class="phis.application.dpc.source.DebridementAgreementService"
+		  parent="phisAbstractActionService" />
+    <!--拔牙知情同意书病历版-->
+    <bean id="phis.ExtractionAgreementService" class="phis.application.dpc.source.DentistryService"
+          parent="phisAbstractActionService" />
+    <!--固定修复知情同意书-->
+    <bean id="phis.FixedAgreementService" class="phis.application.dpc.source.DentistryService"
+          parent="phisAbstractActionService" />
+    <!--固定活动知情同意书-->
+    <bean id="phis.ActivityAgreementService" class="phis.application.dpc.source.DentistryService"
+          parent="phisAbstractActionService" />
+    <!--牙周治疗知情同意书病历版-->
+    <bean id="phis.PeriodontalAgreementService" class="phis.application.dpc.source.DentistryService"
+          parent="phisAbstractActionService" />
+    <!--孕产妇减免-->
+    <bean id="phis.plwService"
+        class="phis.application.plw.source.PlwService"
+        parent="phisAbstractActionService" />
+	<!--SPD-->
+	<bean id="phis.zyyService" class="phis.application.zyy.source.ZyyService"
+		parent="phisAbstractActionService" />	
+	<!--HMS-->
+	<bean id="hai.hmsInterfaceService" class="hai.hms.HmsInterfaceService"
+		parent="phisAbstractActionService" />
+</beans>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="MS_MZXX" table="MS_MZXX">
+		<id name="MZXH" type="java.lang.Long">
+			<column name="MZXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20"/>
+		<property name="FPHM" type="java.lang.String" length="20"/>
+		<property name="SFRQ" type="timestamp"/>
+		<property name="BRID" type="java.lang.Long" length="18"/>
+		<property name="BRXM" type="java.lang.String" length="40"/>
+		<property name="BRXB" type="java.lang.Integer" length="4"/>
+		<property name="BRXZ" type="java.lang.Long" length="18"/>
+		<property name="FYZH" type="java.lang.String" length="10"/>
+		<property name="DWXH" type="java.lang.Long" length="18"/>
+		<property name="XJJE" type="java.lang.Double" length="12"/>
+		<property name="ZPJE" type="java.lang.Double" length="12"/>
+		<property name="ZHJE" type="java.lang.Double" length="12"/>
+		<property name="HBWC" type="java.lang.Double" length="12"/>
+		<property name="QTYS" type="java.lang.Double" length="12"/>
+		<property name="ZJJE" type="java.lang.Double" length="12"/>
+		<property name="ZFJE" type="java.lang.Double" length="12"/>
+		<property name="ZHLB" type="java.lang.Integer" length="2"/>
+		<property name="ZFPB" type="java.lang.Integer" length="1"/>
+		<property name="THPB" type="java.lang.Integer" length="1"/>
+		<property name="FPGL" type="java.lang.String" length="12"/>
+		<property name="MZGL" type="java.lang.Long" length="18"/>
+		<property name="MZLB" type="java.lang.Long" length="18"/>
+		<property name="GHGL" type="java.lang.Long" length="18"/>
+		<property name="CZGH" type="java.lang.String" length="10"/>
+		<property name="JZRQ" type="timestamp"/>
+		<property name="HZRQ" type="timestamp"/>
+		<property name="SFFS" type="java.lang.Integer" length="1"/>
+		<property name="HBBZ" type="java.lang.Integer" length="1"/>
+		<property name="XNFP" type="java.lang.String" length="12"/>
+		<property name="JKJE" type="java.lang.Double" length="12"/>
+		<property name="TZJE" type="java.lang.Double" length="12"/>
+		<property name="HZJE" type="java.lang.Double" length="12"/>
+		<property name="JJZFJE" type="java.lang.Double" length="12"/>
+		<property name="MZJZJE" type="java.lang.Double" length="12"/>
+		<property name="FFFS" type="java.lang.Integer" length="2"/>
+		<property name="YDCZSF" type="java.lang.String" length="18"/>
+		<property name="YDCZFPBD" type="java.lang.String" length="18"/>
+		<property name="FPZS" type="java.lang.Integer" length="2"/>
+		<property name="YLJZJE" type="java.lang.Double" length="12"/>
+		<property name="BXID" type="java.lang.String" length="18"/>
+		<property name="JYLYJMJE" type="java.lang.Double" length="12"/>
+		<property name="YCFJMJE" type="java.lang.Double" length="12"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.tr.schemas.MDC_TumourPatientReportCard" table="MDC_TumourPatientReportCard">
+		<id name="TPRCID" type="java.lang.String">
+			<column name="TPRCID"/>
+			<generator class="assigned" />
+		</id>
+		<property name="phrId" type="java.lang.String" length="32" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="highRiskType" type="java.lang.String" length="2" />
+		<property name="informStatus" type="java.lang.String" length="1" />
+		<property name="agreeVisit" type="java.lang.String" length="1" />
+		<property name="patientNumber" type="java.lang.String" length="50" />
+		<property name="admissionNumber" type="java.lang.String" length="50" />
+		<property name="tumourName" type="java.lang.String" length="100" />
+		<property name="ICD10Code" type="java.lang.String" length="50" />
+		<property name="pathologyName" type="java.lang.String" length="100" />
+		<property name="ICDO3Code" type="java.lang.String" length="50" />
+		<property name="pathologyNumber" type="java.lang.String" length="20" />
+		<property name="T" type="java.lang.String" length="10" />
+		<property name="N" type="java.lang.String" length="10" />
+		<property name="M" type="java.lang.String" length="10" />
+		<property name="clinicStageCode" type="java.lang.String" length="1" />
+		<property name="bodyParts" type="java.lang.String" length="30" />
+		<property name="tumourSite" type="java.lang.String" length="1" />
+		<property name="diagnosisDate" type="date"  />
+		<property name="diagnosisGist" type="java.lang.String" length="50" />
+		<property name="reportDate" type="date"  />
+		<property name="reportDoctor" type="java.lang.String" length="20" />
+		<property name="reportUnit" type="java.lang.String" length="20" />
+		<property name="manaDoctorId" type="java.lang.String" length="20" />
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="isDeath" type="java.lang.String" length="1" />
+		<property name="deathDate" type="date"  />
+		<property name="deathCause" type="java.lang.String" length="20" />
+		<property name="status" type="java.lang.String" length="1" />
+		<property name="cancellationReason" type="java.lang.String" length="1" />
+		<property name="cancellationUser" type="java.lang.String" length="20" />
+		<property name="cancellationDate" type="timestamp"  />
+		<property name="cancellationUnit" type="java.lang.String" length="20" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp"  />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp"  />
+		<property name="dieFlag" type="java.lang.String" length="1" />
+	</class>
+</hibernate-mapping>

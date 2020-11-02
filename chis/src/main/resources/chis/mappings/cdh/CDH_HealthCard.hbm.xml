@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.cdh.schemas.CDH_HealthCard" table="CDH_HealthCard">
+		<id name="phrId" type="java.lang.String">
+			<column name="phrId" />
+			<generator class="assigned" />
+		</id>
+		<property name="oneYearLive" type="java.lang.String" length="1" />
+		<property name="manaDoctorId" type="java.lang.String"
+			length="20" />
+		<property name="cdhDoctorId" type="java.lang.String"
+			length="20" />	
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="healthNo" type="java.lang.String" length="20" />
+		<property name="ownerArea" type="java.lang.String" length="2" />
+		<property name="homeAddress" type="java.lang.String" length="25" />
+		<property name="homeAddress_text" type="java.lang.String" length="200" />
+		<property name="fatherEmpiId" type="java.lang.String" length="32" />
+		<property name="motherEmpiId" type="java.lang.String" length="32" />
+		<property name="litters" type="java.lang.String" length="1" />
+		<property name="boneCondition" type="java.lang.String"
+			length="1" />
+		<property name="otherBone" type="java.lang.String" length="100" />
+		<property name="deliveryConditions" type="java.lang.String"
+			length="1" />
+		<property name="conception" type="java.lang.Integer" />
+		<property name="birth" type="java.lang.Integer" />
+		<property name="gestation" type="java.lang.Integer" />
+		<property name="birthWeight" type="big_decimal" length="8" />
+		<property name="birthHeight" type="big_decimal" length="8" />
+		<property name="headSize" type="big_decimal" length="8" />
+		<property name="circumference" type="big_decimal" length="8" />
+		<property name="motherAbnormal" type="java.lang.String"
+			length="1" />
+		<property name="abnormal" type="java.lang.String" length="100" />
+		<property name="apgar1" type="java.lang.String" length="10" />
+		<property name="apgar5" type="java.lang.String" length="10" />
+		<property name="apgar10" type="java.lang.String" length="10" />
+		<property name="birthDefects" type="java.lang.String"
+			length="1" />
+		<property name="defectsType" type="java.lang.String" length="100" />
+		<property name="screenFlage" type="java.lang.String" length="2" />
+		<property name="heardScreen" type="java.lang.String" length="2" />
+		<property name="screen" type="java.lang.String" length="100" />
+		<property name="screenRecord" type="java.lang.String"
+			length="100" />
+		<property name="otherScreenResult" type="java.lang.String"
+			length="100" />
+		<property name="otherScreen" type="java.lang.String"
+			length="100" />
+		<property name="deformity" type="java.lang.String" length="100" />
+		<property name="otherDeformity" type="java.lang.String"
+			length="100" />
+		<property name="familyHistory" type="java.lang.String"
+			length="64" />
+		<property name="otherFamily" type="java.lang.String"
+			length="100" />
+		<property name="relationship" type="java.lang.String"
+			length="10" />
+		<property name="allergicHistory" type="java.lang.String"
+			length="100" />
+		<property name="otherAllergyDrug" type="java.lang.String"
+			length="100" />
+		<!-- 
+			<property name="clinicSource" type="java.lang.String"
+			length="1" />
+			<property name="registeredType" type="java.lang.String"
+			length="1" />
+			<property name="motherHealth" type="java.lang.String"
+			length="1" />
+			<property name="contraceptive" type="java.lang.String"
+			length="1" />
+			<property name="drugName" type="java.lang.String" length="20" />
+			<property name="premature" type="java.lang.String" length="1" />
+			<property name="deliveryType" type="java.lang.String"
+			length="2" />
+			<property name="twins" type="java.lang.String" length="1" />
+			<property name="salvageFlag" type="java.lang.String" length="1" />
+			<property name="deliveryDay" type="date" />
+			<property name="hospitalName" type="java.lang.String"
+			length="100" />
+			<property name="headMonth" type="java.lang.Integer" />
+			<property name="turnMonth" type="java.lang.Integer" />
+			<property name="sitMonth" type="java.lang.Integer" />
+			<property name="crawlMonth" type="java.lang.Integer" />
+			<property name="dangerous" type="java.lang.String" length="1" />
+			<property name="dangerousFactor" type="java.lang.String"
+			length="2" />
+			<property name="nurseryFlag" type="java.lang.String" length="1" />
+			<property name="nurseryDate" type="date" />
+		-->
+		<property name="isHighRisk" type="string" length="1"/>
+		<property name="highRiskType" type="string" length="100"/>
+		<property name="otherType" type="string" length="100"/>
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		
+		
+		<property name="cancellationCheckUser" type="java.lang.String"
+			length="20" />
+		<property name="cancellationCheckDate" type="date" />
+		<property name="cancellationCheckUnit" type="java.lang.String"
+			length="8" />
+		<property name="status" type="java.lang.String" length="1" />
+		
+		<property name="endManageDate" type="date" />
+		<property name="endManageDoctor" type="string" length="20"/>
+		<property name="endManageUnit" type="string" length="20"/>
+		<property name="endManageFlag" type="string" length="1"/>
+		
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="cancellationUser" type="java.lang.String" length="20" />
+		<property name="cancellationDate" type="date" />
+		<property name="cancellationUnit" type="java.lang.String" length="20" />
+		<property name="cancellationReason" type="java.lang.String" length="1" />
+		<property name="deadReason" type="java.lang.String" length="100" />
+	</class>
+</hibernate-mapping>

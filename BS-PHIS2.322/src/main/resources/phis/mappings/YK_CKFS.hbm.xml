@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YK_CKFS" table="YK_CKFS">
+		<composite-id>
+			<key-property name="CKFS" column="CKFS" type="java.lang.Integer"/>
+			<key-property name="XTSB" column="XTSB" type="java.lang.Long" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="FSMC" type="java.lang.String" length="20" />
+		<property name="FSLB" type="java.lang.Integer" length="4" />
+		<property name="CKDH" type="java.lang.Integer" length="6" />
+		<property name="SBFH" type="java.lang.String" length="4" />
+		<property name="KSPB" type="java.lang.Integer" length="1" />
+		<property name="DYFS" type="java.lang.Integer" length="8" />
+	</class>
+</hibernate-mapping>

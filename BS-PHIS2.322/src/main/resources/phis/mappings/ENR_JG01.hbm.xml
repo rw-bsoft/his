@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="ENR_JG01" table="ENR_JG01">
+			<id name="JGBH" type="java.lang.Long">
+            	<column name="JGBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGMC" type="java.lang.String" length="30" />
+        	<property name="BLLB" type="java.lang.Long" length="9" />
+        	<property name="MBLB" type="java.lang.Long" length="9" />
+        	<property name="SSKS" type="java.lang.String" length="200" />
+        	<property name="PLCX" type="java.lang.Long" length="2" />
+        	<property name="PYDM" type="java.lang.String" length="10" />
+        	<property name="WBDM" type="java.lang.String" length="10" />
+        	<property name="GLMB" type="java.lang.String" length="30" />
+        	<property name="ZZKD" type="java.lang.Long" length="5" />
+        	<property name="ZZGD" type="java.lang.Long" length="5" />
+        	<property name="MYHS" type="java.lang.Long" length="4" />
+        	<property name="ZXBZ" type="java.lang.Long" length="1" />
+        	<property name="BZXX" type="java.lang.String" length="30" />
+        	<property name="DLHHXM" type="java.lang.Long" length="18" />
+        	<property name="DLYM" type="java.lang.Long" length="1" />
+        	<property name="ZZFX" type="java.lang.Long" length="1" />
+        	<property name="ZZDX" type="java.lang.Long" length="2" />
+</class>
+</hibernate-mapping>

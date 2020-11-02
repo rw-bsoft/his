@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="RES_DataSetContent" table="RES_DataSetContent">
+		<id name="DataSetContentId" type="java.lang.Integer">
+	    	<column name="DataSetContentId"/>
+			<generator class="sequence">
+            	<param name="sequence">SEQ_RES_DataSetContent</param>
+           	</generator>
+		</id>
+		<property name="DataSetId" type="java.lang.Integer"  />
+		<property name="DataElementId" type="java.lang.Integer"  />
+		<property name="CustomIdentify" type="java.lang.String" length="50" />
+		<property name="InteriorIdentify" type="java.lang.String" length="50" />
+		<property name="DName" type="java.lang.String" length="50" />
+		<property name="DComment" type="java.lang.String" length="500" />
+		<property name="PyCode" type="java.lang.String" length="50" />
+		<property name="Frequency" type="java.lang.String" length="1" />
+		<property name="ForceIdentify" type="java.lang.String" length="1" />
+		<property name="DSequence" type="java.lang.Integer"  />
+		<property name="ImportantItem" type="java.lang.Integer"  />
+		<property name="CodeSystem" type="java.lang.String" length="50" />
+		<property name="DataGroup" type="java.lang.Integer"  />
+		<property name="SampleValue" type="java.lang.String" length="200" />
+		<property name="DefaultValueWhenNull" type="java.lang.String" length="200" />
+		<property name="TargetTable" type="java.lang.String" length="50" />
+		<property name="TargetColumn" type="java.lang.String" length="50" />
+		<property name="DataType" type="java.lang.String" length="2" />
+		<property name="DataLength" type="java.lang.String" length="15" />
+		<property name="SummerFlag" type="java.lang.String" length="1" />
+	</class>
+</hibernate-mapping>

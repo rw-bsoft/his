@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="GY_CSH" table="GY_CSH">
+		<composite-id>
+			<key-property name="GROUPID" column="GROUPID" type="java.lang.Long"/>
+			<key-property name="OFFICEID" column="OFFICEID" type="java.lang.Long"/>
+			<key-property name="JGID" column="JGID" type="java.lang.String"/>
+		</composite-id>
+		<property name="INIT" type="java.lang.Integer" length="1" />
+	</class>
+</hibernate-mapping>

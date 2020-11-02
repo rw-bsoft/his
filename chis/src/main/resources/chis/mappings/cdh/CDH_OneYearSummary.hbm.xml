@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.cdh.schemas.CDH_OneYearSummary"
+		table="CDH_OneYearSummary">
+		<id name="phrId" type="java.lang.String">
+			<column name="phrId" />
+			<generator class="assigned" />
+		</id>
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<!--  
+			<property name="addWeight6" type="java.lang.Double" length="6" />
+			<property name="addWeight12" type="java.lang.Double" length="6" />
+			<property name="teethingMonth" type="java.lang.Integer"  />
+			<property name="teethingCount" type="java.lang.Integer"  />
+			<property name="crossMonth" type="java.lang.Integer"  />
+			<property name="crossFlag" type="java.lang.String" length="1" />
+			<property name="weight3" type="java.lang.String" length="20" />
+			<property name="weight6" type="java.lang.String" length="20" />
+			<property name="weight9" type="java.lang.String" length="20" />
+			<property name="weight12" type="java.lang.String" length="20" />
+			<property name="height3" type="java.lang.String" length="20" />
+			<property name="height6" type="java.lang.String" length="20" />
+			<property name="height9" type="java.lang.String" length="20" />
+			<property name="height12" type="java.lang.String" length="20" />
+			<property name="DDSTTest" type="java.lang.String" length="1" />
+			<property name="hearing" type="java.lang.String" length="1" />
+			<property name="eyesight" type="java.lang.String" length="1" />
+			<property name="teeth" type="java.lang.Integer"  />
+			<property name="feedWay" type="java.lang.String" length="1" />
+			<property name="Hb2" type="java.lang.Double" length="5" />
+			<property name="RBC2" type="java.lang.Double" length="5" />
+			<property name="Hb6" type="java.lang.Double" length="5" />
+			<property name="RBC6" type="java.lang.Double" length="5" />
+			<property name="Hb12" type="java.lang.Double" length="5" />
+			<property name="RBC12" type="java.lang.Double" length="5" />
+			<property name="URI" type="java.lang.String" length="1" />
+			<property name="bronchitis" type="java.lang.String" length="1" />
+			<property name="diarrhoea" type="java.lang.String" length="1" />
+			<property name="otherDisease" type="java.lang.String" length="30" />
+			<property name="rachitis" type="java.lang.String" length="1" />
+			<property name="rachitisDrug" type="java.lang.String" length="30" />
+			<property name="anemia" type="java.lang.String" length="1" />
+			<property name="anemiaDrug" type="java.lang.String" length="30" />
+		-->
+		<property name="growth" type="java.lang.String" length="200" />
+		<property name="intellectual" type="java.lang.String"
+			length="200" />
+		<property name="nutritionStatus" type="java.lang.String"
+			length="200" />
+		<property name="disease" type="java.lang.String" length="200" />
+		<property name="height" type="big_decimal" length="5" />
+		<property name="weight" type="big_decimal" length="5" />
+		<property name="headMeasurement" type="big_decimal" length="5" />
+		<property name="pupil" type="java.lang.String" length="50" />
+		<property name="ear" type="java.lang.String" length="50" />
+		<property name="nose" type="java.lang.String" length="50" />
+		<property name="teeth" type="java.lang.Integer" />
+		<property name="decayedTooth" type="java.lang.String"
+			length="50" />
+		<property name="heart" type="java.lang.String" length="50" />
+		<property name="lung" type="java.lang.String" length="50" />
+		<property name="liver" type="java.lang.String" length="50" />
+		<property name="spleen" type="java.lang.String" length="50" />
+		<property name="extremities" type="java.lang.String"
+			length="50" />
+		<property name="genitals" type="java.lang.String" length="50" />
+		<property name="skin" type="java.lang.String" length="50" />
+		<property name="other" type="java.lang.String" length="50" />
+		<property name="hearingTest1" type="java.lang.String"
+			length="50" />
+		<property name="feedWay" type="java.lang.String" length="50" />
+		<property name="others" type="java.lang.String" length="200" />
+		<property name="RBC2" type="big_decimal" length="5" />
+		<property name="generalComment" type="java.lang.String"
+			length="100" />
+		<property name="guide" type="java.lang.String" length="100" />
+		<property name="memo" type="java.lang.String" length="100" />
+		<property name="summaryDoctor" type="java.lang.String"
+			length="20" />
+		<property name="summaryDate" type="timestamp" />
+		<property name="summaryUnit" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

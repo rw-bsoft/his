@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="医院办公室"  class="TableDictionary" supportRemote="false" entry="SYS_Office" keyField="ID" textField="OFFICENAME" filter="['and',['ne',['$','OFFICECODE'],['$','PARENTID']],['eq',['$','HOSPITALDEPT'],['s','1']],['eq',['$','ORGANIZCODE'],['$','%user.manageUnit.ref']]]" queryOnly="true">
+</dic>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_YZDY" table="EMR_YZDY">
+			<id name="DYXH" type="java.lang.Long">
+            	<column name="DYXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="ZYH" type="java.lang.Long" length="18" />
+        	<property name="YZBXH" type="java.lang.Long" length="18" />
+        	<property name="YZQX" type="java.lang.Integer" length="1" />
+        	<property name="DYRQ" type="timestamp"  />
+        	<property name="DYNR" type="java.lang.String" length="255" />
+        	<property name="DYYM" type="java.lang.Integer" length="2" />
+        	<property name="DYHH" type="java.lang.Integer" length="4" />
+        	<property name="CZBZ" type="java.lang.Integer" length="1" />
+</class>
+</hibernate-mapping>

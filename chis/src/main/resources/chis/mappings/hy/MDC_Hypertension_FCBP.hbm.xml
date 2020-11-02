@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class entity-name="chis.application.hy.schemas.MDC_Hypertension_FCBP" table="MDC_Hypertension_FCBP">
+    <id name="fcbpId" type="java.lang.String">
+      <column name="fcbpId"/>
+      <generator class="assigned" />
+    </id>
+    <property name="phrId" type="java.lang.String" length="30" />
+    <property name="empiId" type="java.lang.String" length="32" />
+    <property name="constriction" type="java.lang.Integer" length="8" />
+	<property name="diastolic" type="java.lang.Integer" length="8" />
+    <property name="weight" type="java.lang.Double" length="8" />
+	<property name="height" type="java.lang.Double" length="8" />
+	<property name="bmi" type="java.lang.Double" length="8" />
+	<property name="hypertensionLevel" type="java.lang.Integer" />
+	<property name="hypertensionHistory" type="java.lang.String"  length="1"/>
+	<property name="hypertensionFirst" type="java.lang.String"  length="1"/>
+	<property name="measureDate" type="date" />
+	<property name="measureDoctor" type="java.lang.String"  length="20" />
+	<property name="measureUnit" type="java.lang.String" length="20" />
+	<property name="createUser" type="java.lang.String" length="20" />
+	<property name="createDate" type="timestamp"/>
+	<property name="createUnit" type="java.lang.String" length="20" />
+   </class>
+</hibernate-mapping>

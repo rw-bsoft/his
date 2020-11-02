@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="WL_HSQX" table="WL_HSQX">
+		<composite-id>
+			<key-property name="YGID" column="YGID" type="java.lang.String" length="10"/>
+			<key-property name="KSDM" column="KSDM" type="java.lang.Long" length="18"/>
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="MRZ" type="java.lang.Integer" length="1" />
+		<property name="HSZBZ" type="java.lang.Integer" length="1" />
+	</class>
+</hibernate-mapping>

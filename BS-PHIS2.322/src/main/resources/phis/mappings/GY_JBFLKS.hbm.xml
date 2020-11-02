@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_JBFLKS" table="GY_JBFLKS">
+			<id name="JLXH" type="java.lang.String">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="8" />
+        	<property name="KSDM" type="java.lang.String" length="18" />
+        	<property name="FLXH" type="java.lang.String" length="18" />
+        	<property name="BZXX" type="java.lang.String" length="200" />
+</class>
+</hibernate-mapping>

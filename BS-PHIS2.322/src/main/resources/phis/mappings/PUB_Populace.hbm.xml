@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="PUB_Populace" table="PUB_Populace">
+			<composite-id> 
+			<key-property name="infoYear" column="infoYear" type="java.lang.String" length="4"/> 
+			<key-property name="commCode" column="commCode" type="java.lang.String" length="21"/> 
+			</composite-id> 
+        	<property name="population" type="int"/>
+        	<property name="doorNumber" type="int"/>
+        	<property name="checkDate" type="date"  />
+        	<property name="season" type="java.lang.String" length="20"/>
+        	<property name="checkUser" type="java.lang.String" length="20" />
+        	<property name="checkUnit" type="java.lang.String" length="8" />
+</class>
+</hibernate-mapping>

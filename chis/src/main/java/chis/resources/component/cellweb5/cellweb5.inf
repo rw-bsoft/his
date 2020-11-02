@@ -1,0 +1,63 @@
+; ========================= cellweb5.inf ========================
+
+   ; This .inf file will control the installation of the CellWeb
+   ; control. This control has been compiled with Visual C++ version 6.0.
+
+
+   [version]
+   ; version signature (same for both NT and Win95) do not remove
+   signature="$CHICAGO$"
+   AdvancedINF=2.0
+
+   [Add.Code]
+   HAdo.dll=HAdo.dll
+   Chart10W.dll=Chart10W.dll
+   ChartChs.dll=ChartChs.dll
+   CellWChs.dll=CellWChs.dll
+   cellweb5.ocx=cellweb5.ocx
+   YRWXls.ocx=YRWXls.ocx
+   ;Menu.ocx=Menu.ocx
+
+   [HAdo.dll]
+   file-win32-x86=thiscab
+   DestDir=11
+
+   [Chart10W.dll]
+   file-win32-x86=thiscab
+   FileVersion=5,2,5,902
+   DestDir=11
+
+   [ChartChs.dll]
+   file-win32-x86=thiscab
+   FileVersion=5,2,5,902
+   DestDir=11
+
+   [CellWChs.dll]
+   file-win32-x86=thiscab
+   FileVersion=5,3,7,809
+   DestDir=11
+
+   [cellweb5.ocx]
+   file-win32-x86=thiscab
+   clsid={3F166327-8030-4881-8BD2-EA25350E574A}
+   FileVersion=5,3,8,0620
+   DestDir=11
+   RegisterServer=yes
+
+   [YRWXls.ocx]
+   file-win32-x86=thiscab
+   clsid={BD9E5104-2F20-4A9F-AB14-82D558FF374E}
+   FileVersion=5,3,7,321
+   DestDir=11
+   RegisterServer=yes
+
+   ;[Menu.ocx]
+   ;file-win32-x86=thiscab
+   ;clsid={F82DB98D-842D-4DAB-9312-E478D8255720}
+   ;FileVersion=1,0,0,1
+   ;DestDir=11
+   ;RegisterServer=yes
+
+
+   
+   ; ====================== end of cellweb.inf ===================== 

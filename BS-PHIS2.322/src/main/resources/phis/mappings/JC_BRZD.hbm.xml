@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_BRZD" table="JC_BRZD">
+		<id name="JLBH" type="java.lang.Long">
+			<column name="JLBH" />
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="25" />
+		<property name="ZDXH" type="java.lang.Long" length="18" />
+		<property name="BRID" type="java.lang.Long" length="18" />
+		<property name="ZYH" type="java.lang.Long" length="18" />
+		<property name="CCXH" type="java.lang.Long" length="18" />
+		<property name="PLXH" type="java.lang.Integer" length="4" />
+		<property name="ZDSJ" type="timestamp" />
+		<property name="ZDLB" type="java.lang.Integer" length="2" />
+		<property name="ICD10" type="java.lang.String" length="10" />
+		<property name="ZDMC" type="java.lang.String" length="60" />
+		<property name="ZDBW" type="java.lang.Integer" length="8" />
+		<property name="ZDYS" type="java.lang.String" length="8" />
+		<property name="ZGQK" type="java.lang.String" length="8" />
+		<property name="ZGSJ" type="timestamp" />
+	</class>
+</hibernate-mapping>

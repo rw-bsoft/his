@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="WL_LRMX" table="WL_LRMX">
+		<id name="JLXH" type="java.lang.Long">
+			<column name="JLXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="LRXH" type="java.lang.Long" length="18" />
+		<property name="PDXH" type="java.lang.Long" length="18" />
+		<property name="MXXH" type="java.lang.Long" length="18" />
+		<property name="WZXH" type="java.lang.Long" length="18" />
+		<property name="CJXH" type="java.lang.Long" length="12" />
+		<property name="WZPH" type="java.lang.String" length="20" />
+		<property name="SCRQ" type="date"  />
+		<property name="SXRQ" type="date"  />
+		<property name="KCXH" type="java.lang.Long" length="18" />
+		<property name="ZBXH" type="java.lang.Long" length="18" />
+		<property name="WZJG" type="java.lang.Double" length="18" />
+		<property name="LSJG" type="java.lang.Double" length="18" />
+		<property name="KCSL" type="java.lang.Double" length="18" />
+		<property name="PCSL" type="java.lang.Double" length="18" />
+		<property name="PCJE" type="java.lang.Double" length="18" />
+		<property name="LSJE" type="java.lang.Double" length="18" />
+		<property name="KSDM" type="java.lang.Long" length="18" />
+		<property name="PDBZ" type="java.lang.Integer" length="1" />
+	</class>
+</hibernate-mapping>

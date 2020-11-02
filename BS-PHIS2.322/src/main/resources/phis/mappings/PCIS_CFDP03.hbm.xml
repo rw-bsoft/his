@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="PCIS_CFDP03" table="PCIS_CFDP03">
+		<id name="JLXH" type="java.lang.Long">
+			<column name="JLXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="DPXH" type="java.lang.Long" length="18" />
+		<property name="WTXH" type="java.lang.Integer" length="8" />
+		<property name="WTDM" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

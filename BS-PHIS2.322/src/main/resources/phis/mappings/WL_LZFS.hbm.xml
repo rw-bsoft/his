@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_LZFS" table="WL_LZFS">
+			<id name="FSXH" type="java.lang.Long">
+            	<column name="FSXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="KFXH" type="java.lang.Integer" length="8" />
+        	<property name="YWLB" type="java.lang.Integer" length="1" />
+        	<property name="DJLX" type="java.lang.String" length="6" />
+        	<property name="SYKF" type="java.lang.Integer" length="1" />
+        	<property name="FSMC" type="java.lang.String" length="30" />
+        	<property name="BLSX" type="java.lang.Integer" length="1" />
+        	<property name="JZBZ" type="java.lang.Integer" length="1" />
+        	<property name="ZHZT" type="java.lang.Integer" length="2" />
+        	<property name="TSBZ" type="java.lang.Integer" length="1" />
+        	<property name="FKBZ" type="java.lang.Integer" length="1" />
+        	<property name="FSPX" type="java.lang.Integer" length="4" />
+        	<property name="DJQZ" type="java.lang.String" length="10" />
+        	<property name="DJNF" type="java.lang.Integer" length="1" />
+        	<property name="DJYF" type="java.lang.Integer" length="1" />
+        	<property name="XHCD" type="java.lang.Integer" length="2" />
+        	<property name="FSZT" type="java.lang.Integer" length="1" />
+        	<property name="DYHS" type="java.lang.Integer" length="2" />
+</class>
+</hibernate-mapping>

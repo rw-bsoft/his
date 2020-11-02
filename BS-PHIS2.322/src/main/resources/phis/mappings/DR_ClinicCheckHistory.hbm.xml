@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="DR_CLINICCHECKHISTORY" table="DR_CLINICCHECKHISTORY">
+			<id name="ID" type="java.lang.String">
+            	<column name="ID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="EMPIID" type="java.lang.String"  />
+        	<property name="MZHM" type="java.lang.String"  />
+        	<property name="JIANCHASQDH" type="java.lang.String"  />
+        	<property name="STATUS" type="java.lang.String"  />
+            <property name="SONGJIANYS" type="java.lang.String"  />
+            <property name="SONGJIANKS" type="java.lang.String"  />
+            <property name="SONGJIANRQ" type="date"  />
+            <property name="JIUZHENKLX" type="java.lang.String"  />
+        	<property name="JIUZHENKH" type="java.lang.String"  />
+        	<property name="SONGJIANKSMC" type="java.lang.String"  />
+            <property name="SHOUFEISB" type="java.lang.String"  />
+            <property name="BINGQINGMS" type="java.lang.String"  />
+            <property name="ZHENDUAN" type="java.lang.String"  />
+        	<property name="BINGRENTZ" type="java.lang.String"  />
+        	<property name="QITAJC" type="java.lang.String"  />
+            <property name="BINGRENZS" type="java.lang.String"  />
+            <property name="JIANCHALY" type="java.lang.String"  />
+            <property name="BINGRENXM" type="java.lang.String"  />
+        	<property name="BINGRENSFZH" type="java.lang.String"  />
+        	<property name="JIESHOUFS" type="java.lang.String"  />
+            <property name="SHENQINGRQ" type="java.lang.String"  />
+            <property name="JIANCHAXMMC" type="java.lang.String"  />
+            <property name="JIANCHATS" type="java.lang.String"  />
+</class>
+</hibernate-mapping>

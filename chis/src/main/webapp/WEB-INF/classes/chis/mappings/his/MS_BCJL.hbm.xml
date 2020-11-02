@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="MS_BCJL" table="MS_BCJL">
+		<id name="JZXH" type="java.lang.Long">
+			<column name="JZXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="BRID" type="java.lang.Long" length="18" />
+		<property name="BLLX" type="java.lang.Integer" length="1" />
+		<property name="BLLB" type="java.lang.Integer" length="9" />
+		<property name="BLMC" type="java.lang.String" length="100" />
+		<property name="JZKS" type="java.lang.Long" length="18" />
+		<property name="JZYS" type="java.lang.String" length="10" />
+		<property name="ZSXX" type="java.lang.String" length="1000" />
+		<property name="XBS" type="java.lang.String" length="1000" />
+		<property name="JWS" type="java.lang.String" length="1000" />
+		<property name="TGJC" type="java.lang.String" length="1000" />
+		<property name="FZJC" type="java.lang.String" length="1000" />
+		<property name="CLCS" type="java.lang.String" length="1000" />
+		<property name="T" type="java.lang.Double" length="3" />
+		<property name="P" type="java.lang.Integer" length="4" />
+		<property name="R" type="java.lang.Integer" length="4" />
+		<property name="BMI" type="java.lang.Double" length="6" />
+		<property name="W" type="java.lang.Integer" length="4" />
+		<property name="H" type="java.lang.Integer" length="4" />
+		<property name="SSY" type="java.lang.Integer" length="3" />
+		<property name="SZY" type="java.lang.Integer" length="3" />
+		<property name="CZYS" type="java.lang.String" length="10" />
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="KS" type="java.lang.Integer" length="1" />
+		<property name="YT" type="java.lang.Integer" length="1" />
+		<property name="HXKN" type="java.lang.Integer" length="1" />
+		<property name="OT" type="java.lang.Integer" length="1" />
+		<property name="FT" type="java.lang.Integer" length="1" />
+		<property name="FX" type="java.lang.Integer" length="1" />
+		<property name="PZ" type="java.lang.Integer" length="1" />
+		<property name="QT" type="java.lang.Integer" length="1" />
+		<property name="BRQX" type="java.lang.Integer"  />
+		<property name="JKJY" type="java.lang.String" length="20" />
+		<property name="DPY" type="java.lang.Integer" length="1" />
+		<property name="BQGZ" type="java.lang.String" length="1000" />
+		<property name="JKJYNR" type="java.lang.String" length="1000" />
+		<property name="GMS" type="java.lang.String" length="1000" />
+	</class>
+</hibernate-mapping>

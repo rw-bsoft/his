@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_BL01" table="EMR_BL01">
+			<id name="BLBH" type="java.lang.Long">
+            	<column name="BLBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JZXH" type="java.lang.Long" length="18" />
+        	<property name="BRBH" type="java.lang.String" length="18" />
+        	<property name="BRID" type="java.lang.Long" length="18" />
+        	<property name="BLLX" type="java.lang.Integer" length="1" />
+        	<property name="BLLB" type="java.lang.Integer" length="9" />
+        	<property name="BLMC" type="java.lang.String" length="100" />
+        	<property name="DLLB" type="java.lang.Integer" length="9" />
+        	<property name="DLJ" type="java.lang.String" length="18" />
+        	<property name="MBLB" type="java.lang.Integer" length="9" />
+        	<property name="MBBH" type="java.lang.Integer" length="9" />
+        	<property name="JLSJ" type="timestamp"  />
+        	<property name="XTSJ" type="timestamp"  />
+        	<property name="WCSJ" type="timestamp"  />
+        	<property name="CJKS" type="java.lang.String" length="10" />
+        	<property name="SXYS" type="java.lang.String" length="20" />
+        	<property name="SSYS" type="java.lang.String" length="8" />
+        	<property name="BLZT" type="java.lang.Integer" length="1" />
+        	<property name="SYBZ" type="java.lang.Integer" length="1" />
+        	<property name="BLYM" type="java.lang.Integer" length="4" />
+        	<property name="YMJL" type="java.lang.String" length="10" />
+        	<property name="BRXM" type="java.lang.String" length="30" />
+        	<property name="BRKS" type="java.lang.Long" length="18" />
+        	<property name="BRBQ" type="java.lang.Long" length="18" />
+        	<property name="BRCH" type="java.lang.String" length="10" />
+        	<property name="BRNL" type="java.lang.String" length="20" />
+        	<property name="BRZD" type="java.lang.String" length="255" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

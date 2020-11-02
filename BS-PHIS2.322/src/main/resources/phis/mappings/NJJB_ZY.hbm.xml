@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="NJJB_ZY" table="NJJB_ZY">
+	<!--医保卡信息表,其他的字段根据各地医保卡返回值添加-->
+			<id name="YYBM" type="java.lang.String">
+            	<column name="YYBM"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="YYMC" type="java.lang.String" length="50" />
+        	<property name="PYBM" type="java.lang.String" length="50" />
+</class>
+</hibernate-mapping>

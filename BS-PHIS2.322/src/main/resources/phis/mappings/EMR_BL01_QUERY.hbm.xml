@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_BL01_QUERY" table="EMR_BL01_QUERY">
+			<id name="TJID" type="java.lang.Long">
+            	<column name="TJID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="TJMC" type="java.lang.String" length="100" />
+        	<property name="YHID" type="java.lang.String" length="30" />
+        	<property name="BRID" type="java.lang.Long" length="18" />
+        	<property name="BLLX" type="java.lang.Integer" length="1" />
+        	<property name="XTSJKS" type="date"  />
+        	<property name="XTSJJS" type="date"  />
+        	<property name="MBLB" type="java.lang.Integer" length="9" />
+        	<property name="BRXM" type="java.lang.String" length="30" />
+        	<property name="BLZT" type="java.lang.Integer" length="1" />
+        	<property name="BLLB" type="java.lang.Integer" length="9" />
+        	<property name="JLSJKS" type="date"  />
+        	<property name="JLSJJS" type="date"  />
+        	<property name="MBBH" type="java.lang.Integer" length="9" />
+        	<property name="BRKS" type="java.lang.Long" length="18" />
+        	<property name="SXYS" type="java.lang.Long" length="18" />
+        	<property name="BLMC" type="java.lang.String" length="100" />
+        	<property name="BRZD" type="java.lang.String" length="255" />
+        	<property name="MBMC" type="java.lang.String" length="255" />
+        	<property name="WCSJKS" type="date"  />
+        	<property name="WCSJJS" type="date"  />
+</class>
+</hibernate-mapping>

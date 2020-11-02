@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="ZY_BRRY" table="ZY_BRRY">
+		<id name="ZYH" type="java.lang.Long">
+			<column name="ZYH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="BRID" type="java.lang.Long" length="18" />
+		<property name="ZYHM" type="java.lang.String" length="10" />
+		<property name="BAHM" type="java.lang.String" length="10" />
+		<property name="MZHM" type="java.lang.String" length="32" />
+		<property name="BRXZ" type="java.lang.Long" length="18" />
+		<property name="GFZH" type="java.lang.String" length="20" />
+		<property name="BRXM" type="java.lang.String" length="20" />
+		<property name="BRXB" type="java.lang.Integer" length="4" />
+		<property name="CSNY" type="date"  />
+		<property name="SFZH" type="java.lang.String" length="20" />
+		<property name="HYZK" type="java.lang.Integer" length="4" />
+		<property name="ZYDM" type="java.lang.String" length="4" />
+		<property name="SFDM" type="java.lang.Integer" length="4" />
+		<property name="JGDM" type="java.lang.Integer" length="4" />
+		<property name="MZDM" type="java.lang.String" length="4" />
+		<property name="GJDM" type="java.lang.String" length="4" />
+		<property name="DWBH" type="java.lang.Integer" length="6" />
+		<property name="GZDW" type="java.lang.String" length="40" />
+		<property name="DWDH" type="java.lang.String" length="16" />
+		<property name="DWYB" type="java.lang.String" length="6" />
+		<property name="HKDZ" type="java.lang.String" length="40" />
+		<property name="HKYB" type="java.lang.String" length="6" />
+		<property name="LXRM" type="java.lang.String" length="10" />
+		<property name="LXGX" type="java.lang.Integer" length="4" />
+		<property name="LXDZ" type="java.lang.String" length="40" />
+		<property name="LXDH" type="java.lang.String" length="16" />
+		<property name="PZHM" type="java.lang.String" length="10" />
+		<property name="SBHM" type="java.lang.String" length="20" />
+		<property name="DBRM" type="java.lang.String" length="10" />
+		<property name="DBGX" type="java.lang.Integer" length="4" />
+		<property name="ZZTX" type="java.lang.Integer" length="4" />
+		<property name="DBBZ" type="java.lang.Integer" length="6" />
+		<property name="BRKS" type="java.lang.Long" length="18" />
+		<property name="BRBQ" type="java.lang.Long" length="18" />
+		<property name="BRCH" type="java.lang.String" length="12" />
+		<property name="DJRQ" type="timestamp"  />
+		<property name="RYRQ" type="timestamp"  />
+		<property name="CYRQ" type="timestamp"  />
+		<property name="CYPB" type="java.lang.Integer" length="2" />
+		<property name="CYFS" type="java.lang.Integer" length="1" />
+		<property name="CZGH" type="java.lang.String" length="10" />
+		<property name="RYQK" type="java.lang.Integer" length="4" />
+		<property name="BRQK" type="java.lang.Integer" length="4" />
+		<property name="HLJB" type="java.lang.Integer" length="4" />
+		<property name="YSDM" type="java.lang.Integer" length="4" />
+		<property name="BRXX" type="java.lang.Integer" length="4" />
+		<property name="HZKS" type="java.lang.Long" length="18" />
+		<property name="JCKS" type="java.lang.Long" length="18" />
+		<property name="MZYS" type="java.lang.String" length="10" />
+		<property name="ZYYS" type="java.lang.String" length="10" />
+		<property name="ZSYS" type="java.lang.String" length="10" />
+		<property name="ZZYS" type="java.lang.String" length="10" />
+		<property name="QZRQ" type="timestamp"  />
+		<property name="KSRQ" type="timestamp"  />
+		<property name="JSRQ" type="timestamp"  />
+		<property name="JSCS" type="java.lang.Integer" length="3" />
+		<property name="JZRQ" type="timestamp"  />
+		<property name="HZRQ" type="timestamp"  />
+		<property name="XGPB" type="java.lang.Integer" length="1" />
+		<property name="BAPB" type="java.lang.Integer" length="1" />
+		<property name="BRGL" type="java.lang.Long" length="18" />
+		<property name="BRKL" type="java.lang.String" length="6" />
+		<property name="BRQM" type="java.lang.String" length="32" />
+		<property name="JTDH" type="java.lang.String" length="16" />
+		<property name="YBKH" type="java.lang.String" length="20" />
+		<property name="JZKH" type="java.lang.String" length="40" />
+		<property name="SZYS" type="java.lang.String" length="10" />
+		<property name="ZLXZ" type="java.lang.Integer" length="4" />
+		<property name="SPJE" type="java.lang.Double" length="12" />
+		<property name="SJZY" type="java.lang.Integer" length="1" />
+		<property name="DJBZ" type="java.lang.Integer" length="1" />
+		<property name="DJID" type="java.lang.Long" length="18" />
+		<property name="DJJE" type="java.lang.Double" length="10" />
+		<property name="YSJS" type="java.lang.Integer" length="1" />
+		<property name="ZKZT" type="java.lang.Integer" length="1" />
+		<property name="ZDHZPB" type="java.lang.Integer" length="4" />
+		<property name="BZ" type="java.lang.String" length="250" />
+		<property name="CSD_SQS" type="java.lang.Long" length="18" />
+		<property name="CSD_S" type="java.lang.Long" length="18" />
+		<property name="CSD_X" type="java.lang.Long" length="18" />
+		<property name="JGDM_SQS" type="java.lang.Long" length="18" />
+		<property name="JGDM_S" type="java.lang.Long" length="18" />
+		<property name="XZZ_SQS" type="java.lang.Long" length="18" />
+		<property name="XZZ_S" type="java.lang.Long" length="18" />
+		<property name="XZZ_X" type="java.lang.Long" length="18" />
+		<property name="XZZ_YB" type="java.lang.String" length="20" />
+		<property name="XZZ_DH" type="java.lang.String" length="20" />
+		<property name="HKDZ_SQS" type="java.lang.Long" length="18" />
+		<property name="HKDZ_S" type="java.lang.Long" length="18" />
+		<property name="HKDZ_X" type="java.lang.Long" length="18" />
+		<property name="XZZ_QTDZ" type="java.lang.String" length="60" />
+		<property name="HKDZ_QTDZ" type="java.lang.String" length="60" />
+		<property name="DRBZ" type="java.lang.Integer" length="1" />
+		<property name="RYNL" type="java.lang.String" length="20"/>
+		<property name="ZYCS" type="java.lang.Integer" length="2"/>
+		<property name="RYZD" type="java.lang.String" length="255"/>
+		<property name="MQZD" type="java.lang.String" length="255"/>
+		<property name="ZYZD" type="java.lang.String" length="255"/>
+		<property name="MZZD" type="java.lang.Long" length="18" />
+		<property name="YBHM" type="java.lang.String" length="26"/>
+		<property name="NHDJID" type="java.lang.Long" length="18"/>
+		<property name="ZYLSH" type="java.lang.String" length="18"/>
+		<property name="NJJBLSH" type="java.lang.String" length="20"/>
+		<property name="NJJBYLLB" type="java.lang.String" length="20"/>
+		<property name="YBMC" type="java.lang.String" length="50"/>
+		<property name="ZSESHBZKH" type="java.lang.String" length="50"/>
+		<property name="YBZY" type="java.lang.String" length="50"/>
+	</class>
+</hibernate-mapping>

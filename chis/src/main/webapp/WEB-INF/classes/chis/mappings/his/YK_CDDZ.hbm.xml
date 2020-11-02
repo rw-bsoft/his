@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YK_CDDZ" table="YK_CDDZ">
+			<id name="YPCD" type="java.lang.Long">
+            	<column name="YPCD"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="CDMC" type="java.lang.String" length="15"  />
+        	<property name="PYDM" type="java.lang.String" length="10"  />
+         	<property name="CDQC" type="java.lang.String" length="60"  />
+</class>
+</hibernate-mapping>

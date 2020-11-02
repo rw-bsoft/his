@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YK_KCMX" table="YK_KCMX">
+			<id name="SBXH" type="java.lang.Long">
+            	<column name="SBXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="YPXH" type="java.lang.Long" length="18" />
+        	<property name="YPCD" type="java.lang.Long" length="18" />
+        	<property name="YPPH" type="java.lang.String" length="20" />
+        	<property name="YPXQ" type="timestamp"  />
+        	<property name="KCSL" type="java.lang.Double" length="10" />
+        	<property name="TYPE" type="java.lang.Integer" length="6" />
+        	<property name="JHRQ" type="timestamp"  />
+        	<property name="JHJG" type="java.lang.Double" length="12" />
+        	<property name="PFJG" type="java.lang.Double" length="12" />
+        	<property name="LSJG" type="java.lang.Double" length="12" />
+        	<property name="JHJE" type="java.lang.Double" length="12" />
+        	<property name="PFJE" type="java.lang.Double" length="12" />
+        	<property name="LSJE" type="java.lang.Double" length="12" />
+        	<property name="BZLJ" type="java.lang.Double" length="12" />
+</class>
+</hibernate-mapping>

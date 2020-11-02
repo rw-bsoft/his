@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="GIS_History" table="GIS_History">
+		<id name="EventId" type="java.lang.String">
+			<column name="eventId" />
+			<generator class="native" />
+		</id>
+		<property name="type" type="java.lang.String" length="20" />
+		<property name="description" type="java.lang.String" length="500" />
+		<property name="happenedPlace" type="java.lang.String" length="100" />
+		<property name="happenedDate" type="date"/>
+		<property name="addedPerson" type="java.lang.String" length="20"/>
+		<property name="addedDate" type="date"/>
+		<property name="mapSign" type="java.lang.String" length="20"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_HLJL" table="JC_HLJL">
+		<id name="JLBH" type="java.lang.Long">
+			<column name="JLBH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="HLRQ" type="date"/>
+		<property name="RHSJ" type="timestamp" length="50"/>
+		<property name="CHSJ" type="timestamp" length="100"/>
+		<property name="HLCS" type="java.lang.String" length="1000"/>
+		<property name="HLHS" type="java.lang.String" length="20"/>
+		<property name="ZYH" type="java.lang.Long"/>
+		<property name="JGID" type="java.lang.String" length="20"/>
+	</class>
+</hibernate-mapping>

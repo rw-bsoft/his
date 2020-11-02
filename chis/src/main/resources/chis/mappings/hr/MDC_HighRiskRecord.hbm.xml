@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hq.schemas.MDC_HighRiskRecord"
+		table="MDC_HighRiskRecord">
+		<id name="phrId" type="java.lang.String">
+			<column name="phrId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="manaDoctorId" type="java.lang.String" length="20" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createDate" type="date" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="status" type="java.lang.String" length="1" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="cancellationUser" type="java.lang.String" length="20" />
+		<property name="cancellationDate" type="date" />
+		<property name="cancellationUnit" type="java.lang.String" length="20" />
+		<property name="cancellationReason" type="java.lang.String" length="1" />
+		<property name="HIGHRISKTYPE" type="java.lang.String" length="20" />
+		<property name="constriction" type="java.lang.Integer" />
+		<property name="diastolic" type="java.lang.Integer" />
+		<property name="isSmoke" type="java.lang.String" length="1" />
+		<property name="smokeCount" type="java.lang.Integer" />
+		<property name="fbs" type="java.lang.Double" length="8" />
+		<property name="tc" type="java.lang.Double" length="8" />
+		<property name="waistLine" type="java.lang.Double" length="8" />
+		<property name="findWay" type="java.lang.String" length="1" />
+	</class>
+</hibernate-mapping>

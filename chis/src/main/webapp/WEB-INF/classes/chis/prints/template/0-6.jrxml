@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="0-6岁儿童基本情况登记表" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="384"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="29" y="14" width="498" height="31"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[0-6岁儿童基本情况登记表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="77" width="65" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[儿童姓名：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="77" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{personName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="194" y="77" width="41" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[性别：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="235" y="77" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sexCode_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="335" y="77" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生年月：]]></text>
+			</staticText>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="404" y="77" width="123" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{birthday}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="104" width="39" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[父亲：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="68" y="104" width="36" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="104" y="104" width="121" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fatherName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="68" y="131" width="36" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[职业：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="104" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生年月：]]></text>
+			</staticText>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="294" y="104" width="233" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fatherBirthday}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="104" y="131" width="120" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fatherJob}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="224" y="131" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[文化程度：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="293" y="131" width="234" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fatherEducation}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="68" y="157" width="56" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[健康状况:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="124" y="157" width="403" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fatherHealth}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="183" width="39" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[母亲：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="68" y="183" width="36" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="183" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生年月：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="210" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[文化程度：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="68" y="210" width="36" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[职业：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="68" y="236" width="56" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[健康状况:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="263" width="65" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[现住地址：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="104" y="183" width="121" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{motherName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="293" y="183" width="234" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{motherBirthday}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="104" y="210" width="120" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{motherJob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="293" y="210" width="234" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{motherEducation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="124" y="236" width="403" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{motherHealth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="263" width="433" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="287" width="65" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[邮 编：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="287" width="110" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{zipCode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="204" y="287" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[联系电话:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="273" y="287" width="254" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{phoneNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="318" width="498" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[---------------------以--下--由--医--生--填--写------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="348" width="65" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生情况：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="348" width="433" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{boneCondition_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="375" width="65" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[胎 数：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="375" width="174" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[1 单胎  2双胎  3 多胎]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="402" width="65" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生孕周：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="57" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[编 号：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="404" y="57" width="123" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{healthNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="204" y="510" width="323" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{defectsType_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="94" y="429" width="79" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生体重(kg):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="173" y="429" width="46" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{birthWeight}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="219" y="429" width="85" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生身长(cm):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="304" y="429" width="31" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{birthHeight}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="335" y="429" width="58" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[头围(cm):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="393" y="429" width="39" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{headSize}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="432" y="429" width="61" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[胸围(cm):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="493" y="429" width="34" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{circumference}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="456" width="65" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[产时情况：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="456" width="433" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{deliveryConditions_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="94" y="483" width="85" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Apgar评分：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="483" width="35" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[1分钟]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="483" width="47" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[5分钟]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="483" width="43" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[10分钟]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="510" width="65" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[出生缺陷：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="510" width="110" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{birthDefects_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="537" width="126" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[新生儿疾病筛查结果：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="537" width="260" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{screenRecord_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="562" width="65" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[新生儿疾病:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="562" width="45" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{screenFlage_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="589" width="95" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[母孕期异常情况:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="124" y="589" width="70" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{motherAbnormal_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="616" width="65" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[残疾情况：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="616" width="321" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{deformity_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="643" width="126" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[与遗传有关的家族史：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="643" width="260" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{familyHistory_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="155" y="670" width="100" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[患者与儿童关系：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="255" y="670" width="272" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{relationship_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="697" width="75" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[药物过敏史：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="104" y="697" width="311" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{allergicHistory_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="326" y="724" width="99" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[建  册  单  位：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="751" width="99" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[建册医师签名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="778" width="99" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[建  册  日  期：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="425" y="724" width="102" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{createUnit_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="425" y="751" width="102" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{createUser_text}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="425" y="778" width="102" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{createDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="375" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{litters}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="562" width="276" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{screen_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="589" width="332" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{abnormal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="214" y="483" width="69" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{apgar1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="173" y="402" width="15" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[周]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="330" y="483" width="74" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{apgar5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="483" width="79" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{apgar10}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="237" y="402" width="16" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[第]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="253" y="402" width="79" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{conception}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="332" y="402" width="21" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[胎]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="402" width="15" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[第]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="493" y="402" width="15" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[产]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="415" y="402" width="78" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{birth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="402" width="79" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{gestation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="537" width="111" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{otherScreenResult}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="562" width="111" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{otherScreen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="616" width="111" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{otherDeformity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="643" width="111" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{otherFamily}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="697" width="111" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{otherAllergyDrug}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+</jasperReport>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="RES_DataGroup" table="RES_DataGroup">
+		<id name="DataGroupId" type="java.lang.Integer">
+	    	<column name="DataGroupId"/>
+			<generator class="sequence">
+            	<param name="sequence">SEQ_RES_DataGroup</param>
+           	</generator>
+		</id>
+		<property name="DataStandardId" type="java.lang.String" length="16" />
+		<property name="GroupIdentify" type="java.lang.String" length="50" />
+		<property name="DName" type="java.lang.String" length="50" />
+		<property name="ParentGroupId" type="java.lang.Integer"/>
+		<property name="FrequencyNumber" type="java.lang.Integer"/>
+		<property name="ForceIdentify" type="java.lang.String" length="1" />
+	</class>
+</hibernate-mapping>

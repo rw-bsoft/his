@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="ZY_FKXX" table="ZY_FKXX">
+			<id name="JLXH" type="java.lang.Long">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="ZYH" type="java.lang.Long" length="18" />
+        	<property name="JSCS" type="java.lang.Integer" length="3" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="FKFS" type="java.lang.Long" length="18" />
+        	<property name="FKJE" type="java.lang.Double" length="12" />
+        	<property name="FKHM" type="java.lang.String" length="40" />
+			<property name="JSXZ" type="java.lang.Integer" length="4" />
+			<property name="FPHM" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="SYS_Office" table="SYS_Office">
+	    <id name="id" type="java.lang.Integer" length="50">
+			<column name="id" />
+			<generator class="sequence">
+            	<param name="sequence">SEQ_SYS_Office</param>
+           	</generator>
+		</id>
+		<property name="officeCode" type="java.lang.String" length="20" />
+		<property name="officeName" type="java.lang.String" length="50" />
+		<property name="telphone" type="java.lang.String" length="20" />
+		<property name="address" type="java.lang.String" length="250" />
+		<property name="organizCode" type="java.lang.String" length="20" />		
+		<property name="parentId" type="java.lang.String" length="20" />
+		<property name="outPatientClinic" type="java.lang.String" length="1" />
+		<property name="medicalLab" type="java.lang.String" length="1" />
+		<property name="hospitaldept" type="java.lang.String" length="1" />
+		<property name="chinedept" type="java.lang.String" length="1" />
+		<property name="hospitalArea" type="java.lang.String" length="1" />
+		<property name="ratedBed" type="java.lang.Integer" length="4" />
+		<property name="organizType" type="java.lang.String" length="20" />
+		<property name="email" type="java.lang.String" length="50" />
+		<property name="plsx" type="java.lang.String" length="10" />
+		<property name="pyCode" type="java.lang.String" length="20" />
+		<property name="logoff" type="java.lang.String" length="1"/>
+	</class>
+</hibernate-mapping>

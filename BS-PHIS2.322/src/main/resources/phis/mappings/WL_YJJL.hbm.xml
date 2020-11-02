@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="WL_YJJL" table="WL_YJJL">
+		<id name="JZXH" type="java.lang.Long">
+			<column name="JZXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="KFXH" type="java.lang.Integer" length="8" />
+		<property name="ZBLB" type="java.lang.Integer" length="8" />
+		<property name="CWYF" type="java.lang.String" length="6" />
+		<property name="QSSJ" type="date"  />
+		<property name="ZZSJ" type="date"  />
+		<property name="JZSJ" type="date"  />
+		<property name="CSBZ" type="java.lang.Integer" length="1" />
+	</class>
+</hibernate-mapping>

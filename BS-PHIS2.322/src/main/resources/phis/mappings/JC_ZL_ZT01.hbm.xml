@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_ZL_ZT01" table="JC_ZL_ZT01">
+		<id name="ZTBH" type="java.lang.Long">
+	    	<column name="ZTBH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="ZTMC" type="java.lang.String" length="20" />
+		<property name="YGDM" type="java.lang.String" length="10" />
+		<property name="PYDM" type="java.lang.String" length="10" />
+		<property name="SFQY" type="java.lang.Integer" length="1" />
+		<property name="JGID" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

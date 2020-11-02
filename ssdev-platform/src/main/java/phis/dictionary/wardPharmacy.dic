@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="病区药房" codeRule="4,2,3,3" supportRemote="false" entry="BQ_FYYF a,YF_YFLB b"
+	distinct="true" class="TableDictionary" keyField="a.YFSB" textField="b.YFMC"
+	filter="['and',['eq',['$','a.YFSB'],['$','b.YFSB']],['eq',['$','a.JGID'],['$','%user.manageUnit.id']]]]"
+	queryOnly="true" sortField="a.YFSB">
+	<properties>
+		<p name="a.JGID">JGID</p>
+		<p name="a.BQDM">BQDM</p>
+	</properties>
+</dic>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="MYPAGE_ClinicRecord" table="HIS_ClinicRecord">
+		<id name="clinicRecordId" type="java.lang.String">
+			<column name="clinicRecordId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="clinicId" type="java.lang.String" length="20" />
+		<property name="clinicUnit" type="java.lang.String" length="16" />
+		<property name="clinicDate" type="date" />
+		<property name="clinicDept" type="java.lang.String" length="8" />
+		<property name="clinicDoctor" type="java.lang.String"
+			length="20" />
+		<property name="memo" type="java.lang.String" length="500" />
+		<property name="lastModifyDate" type="date" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

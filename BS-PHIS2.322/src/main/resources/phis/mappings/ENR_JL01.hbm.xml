@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="ENR_JL01" table="ENR_JL01">
+			<id name="JLBH" type="java.lang.Long">
+            	<column name="JLBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="ZYH" type="java.lang.Long" length="18" />
+        	<property name="JGBH" type="java.lang.Long" length="18" />
+        	<property name="JLMC" type="java.lang.String" length="100" />
+        	<property name="BLLX" type="java.lang.Long" length="1" />
+        	<property name="BLLB" type="java.lang.Long" length="9" />
+        	<property name="MBLB" type="java.lang.Long" length="9" />
+        	<property name="MBBH" type="java.lang.Long" length="9" />
+        	<property name="DLLB" type="java.lang.Long" length="9" />
+        	<property name="DLJ" type="java.lang.String" length="20" />
+        	<property name="JLHS" type="java.lang.Long" length="4" />
+        	<property name="HYBZ" type="java.lang.Long" length="1" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="JLSJ" type="timestamp"  />
+        	<property name="SXSJ" type="timestamp"  />
+        	<property name="XTSJ" type="timestamp"  />
+        	<property name="SXBQ" type="java.lang.Long" length="8" />
+        	<property name="SXHS" type="java.lang.String" length="8" />
+        	<property name="WCQM" type="java.lang.Long" length="18" />
+        	<property name="WCSJ" type="date"  />
+        	<property name="SYBZ" type="java.lang.Long" length="1" />
+        	<property name="SYSJ" type="date"  />
+        	<property name="SYHS" type="java.lang.String" length="10" />
+        	<property name="SYQM" type="java.lang.Long" length="18" />
+        	<property name="DYBZ" type="java.lang.Long" length="1" />
+        	<property name="JLZT" type="java.lang.Long" length="1" />
+        	<property name="ZJBH" type="java.lang.Long" length="18" />
+        	<property name="ZJMC" type="java.lang.String" length="40" />
+        	<property name="ZJLX" type="java.lang.Long" length="1" />
+        	<property name="KSSJ" type="date"  />
+        	<property name="JSSJ" type="date"  />
+        	<property name="DLHHBZ" type="java.lang.Long" length="1" />
+        	<property name="WCDLLJ" type="java.lang.String" length="50" />
+        	<property name="SYDLLJ" type="java.lang.String" length="50" />
+        	<property name="JKFL" type="java.lang.String" length="20" />
+        	<property name="JKPF" type="java.lang.Long" length="9" />
+        	<property name="JKZG" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="MS_KSPB" table="MS_KSPB">
+		<composite-id>
+			<key-property name="GHRQ" column="GHRQ" type="java.lang.Integer" length="1"/>
+			<key-property name="ZBLB" column="ZBLB" type="java.lang.Integer" length="1"/>
+			<key-property name="GHKS" column="GHKS" type="java.lang.Long" length="18"/>
+		</composite-id>
+     	<property name="JGID" type="java.lang.String" length="8" />
+     	<property name="JZXH" type="java.lang.Integer" length="4" />
+     	<property name="GHXE" type="java.lang.Integer" length="4" />
+     	<property name="YGRS" type="java.lang.Integer" length="4" />
+     	<property name="YYRS" type="java.lang.Integer" length="4" />
+     	<property name="YYXE" type="java.lang.Integer" length="4" />
+     	<property name="TGBZ" type="java.lang.Integer" length="1" />
+     	<property name="YYKSSJ" type="java.lang.String" length="5" />
+     	<property name="YYJSSJ" type="java.lang.String" length="5" />
+     	<property name="YYJG" type="java.lang.String" length="2" />
+	</class>
+</hibernate-mapping>

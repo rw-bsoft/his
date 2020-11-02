@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YJ_ZY01" table="YJ_ZY01">
+			<id name="YJXH" type="java.lang.Long">
+            	<column name="YJXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.Long" length="20" />
+        	<property name="ZYH" type="java.lang.Long" length="18" />
+        	<property name="ZYHM" type="java.lang.String" length="10" />
+        	<property name="BRXM" type="java.lang.String" length="40" />
+        	<property name="KDRQ" type="timestamp"  />
+        	<property name="TJSJ" type="timestamp"  />
+        	<property name="KSDM" type="java.lang.Long" length="18" />
+        	<property name="YSDM" type="java.lang.String" length="10" />
+        	<property name="ZXKS" type="java.lang.Long" length="18" />
+        	<property name="HJGH" type="java.lang.String" length="10" />
+        	<property name="DJZT" type="java.lang.Long" length="1" />
+        	<property name="FYBQ" type="java.lang.Long" length="18" />
+        	 
+        	<property name="TJHM" type="java.lang.String" length="10" />
+        	<property name="ZXRQ" type="timestamp"  />
+        	<property name="ZXYS" type="java.lang.String" length="10" />
+        	<property name="ZXPB" type="java.lang.Long" length="1" />
+        	<property name="BBBM" type="java.lang.String" length="4" />
+        	<property name="ZYSX" type="java.lang.String" length="250" />
+        	<property name="ZFPB" type="java.lang.Long" length="1" />
+        	<property name="HYMX" type="java.lang.String" length="250" />
+        	<property name="YJPH" type="java.lang.String" length="20" />
+        	<property name="SQDH" type="java.lang.Long" length="18" />
+        	<property name="BWID" type="java.lang.Long" length="9" />
+        	<property name="JBID" type="java.lang.Long" length="18" />
+        	<property name="SQWH" type="java.lang.Long" length="18" />
+        	<property name="BGSJ" type="timestamp"  />
+        	 
+</class>
+</hibernate-mapping>

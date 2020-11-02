@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.psy.schemas.PSY_PsychosisVisit"
+		table="PSY_PsychosisVisit">
+		<id name="visitId" type="java.lang.String">
+			<column name="visitId" />
+			<generator class="assigned" />
+		</id>
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="visitDate" type="date" />
+		<property name="symptom" type="java.lang.String" length="50" />
+		<property name="symptomText" type="java.lang.String"
+			length="100" />
+		<property name="insight" type="java.lang.String" length="1" />
+		<property name="sleepQuality" type="java.lang.String"
+			length="1" />
+		<property name="eatQuality" type="java.lang.String" length="1" />
+		<property name="liveQuality" type="java.lang.String" length="1" />
+		<property name="houseWork" type="java.lang.String" length="1" />
+		<property name="productiveLabor" type="java.lang.String"
+			length="1" />
+		<property name="study" type="java.lang.String" length="1" />
+		<property name="social" type="java.lang.String" length="1" />
+		<property name="familySocialImpact" type="java.lang.String" length="20"/>
+		<property name="lightAffray" type="java.lang.Integer" />
+		<property name="causeTrouble" type="java.lang.Integer" />
+		<property name="causeAccident" type="java.lang.Integer" />
+		<property name="selfHurt" type="java.lang.Integer" />
+		<property name="closeDoor" type="java.lang.String" length="1"/>
+		<property name="hospitalization" type="java.lang.String" length="1"/>
+		<property name="lastHospitalizationTime" type="date"/>
+		<property name="isLabCheckup" type="java.lang.String" length="1"/>
+		<property name="labCheckup" type="java.lang.String" length="500"/>
+		<property name="suicide" type="java.lang.Integer" />
+		<property name="medicine" type="java.lang.String" length="1" />
+		<property name="adverseReactions" type="java.lang.String"
+			length="1" />
+		<property name="adverseReactionsText" type="java.lang.String"
+			length="200" />
+		<property name="treatment" type="java.lang.String" length="1" />
+		<property name="visitEffect" type="java.lang.String" length="1" />
+		<property name="lostReason" type="java.lang.String" length="500"/>
+		<property name="referral" type="java.lang.String" length="1" />
+		<property name="reason" type="java.lang.String" length="50" />
+		<property name="doccol" type="java.lang.String" length="50" />
+		<property name="isReferral" type="java.lang.String" length="1" />
+		<property name="healing" type="java.lang.String" length="20" />
+		<property name="healingText" type="java.lang.String"
+			length="50" />
+		<property name="riskFactor" type="java.lang.String"
+			length="200" />
+		<property name="dangerousGrade" type="java.lang.String" length="1"/>
+		<property name="nextDate" type="date" />
+		<property name="visitType" type="java.lang.String" length="1" />
+		<property name="visitDoctor" type="java.lang.String"
+			length="20" />
+		<property name="visitUnit" type="java.lang.String" length="20" />
+		<property name="type" type="java.lang.String" length="1" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="inputDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String"	length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic version="1331800530000" alias="EHR导航" id="ehrViewNav" filename="E:\MyProject\BZWorkspace\BSCHIS\WebRoot\WEB-INF\config\dictionary\ehrViewNav.xml">
+	<item key="B" text="基本档案" pkey="phrId" idsLoader="chis.oldPeopleRecordIdLoader,chis.poorPeopleRecordIdLoader,chis.healthCheckIdLoader">
+		<item key="B_01" text="个人健康档案" requireKeys="empiId" ref="chis.application.healthmanage.HEALTHMANAGE/HR/B07" controlKey="EHR_HealthRecord_control"/>
+		<item key="B_02" text="个人生活习惯" requireKeys="empiId" ref="chis.application.healthmanage.HEALTHMANAGE/HR/B09" controlKey="EHR_HealthRecord_control"/>
+		<item key="B_03" text="个人既往史" requireKeys="empiId" ref="chis.application.healthmanage.HEALTHMANAGE/HR/B10"  controlKey="EHR_HealthRecord_control"/>
+		<item key="B_04" text="个人主要问题" requireKeys="empiId" ref="chis.application.healthmanage.HEALTHMANAGE/HR/B11"  controlKey="EHR_HealthRecord_control"/>
+		<item key="B_05" text="家族谱" requireKeys="empiId" ref="chis.application.hr.HR/HR/B12"  controlKey="EHR_HealthRecord_control"/>
+		<item key="B_08" text="贫困人群随访" requireKeys="phrId" ref="chis.application.ppvr.PPVR/PPVR/B17-2"  controlKey="EHR_PoorPeopleVisit_control"/>
+		<item key="B_09" text="非重点人群随访" requireKeys="phrId" ref="chis.application.npvr.NPVR/NPVR/B18-2"  controlKey="EHR_HealthRecord_control"/>
+		<item key="B_10" text="健康检查表" requireKeys="phrId" ref="chis.application.hc.HC/HC/D20_2"  controlKey="HC_HealthCheck_control"/>
+	</item>
+	<item key="E" text="老年人档案" pkey="phrId" idsLoader="chis.oldPeopleRecordIdLoader">
+		<item key="B_07" text="老年人档案" requireKeys="phrId" ref="chis.application.diseasemanage.DISEASEMANAGE/OHR/B19"  controlKey="MDC_OldPeopleRecord_control"/>
+		<item key="B_06" text="老年人随访" requireKeys="MDC_OldPeopleRecord.phrId" ref="chis.application.diseasemanage.DISEASEMANAGE/OHR/B14"  controlKey="MDC_OldPeopleVisit_control"/>
+		<item key="B_11" text="老年人自理评估" requireKeys="phrId" ref="chis.application.diseasemanage.DISEASEMANAGE/OHR/B20" controlKey="MDC_OldPeopleSelfCare_control"/>
+	</item>
+	<!--  -->
+	<item key="C" text="高血压管理" pkey="MDC_HypertensionRecord.phrId" idsLoader="chis.hypertensionRecordIdLoader,chis.hypertensionVisitPlanIdLoader,chis.hypertensionRiskIdLoader">
+		<item key="C_01" text="高血压档案" requireKeys="phrId" ref="chis.application.diseasemanage.DISEASEMANAGE/HY/D0-1-1"  controlKey="MDC_HypertensionRecord_control"/>
+		<item key="C_02" text="分组评估" requireKeys="MDC_HypertensionRecord.phrId" ref="chis.application.diseasemanage.DISEASEMANAGE/HY/D0-1-2" controlKey="MDC_HypertensionRecord_control"/>
+		<item key="C_03" text="高血压随访" requireKeys="PUB_VisitPlan.planId" ref="chis.application.diseasemanage.DISEASEMANAGE/HY/D0-1-3" controlKey="MDC_HypertensionRecord_control"/>
+		<item key="C_05" text="高血压询问" requireKeys="MDC_HypertensionRecord.phrId" ref="chis.application.hy.HY/HY/DHI_01"  controlKey="MDC_HypertensionRecord_control"/>
+		<item key="C_04" text="高血压曲线图" requireKeys="MDC_HypertensionRecord.phrId" ref="chis.application.hy.HY/HY/D0-1-4"  controlKey="MDC_HypertensionRecord_control"/>
+		<item key="C_06" text="高血压高危评估"  ref="chis.application.hy.HY/HY/C18-1" controlKey="MDC_HypertensionRiskAssessment_control" requireKeys="empiId" />
+		<item key="C_07" text="高血压高危随访"  ref="chis.application.hy.HY/HY/C19-1" controlKey="MDC_HypertensionRiskAssessment_control" requireKeys="empiId" />
+	</item>
+	<item key="D" text="糖尿病管理" pkey="MDC_DiabetesRecord.phrId" idsLoader="chis.diabetesRecordIdLoader,chis.diabetesInquireIdLoader,chis.diabetesRiskIdLoader">
+		<item key="D_01" text="糖尿病档案" requireKeys="phrId" ref="chis.application.diseasemanage.DISEASEMANAGE/DBS/D11-1"   controlKey="MDC_DiabetesRecord_control"/>
+		<item key="D_02" text="糖尿病分组" requireKeys="MDC_DiabetesRecord.phrId" ref="chis.application.dbs.DBS/DBS/D11-2" controlKey="MDC_DiabetesRecord_control"/>
+		<item key="D_03" text="糖尿病随访" requireKeys="MDC_DiabetesRecord.phrId" ref="chis.application.diseasemanage.DISEASEMANAGE/DBS/D11-3"/>
+		<item key="D_05" text="糖尿病询问" requireKeys="MDC_DiabetesRecord.phrId" ref="chis.application.diseasemanage.DISEASEMANAGE/DBS/D11-5" controlKey="MDC_DiabetesInquire_control"/>
+		<item key="D_04" text="糖尿病曲线图" requireKeys="MDC_DiabetesRecord.phrId" ref="chis.application.dbs.DBS/DBS/D11-4" controlKey="MDC_DiabetesRecord_control"/>
+		<item key="D_06" text="糖尿病高危评估"  ref="chis.application.dbs.DBS/DBS/D18-1" controlKey="MDC_DiabetesRiskAssessment_control" requireKeys="empiId"  />
+		<item key="D_07" text="糖尿病高危随访"  ref="chis.application.dbs.DBS/DBS/D19-1" controlKey="MDC_DiabetesRiskAssessment_control" requireKeys="empiId" />
+	</item>
+	<item key="T" text="肿瘤高危人群管理" pkey="MDC_TumourHighRisk.phrId" idsLoader="chis.tumourHighRiskIdLoader,chis.tumourPatientReportCardIdLoader">
+		<item key="T_01" text="肿瘤高危档案" requireKeys="phrId" ref="chis.application.diseasemanage.DISEASEMANAGE/TR/TR0601_0101"   controlKey="MDC_TumourHighRisk_control"/>		
+		<item key="T_02" text="肿瘤高危转组" requireKeys="MDC_TumourHighRisk.phrId" ref="chis.application.diseasemanage.DISEASEMANAGE/TR/TR0601_0102" controlKey="MDC_TumourHighRisk_control"/>
+		<item key="T_03" text="肿瘤高危随访" requireKeys="MDC_TumourHighRisk.phrId" ref="chis.application.diseasemanage.DISEASEMANAGE/TR/TR0601_0103" controlKey="MDC_TumourHighRisk_control"/>
+		<item key="T_04" text="肿瘤患者报告卡" requireKeys="phrId" ref="chis.application.tr.TR/TR/TR0801_01" controlKey="MDC_TumourPatientReportCard_control"/>
+		<item key="T_05" text="肿瘤患者随访" requireKeys="MDC_TumourPatientReportCard.phrId" ref="chis.application.tr.TR/TR/TR0801_02" controlKey="MDC_TumourPatientReportCard_control"/>
+	</item>
+	<item key="G" text="围产保健管理" pkey="MHC_PregnantRecord.pregnantId" idsLoader="chis.pregnantRecordIdLoader">
+		<item key="G_01" text="孕产妇档案" requireKeys="phrId" ref="chis.application.mhc.MHC/MHC/G0101_1"  controlKey="MHC_PregnantRecord_control"/>
+		<item key="G_15" text="产前筛查" ref="chis.application.mhc.MHC/MHC/G0101_2" requireKeys="MHC_PregnantRecord.pregnantId"  controlKey="MHC_PregnantRecord_control"/>
+		<item key="G_02" text="孕产妇产检随访" ref="chis.application.mhc.MHC/MHC/G0201_1" requireKeys="MHC_PregnantRecord.pregnantId" controlKey="MHC_PregnantRecord_control"/>
+		<item key="G_06" text="产后42天健康检查记录表" requireKeys="MHC_PregnantRecord.pregnantId" ref="chis.application.mhc.MHC/MHC/G04-1"  controlKey="MHC_PregnantRecord_control"/>
+		<item key="G_07" text="产后访视信息" requireKeys="MHC_PregnantRecord.pregnantId" ref="chis.application.mhc.MHC/MHC/G04-2" controlKey="MHC_PregnantRecord_control"/>
+		<item key="G_09" text="孕产妇特殊情况" requireKeys="MHC_PregnantRecord.pregnantId" ref="chis.application.mhc.MHC/MHC/G06" controlKey="MHC_PregnantRecord_control"/>
+		<item key="G_10" text="新生儿访视" requireKeys="MHC_PregnantRecord.pregnantId" ref="chis.application.mhc.MHC/MHC/G10-1" controlKey="MHC_PregnantRecord_control"/>
+		<item key="G_08" text="孕产妊娠图" requireKeys="MHC_PregnantRecord.pregnantId" ref="chis.application.mhc.MHC/MHC/G0501" controlKey="MHC_PregnantRecord_control"/>
+		<item key="G_13" text="产时信息" requireKeys="MHC_PregnantRecord.pregnantId" ref="chis.application.mhc.MHC/MHC/G20_02" controlKey="MHC_PregnantRecord_control"/>
+		<item key="G_16" text="孕产妇死亡报告卡" ref="chis.application.mhc.MHC/MHC/G17_02" requireKeys="MHC_PregnantRecord.pregnantId"  controlKey="DEA_DeathReportCard_control"/>
+	</item>
+	<item key="H" text="儿童保健管理" pkey="CDH_HealthCard.phrId" idsLoader="chis.healthCardIdLoader,chis.debilityChildrenIdLoader">
+		<item key="H_01" text="儿童健康档案" requireKeys="phrId" ref="chis.application.gynecology.GYNECOLOGY/CDH/H0111_1" controlKey="CDH_HealthCard_control"/>
+		<item key="H_02" text="出生医学证明" requireKeys="CDH_HealthCard.phrId" ref="chis.application.cdh.CDH/CDH/H02_2"  controlKey="CDH_HealthCard_control"/>
+		<item key="H_03" text="儿童询问记录" requireKeys="CDH_HealthCard.phrId" ref="chis.application.gynecology.GYNECOLOGY/CDH/H0111_2"  controlKey="CDH_HealthCard_control"/>
+		<item key="H_04" text="儿童意外情况" requireKeys="CDH_HealthCard.phrId" ref="chis.application.cdh.CDH/CDH/H0111_3"  controlKey="CDH_HealthCard_control"/>
+		<item key="H_05" text="儿童出生缺陷监测" requireKeys="CDH_HealthCard.phrId" ref="chis.application.cdh.CDH/CDH/H0401_1"  controlKey="CDH_HealthCard_control"/>
+		<item key="H_97" text="1岁以内儿童体格检查" requireKeys="CDH_HealthCard.phrId" ref="chis.application.gynecology.GYNECOLOGY/CDH/H97"  controlKey="CDH_HealthCard_control"/>
+		<item key="H_98" text="1-2岁儿童体格检查" requireKeys="CDH_HealthCard.phrId" ref="chis.application.gynecology.GYNECOLOGY/CDH/H98"  controlKey="CDH_HealthCard_control"/>
+		<item key="H_99" text="3-6岁儿童体格检查" requireKeys="CDH_HealthCard.phrId" ref="chis.application.gynecology.GYNECOLOGY/CDH/H99"  controlKey="CDH_HealthCard_control"/>
+		<item key="H_09" text="体弱儿童档案" requireKeys="CDH_HealthCard.phrId" ref="chis.application.cdh.CDH/CDH/H09-1"  controlKey="CDH_DebilityChildren_control"/>
+		<item key="H_10" text="体弱儿童随访" requireKeys="CDH_DebilityChildren.recordId" ref="chis.application.cdh.CDH/CDH/H09-2"  controlKey="CDH_DebilityChildren_control"/>
+		<item key="H_14" text="疑似残疾儿童信息报告" requireKeys="CDH_HealthCard.phrId" ref="chis.application.cdh.CDH/CDH/H0111_7"  controlKey="CDH_HealthCard_control"/>
+		<item key="H_12" text="WHO标准儿童年龄别体重曲线图" requireKeys="CDH_HealthCard.phrId" ref="chis.application.cdh.CDH/CDH/H12"  controlKey="CDH_HealthCard_control"/>
+		<item key="H_13" text="WHO标准儿童年龄别身长曲线图" requireKeys="CDH_HealthCard.phrId" ref="chis.application.cdh.CDH/CDH/H13"  controlKey="CDH_HealthCard_control"/>
+		<item key="H_15" text="9市标准儿童年龄别体重曲线图" requireKeys="CDH_HealthCard.phrId" ref="chis.application.cdh.CDH/CDH/H14"  controlKey="CDH_HealthCard_control"/>
+		<item key="H_16" text="9市标准儿童年龄别身长曲线图" requireKeys="CDH_HealthCard.phrId" ref="chis.application.cdh.CDH/CDH/H15"  controlKey="CDH_HealthCard_control"/>
+	</item>
+	<item key="I" text="计划免疫管理" pkey="PIV_VaccinateRecord.phrId">
+		<item key="I_01" text="计免档案" requireKeys="phrId" ref="chis.application.piv.PIV/PIV/ET01"/>
+	</item>
+	<item key="X" text="血吸虫病管理" pkey="SCH_SchistospmaRecord.schisRecordId" idsLoader="chis.healthCardIdLoader">
+		<item key="X_01" text="血吸虫病管理" requireKeys="phrId" ref="chis.application.sch.SCH/SCH/X0102"   controlKey="EHR_HealthRecord_control"/>
+	</item>
+	<item key="J" text="体检管理" pkey="PER_CheckupRegister.checkupNo" idsLoader="chis.checkupRecordIdLoader">
+		<item key="J_01" text="体检记录" ref="chis.application.per.PER/PER/J010101" requireKeys="phrId"  controlKey="PER_CheckupRegister_control"/>
+	</item>
+	<item key="DC" text="狂犬病管理" pkey="DC_RabiesRecord.rabiesId" idsLoader="chis.rabiesRecordIdLoader">
+		<item key="DC_01" text="狂犬病档案" requireKeys="phrId" ref="chis.application.dc.DC/DC/DC01_2"   controlKey="DC_RabiesRecord_control"/>
+	</item>
+	<item key="N" text="诊疗管理">
+		<item key="N_01" text="门诊记录" ref="chis.application.his.HIS/HIS/N06" requireKeys="empiId"/>
+		<item key="N_02" text="住院记录" ref="chis.application.his.HIS/HIS/N05" requireKeys="empiId"/>
+	</item>
+	<item key="P" text="重性精神病管理" pkey="PSY_PsychosisRecord.phrId" idsLoader="chis.psychosisRecordIdLoader">
+		<item key="P_01" text="重性精神病管理" ref="chis.application.psy.PSY/PSY/I01-1-1" requireKeys="phrId"   controlKey="PSY_PsychosisRecord_control"/>
+		<item key="P_02" text="精神病随访管理" ref="chis.application.psy.PSY/PSY/I01-1-2" requireKeys="PSY_PsychosisRecord.phrId"   controlKey="PSY_PsychosisRecord_control"/>
+		<item key="P_03" text="精神病记录纸" ref="chis.application.psy.PSY/PSY/I01-1-3" requireKeys="PSY_PsychosisRecord.phrId"   controlKey="PSY_PsychosisRecord_control"/>
+		<item key="P_04" text="精神病年度评估" ref="chis.application.psy.PSY/PSY/I01-1-4" requireKeys="PSY_PsychosisRecord.phrId"   controlKey="PSY_PsychosisRecord_control"/>
+	</item>
+	<item key="DEF" text="残疾人康复训练" pkey="DEF_LimbDeformityRecord.id,DEF_BrainDeformityRecord.id,DEF_IntellectDeformityRecord.id" idsLoader="chis.deformityRecordLimbIdLoader,chis.deformityRecordBrainIdLoader,chis.deformityRecordIntellectIdLoader">
+		<item key="DEF_01" text="肢体残疾康复训练" ref="chis.application.def.DEF/DEF/DEF01_1_1" requireKeys="phrId"  controlKey="DEF_LimbDeformityRecord_control"/>
+		<item key="DEF_02" text="脑瘫儿童康复训练" ref="chis.application.def.DEF/DEF/DEF02_1_1" requireKeys="phrId"   controlKey="DEF_BrainDeformityRecord_control"/>
+		<item key="DEF_03" text="智力残疾康复训练" ref="chis.application.def.DEF/DEF/DEF03_1_1" requireKeys="phrId"  controlKey="DEF_IntellectDeformityRecord_control"/>
+	</item>
+	<item key="DCIDR" text="传染病管理" 
+		pkey="IDR_Report.RecordID"  idsLoader="chis.IDR_ReportIdLoader">
+		<item key="DCIDR_01" text="传染病管理" ref="chis.application.diseasecontrol.DISEASECONTROL/IDR/DCIDR_03"
+			requireKeys="phrId" controlKey="IDR_Report_control" />
+	</item>
+	<item key="M" text="心血管管理"  pkey = "CVD_AssessRegister.inquireId">
+		<item key="M_01" text="心血管管理" ref="chis.application.cvd.CVD/CVD/M01" requireKeys="phrId"   controlKey="EHR_HealthRecord_control"/>
+	</item>
+	
+	<item key="R" text="离休干部档案" pkey="phrId" idsLoader="chis.retiredVeteranCadresRecordIdLoader">
+		<item key="R_01" text="离休干部档案" requireKeys="phrId" ref="chis.application.rvc.RVC/RVC/R11" controlKey="RVC_RetiredVeteranCadresRecord_control"/>
+		<item key="R_02" text="离休干部随访" requireKeys="RVC_RetiredVeteranCadresRecord.phrId" ref="chis.application.rvc.RVC/RVC/R12" controlKey="RVC_RetiredVeteranCadresVisit_control"/>
+	</item>
+  
+</dic>

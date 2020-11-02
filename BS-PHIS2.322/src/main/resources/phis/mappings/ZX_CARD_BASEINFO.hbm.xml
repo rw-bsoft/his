@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="ZX_CARD_BASEINFO" table="ZX_CARD_BASEINFO">
+		<id name="cardId" type="java.lang.String">
+			<column name="cardId" />
+			<generator class="assigned" />
+		</id>
+		<property name="centerCode" type="java.lang.String" length="38"/>
+		<property name="cardNumber" type="java.lang.String" length="9"/>
+		<property name="pid" type="java.lang.String" length="18"/>
+		<property name="name" type="java.lang.String" length="30"/>
+		<property name="sendDate" type="date"/>
+		<property name="validity" type="date"/>
+	</class>
+</hibernate-mapping>

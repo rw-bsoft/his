@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="EMR_GRCY" table="EMR_GRCY">
+		<id name="CYBS" type="java.lang.Long">
+			<column name="CYBS"/>
+			<generator class="assigned" />
+		</id>
+		<property name="ZDYS" type="java.lang.String" length="10"/>
+		<property name="ZXLB" type="java.lang.Integer" length="1"/>
+		<property name="JBBS" type="java.lang.Long" length="9"/>
+		<property name="FJBS" type="java.lang.Long" length="9"/>
+		<property name="MSZD" type="java.lang.String" length="100"/>
+		<property name="FJMC" type="java.lang.String" length="60"/>
+		<property name="JGID" type="java.lang.String" length="20"/>
+		<property name="JBMC" type="java.lang.String" length="200"/>
+	</class>
+</hibernate-mapping>

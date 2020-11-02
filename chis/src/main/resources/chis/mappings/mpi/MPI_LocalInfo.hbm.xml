@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.mpi.schemas.MPI_LocalInfo" table="MPI_LocalInfo">
+		<id name="localInfoId" type="java.lang.String" length="32">
+			<column name="localInfoId" />
+			<generator class="identity" />
+		</id>
+   <property name="empiId"             			type="java.lang.String" length="32"/>
+   <property name="sourceID"           			type="java.lang.String" length="16"/>
+   <property name="localID"          			type="java.lang.String" length="32"/>
+   <property name="createTime"         			type="date"/>
+   <property name="modifyTime"        			type="date"/>
+</class>
+</hibernate-mapping>

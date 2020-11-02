@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_FYWZ" table="GY_FYWZ">
+			<id name="JLXH" type="java.lang.Long">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String"  />
+        	<property name="FYXH" type="java.lang.Long"  />
+        	<property name="FYLB" type="java.lang.Integer"  />
+        	<property name="WZXH" type="java.lang.Long"  />
+        	<property name="WZSL" type="java.lang.Double"  />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.cvd.schemas.CVD_RiskAssessReason" table="CVD_RiskAssessReason">
+			<id name="riskId" type="java.lang.String">
+            	<column name="riskId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="tc" type="java.lang.String" length="1" />
+        	<property name="diabetes" type="java.lang.String" length="1" />
+        	<property name="sexCode" type="java.lang.String" length="1" />
+        	<property name="smoke" type="java.lang.String" length="1" />
+        	<property name="ageGroup" type="java.lang.String" length="1" />
+        	<property name="bp" type="java.lang.String" length="1" />
+        	<property name="riskRatio" type="java.lang.String" length="1" />	
+</class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.scm.schemas.SCM_ServicePlanTask" table="SCM_ServicePlanTask">
+			<id name="taskId" type="java.lang.String">
+            	<column name="taskId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="planId" type="java.lang.String" length="20" />
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="SCID" type="java.lang.String" length="20" />
+        	<property name="taskName" type="java.lang.String" length="100" />
+        	<property name="moduleAppId" type="java.lang.String" length="200" />
+        	<property name="status" type="java.lang.String" length="1" />
+        	<property name="RVID" type="java.lang.String" length="50" />
+</class>
+</hibernate-mapping>

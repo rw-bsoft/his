@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping> 
+	<class entity-name="GY_QXKZ" table="GY_QXKZ">
+		<composite-id>
+			<key-property name="YGDM" column="YGDM" type="java.lang.String" length="10"/>
+			<key-property name="YWLB" column="YWLB" type="java.lang.String" length="10"/>
+			<key-property name="KSDM" column="KSDM" type="java.lang.Long" length="18"/>
+		</composite-id>
+		<property name="MRBZ" type="java.lang.Integer" length="1" />
+		<property name="JGID" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

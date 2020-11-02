@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.his.schemas.HIS_RecipeDetail" table="HIS_RecipeDetail">
+		<id name="recipeDetailId" type="java.lang.String">
+			<column name="recipeDetailId" />
+			<generator class="assigned" />
+		</id>
+		<property name="recipeId" type="java.lang.String" length="16" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="groupNo" type="java.lang.Integer" />
+		<property name="drugType" type="java.lang.String" length="1" />
+		<property name="drugClass" type="java.lang.String" length="30" />
+		<property name="drugCode" type="java.lang.String" length="30" />
+		<property name="drugName" type="java.lang.String" length="80" />
+		<property name="drugSpec" type="java.lang.String" length="50" />
+		<property name="drugMedi" type="java.lang.String" length="2" />
+		<property name="useDays" type="java.lang.Integer" />
+		<property name="frequency" type="java.lang.String" length="2" />
+		<property name="useUnits" type="java.lang.String" length="6" />
+		<property name="onesDose" type="big_decimal" length="8" />
+		<property name="totalDose" type="big_decimal" length="8" />
+		<property name="packgeUnits" type="java.lang.String" length="6" />
+		<property name="totalCount" type="big_decimal" length="8" />
+		<property name="method" type="java.lang.String" length="2" />
+		<property name="startDate" type="date" />
+		<property name="stopDate" type="date" />
+		<property name="drugPrice" type="big_decimal" length="8" />
+		<property name="drugMoney" type="big_decimal" length="8" />
+		<property name="selfScale" type="big_decimal" length="6" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

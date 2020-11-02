@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FamilySickBedCostHzgs" language="groovy" pageWidth="765" pageHeight="866" columnWidth="725" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="75550b34-8cbe-42fc-9e68-554de47ef01f">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="414"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement x="294" y="83" width="64" height="21" uuid="8321f9c1-5d58-49e2-bbc4-c9b1e2889756"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[家床号码:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="59" width="66" height="21" uuid="ada32e61-a814-4004-a5ba-8bcb7ade4ec8"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[病人姓名:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="722" height="34" uuid="0a95a3b0-e417-402a-b10b-ed797f03ea53"/>
+				<textElement textAlignment="Center">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="34" width="109" height="20" uuid="6e3448ff-bd2e-43db-a10e-785326c14a6c"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{startDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="398" y="34" width="14" height="20" uuid="9399a298-bfdc-4df6-86a0-c0c3ee3790d8"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[至]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="412" y="34" width="110" height="20" uuid="4b06e471-0cec-4378-96e5-9bd0a0f7f879"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{endDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="59" width="77" height="21" uuid="bfcfe7fc-80e4-4b96-a473-1d4a440feed0"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DAYS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="647" y="59" width="75" height="21" uuid="99a9fb8f-8f6f-48ce-90f3-288e928f27ba"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CYRQ}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="143" y="59" width="66" height="21" uuid="81c3c9ad-36e3-4fcb-8ab7-a82dfef1cc64"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[病人性质:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="504" y="59" width="73" height="21" uuid="6be2f466-f1ff-4ea9-93ba-55c74a7c2998"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RYRQ}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="294" y="59" width="64" height="21" uuid="7e2b83b1-8a83-4d61-8bf6-0d4eb8b35d66"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[天数:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="361" y="83" width="75" height="21" uuid="44ee0184-2991-4be0-b02e-633cb2516fca"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ZYHM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="438" y="83" width="64" height="21" uuid="aa0bc4af-9f76-4429-a853-a94fb2043739"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[费用累计:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="67" y="59" width="75" height="21" uuid="2cfebe95-f9af-49e1-a955-45f2d88eeefc"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BRXM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="59" width="82" height="21" uuid="fc456f8f-9a54-4026-9132-b73f1d90c45f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BRXZ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="504" y="83" width="73" height="21" uuid="b54e5d50-49e1-4bcf-a394-71a51fe7d494"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FYLJ}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="83" width="66" height="21" uuid="fb76e2ee-b601-47da-8ecd-b745eafe3393"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[自负累计:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="580" y="59" width="64" height="21" uuid="7901b5f8-f55f-4efb-83f4-ce8d0afeaa23"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[终止日期:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="59" width="64" height="21" uuid="0b76947f-3438-4d42-be01-b2f2ea20497b"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[开始日期:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="647" y="83" width="75" height="21" uuid="615dcc02-10f4-4bbc-a8dd-3fcf4d214ab9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FYHJ}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="580" y="83" width="64" height="21" uuid="8f955215-1d0d-4392-b0d2-86ec3b2cc63c"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[费用合计:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="210" y="83" width="82" height="21" uuid="9c318fd0-85c0-4b62-bca5-4f26146692fd"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ZFHJ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="83" width="75" height="21" uuid="3962dc5a-01c1-4aa4-aefd-fb3ee04c271e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ZFLJ}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="143" y="83" width="64" height="21" uuid="f64f2b5c-1a48-4f86-84ff-ef62badc2385"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[自负合计:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="5" width="85" height="24" uuid="820f6f3b-5da0-4074-a692-107f11d49306"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[费用日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="5" width="288" height="24" uuid="fce2978f-178c-441d-a091-63652b47cbcb"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[费用名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="5" width="88" height="24" uuid="38c1a2a6-cd86-458d-94e9-a673d7de0d37"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[费用数量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="461" y="5" width="88" height="24" uuid="e525fb70-f27e-4aa0-b5f9-87e7fa9bc32b"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[费用单价]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="549" y="5" width="88" height="24" uuid="6078bf9b-6085-41a6-a416-001ea3971ed3"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[费用金额]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="637" y="5" width="88" height="24" uuid="4c98cf7d-b696-4fa5-8c56-36d66c080e36"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[自负比例]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="85" height="24" uuid="205247d5-985c-4411-ad79-b5f985c2a9d7"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FYRQ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="0" width="288" height="24" uuid="4776b1ef-9a5c-4f68-adff-23ff9414b81b"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FYMC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="0" width="88" height="24" uuid="ca278fc4-037e-4b17-8064-cf8bd7ed66e4"/>
+				<box rightPadding="4">
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FYSL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="461" y="0" width="88" height="24" uuid="c7161ad4-3bb6-4c1e-a1c1-617a30f931ea"/>
+				<box rightPadding="4">
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FYDJ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="0" width="88" height="24" uuid="9d581d7f-4227-4581-8d2e-1d2cae67a60a"/>
+				<box rightPadding="4">
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FYJE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="637" y="0" width="88" height="24" uuid="74bfdedf-55ea-4a94-be1e-8281eb624fcd"/>
+				<box rightPadding="4">
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ZFBL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="339" y="5" width="14" height="20" uuid="34ae1870-3f62-473b-af89-19e26c93153c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[第]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="5" width="14" height="20" uuid="f5fa5add-3924-430d-b720-82dd44656ca4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[共]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="5" width="14" height="20" uuid="466d3fa8-e6f4-4416-a0a6-0a4865608202"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[页]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="416" y="5" width="20" height="20" uuid="078a48d1-d2de-4536-9d83-48d8b7386b85"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="5" width="20" height="20" uuid="f5f893a9-6601-426a-b429-b2d48c855b55"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="436" y="5" width="14" height="20" uuid="b2016945-cfc2-4404-b1bc-bc05eda5c932"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[页]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="JC_FYMX_JS" table="JC_FYMX_JS">
+			<id name="JLXH" type="java.lang.Long">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="ZYH" type="java.lang.Long" length="18" />
+        	<property name="FYRQ" type="date"  />
+        	<property name="FYXH" type="java.lang.Long" length="18" />
+        	<property name="FYMC" type="java.lang.String" length="80" />
+        	<property name="YPCD" type="java.lang.Long" length="18" />
+        	<property name="FYSL" type="java.lang.Double" length="10" />
+        	<property name="FYDJ" type="java.lang.Double" length="10" />
+        	<property name="ZJJE" type="java.lang.Double" length="12" />
+        	<property name="ZFJE" type="java.lang.Double" length="12" />
+        	<property name="YSGH" type="java.lang.String" length="10" />
+        	<property name="SRGH" type="java.lang.String" length="10" />
+        	<property name="QRGH" type="java.lang.String" length="10" />
+        	<property name="FYBQ" type="java.lang.Long" length="18" />
+        	<property name="FYKS" type="java.lang.Long" length="18" />
+        	<property name="ZXKS" type="java.lang.Long" length="18" />
+        	<property name="JFRQ" type="date"  />
+        	<property name="XMLX" type="java.lang.Integer" length="2" />
+        	<property name="YPLX" type="java.lang.Integer" length="1" />
+        	<property name="FYXM" type="java.lang.Long" length="18" />
+        	<property name="JSCS" type="java.lang.Integer" length="3" />
+        	<property name="ZFBL" type="java.lang.Double" length="4" />
+        	<property name="YZXH" type="java.lang.Long" length="18" />
+        	<property name="HZRQ" type="date"  />
+        	<property name="YJRQ" type="java.lang.String" length="8" />
+        	<property name="ZLJE" type="java.lang.Double" length="12" />
+        	<property name="ZLXZ" type="java.lang.Integer" length="4" />
+        	<property name="YEPB" type="java.lang.Integer" length="1" />
+        	<property name="DZBL" type="java.lang.Double" length="6" />
+</class>
+</hibernate-mapping>

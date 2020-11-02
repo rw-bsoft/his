@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.tr.schemas.MDC_TumourScreening" table="MDC_TumourScreening">
+			<id name="recordId" type="java.lang.String">
+            	<column name="recordId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="phrId" type="java.lang.String" length="32" />
+        	<property name="highRiskType" type="java.lang.String" length="2" />
+        	<property name="year" type="java.lang.Integer" length="4" />
+        	<property name="TQDate" type="date"  />
+        	<property name="screeningDate" type="date"  />
+        	<property name="screeningDoctor" type="java.lang.String" length="20" />
+        	<property name="screeningUnit" type="java.lang.String" length="20" />
+        	<property name="highRiskSource" type="java.lang.String" length="1" />
+        	<property name="nature" type="java.lang.String" length="1" />
+        	<property name="highRiskMark" type="java.lang.String" length="1" />
+        	<property name="criterionMark" type="java.lang.String" length="1" />
+        	<property name="highRiskFactor" type="java.lang.String" length="300" />
+        	<property name="isTrace" type="java.lang.String" length="1" />
+        	<property name="traceNorm" type="java.lang.String" length="1" />
+        	<property name="questionnairePositive" type="java.lang.String" length="1" />
+        	<property name="checkPositive" type="java.lang.String" length="1" />
+        	<property name="syntheticalPositive" type="java.lang.String" length="1" />
+        	<property name="checkItem1" type="java.lang.String" length="100" />
+        	<property name="checkResult1" type="java.lang.String" length="30" />
+        	<property name="checkItem2" type="java.lang.String" length="100" />
+        	<property name="checkResult2" type="java.lang.String" length="30" />
+        	<property name="checkItem3" type="java.lang.String" length="100" />
+        	<property name="checkResult3" type="java.lang.String" length="30" />
+        	<property name="checkItem4" type="java.lang.String" length="100" />
+        	<property name="checkResult4" type="java.lang.String" length="30" />
+        	<property name="status" type="java.lang.String" length="1" />
+        	<property name="cancellationReason" type="java.lang.String" length="1" />
+			<property name="cancellationUser" type="java.lang.String" length="20" />
+			<property name="cancellationDate" type="date" />
+			<property name="cancellationUnit" type="java.lang.String" length="20" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

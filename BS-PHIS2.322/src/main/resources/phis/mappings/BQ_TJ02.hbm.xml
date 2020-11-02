@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="BQ_TJ02" table="BQ_TJ02">
+		<id name="JLXH" type="java.lang.Long">
+			<column name="JLXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="TJXH" type="java.lang.Long" length="18" />
+		<property name="YZXH" type="java.lang.Long" length="18" />
+		<property name="ZYH" type="java.lang.Long" length="18" />
+		<property name="YPXH" type="java.lang.Long" length="18" />
+		<property name="YPCD" type="java.lang.Long" length="18" />
+		<property name="YFGG" type="java.lang.String" length="20" />
+		<property name="YFDW" type="java.lang.String" length="4" />
+		<property name="YFBZ" type="java.lang.Integer" length="4" />
+		<property name="KSSJ" type="timestamp"  />
+		<property name="YCSL" type="java.lang.Double" length="8" />
+		<property name="YTCS" type="java.lang.Integer" length="2" />
+		<property name="FYSL" type="java.lang.Double" length="8" />
+		<property name="JFRQ" type="timestamp"  />
+		<property name="QRRQ" type="timestamp"  />
+		<property name="SYPC" type="java.lang.String" length="6" />
+		<property name="FYJE" type="java.lang.Double" length="12" />
+		<property name="YPDJ" type="java.lang.Double" length="12" />
+		<property name="FYBZ" type="java.lang.Integer" length="1" />
+		<property name="FYGH" type="java.lang.String" length="10" />
+		<property name="FYRQ" type="timestamp"  />
+		<property name="LSYZ" type="java.lang.Integer" length="1" />
+		<property name="QZCL" type="java.lang.Integer"  />
+		<property name="YEPB" type="java.lang.Integer" length="1" />
+		<property name="FYKS" type="java.lang.Long" length="18" />
+		<property name="SJFYBZ" type="java.lang.Integer" length="1" />
+		<property name="SJFYR" type="java.lang.String" length="10" />
+		<property name="SJFYSJ" type="timestamp"  />
+		<property name="YYTS" type="java.lang.Integer" length="4" />
+	</class>
+</hibernate-mapping>

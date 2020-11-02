@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_RK01" table="WL_RK01">
+			<id name="DJXH" type="java.lang.Long">
+            	<column name="DJXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="KFXH" type="java.lang.Integer" length="8" />
+        	<property name="ZBLB" type="java.lang.Integer" length="8" />
+        	<property name="LZDH" type="java.lang.String" length="30" />
+        	<property name="LZFS" type="java.lang.Long" length="12" />
+        	<property name="DWXH" type="java.lang.Long" length="12" />
+        	<property name="RKRQ" type="date"  />
+        	<property name="JBGH" type="java.lang.String" length="10" />
+        	<property name="JGFS" type="java.lang.Integer" length="2" />
+        	<property name="DJJE" type="java.lang.Double" length="18" />
+        	<property name="YFJE" type="java.lang.Double" length="18" />
+        	<property name="FKJE" type="java.lang.Double" length="18" />
+        	<property name="FPBZ" type="java.lang.Integer" length="1" />
+        	<property name="DJLX" type="java.lang.Integer" length="1" />
+        	<property name="ZDRQ" type="date"  />
+        	<property name="ZDGH" type="java.lang.String" length="10" />
+        	<property name="SHRQ" type="date"  />
+        	<property name="SHGH" type="java.lang.String" length="10" />
+        	<property name="JZRQ" type="date"  />
+        	<property name="JZGH" type="java.lang.String" length="10" />
+        	<property name="DJZT" type="java.lang.Integer" length="1" />
+        	<property name="THDJ" type="java.lang.Long" length="18" />
+        	<property name="DJBZ" type="java.lang.String" length="160" />
+        	<property name="PDDJ" type="java.lang.Long" length="18" />
+        	<property name="DRBZ" type="java.lang.Integer" length="1" />
+        	<property name="CWBH" type="java.lang.Long" length="18" />
+</class>
+</hibernate-mapping>

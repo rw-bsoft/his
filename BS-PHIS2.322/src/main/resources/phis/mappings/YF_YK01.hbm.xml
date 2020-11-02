@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YF_YK01" table="YF_YK01">
+		<composite-id>
+			<key-property name="YFSB" column="YFSB" type="java.lang.Long"/>
+			<key-property name="CKBH" column="CKBH" type="java.lang.Integer"/>
+			<key-property name="PDDH" column="PDDH" type="java.lang.Integer"/>
+		</composite-id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="PDRQ" type="timestamp"  />
+        	<property name="CZGH" type="java.lang.String" length="10" />
+        	<property name="PDWC" type="java.lang.Integer" length="1" />
+        	<property name="WCRQ" type="timestamp"  />
+        	<property name="HZWC" type="java.lang.Integer" length="1" />
+        	<property name="BZ" type="java.lang.String" length="250" />
+</class>
+</hibernate-mapping>

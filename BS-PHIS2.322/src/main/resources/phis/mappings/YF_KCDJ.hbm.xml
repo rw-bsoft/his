@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YF_KCDJ" table="YF_KCDJ">
+		<id name="SBXH" type="java.lang.Long">
+			<column name="SBXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String"  />
+		<property name="YFSB" type="java.lang.Long"  />
+		<property name="YPXH" type="java.lang.Long"  />
+		<property name="YPCD" type="java.lang.Long" />
+		<property name="YFBZ" type="java.lang.Integer" />
+		<property name="CFSB" type="java.lang.Long" />
+		<property name="JLXH" type="java.lang.Long" />
+		<property name="YPSL" type="java.lang.Double" />
+		<property name="DJSJ" type="timestamp" />
+	</class>
+</hibernate-mapping>

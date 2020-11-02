@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="BQ_TJ01" table="BQ_TJ01">
+		<id name="TJXH" type="java.lang.Long">
+			<column name="TJXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="TJYF" type="java.lang.Long" length="18" />
+		<property name="YZLX" type="java.lang.Integer" length="2" />
+		<property name="FYFS" type="java.lang.Long" length="18" />
+		<property name="XMLX" type="java.lang.Integer" length="2" />
+		<property name="TJSJ" type="timestamp"/>
+		<property name="TJBQ" type="java.lang.Integer" length="8" />
+		<property name="TJGH" type="java.lang.String" length="10" />
+		<property name="FYBZ" type="java.lang.Integer" length="1" />
+	</class>
+</hibernate-mapping>

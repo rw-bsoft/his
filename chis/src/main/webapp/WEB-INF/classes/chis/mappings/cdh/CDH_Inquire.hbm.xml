@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class entity-name="chis.application.cdh.schemas.CDH_Inquire" table="CDH_Inquire">
+    <id name="inquireId" type="java.lang.String">
+      <column name="inquireId" />
+      <generator class="assigned" />
+    </id>
+    <property name="phrId" type="java.lang.String" length="30" />
+    <property name="manaUnitId" type="java.lang.String" length="20" />
+    <property name="inquireDate" type="date" />
+    <property name="ageDate" type="java.lang.Integer" />
+    <property name="feedWay" type="java.lang.String" length="1" />
+    <property name="breastMilkCount" type="java.lang.String"
+      length="1" />
+    <property name="milk" type="java.lang.String" length="10" />
+    <property name="dryMilk" type="java.lang.String" length="10" />
+    <property name="otherFood" type="java.lang.String" length="10" />
+    <property name="weanFlag" type="java.lang.String" length="1" />
+    <property name="weanMonth" type="java.lang.Integer" />
+    <property name="wheaten" type="java.lang.String" length="10" />
+    <property name="fruit" type="java.lang.String" length="10" />
+    <property name="beanProducts" type="java.lang.String"
+      length="10" />
+    <property name="meatAndEgg" type="java.lang.String" length="10" />
+    <property name="vitaminADFlage" type="java.lang.String"
+      length="2" />
+    <property name="vitaminAD" type="java.lang.String" length="10" />
+    <property name="vitaminADName" type="java.lang.String"
+      length="1" />
+    <property name="calciumFlage" type="java.lang.String"
+      length="1" />
+    <property name="appetite" type="java.lang.String" length="1" />
+    <property name="defecateTimes" type="java.lang.Integer" />
+    <property name="defecateDates" type="java.lang.Integer" />
+    <property name="fecesState" type="java.lang.String" length="1" />
+    <property name="fecesColor" type="java.lang.String" length="1" />
+    <property name="otherColor" type="java.lang.String" length="10" />
+    <property name="sleepQuality" type="java.lang.String"
+      length="1" />
+    <property name="outdoorActivities" type="java.lang.String"
+      length="1" />
+    <property name="illness" type="java.lang.String" length="1" />
+    <property name="illnessType" type="java.lang.String" length="20" />
+    <property name="illnessName" type="java.lang.String"
+      length="50" />
+    <property name="inquireDoctor" type="java.lang.String"
+      length="20" />
+    <property name="inquireUnit" type="java.lang.String" length="20" />
+    <property name="lastModifyDate" type="timestamp" />
+    <property name="lastModifyUnit" type="java.lang.String" length="20" />
+    <property name="lastModifyUser" type="java.lang.String"
+      length="20" />
+    <property name="ricketsSymptom" type="java.lang.String" length="1" />
+    <property name="ricketsSign" type="java.lang.String" length="2" />
+    <property name="pneumoniaCount" type="java.lang.String" length="5" />
+    <property name="diarrheaCount" type="java.lang.String" length="5" />
+    <property name="traumaCount" type="java.lang.String" length="5" />
+    <property name="otherCount" type="java.lang.String" length="5" />
+  </class>
+</hibernate-mapping>

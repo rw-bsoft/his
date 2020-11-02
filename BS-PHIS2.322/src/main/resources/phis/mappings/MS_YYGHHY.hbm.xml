@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MS_YYGHHY" table="MS_YYGHHY">
+	<id name="HYXH" type="java.lang.Long">
+       	<column name="HYXH"/>
+       	<generator class="assigned" />
+   	</id>
+   	<property name="HYKS" type="java.lang.Long" length="8" />
+   	<property name="HYJG" type="java.lang.String" length="20" />
+   	<property name="HYYS" type="java.lang.String" length="20" />
+   	<property name="HYSJ" type="timestamp" />
+   	<property name="HYZT" type="java.lang.String" length="1" />
+   	<property name="BRID" type="java.lang.Long" length="18" />
+   	<property name="SFZH" type="java.lang.String" length="1" />
+   	<property name="TYSJ" type="timestamp" />
+   	<property name="ZBLB" type="java.lang.String" length="1" />
+   	<property name="SOURCE" type="java.lang.Long" />
+   	<property name="CARDID" type="java.lang.String" length="20" />
+   	<property name="CARDTYPE" type="java.lang.String" length="2" />
+   	<property name="LOGINUSERCARDTYPE" type="java.lang.String" length="2" />
+   	<property name="LOGINUSERIDCARD" type="java.lang.String" length="20" />
+   	<property name="PATIENTNAME" type="java.lang.String" length="20" />
+   	<property name="PATIENTGENDER" type="java.lang.Long" />
+   	<property name="PATIENTBIRTHDAY" type="java.lang.String" length="20" />
+   	<property name="TELEPHONENO" type="java.lang.String" length="30" />
+   	<property name="ADDRESS" type="java.lang.String" length="30" />
+   	<property name="SDXH" type="java.lang.String" length="30" />
+   	<property name="GHF" type="java.lang.Double" length="6" />
+   	<property name="ZLF" type="java.lang.Double" length="6" />
+   	<property name="ZFJE" type="java.lang.Double" length="6" />
+   	<property name="DDH" type="java.lang.String" length="32" />
+   	<property name="DDSJ" type="java.lang.String" length="32" />
+</class>
+</hibernate-mapping>

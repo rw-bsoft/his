@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.mpi.schemas.MPI_Extension" table="MPI_Extension">
+		<id name="id" type="java.lang.String" length="32">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+	<property name="empiId"           		type="java.lang.String" length="32"/>
+	<property name="propName"   		   	type="java.lang.String" length="2"/>
+	<property name="propValue"         	     	type="java.lang.String" length="200"/>
+</class>
+</hibernate-mapping>

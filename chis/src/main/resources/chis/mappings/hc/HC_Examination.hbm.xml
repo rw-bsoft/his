@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class entity-name="chis.application.hc.schemas.HC_Examination" table="HC_Examination">
+		<id name="examination" length="16" type="java.lang.String">
+			<column name="examination"/>
+			<generator class="assigned"/>
+		</id>
+		<property name="healthCheck" length="16" type="java.lang.String"/>
+		<property name="fundus" length="1" type="java.lang.String"/>
+		<property name="fundusDesc" length="100" type="java.lang.String"/>
+		<property name="skin" length="1" type="java.lang.String"/>
+		<property name="skinDesc" length="100" type="java.lang.String"/>
+		<property name="sclera" length="1" type="java.lang.String"/>
+		<property name="scleraDesc" length="100" type="java.lang.String"/>
+		<property name="lymphnodes" length="1" type="java.lang.String"/>
+		<property name="lymphnodesDesc" length="100" type="java.lang.String"/>
+		<property name="barrelChest" length="1" type="java.lang.String"/>
+		<property name="breathSound" length="1" type="java.lang.String"/>
+		<property name="breathSoundDesc" length="100" type="java.lang.String"/>
+		<property name="rales" length="1" type="java.lang.String"/>
+		<property name="ralesDesc" length="100" type="java.lang.String"/>
+		<property name="heartRate" type="java.lang.Integer"/>
+		<property name="rhythm" length="1" type="java.lang.String"/>
+		<property name="heartMurmur" length="1" type="java.lang.String"/>
+		<property name="heartMurmurDesc" length="100" type="java.lang.String"/>
+		<property name="abdominAltend" length="1" type="java.lang.String"/>
+		<property name="abdominAltendDesc" length="100" type="java.lang.String"/>
+		<property name="adbominAlmass" length="1" type="java.lang.String"/>
+		<property name="adbominAlmassDesc" length="100" type="java.lang.String"/>
+		<property name="liverBig" length="1" type="java.lang.String"/>
+		<property name="liverBigDesc" length="100" type="java.lang.String"/>
+		<property name="splenomegaly" length="1" type="java.lang.String"/>
+		<property name="splenomegalyDesc" length="100" type="java.lang.String"/>
+		<property name="dullness" length="1" type="java.lang.String"/>
+		<property name="dullnessDesc" length="100" type="java.lang.String"/>
+		<property name="edema" length="1" type="java.lang.String"/>
+		<property name="footPulse" length="10" type="java.lang.String"/>
+		<property name="dre" length="1" type="java.lang.String"/>
+		<property name="dreDesc" length="100" type="java.lang.String"/>
+		<property name="breast" length="1" type="java.lang.String"/>
+		<property name="breastDesc" length="100" type="java.lang.String"/>
+		<property name="vulva" length="1" type="java.lang.String"/>
+		<property name="vulvaDesc" length="100" type="java.lang.String"/>
+		<property name="vaginal" length="1" type="java.lang.String"/>
+		<property name="vaginalDesc" length="100" type="java.lang.String"/>
+		<property name="cervix" length="1" type="java.lang.String"/>
+		<property name="cervixDesc" length="100" type="java.lang.String"/>
+		<property name="palace" length="1" type="java.lang.String"/>
+		<property name="palaceDesc" length="100" type="java.lang.String"/>
+		<property name="attachment" length="1" type="java.lang.String"/>
+		<property name="attachmentDesc" length="100" type="java.lang.String"/>
+		<property name="tjother" length="100" type="java.lang.String"/>
+		<property name="createUnit" length="20" type="java.lang.String"/>
+		<property name="createDate" type="timestamp"/>
+		<property name="createUser" length="20" type="java.lang.String"/>
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+	</class>
+</hibernate-mapping>

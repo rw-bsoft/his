@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="EMR_JCSQ" table="EMR_JCSQ">
+		<id name="SQDH" type="java.lang.Long">
+			<column name="SQDH"/>
+		</id>
+		<property name="BRID" type="java.lang.Long" />
+		<property name="JZLX" type="java.lang.Integer"/>
+		<property name="JZHM" type="java.lang.String"  />
+		<property name="BRXM" type="java.lang.String"  />
+		<property name="BRKS" type="java.lang.Integer"/>
+		<property name="BRCH" type="java.lang.String"  />
+		<property name="BRXB" type="java.lang.Integer"/>
+		<property name="BRNL" type="java.lang.String"  />
+		<property name="JBBH" type="java.lang.Long" />
+		<property name="ICD10" type="java.lang.String"  />
+		<property name="JBMC" type="java.lang.String"  />
+		<property name="KDSJ" type="timestamp"  />
+		<property name="KDYS" type="java.lang.String"  />
+		<property name="JCLX" type="java.lang.Integer"/>
+		<property name="JCMD" type="clob"/>
+		<property name="JJBZ" type="java.lang.Integer"/>
+		<property name="ZXWZ" type="java.lang.Integer"/>
+		<property name="JCZT" type="java.lang.Integer"/>
+		<property name="ZFBZ" type="java.lang.Integer"/>
+		<property name="TJSJ" type="timestamp"  />
+		<property name="TJYS" type="java.lang.String"  />
+		<property name="YYSJ" type="timestamp"  />
+		<property name="JCSJ" type="timestamp"  />
+		<property name="JCYS" type="java.lang.String"  />
+		<property name="BGSJ" type="timestamp"  />
+		<property name="BGYS" type="java.lang.String"  />
+		<property name="SHSJ" type="timestamp"  />
+		<property name="SHYS" type="java.lang.String"  />
+		<property name="BZXX" type="java.lang.String"  />
+		<property name="ZXKS" type="java.lang.Integer"/>
+		<property name="THSJ" type="timestamp"  />
+		<property name="THYS" type="java.lang.String"  />
+		<property name="JSBZ" type="java.lang.Integer"/>
+		<property name="RISID" type="java.lang.String"  />
+		<property name="JCXM" type="java.lang.String"  />
+		<property name="WJZNR" type="java.lang.String"  />
+		<property name="QRYS" type="java.lang.String"  />
+		<property name="QRSJ" type="timestamp"  />
+		<property name="CLYJ" type="java.lang.String"  />
+		<property name="WJZFSSJ" type="timestamp"  />
+		<property name="WJZCLZT" type="java.lang.Integer"/>
+		<property name="JGID" type="java.lang.Integer" />
+	</class>
+</hibernate-mapping>

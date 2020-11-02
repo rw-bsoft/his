@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="EMR_ZYJB_TCM" table="EMR_ZYJB_TCM">
+		<id name="JBBS" type="java.lang.Long">
+			<column name="JBBS"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JBDM" type="java.lang.String" length="20"/>
+		<property name="JBMC" type="java.lang.String" length="60"/>
+		<property name="PYDM" type="java.lang.String" length="10"/>
+	</class>
+</hibernate-mapping>

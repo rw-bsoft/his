@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<dic navDic="manageUnit"  searchFieldEx="pyCode" entry="SYS_USERS" keyField="userId" textField="userName" queryOnly="false">
+</dic>
+  -->
+<dic alias="用户_发药" class="ComposeDictionary" navDic="phis.@manageUnit" supportRemote="false"
+	searchField="a.manageUnitId" iconCls="user"   searchFieldEx="c.pyCode"
+	entry="User b,SYS_Personnel c" keyField="c.PERSONID" textField="c.PERSONNAME" queryOnly="true"
+	filter="['and',['eq',['$','c.ORGANIZCODE'],['$','%user.manageUnit.ref']],['eq',['$','id'],['$','c.PERSONID']]]" >
+	<properties>
+		<p name="c.ORGANIZCODE">manageUnit</p>
+	</properties>
+</dic>

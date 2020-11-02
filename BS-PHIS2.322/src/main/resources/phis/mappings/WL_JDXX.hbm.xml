@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_JDXX" table="WL_JDXX">
+			<id name="JDXH" type="java.lang.Long">
+            	<column name="JDXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="KFXH" type="java.lang.Integer" length="8" />
+        	<property name="JLXH" type="java.lang.Long" length="18" />
+        	<property name="JDRQ" type="date"  />
+        	<property name="JDDWMC" type="java.lang.String" length="30" />
+        	<property name="JDDWDM" type="java.lang.String" length="10" />
+        	<property name="JDR" type="java.lang.String" length="20" />
+        	<property name="JDJG" type="java.lang.Integer" length="1" />
+        	<property name="HGZH" type="java.lang.String" length="20" />
+        	<property name="DJRQ" type="date"  />
+        	<property name="DJGH" type="java.lang.String" length="10" />
+        	<property name="ZFBZ" type="java.lang.Integer" length="1" />
+        	<property name="BZXX" type="java.lang.String" length="50" />
+        	<property name="JDJL" type="java.lang.Integer" length="1" />
+</class>
+</hibernate-mapping>

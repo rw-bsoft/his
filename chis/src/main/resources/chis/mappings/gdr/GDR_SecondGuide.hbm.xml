@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.gdr.schemas.GDR_SecondGuide" table="GDR_SecondGuide">
+			<id name="guideId" type="java.lang.String">
+            	<column name="guideId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="gdrId" type="java.lang.String" length="16" />
+        	<property name="tableware" type="java.lang.String" length="1" />
+        	<property name="water" type="java.lang.String" length="1" />
+        	<property name="tools" type="java.lang.String" length="1" />
+        	<property name="material" type="java.lang.String" length="1" />
+        	<property name="foodRot" type="java.lang.String" length="1" />
+        	<property name="guests" type="java.lang.String" length="1" />
+        	<property name="evnHealth" type="java.lang.String" length="1" />
+        	<property name="specialTools" type="java.lang.String" length="1" />
+        	<property name="sampleFood" type="java.lang.String" length="500" />
+        	<property name="guider" type="java.lang.String" length="20" />
+        	<property name="guideDate" type="date"  />
+        	<property name="guideResult" type="java.lang.String" length="1" />
+        	<property name="refurseReason" type="java.lang.String" length="100" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

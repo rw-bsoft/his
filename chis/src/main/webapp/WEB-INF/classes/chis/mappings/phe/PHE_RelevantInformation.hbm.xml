@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.phe.schemas.PHE_RelevantInformation" table="PHE_RelevantInformation">
+			<id name="RecordID" type="java.lang.String">
+            	<column name="RecordID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="reportCatagory" type="java.lang.String" length="1" />
+        	<property name="reportNumber" type="java.lang.Integer" length="2"  />
+        	<property name="reportUnit" type="java.lang.String" length="20" />
+        	<property name="reportDate" type="date"  />
+        	<property name="reportUser" type="java.lang.String" length="20" />
+        	<property name="contact" type="java.lang.String" length="20" />
+        	<property name="eventName" type="java.lang.String" length="20" />
+        	<property name="messageType" type="java.lang.String" length="50" />
+        	<property name="eventLevel" type="java.lang.String" length="1" />
+        	<property name="primaryDiagnosis" type="java.lang.String" length="200" />
+        	<property name="correctionDiagnosis" type="java.lang.String" length="200" />
+        	<property name="primaryDiagnosisTime" type="date"  />
+        	<property name="correctionDiagnosisTime" type="date"  />
+        	<property name="confirmLevelTime" type="date"  />
+        	<property name="correctionLevelTime" type="date"  />
+        	<property name="reportArea" type="java.lang.String" length="25" />
+        	<property name="eventArea" type="java.lang.String" length="25" />
+        	<property name="detailAdreess" type="java.lang.String" length="25" />
+        	<property name="eventAdreess" type="java.lang.String" length="50" />
+        	<property name="medicalOrganizationsType" type="java.lang.String" length="1" />
+        	<property name="medicalOrganizationsDep" type="java.lang.String" length="1" />
+        	<property name="schoolType" type="java.lang.String" length="1" />
+        	<property name="eventSource" type="java.lang.String" length="50" />
+        	<property name="eventSourceDetail" type="java.lang.String" length="200" />
+        	<property name="eventAreaScop" type="java.lang.String" length="100" />
+        	<property name="newReportCases" type="java.lang.Integer"  />
+        	<property name="newReportDies" type="java.lang.Integer"  />
+        	<property name="ExcludeCase" type="java.lang.Integer"  />
+        	<property name="totalReportCases" type="java.lang.Integer"  />
+        	<property name="totalReportDies" type="java.lang.Integer"  />
+        	<property name="eventTime" type="java.sql.Timestamp"  />
+        	<property name="comeToTime" type="java.sql.Timestamp"  />
+        	<property name="firstInvasionTime" type="java.sql.Timestamp"  />
+        	<property name="lastInvasionTime" type="java.sql.Timestamp"  />
+        	<property name="cardinalSymptom" type="java.lang.String" length="1" />
+        	<property name="otherSymptom" type="java.lang.String" length="20" />
+        	<property name="mainSigns" type="java.lang.String" length="200" />
+        	<property name="mainMeasure" type="java.lang.String" length="500" />
+			<property name="createUnit" type="java.lang.String" length="20" />
+		    <property name="createUser" type="java.lang.String" length="20" />
+		    <property name="createDate" type="timestamp"  />
+		    <property name="lastModifyUnit" type="java.lang.String" length="20" />
+		    <property name="lastModifyUser" type="java.lang.String" length="20" />
+		    <property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

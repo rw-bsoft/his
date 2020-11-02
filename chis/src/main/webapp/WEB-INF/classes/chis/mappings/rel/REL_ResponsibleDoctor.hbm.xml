@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.rel.schemas.REL_ResponsibleDoctor" table="REL_ResponsibleDoctor">
+		<id name="recordId" type="java.lang.String" length="16">
+			<column name="recordId" />
+			<generator class="assigned" />
+		</id>
+		<property name="assistantId" type="java.lang.String" length="20"/>
+		<property name="doctorId" type="java.lang.String" length="20"/>
+		<property name="createDate" type="date"/>
+		<property name="createUser" type="java.lang.String" length="20"/>
+		<property name="createUnit" type="java.lang.String" length="20"/>
+		<property name="updateDate" type="date"/>
+		<property name="updateUser" type="java.lang.String" length="20"/>
+		<property name="status" type="java.lang.String" length="1"/>
+	</class>
+</hibernate-mapping>

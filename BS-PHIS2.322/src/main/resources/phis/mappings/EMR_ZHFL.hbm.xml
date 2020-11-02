@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="EMR_ZHFL" table="EMR_ZHFL">
+		<id name="ZHFL" type="java.lang.Long">
+			<column name="ZHFL"/>
+			<generator class="assigned" />
+		</id>
+		<property name="FLBM" type="java.lang.String" length="30"/>
+		<property name="FLDM" type="java.lang.String" length="20"/>
+		<property name="FLMC" type="java.lang.String" length="60"/>
+		<property name="PYDM" type="java.lang.String" length="10"/>
+		<property name="WBDM" type="java.lang.String" length="10"/>
+		<property name="QTDM" type="java.lang.String" length="10"/>
+		<property name="ZXBZ" type="java.lang.Integer" length="1"/>
+		<property name="BZXX" type="java.lang.String" length="255"/>
+	</class>
+</hibernate-mapping>

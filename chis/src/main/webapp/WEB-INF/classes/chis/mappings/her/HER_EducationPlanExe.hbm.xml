@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.her.schemas.HER_EducationPlanExe" table="HER_EducationPlanExe">
+		<id name="exeId" type="java.lang.String">
+			<column name="exeId"/>
+			<generator class="assigned" />
+		</id>
+		<property name="setId" type="java.lang.String" length="16" />
+		<property name="executePerson" type="java.lang.String" length="20" />
+		<property name="executeUnit" type="java.lang.String" length="20" />
+		<property name="createUnit" length="20" type="java.lang.String"/>
+		<property name="createDate" type="timestamp"/>
+		<property name="createUser" length="20" type="java.lang.String"/>
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp"  />
+	</class>
+</hibernate-mapping>

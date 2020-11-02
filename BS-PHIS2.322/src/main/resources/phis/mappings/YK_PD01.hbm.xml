@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YK_PD01" table="YK_PD01">
+		<composite-id>
+			<key-property name="XTSB" column="XTSB" type="java.lang.Long"/>
+			<key-property name="PDDH" column="PDDH" type="java.lang.String"/>
+		</composite-id>
+		<property name="JGID" length="20" type="java.lang.String"/>
+		<property name="YPLB" length="16" type="java.lang.String"/>
+		<property name="KWLB" length="16" type="java.lang.String"/>
+		<property name="BZXX" length="100" type="java.lang.String"/>
+		<property name="PDRQ" type="timestamp"/>
+		<property name="CZGH" length="10" type="java.lang.String"/>
+		<property name="YSGH" length="10" type="java.lang.String"/>
+		<property name="ZXRQ" type="timestamp"/>
+		<property name="CKDH" length="6" type="java.lang.Integer"/>
+		<property name="RKDH" length="6" type="java.lang.Integer"/>
+		<property name="PDPB" length="1" type="java.lang.Integer"/>
+	</class>
+</hibernate-mapping>

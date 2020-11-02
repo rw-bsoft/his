@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.mpm.schemas.MPM_FieldData" table="MPM_FieldData">
+			<id name="dataId" type="java.lang.String">
+            	<column name="dataId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="recordId" type="java.lang.String" length="16" />
+        	<property name="fieldId" type="java.lang.String" length="30" />
+        	<property name="fieldValue" type="java.lang.String" length="4000" />
+        	<property name="id" type="java.lang.String" length="30" />
+</class>
+</hibernate-mapping>

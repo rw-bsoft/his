@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	 <class entity-name="DR_DemographicInfo" table="dr_demographicinfo" >
+        <id name="mpiId" type="java.lang.String" length="32">
+			<column name="mpiId" />
+			<generator class="assigned" />
+		</id>
+		<property name="cardTypeCode"   type="java.lang.String"		length="2"/>
+		<property name="cardNo"   		type="java.lang.String"		length="20"/>
+		<property name="personName"  	type="java.lang.String"		length="20"/>
+		<property name="idCard"   		type="java.lang.String"		length="20"/>
+		<property name="sexCode"   		type="java.lang.String"		length="1"/>
+		<property name="birthday"   	type="date"		/>
+		<property name="contactNo"   	type="java.lang.String"		length="20"/>
+	 </class>
+</hibernate-mapping>

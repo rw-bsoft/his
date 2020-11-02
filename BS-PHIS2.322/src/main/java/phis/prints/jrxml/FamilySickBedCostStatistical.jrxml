@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FamilySickBedCostStatistical" language="groovy" pageWidth="900" pageHeight="842" columnWidth="900" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true">
+	<parameter name="TITLE" class="java.lang.String"/>
+	<parameter name="DATE" class="java.lang.String"/>
+	<parameter name="HM" class="java.lang.String"/>
+	<parameter name="XM" class="java.lang.String"/>
+	<parameter name="XM1" class="java.lang.String"/>
+	<parameter name="XM2" class="java.lang.String"/>
+	<parameter name="XM3" class="java.lang.String"/>
+	<parameter name="XM4" class="java.lang.String"/>
+	<parameter name="XM5" class="java.lang.String"/>
+	<parameter name="XM6" class="java.lang.String"/>
+	<parameter name="XM7" class="java.lang.String"/>
+	<parameter name="XM8" class="java.lang.String"/>
+	<parameter name="XM9" class="java.lang.String"/>
+	<parameter name="XM10" class="java.lang.String"/>
+	<parameter name="XM11" class="java.lang.String"/>
+	<parameter name="XM12" class="java.lang.String"/>
+	<parameter name="XM13" class="java.lang.String"/>
+	<parameter name="XM14" class="java.lang.String"/>
+	<parameter name="XM15" class="java.lang.String"/>
+	<parameter name="XM16" class="java.lang.String"/>
+	<parameter name="XM17" class="java.lang.String"/>
+	<parameter name="XM18" class="java.lang.String"/>
+	<field name="HM" class="java.lang.String"/>
+	<field name="XM" class="java.lang.String"/>
+	<field name="YPFY" class="java.lang.Double"/>
+	<field name="YPBL" class="java.lang.String"/>
+	<field name="XM1" class="java.lang.Double"/>
+	<field name="XM2" class="java.lang.Double"/>
+	<field name="XM3" class="java.lang.Double"/>
+	<field name="XM4" class="java.lang.Double"/>
+	<field name="XM5" class="java.lang.Double"/>
+	<field name="XM6" class="java.lang.Double"/>
+	<field name="XM7" class="java.lang.Double"/>
+	<field name="XM8" class="java.lang.Double"/>
+	<field name="XM9" class="java.lang.Double"/>
+	<field name="XM10" class="java.lang.Double"/>
+	<field name="XM11" class="java.lang.Double"/>
+	<field name="XM12" class="java.lang.Double"/>
+	<field name="XM13" class="java.lang.Double"/>
+	<field name="XM14" class="java.lang.Double"/>
+	<field name="XM15" class="java.lang.Double"/>
+	<field name="XM16" class="java.lang.Double"/>
+	<field name="XM17" class="java.lang.Double"/>
+	<field name="XM18" class="java.lang.Double"/>
+	<variable name="YPHJ" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{YPFY}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM1}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM2" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM2}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM3" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM3}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM4" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM4}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM5" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM5}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM6" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM6}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM7" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM7}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM8" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM8}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM9" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM9}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM10" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM10}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM11" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM11}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM12" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM12}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM13" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM13}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM14" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM14}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM15" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM15}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM16" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM16}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM17" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM17}]]></variableExpression>
+	</variable>
+	<variable name="SUM_XM18" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XM18}]]></variableExpression>
+	</variable>
+	<title>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="900" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{TITLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-12" y="34" width="900" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{HM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="40" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="132" y="0" width="45" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[药品费用]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement x="177" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM1}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="217" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM2}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="257" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM3}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="297" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM4}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="337" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM5}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM5}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="377" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM6}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM6}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="417" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM7}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM7}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="457" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM8}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="497" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM9}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM9}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="537" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM10}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM10}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="577" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM11}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM11}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="617" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM12}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM12}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="657" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM13}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM13}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="697" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM14}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM14}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="737" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM15}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM15}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="777" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM16}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM16}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="817" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM17}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM17}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="857" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM18}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{XM18}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="90" y="0" width="42" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[药品比例]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{HM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="40" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{XM}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="true">
+				<reportElement x="132" y="0" width="45" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{YPFY}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="177" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM1}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="217" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM2}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="257" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM3}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="297" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM4}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM4}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="337" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM5}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="377" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM6}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM6}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="417" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM7}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM7}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="457" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM8}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM8}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="497" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM9}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM9}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="537" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM10}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM10}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="577" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM11}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM11}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="617" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM12}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM12}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="657" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM13}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM13}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="697" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM14}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM14}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="737" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM15}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM15}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="777" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM16}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM16}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="817" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM17}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM17}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="857" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM18}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{XM18}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="42" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{YPBL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20" splitType="Stretch">
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="857" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM18}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM18}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="817" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM17}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM17}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="777" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM16}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM16}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="737" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM15}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM15}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="697" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM14}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM14}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="657" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM13}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM13}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="617" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM12}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM12}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="577" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM11}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM11}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="537" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM10}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM10}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="497" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM9}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM9}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="457" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM8}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM8}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="417" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM7}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM7}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="377" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM6}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM6}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="337" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM5}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="297" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM4}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM4}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="257" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM3}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="217" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM2}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00" isBlankWhenNull="false">
+				<reportElement x="177" y="0" width="40" height="20">
+					<printWhenExpression><![CDATA[new Boolean($P{XM1}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{SUM_XM1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="132" y="0" width="45" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$V{YPHJ}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="132" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[合计]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

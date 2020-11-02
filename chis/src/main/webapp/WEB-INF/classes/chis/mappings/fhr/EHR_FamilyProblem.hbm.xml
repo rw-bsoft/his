@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.fhr.schemas.EHR_FamilyProblem" table="EHR_FamilyProblem">
+		<id name="familyProblemId" type="java.lang.String">
+			<column name="familyProblemId" />
+			<generator class="assigned" />
+		</id>
+		<property name="familyId" type="java.lang.String" length="30" />
+		<property name="happenDate" type="date" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="description" type="java.lang.String" length="500" />
+		<property name="solveResult" type="java.lang.String" length="500" />
+		<property name="solveDate" type="date" />
+		<property name="recordUser" type="java.lang.String" length="20" />
+		<property name="recordUnit" type="java.lang.String" length="20" />
+		<property name="recordDate" type="timestamp" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+		<property name="problemName" type="java.lang.String"
+			length="50" />
+	</class>
+</hibernate-mapping>

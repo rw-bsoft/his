@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.def.schemas.DEF_BrainTrainingEvaluate" table="DEF_BrainTrainingEvaluate">
+		<id name="id" type="java.lang.String">
+			<column name="id"/>
+			<generator class="assigned" />
+		</id>
+		<property name="defId" type="java.lang.String" />
+		<property name="turnOver" type="java.lang.Integer"  />
+		<property name="sit" type="java.lang.Integer"  />
+		<property name="creep" type="java.lang.Integer"  />
+		<property name="stand" type="java.lang.Integer"  />
+		<property name="shift" type="java.lang.Integer"  />
+		<property name="walk" type="java.lang.Integer"  />
+		<property name="walkupStairs" type="java.lang.Integer"  />
+		<property name="takeFood" type="java.lang.Integer"  />
+		<property name="undress" type="java.lang.Integer"  />
+		<property name="wash" type="java.lang.Integer"  />
+		<property name="toilet" type="java.lang.Integer"  />
+		<property name="exchangeActivity" type="java.lang.Integer"  />
+		<property name="groupActivity" type="java.lang.Integer"  />
+		<property name="score" type="java.lang.Integer"  />
+		<property name="evaluateStage" type="java.lang.Integer"  />
+		<property name="visitDate" type="date"  />
+		<property name="visitUser" type="java.lang.String" length="20" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="inputDate" type="timestamp"  />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp"  />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_ZKFL" table="EMR_ZKFL">
+			<id name="ZKFL" type="java.lang.Integer">
+            	<column name="ZKFL"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="ZXLB" type="java.lang.Integer" length="1" />
+        	<property name="FLBM" type="java.lang.String" length="30" />
+        	<property name="FLMC" type="java.lang.String" length="60" />
+        	<property name="PYDM" type="java.lang.String" length="10" />
+        	<property name="WBDM" type="java.lang.String" length="10" />
+        	<property name="QTDM" type="java.lang.String" length="10" />
+</class>
+</hibernate-mapping>

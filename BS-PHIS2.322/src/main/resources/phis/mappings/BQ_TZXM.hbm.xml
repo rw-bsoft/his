@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="BQ_TZXM" table="BQ_TZXM">
+			<id name="XMH" type="java.lang.String">
+            	<column name="XMH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="XMMC" type="java.lang.String" length="30" />
+        	<property name="PYDM" type="java.lang.String" length="10" />
+        	<property name="ZTBZ" type="java.lang.String" length="1" />
+        	<property name="XTBZ" type="java.lang.String" length="1" />
+        	<property name="TZLX" type="java.lang.String" length="1" />
+        	<property name="XMDW" type="java.lang.String" length="8" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YS_ZY_HZYJ" table="YS_ZY_HZYJ">
+			<id name="JLXH" type="java.lang.String">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="SQXH" type="java.lang.String" length="18" />
+        	<property name="HZYJ" type="java.lang.String" length="255" />
+        	<property name="KSDM" type="java.lang.String" length="8" />
+        	<property name="SSYS" type="java.lang.String" length="10" />
+        	<property name="SXYS" type="java.lang.String" length="10" />
+        	<property name="SXSJ" type="timestamp"  />
+        	<property name="QMYS" type="java.lang.String" length="10" />
+        	<property name="QMSJ" type="timestamp"  />
+        	<property name="JGID" type="java.lang.String"  />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.tr.schemas.MDC_TumourPastMedicalHistory" table="MDC_TumourPastMedicalHistory">
+			<id name="TPMHID" type="java.lang.String">
+            	<column name="TPMHID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="checkDate" type="date"  />
+        	<property name="checkType" type="java.lang.String" length="1" />
+        	<property name="reachPart" type="java.lang.String" length="1" />
+        	<property name="lesionPart" type="java.lang.String" length="2" />
+        	<property name="distance" type="java.lang.Integer" length="4" />
+        	<property name="tumourSize" type="java.lang.Integer" length="4" />
+        	<property name="biopsy" type="java.lang.String" length="1" />
+        	<property name="biopsyResult" type="java.lang.String" length="2" />
+        	<property name="withCancer" type="java.lang.String" length="1" />
+        	<property name="polypsShape" type="java.lang.String" length="1" />
+        	<property name="pedicle" type="java.lang.String" length="1" />
+        	<property name="bleeding" type="java.lang.String" length="1" />
+        	<property name="biopsyDate" type="date"  />
+        	<property name="adenocarcinomaProcessing" type="java.lang.String" length="1" />
+        	<property name="surgeryType" type="java.lang.String" length="1" />
+        	<property name="auxiliaryTreatment" type="java.lang.String" length="1" />
+        	<property name="malignantTumorTypes" type="java.lang.String" length="2" />
+        	<property name="stagesGist" type="java.lang.String" length="10" />
+        	<property name="T" type="java.lang.String" length="10" />
+        	<property name="N" type="java.lang.String" length="10" />
+        	<property name="M" type="java.lang.String" length="10" />
+        	<property name="surgeryUnit" type="java.lang.String" length="20" />
+        	<property name="qualityControlCode" type="java.lang.String" length="20" />
+        	<property name="qualityControlResult" type="java.lang.String" length="2" />
+        	<property name="radiotherapyUnit" type="java.lang.String" length="20" />
+        	<property name="firstRemindTime" type="timestamp"  />
+        	<property name="radiotherapyType" type="java.lang.String" length="50" />
+        	<property name="chemotherapyUnit" type="java.lang.String" length="20" />
+        	<property name="SecondRemindTime" type="timestamp"  />
+        	<property name="chemotherapyType" type="java.lang.String" length="50" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report id="ZJ_BMI" title="BMI曲线图">
+	<define class="ctd.chart.define.CHISUnionReportDefine">
+		<headers>
+			<item renderIndex="1" id="zjrq" alias="自检日期" color="#0000FF" expr="to_char(zjrq,'yyyy-mm-dd') as zjrq" type="string"/>
+			<item renderIndex="2" id="bmi" alias="体质指数" color="#0000FF" expr="jg:select to_char(zjrq,'yyyy-mm-dd') as zjrq,jg as ssy from VIEW_ZJ_RECORD  " type="string" func="union"/>
+		</headers>
+		<sort id="zjrq"/>
+		<src>
+			<entry name="VIEW_ZJ_RECORD"/>
+		</src>
+		<condition>['and',
+						['eq',['$','phrId'],['$','%q.phrId']],
+						['eq',['$','xmbh'],['s','000003']]
+					]</condition>
+	</define>
+	
+	<chart template="Spline" chartType="MSSpline"/>
+	<queryArgs>
+		<arg id="phrId" alias="档案编号" type="string">
+		</arg>
+	</queryArgs>
+</report>

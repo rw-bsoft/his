@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="RES_DictionaryVerifyLog" table="RES_DictionaryVerifyLog">
+		<id name="ID" type="java.lang.Integer">
+	    	<column name="ID"/>
+	    	<generator class="sequence">
+            	<param name="sequence">SEQ_RES_DictionaryVerifyLog</param>
+           	</generator>
+		</id>
+		<property name="DICID" type="java.lang.String" length="200" />
+		<property name="VERSION" type="java.lang.String" length="50" />
+		<property name="USERID" type="java.lang.String" length="50"  />
+		<property name="VDATE" type="date" />
+		<property name="VFLAG" type="java.lang.Integer" />
+	</class>
+</hibernate-mapping>

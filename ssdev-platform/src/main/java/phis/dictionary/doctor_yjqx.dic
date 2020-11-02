@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="医生_yjqx" codeRule="4,2,3,3,3,3,3,3" class="TableDictionary" distinct="true" supportRemote="false" navDic="manageUnit" searchField="a.ORGANIZCODE" entry="SYS_Personnel a,GY_QXKZ b" filter="['and',['eq',['$','a.PERSONID'],['$','b.YGDM']],['eq',['$','b.YWLB'],['s','9']]]" keyField="a.PERSONID" textField="a.PERSONNAME" queryOnly="true">
+	<properties>
+		<p name="a.ORGANIZCODE">ORGANIZCODE</p>
+		<p name="a.PRESCRIBERIGHT">PRESCRIBERIGHT</p>
+		<p name="a.LOGOFF">LOGOFF</p>
+		<p name="a.PYCODE">PYCODE</p>
+	</properties>
+</dic>

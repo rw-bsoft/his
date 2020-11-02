@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.mobileApp.schemas.MDC_DiabetesDetailApp"
+		table="MDC_DiabetesRecord">
+		<id name="phrId" type="java.lang.String">
+			<column name="phrId" />
+			<generator class="assigned" />
+		</id>
+		<property name="height" type="java.lang.Double" length="8" />
+		<property name="weight" type="java.lang.Double" length="8" />
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="manaDoctorId" type="java.lang.String"
+			length="20" />
+		<property name="diabetesType" type="java.lang.String"
+			length="1" />
+		<property name="diagnosisDate" type="date" />
+		<property name="diagnosisUnit" type="java.lang.String"
+			length="100" />
+		<property name="fbs" type="java.lang.Double" length="8" />
+		<property name="pbs" type="java.lang.Double" length="8" />
+		<property name="unit" type="java.lang.String" length="1" />
+		<property name="familyHistroy" type="java.lang.String"
+			length="1" />
+		<property name="riskFactors" type="java.lang.String" length="50" />
+	</class>
+</hibernate-mapping>

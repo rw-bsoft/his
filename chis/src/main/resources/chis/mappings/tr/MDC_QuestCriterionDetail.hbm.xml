@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.tr.schemas.MDC_QuestCriterionDetail" table="MDC_QuestCriterionDetail">
+		<id name="recordId" type="java.lang.String">
+			<column name="recordId" />
+			<generator class="assigned" />
+		</id>
+		<property name="QCId" type="java.lang.String" length="16" />
+		<property name="QMId" type="java.lang.String" length="16" />
+		<property name="QFId" type="java.lang.String" length="16" />
+		<property name="dicId" type="java.lang.String" length="16" />
+		<property name="fieldName" type="java.lang.String" length="100" />
+		<property name="keys" type="java.lang.String" length="10" />
+		<property name="text" type="java.lang.String" length="100" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+	</class>
+</hibernate-mapping>

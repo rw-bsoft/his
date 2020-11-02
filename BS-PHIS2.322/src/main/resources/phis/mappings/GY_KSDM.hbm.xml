@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_KSDM" table="GY_KSDM">
+			<id name="KSDM" type="java.lang.Long">
+            	<column name="KSDM"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="50" />
+        	<property name="KSMC" type="java.lang.String" length="50" />
+        	<property name="PYDM" type="java.lang.String" length="20" />
+        	<property name="JGBM" type="java.lang.String" length="20" />
+        	<property name="SJKS" type="java.lang.Long" length="18" />
+        	<property name="HSKS" type="java.lang.Long" length="18" />
+        	<property name="MZSY" type="java.lang.String" length="1" />
+        	<property name="YJSY" type="java.lang.String" length="1" />
+        	<property name="ZYSY" type="java.lang.String" length="1" />
+        	<property name="BQSY" type="java.lang.String" length="1" />
+        	<property name="EDCW" type="java.lang.Integer" length="4" />
+        	<property name="PLSX" type="java.lang.String" length="10" />
+        	<property name="SJBM" type="java.lang.String" length="50" />
+        	<property name="YBDZ" type="java.lang.String" length="10" />
+</class>
+</hibernate-mapping>

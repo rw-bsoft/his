@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_ZJJL" table="WL_ZJJL">
+			<id name="ZJXH" type="java.lang.Long">
+            	<column name="ZJXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="KFXH" type="java.lang.Integer" length="8" />
+        	<property name="CWYF" type="java.lang.String" length="8" />
+        	<property name="ZJRQ" type="date"  />
+        	<property name="ZXRQ" type="date"  />
+        	<property name="CZGH" type="java.lang.String" length="10" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 20, 2007 3:34:08 PM by Hibernate Tools 3.2.0.b11 -->
+<hibernate-mapping>
+    <class entity-name="EMRTYPE" table="EMRTYPE">
+    	<id name="EMRTYPECODE" type="java.lang.String" length="50">
+			<column name="EMRTYPECODE"/>
+			<generator class="assigned" />
+		</id>
+        <property name="FRAMEWORKCODE" type="java.lang.String" length="50" />
+        <property name="EMRTYPENAME" type="java.lang.String" length="20" />
+    </class>
+</hibernate-mapping>

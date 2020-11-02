@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="deadRegister2" language="groovy" pageWidth="421" pageHeight="595" columnWidth="381" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<background>
+		<band height="555" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="268" y="302" width="73" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{reasonBasis_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="206" y="343" width="64" height="20"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[填卡人:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="268" y="258" width="73" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{noTreatmentReason_text}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement x="103" y="375" width="101" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{inputDate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="359" y="23" width="1" height="513"/>
+			</line>
+			<staticText>
+				<reportElement x="39" y="343" width="64" height="20"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[填卡单位:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="103" y="343" width="77" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{inputUnit_text}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="21" y="23" width="1" height="513"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="268" y="160" width="73" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{diagnoseLevel_text}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="23" y="23" width="335" height="1"/>
+			</line>
+			<line>
+				<reportElement x="24" y="535" width="335" height="1"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="270" y="343" width="73" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{inputUser_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="111" width="200" height="69"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[诊断级别：
+	(1)省(市)              (2)区县
+	(3)街道(乡镇)      (4)村(诊断)
+	(5)未就医
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="193" width="200" height="85"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[未治疗或未就医主要原因：
+(1)经济困难      (2)交通不便
+(3)来不及送医院
+(4)家长认为病情不严重
+(5)风俗习惯      (6)其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="376" width="64" height="20"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[填卡日期:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="290" width="200" height="34"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[死因诊断依据：(1)病理尸检  (2)临床  (3)死后推断
+]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="270" y="75" width="73" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{treatment_text}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="270" y="42" width="73" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{deathAddress_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="75" width="200" height="20"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[死前治疗：(1)住院  (2)门诊  (3)未治疗
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="42" width="200" height="20"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[死亡地点：(1)医院  (2)途中  (3)家中 ]]></text>
+			</staticText>
+		</band>
+	</background>
+</jasperReport>

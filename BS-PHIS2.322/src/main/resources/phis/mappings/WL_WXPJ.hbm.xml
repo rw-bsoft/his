@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="WL_WXPJ" table="WL_WXPJ">
+		<id name="PJXH" type="java.lang.Long">
+			<column name="PJXH" />
+			<generator class="assigned" />
+		</id>
+		<property name="KFXH" type="java.lang.Integer" length="8" />
+		<property name="WZXH" type="java.lang.Long" length="18" />
+		<property name="WXXH" type="java.lang.Long" length="18" />
+		<property name="PJMC" type="java.lang.String" length="50" />
+		<property name="PJGG" type="java.lang.String" length="30" />
+		<property name="PJDW" type="java.lang.String" length="6" />
+		<property name="PJSL" type="java.lang.Double" length="18" />
+		<property name="PJJG" type="java.lang.Double" length="18" />
+		<property name="PJJE" type="java.lang.Double" length="18" />
+		<property name="CKMX" type="java.lang.Long" length="18" />
+	</class>
+</hibernate-mapping>

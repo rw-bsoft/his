@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StorageOfTransfer.jrxml" language="groovy" pageWidth="1000" pageHeight="860" columnWidth="1000" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1"/>
+	<subDataset name="dataset2"/>
+	<variable name="index" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[new Integer("1")]]></variableExpression>
+	</variable>
+	<pageHeader>
+		<band height="101">
+			<textField>
+				<reportElement x="0" y="0" width="1000" height="30" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{TITLE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="45" width="70" height="20"/>
+				<textElement markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[流水单号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="45" width="62" height="20"/>
+				<textElement markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[盘点方式：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="824" y="45" width="64" height="20"/>
+				<textElement markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[盘点日期：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="72" width="70" height="20"/>
+				<textElement markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[单据备注：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="79" y="45" width="194" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{LSDH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="487" y="45" width="108" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{GLFS_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="893" y="45" width="88" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{JZRQ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="72" width="371" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{DJBZ}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<staticText>
+				<reportElement x="0" y="1" width="59" height="20" forecolor="#0000FF"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[序号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="1" width="105" height="20" forecolor="#0000FF"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[核算类别]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="1" width="152" height="20" forecolor="#0000FF"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="1" width="133" height="20" forecolor="#0000FF"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[型号规格]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="449" y="1" width="41" height="20" forecolor="#0000FF"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[单位]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="1" width="124" height="20" forecolor="#0000FF"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[物资批号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="696" y="1" width="82" height="20" forecolor="#0000FF"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[库存数量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="778" y="1" width="107" height="20" forecolor="#0000FF"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[盘存数量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="885" y="1" width="107" height="20" forecolor="#0000FF"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[入库日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="614" y="1" width="82" height="20" forecolor="#0000FF"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[价格]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="1" y="0" width="59" height="20" forecolor="#000000"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$V{index}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="41" height="20" forecolor="#000000"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{WZDW}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="697" y="0" width="82" height="20" forecolor="#000000"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Right" markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{KCSL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="886" y="0" width="107" height="20" forecolor="#000000"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Right" markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{RKRQ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="615" y="0" width="82" height="20" forecolor="#000000"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Right" markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{WZJG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="105" height="20" forecolor="#000000"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{HSLB_text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="779" y="0" width="107" height="20" forecolor="#000000"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Right" markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PCSL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="0" width="133" height="20" forecolor="#000000"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{WZGG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="491" y="0" width="124" height="20" forecolor="#000000"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{WZPH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="0" width="152" height="20" forecolor="#000000"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F0E9E9"/>
+				</box>
+				<textElement markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{WZMC}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

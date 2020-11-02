@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="PARAELEMENT" table="PARAELEMENT">
+			<id name="PENAME" type="java.lang.String">
+            	<column name="PENAME"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="EMRTYPECODE" type="java.lang.String"  />
+        	<property name="PETYPE" type="java.lang.String"  />
+        	<property name="PEXMLTEXT" type="java.lang.String" length="4000" />
+        	<property name="PESPELL" type="java.lang.String" length="20" />
+        	<property name="USED" type="java.lang.String"  />
+</class>
+</hibernate-mapping>

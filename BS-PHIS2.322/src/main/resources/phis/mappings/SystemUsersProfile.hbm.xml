@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="SystemUsersProfile"
+		table="SystemUsersProfile">
+		<id name="id" type="java.lang.String" length="16">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+		<property name="userId" type="java.lang.String" length="20" />
+		<property name="logonName" type="java.lang.String" length="20" />
+		<property name="jobTitle" type="java.lang.String" length="2" />
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="regionCode" type="java.lang.String" length="25" />
+		<property name="regionCode_text" type="java.lang.String" length="200" />
+		<property name="lastModifyDate" type="date" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

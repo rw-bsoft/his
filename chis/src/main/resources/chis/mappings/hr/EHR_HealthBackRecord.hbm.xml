@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hr.schemas.EHR_HealthBackRecord" table="EHR_HealthBackRecord">
+       <composite-id>
+			<key-property name="phrId" column="phrId" type="java.lang.String"/>
+			<key-property name="backTimes" column="backTimes" type="java.lang.Integer" />
+		</composite-id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="backDate" type="date" />
+		<property name="backReason" type="java.lang.String" length="300" />
+		<property name="backPerson" type="java.lang.String" length="20" />
+		<property name="lastVerifyLevel" type="java.lang.String" length="1" />
+		<property name="lastVerifyPerson" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

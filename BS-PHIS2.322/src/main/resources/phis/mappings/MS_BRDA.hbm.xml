@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MS_BRDA" table="MS_BRDA">
+			<id name="BRID" type="java.lang.String">
+            	<column name="BRID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MZHM" type="java.lang.String" length="32" />
+        	<property name="EMPIID" type="java.lang.String" length="32" />
+        	<property name="BRXM" type="java.lang.String" length="40" />
+        	<property name="FYZH" type="java.lang.String" length="20" />
+        	<property name="SFZH" type="java.lang.String" length="20" />
+        	<property name="BRXZ" type="java.lang.String" length="18" />
+        	<property name="BRXB" type="java.lang.String" length="4" />
+        	<property name="CSNY" type="date"  />
+        	<property name="HYZK" type="java.lang.String" length="4" />
+        	<property name="ZYDM" type="java.lang.String" length="4" />
+        	<property name="MZDM" type="java.lang.String" length="4" />
+        	<property name="XXDM" type="java.lang.String" length="4" />
+        	<property name="GMYW" type="java.lang.String" length="6" />
+        	<property name="DWXH" type="java.lang.String" length="18" />
+        	<property name="DWMC" type="java.lang.String" length="40" />
+        	<property name="DWDH" type="java.lang.String" length="16" />
+        	<property name="DWYB" type="java.lang.String" length="6" />
+        	<property name="HKDZ" type="java.lang.String" length="40" />
+        	<property name="JTDH" type="java.lang.String" length="16" />
+        	<property name="HKYB" type="java.lang.String" length="6" />
+        	<property name="JZCS" type="java.lang.String" length="4" />
+        	<property name="JZRQ" type="timestamp"  />
+        	<property name="CZRQ" type="timestamp"  />
+        	<property name="JZKH" type="java.lang.String" length="40" />
+        	<property name="SFDM" type="java.lang.String" length="4" />
+        	<property name="JGDM" type="java.lang.String" length="4" />
+        	<property name="GJDM" type="java.lang.String" length="4" />
+        	<property name="LXRM" type="java.lang.String" length="10" />
+        	<property name="LXGX" type="java.lang.String" length="4" />
+        	<property name="LXDZ" type="java.lang.String" length="40" />
+        	<property name="LXDH" type="java.lang.String" length="16" />
+        	<property name="DBRM" type="java.lang.String" length="10" />
+        	<property name="DBGX" type="java.lang.String" length="4" />
+        	<property name="SBHM" type="java.lang.String" length="20" />
+        	<property name="YBKH" type="java.lang.String" length="20" />
+        	<property name="ZZTX" type="java.lang.String" length="4" />
+        	<property name="JDJG" type="java.lang.String" length="8" />
+        	<property name="JDSJ" type="timestamp"  />
+        	<property name="JDR" type="java.lang.String" length="10" />
+        	<property name="ZXBZ" type="java.lang.String" length="1" />
+        	<property name="ZXR" type="java.lang.String" length="10" />
+        	<property name="ZXSJ" type="timestamp"  />
+        	<property name="XGSJ" type="timestamp"  />
+        	<property name="CSD_SQS" type="java.lang.Long" length="18" />
+        	<property name="CSD_S" type="java.lang.Long" length="18" />
+        	<property name="CSD_X" type="java.lang.Long" length="18" />
+        	<property name="JGDM_SQS" type="java.lang.Long" length="18" />
+        	<property name="JGDM_S" type="java.lang.Long" length="18" />
+        	<property name="XZZ_SQS" type="java.lang.Long" length="18" />
+        	<property name="XZZ_S" type="java.lang.Long" length="18" />
+        	<property name="XZZ_X" type="java.lang.Long" length="18" />
+        	<property name="XZZ_YB" type="java.lang.String" length="20" />
+        	<property name="XZZ_DH" type="java.lang.String" length="20" />
+        	<property name="HKDZ_SQS" type="java.lang.Long" length="18" />
+        	<property name="HKDZ_S" type="java.lang.Long" length="18" />
+        	<property name="HKDZ_X" type="java.lang.Long" length="18" />
+        	<property name="XZZ_QTDZ" type="java.lang.String" length="60" />
+        	<property name="HKDZ_QTDZ" type="java.lang.String" length="60" />
+        	<property name="GRBH" type="java.lang.String" length="20" />
+        	<property name="NHKH" type="java.lang.String" length="20" />
+        	<property name="SHBZKH" type="java.lang.String" length="20" />
+        	<property name="BRDHHM" type="java.lang.String" length="20" />
+			<property name="ISGP" type="java.lang.String" length="2" />
+</class>
+</hibernate-mapping>

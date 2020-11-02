@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="OMR_BL01" table="OMR_BL01">
+			<id name="BLBH" type="java.lang.Long">
+            	<column name="BLBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JZXH" type="java.lang.Long" length="18" />
+        	<property name="BRID" type="java.lang.Long" length="18" />
+        	<property name="BLLX" type="java.lang.Integer" length="1" />
+        	<property name="BLLB" type="java.lang.Integer" length="9" />
+        	<property name="BLMC" type="java.lang.String" length="100" />
+        	<property name="DLLB" type="java.lang.Integer" length="9" />
+        	<property name="DLJ" type="java.lang.String" length="18" />
+        	<property name="MBLB" type="java.lang.Integer" length="9" />
+        	<property name="MBBH" type="java.lang.Integer" length="9" />
+        	<property name="JLSJ" type="timestamp"  />
+        	<property name="CJSJ" type="timestamp"  />
+        	<property name="WCSJ" type="timestamp"  />
+        	<property name="SXYS" type="java.lang.String" length="8" />
+        	<property name="SXKS" type="java.lang.Long" length="10" />
+        	<property name="BRKS" type="java.lang.Long" length="10" />
+        	<property name="BLZT" type="java.lang.Integer" length="1" />
+        	<property name="SYBZ" type="java.lang.Integer" length="1" />
+        	<property name="BZMBBH" type="java.lang.Long" length="18" />
+        	<property name="BLBBZ" type="java.lang.Integer" length="1" />
+        	<property name="BLPF" type="java.lang.Integer" length="8" />
+        	<property name="ZZDY" type="java.lang.Integer" length="1" />
+        	<property name="PTID" type="java.lang.Long" length="18" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="NJJB_QD" table="NJJB_QD">
+	<id name="YWZQH" type="java.lang.String">
+		<column name="YWZQH"/>
+		<generator class="assigned" />
+	</id>
+	<property name="USERID" type="java.lang.String"/>
+	<property name="QDSJ" type="timestamp"  />
+	<property name="QTSJ" type="timestamp"  />
+	<property name="STATUS" type="java.lang.String"/>
+	<property name="JGID" type="java.lang.String"/>
+</class>
+</hibernate-mapping>

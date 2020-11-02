@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="RES_DataStandard" table="RES_DataStandard">
+		<id name="DataStandardId" type="java.lang.String">
+	    	<column name="DataStandardId"/>
+			<generator class="assigned" />
+		</id>
+		<property name="DName" type="java.lang.String" length="50" />
+		<property name="DVersion" type="java.lang.String" length="16" />
+		<property name="PublishDate" type="date"  />
+		<property name="Publisher" type="java.lang.String" length="32" />
+		<property name="Administrator" type="java.lang.String" length="32" />
+		<property name="Status" type="java.lang.String" length="1" />
+		<property name="DComment" type="java.lang.String" length="200" />
+	</class>
+</hibernate-mapping>

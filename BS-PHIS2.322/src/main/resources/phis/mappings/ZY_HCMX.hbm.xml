@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="ZY_HCMX" table="ZY_HCMX">
+		<composite-id>
+			<key-property name="ZYH" column="ZYH" type="java.lang.Long" length="1"/>
+			<key-property name="HCRQ" column="HCRQ" type="java.util.Date" length="1"/>
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="ZZRQ" type="date"  />
+		<property name="HCLX" type="java.lang.Integer" length="1" />
+		<property name="HQCH" type="java.lang.String" length="6" />
+		<property name="HHCH" type="java.lang.String" length="6" />
+		<property name="HQKS" type="java.lang.Long" length="18" />
+		<property name="HHKS" type="java.lang.Long" length="18" />
+		<property name="HQBQ" type="java.lang.Long" length="18" />
+		<property name="HHBQ" type="java.lang.Long" length="18" />
+		<property name="JSCS" type="java.lang.Integer" length="3" />
+		<property name="CZGH" type="java.lang.String" length="10" />
+	</class>
+</hibernate-mapping>

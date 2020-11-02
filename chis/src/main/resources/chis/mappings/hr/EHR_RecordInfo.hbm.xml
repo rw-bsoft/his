@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.common.schemas.EHR_RecordInfo" table="EHR_RecordInfo">
+		<id name="empiId" type="java.lang.String">
+			<column name="empiId" />
+		</id>
+		<property name="GRDA" type="java.lang.Integer" length="1" />
+		<property name="GRQY" type="java.lang.Integer" length="1" />
+		<property name="GAO" type="java.lang.Integer" length="1" />
+		<property name="TANG" type="java.lang.Integer" length="1" />
+		<property name="LAO" type="java.lang.Integer" length="1" />
+		<property name="LI" type="java.lang.Integer" length="1" />
+		<property name="YI" type="java.lang.Integer" length="1" />
+		<property name="XIAN" type="java.lang.Integer" length="1" />
+		<property name="BAO" type="java.lang.Integer" length="1" />
+		
+		<property name="YI_DC" type="java.lang.Integer" length="1" />
+		<property name="XIAN_DC" type="java.lang.Integer" length="1" />
+		<property name="YI_WEI" type="java.lang.Integer" length="1" />
+		<property name="XIAN_WEI" type="java.lang.Integer" length="1" />
+		<property name="YI_GAN" type="java.lang.Integer" length="1" />
+		<property name="XIAN_GAN" type="java.lang.Integer" length="1" />
+		<property name="YI_FEI" type="java.lang.Integer" length="1" />
+		<property name="XIAN_FEI" type="java.lang.Integer" length="1" />
+		<property name="YI_RX" type="java.lang.Integer" length="1" />
+		<property name="XIAN_RX" type="java.lang.Integer" length="1" />
+		<property name="YI_GJ" type="java.lang.Integer" length="1" />
+		<property name="XIAN_GJ" type="java.lang.Integer" length="1" />
+		
+		<property name="JING" type="java.lang.Integer" length="1" />
+		<property name="ER" type="java.lang.Integer" length="1" />
+		<property name="RUO" type="java.lang.Integer" length="1" />
+		<property name="FU" type="java.lang.Integer" length="1" />
+		<property name="CANZT" type="java.lang.Integer" length="1" />
+		<property name="CANN" type="java.lang.Integer" length="1" />
+		<property name="CANZL" type="java.lang.Integer" length="1" />
+
+		<property name="LOGOUT" type="java.lang.Integer" length="1" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YB_YBKXX" table="YB_YBKXX">
+	<!--医保卡信息表,其他的字段根据各地医保卡返回值添加-->
+			<id name="SBXH" type="java.lang.Long">
+            	<column name="SBXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="BRID" type="java.lang.Long" length="18" />
+        	<property name="ICKH" type="java.lang.String" length="20" />
+        	<property name="BRXM" type="java.lang.String" length="20" />
+        	<property name="BRXB" type="java.lang.String" length="20" />
+        	<property name="CBH" type="java.lang.String" length="20" />
+        	<property name="DWMC" type="java.lang.String" length="20" />
+        	<property name="BRNL" type="java.lang.String" length="20" />
+        	<property name="ICKZT" type="java.lang.String" length="20" />
+        	<property name="GZZT" type="java.lang.String" length="20" />
+        	<property name="DQMC" type="java.lang.String" length="20" />
+        	<property name="FZXMC" type="java.lang.String" length="20" />
+        	<property name="ZHYE" type="java.lang.Double" length="20" />
+        	
+</class>
+</hibernate-mapping>

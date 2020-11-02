@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.per.schemas.PER_Combo" table="PER_Combo">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="java.lang.String" length="50" />
+		<property name="manaUnitId" type="java.lang.String" length="50" />
+		<property name="comboName" type="java.lang.String" length="2"/>
+		<property name="createUnit" type="java.lang.String" length="20"/>
+        <property name="createUser" type="java.lang.String" length="20"/>
+    	<property name="createDate" type="timestamp"/>
+    	<property name="lastModifyUnit" type="java.lang.String" length="20"/>
+    	<property name="lastModifyDate" type="timestamp"/>
+    	<property name="lastModifyUser" type="java.lang.String" length="20"/>
+		<!--  
+		<property name="projects" type="java.lang.String" length="1000" />
+		-->
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="报表分析">
+	<item key="mb" text="健康档案、慢病统计">
+		<item key="EHR_jktjfx" text="杭州市健康服务统计分析" conditions="[{id:'manageUnit',lengthLimit:9},{id:'beginDateDD'},{id:'endDateDD'}]" />
+		<item key="Hzzdmbgyfkb" text="杭州市重点慢病干预防控社区居民建档情况汇总表" conditions="[{id:'manageUnit',lengthLimit:9},{id:'beginDateDD'},{id:'endDateDD'},{id:'sex'}]" />
+		<item key="Hzzdmbgyfkedhzb" text="杭州市重点慢病干预防控月度汇总表" conditions="[{id:'manageUnit',lengthLimit:9}]" />
+	</item>
+	<item key="fb" text="孕保统计报表">
+		<item key="MHC_ycfbj" text="孕产妇保健情况调查表-1" conditions="[{id:'manageUnit',lengthLimit:4},{id:'beginDate'},{id:'endDate'}]" />
+		<item key="MHC_ycfbj-2" text="孕产妇保健情况调查表-2" conditions="[{id:'manageUnit',lengthLimit:4},{id:'beginDate'},{id:'endDate'}]" />
+		<item key="MHC_ycfxtgl" text="杭州市孕产系统管理工作报表" conditions="[{id:'manageUnit',lengthLimit:4},{id:'beginDate'},{id:'endDate'}]" />
+	</item>
+	<item key="gzl" text="工作量统计">
+		<item key="GZLEhr" text="健康档案工作量统计" conditions="[{id:'user04'},{id:'beginDateDD'},{id:'endDateDD'}]" />
+		<item key="GZLMdc" text="慢病工作量统计" conditions="[{id:'user04'},{id:'beginDateDD'},{id:'endDateDD'}]" />
+		<item key="GZLMhc" text="妇幼工作量统计" conditions="[{id:'user04'},{id:'beginDateDD'},{id:'endDateDD'}]" />
+	</item>
+	<item key="ehrMdcTj" text="健康档案慢病档案统计" conditions="[{id:'manageUnit'},{id:'beginDate'},{id:'endDate'}]" />
+	<item key="mhcCdhTj" text="孕妇档案儿童档案统计" conditions="[{id:'manageUnit'},{id:'beginDate'},{id:'endDate'}]" />
+	<!-- 
+		<item key="hisStat" text="基本医疗数据上传统计 " conditions="[{id:'manageUnit'},{id:'beginDateDD'},{id:'endDateDD'}]" />	
+		 -->
+</dic>

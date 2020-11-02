@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="系统配置导航菜单"> 
+	<item key="SC01" text="公共设置" ref="chis.application.conf.CONF/CONF/SC01_1" autoActive="true" class="chis.source.conf.control.PublicConfigControllor"/>  
+	<!--<item key="SC013" text="机构类型维护" ref="chis.application.conf.CONF/CONF/SC01_12" class="chis.source.conf.control.UnitTypeConfigControllor"/>
+	<item key="SC02" text="基本医疗接口设置" ref="chis.application.conf.CONF/CONF/SC01_2" class="chis.source.conf.control.WSInterfaceConfigControllor"/> 
+	  -->
+	<item key="SC015" text="管理方式设置" ref="chis.application.conf.CONF/CONF/SC01_21" class="chis.source.conf.control.WSInterfaceConfigControllor"/>
+	<item key="SC04" text="外部服务接口设置" ref="chis.application.conf.CONF/CONF/SC01_4" class="chis.source.conf.control.WSInterfaceConfigControllor"/>  
+	<item key="SC03" text="计划类型设置" ref="chis.application.conf.CONF/CONF/SC01_3" class="chis.source.conf.control.PlanTypeConfigControllor"/>    
+	<item key="SC05" text="老年人模块参数设置"  ref="chis.application.conf.CONF/CONF/SC01_5" class="chis.source.conf.control.OldPeopleConfigControllor"/>
+	<item key="SC06" text="高血压模块参数设置" ref="chis.application.conf.CONF/CONF/SC01_6" class="chis.source.conf.control.HypertensionConfigControllor"/>
+	<item key="SC07" text="糖尿病模块参数设置" ref="chis.application.conf.CONF/CONF/SC01_7" class="chis.source.conf.control.DiabetesConfigControllor"/>
+	<item key="SC016" text="糖尿病评估标准维护" ref="chis.application.conf.CONF/CONF/SC01_15" class="chis.source.conf.control.DiabetesConfigControllor"/>
+	<item key="SC08" text="儿童模块参数设置" ref="chis.application.conf.CONF/CONF/SC01_8" class="chis.source.conf.control.ChildrenConfigControllor"/>
+	<item key="SC09" text="体弱儿模块参数设置" ref="chis.application.conf.CONF/CONF/SC01_09" class="chis.source.conf.control.DebilityChildrenConfigControllor"/>
+	<item key="SC010" text="孕妇模块参数设置" ref="chis.application.conf.CONF/CONF/SC01_10" class="chis.source.conf.control.PregnantConfigControllor"/>
+	<item key="SC011" text="精神病模块参数设置" ref="chis.application.conf.CONF/CONF/SC01_11" class="chis.source.conf.control.PsychosisConfigController"/>
+	<item key="SC012" text="离休干部模块参数设置"  ref="chis.application.conf.CONF/CONF/SC012" class="chis.source.conf.control.RVCConfigControllor"/>
+	<item key="SC013" text="肿瘤高危人群随访参数设置"  ref="chis.application.conf.CONF/CONF/SC01_13" class="chis.source.conf.control.TumourHighRiskConfigControllor"/>
+	<item key="SC014" text="肿瘤患者随访参数设置"  ref="chis.application.conf.CONF/CONF/SC01_14" class="chis.source.conf.control.TumourPatientVisitConfigControllor"/>
+</dic>
+
+<!-- 
+ref = 调用的module,此module必须在application.xml文件中定义
+readOnlyKey = 只读标志字段
+autoActive = true 标记需要自动激活的tab
+-->
+

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YK_SWYJ" table="YK_SWYJ">
+		<composite-id>
+			<key-property name="XTSB" column="XTSB" type="java.lang.Long"/>
+			<key-property name="CWYF" column="CWYF" type="timestamp"/>
+			<key-property name="YPXH" column="YPXH" type="java.lang.Long"/>
+			<key-property name="YPCD" column="YPCD" type="java.lang.Long"/>
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="KCSL" type="java.lang.Double" length="10" />
+		<property name="LSJE" type="java.lang.Double" length="12" />
+		<property name="PFJE" type="java.lang.Double" length="12" />
+		<property name="JHJE" type="java.lang.Double" length="12" />
+	</class>
+</hibernate-mapping>

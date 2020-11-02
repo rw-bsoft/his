@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="GY_FYBM" table="GY_FYBM">
+		<id name="BMXH" type="java.lang.Integer">
+			<column name="BMXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="FYXH" type="java.lang.Long" length="18"/>
+		<property name="PYDM" type="java.lang.String" length="80"/>
+		<property name="FYMC" type="java.lang.String" length="80" />
+		<property name="BMFL" type="java.lang.String" length="2" />
+		<property name="WBDM" type="java.lang.String" length="80"/>
+		<property name="JXDM" type="java.lang.String" length="80"/>
+		<property name="BHDM" type="java.lang.String" length="80"/>
+		<property name="QTDM" type="java.lang.String" length="80"/>
+	</class>
+</hibernate-mapping>

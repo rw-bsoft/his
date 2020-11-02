@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YB_ZYJS" table="YB_ZYJS">
+	<!--医保卡信息表,其他的字段根据各地医保卡返回值添加-->
+		<id name="ZYH" type="java.lang.Long">
+            	<column name="ZYH"/>
+            	<generator class="assigned" />
+        </id>
+    	<property name="JGID" type="java.lang.String" length="20" />
+		<property name="JSCS" type="java.lang.Integer" length="3" />
+       	<property name="TBR" type="java.lang.String" length="10" />
+       	<property name="XM" type="java.lang.String" length="20" />
+       	<property name="RYXZ" type="java.lang.String" length="20" />
+       	<property name="XH" type="java.lang.String" length="20" />
+		<property name="CYSJ" type="timestamp" />
+		<property name="ZFY" type="java.lang.Double" length="10" />
+		<property name="YF" type="java.lang.Double" length="10" />
+		<property name="XMF" type="java.lang.Double" length="10" />
+		<property name="GRZL" type="java.lang.Double" length="10" />
+		<property name="GRZF" type="java.lang.Double" length="10" />
+		<property name="YBZF" type="java.lang.Double" length="10" />
+		<property name="ZHZF" type="java.lang.Double" length="10" />
+		<property name="ZHYE" type="java.lang.Double" length="10" />
+		<property name="XJZF" type="java.lang.Double" length="10" />
+       	<property name="XZMC" type="java.lang.String" length="20" />
+       	<property name="DJH" type="java.lang.String" length="20" />
+       	<property name="YSM" type="java.lang.String" length="10" />
+		<property name="YH1" type="java.lang.Double" length="10" />
+		<property name="YH2" type="java.lang.Double" length="10" />
+		<property name="YH3" type="java.lang.Double" length="10" />
+		<property name="TCZF" type="java.lang.Double" length="10" />
+		<property name="DBZF" type="java.lang.Double" length="10" />
+		<property name="BZZF" type="java.lang.Double" length="10" />
+		<property name="YBJE" type="java.lang.Double" length="10" />
+		<property name="QCZH" type="java.lang.Double" length="10" />
+		<property name="XZFS" type="java.lang.Integer" length="1" />
+		<property name="MZBZ" type="java.lang.Double" length="7" />
+       	<property name="QHMC" type="java.lang.String" length="20" />		
+</class>
+</hibernate-mapping>

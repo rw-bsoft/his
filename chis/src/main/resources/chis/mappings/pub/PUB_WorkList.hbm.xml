@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.pub.schemas.PUB_WorkList"  table="PUB_WorkList">
+			<id name="workId" type="java.lang.String">
+            	<column name="workId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="workType" type="java.lang.String" length="2" />
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="workIcon" type="java.lang.String" length="20" />
+        	<property name="recordId" type="java.lang.String" length="16" />
+        	<property name="doctorId" type="java.lang.String" length="20" />
+        	<property name="count" type="java.lang.String" length="100" />
+        	<property name="manaUnitId" type="java.lang.String" length="20" />
+        	<property name="beginDate" type="date" length="20" />
+        	<property name="endDate" type="date" length="20" />
+        	<property name="otherId" type="java.lang.String" length="32" />
+        	
+</class>
+</hibernate-mapping>

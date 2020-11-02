@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.ohr.schemas.MDC_OldPeopleSelfCare" table="MDC_OldPeopleSelfCare">
+		<id name="SCID" type="java.lang.String">
+			<column name="SCID" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="phrId" type="java.lang.String" length="32" />
+		<property name="JC" type="java.lang.String" length="1" />
+		<property name="JCDJ" type="java.lang.String" length="1" />
+		<property name="JCPF" type="java.lang.Integer"/>
+		<property name="SX" type="java.lang.String" length="1" />
+		<property name="SXDJ" type="java.lang.String" length="1" />
+		<property name="SXPF" type="java.lang.Integer"/>
+		<property name="CY" type="java.lang.String" length="1" />
+		<property name="CYDJ" type="java.lang.String" length="1" />
+		<property name="CYPF" type="java.lang.Integer"/>
+		<property name="RC" type="java.lang.String" length="1" />
+		<property name="RCDJ" type="java.lang.String" length="1" />
+		<property name="RCPF" type="java.lang.Integer"/>
+		<property name="HD" type="java.lang.String" length="1" />
+		<property name="HDDJ" type="java.lang.String" length="1" />
+		<property name="HDPF" type="java.lang.Integer"/>
+		<property name="ZP" type="java.lang.String" length="1" />
+		<property name="ZPDJ" type="java.lang.String" length="1" />
+		<property name="ZPFS" type="java.lang.Integer"/>
+		
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp"/>
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

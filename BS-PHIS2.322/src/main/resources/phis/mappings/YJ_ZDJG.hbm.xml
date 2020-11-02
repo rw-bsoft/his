@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YJ_ZDJG" table="YJ_ZDJG">
+			<id name="ZDID" type="java.lang.Long">
+            	<column name="ZDID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.Long" length="20" />
+        	<property name="ZDMC" type="java.lang.String" length="20" />
+        	<property name="ZDDM" type="java.lang.String" length="10" />
+        	<property name="KSDM" type="java.lang.Long" length="18" />
+</class>
+</hibernate-mapping>

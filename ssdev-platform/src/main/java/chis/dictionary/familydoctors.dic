@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<dic class="TableDictionary" alias="家庭医生" supportRemote="false" codeRule="4,2,3,3,3,3,3,3"  
+	searchField="b.pyCode" queryType="SQLQuery" entry="PUB_FamilyDoctor a,SYS_Personnel b,PUB_FamilyTeam c " keyField="a.familyDoctorId" 
+	textField="b.personName" queryOnly="true" distinct="false"
+	filter="['and',['eq',['$','a.status'],['s','0']],['eq',['$','a.familyDoctorId'],['$','b.personId']],['eq',['$','a.familyTeamId'],['$','c.familyTeamId']],['like', ['$','c.manaunitId'], ['concat',['substring',['$','%user.manageUnit.id'], 0,9],['s','%']]]]">
+	<properties>
+		<p name="a.familyTeamId">familyTeamId</p>
+	</properties>
+</dic>
+ <!--
+<dic class="ctd.service.configure.dictionary.ComposeDictionaryEx" navDic="chis.@manageUnit" distinct="true" 
+	searchField="a.manaunitId" iconCls="PUB_FamilyTeam"   searchFieldEx="c.pyCode" alias="团队名称" 
+	entry="PUB_FamilyTeam a " keyField="a.familyTeamId" textField="a.familyTeamName" queryOnly="true"
+	filter="['and',['eq',['$','a.status'],['s','0']]]">
+	<properties>
+		<p name="a.manaunitId">manaunitId</p>
+	</properties>
+</dic>
+ -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="用户组合字典" class="ComposeDictionary" navDic="platform.reg.dictionary.manageUnit" 
+	searchField="a.manageUnitId" iconCls="user"
+	entry="User b,UserRoleToken a" keyField="b.id" textField="b.name" queryOnly="true"
+	filter="['eq',['$','a.userId'],['$','b.id']]">
+	<properties>
+		<p name="a.manageUnitId">manageUnit</p>
+		<p name="a.roleId">roleId</p>
+	</properties>
+</dic>

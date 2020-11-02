@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YF_TJJL" table="YF_TJJL">
+        	
+			<id name="SBXH" type="java.lang.Long">
+            	<column name="SBXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="YKSB" type="java.lang.Long" length="18" />
+        	<property name="YFSB" type="java.lang.Long" length="18" />
+        	<property name="CKBH" type="java.lang.Integer" length="2" />
+        	<property name="TJFS" type="java.lang.Integer" length="2" />
+        	<property name="TJDH" type="java.lang.Integer" length="6" />
+        	<property name="TJRQ" type="timestamp"  />
+        	<property name="YPXH" type="java.lang.Long" length="18" />
+        	<property name="YPCD" type="java.lang.Long" length="18" />
+        	<property name="YPGG" type="java.lang.String" length="20" />
+        	<property name="YFDW" type="java.lang.String" length="4" />
+        	<property name="YFBZ" type="java.lang.Integer" length="4" />
+        	<property name="TJSL" type="java.lang.Double" length="10" />
+        	<property name="XLSJ" type="java.lang.Double" length="12" />
+        	<property name="XJHJ" type="java.lang.Double" length="12" />
+        	<property name="XPFJ" type="java.lang.Double" length="12" />
+        	<property name="YLSJ" type="java.lang.Double" length="12" />
+        	<property name="YJHJ" type="java.lang.Double" length="12" />
+        	<property name="YPFJ" type="java.lang.Double" length="12" />
+        	<property name="CZGH" type="java.lang.String" length="10" />
+        	<property name="TJWH" type="java.lang.String" length="30" />
+        	<property name="YPPH" type="java.lang.String" length="50" />
+        	<property name="YPXQ" type="date"  />
+        	<property name="YLSE" type="java.lang.Double" length="12" />
+        	<property name="YPFE" type="java.lang.Double" length="12" />
+        	<property name="YJHE" type="java.lang.Double" length="12" />
+        	<property name="XJHE" type="java.lang.Double" length="12" />
+        	<property name="XLSE" type="java.lang.Double" length="12" />
+        	<property name="XPFE" type="java.lang.Double" length="12" />
+        	<property name="KCSB" type="java.lang.Long" length="18" />
+        	<property name="KCSL" type="java.lang.Double" length="10" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="MS_FKXX" table="MS_FKXX">
+		<id name="JLXH" type="java.lang.Long">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+		<property name="JGID" type="java.lang.String" length="20"/>
+		<property name="MZXH" type="java.lang.Long" length="18"/>
+		<property name="FKFS" type="java.lang.Long" length="18"/>
+		<property name="FKJE" type="java.lang.Double" length="12"/>
+		<property name="FKHM" type="java.lang.String" length="40"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="PCIS_WTDM" table="PCIS_WTDM">
+		<id name="WTXH" type="java.lang.Long">
+			<column name="WTXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="DPLX" type="java.lang.Integer" length="1" />
+		<property name="WTLX" type="java.lang.Long" length="18" />
+		<property name="WTDM" type="java.lang.String" length="10" />
+		<property name="WTMC" type="java.lang.String" length="255" />
+		<property name="PYDM" type="java.lang.String" length="20" />
+		<property name="WBDM" type="java.lang.String" length="20" />
+		<property name="QTDM" type="java.lang.String" length="20" />
+		<property name="ZFPB" type="java.lang.Integer" length="1" />
+	</class>
+</hibernate-mapping>

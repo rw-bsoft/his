@@ -1,0 +1,1874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2015-03-30T09:42:48 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="healthRecord" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77ab8a94-f2f1-450b-8d70-0d55d039da8b">
+	<property name="ireport.zoom" value="1.1000000000000052"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="32"/>
+	<background>
+		<band height="799" splitType="Stretch">
+			<staticText>
+				<reportElement x="45" y="98" width="494" height="32" uuid="a4e6eaf7-7d14-4699-8c4c-0637c3efc9e6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[ 01无症状 02头痛 03头晕 04心悸 05胸闷  06胸痛  07慢性咳嗽 08 咳痰 09呼吸困难  10多饮 
+  11多尿 12体重下降 13乏力 14关节肿痛 15视力模糊 16手脚麻木 17尿急 18尿痛 19便秘 20腹泻]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="58" width="100" height="20" uuid="51666507-2272-45c3-b95c-64e2542c0d1d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[体检日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="37" width="49" height="20" uuid="a199479e-e05b-4a1f-aa38-cb1aa8d02f98"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="0" width="521" height="33" uuid="ec295716-af12-4ba0-bd62-b270bb17ff4a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[健康检查表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="36" width="66" height="20" uuid="23b622c4-c304-40cf-9c05-e2aea8aa64a2"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[编号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="58" width="100" height="20" uuid="9ab5ac52-0f6e-4144-b84f-feeb5205d450"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[责任医生]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="78" width="100" height="20" uuid="e24aeef9-21cc-4a29-ab96-4ce0fb05d701"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[内容]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="78" width="421" height="20" uuid="272b0ce0-a636-4152-8878-335d92fe69ba"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[检查项目]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="98" width="27" height="72" uuid="61fddb91-b154-4d6f-b20d-4a6eefd0381d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[症
+状]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="130" width="238" height="20" uuid="e3f0adc8-f55b-4a2e-900c-238942f9dbdc"/>
+				<box>
+					<bottomPen lineWidth="0.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[ 21 恶心呕吐  22 眼花  23 耳鸣  24 乳房胀痛  25 其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="170" width="27" height="255" uuid="bd843719-907e-42a9-9e8d-fdb3b63ff766"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[一
+般
+状
+况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="170" width="70" height="20" uuid="e5321471-5aba-469c-8dd3-d329461b6587"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[体    温]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="190" width="70" height="40" uuid="30612fed-30f9-4216-a537-8666e66541e8"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[呼吸频率]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="230" width="70" height="20" uuid="0d06a2bf-c29c-48a7-9191-c0eb01ef40bb"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[身    高]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="250" width="70" height="29" uuid="93a4efcf-7a23-4357-b77d-419c3ef820ab"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[腰    围]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="345" width="70" height="40" uuid="b3cf572c-372a-432a-942f-045676094b14"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[老年人认知功能]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="170" width="70" height="20" uuid="69b36aff-fe8a-4b36-85e2-f7b50e4883c0"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[脉   率]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="190" width="70" height="40" uuid="9e0d750b-4c96-4374-8a83-7934cb16201d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[血    压]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="230" width="70" height="20" uuid="683ec6c7-3d6e-41a3-abf2-c91905a64a23"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[体    重]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="250" width="70" height="29" uuid="d92778f5-d365-44c6-b522-3fab96bb815d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[体质指数（BMI）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="170" width="73" height="20" uuid="1f6fcf40-040c-49a4-bb80-dd145c80ad38"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[℃]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="190" width="73" height="40" uuid="bc91e4dc-4adb-4516-b757-7a0bfde822e3"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[次/分钟]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="170" width="113" height="20" uuid="02b1fb13-97f5-4036-86df-cfae0eec7d53"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[次/分]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="190" width="17" height="20" uuid="c8eeda42-7e48-4718-9c55-a8b38bdd246c"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="190" width="48" height="20" uuid="91288cda-643b-43d9-8c08-d80ea6bed7ad"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[ mmHg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="230" width="41" height="20" uuid="bf9a8d45-1e79-4d18-88b3-d72613827b8b"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[CM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="250" width="41" height="29" uuid="baa54f70-3b0e-4b74-b57c-4485ec488cf9"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[CM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="250" width="108" height="29" uuid="317f2109-0dfa-4cc7-8ca7-4664a7fe7b82"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Kg/m2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="230" width="108" height="20" uuid="6012820c-c26f-4a9e-a36b-4592f2292c59"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Kg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="345" width="378" height="20" uuid="4261590d-edac-460f-9642-e16ae9238bdd"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1粗筛阴性]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="385" width="70" height="40" uuid="1ca63a46-05f0-44fc-89bd-ed9ae11b2e0a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[老年人情感状态]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="385" width="378" height="20" uuid="962cd5a8-2e4f-463f-b005-a41bf34db1eb"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0" lineStyle="Dotted"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1粗筛阴性 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="45" y="279" width="70" height="33" forecolor="#000000" backcolor="#FAFBFC" uuid="70d4cc2c-96df-46e5-8a17-20aca609450a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[老年人健康状态自我评估*]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="279" width="378" height="33" uuid="0dd1563e-2371-4412-8b4c-41f29ecf2f02"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1满意  2基本满意  3说不清楚  4不太满意  5不满意]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="312" width="377" height="33" uuid="efa4370f-a985-4a54-8a99-e23c02716228"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1 可自理（0～3分）      2 轻度依赖（4～8分）
+ 3 中度依赖（9～18分)   4 不能自理（≥19分）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="45" y="312" width="70" height="33" forecolor="#000000" uuid="877ba0d6-7542-4958-9edf-4973dbd7cac9"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[老年人生活自理能力自我评估*]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="545" width="78" height="20" uuid="7a89319b-b882-45c3-b5cf-8756d60dc01e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[戒烟年龄]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="585" width="78" height="20" uuid="b30f401f-b139-4715-b56c-698efb7f5e74"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 日饮酒量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="545" width="78" height="20" uuid="80f586b5-08d9-4ea6-be46-92f4d8ceedf4"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 开始吸烟年龄]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="645" width="157" height="20" uuid="0f0c4b6d-252c-4b01-a891-c807351edc37"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[1白酒 2啤酒 3红酒 4黄酒 5其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="585" width="44" height="20" uuid="7d3b7ee9-40df-4818-b62c-0a3b9c400652">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[ 平均]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="584" width="249" height="20" uuid="6cc5955d-bd5a-4b92-896d-9d9f500fd15c">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[两]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="505" width="78" height="20" uuid="0b3226e0-938d-4f23-9ab2-5eec6776b761"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 吸烟状况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="526" width="246" height="19" uuid="2a1875f2-eb93-4391-84ee-8bd4065c1cfd"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[支]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="445" width="78" height="20" uuid="1c640f7f-6138-4bc0-b785-267bdcc7d66d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[坚持锻炼时间]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="506" width="300" height="20" uuid="83cb20b7-970e-415b-9952-e464c1f850be"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1从不吸烟　　　2已戒烟　　　 3吸烟]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="425" width="78" height="20" uuid="aa1f0901-6a4f-4cba-afc2-d762b3b2a52f"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 锻炼频率]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="485" width="277" height="20" uuid="56cb43de-589a-4a35-9627-2e03e11ffff0"/>
+				<box>
+					<leftPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1 荤素均衡 2 荤食为主 3 素食为主 4 嗜盐 5嗜油 6 嗜糖]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="465" width="78" height="20" uuid="2e07dee7-79aa-417e-af05-77d6c1865d76"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 锻炼方式]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="445" width="41" height="20" uuid="d2b5a1ba-c0c8-4436-9434-754185e5c1d1"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[年]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="505" width="70" height="60" uuid="d59a67d5-cc69-4f66-902f-65a7ba3f4579"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[吸烟情况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="645" width="78" height="20" uuid="ebe5e3ba-c9db-493d-ace9-0a5cb70d3215"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 饮酒种类]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="625" width="26" height="20" uuid="21de4ec5-aa2e-4b09-860c-14810b1262c4"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="545" width="41" height="20" uuid="ee51e929-35ff-4d29-b695-b8ed1d882a83"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="625" width="83" height="20" uuid="0fa267b2-a991-4c6f-8626-252a766f8ce1"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1 是  2 否]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="605" width="78" height="20" uuid="38e30e9c-8ab8-4a5d-8f02-1aacb150ff91"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 是否戒酒]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="565" width="78" height="20" uuid="b71d184d-eea6-44fd-925e-79216165a650"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 饮酒频率]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="565" width="300" height="19" uuid="c2f50083-c468-4077-ac20-03af2f37d722"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1.从不       2.偶尔       3经常       4每天]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="605" width="183" height="20" uuid="e832a5fa-d771-4b77-95a7-1edacdd3c503"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 1.未戒酒            2.已戒酒，戒酒年龄]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="625" width="78" height="20" uuid="efb5f803-fcce-4342-8ea3-892b25b5dd04"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 开始饮酒年龄]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="485" width="70" height="20" uuid="7369e989-ac0d-4d85-9fbb-a4b48a93bef3"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[饮食习惯]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="425" width="300" height="20" uuid="c4a93184-741e-4e40-997b-a9bcbfbda95e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[1每天 2每周一次以上 3偶尔 4不锻炼]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="625" width="127" height="20" uuid="e70962e7-40ec-4aba-b0ad-4b8c1cf63831"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[近一年内是否曾醉酒]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="425" width="70" height="60" uuid="364c3df0-8c5d-414a-a742-c89a2ed289a0"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[体育锻炼]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="445" width="78" height="20" uuid="c92cfd8c-ebb8-4ae5-add8-37489a748706"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 每次锻炼时间]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="605" width="52" height="20" uuid="aa3bfd58-3cd4-4b00-a68d-2c8c0d20f1d0"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="525" width="78" height="20" uuid="168440b0-6fc5-4fb9-8be2-d0630319ee31"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 日吸烟量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="565" width="70" height="100" uuid="e03b8814-978f-4294-80dd-0694a1766687"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[饮酒情况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="526" width="43" height="19" uuid="e8d39f5f-d486-4958-b3ee-c9dc0a0952bc"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[  平均]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="545" width="42" height="20" uuid="ffd4bf39-7da4-48b2-bd80-def4afac0c42"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[  岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="425" width="27" height="354" uuid="7fc4ff6c-6bcf-4d39-9f55-e52a195e9a07"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[生
+活
+方
+式]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="665" width="70" height="114" uuid="69e5307d-fdc9-4d5a-88ab-3bfbe396e263"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[职业病危害因素接触史]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="665" width="93" height="20" uuid="ef7cd4ae-cb77-4627-9dc6-fa95b40eec66"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 1无   2有（工种]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="665" width="153" height="20" uuid="18dd381c-23c2-4811-aff8-4595bdb999e5"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[年）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="665" width="56" height="20" uuid="3511510f-db56-4577-a2e2-946a891e4b57"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[从业时间]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="691" width="49" height="14" uuid="78b0be60-033f-4697-9d5d-5d1e33fa4a10"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 粉尘]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="691" width="104" height="14" uuid="09423997-3211-422b-a784-f46a9251ad4b"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[防护措施 1无   2有]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="710" width="104" height="14" uuid="339cbdce-5dec-4038-ab3d-b2e52a5c8f93"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[防护措施 1无   2有]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="710" width="49" height="14" uuid="9be62112-74de-4134-b10b-b989e240d681"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 放射物质]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="728" width="104" height="14" uuid="8003cb05-bf33-412c-9ddf-6e4fc272d517"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[防护措施 1无   2有]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="728" width="49" height="14" uuid="81dfcaf4-e399-45e4-b604-6e1bf0e0e7a3"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 物理因素]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="744" width="104" height="14" uuid="dc8935aa-17f9-4754-a89d-0851f509bb51"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[防护措施 1无   2有]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="744" width="49" height="14" uuid="7c4af38b-4123-4e21-ba0b-74b1eedd070c"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 化学物质]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="762" width="104" height="14" uuid="e72606fa-8b5f-47a5-a821-a04b6afca523"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[防护措施 1无   2有]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="762" width="49" height="14" uuid="9fe954fb-00e7-4459-91b4-d67610f5a1ac"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[ 其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="115" y="685" width="77" height="94" forecolor="#000000" uuid="bf3d4ffb-cc8b-4bf5-aac8-8c98dd3f61eb"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ 毒物种类]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="190" width="47" height="20" uuid="3c24e12e-d1a7-4567-b9c9-8223577e8a16"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[左  侧]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="210" width="47" height="20" uuid="bfd8183a-3ccd-4cc2-b922-b18e995af080"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[右  侧]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="210" width="48" height="20" uuid="ac7f925a-f186-4574-95a2-9400863fe3f7"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[ mmHg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="210" width="17" height="20" uuid="90adf350-8a94-44b2-aa9f-e26fd6016a4c"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="374" y="190" width="50" height="20" uuid="f2967ad7-bdb9-4fb6-bccc-6687308a7b3d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{constriction_L}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="170" width="99" height="20" uuid="47ff38d1-b78a-49b3-948a-94f05fc38eaa"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pulse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="210" width="50" height="20" uuid="45f0d4c4-4277-4d54-bc3d-1a06eec56ed8"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{diastolic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="190" width="50" height="20" uuid="22e5e51a-e9dc-4ba2-83d2-1def643f9ceb"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{diastolic_L}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="374" y="210" width="50" height="20" uuid="1f4a40b0-1f53-4d12-bfa4-d2362c74c846"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{constriction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="190" width="69" height="40" uuid="1d34f731-01a6-4fbe-88e3-549e1a212b19"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{breathe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="445" width="106" height="18" uuid="e24a060d-bc5f-4085-a3a2-bfe095135aec"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{insistexercisetime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="545" width="106" height="20" uuid="3bd6b51b-e02b-4236-b987-836be2d3a9e7"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{stopSmokeTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="605" width="64" height="20" uuid="6a686adf-eb93-478f-9b87-f4966f07c328"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{stopDrinkingTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="585" width="53" height="18" uuid="cf0f2cab-5a5e-450f-815b-2a21da09c631"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{alcoholConsumption}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="445" width="44" height="18" uuid="afc0dede-0be8-448e-882f-4cc6a49042b6"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{everyPhysicalExerciseTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="526" width="56" height="19" uuid="0331a582-5ec7-4bce-9505-6cc4824f27ba">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{smokes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="625" width="63" height="18" uuid="e95f60a6-b5ef-48c4-a326-8d30562e1066"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{geginToDrinkTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="545" width="78" height="20" uuid="7ea7a6dc-1dc8-4278-8445-ed6a753c5486"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{beginSmokeTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="208" y="665" width="46" height="17" uuid="d2a2442c-9f75-42c2-9253-c0baaa45ae4a"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{jobs}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="115" y="405" width="186" height="19" uuid="624a0cc3-aae2-4c6f-8a04-3e37c80f7bb3"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 2粗筛阳性， 老年人抑郁评分检查，总分]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="115" y="230" width="101" height="20" uuid="d6e444ae-0e10-4600-8b1c-574192208ed9"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{height}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="230" width="104" height="20" uuid="0cf32ac0-57d8-415f-8293-dd141597074b"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{weight}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="250" width="101" height="29" uuid="080beae3-a2c3-4bb2-9e5a-2ff0f1735b53"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{waistline}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="250" width="104" height="29" uuid="823668f1-2a7c-4711-840a-dadf47275c63"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bmi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="365" width="196" height="20" uuid="702bd785-94cd-497a-a1d7-b8b8f1d182e0">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Dotted"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{cognitiveZf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="405" width="191" height="20" uuid="519ac47d-289e-46ad-a113-8bd5f25b690c"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{emotionZf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="170" width="69" height="20" uuid="ac4ebd5d-f9d7-4b82-a645-148d652f995f"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{temperature}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="116" y="365" width="181" height="20" uuid="d08ea612-3ee4-47f0-9f79-1ca48378252f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ 2粗筛阳性， 简易智力状态检查，总分]]></text>
+			</staticText>
+			<textField pattern="yyyy-MM-dd">
+				<reportElement x="118" y="58" width="161" height="20" uuid="ca89daad-925f-42fc-b55d-043d48fe88ce"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{checkDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="379" y="58" width="160" height="20" uuid="d4e483bc-cc36-4eab-b162-c47762e9137f">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{manaDoctorId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="36" width="171" height="20" uuid="256d3861-f9f1-408b-a9d4-4f5cad5f00ba"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{idCard}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="37" width="100" height="20" uuid="cb858a3c-8870-4fe9-8a4c-7419feac0ecf"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{personName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="283" y="130" width="256" height="20" uuid="eafca90d-91b8-4a20-865a-c0cb700c8117">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{symptomOt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="153" width="351" height="17" uuid="a78cdd85-5a71-4525-a657-02ef07f508b9">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Dotted"/>
+					<leftPen lineWidth="0.5" lineStyle="Dotted"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{symptom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="358" width="15" height="15" uuid="3bc2bd71-844a-40d8-9b88-2a2daa47f415">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{cognitive}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="397" width="15" height="15" uuid="4202cd01-5e13-4f46-80ad-4cbde10e1cd9">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{emotion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="509" y="288" width="15" height="15" uuid="cb06e15e-baa6-4790-b311-20e7301e61fd">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{healthStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="509" y="321" width="15" height="15" uuid="c66a6432-2c63-4179-8a82-312d46b75cb3">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{selfCare}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="568" width="15" height="15" uuid="5186ef18-556a-4b19-ab07-ca4042acdf91">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{drinkingFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="628" width="15" height="15" uuid="9abc7e68-8e3d-47f4-9c13-2d8d3b83b505">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{isDrink}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="428" width="15" height="15" uuid="a8f0b046-485b-4678-8a70-6b8e51e31f0a">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{physicalExerciseFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="487" width="15" height="15" uuid="3195557e-eb58-4012-b5ec-5c9032b56c7f">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dietaryHabit1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="465" width="346" height="20" uuid="c3c70c6c-f67f-4b37-90b8-439646243505"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{exerciseStyle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="508" width="15" height="15" uuid="8f3a2827-a15c-452e-88c2-4c7755ee0a49">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{wehtherSmoke}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="608" width="15" height="15" uuid="2c7ee572-e8ef-4077-bdb9-4f40e9b4dcd5">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{whetherDrink}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="648" width="15" height="15" uuid="29b8ec1e-47fd-4e00-b965-b01ee167d319">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mainDrinkingVvarieties1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="665" width="29" height="17" uuid="5665f0ee-a665-468e-a24b-fc9ab2100756"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{workTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="691" width="71" height="14" uuid="697782a1-d096-4544-bbb3-91bda86caf50"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{dustProDesc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="691" width="76" height="14" uuid="f12555ac-bd24-440b-b9b3-4c2e75b9749c"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dust}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="512" y="690" width="15" height="15" uuid="1a340a40-ffa6-43c3-95e5-eaff2afdca2d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dustPro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="710" width="76" height="14" uuid="0b1d421e-4387-40bb-a9d5-3836357887d8"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ray}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="710" width="71" height="14" uuid="3774029e-fdd3-417a-a6e8-63e326ede2b0">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{rayProDesc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="728" width="76" height="14" uuid="af80d734-f927-41f6-bf0d-eb69c31652db"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{physicalFactor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="728" width="71" height="14" uuid="5b5b59ad-bec7-4a6c-933b-1d566c334f6c"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{physicalFactorProDesc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="744" width="76" height="14" uuid="f647d512-f561-41b2-a7aa-519d6c6a6238"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{chemicals}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="744" width="71" height="14" uuid="ab67410e-6446-41e9-8da9-aceabd78516a"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{chemicalsProDesc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="762" width="76" height="14" uuid="0053174d-a1ba-42e6-897b-d420ba2b689a"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{other}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="762" width="71" height="13" uuid="934bd12b-bc11-4813-8300-f0cdd42dbac8">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{otherProDesc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="512" y="708" width="15" height="15" uuid="8b582d54-950c-4ce1-b75a-b43ef8732d19">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{rayPro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="512" y="744" width="15" height="15" uuid="c9541923-0870-43bc-9322-d2a97a4765bc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{chemicalsPro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="512" y="727" width="15" height="15" uuid="8171c8bb-9f16-4f63-b690-a5e9b845a987">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{physicalFactorPro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="512" y="762" width="15" height="15" uuid="5dc98a10-b242-47ce-9269-d47fc6cc7272">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{otherPro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="646" width="60" height="16" uuid="5970fc88-c386-4449-96f6-373fca7c45d7"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{drinkOther}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="512" y="668" width="15" height="15" uuid="39cc97ec-b88f-43c5-9ae3-3432bcdb2d8d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{occupational}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="153" width="132" height="17" uuid="e37bac48-55f2-45d9-9b0f-140b5096cb7c"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Dotted"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<line>
+				<reportElement x="539" y="150" width="1" height="20" uuid="cc90b29d-6c90-4e50-bfa3-b4783befaa2d"/>
+			</line>
+			<line>
+				<reportElement key="" x="192" y="779" width="347" height="1" uuid="b7ab3d45-e921-4133-b17f-4c4d431ee1d0"/>
+			</line>
+			<line>
+				<reportElement x="539" y="645" width="1" height="135" uuid="cd1c3b2f-34ac-4409-b203-e817bd12f9f5"/>
+			</line>
+			<line>
+				<reportElement x="539" y="565" width="1" height="80" uuid="16939252-bfc6-4c27-a61c-364bc225d8bd"/>
+			</line>
+			<line>
+				<reportElement x="539" y="485" width="1" height="40" uuid="6d041b71-2453-4a3a-946a-634e4431eb80"/>
+			</line>
+			<line>
+				<reportElement x="539" y="279" width="1" height="166" uuid="3d5e24b1-ae21-4e70-838e-4fa5aacfd12a"/>
+			</line>
+			<line>
+				<reportElement x="493" y="312" width="46" height="1" uuid="0714da1d-9207-45f3-ba2f-9b377188a3d0"/>
+			</line>
+			<line>
+				<reportElement x="493" y="345" width="46" height="1" uuid="05461ac0-86c5-4919-91fd-e395aea06b87"/>
+			</line>
+			<line>
+				<reportElement x="493" y="385" width="46" height="1" uuid="95998528-bb50-4db0-aecc-519461db0301"/>
+			</line>
+			<line>
+				<reportElement x="493" y="425" width="46" height="1" uuid="ebfb3b22-d0a6-4de8-8604-4e02be8143cb"/>
+			</line>
+			<line>
+				<reportElement x="493" y="665" width="46" height="1" uuid="da3536c3-3c64-41b6-b33a-88878ac73c56"/>
+			</line>
+			<line>
+				<reportElement x="493" y="506" width="46" height="1" uuid="449ac5e3-a6b1-436c-bbbd-013fb200f538"/>
+			</line>
+			<staticText>
+				<reportElement x="237" y="445" width="76" height="19" uuid="0c3979b0-7ed5-436d-9ad9-8e910b8ea20b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[分钟]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="648" width="8" height="15" uuid="805dd164-fece-426d-a7bc-418c2bd7b4eb">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="443" y="648" width="15" height="15" uuid="2df28a08-554d-433c-992d-c56902f0e10f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mainDrinkingVvarieties2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="458" y="648" width="8" height="15" uuid="b27209c5-2d16-4617-8ef5-bde15dcf2dc8">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="466" y="648" width="15" height="15" uuid="4b5265d6-50c2-4302-9bb6-9260e742f4c7">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mainDrinkingVvarieties3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="481" y="648" width="8" height="15" uuid="9726c8bf-a73c-4df3-b5a5-cab959da2be8">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="489" y="648" width="15" height="15" uuid="18a77cf2-1b22-4d33-a011-6c7e561ee4c0">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mainDrinkingVvarieties4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="504" y="648" width="8" height="15" uuid="218cafa5-2df0-4108-a9f9-9d486a6022b7">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="512" y="648" width="15" height="15" uuid="a523756a-a25c-4d53-af1a-1600afeb10c5">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mainDrinkingVvarieties5}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="487" width="8" height="15" uuid="135e15ce-393e-4fd5-a73e-52ecc8f9c41c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="487" width="8" height="15" uuid="e54fc689-6351-459c-bef0-3bad1e8770e5">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="418" y="487" width="15" height="15" uuid="27f0899a-a498-4ade-90e4-38788414d694">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dietaryHabit2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="456" y="487" width="8" height="15" uuid="5d784010-25ac-4651-8cbb-198780a6277d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="487" width="15" height="15" uuid="6d8205be-9d52-4445-b504-da8f78ba4af1">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dietaryHabit3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="479" y="487" width="8" height="15" uuid="ff6cdc6f-1adb-424c-a678-257f3a571b14">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="464" y="487" width="15" height="15" uuid="28ec707a-9adc-4b8c-bd49-c32db1a2aafd">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dietaryHabit4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="502" y="487" width="8" height="15" uuid="778f0758-2f66-4688-8165-7bd22b85057e">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="487" y="487" width="15" height="15" uuid="3432a960-cc6e-4343-9e54-67773d3a4ad1">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dietaryHabit5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="487" width="15" height="15" uuid="1b0b29f7-5ae2-4b36-af2c-f4670aa849dc">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dietaryHabit6}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="493" y="645" width="46" height="1" uuid="3705b959-c229-49cf-9bec-4486d56c8cb3"/>
+			</line>
+			<line>
+				<reportElement x="493" y="625" width="46" height="1" uuid="2dc146dc-7a5f-42a7-acea-0982b8c17b7c"/>
+			</line>
+			<line>
+				<reportElement x="493" y="605" width="46" height="1" uuid="d7f678ae-a3b4-4ab2-ac2b-7f1cf8a65092"/>
+			</line>
+		</band>
+	</background>
+</jasperReport>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="ZY_RCJL" table="ZY_RCJL">
+			<id name="JLXH" type="java.lang.Long">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="CZRQ" type="timestamp"  />
+        	<property name="LCRQ" type="timestamp"  />
+        	<property name="CZLX" type="java.lang.Integer" length="2" />
+        	<property name="ZYH" type="java.lang.Long" length="18" />
+        	<property name="BRKS" type="java.lang.Long" length="18" />
+        	<property name="YJZYRS" type="java.lang.Integer" length="6" />
+        	<property name="BQPB" type="java.lang.Integer" length="1" />
+        	<property name="CYFS" type="java.lang.Integer" length="4" />
+        	<property name="BZXX" type="java.lang.String" length="255" />
+</class>
+</hibernate-mapping>

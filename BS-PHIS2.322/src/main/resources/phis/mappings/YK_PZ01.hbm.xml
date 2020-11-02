@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YK_PZ01" table="YK_PZ01">
+			<id name="PZID" type="java.lang.Long">
+            	<column name="PZID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="PZLX" type="java.lang.Integer" length="1" />
+        	<property name="XTSB" type="java.lang.Long" length="18" />
+        	<property name="RCFS" type="java.lang.Integer" length="4" />
+        	<property name="RCDH" type="java.lang.Integer" length="6" />
+        	<property name="PZRQ" type="timestamp"  />
+        	<property name="PZGH" type="java.lang.String" length="10" />
+        	<property name="PZYY" type="java.lang.String" length="250" />
+</class>
+</hibernate-mapping>

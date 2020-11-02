@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by 9527 (9527) -->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<!-- ********************床位费自动累计*********************** -->
+	<bean id="bedCostTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="bedCostJob" />
+		<property name="cronExpression" value="0 1 0 * * ?"  />
+	</bean>
+	<bean id="bedCostJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="bedCostJobDetail" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="bedCostJobDetail" class="phis.source.schedule.BedCostCalculationSchedule" >
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
+	<!-- ********************自动生成号源及同步数据*********************** -->
+	<bean id="autoBuildSourceTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="autoBuildSourceJob" />
+		<property name="cronExpression" value="0 0 1 * * ?"  />
+	</bean>
+	<bean id="autoBuildSourceJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="autoBuildSourceJobDetail" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="autoBuildSourceJobDetail" class="phis.source.schedule.AutoBuildSourceSchedule" >
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
+	<!-- ********************自动发送信息到app*********************** -->
+	<bean id="autoSendSourceTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="autoSendSourceJob" />
+		<property name="cronExpression" value="0 0/5 * * * ?"  />
+	</bean>
+	<bean id="autoSendSourceJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="autoSendSourceJobDetail" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="autoSendSourceJobDetail" class="phis.source.schedule.AutoSendSourceSchedule" >
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
+	<!--  ************************任务列表****************** -->
+	<bean id="statSchedulerFactoryBean" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="bedCostTrigger"/>
+				<ref bean="autoBuildSourceTrigger"/>
+				<ref bean="autoSendSourceTrigger"/>
+			</list>
+		</property>
+	</bean>
+</beans>

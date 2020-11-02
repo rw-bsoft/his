@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="phis.application.ccl.schemas.YJ_JCSQ_BGMX" table="YJ_JCSQ_BGMX">
+			<id name="JLXH" type="java.lang.Long">
+            	<column name="JLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="SQDH" type="java.lang.Long" length="18" />
+        	<property name="YLLB" type="java.lang.String" length="2" />
+        	<property name="JCLB" type="java.lang.String" length="2" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="BRID" type="java.lang.Long" length="18" />
+        	<property name="MZHM" type="java.lang.String" length="20" />
+        	<property name="ZYH" type="java.lang.Long" length="18" />
+        	<property name="YSDM" type="java.lang.String" length="10" />
+        	<property name="YSMC" type="java.lang.String" length="20" />
+        	<property name="ZXSJ" type="timestamp"  />
+        	<property name="KSDM" type="java.lang.Long" length="18" />
+        	<property name="KSMC" type="java.lang.String" length="20" />
+        	<property name="LCZD" type="java.lang.String" length="200" />
+        	<property name="BGZD" type="java.lang.String" length="500" />
+        	<property name="BGMS" type="java.lang.String" length="1000" />
+        	<property name="JGJY" type="java.lang.String" length="500" />
+        	<property name="TWDZ" type="java.lang.String" length="100" />
+</class>
+</hibernate-mapping>

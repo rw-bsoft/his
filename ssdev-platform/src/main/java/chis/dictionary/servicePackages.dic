@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic class="TableDictionary" alias="服务包" supportRemote="false" codeRule="4,2,3,3,3,3,3,3"  
+	searchField="packageName" entry="SCM_ServicePackage" keyField="SPID"  sortField="sortNumberSP" 
+	textField="packageName" queryOnly="true" filter="['and',['like', ['$','manaUtil'],['concat',['substring',['$','%user.manageUnit.id'], 0,9],['s','%']]],['eq',['$','LOGOFF'],['i','0']]]">
+	<properties>
+		<p name="SPID">SPID</p>
+		<p name="packageName">packageName</p>
+	</properties>
+</dic>

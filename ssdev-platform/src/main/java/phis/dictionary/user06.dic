@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic alias="用户06" class="TableDictionary" navDic="phis.dictionary.manageUnit" supportRemote="false"
+	searchField="a.manageUnitId" iconCls="user"   searchFieldEx="c.pyCode"
+	entry="UserRoleToken a,User b,SYS_Personnel c" keyField="c.PERSONID" textField="c.PERSONNAME" queryOnly="false"
+	filter="['and',['eq',['$','a.userId'],['$','b.id']],['eq',['$','a.userId'],['$','c.PERSONID']],['in',['$','a.roleId'],['s','phis.51','phis.52']],['eq',['$','a.logoff'],['s','0']]]" >
+	<properties>
+		<p name="a.manageUnitId">manageUnit</p>
+		<p name="a.roleId">roleId</p>
+	</properties>
+</dic>

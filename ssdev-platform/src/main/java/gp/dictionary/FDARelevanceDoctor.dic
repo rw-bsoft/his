@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="家庭医生助理关联的家庭医生" class="TableDictionary"
+	 entry="gp.application.rel.schemas.REL_RelevanceDoctor" searchField="fd"
+	 keyField="fd" textField="fd_text" queryOnly="true" 
+	 filter="['eq',['$','fda'],['$','%user.userId']]">
+	<properties>
+		<p name="fda"/>
+	</properties>
+</dic>

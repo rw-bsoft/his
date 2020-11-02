@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.her.schemas.HER_EducationRecord" table="HER_EducationRecord">
+			<id name="recordId" type="java.lang.String">
+            	<column name="recordId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="setId" type="java.lang.String" length="16" />
+        	<property name="exeId" type="java.lang.String" length="16" />
+        	<property name="activeDate" type="date"  />
+        	<property name="activePlace" type="java.lang.String" length="100" />
+        	<property name="activeForm" type="java.lang.String" length="50" />
+        	<property name="activeTheme" type="java.lang.String" length="50" />
+        	<property name="organizer" type="java.lang.String" length="20" />
+        	<property name="personnelCategory" type="java.lang.String" length="100" />
+        	<property name="population" type="java.lang.Integer"  />
+        	<property name="materialCategory" type="java.lang.String" length="100" />
+        	<property name="activeContent" type="java.lang.String" length="1000" />
+        	<property name="activeValuation" type="java.lang.String" length="1000" />
+        	<property name="saveMaterial" type="java.lang.String" length="20" />
+        	<property name="inputuser" type="java.lang.String" length="20" />
+        	<property name="inputUnit" type="java.lang.String" length="20" />
+        	<property name="manager" type="java.lang.String" length="20" />
+        	<property name="inputDate" type="date"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

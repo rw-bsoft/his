@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class entity-name="SCM_INCREASESERVER" table="SCM_INCREASESERVER">
+        <id name="SCINID" type="java.lang.Long">
+            <column name="SCINID"/>
+             <generator class="sequence">
+			<param name="sequence">SEQ_SCM_INCREASESERVER</param>
+			</generator>
+        </id>
+        <property name="EMPIID" type="java.lang.String"/>
+        <property name="MANAUNIT" type="java.lang.String"/>
+        <property name="MANADOC" type="java.lang.String"/>
+        <property name="SCDATE" type="timestamp"/>
+        <property name="LOGOFF" type="java.lang.String"/>
+        <property name="STARTDATE" type="date"/>
+        <property name="ENDDATE" type="timestamp"/>
+        <property name="MODIFYUSER" type="java.lang.String"/>
+        <property name="MODIFYUNIT" type="java.lang.String"/>
+        <property name="GPKS" type="java.lang.String"/>
+        <property name="FPHM" type="java.lang.String"/>
+        <property name="SBXH" type="java.lang.String"/>
+        <property name="YJXH" type="java.lang.String"/>
+        <property name="SCID" type="java.lang.Long"/>
+        <property name="SPID" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		name="report8"
+
+		language="groovy"		 columnCount="1"
+		printOrder="Vertical"
+		orientation="Portrait"
+		pageWidth="680"
+		pageHeight="745"
+		columnWidth="640"
+		columnSpacing="0"
+		leftMargin="20"
+		rightMargin="20"
+		topMargin="20"
+		bottomMargin="20"
+		whenNoDataType="NoPages"
+		isTitleNewPage="false"
+		isSummaryNewPage="false">
+	<property name="ireport.zoom" value="1.0000000000000004" />
+	<property name="ireport.x" value="0" />
+	<property name="ireport.y" value="0" />
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+
+	<background>
+		<band height="0"   >
+		</band>
+	</background>
+	<title>
+		<band height="48"   >
+			<staticText>
+				<reportElement
+						x="12"
+						y="6"
+						width="616"
+						height="35"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[清创缝合术手术知情同意书]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="640"   >
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="21"
+						y="163"
+						width="594"
+						height="258"
+						key="staticText"/>
+				<box>					<pen lineWidth="0.75" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.75" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.75" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.75" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.75" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1、可能发生麻醉意外危急生命；
+2、因创伤及疼痛等因素刺激，术中可能诱发心脑血管隐形疾病突然发生意外；
+3、由于组织损伤严重，指（趾）端已失去活力，无法保存需截指（趾）、以及术后可能发生皮肤坏死、伤口不愈；
+4、任何伤口术后都有感染可能，污染严重者，感染已不可避免。若为特殊性感染，则会导致截肢甚至危及生命；
+5、所有伤口愈合后均留有疤痕、瘀痕体质者更为严重；
+6、由于异物深而散在，手术探查困难，不易发现异物存留，不能完全取尽；
+7、 若有肌腱、神经损伤，以及累计关节面的骨髓损伤，术后有可能出现功能障碍，需再次手术；
+8、其它可能发生的无法预料或者不能防范的并发症等；
+9、术中、术后出血、血肿，伤口并发症：感染、出血、裂开、增生瘀痕、脂肪液化；
+10、损伤周围组织，囊肿复发。
+    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="12"
+						y="519"
+						width="182"
+						height="30"
+						key="staticText"/>
+				<box></box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[患者（家属）签字：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="398"
+						y="519"
+						width="104"
+						height="30"
+						key="staticText"/>
+				<box></box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[医师签字：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="12"
+						y="549"
+						width="182"
+						height="30"
+						key="staticText"/>
+				<box></box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[家属与患者关系：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="382"
+						y="607"
+						width="26"
+						height="30"
+						key="staticText"/>
+				<box></box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[年]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="12"
+						y="1"
+						width="59"
+						height="32"
+						key="staticText-2"/>
+				<box></box>
+				<textElement>
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="234"
+						y="1"
+						width="60"
+						height="32"
+						key="staticText-3"/>
+				<box></box>
+				<textElement>
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[性别：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="429"
+						y="1"
+						width="63"
+						height="32"
+						key="staticText-4"/>
+				<box></box>
+				<textElement>
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[年龄：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="12"
+						y="470"
+						width="608"
+						height="49"
+						key="staticText-6"/>
+				<box></box>
+				<textElement>
+					<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  以上情况已交代清楚，患者及家属（或受患者委托人）愿意承担各项风险，理解谈话，同意手术请签字。]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="71"
+						y="1"
+						width="150"
+						height="32"
+						key="textField-1"/>
+				<box>					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font pdfFontName="Helvetica" size="19" isBold="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{PERSONNAME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="294"
+						y="1"
+						width="127"
+						height="32"
+						key="textField-2"/>
+				<box>					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font pdfFontName="Helvetica" size="19" isBold="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{SEX}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="492"
+						y="1"
+						width="30"
+						height="32"
+						key="textField-3"/>
+				<box>					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="19" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{AGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="524"
+						y="1"
+						width="24"
+						height="32"
+						key="staticText-7"/>
+				<box></box>
+				<textElement>
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="12"
+						y="65"
+						width="608"
+						height="98"
+						key="staticText-8"/>
+				<box></box>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[  患者病情需行清创缝合术手术治疗。由于病情关系、个体差异及现有医学科学技术条件等原因，任何手术都具有较高的诊疗风险，有些风险是医务人员和现代医学知识无法预见、防范和避免的意外，有些是能够预见但却无法完全避免和防范的并发症，手术可能出现下列并发症及不良后果：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="12"
+						y="421"
+						width="608"
+						height="49"
+						key="staticText-9"/>
+				<box></box>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[  一旦发生所述情况，可能加重病情或危及生命，医务人员将按医疗原则予以全力抢救，但仍可能产生不良后果。]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="112"
+						y="33"
+						width="436"
+						height="32"
+						key="textField-4"/>
+				<box>					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font pdfFontName="Helvetica" size="19" isBold="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{DIAGNOSIS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="12"
+						y="33"
+						width="100"
+						height="32"
+						key="staticText-10"/>
+				<box></box>
+				<textElement>
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[术前诊断：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="194"
+						y="519"
+						width="114"
+						height="30"
+						key="staticText-11"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="194"
+						y="549"
+						width="114"
+						height="30"
+						key="staticText-12"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="434"
+						y="607"
+						width="26"
+						height="30"
+						key="staticText-14"/>
+				<box></box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[月]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="486"
+						y="607"
+						width="26"
+						height="30"
+						key="staticText-15"/>
+				<box></box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="538"
+						y="607"
+						width="26"
+						height="30"
+						key="staticText-16"/>
+				<box></box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[时]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="590"
+						y="607"
+						width="26"
+						height="30"
+						key="staticText-17"/>
+				<box></box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" pdfFontName="Helvetica-Bold" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[分]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="502"
+						y="519"
+						width="114"
+						height="30"
+						key="textField-5"/>
+				<box>					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="19" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{DOCTORNAME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="342"
+						y="607"
+						width="40"
+						height="30"
+						key="textField-6"/>
+				<box>					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="18" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{YEAR}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="408"
+						y="607"
+						width="26"
+						height="30"
+						key="textField-7"/>
+				<box>					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="18" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{MONTH}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="460"
+						y="607"
+						width="26"
+						height="30"
+						key="textField-8"/>
+				<box>					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="18" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{DAY}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="512"
+						y="607"
+						width="26"
+						height="30"
+						key="textField-9"/>
+				<box>					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="18" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{HOUR}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="564"
+						y="607"
+						width="26"
+						height="30"
+						key="textField-10"/>
+				<box>					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="18" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{MIN}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="0"  >
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="0"  >
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="0"  >
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="0"  >
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="0"  >
+		</band>
+	</summary>
+</jasperReport>

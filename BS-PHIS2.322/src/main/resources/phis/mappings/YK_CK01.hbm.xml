@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YK_CK01" table="YK_CK01">
+		<composite-id>
+			<key-property name="XTSB" column="XTSB" type="java.lang.Long"/>
+			<key-property name="CKFS" column="CKFS" type="java.lang.Integer"/>
+			<key-property name="CKDH" column="CKDH" type="java.lang.Integer"/>
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="YFSB" type="java.lang.Long" length="18" />
+		<property name="CKBZ" type="java.lang.String" length="30" />
+		<property name="CKPB" type="java.lang.Integer" length="1" />
+		<property name="SQRQ" type="timestamp"  />
+		<property name="CKRQ" type="timestamp"  />
+		<property name="CKKS" type="java.lang.Long" length="18" />
+		<property name="CZGH" type="java.lang.String" length="10" />
+		<property name="QRGH" type="java.lang.String" length="10" />
+		<property name="SQTJ" type="java.lang.Integer" length="1" />
+		<property name="LYRQ" type="timestamp"  />
+		<property name="LYPB" type="java.lang.Integer" length="1" />
+		<property name="LYGH" type="java.lang.String" length="10" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf id="UpdateRegionText">
+	<table name="CDH_DeadRegister" queryField="homeAddress" queryParam="regionCode" fullName="chis.application.cdh.schemas.CDH_DeadRegister">
+		<column name="homeAddress_text" param="regionCode_text"/>
+	</table>
+	<table name="CDH_HealthCard" queryField="homeAddress" queryParam="regionCode" fullName="chis.application.cdh.schemas.CDH_HealthCard">
+		<column name="homeAddress_text" param="regionCode_text"/>
+	</table>
+	<table name="MOV_EHR" queryField="regionCode" queryParam="regionCode" fullName="chis.application.mov.schemas.MOV_EHR">
+		<column name="sourceArea_text" param="regionCode_text"/>
+	</table>
+	<table name="MOV_EHR" queryField="targetArea" queryParam="regionCode" fullName="chis.application.mov.schemas.MOV_EHR">
+		<column name="targetArea_text" param="regionCode_text"/>
+	</table>
+	<table name="MOV_CDH" queryField="sourceHomeAddress" queryParam="regionCode" fullName="chis.application.mov.schemas.MOV_CDH">
+		<column name="sourceHomeAddress_text" param="regionCode_text"/>
+	</table>
+	<table name="MOV_CDH" queryField="targetHomeAddress" queryParam="regionCode" fullName="chis.application.mov.schemas.MOV_CDH">
+		<column name="targetHomeAddress_text" param="regionCode_text"/>
+	</table>
+	<table name="MOV_MHC" queryField="sourceHomeAddress" queryParam="regionCode" fullname="chis.application.mov.schemas.MOV_MHC">
+		<column name="sourceHomeAddress_text" param="regionCode_text"/>
+	</table>
+	<table name="MOV_MHC" queryField="targetHomeAddress" queryParam="regionCode" fullName="chis.application.mov.schemas.MOV_MHC">
+		<column name="targetHomeAddress_text" param="regionCode_text"/>
+	</table>
+	<table name="MOV_MHC" queryField="sourceRestRegion" queryParam="regionCode" fullName="chis.application.mov.schemas.MOV_MHC">
+		<column name="sourceRestRegion_text" param="regionCode_text"/>
+	</table>
+	<table name="MOV_MHC" queryField="targetRestRegion" queryParam="regionCode" fullName="chis.application.mov.schemas.MOV_MHC">
+		<column name="targetRestRegion_text" param="regionCode_text"/>
+	</table> 
+	<table name="EHR_FamilyRecord" queryField="regionCode" queryParam="regionCode" fullName="chis.application.fhr.schemas.EHR_FamilyRecord">
+		<column name="regionCode_text" param="regionCode_text"/>
+	</table> 
+	<table name="EHR_HealthRecord" queryField="regionCode" queryParam="regionCode" fullName="chis.application.hr.schemas.EHR_HealthRecord">
+		<column name="regionCode_text" param="regionCode_text"/>
+	</table> 
+	<table name="MHC_PregnantRecord" queryField="restRegionCode" queryParam="regionCode" fullName="chis.application.mhc.schemas.MHC_PregnantRecord">
+		<column name="restRegionCode_text" param="regionCode_text"/>
+	</table> 
+	<table name="MHC_PregnantRecord" queryField="homeAddress" queryParam="regionCode" fullName="chis.application.mhc.schemas.MHC_PregnantRecord">
+		<column name="homeAddress_text" param="regionCode_text"/>
+	</table> 
+	<table name="MHC_PregnantRecord" queryField="realRegionCode" queryParam="regionCode" fullName="chis.application.mhc.schemas.MHC_PregnantRecord">
+		<column name="realRegionCode_text" param="regionCode_text"/>
+	</table> 
+	<table name="PSY_PsychosisRecord" queryField="guardianAddress" queryParam="regionCode" fullName="chis.application.psy.schemas.PSY_PsychosisRecord">
+		<column name="guardianAddress_text" param="regionCode_text"/>
+	</table> 
+	<table name="PUB_Log" queryField="regionCode" queryParam="regionCode"  fullName="chis.application.pub.schemas.PUB_Log">
+		<column name="regionCode_text" param="regionCode_text"/>
+	</table> 
+	<table name="SCH_SchistospmaManage" queryField="regionCode" queryParam="regionCode" fullName="chis.application.sch.schemas.SCH_SchistospmaManage">
+		<column name="regionCode_text" param="regionCode_text"/>
+	</table> 
+</conf>

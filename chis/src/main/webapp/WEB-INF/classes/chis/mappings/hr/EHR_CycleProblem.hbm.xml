@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.hr.schemas.EHR_CycleProblem" table="EHR_CycleProblem">
+			<id name="cycleProblemId" type="java.lang.String">
+            	<column name="cycleProblemId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="cycleId" type="java.lang.String" length="2" />
+        	<property name="problemName" type="java.lang.String" length="80" />
+        	<property name="description" type="java.lang.String" length="500" />
+</class>
+</hibernate-mapping>

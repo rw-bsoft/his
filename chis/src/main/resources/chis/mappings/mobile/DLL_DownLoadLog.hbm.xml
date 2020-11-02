@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.mobile.schemas.DLL_DownLoadLog"
+		table="DLL_DownLoadLog">
+		<id name="recordId" type="java.lang.String">
+			<column name="recordId" />
+			<generator class="assigned" />
+		</id>
+		<property name="userId" type="java.lang.String" length="16" />
+		<property name="roleId" type="java.lang.String" length="10" />
+		<property name="password" type="java.lang.String" length="50" />
+		<property name="manaUnitId" type="java.lang.String" length="32" />
+		<property name="downLoadStatus" type="java.lang.String"
+			length="1" />
+		<property name="downLoadDate" type="date" />
+	</class>
+</hibernate-mapping>

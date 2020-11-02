@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.per.schemas.PER_CheckupRegister"
+		table="PER_CheckupRegister">
+		<id name="checkupNo" type="java.lang.String">
+			<column name="checkupNo" />
+			<generator class="assigned" />
+		</id>
+		<property name="checkupId" type="java.lang.String" length="30" />
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="name" type="java.lang.String" length="40" />
+		<property name="sex" type="java.lang.String" length="2" />
+		<property name="age" type="java.lang.String" length="10" />
+		<property name="idCard" type="java.lang.String" length="30" />
+		<property name="cardNo" type="java.lang.String" length="50" />
+		<property name="address" type="java.lang.String" length="100" />
+		<property name="zipCode" type="java.lang.String" length="6" />
+		<property name="phoneNumber" type="java.lang.String"
+			length="20" />
+		<property name="comboName" type="java.lang.String" length="20" />
+		<property name="mobileNumber" type="java.lang.String"
+			length="20" />
+		<property name="birthday" type="date" />
+		<property name="checkupType" type="java.lang.String"
+			length="20" />
+		<property name="checkupOrganization" type="java.lang.String"
+			length="30" />
+		<property name="checkupTime" type="date" />
+		<property name="checkupOutcome" type="java.lang.String"
+			length="1000" />
+		<property name="checkupExce" type="java.lang.String"
+			length="1000" />
+		
+		<property name="checkupAdvice" type="java.lang.String"
+			length="1000" />
+		<!-- 
+		<property name="checkupAllergy" type="java.lang.String" length="200" />
+		<property name="checkupSymptom" type="java.lang.String"
+			length="100" />
+		<property name="symptomOther" type="java.lang.String"
+			length="100" />
+		<property name="checkupGuide" type="java.lang.String"
+			length="10" />
+		<property name="pastHistory" type="java.lang.String"
+			length="100" />
+		<property name="checkupDoctor" type="java.lang.String"
+			length="20" />
+		<property name="jobMajor" type="java.lang.String" length="100" />
+		<property name="jobYear" type="java.lang.Integer"/>
+		-->
+		<property name="totalCheckupDate" type="date" />
+		<property name="status" type="java.lang.String" length="2" />
+		<property name="fromHis" type="java.lang.String" length="2" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="inputDate" type="date" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20"/>
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

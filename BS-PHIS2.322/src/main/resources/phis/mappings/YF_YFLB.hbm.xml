@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YF_YFLB" table="YF_YFLB">
+		<id name="YFSB" type="java.lang.Long">
+			<column name="YFSB" />
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" />
+		<property name="YFMC" type="java.lang.String" />
+		<property name="BZLB" type="java.lang.Integer" />
+		<property name="XYQX" type="java.lang.String" />
+		<property name="ZYQX" type="java.lang.String" />
+		<property name="CYQX" type="java.lang.String" />
+		<property name="SJGLBZ" type="java.lang.Integer" />
+		<property name="SJKF" type="java.lang.Integer" />
+		<property name="LYKS" type="java.lang.String" />
+		<property name="ZXBZ" type="java.lang.Integer"/>
+		<property name="SJJG" type="java.lang.String" />
+		<property name="SJYF" type="java.lang.Long" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MPI_Card" table="MPI_Card">
+		<id name="cardId" type="java.lang.String" length="32">
+			<column name="cardId" />
+			<generator class="assigned" />
+		</id>
+	<property name="empiId"           		type="java.lang.String" length="32"/>
+	<property name="cardTypeCode"   		   	type="java.lang.String" length="2"/>
+	<property name="cardNo"         	     	type="java.lang.String" length="50"/>
+	<property name="createUnit"     		    type="java.lang.String" length="16"/>
+	<property name="createUser"     		  	type="java.lang.String" length="20"/>
+	<property name="status"        		  	type="java.lang.String" length="1"/>
+	<property name="createTime"     		  	type="date"/>
+	<property name="validTime"      		   	type="date"/>
+	<property name="lastModifyTime"   	  	type="date"/>
+	<property name="lastModifyUnit"   	  	type="java.lang.String" length="16"/>
+	<property name="lastModifyUser"   		type="java.lang.String" length="20"/>
+</class>
+</hibernate-mapping>

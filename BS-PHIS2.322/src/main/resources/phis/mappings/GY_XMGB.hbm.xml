@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="GY_XMGB" table="GY_XMGB">
+		<id name="GBXH" type="java.lang.Long">
+			<column name="GBXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="BBBH" type="java.lang.Long" length="18" />
+		<property name="SFXM" type="java.lang.Long" length="18" />
+		<property name="GBXM" type="java.lang.Long" length="4" />
+		<property name="XMMC" type="java.lang.String" length="20" />
+		<property name="SXH" type="java.lang.Long" length="4" />
+        	
+	</class>
+</hibernate-mapping>

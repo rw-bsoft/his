@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.npvr.schemas.EHR_NormalPopulationVisit" table="EHR_NormalPopulationVisit">
+			<id name="id" type="java.lang.String">
+            	<column name="id"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="phrId" type="java.lang.String" length="32" />
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="visitDate" type="date"  />
+        	<property name="visitUser" type="java.lang.String" length="20" />
+        	<property name="content" type="java.lang.String" length="500" />
+        	<property name="nextTime" type="date"  />
+        	<property name="fbs" type="java.lang.Double"  />
+        	<property name="pbs" type="java.lang.Double"  />
+        	<property name="con" type="java.lang.Integer"  />
+        	<property name="dia" type="java.lang.Integer"  />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

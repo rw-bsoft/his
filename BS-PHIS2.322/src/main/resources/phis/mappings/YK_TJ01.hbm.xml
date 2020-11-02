@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YK_TJ01" table="YK_TJ01">
+		<composite-id>
+			<key-property name="TJDH" column="TJDH" type="java.lang.Integer"/>
+			<key-property name="TJFS" column="TJFS" type="java.lang.Integer" />
+			<key-property name="XTSB" column="XTSB" type="java.lang.Long" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String"  />
+		<property name="SJRQ" type="timestamp"  />
+		<property name="TJRQ" type="timestamp"  />
+		<property name="TJWH" type="java.lang.String"  />
+		<property name="ZXGH" type="java.lang.String"  />
+		<property name="ZXRQ" type="timestamp"  />
+		<property name="CZGH" type="java.lang.String"  />
+		<property name="ZYPB" type="java.lang.Integer" />
+		<property name="DSSJ" type="date"  />
+		<property name="DSPB" type="java.lang.Integer"  />
+		<property name="DSRQ" type="date"  />
+	</class>
+</hibernate-mapping>

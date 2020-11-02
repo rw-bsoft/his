@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/util	
+	http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<bean id="platform.organizationService" class="ctd.service.configure.OrganizationService"/>
+	<bean id="platform.roleConfig" class="ctd.service.configure.RoleConfig"/>
+	<bean id="platform.personnelService" class="ctd.service.configure.PersonnelService">
+       <property name="picPath" value="photo/"></property>
+       <property name="tempPath" value="temp/"></property>
+    </bean>
+    <bean id="platform.appConfig" class="ctd.service.configure.ApplicationConfig"/>
+    <bean id="platform.manageService" class="ctd.service.configure.ManageUnitConfig"/>
+    <bean id="platform.organizTypeService" class="ctd.service.configure.OrganizTypeService"/>
+    <bean id="platform.userPropService" class="ctd.service.configure.UserPropService"/>
+    <bean id="platform.userService" class="ctd.service.configure.UserConfig"/>
+    <bean id="platform.domainConfig" class="ctd.service.configure.DomainConfig"/>
+    <bean id="platform.dicConfig" class="ctd.service.configure.DicConfig"/>
+    <bean id="platform.schemaConfig" class="ctd.service.configure.SchemaConfig"/>
+</beans>

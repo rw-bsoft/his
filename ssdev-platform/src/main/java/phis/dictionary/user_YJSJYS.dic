@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="用户_YJSJYS" searchField="a.JGID" codeRule="4,2,3,3,3,3,3,3"  supportRemote="false"
+	 searchFieldEx="b.PYCODE" 
+	 distinct="true" 
+	 entry="GY_QXKZ a, SYS_Personnel b" 
+	 keyField="b.PERSONID" 
+	 textField="b.PERSONNAME" class="TableDictionary"  
+	 filter="['and',['and',['eq',['$','a.YGDM'],['$','b.PERSONID']]],['eq',['$','a.JGID'],['$','%user.manageUnit.id']]]" queryOnly="true">
+	<properties>
+		<p name="a.JGID">JGID</p>
+		<p name="b.PYCODE">PYCODE</p>
+	</properties>
+</dic>

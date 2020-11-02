@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YB_GHXX" table="YB_GHXX">
+			<id name="SBXH" type="java.lang.Long">
+            	<column name="SBXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="JSSJ" type="timestamp"  />
+        	<property name="TBR" type="java.lang.String" length="10" />
+        	<property name="BRXZ" type="java.lang.Long" length="4" />
+        	<property name="XM" type="java.lang.String" length="20" />
+        	<property name="RYXZ" type="java.lang.String" length="20" />
+        	<property name="KSM" type="java.lang.String" length="10" />
+        	<property name="KSMC" type="java.lang.String" length="30" />
+        	<property name="GHXH" type="java.lang.String" length="30" />
+        	<property name="DJH" type="java.lang.String" length="20" />
+        	<property name="FYLB" type="java.lang.String" length="20" />
+        	<property name="BZM" type="java.lang.String" length="10" />
+        	<property name="BZMC" type="java.lang.String" length="40" />
+        	<property name="GHF" type="java.lang.Double" length="10" />
+        	<property name="ZLF" type="java.lang.Double" length="10" />
+        	<property name="GRZL" type="java.lang.Double" length="10" />
+        	<property name="GRZF" type="java.lang.Double" length="10" />
+        	<property name="YBZF" type="java.lang.Double" length="10" />
+        	<property name="ZHZF" type="java.lang.Double" length="10" />
+        	<property name="ZHYE" type="java.lang.Double" length="10" />
+        	<property name="XJZF" type="java.lang.Double" length="10" />
+        	<property name="XZMC" type="java.lang.String" length="20" />
+        	<property name="YH1" type="java.lang.Double" length="10" />
+        	<property name="YH2" type="java.lang.Double" length="10" />
+        	<property name="YH3" type="java.lang.Double" length="10" />
+        	<property name="TCZF" type="java.lang.Double" length="10" />
+        	<property name="DBZF" type="java.lang.Double" length="10" />
+        	<property name="BZZF" type="java.lang.Double" length="10" />
+        	<property name="CZGH" type="java.lang.String" length="10" />
+        	<property name="JZRQ" type="timestamp"  />
+        	<property name="HZRQ" type="timestamp"  />
+        	<property name="ZFPB" type="java.lang.Integer" length="1" />
+        	<property name="MZBZ" type="java.lang.Double" length="10" />
+        	<property name="QHMC" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

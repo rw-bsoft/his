@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YF_YPXX" table="YF_YPXX">
+		<composite-id>
+			<key-property name="YPXH" column="YPXH" type="java.lang.Long"/>
+			<key-property name="YFSB" column="YFSB" type="java.lang.Long" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="8" />
+		<property name="YFGG" type="java.lang.String" length="20" />
+		<property name="YFDW" type="java.lang.String" length="4" />
+		<property name="YFBZ" type="java.lang.Integer" length="4" />
+		<property name="YFGC" type="java.lang.Double" length="10" />
+		<property name="YFDC" type="java.lang.Double" length="10" />
+		<property name="YFZF" type="java.lang.Integer" length="1" />
+		<property name="QZCL" type="java.lang.Integer" length="1" />
+		<property name="KWBM" type="java.lang.String" length="20" />
+		<property name="DRSJ" type="timestamp"  />
+		<property name="XGSJ" type="timestamp"  />
+	</class>
+</hibernate-mapping>

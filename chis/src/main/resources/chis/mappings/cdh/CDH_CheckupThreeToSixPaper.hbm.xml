@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class entity-name="chis.application.cdh.schemas.CDH_CheckupThreeToSixPaper" table="CDH_CheckupThreeToSix">
+    <id name="checkupId" type="java.lang.String">
+      <column name="checkupId" />
+      <generator class="assigned" />
+    </id>
+    <property name="phrId" type="java.lang.String" length="30" />
+    <property name="manaUnitId" type="java.lang.String" length="20" />
+    <property name="checkupDate" type="date" />
+    <property name="checkupStage" type="java.lang.String"      length="2" />
+    <property name="weight" type="java.lang.Double" length="5"			precision="2" />
+    <property name="height" type="java.lang.Double" length="6"			precision="2" />
+    <property name="weightDevelopment" type="java.lang.String" length="1"/>
+    <property name="heightDevelopment" type="java.lang.String" length="1"/>
+    <property name="devEvaluation" type="java.lang.String" length="20" />
+    <property name="decayedTooth" type="int" length="2"/>
+    <property name="dentalCaries" type="int" length="2"/>
+    <property name="heartLung" type="java.lang.String" length="1" />
+    <property name="abdomen" type="java.lang.String" length="1" />
+    <property name="hgb"  type="java.lang.Double" length="10"  />
+    <property name="hearing" type="java.lang.String" length="2" />
+    <property name="eyesight" type="java.lang.String" length="10" />
+    <property name="other" type="java.lang.String" length="64" />
+   
+    <property name="tzbqhbhs" type="java.lang.String" length="1" />
+    <property name="zyqbrcfj" type="java.lang.String" length="1" />
+    <property name="jcyssbsz" type="java.lang.String" length="1" />  
+    
+    <property name="illnessType" type="java.lang.String" length="20" />
+    <property name="pneumoniaCount" type="int" length="4" />
+    <property name="diarrheaCount" type="int" length="4" />
+    <property name="traumaCount" type="int" length="4" />
+    <property name="otherCount" type="int" length="4" />
+    <property name="illnessName" type="java.lang.String" length="80" />
+    
+    
+    <property name="guide" type="java.lang.String" length="10"/>
+    <property name="otherGuide" type="java.lang.String" length="500"/>
+    <property name="referral" type="java.lang.String" length="1"/>
+    <property name="referralUnit" type="java.lang.String" length="50"/>
+    <property name="referralReason" type="java.lang.String" length="50"/>
+    <property name="nextCheckupDate" type="date" />
+    <property name="checkDoctor" type="java.lang.String" 			length="20" />
+    <property name="checkUnit" type="java.lang.String" length="20" />
+    <property name="lastModifyDate" type="timestamp" />
+    <property name="lastModifyUnit" type="java.lang.String" length="20" />
+    <property name="lastModifyUser" type="java.lang.String" 			length="20" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="SYS_PrivacyRules" table="SYS_PrivacyRules">
+		<id name="id" type="java.lang.Integer">
+	    	<column name="id"/>
+			<generator class="sequence">
+            	<param name="sequence">SEQ_SYS_PrivacyRules</param>
+           	</generator>
+		</id>
+		<property name="domain" type="java.lang.String" length="50" />
+		<property name="rule" type="java.lang.String" length="50" />
+		<property name="content" type="java.lang.String" length="200" />
+		<property name="game" type="java.lang.String" length="50" />
+	</class>
+</hibernate-mapping>

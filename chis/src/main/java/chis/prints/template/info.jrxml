@@ -1,0 +1,3687 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		name="info"
+
+		language="groovy"		 columnCount="1"
+		printOrder="Vertical"
+		orientation="Portrait"
+		pageWidth="595"
+		pageHeight="842"
+		columnWidth="555"
+		columnSpacing="0"
+		leftMargin="20"
+		rightMargin="20"
+		topMargin="20"
+		bottomMargin="20"
+		whenNoDataType="AllSectionsNoDetail"
+		isTitleNewPage="false"
+		isSummaryNewPage="false">
+	<property name="ireport.zoom" value="1.3636363636363638" />
+	<property name="ireport.x" value="0" />
+	<property name="ireport.y" value="117" />
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+
+	<background>
+		<band height="802"  isSplitAllowed="true" >
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="296"
+						y="62"
+						width="80"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[编号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="19"
+						y="14"
+						width="517"
+						height="38"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[个人基本信息表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="19"
+						y="62"
+						width="80"
+						height="20"
+						key="staticText"/>
+				<box></box>
+				<textElement>
+					<font/>
+				</textElement>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="19"
+						y="90"
+						width="80"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[性别]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="19"
+						y="111"
+						width="80"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[身份证号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="19"
+						y="151"
+						width="80"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[常住类型]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="19"
+						y="131"
+						width="80"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[本人电话]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="19"
+						y="171"
+						width="80"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[血型]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="19"
+						y="191"
+						width="80"
+						height="48"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[文化程度]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="19"
+						y="239"
+						width="80"
+						height="60"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[职业]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="19"
+						y="299"
+						width="80"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[婚姻状况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="19"
+						y="319"
+						width="80"
+						height="38"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+				</textElement>
+				<text><![CDATA[医疗费用支付方式]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="19"
+						y="357"
+						width="80"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[药物过敏史]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="19"
+						y="397"
+						width="30"
+						height="140"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[既往史]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="49"
+						y="397"
+						width="50"
+						height="80"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[疾病]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="49"
+						y="477"
+						width="50"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[手术]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="49"
+						y="497"
+						width="50"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[外伤]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="49"
+						y="517"
+						width="50"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[输血]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="19"
+						y="537"
+						width="80"
+						height="69"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[家族史]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="19"
+						y="606"
+						width="80"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[遗传病史]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="19"
+						y="626"
+						width="80"
+						height="36"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[残疾情况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="90"
+						width="217"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[ 0 未知的性别  1 男  2 女  9 未说明的性别]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="296"
+						y="111"
+						width="60"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[工作单位]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="218"
+						y="131"
+						width="78"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[联系人姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="356"
+						y="131"
+						width="65"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[联系人电话]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="151"
+						width="119"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1 户籍   2 非户籍]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="296"
+						y="151"
+						width="60"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[民族]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="356"
+						y="151"
+						width="100"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[ 1 汉族 2 少数民族]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="171"
+						width="207"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[ 1 A 型  2 B 型  3 O 型  4 AB型  5 不详 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="191"
+						width="394"
+						height="48"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1研究生  2大学本科  3大学专科和专科学校  4中等专业学校  5技工学校  6高中   7初中  8小学  9文盲或半文盲  10不详]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="239"
+						width="394"
+						height="60"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1国家机关、党群组织、企业、事业单位负责人 2专业技术人员 3办事人员和有关人员  4商业、服务业人员  5 农、林、牧、渔、水利业生产人员  6生产、运输设备操作人员及有关人员  7军人  8不便分类的其他从业人员 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="299"
+						width="394"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[ 1 未婚   2 已婚   3 丧偶   4 离婚   5 未说明的婚姻状况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="319"
+						width="437"
+						height="19"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[ 1 城镇职工基本医疗保险 2 城镇居民基本医疗保险 3 新型农村合作医疗 4 贫困救助]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="537"
+						width="45"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[父 亲]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="330"
+						y="538"
+						width="26"
+						height="19"
+						key="staticText"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[母亲]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="330"
+						y="557"
+						width="26"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[子女]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="99"
+						y="357"
+						width="234"
+						height="20"
+						key="staticText"/>
+				<box leftPadding="1" topPadding="1">					<pen lineWidth="1.0" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1无   有：2青霉素  3磺胺   4链霉素   5其他                       ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="99"
+						y="606"
+						width="119"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1无 2有：疾病名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="99"
+						y="397"
+						width="340"
+						height="16"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1无   2高血压   3糖尿病   4冠心病   5慢性阻塞性肺疾病 　6恶性肿瘤
+ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="99"
+						y="477"
+						width="85"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1无 2有:名称1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="99"
+						y="497"
+						width="85"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1无 2有:名称1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="99"
+						y="517"
+						width="85"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1无 2有:原因1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="99"
+						y="626"
+						width="287"
+						height="18"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1无残疾 2 视力残疾 3听力残疾 4言语残疾 5 肢体残疾]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="306"
+						y="172"
+						width="160"
+						height="19"
+						key="staticText"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[ /RH 血型1 阳性 2 阴性 3 不详]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="175"
+						y="731"
+						width="291"
+						height="23"
+						key="staticText"/>
+				<box>					<pen lineWidth="0.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1卫生厕所 2一格或二格粪池式 3马桶  4露天粪坑  5简易棚厕 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="338"
+						width="217"
+						height="19"
+						key="staticText"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[ 5 商业医疗保险 6 全公费 7 全自费 8 其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="19"
+						y="377"
+						width="80"
+						height="20"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[暴 露 史]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="99"
+						y="377"
+						width="234"
+						height="20"
+						key="staticText"/>
+				<box leftPadding="1" bottomPadding="1">					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1无   有：2化学品      3毒物   4射线                                ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="99"
+						y="577"
+						width="437"
+						height="29"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1无  2高血压  3糖尿病  4冠心病  5慢性阻塞性肺疾病  6恶性肿瘤  7脑卒中
+8重性精神疾病  9结核病  10肝炎  11先天畸形  12其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="19"
+						y="662"
+						width="80"
+						height="115"
+						key="staticText"/>
+				<box>					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[生活环境]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="175"
+						y="662"
+						width="291"
+						height="23"
+						key="staticText"/>
+				<box>					<pen lineWidth="0.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1无       2油烟机   3换气扇   4烟囱 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="662"
+						width="76"
+						height="23"
+						key="staticText"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[厨房排风设施]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="685"
+						width="76"
+						height="23"
+						key="staticText"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[燃料类型]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="754"
+						width="76"
+						height="23"
+						key="staticText"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[禽畜栏]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="708"
+						width="76"
+						height="23"
+						key="staticText"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[饮水]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="731"
+						width="76"
+						height="23"
+						key="staticText"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[厕所]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="175"
+						y="685"
+						width="291"
+						height="23"
+						key="staticText"/>
+				<box>					<pen lineWidth="0.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1液化气   2煤       3天然气   4沼气   5柴火  6其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="175"
+						y="708"
+						width="291"
+						height="23"
+						key="staticText"/>
+				<box>					<pen lineWidth="0.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1自来水   2经净化过滤的水   3井水  4河湖水  5塘水 6其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="175"
+						y="754"
+						width="291"
+						height="23"
+						key="staticText"/>
+				<box>					<pen lineWidth="0.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[1单设     2室内     3室外   4无]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="356"
+						y="90"
+						width="46"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[出生日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						mode="Transparent"
+						x="99"
+						y="557"
+						width="45"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[兄弟姐妹]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="99"
+						y="62"
+						width="119"
+						height="20"
+						key="textField"/>
+				<box></box>
+				<textElement>
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{personName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="376"
+						y="62"
+						width="160"
+						height="20"
+						key="textField"/>
+				<box></box>
+				<textElement>
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{phrId}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="330"
+						y="92"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{sexCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" pattern="yyyy年MM月dd日" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="402"
+						y="90"
+						width="134"
+						height="20"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{birthday}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="99"
+						y="111"
+						width="197"
+						height="20"
+						key="textField"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{idCard}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="356"
+						y="111"
+						width="180"
+						height="20"
+						key="textField"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{workPlace}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="99"
+						y="131"
+						width="119"
+						height="20"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{mobileNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="296"
+						y="131"
+						width="60"
+						height="20"
+						key="textField"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{contact}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="421"
+						y="131"
+						width="115"
+						height="20"
+						key="textField"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{contactPhone}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="269"
+						y="153"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{registeredPermanent}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="511"
+						y="153"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{nationCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="476"
+						y="173"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{bloodTypeCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="509"
+						y="208"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{educationCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="509"
+						y="263"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{workCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="509"
+						y="301"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{maritalStatusCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="511"
+						y="339"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{insuranceCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="100"
+						y="446"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="100"
+						y="462"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease4}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="278"
+						y="539"
+						width="49"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{father}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="490"
+						y="539"
+						width="42"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{mother}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="278"
+						y="559"
+						width="48"
+						height="16"
+						key="textField"/>
+				<box>					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{brother}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="490"
+						y="559"
+						width="42"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{son}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="509"
+						y="173"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{rhBloodCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="316"
+						y="338"
+						width="189"
+						height="16"
+						key="textField"/>
+				<box>					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{insuranceType}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="388"
+						y="446"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease3}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="388"
+						y="462"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease6}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="489"
+						y="358"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{allergy3}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="514"
+						y="358"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{allergy4}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="184"
+						y="477"
+						width="55"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{operation1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="184"
+						y="497"
+						width="55"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{traumatism1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="184"
+						y="517"
+						width="55"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{transfuse1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="218"
+						y="606"
+						width="248"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{genetic}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="417"
+						y="644"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disability2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="511"
+						y="665"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{cookAirTool}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="511"
+						y="688"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{fuelType}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="511"
+						y="711"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{waterSourceCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="511"
+						y="734"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{washroom}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="511"
+						y="757"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{livestockColumn}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="99"
+						y="413"
+						width="357"
+						height="16"
+						key="staticText"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font/>
+				</textElement>
+				<text><![CDATA[7脑卒中 8重性精神疾病　9结核病  10肝炎  11其他法定传染病 12职业病]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="99"
+						y="429"
+						width="55"
+						height="16"
+						key="staticText"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font/>
+				</textElement>
+				<text><![CDATA[13其他]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="154"
+						y="429"
+						width="382"
+						height="15"
+						key="textField"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{other}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="439"
+						y="397"
+						width="97"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{cancer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="456"
+						y="413"
+						width="80"
+						height="16"
+						key="textField"/>
+				<box>					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{occupational}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="242"
+						y="446"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="242"
+						y="462"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease5}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="360"
+						y="477"
+						width="65"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{operation2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="360"
+						y="497"
+						width="65"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{traumatism2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="360"
+						y="517"
+						width="65"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{transfuse2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="516"
+						y="479"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{operation}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="516"
+						y="499"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{traumatism}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="516"
+						y="519"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{transfuse}]]></textFieldExpression>
+			</textField>
+			<line direction="TopDown">
+				<reportElement
+						x="316"
+						y="90"
+						width="40"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="316"
+						y="110"
+						width="40"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<staticText>
+				<reportElement
+						x="492"
+						y="173"
+						width="17"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<line direction="TopDown">
+				<reportElement
+						x="536"
+						y="151"
+						width="1"
+						height="168"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="456"
+						y="171"
+						width="80"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="493"
+						y="191"
+						width="43"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="493"
+						y="239"
+						width="43"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="493"
+						y="299"
+						width="43"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="456"
+						y="151"
+						width="49"
+						height="16"
+						key="textField"/>
+				<box>					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{nationCode_text}]]></textFieldExpression>
+			</textField>
+			<line direction="TopDown">
+				<reportElement
+						x="536"
+						y="338"
+						width="1"
+						height="59"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="333"
+						y="357"
+						width="100"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{allergy_text}]]></textFieldExpression>
+			</textField>
+			<line direction="TopDown">
+				<reportElement
+						x="433"
+						y="357"
+						width="103"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="265"
+						y="645"
+						width="121"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disability_text}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="99"
+						y="644"
+						width="166"
+						height="18"
+						key="staticText"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font/>
+				</textElement>
+				<text><![CDATA[6智力残疾 7精神残疾  8其他残疾 ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="441"
+						y="644"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disability3}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="465"
+						y="644"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disability4}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="489"
+						y="644"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disability5}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="513"
+						y="644"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disability6}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="393"
+						y="644"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disability1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="409"
+						y="644"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box>					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="433"
+						y="644"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box>					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="457"
+						y="644"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box>					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="481"
+						y="644"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box>					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="505"
+						y="644"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box>					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="509"
+						y="608"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{geneticCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="261"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{father6}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="169"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{father2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="192"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{father3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="161"
+						y="539"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="230"
+						y="539"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="184"
+						y="539"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="253"
+						y="539"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="215"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{father4}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="146"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{father1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="238"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{father5}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="207"
+						y="539"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="261"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{brother6}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="253"
+						y="559"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="146"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{brother1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="230"
+						y="559"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="184"
+						y="559"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="161"
+						y="559"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="215"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{brother4}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="238"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{brother5}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="169"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{brother2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="192"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{brother3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="207"
+						y="559"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="473"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{mother6}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="465"
+						y="539"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="358"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{mother1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="442"
+						y="539"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="396"
+						y="539"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="373"
+						y="539"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="427"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{mother4}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="450"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{mother5}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="381"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{mother2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="404"
+						y="539"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{mother3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="419"
+						y="539"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="427"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{son4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="373"
+						y="559"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="442"
+						y="559"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="404"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{son3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="419"
+						y="559"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="450"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{son5}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="465"
+						y="559"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="358"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{son1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="473"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{son6}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="396"
+						y="559"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="381"
+						y="559"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{son2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="481"
+						y="358"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="465"
+						y="358"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{allergy2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="457"
+						y="358"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="441"
+						y="358"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{allergy1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="514"
+						y="379"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{reveal3}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="466"
+						y="379"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{reveal1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="482"
+						y="379"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="506"
+						y="379"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="490"
+						y="379"
+						width="15"
+						height="14"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{reveal2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="506"
+						y="358"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="239"
+						y="477"
+						width="23"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[时间]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="239"
+						y="497"
+						width="23"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[时间]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="239"
+						y="517"
+						width="23"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[时间]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="262"
+						y="497"
+						width="64"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{traumatism1Date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="262"
+						y="477"
+						width="64"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{operation1Date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="262"
+						y="517"
+						width="64"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{transfuse1Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="326"
+						y="477"
+						width="34"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/名称2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="326"
+						y="497"
+						width="34"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/名称2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="326"
+						y="517"
+						width="34"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/原因2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="425"
+						y="517"
+						width="23"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[时间]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="425"
+						y="497"
+						width="23"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[时间]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="425"
+						y="477"
+						width="23"
+						height="20"
+						key="staticText"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font/>
+				</textElement>
+				<text><![CDATA[时间]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="448"
+						y="497"
+						width="65"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{traumatism2Date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="448"
+						y="517"
+						width="65"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{transfuse2Date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="448"
+						y="477"
+						width="65"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{operation2Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="115"
+						y="445"
+						width="48"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement>
+					<font/>
+				</textElement>
+				<text><![CDATA[确诊时间]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="163"
+						y="445"
+						width="71"
+						height="16"
+						key="textField"/>
+				<box></box>
+				<textElement>
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease1Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="115"
+						y="461"
+						width="48"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement>
+					<font/>
+				</textElement>
+				<text><![CDATA[确诊时间]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="163"
+						y="461"
+						width="71"
+						height="16"
+						key="textField"/>
+				<box></box>
+				<textElement>
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease4Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="257"
+						y="461"
+						width="48"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement>
+					<font/>
+				</textElement>
+				<text><![CDATA[确诊时间]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="305"
+						y="461"
+						width="75"
+						height="16"
+						key="textField"/>
+				<box></box>
+				<textElement>
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease5Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="257"
+						y="445"
+						width="48"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement>
+					<font/>
+				</textElement>
+				<text><![CDATA[确诊时间]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="305"
+						y="445"
+						width="75"
+						height="16"
+						key="textField"/>
+				<box></box>
+				<textElement>
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease2Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="404"
+						y="461"
+						width="48"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement>
+					<font/>
+				</textElement>
+				<text><![CDATA[确诊时间]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="452"
+						y="461"
+						width="84"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease6Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement
+						x="404"
+						y="445"
+						width="48"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement>
+					<font/>
+				</textElement>
+				<text><![CDATA[确诊时间]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<reportElement
+						x="452"
+						y="445"
+						width="84"
+						height="16"
+						key="textField"/>
+				<box>					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="9"/>
+				</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{disease3Date}]]></textFieldExpression>
+			</textField>
+			<line direction="TopDown">
+				<reportElement
+						x="536"
+						y="477"
+						width="1"
+						height="100"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="536"
+						y="606"
+						width="1"
+						height="171"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="466"
+						y="776"
+						width="69"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="466"
+						y="754"
+						width="69"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="466"
+						y="731"
+						width="69"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="466"
+						y="708"
+						width="69"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="466"
+						y="685"
+						width="69"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="466"
+						y="662"
+						width="69"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="386"
+						y="626"
+						width="149"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="144"
+						y="537"
+						width="391"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="333"
+						y="377"
+						width="203"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="144"
+						y="557"
+						width="186"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="356"
+						y="557"
+						width="180"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="513"
+						y="497"
+						width="23"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<line direction="TopDown">
+				<reportElement
+						x="513"
+						y="517"
+						width="23"
+						height="1"
+						key="line"/>
+				<graphicElement stretchType="NoStretch"/>
+			</line>
+			<staticText>
+				<reportElement
+						x="234"
+						y="445"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="234"
+						y="461"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="380"
+						y="445"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement
+						x="380"
+						y="461"
+						width="8"
+						height="16"
+						key="staticText"/>
+				<box></box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+		</band>
+	</background>
+	<title>
+		<band height="0"  isSplitAllowed="true" >
+		</band>
+	</title>
+	<pageHeader>
+		<band height="0"  isSplitAllowed="true" >
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="0"  isSplitAllowed="true" >
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="0"  isSplitAllowed="true" >
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="0"  isSplitAllowed="true" >
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="0"  isSplitAllowed="true" >
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="0"  isSplitAllowed="true" >
+		</band>
+	</summary>
+</jasperReport>

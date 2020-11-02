@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="drIt_sendExchangeReport" table="drIt_sendExchangeReport">
+    <id name="recordId" type="java.lang.String"		length="16">
+           <column name="RecordId"  />
+           <generator class="assigned" />
+       </id>
+   	<property name="mpiId" type="java.lang.String" length="32" />
+   	<property name="reserveNo" type="java.lang.String" length="20" />
+   	<property name="hospitalCode" type="java.lang.String" length="20" />
+   	<property name="exchangeNo" type="java.lang.String" length="20" />
+   	<property name="treatResult" type="java.lang.String" length="20" />
+   	<property name="exchangeTime" type="date"  />
+   	<property name="healthAdvice" type="java.lang.String" length="200" />
+   	<property name="doctorName" type="java.lang.String" length="20" />
+   	<property name="submitAgency" type="java.lang.String" length="20" />
+   	<property name="submitTime" type="timestamp" />
+   	<property name="submitor" type="java.lang.String" length="20" />
+   	<property name="leaveConclusion" type="java.lang.String" length="2000" />
+   	<property name="payType" type="java.lang.String" length="1"/>
+    <property name="brxz" type="java.lang.String" length="1"/>
+    <property name="emrNo" type="java.lang.String" length="20"/>
+    <property name="hosNo" type="java.lang.String" length="20"/>
+	<property name="turnReason" type="java.lang.String" length="1000"/>
+</class>
+</hibernate-mapping>

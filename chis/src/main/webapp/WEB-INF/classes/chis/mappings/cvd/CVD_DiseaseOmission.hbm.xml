@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.cvd.schemas.CVD_DiseaseOmission" table="CVD_DISEASEOMISSION">
+			<id name="recordId" type="java.lang.String">
+            	<column name="recordId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="mzhm" type="java.lang.String" length="32" />
+        	<property name="jzjg" type="java.lang.String" length="32" />
+        	<property name="jzsj" type="date"/>
+        	
+        	<property name="jbzd" type="java.lang.String" length="32" />
+        	<property name="mzys" type="java.lang.String" length="32" />
+        	<property name="sfbk" type="java.lang.Integer" length="1" />        	    	
+        	
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="32" />   
+			<property name="createDate" type="date" /> 
+			<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="32" />   
+			<property name="lastModifyDate" type="date" /> 
+			
+			
+</class>
+</hibernate-mapping>

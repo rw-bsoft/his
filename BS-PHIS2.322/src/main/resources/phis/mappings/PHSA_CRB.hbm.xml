@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="PHSA_CRB" table="PHSA_CRB">
+			<id name="CRBBH" type="java.lang.String">
+            	<column name="CRBBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="CRBBGL" type="java.lang.Double"  length="6" precision="5"/>
+        	<property name="CRBBGJSL" type="java.lang.Double"  length="6" precision="5"/>
+        	<property name="GXJG" type="java.lang.String" length="20" />
+        	<property name="TJSJ" type="date" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YF_RBMX" table="YF_RBMX">
+	<composite-id>
+			<key-property name="YFSB" column="YFSB" type="java.lang.Long"/>
+			<key-property name="RBRQ" column="RBRQ" type="timestamp"/>
+			<key-property name="YPXH" column="YPXH" type="java.lang.Long"/>
+			<key-property name="YPCD" column="YPCD" type="java.lang.Long"/>
+		</composite-id>
+        	<property name="JGID" type="java.lang.String" length="8" />
+        	<property name="BRSR" type="java.math.BigDecimal" length="10" />
+        	<property name="BRZC" type="java.math.BigDecimal" length="10" />
+        	<property name="BRJC" type="java.math.BigDecimal" length="10" />
+        	<property name="YFBZ" type="java.lang.Integer" length="4" />
+</class>
+</hibernate-mapping>

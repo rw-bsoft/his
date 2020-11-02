@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic class="ctd.service.configure.dictionary.ComposeDictionaryEx" distinct="true" sortField="a.manageUnitId" navDic="chis.@manageUnit" 
+	searchField="a.userId" iconCls="user"    alias="家医团队" 
+	entry="UserRoleToken  a,SYS_Organization b" keyField="a.manageUnitId" textField="b.organizName" queryOnly="true"
+	filter=" ['and',['eq',['$','a.manageUnitId'],['$','b.organizCode']],['eq',['$','b.classifyCode'],['s','9']],['eq',['$','a.logoff'],['s','0']]]">
+</dic>

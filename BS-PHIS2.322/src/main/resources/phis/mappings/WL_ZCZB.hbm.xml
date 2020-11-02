@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_ZCZB" table="WL_ZCZB">
+			<id name="ZBXH" type="java.lang.Long">
+            	<column name="ZBXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="KFXH" type="java.lang.Integer" length="8" />
+        	<property name="ZBLB" type="java.lang.Integer" length="8" />
+        	<property name="XHMC" type="java.lang.String" length="60" />
+        	<property name="XHGG" type="java.lang.String" length="60" />
+        	<property name="WZBH" type="java.lang.String" length="40" />
+        	<property name="WZXH" type="java.lang.Long" length="18" />
+        	<property name="CJXH" type="java.lang.Long" length="12" />
+        	<property name="KCXH" type="java.lang.Long" length="18" />
+        	<property name="ZCYZ" type="java.lang.Double" length="18" />
+        	<property name="CZYZ" type="java.lang.Double" length="18" />
+        	<property name="WHYZ" type="java.lang.Double" length="18" />
+        	<property name="HBDW" type="java.lang.Integer" length="5" />
+        	<property name="GHDW" type="java.lang.Long" length="18" />
+        	<property name="ZYKS" type="java.lang.Integer" length="6" />
+        	<property name="BGGH" type="java.lang.String" length="10" />
+        	<property name="WZZT" type="java.lang.Integer" length="2" />
+        	<property name="WXZT" type="java.lang.Integer" length="2" />
+        	<property name="TZRQ" type="date"  />
+        	<property name="QYRQ" type="date"  />
+        	<property name="CZRQ" type="date"  />
+        	<property name="ZRRQ" type="date"  />
+        	<property name="BSRQ" type="date"  />
+        	<property name="ZJRQ" type="date"  />
+        	<property name="JTZJ" type="java.lang.Double" length="18" />
+        	<property name="ZJYS" type="java.lang.Integer" length="4" />
+        	<property name="FCYS" type="java.lang.Integer" length="4" />
+        	<property name="ZCNH" type="java.lang.String" length="4" />
+        	<property name="WZTM" type="java.lang.String" length="40" />
+        	<property name="ZDTM" type="java.lang.String" length="40" />
+        	<property name="CCBH" type="java.lang.String" length="30" />
+        	<property name="CLBZ" type="java.lang.Integer" length="1" />
+</class>
+</hibernate-mapping>

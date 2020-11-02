@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.fhr.schemas.EHR_FamilyServicesItemDic" table="EHR_FamilyServicesItemDic">
+		<id name="dicKey" type="java.lang.String">
+			<column name="dicKey" />
+			<generator class="assigned" />
+		</id>
+		<property name="serveText" type="java.lang.String" length="30" />
+		<property name="detail" type="java.lang.String" length="1000" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createUnit" type="java.lang.String" length="22" />
+		<property name="createDate" type="timestamp" />
+	</class>
+</hibernate-mapping>

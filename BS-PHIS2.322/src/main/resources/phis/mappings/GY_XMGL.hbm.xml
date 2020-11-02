@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="GY_XMGL" table="GY_XMGL">
+		<id name="JLXH" type="java.lang.Long">
+			<column name="JLXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="XMXH" type="java.lang.Long" length="18" />
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="SYLB" type="java.lang.Integer" length="1" />
+		<property name="GLXH" type="java.lang.Long" length="18" />
+		<property name="KSDM" type="java.lang.Long" length="18" />
+		<property name="FYSL" type="java.lang.Double" length="8" />
+	</class>
+</hibernate-mapping>

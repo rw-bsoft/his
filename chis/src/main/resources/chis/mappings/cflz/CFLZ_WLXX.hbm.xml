@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class entity-name="chis.application.cflzwl.schemas.CFLZ_WLXX" table="CFLZ_WLXX">
+        <id name="ID" type="java.lang.Long">
+            <column name="ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="SFZH" type="java.lang.String" length="30"/>
+        <property name="SEX" type="java.lang.String" length="10"/>
+        <property name="AGE" type="java.lang.String" length="10"/>
+        <property name="ADDRESS" type="java.lang.String" length="300"/>
+        <property name="BRNAME" type="java.lang.String" length="50"/>
+        <property name="PHONE" type="java.lang.String" length="32"/>
+        <property name="SFBZ" type="java.lang.String" length="10"/>
+        <property name="ZFBZ" type="java.lang.String" length="10"/>
+        <property name="CREATEORGID" type="java.lang.String" length="32"/>
+        <property name="LZORGID" type="java.lang.String" length="32"/>
+        <property name="LZORGNAME" type="java.lang.String" length="200"/>
+        <property name="KDYS" type="java.lang.String" length="50"/>
+        <property name="KDYSGH" type="java.lang.String" length="32"/>
+        <property name="FPHM" type="java.lang.String" length="32"/>
+        <property name="WLDBH" type="java.lang.String" length="32"/>
+        <property name="KFRQ" type="timestamp"/>
+        <property name="DDRQ" type="timestamp"/>
+        <property name="DDJG" type="java.lang.String" length="32"/>
+        <property name="WLZT" type="java.lang.String" length="10"/>
+        <property name="FJRNAME" type="java.lang.String" length="50"/>
+        <property name="KDGS" type="java.lang.String" length="200"/>
+        <property name="KDYPHONE" type="java.lang.String" length="32"/>
+        <property name="FHRQ" type="timestamp"/>
+        <property name="QSRQ" type="timestamp"/>
+        <property name="REMARK" type="java.lang.String" length="500"/>
+        <property name="CFSB" type="java.lang.Long"/>
+        <property name="EMPIID" type="java.lang.String" length="32"/>
+        <property name="PSPLACE" type="java.lang.String" length="200"/>
+        <property name="SJRNAME" type="java.lang.String" length="50"/>
+    </class>
+</hibernate-mapping>

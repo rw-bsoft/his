@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="WL_LRPD" table="WL_LRPD">
+		<id name="LRXH" type="java.lang.Long">
+			<column name="LRXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="PDXH" type="java.lang.Long" length="18" />
+		<property name="KFXH" type="java.lang.Integer" length="8" />
+		<property name="ZDSJ" type="date"  />
+		<property name="SCSJ" type="date"  />
+		<property name="DJZT" type="java.lang.Integer" length="1" />
+		<property name="PDGH" type="java.lang.String" length="10" />
+		<property name="PDFS" type="java.lang.Integer" length="1" />
+	</class>
+</hibernate-mapping>

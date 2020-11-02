@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_BRDJ" table="JC_BRDJ">
+		<id name="ID" type="java.lang.Long" /> <!-- 家床登记ID -->
+		<property name="JCHM" type="string" />
+		<property name="JCBH" type="string" />
+		<property name="BRID" type="java.lang.Long" />
+		<property name="JCLX" type="string" />
+		<property name="KSRQ" type="date" />
+		<property name="ZZRQ" type="date" />
+		<property name="ZRYS" type="string" />
+		<property name="ZRHS" type="string" />
+		<property name="JGID" type="string" />
+		<property name="JCZT" type="java.lang.Integer" />
+	</class>
+</hibernate-mapping>

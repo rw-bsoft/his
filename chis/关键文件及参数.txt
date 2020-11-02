@@ -1,0 +1,25 @@
+ehrViewNav.dic 功能配置菜单
+util.app 公共属性配置
+sysConfNav.dic 系统配置导航菜单
+HEALTHMANAGE.app 健康管理功能配置
+ActionControl.xml 表操作权限
+--java方法
+getEmpiInfoByIdcard 根据身份证号加载基本信息
+setDictionaryMessageForList 数据变成字典数据
+--按钮设置
+var topBar = this.grid.getTopToolbar();
+topBar.find("cmd", "update")[0].disable();
+--全局参数
+this.mainApp
+this.mainApp.uid
+this.mainApp.uname
+this.mainApp.jobId
+this.mainApp.deptId
+--js
+刷新某个模块
+this.fireEvent("refreshData", 'B_09');
+切换到某个模块
+this.tab.items.itemAt(1).enable();
+
+--常见问题
+页面提示很多行，但只显示几行：问题在schema文件配置里主键问题（或关联表主键在后面）

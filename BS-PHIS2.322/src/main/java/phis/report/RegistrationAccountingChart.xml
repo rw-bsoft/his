@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report id="DctRootChart" title="挂号量分析" mode="unit">
+	<field id="manageUnit"/>
+	<chart template="SimpleMSline" chartType="MSLine"/>
+	
+	<define class="phis.report.CountReportDefine">
+		<headers>
+			<item renderIndex="1" id="GHRQ" alias="日期" expr="to_char(GHSJ,'yyyy-mm-dd') as GHSJ" type="string"/>
+			<item renderIndex="2" id="GHL" alias="挂号量" expr="SBXH" type="int" func="count"/>
+		</headers>
+		<sort id="GHSJ"/>
+		<src>
+			<entry name="MS_GHMX "/>
+		</src>
+		<datelimit>
+			GHSJ,7
+		</datelimit>
+		<condition>
+		['and',
+		['eq',['$','JGID'],['$','%user.manageUnit.id']],
+		['eq',['$','THBZ'],['i',0]]
+		]
+		</condition>
+	</define>
+	<define class="phis.report.CountReportDefine">
+		<headers>
+			<item renderIndex="1" id="GHRQ" alias="挂号日期" expr="to_char(GHSJ,'yyyy-mm-dd') as GHSJ" type="string"/>
+			<item renderIndex="3" id="THL" alias="退号量" expr="SBXH" type="int" func="count"/>
+		</headers>
+		<sort id="GHSJ"/>
+		<src>
+			<entry name="MS_GHMX "/>
+		</src>
+		<datelimit>
+			GHSJ,7
+		</datelimit>
+		<condition>
+		['and',
+		['eq',['$','JGID'],['$','%user.manageUnit.id']],
+		['eq',['$','THBZ'],['i',1]]
+		]
+		</condition>
+	</define>
+	<queryArgs>
+		<arg id="manageUnit" alias="管辖机构" type="string" defaultValue="%user.manageUnit.id">
+			<dic id="phis.dictionary.manageUnit" render="Tree"/>
+		</arg>
+	</queryArgs>
+</report>

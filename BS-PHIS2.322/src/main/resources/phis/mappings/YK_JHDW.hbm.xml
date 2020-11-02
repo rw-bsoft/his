@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YK_JHDW" table="YK_JHDW">
+			<id name="DWXH" type="java.lang.Long">
+            	<column name="DWXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="DWMC" type="java.lang.String" length="40"  />
+        	<property name="PYDM" type="java.lang.String" length="10"  />
+         	<property name="KHYH" type="java.lang.String" length="20"  />
+        	<property name="DWZH" type="java.lang.String" length="40"  />
+        	<property name="DWBM" type="java.lang.String" length="20"  />
+        	<property name="LXR" type="java.lang.String" length="10"  />
+        	<property name="LXDH" type="java.lang.String" length="20"  />
+        	<property name="DWDZ" type="java.lang.String" length="40"  />
+        	<property name="BZXX" type="java.lang.String" length="200"  />
+            <property name="ZFPB" type="java.lang.String" length="1"  />
+</class>
+</hibernate-mapping>

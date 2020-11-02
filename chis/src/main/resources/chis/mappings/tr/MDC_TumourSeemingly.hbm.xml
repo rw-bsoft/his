@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.tr.schemas.MDC_TumourSeemingly"  table="MDC_TumourSeemingly">
+			<id name="recordId" type="java.lang.String">
+            	<column name="recordId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="empiId" type="java.lang.String" length="32" />
+        	<property name="highRiskType" type="java.lang.String" length="2" />
+        	<property name="year" type="java.lang.Integer" length="4" />
+        	<property name="physicalId" type="java.lang.String" length="16" />
+        	<property name="seeminglyDte" type="date"  />
+        	<property name="highRiskFactor" type="java.lang.String" length="300" />
+        	<property name="nature" type="java.lang.String" length="2" />
+        	<property name="recheckStatus" type="java.lang.String" length="2" />
+        	<property name="recheckResult" type="java.lang.String" length="2" />
+        	<property name="recheckDoctor" type="java.lang.String" length="20" />
+        	<property name="recheckDate" type="date"  />
+        	<property name="transferTreatment" type="java.lang.String" length="1" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

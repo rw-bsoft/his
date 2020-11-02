@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="MYPAGE_Indicator"
+		table="MDC_HypertensionFixGroup">
+		<id name="fixId" type="java.lang.String">
+			<column name="fixId" />
+			<generator class="assigned" />
+		</id>
+		<property name="phrId" 				type="java.lang.String" length="30"/>
+		<property name="empiId" 			type="java.lang.String" length="32" />
+		<property name="fixType" 			type="java.lang.String" length="1" />
+		<property name="fixDate" 			type="date" />
+		<property name="constriction" 		type="java.lang.Integer" />
+		<property name="diastolic" 			type="java.lang.Integer" />
+		<property name="hypertensionLevel" 	type="java.lang.String" />
+		<property name="riskiness" 			type="java.lang.String" length="64" />
+		<property name="targetHurt"			type="java.lang.String" length="64" />
+		<property name="complication" 		type="java.lang.String" length="64" />
+		<property name="riskLevel" 			type="java.lang.String" length="1" />
+		<property name="controlResult" 		type="java.lang.String" length="1" />
+		<property name="hypertensionGroup" 	type="java.lang.String" length="2" />
+		<property name="oldGroup"			type="java.lang.String" length="2" />
+		<property name="fixUser" 			type="java.lang.String" length="20" />
+		<property name="fixUnit" 			type="java.lang.String" length="16" />
+		<property name="manaUnitId" 		type="java.lang.String" length="20" />
+		
+		<property name="TC" 						type="java.lang.Double"/>
+		<property name="LDL" 						type="java.lang.Double"/>
+		<property name="HDL" 						type="java.lang.Double"/>
+		<property name="waistLine" 					type="java.lang.Double"/>
+		<property name="bmi"						type="java.lang.Double"/>
+		<property name="HSCRP" 						type="java.lang.Double"/>
+		<property name="CRP" 						type="java.lang.Double"/>
+		<property name="physicalActivity" 			type="java.lang.String" length="1"/>
+		<property name="familyHistoryOfCardiovascular" 	type="java.lang.String" length="1" />
+		<property name="leftVentricularHypertrophy"	type="java.lang.String" length="1" />
+		<property name="detectionSource1" 			type="java.lang.String" length="100" />
+		<property name="arteryWallThickening" 		type="java.lang.String" length="1" />
+		<property name="detectionSource2" 			type="java.lang.String" length="100" />
+		<property name="serumCreatinine"			type="java.lang.Double" length="4" />
+		<property name="microalbuminuria" 			type="java.lang.Double" length="4" />
+		<property name="buminuriaSerum" 			type="java.lang.Double" length="4"/>
+		<property name="diabetes" 					type="java.lang.String" length="1" />
+		<property name="fbs" 						type="java.lang.Double" length="4" />
+		<property name="height" 					type="java.lang.Double" />
+		<property name="weight" 					type="java.lang.Double" />
+	</class>
+</hibernate-mapping>

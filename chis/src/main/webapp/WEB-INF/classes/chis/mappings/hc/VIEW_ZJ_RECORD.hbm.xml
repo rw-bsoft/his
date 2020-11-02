@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class entity-name="chis.application.hc.schemas.VIEW_ZJ_RECORD" table="VIEW_ZJ_RECORD">
+		<id name="Id" length="16" type="java.lang.String">
+			<column name="Id"/>
+			<generator class="assigned"/>
+		</id>
+		<property name="empiId" length="32" type="java.lang.String"/>
+		<property name="phrId" length="32" type="java.lang.String"/>
+		<property name="personName" length="32" type="java.lang.String"/>
+		<property name="sexCode" length="1" type="java.lang.String"/>
+		<property name="birthday" type="timestamp"/>
+		<property name="zjrq" type="timestamp"/>
+		
+		<property name="yqdm" length="50" type="java.lang.String"/>
+		<property name="yqmc" length="50" type="java.lang.String"/>
+		<property name="xmbh" length="50" type="java.lang.String"/>
+		<property name="jg" length="50" type="java.lang.String"/>
+		<property name="xmdw" length="50" type="java.lang.String"/>
+		<property name="ckfw" length="50" type="java.lang.String"/>
+		<property name="jcrq" type="timestamp"/>
+
+		
+		<property name="orgcode" length="50" type="java.lang.String"/>
+	</class>
+</hibernate-mapping>

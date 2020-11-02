@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EHR_AreaGridSearch" table="EHR_AreaGrid">
+		<id name="regionCode" type="java.lang.String">
+		      <column name="regionCode" /> 
+		      <generator class="assigned" />
+        </id>    
+        <property name="parentCode" type="java.lang.String" length="25"/>
+        <property name="regionNo" type="java.lang.String" length="25"/>
+        <property name="regionName" type="java.lang.String" length="100" />      
+        <property name="regionAlias" type="java.lang.String" length="30" /> 
+        <property name="pyCode" type="java.lang.String" length="50" />
+        <property name="levelProp" type="java.lang.String" length="1" />
+        <property name="mapSign" type="java.lang.String" length="10" />
+        <property name="orderNo" type="int"/>
+        <property name="isBottom" type="java.lang.String" length="1" />
+        <property name="isFamily" type="java.lang.String" length="2" />
+        <property name="GPS" type="java.lang.String" length="30" />
+	</class>
+</hibernate-mapping> 

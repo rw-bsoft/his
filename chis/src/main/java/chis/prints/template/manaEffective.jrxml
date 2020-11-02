@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="manaEffective" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.9487171000000019"/>
+	<property name="ireport.x" value="242"/>
+	<property name="ireport.y" value="772"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="72" y="7" width="424" height="41"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[现有疾病管理效果及下次年检目标表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="51" width="50" height="20"/>
+				<textElement/>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="74" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[年检日期：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="52" width="73" height="20"/>
+				<textElement/>
+				<text><![CDATA[个人编码：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="370" y="52" width="157" height="20"/>
+				<box>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{idCard}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="51" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{personName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="118" y="94" width="409" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[检查项目]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="113" width="88" height="241"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[现有疾病管理效果]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="94" width="100" height="19"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[内容]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="74" width="73" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[责任医生：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="370" y="74" width="157" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{manaDoctorId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="118" y="113" width="44" height="19"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[高血压]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="113" width="323" height="19"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1 控制满意 2控制不满意 3药物不良反应 4并存临床症状]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="162" y="113" width="24" height="19"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{hypertension}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="118" y="132" width="44" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[糖尿病]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="162" y="132" width="24" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{diabetesMellitus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="204" y="132" width="323" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1 控制满意 2控制不满意 3药物不良反应 4并存临床症状]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="152" width="44" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[COPD]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="162" y="152" width="24" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{COPD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="204" y="152" width="323" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1 控制满意 2控制不满意 3药物不良反应 4并存临床症状]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="172" width="44" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[脑卒中]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="162" y="172" width="24" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{cerebralApoplexy}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="204" y="172" width="323" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[1 控制满意 2控制不满意 3药物不良反应 4并存临床症状]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="192" width="85" height="120"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[不良生活方式改善情况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="312" width="85" height="43"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="192" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[运动]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="261" y="192" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{sportsimprove}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="203" y="212" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[吸烟]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="261" y="212" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{smokeimprove}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="203" y="232" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[饮酒]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="261" y="252" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{saltimprove}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="232" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{drinkimprove}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="203" y="252" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[摄盐]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="272" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[饮食]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="261" y="292" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{dietimprove}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="272" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{psychological}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="203" y="292" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[心里状态]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="203" y="312" width="324" height="43"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{others}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="18" y="355" width="100" height="243"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[下次年检目标]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="355" width="85" height="32"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[高血压]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="387" width="85" height="40"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[糖尿病]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="427" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[运动]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="427" width="85" height="120"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[不良生活方式改善目标]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="507" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[饮食]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="467" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[饮酒]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="487" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[摄盐]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="527" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[心里状态]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="261" y="527" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{psychologicalstatu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="467" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{drinkimproveGoal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="427" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{sportsimproveGoal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="203" y="447" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[吸烟]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="261" y="507" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{dietimproveGoal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="447" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{smokeimproveGoal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="487" width="266" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{saltimproveGoal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="357" width="47" height="27"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{systolicpressureGoal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="233" y="356" width="57" height="31"/>
+				<textElement/>
+				<text><![CDATA[血压：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="363" width="12" height="18"/>
+				<textElement/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="356" y="357" width="60" height="27"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{diastolicpressureGoal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="232" y="388" width="75" height="20"/>
+				<textElement/>
+				<text><![CDATA[空腹血糖：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="344" y="388" width="63" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{fastingbloodglucoseGoal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="232" y="408" width="88" height="18"/>
+				<textElement/>
+				<text><![CDATA[（或）餐后血糖]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="344" y="408" width="63" height="18"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{afterdinnerbloodpressureGoal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="118" y="547" width="85" height="51"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[其他]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="203" y="547" width="324" height="51"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{othersGoal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="18" y="598" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[下次年检日期]]></text>
+			</staticText>
+			<textField pattern="yyyy-MM-dd">
+				<reportElement x="118" y="598" width="179" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{nextcheckDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="297" y="598" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[医生签名：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="397" y="598" width="130" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{createUser}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy-MM-dd">
+				<reportElement x="118" y="74" width="179" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{checkDate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="204" y="387" width="323" height="1"/>
+			</line>
+			<line>
+				<reportElement x="527" y="355" width="1" height="73"/>
+			</line>
+			<staticText>
+				<reportElement x="416" y="360" width="48" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[mmHg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="408" width="48" height="18"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[mmol/L]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="388" width="48" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[mmol/L]]></text>
+			</staticText>
+			<line>
+				<reportElement x="206" y="426" width="321" height="1"/>
+			</line>
+		</band>
+	</background>
+</jasperReport>

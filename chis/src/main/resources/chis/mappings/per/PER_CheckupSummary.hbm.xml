@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.per.schemas.PER_CheckupSummary"
+		table="PER_CheckupSummary">
+		<id name="id" type="java.lang.String" length="16">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+		<property name="checkupNo" type="java.lang.String" length="30" />
+		<property name="recordNo" type="java.lang.String" length="30" />
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="checkupOffice" type="java.lang.String"
+			length="16" />
+		<property name="projectOfficeCode" type="java.lang.String"
+			length="16" />
+		<property name="checkupSummary" type="java.lang.String"
+			length="200" />
+		<property name="exceptionDesc" type="java.lang.String"
+			length="1000" />
+		<property name="summaryDate" type="date" />
+		<property name="checkupDoctor" type="java.lang.String"
+			length="50" />
+		<property name="inputDoctor" type="java.lang.String"
+			length="50" />
+		<property name="inputUnit" type="java.lang.String"/>
+		<property name="ifException" type="java.lang.String" length="1" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20"/>
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

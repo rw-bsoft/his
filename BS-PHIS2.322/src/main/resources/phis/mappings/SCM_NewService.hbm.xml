@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class entity-name="SCM_NewService" table="SCM_NewService">
+        <id name="serviceId" type="java.lang.Long">
+            <column name="serviceId"/>
+            <generator class="sequence">
+				<param name="sequence">SEQ_SCM_NewService</param>
+			</generator>
+        </id>
+        <property name="taskId" type="java.lang.Long" length="20" />
+        <property name="empiId" type="java.lang.String" length="32" />
+        <property name="serviceObj" type="java.lang.String" length="20" />
+        <property name="serviceOrg" type="java.lang.String" length="20" />
+        <property name="serviceTeam" type="java.lang.String" length="20" />
+        <property name="servicer" type="java.lang.String" length="20" />
+        <property name="servicePackId" type="java.lang.String" length="20" />
+        <property name="servicePack" type="java.lang.String" length="100" />
+        <property name="serviceItemsId" type="java.lang.String" length="20" />
+        <property name="serviceItems" type="java.lang.String" length="100" />
+		<property name="SCIID" type="java.lang.Long" length="18" />
+		<property name="SCINID" type="java.lang.Long" length="18" />
+        <property name="serviceMode" type="java.lang.String" length="1" />
+        <property name="serviceDate" type="date" />
+        <property name="gridAddress" type="java.lang.String" length="100" />
+        <property name="detailedAddress" type="java.lang.String" length="150" />
+        <property name="serviceDesc" type="java.lang.String" length="200" />
+        <property name="dataSource" type="java.lang.String" length="1" />
+        <property name="SCID" type="java.lang.Long" length="18"/>
+        <property name="SBXH" type="java.lang.Long" length="18"/>
+        <property name="SPIID" type="java.lang.String" length="20" />
+		<property name="createTime" type="timestamp"  />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="fphm" type="java.lang.String" length="32" />
+		<property name="deleted" type="java.lang.Integer" length="1" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="GY_ZLFA" table="GY_ZLFA">
+		<id name="ZLXH" type="java.lang.Integer">
+			<column name="ZLXH"/>
+			<generator class="assigned" />
+		</id>
+		<property name="ZLMC" type="java.lang.String" length="30" />
+		<property name="PYDM" type="java.lang.String" length="10" />
+		<property name="QYBZ" type="java.lang.Integer" length="1" />
+		<property name="SSLB" type="java.lang.Integer" length="2" />
+		<property name="YGDM" type="java.lang.String" length="10" />
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="KSDM" type="java.lang.Integer" length="18" />
+		<property name="CFZTBH" type="java.lang.Long" length="18" />
+		<property name="XMZTBH" type="java.lang.Long" length="18" />
+		<property name="JBXH" type="java.lang.Long" length="18" />
+		<property name="BLMBBH" type="java.lang.Long" length="18" />
+	</class>
+</hibernate-mapping>

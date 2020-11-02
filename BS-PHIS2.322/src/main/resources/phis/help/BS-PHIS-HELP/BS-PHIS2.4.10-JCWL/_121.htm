@@ -1,0 +1,128 @@
+﻿<html>
+
+<head>
+  <title>7.11.3 设备折旧与取消 - BS-PHIS2.4.10-用户手册（基层物流）</title>
+  <meta http-equiv=Content-Type content="text/html; charset=x-cp20936">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;7.11.3 设备折旧与取消</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>对当月资产进行设备折旧操作之前，首先，需要确认物资的设备折旧方法属性（折旧方法、折旧年限、总工作量、净残值率）是否已正确维护（系统管理</span><span
+lang=EN-US>-</span><span style='font-family:宋体'>物资信息维护</span><span lang=EN-US>(</span><span
+style='font-family:宋体'>一级</span><span lang=EN-US>)-<a href="#_物资信息管理"><span
+lang=EN-US style='font-family:宋体'><span lang=EN-US>物资信息管理</span></span></a></span><span
+style='font-family:宋体'>）；其次，需要对当月库房进行月结操作（运营管理</span><span lang=EN-US>-</span><span
+style='font-family:宋体'>物资管理</span><span lang=EN-US>(</span><span
+style='font-family:宋体'>一级</span><span lang=EN-US>)-<a href="#_库房月结处理"><span
+lang=EN-US style='font-family:宋体'><span lang=EN-US>库房月结</span></span></a></span><span
+style='font-family:宋体'>）。以上操作完成后，打开折旧模块，模块列表中即可显示本月待折旧的资产数据，如上图。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt;
+text-autospace:none'><span style='font-family:宋体;color:black'>选择已月结的折旧月份并点击折旧按钮，可对当前选择的月份的待折旧数据成功折旧，折旧后列表数据自动刷新，计提折旧金额根据月折旧额计算及折旧月数累加显示。月折旧额算法及折旧结果说明：</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt;text-autospace:none'><span style='font-family:"Arial","sans-serif";
+color:black'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>物资的折旧月数≥（物资的折旧年限*12）的，则本次折旧金额=0，系统自动填充折旧说明为&quot;已经到折旧年限&quot;。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt;text-autospace:none'><span style='font-family:"Arial","sans-serif";
+color:black'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>物资的计提折旧金额≥资产可折旧总金额（重置原值*（1-净残值率/100）），则本次折旧金额=0，系统自动填充折旧说明为&quot;已经折旧到残值&quot;。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt;text-autospace:none'><span style='font-family:"Arial","sans-serif";
+color:black'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>物资的折旧月数＜（物资的折旧年限*12） and
+物资的计提折旧金额＜资产可折旧总金额的，则计算本次月折旧额（根据资产设置的不同折旧方法进行计算）：</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt;text-autospace:none'><span style='font-family:"Arial","sans-serif";
+color:black'>A.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-family:宋体;color:black'>平均年限法：</span></b><span
+style='font-family:宋体;color:black'>年折旧率＝（1-净残值率）/折旧年限×100％，月折旧率＝年折旧率/12，月折旧额＝资产重置原值×月折旧率。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt;text-autospace:none'><span style='font-family:"Arial","sans-serif";
+color:black'>B.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-family:宋体;color:black'>总工作量法：</span></b><span
+style='font-family:宋体;color:black'>单位工作量折旧额＝资产重置原值×（1-净残值率）/总工作量，某项固定资产月折旧额=该项固定资产当月工作量×单位工作量折旧额。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:21.0pt;text-autospace:none'><span style='font-family:宋体;color:black'>物资的折旧方法为&quot;总工作量法&quot;的，折旧时需录入当月物资的工作量（工作量录入不可＜1）后才允许进行折旧。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt;text-autospace:none'><span style='font-family:"Arial","sans-serif";
+color:black'>C.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-family:宋体;color:black'>双倍余额递减法：</span></b><span
+style='font-family:宋体;color:black'>年折旧率＝2/折旧年限×100％，月折旧率＝年折旧率/12，月折旧额＝每月月初固定资产账面净值（资产重置原值-计提折旧，逐年递减）×月折旧率。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-autospace:none'><span style='font-family:宋体;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+根据本次折旧月份是否是处于折旧年限的最后两年，分为两种情况：</span></p>
+
+<p class=MsoNormal align=left style='margin-left:84.0pt;text-align:left;
+text-indent:-21.0pt;text-autospace:none'><span style='font-family:"Arial","sans-serif";
+color:black'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>非最后两年，重置原值逐年减少，月折旧额=重置原值*月折旧率，其中重置原值=资产原值-计提折旧，月折旧率=年折旧率/12=2/折旧年限/12。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:84.0pt;text-align:left;
+text-indent:-21.0pt;text-autospace:none'><span style='font-family:"Arial","sans-serif";
+color:black'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>最后两年，将资产的剩余可折旧金额分摊给24个月，月折旧额=（重置原值-计提折旧）/24。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:21.0pt;text-autospace:none'><span style='font-family:宋体;color:black'>需要注意的是，按照本方法折旧，余额是按年递减而非按月递减的，即同一年内的重置原值应是相同的，只需减去往年的计提折旧，不要减去当年已折旧月份的计提折旧。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt;text-autospace:none'><span style='font-family:"Arial","sans-serif";
+color:black'>D.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-family:宋体;color:black'>年数总和法：</span></b><span
+style='font-family:宋体;color:black'>年折旧率＝尚可使用年限/尚可用年数之和×100％，月折旧率＝年折旧率/12，月折旧额=（资产重置原值-（资产重置原值*净残值率，即净残值））×月折旧率。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-autospace:none'><span style='font-family:宋体;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+尚可使用年数=折旧年限-已使用年数，尚可使用年数之和=每年的尚可使用年数之和。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt;text-autospace:none'><span style='font-family:"Arial","sans-serif";
+color:black'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>根据以上方法计算出来的月折旧额＞（资产可折旧总金额-计提折旧）的，说明通过折旧率计算所得的月折旧额已超过了剩余可折旧的金额，则月折旧额=资产可折旧总金额-计提折旧。且系统自动填充折旧说明为&quot;已经折旧到残值&quot;。</span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-autospace:none'><span style='font-family:宋体;color:black'>折旧成功后，可在统计分析-物资统计(一级)-<a
+href="#_折旧信息查询">折旧信息查询</a>模块中查询本次折旧情况。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt'><span style='font-family:宋体'>对已经折旧过的数据，可以选择折旧月份后点击取消折旧按钮进行取消操作。</span></p>
+
+
+</div>
+  <p></p>
+  <hr class="moHR" />
+  <span class="moCopyright">
+    <div align="center" style="text-align:center"> 
+	<div style="font-size:12px;">
+		<a href="http://www.bsoft.com.cn/">创业软件股份有限公司</a>
+		<br/> 
+		版权所有 Copyright(C)2009-2014
+	</div>
+</div>
+  </span>
+
+</body>
+
+</html>

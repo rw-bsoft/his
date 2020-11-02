@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="家庭成员" class="TableDictionary" supportRemote="false" codeRule="4,2,3,3,3,3,3,3" searchField="a.familyId"
+	entry="EHR_HealthRecord a, MPI_DemographicInfo b" keyField="a.empiId" textField="b.personName" queryOnly="true"
+	filter="['and',['eq',['$','a.empiId'],['$','b.empiId']],['eq',['$','a.status'],['s','0']]]">
+	<properties>
+		<p name="a.familyId">familyId</p>
+	</properties>
+</dic>

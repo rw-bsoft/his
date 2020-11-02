@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="QualityData_Main" table="QualityData_Main">
+		<id name="QualityDataId" type="java.lang.Integer">
+	    	<column name="QualityDataId"/>
+	    	<generator class="sequence">
+            	<param name="sequence">SEQ_QualityData_Main</param>
+           	</generator>
+		</id>
+		<property name="RecordClassifying" type="java.lang.String" length="32" />
+		<property name="Authororganization" type="java.lang.String" length="32" />
+		<property name="StatDate" type="date"  />
+		<property name="Stage1Success" type="java.lang.Integer"  />
+		<property name="Stage1Fail" type="java.lang.Integer"  />
+		<property name="Stage2Success" type="java.lang.Integer"  />
+		<property name="Stage2Fail" type="java.lang.Integer"  />
+		<property name="Stage3Success" type="java.lang.Integer"  />
+		<property name="Stage3Fail" type="java.lang.Integer"  />
+		<property name="Stage1UploadTime" type="date"  />
+		<property name="Stage2UploadTime" type="date"  />
+		<property name="Stage3UploadTime" type="date"  />
+		<property name="UnFinishCount" type="java.lang.Integer"  />
+	</class>
+</hibernate-mapping>

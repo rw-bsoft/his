@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_FKFS" table="GY_FKFS">
+			<id name="FKFS" type="java.lang.Long">
+            	<column name="FKFS"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="FKMC" type="java.lang.String" length="40" />
+        	<property name="SYLX" type="java.lang.String" length="6" />
+        	<property name="FKLB" type="java.lang.String" length="18" />
+        	<property name="HMCD" type="java.lang.Integer" length="6" />
+        	<property name="FKJD" type="java.lang.String" length="2" />
+        	<property name="HBWC" type="java.lang.String" length="2" />
+        	<property name="MRBZ" type="java.lang.String" length="2" />
+        	<property name="ZFBZ" type="java.lang.String" length="2" />
+        	<property name="KJFS" type="java.lang.String" length="6" />
+        	<property name="SRFS" type="java.lang.String" length="6" />
+        	<property name="BZXX" type="java.lang.String" length="255" />
+</class>
+</hibernate-mapping>

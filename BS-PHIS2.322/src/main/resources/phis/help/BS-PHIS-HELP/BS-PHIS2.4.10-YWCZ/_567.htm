@@ -1,0 +1,95 @@
+﻿<html>
+
+<head>
+  <title>9.9.5.3 冻结库存查询 - BS-PHIS2.4.10-用户手册(基层医疗-业务操作)</title>
+  <meta http-equiv=Content-Type content="text/html; charset=x-cp20936">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;9.9.5.3 冻结库存查询</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体;
+color:black'>门诊开单或收费时是否对药品进行冻结以及药品冻结的有效时间，都是根据系统中的设置的三个参数进行判别，这三个参数分别为：</span><span
+lang=EN-US style='color:black'>SFQYYFYFY</span><span style='font-family:宋体;
+color:black'>、</span><span lang=EN-US style='color:black'>MZKCDJSJ</span><span
+style='font-family:宋体;color:black'>、</span><span lang=EN-US style='color:black'>KCDJTS</span><span
+style='font-family:宋体;color:black'>。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-family:"Arial","sans-serif";color:black'>1)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='color:black'>SFQYYFYFY</span><span style='font-family:宋体;
+color:black'>（是否启用药房预发药</span><span lang=EN-US style='color:black'>,0</span><span
+style='font-family:宋体;color:black'>是不启用</span><span lang=EN-US
+style='color:black'>,1</span><span style='font-family:宋体;color:black'>启用）：参数值设置为</span><span
+lang=EN-US style='color:black'>0</span><span style='font-family:宋体;color:black'>的情况下，不管另外两个参数如何设置，在门诊开单或收费时都不会冻结药品库存；参数值设置为</span><span
+lang=EN-US style='color:black'>1</span><span style='font-family:宋体;color:black'>的情况下，根据</span><span
+lang=EN-US style='color:black'>MZKCDJSJ</span><span style='font-family:宋体;
+color:black'>参数的参数值来判别在开单还是收费时对药品库存进行冻结。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-family:"Arial","sans-serif";color:black'>2)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='color:black'>MZKCDJSJ</span><span style='font-family:宋体;
+color:black'>（门诊库存冻结时间</span><span lang=EN-US style='color:black'>,1</span><span
+style='font-family:宋体;color:black'>是开单</span><span lang=EN-US style='color:
+black'>,2</span><span style='font-family:宋体;color:black'>是收费）：当</span><span
+lang=EN-US style='color:black'>SFQYYFYFY</span><span style='font-family:宋体;
+color:black'>参数值设置为</span><span lang=EN-US style='color:black'>1</span><span
+style='font-family:宋体;color:black'>，</span><span lang=EN-US style='color:black'>MZKCDJSJ</span><span
+style='font-family:宋体;color:black'>参数值设置为</span><span lang=EN-US
+style='color:black'>1</span><span style='font-family:宋体;color:black'>时，在门诊开单保存后系统自动将开单的药品按数量对库存进行冻结；</span><span
+lang=EN-US style='color:black'>MZKCDJSJ</span><span style='font-family:宋体;
+color:black'>参数值设置为</span><span lang=EN-US style='color:black'>2</span><span
+style='font-family:宋体;color:black'>时，在门诊收费结算完成后系统自动将收费的药品按数量对库存进行冻结。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-family:"Arial","sans-serif";color:black'>3)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='color:black'>KCDJTS</span><span style='font-family:宋体;
+color:black'>（库存冻结天数</span><span lang=EN-US style='color:black'>,</span><span
+style='font-family:宋体;color:black'>单位是天）：此参数用于控制药品库存冻结的有效时间，比如，此参数值设置为</span><span
+lang=EN-US style='color:black'>1</span><span style='font-family:宋体;color:black'>，开单或收费时冻结的药品如果没有在</span><span
+lang=EN-US style='color:black'>1</span><span style='font-family:宋体;color:black'>天</span><span
+lang=EN-US style='color:black'>(24</span><span style='font-family:宋体;
+color:black'>小时</span><span lang=EN-US style='color:black'>)</span><span
+style='font-family:宋体;color:black'>内进行发药的话，药品库存的冻结记录将在</span><span lang=EN-US
+style='color:black'>1</span><span style='font-family:宋体;color:black'>天后解冻。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-family:"Arial","sans-serif";color:black'>4)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:宋体;color:black'>本模块中显示的冻结库存记录，两种情况下自动消失，一是已对药品进行了发药操作；二是超过了参数</span><span
+lang=EN-US style='color:black'>KCDJTS</span><span style='font-family:宋体;
+color:black'>设置的有效冻结时间。</span></p>
+
+
+</div>
+  <p></p>
+  <hr class="moHR" />
+  <span class="moCopyright">
+    <div align="center" style="text-align:center"> 
+<div style="font-size:12px;">
+<a href="http://www.bsoft.com.cn/">创业软件股份有限公司</a>
+<br/> 
+版权所有 Copyright(C)2009-2014
+</div>
+</div>
+  </span>
+
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+﻿<html>
+
+<head>
+  <title>7.2 病区管理 - BS-PHIS2.4.10-用户手册(基层医疗-业务操作)</title>
+  <meta http-equiv=Content-Type content="text/html; charset=x-cp20936">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;7.2 病区管理</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormalIndent><span style='font-family:宋体;color:black'>本模块用于管理当前病区的病人，包括病人管理、医嘱提交、医嘱执行、附加计价执行、欠费控制，并提供相应的维护功能，包括发药药房设置、医嘱组套维护、附加项目维护。其中，“病人管理”菜单下，提供病人列表展示、床位分配、病人信息、医嘱处理、医嘱复核、取消复核、退药申请、转床、退床、帐卡查看、转科处理、护理记录、体温单、办理出院证及出院证明等功能。主界面提供的两种列表模式及业务流程图如下：</span></p>
+
+<p class=MsoNormalIndent style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='color:black'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-family:宋体;color:black'>床位列表</span><span
+lang=EN-US style='color:black'>--</span></b><span style='font-family:宋体;
+color:black'>主界面显示床位列表（包括空床和非空床），列表上方为功能按钮，右侧窗口为选中床位上的病人信息及床位信息，如下图所示：</span></p>
+
+<p class=MsoNormalIndent align=center style='text-align:center;text-indent:
+0cm'><span lang=EN-US style='color:black'><img border=0 width=624 height=350
+id="Picture 104" src="temp.files/image116.jpg"></span></p>
+
+<p class=MsoNormalIndent><span style='font-family:宋体;color:black'>如图，一个小矩形表示一个床位，病人的各项信息和状态以文字和图标标注其上。床位元素说明：</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='color:black'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>床位背景：根据病人性别不同，床位背景有所区别。男性为绿色背景，女性为米色背景，其他性别或空床为白色背景。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='color:black'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>第一行：床位号码和病人姓名。其中，根据床位类型的不同，床位号码的显示也有所区别。“普通”床显示“床位号码”，“加床”显示“床位号码（</span><span
+lang=EN-US style='color:black'>+</span><span style='font-family:宋体;color:black'>）”，“虚床”显示“<span
+style='border:dashed windowtext 1.0pt;padding:0cm'>床位号码</span>”。另外，由于设置的床位号码可能较长，而床位单元格的大小有限，导致显示不下或排版错乱，故提供参数“</span><span
+lang=EN-US style='color:black'>BQCHXSWS</span><span style='font-family:宋体;
+color:black'>（病区床号显示位数）”，可设置床位号码的显示位数。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='color:black'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>第二行：病人性质、性别、年龄，右上角为病人的头像。根据病人年龄和性别的不同，头像有所区别，分别表示男性</span><span
+lang=EN-US style='color:black'>/</span><span style='font-family:宋体;color:black'>女性老人（</span><span
+lang=EN-US style='color:black'>60</span><span style='font-family:宋体;color:black'>周岁及以上），男性</span><span
+lang=EN-US style='color:black'>/</span><span style='font-family:宋体;color:black'>女性年青人（</span><span
+lang=EN-US style='color:black'>11</span><span style='font-family:宋体;color:black'>周岁</span><span
+lang=EN-US style='color:black'>~59</span><span style='font-family:宋体;
+color:black'>周岁），男</span><span lang=EN-US style='color:black'>/</span><span
+style='font-family:宋体;color:black'>女童（</span><span lang=EN-US style='color:
+black'>10</span><span style='font-family:宋体;color:black'>周岁及以下）。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='color:black'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>第三行：各种图标，包括新入院、护理级别、新开</span><span
+lang=EN-US style='color:black'>/</span><span style='font-family:宋体;color:black'>新停医嘱、过敏药物、出院证、出院证明。</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:19.85pt'>
+  <td width=104 style='width:77.95pt;border:solid black 1.0pt;background:#A6A6A6;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.85pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>图标类型</span></p>
+  </td>
+  <td width=302 style='width:8.0cm;border:solid black 1.0pt;border-left:none;
+  background:#A6A6A6;padding:0cm 5.4pt 0cm 5.4pt;height:19.85pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>图标含义描述</span></p>
+  </td>
+  <td width=132 style='width:99.2pt;border:solid black 1.0pt;border-left:none;
+  background:#A6A6A6;padding:0cm 5.4pt 0cm 5.4pt;height:19.85pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>图标样式</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.6pt'>
+  <td width=104 style='width:77.95pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>新入院</span></p>
+  </td>
+  <td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:14.6pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>入院日期为今天的病人，显示新入院标识。</span></p>
+  </td>
+  <td width=132 style='width:99.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:14.6pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='color:black'><img
+  border=0 width=17 height=17 id="图片 20" src="temp.files/image117.jpg"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=104 style='width:77.95pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>护理级别</span></p>
+  </td>
+  <td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>根据病人信息中护理级别的不同，显示不同图标。其中，三级护理无图标。</span></p>
+  </td>
+  <td width=132 style='width:99.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='color:black'><img border=0
+  width=17 height=17 id="Picture 106" src="temp.files/image118.jpg"><img
+  border=0 width=17 height=17 id="Picture 107" src="temp.files/image119.jpg"></span><span
+  lang=EN-US style='font-size:12.0pt;font-family:宋体;color:black'><img border=0
+  width=17 height=17 id="Picture 108" src="temp.files/image120.jpg"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=104 style='width:77.95pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>新开</span><span lang=EN-US style='color:black'>/</span><span
+  style='font-family:宋体;color:black'>新停医嘱</span></p>
+  </td>
+  <td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>有开嘱时间为今天且未复核的显示新开标识；有停嘱时间为今天的显示新停标识。</span></p>
+  </td>
+  <td width=132 style='width:99.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='color:black'><img
+  border=0 width=19 height=17 id="图片 7" src="temp.files/image121.jpg"></span><span
+  style='color:black'>&nbsp;</span><span style='color:black'><img border=0
+  width=17 height=17 id="图片 23" src="temp.files/image122.jpg"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=104 style='width:77.95pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>过敏药物</span></p>
+  </td>
+  <td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>病人信息中有维护过敏药物时显示该标识。当鼠标移至图标上时，显示过敏药物名称。</span></p>
+  </td>
+  <td width=132 style='width:99.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span lang=EN-US
+  style='color:black'><img border=0 width=17 height=17 id="Picture 111"
+  src="temp.files/image123.jpg"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=104 style='width:77.95pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>出院证</span></p>
+  </td>
+  <td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>病人办理了出院证后，显示该图标。</span></p>
+  </td>
+  <td width=132 style='width:99.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span lang=EN-US
+  style='color:black'><img border=0 width=17 height=17 id="Picture 112"
+  src="temp.files/image124.jpg"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=104 style='width:77.95pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>出院证明</span></p>
+  </td>
+  <td width=302 style='width:8.0cm;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span style='font-family:
+  宋体;color:black'>病人办理出院证明后，显示该图标。</span></p>
+  </td>
+  <td width=132 style='width:99.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormalIndent style='text-indent:0cm'><span lang=EN-US
+  style='color:black'><img border=0 width=19 height=16 id="Picture 113"
+  src="temp.files/image125.jpg"></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='color:black'>5)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>第四行：住院号码和入院日期。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='color:black'>6)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>第五行：入院诊断，在</span><a
+href="#_病人信息"><span style='font-family:宋体;color:black'>病人信息</span></a><span
+style='font-family:宋体;color:black'>中维护。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='color:black'>7)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体;color:black'>第六行：主任医师和病人科室。</span></p>
+
+<p class=MsoNormalIndent style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='color:black'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-family:宋体;color:black'>病人列表</span></b><span
+lang=EN-US style='color:black'>--</span><span style='font-family:宋体;color:black'>主界面显示病人列表（只显示已分配床位的病人），列表上方为功能按钮，右侧窗口为选中病人的信息及床位信息。如下图：</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='color:black'><img border=0 width=623 height=336 id="Picture 114"
+src="temp.files/image126.jpg"></span></p>
+
+<p class=MsoNormalIndent style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='color:black'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-family:宋体;color:black'>业务流程图</span><a
+name="_病人管理"></a></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='color:black'><img border=0 width=530 height=460 id="Picture 115"
+src="temp.files/image127.gif"></span></p>
+
+
+</div>
+  <p></p>
+  <hr class="moHR" />
+  <span class="moCopyright">
+    <div align="center" style="text-align:center"> 
+<div style="font-size:12px;">
+<a href="http://www.bsoft.com.cn/">创业软件股份有限公司</a>
+<br/> 
+版权所有 Copyright(C)2009-2014
+</div>
+</div>
+  </span>
+
+</body>
+
+</html>

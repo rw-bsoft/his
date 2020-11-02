@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hy.schemas.MDC_HypertensionRiskAssessmentList"
+		table="MDC_HypertensionRiskAssessment">
+		<id name="recordId" type="java.lang.String">
+			<column name="recordId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="riskId" type="java.lang.String" length="16" />
+		<property name="riskiness" type="java.lang.String" length="64" />
+		<property name="age" type="java.lang.Integer" />
+		<property name="constriction" type="java.lang.Integer" length="8" />
+		<property name="diastolic" type="java.lang.Integer" length="8" />
+		
+		<property name="weight" type="java.lang.Double" length="8" />
+		<property name="height" type="java.lang.Double" length="8" />
+		<property name="bmi" type="java.lang.Double" length="8" />
+		<property name="waistLine" type="java.lang.Double" length="8" />
+		
+		<property name="smokeCount" type="java.lang.Integer" />
+		<property name="smokeYears" type="java.lang.Integer" />
+		<property name="drinkTimes" type="java.lang.Integer" />
+		<property name="drinkCount" type="java.lang.Integer" />
+		<property name="saltCount" type="java.lang.Integer" />
+		
+		<property name="tc" type="java.lang.Double" length="8" />
+		<property name="td" type="java.lang.Double" length="8" />
+		<property name="ldl" type="java.lang.Double" length="8" />
+		<property name="hdl" type="java.lang.Double" length="8" />
+		<property name="fbs" type="java.lang.Double" length="8" />
+		<property name="pbs" type="java.lang.Double" length="8" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="inputDate" type="date" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="estimateUnit" type="java.lang.String" length="20" />
+		<property name="estimateDate" type="date" />
+		<property name="estimateUser" type="java.lang.String" length="20" />
+		<property name="estimateType" type="java.lang.String" length="1" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

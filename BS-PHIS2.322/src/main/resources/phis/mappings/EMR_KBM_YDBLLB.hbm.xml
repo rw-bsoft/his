@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_KBM_YDBLLB" table="EMR_KBM_YDBLLB">
+			<id name="YDLBBM" type="java.lang.String">
+            	<column name="YDLBBM"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="YDLBMC" type="java.lang.String" length="30" />
+        	<property name="BLLX" type="java.lang.Integer" length="1" />
+        	<property name="BLFZ" type="java.lang.Integer" length="1" />
+        	<property name="BJQLB" type="java.lang.Integer" length="2" />
+        	<property name="DYWD" type="java.lang.Integer" length="1" />
+        	<property name="ZYPLXH" type="java.lang.String" length="4" />
+        	<property name="CYPLXH" type="java.lang.String" length="4" />
+        	<property name="ZYPLSX" type="java.lang.Integer" length="1" />
+        	<property name="CYPLSX" type="java.lang.Integer" length="1" />
+        	<property name="YDSJ" type="date"  />
+        	<property name="BZXX" type="java.lang.String" length="200" />
+</class>
+</hibernate-mapping>

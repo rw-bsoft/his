@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="WL_BS01" table="WL_BS01">
+			<id name="DJXH" type="java.lang.Long">
+            	<column name="DJXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="JGID" type="java.lang.String" length="20" />
+        	<property name="KFXH" type="java.lang.Integer" length="8" />
+        	<property name="ZBLB" type="java.lang.Integer" length="8" />
+        	<property name="LZDH" type="java.lang.String" length="30" />
+        	<property name="LZFS" type="java.lang.Long" length="12" />
+        	<property name="BSKS" type="java.lang.Long" length="18" />
+        	<property name="BSRQ" type="date"  />
+        	<property name="ZDRQ" type="date"  />
+        	<property name="ZDGH" type="java.lang.String" length="10" />
+        	<property name="SHRQ" type="date"  />
+        	<property name="SHGH" type="java.lang.String" length="10" />
+        	<property name="JZRQ" type="date"  />
+        	<property name="JZGH" type="java.lang.String" length="10" />
+        	<property name="DJZT" type="java.lang.Integer" length="1" />
+        	<property name="DJBZ" type="java.lang.String" length="160" />
+        	<property name="BSFS" type="java.lang.Integer" length="1" />
+        	<property name="JBGH" type="java.lang.String" length="10" />
+        	<property name="DJJE" type="java.lang.Double" length="18" />
+</class>
+</hibernate-mapping>

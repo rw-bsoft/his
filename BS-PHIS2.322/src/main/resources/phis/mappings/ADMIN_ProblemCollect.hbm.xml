@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="ADMIN_ProblemCollect" table="ADMIN_ProblemCollect">
+			<id name="problemId" type="java.lang.String">
+            	<column name="problemId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="description" type="java.lang.String" length="2000" />
+        	<property name="contactPhone" type="java.lang.String" length="20" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createTime" type="date"  />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="status" type="java.lang.String" length="2" />
+        	<property name="treatTime" type="date" />
+        	<property name="treatDesc" type="java.lang.String" length="500" />
+        	<property name="pyCode" type="java.lang.String" length="20" />
+	        <property name="wbCode" type="java.lang.String" length="20" />
+	        <property name="sjCode" type="java.lang.String" length="20" />
+	        <property name="jhCode" type="java.lang.String" length="20" />
+	        <property name="jxCode" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

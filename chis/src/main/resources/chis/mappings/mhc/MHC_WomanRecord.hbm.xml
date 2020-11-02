@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class entity-name="chis.application.mhc.schemas.MHC_WomanRecord" table="MHC_WomanRecord">
+    <id name="phrId" type="java.lang.String">
+      <column name="phrId" />
+      <generator class="assigned" />
+    </id>
+    <property name="empiId" type="java.lang.String" length="32" />
+    <property name="manaUnitId" type="java.lang.String" length="20" />
+    <property name="manaDoctorId" type="java.lang.String"
+      length="20" />
+    <property name="ownerArea" type="java.lang.String" length="16" />
+    <property name="mhcDoctorId" type="java.lang.String" length="20" />
+    <property name="menarcheAge" type="java.lang.Integer" />
+    <property name="menstrualPeriod" type="java.lang.Integer" />
+    <property name="cycle" type="java.lang.Integer" />
+    <property name="menstrualBlood" type="java.lang.String"
+      length="1" />
+    <property name="dysmenorrhea" type="java.lang.String"
+      length="1" />
+    <property name="gravidity" type="java.lang.Integer" />
+    <property name="vaginalDelivery" type="java.lang.Integer" />
+    <property name="abdominalDelivery" type="java.lang.Integer" />
+    <property name="trafficFlow" type="java.lang.Integer" />
+    <property name="naturalAbortion" type="java.lang.Integer" />
+    <property name="odinopoeia" type="java.lang.Integer" />
+    <property name="preterm" type="java.lang.Integer" />
+    <property name="dystocia" type="java.lang.Integer" />
+    <property name="dyingFetus" type="java.lang.Integer" />
+    <property name="stillBirth" type="java.lang.Integer" />
+    <property name="abnormality" type="java.lang.Integer" />
+    <property name="newbronDied" type="java.lang.Integer" />
+    <property name="qweTimes" type="java.lang.Integer" />
+    <property name="ectopicpregnancy" type="java.lang.Integer" />
+    <property name="vesicularMole" type="java.lang.Integer" />
+    <property name="gynecologyOPS" type="java.lang.String" />
+    <property name="modifyDate" type="date" />
+    <property name="modifyRecordId" type="java.lang.String" length="20"/>
+    <property name="modifyUnit" type="java.lang.String" length="20" />
+    <property name="createUnit" type="java.lang.String" length="20"/>
+    <property name="createUser" type="java.lang.String" length="20"/>
+    <property name="createDate" type="timestamp"/>
+    <property name="lastModifyUnit" type="java.lang.String" length="20"/>
+    <property name="lastModifyDate" type="timestamp" />
+    <property name="lastModifyUser" type="java.lang.String"
+      length="20" />
+  </class>
+</hibernate-mapping>

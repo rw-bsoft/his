@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hivs.schemas.HIVS_Screening" table="HIVS_Screening">
+		<id name="screenId" type="java.lang.String">
+			<column name="screenId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="phrId" type="java.lang.String" length="18" />
+		<property name="outHistory" type="java.lang.String" length="30" />
+		<property name="screeningDate" type="date" length="200"/>
+		<property name="screeningResult" type="java.lang.String" length="18"/>
+		<property name="seperationTM" type="java.lang.String" length="1"/>
+		<property name="widowedHY" type="java.lang.String" length="1"/>
+		<property name="other" type="java.lang.String" length="100"/>
+		<property name="operation" type="java.lang.String" length="1"/>
+		<property name="transfusion" type="java.lang.String" length="1"/>
+		<property name="checkFlag" type="java.lang.String" length="1"/>
+		<property name="createUser" type="java.lang.String" length="20"/>
+		<property name="createUnit" type="java.lang.String" length="20"/>
+		<property name="createDate" type="date"/>
+		<property name="lastModifyUser" type="java.lang.String" length="20"/>
+		<property name="lastModifyUnit"  type="java.lang.String" length="20"/>
+		<property name="lastModifyDate" type="date"/>
+	</class>
+</hibernate-mapping>

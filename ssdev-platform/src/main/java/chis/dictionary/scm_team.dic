@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic class="TableDictionary" alias="签约团队" supportRemote="false" sortField="organizName" 
+	 searchField="organizCode" queryType="SQLQuery" keyField="organizCode" 
+	 textField="organizName" queryOnly="true" entry="SYS_Organization" 
+	 filter=" ['and',['eq',['$','classifyCode'],['s','9']],['eq',['$','logoff'],['s','0']],['like', ['$','organizCode'], ['concat',['substring',['$','%user.manageUnit.id'], 0,9],['s','%']]]]">
+</dic>

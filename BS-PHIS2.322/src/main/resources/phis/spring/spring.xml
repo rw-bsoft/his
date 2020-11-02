@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/util	
+	http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+	<bean class="ctd.util.AppContextHolder">
+		<property name="devMode" value="true" />
+	</bean>
+	<import resource="spring-hibernate.xml" />
+	<import resource="spring-phis.xml" />
+	<import resource="spring-webservice.xml" />
+	<import resource="spring-mobile.xml" />
+	<import resource="spring-print.xml" />
+	<import resource="spring-freemarker.xml" />
+	<import resource="spring-schedule.xml"/>
+	<import resource="spring-service-client.xml" />
+	<import resource="spring-mpi.xml" />
+
+	<bean class="ctd.domain.DomainUtil" init-method="init"></bean>
+	<bean id="printLocalLoader" class="ctd.print.PrintLocalLoader">
+		<property name="listFileName" value="prints/prints.xml" />
+	</bean>
+	<bean id="printController" class="ctd.print.PrintController">
+		<property name="loader" ref="printLocalLoader" />
+	</bean>
+	
+	<bean id="mvcStaticResourceLoader" class="ctd.mvc.controller.support.StaticResourceLoader">
+		<property name="expiresSeconds" value="15" />
+	</bean>
+	
+	<bean class="ctd.sequence.KeyManager" init-method="init"></bean>
+	<bean id="defaultExecutor" class="ctd.net.rpc.server.executor.support.DefaultExecutor" />
+	<bean id="hibernateSupportExecutor"
+		class="ctd.net.rpc.server.executor.support.HibernateSupportExecutor" />
+	<bean id="executorFactory" class="ctd.net.rpc.server.executor.ExecutorFactory">
+		<property name="executors">
+			<list>
+				<ref bean="defaultExecutor" />
+				<ref bean="hibernateSupportExecutor" />
+			</list>
+		</property>
+	</bean>
+	<bean id="daoFactory" class="ctd.dao.DAOFactory">
+		<property name="defaultDaoClass" value="ctd.dao.support.HibernateMapSupportDAO" />
+	</bean>
+	<bean id="mvcDictionaryLoader" class="ctd.mvc.controller.support.DictionaryLoader">
+		<property name="expiresSeconds" value="15" />
+	</bean>
+	<bean id="mvcLogonManager" class="phis.source.service.base.PhisLogonManager">
+		<property name="expiresSeconds" value="15" />
+		<property name="encryptEnable">
+		<value>true</value>
+		</property>
+	</bean>
+	<!-- 照片上传 -->
+	<bean id="mvcPhotoLoader" class="ctd.mvc.controller.support.PhotoLoader">
+		<property name="expiresSeconds" value="15" />
+	</bean>
+	<bean id="mvcPhotoUpload" class="ctd.mvc.controller.support.PhotoUpload">
+		<property name="expiresSeconds" value="15" />
+		<property name="photoDirectory" value="temp" />
+		<property name="imgDirectory" value="photo" />
+		<property name="fileUploadMaxSize" value="5M" />
+	</bean>
+	<bean id="mvcFileUpload" class="ctd.mvc.controller.support.FileUploader">
+		<property name="expiresSeconds" value="15" />
+		<property name="fileUploadMaxSize" value="5M" />
+		<property name="tempDirectory" value="photo" />
+		<property name="sizeMax" value="50M"></property>
+		<property name="remoterUploader" value="platform.fileUpload"/>
+	</bean>
+	
+	<bean id="phisAspectLogon" class="phis.source.service.base.PhisAspectLogon" />
+	<bean id="serviceExecutor" class="ctd.service.core.ServiceExecutor">
+		<property name="route" ref="phisDefaultServiceRoute" />
+	</bean>
+	<bean id="phisDefaultServiceRoute" class="phis.source.service.base.PhisDefaultServiceRoute" />
+	<bean id="phis.simpleSave" class="ctd.service.dao.SimpleSave" />
+	<bean id="phis.simpleLoad" class="ctd.service.dao.SimpleLoad" />
+	<bean id="phis.simpleRemove" class="ctd.service.dao.SimpleRemove" />
+	<bean id="phis.simpleQuery" class="ctd.service.dao.SimpleQuery" />
+	<bean id="simpleQuery" class="ctd.service.dao.SimpleQuery" />
+	<bean id="simpleSave" class="ctd.service.dao.SimpleSave" />
+	<bean id="simpleLoad" class="ctd.service.dao.SimpleLoad" />
+	<bean id="simpleRemove" class="ctd.service.dao.SimpleRemove" />
+	<bean id="reportSchemaLoader" class="ctd.chart.service.ReportSchemaLoader" />
+	<bean id="dicConfig" class="ctd.service.configure.DicConfig" />
+	<bean id="simpleReport" class="ctd.chart.service.SimpleReport" />
+	<bean id="settingService" class="ctd.service.home.SettingService" />
+	<bean id="tableDicRemoter" class="ctd.mvc.dicSource.TableDicRemoterImp" scope="prototype"/>
+	<bean id="message" class="ctd.message.Message"/>
+	<bean id="emrImageLoader" class="phis.source.controller.EmrImageLoader" />
+	<bean id="outputStreamLoader" class="phis.source.controller.OutputStreamLoader" />
+	<bean id="welcomeService" class="ctd.service.home.HomePageService" />
+</beans>

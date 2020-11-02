@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="NH_BSOFT_YP_NEEDSP" table="NH_BSOFT_YP_NEEDSP">
+	<composite-id>
+		<key-property name="YPCD" column="YPCD" type="java.lang.Long"/>
+		<key-property name="YPXH" column="YPXH" type="java.lang.Long" />
+	</composite-id>
+	<property name="YPMC" type="java.lang.String"/>
+	<property name="CDMC" type="java.lang.String"/>
+	<property name="YPGG" type="java.lang.String"/>
+	<property name="LSJG" type="java.lang.Double"/>
+	<property name="NHBM_BSOFT" type="java.lang.String"/>
+	<property name="JGID" type="java.lang.String"/>
+	<property name="ICODE" type="java.lang.String"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_JBFL" table="GY_JBFL">
+			<id name="FLXH" type="java.lang.String">
+            	<column name="FLXH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="FLBM" type="java.lang.String" length="20" />
+        	<property name="FLMC" type="java.lang.String" length="200" />
+        	<property name="MLBM" type="java.lang.String" length="30" />
+        	<property name="QSBM" type="java.lang.String" length="20" />
+        	<property name="JSBM" type="java.lang.String" length="20" />
+        	<property name="YWMC" type="java.lang.String" length="100" />
+        	<property name="PYDM" type="java.lang.String" length="10" />
+        	<property name="WBDM" type="java.lang.String" length="10" />
+        	<property name="ZXBZ" type="java.lang.String" length="1" />
+        	<property name="BZXX" type="java.lang.String" length="200" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>社区卫生服务信息系统</title>
+<LINK REL="SHORTCUT ICON" HREF="img/addrLogo.gif"/>
+
+<script type="text/javascript" src="boot.jsc"></script>
+</head>
+<style type="text/css">
+<!--
+.Mybody {
+    margin:0 auto;
+	background-image: url(img/login_bg1.jpg);
+	background-repeat: repeat-x;
+}
+
+.logonInput{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height:16px;
+	font-weight: bold;
+}
+
+#Layer1 {
+	position:absolute;
+	left:604px;
+	top:0px;
+	width:420px;
+	height:292px;
+	z-index:2;
+	margin-top: 0px;
+	margin-right: 0px;
+}
+#Layer0 {
+	margin-left: 145px;
+	margin-top: 145px;
+}
+#Layer2 {
+	position:absolute;
+	left:145px;
+	top:292px;
+	width:879px;
+	height:70px;
+	z-index:2;
+	margin-top: 0px;
+	margin-right: 0px;
+}
+
+.tb {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #FFFFFF;
+	margin-top: 1.5ex;
+	margin-left: 10ex;
+	text-align: left;
+}
+.tb_1 {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #FFFFFF;
+	margin-top: 2ex;
+	margin-left: 86ex;
+}
+.login{ background:url(img/login_bg.png) no-repeat; width:100%; height:680px;}
+-->
+</style>
+<body class="Mybody">
+<div class="login">
+<div id="Layer2"><img src="img/bott.jpg" /></div>
+<div id="Layer2"><table class="tb" cellspacing=0 cellpadding=0 width="670" border=0>
+  <tr>
+    <td width="60"><div align="right">用户名:</div></td>
+    <td width="104"><input class="logonInput" id="uid" name="uid" type="text" onblur="doPreviewRoles()" size="16" value="system"/></td>
+    <td width="57"><div align="right">密码:</div></td>
+    <td width="114"><input class="logonInput" id="pwd" name="pwd" type="password" onblur="doPreviewRoles()" size="16" value="123"/></td>
+     <td width="56"><div align="right">角色:</div></td>
+    <td width="120">
+	    <select name="role" id="role" style="width: 120px;" >
+		</select>
+	</td>
+    <td width="6">&nbsp;</td>
+    <td width="76"><a href="#"><img src="img/enter.png" width="75" height="21" border="0" onClick="doLogon()" tabindex="5"/></a></td>
+    <td width="77"><a href="#"><img src="img/reset.png" width="75" height="21" border="0" onClick="doClear()" tabindex="6"/></a></td>
+  </tr>
+</table>
+</div>
+</div>
+</body>
+</html>

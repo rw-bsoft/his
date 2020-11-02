@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="XT_CODE_STR" table="XT_CODE_STR">
+		<id name="cardId" type="java.lang.String">
+			<column name="cardId" />
+			<generator class="assigned" />
+		</id>
+		<property name="style" type="java.lang.String" length="20"/>
+		<property name="code" type="java.lang.String" length="20"/>
+		<property name="name" type="java.lang.String" length="80"/>
+		<property name="std_code" type="java.lang.String" length="30"/>
+		<property name="order_number" type="java.lang.Integer"/>
+		<property name="comments" type="java.lang.String" length="200"/>
+		<property name="state" type="java.lang.Integer" />
+	</class>
+</hibernate-mapping>

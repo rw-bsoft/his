@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hr.schemas.EHR_PastHistorySearch"
+		table="EHR_PastHistorySearch">
+		<id name="phrId" type="java.lang.String">
+			<column name="phrId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="personName" type="java.lang.String" length="20" />
+		<property name="cardNo" type="java.lang.String" length="10" />
+		<property name="phoneNumber" type="java.lang.String"
+			length="20" />
+		<property name="idCard" type="java.lang.String" length="20" />
+		<property name="address" type="java.lang.String" length="100" />
+		<property name="contactPhone" type="java.lang.String"
+			length="20" />
+		<property name="sexCode" type="java.lang.String" length="1" />
+		<property name="registeredPermanent" type="java.lang.String"
+			length="1" />
+		<property name="regionCode" type="java.lang.String" length="25" />
+		<property name="masterFlag" type="java.lang.String" length="1" />
+		<property name="relaCode" type="java.lang.String" length="2" />
+		<property name="manaDoctorId" type="java.lang.String"
+			length="20" />
+		<property name="manaUnitId" type="java.lang.String" length="20" />
+		<property name="signFlag" type="java.lang.String" length="1" />
+		<property name="createUser" type="java.lang.String" length="20" />
+		<property name="createDate" type="timestamp" />
+		<property name="createUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUnit" type="java.lang.String"
+			length="20" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YK_TYPK_SPT" table="YK_TYPK_SPT">
+	<id name="UNICODE" type="java.lang.String">
+    	<column name="UNICODE"/>
+        	<generator class="assigned" />
+    </id>
+<property name="NAME" type="java.lang.String"/>
+<property name="TRADENAME" type="java.lang.String"/>
+<property name="PACKSPEC" type="java.lang.String"/>
+<property name="SPEC" type="java.lang.String"/>
+<property name="PACKUNIT" type="java.lang.String"/>
+<property name="PACKQUANTITY" type="java.lang.Double"/>
+<property name="UNIT" type="java.lang.String"/>
+<property name="DOSAGEFORM" type="java.lang.String"/>
+<property name="SDC" type="java.lang.String"/>
+<property name="APPROVALNUMBER" type="java.lang.String"/>
+<property name="APPROVALTIME" type="java.lang.String"/>
+<property name="PRICE" type="java.lang.Double"/>
+<property name="RETAILPRICE" type="java.lang.Double"/>
+<property name="CATEGORY" type="java.lang.String"/>
+<property name="PRODUCTSOURCE" type="java.lang.String"/>
+<property name="PROPERTY" type="java.lang.Integer"/>
+<property name="ESSENTIAL" type="java.lang.String"/>
+<property name="MANUFACTURERCODE" type="java.lang.String"/>
+<property name="MANUFACTURER" type="java.lang.String"/>
+<property name="JGID" type="java.lang.String"/>
+</class>
+</hibernate-mapping>

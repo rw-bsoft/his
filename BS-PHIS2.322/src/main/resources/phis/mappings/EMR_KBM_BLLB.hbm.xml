@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_KBM_BLLB" table="EMR_KBM_BLLB">
+			<id name="LBBH" type="java.lang.Integer">
+            	<column name="LBBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="YDLBBM" type="java.lang.String" length="8" />
+        	<property name="SJLBBH" type="java.lang.String" length="10" />
+        	<property name="LBBM" type="java.lang.String" length="8" />
+        	<property name="LBMC" type="java.lang.String" length="30" />
+        	<property name="XSMC" type="java.lang.String" length="255" />
+        	<property name="BLLX" type="java.lang.Integer" length="1" />
+        	<property name="BLFZ" type="java.lang.Integer" length="1" />
+        	<property name="DYWD" type="java.lang.Integer" length="1" />
+        	<property name="MLBZ" type="java.lang.Integer" length="1" />
+        	<property name="HYBZ" type="java.lang.Integer" length="1" />
+        	<property name="ZYPLXH" type="java.lang.String" length="4" />
+        	<property name="CYPLXH" type="java.lang.String" length="4" />
+        	<property name="ZYPLSX" type="java.lang.Integer" length="1" />
+        	<property name="CYPLSX" type="java.lang.Integer" length="1" />
+        	<!--<property name="PRINTSETUP" type="blob"  />-->
+        	<property name="DYTS" type="java.lang.String" length="255" />
+        	<property name="WGXBZ" type="java.lang.Integer" length="1" />
+        	<property name="MRDYJ" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

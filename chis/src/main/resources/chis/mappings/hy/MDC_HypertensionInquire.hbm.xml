@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hy.schemas.MDC_HypertensionInquire"
+		table="MDC_HypertensionInquire">
+		<id name="inquireId" type="java.lang.String">
+			<column name="inquireId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="phrId" type="java.lang.String" length="30" />
+		<property name="constriction" type="java.lang.Integer" />
+		<property name="diastolic" type="java.lang.Integer" />
+		<property name="inquireWay" type="java.lang.String" length="1" />
+		<property name="description" type="java.lang.String"
+			length="100" />
+		<property name="isReferral" type="java.lang.String" length="1" />
+		<property name="referralReason" type="java.lang.String"
+			length="100" />
+		<property name="agencyAndDept" type="java.lang.String"
+			length="50" />
+		<property name="inquireUser" type="java.lang.String"
+			length="20" />
+		<property name="inquireDate" type="date" />
+		<property name="inquireUnit" type="java.lang.String"
+			length="20" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="inputDate" type="date" />
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="SYS_Personnel" table="sys_personnel">
+		<id name="PERSONID" type="java.lang.String">
+			<column name="personId"/>
+			<generator class="assigned"/>
+		</id>
+		<property name="PERSONNAME" type="java.lang.String">
+			<column name="personName" length="50" />
+		</property>
+		<property name="CARDTYPE" type="java.lang.String">
+			<column name="cardtype" length="50" />
+		</property>
+		<property name="CARDNUM" type="java.lang.String">
+			<column name="cardnum" length="50" />
+		</property>
+		<property name="BIRTHDAY" type="date">
+			<column name="birthday" length="10" />
+		</property>
+		<property name="GENDER" type="java.lang.String">
+			<column name="gender" length="1" />
+		</property>
+		<property name="ETHNIC" type="java.lang.String">
+			<column name="ethnic" length="4" />
+		</property>
+		<property name="CERTIFICATENUM" type="java.lang.String">
+			<column name="certificatenum" length="20" />
+		</property>
+		<property name="MAJORQUALIFY" type="java.lang.String">
+			<column name="majorqualify" length="5" />
+		</property>
+		<property name="JOININWORK" type="date">
+			<column name="joininwork" length="10" />
+		</property>
+		<property name="MOBILE" type="java.lang.String">
+			<column name="mobile" length="25" />
+		</property>
+		<property name="MAJORTYPE" type="java.lang.String">
+			<column name="majortype" length="5" />
+		</property>
+		<property name="MAJORNAME" type="java.lang.String">
+			<column name="majorname" length="5" />
+		</property>
+		<property name="OPERATIONTYPE" type="java.lang.String">
+			<column name="operationtype" length="5" />
+		</property>
+		<property name="PRESCRIBERIGHT" type="java.lang.String">
+			<column name="prescriberight" length="5" />
+		</property>
+		<property name="NARCOTICRIGHT" type="java.lang.String">
+			<column name="narcoticright" length="5" />
+		</property>
+		<property name="PSYCHOTROPICRIGHT" type="java.lang.String">
+			<column name="psychotropicright" length="5" />
+		</property>
+		<property name="ANTIBIOTICRIGHT" type="java.lang.Integer">
+			<column name="antibioticright" length="5" />
+		</property>
+		<property name="ANTIBIOTICLEVEL" type="java.lang.String">
+			<column name="antibioticlevel" length="20" />
+		</property>
+		<property name="ISCANCEL" type="java.lang.Integer">
+			<column name="iscancel" length="5" />
+		</property>
+		<property name="ISEXPERT" type="java.lang.Integer">
+			<column name="isexpert" length="5" />
+		</property>
+		<property name="EXPERTCOST" type="java.lang.Double">
+			<column name="expertcost" length="8" />
+		</property>
+		<property name="OPERATIONSCOPE" type="java.lang.String">
+			<column name="operationscope" length="50" />
+		</property>
+		<property name="JOBPOST" type="java.lang.String">
+			<column name="jobpost" length="5" />
+		</property>
+		<property name="ORGANIZCODE" type="java.lang.String">
+			<column name="organizCode" length="5" />
+		</property>
+		<property name="OFFICECODE" type="java.lang.String">
+			<column name="officeCode" length="50" />
+		</property>
+		<property name="MAJORJOB" type="java.lang.String">
+			<column name="majorjob" length="5" />
+		</property>
+		<property name="EDUCATION" type="java.lang.String">
+			<column name="education" length="20" />
+		</property>
+		<property name="EDUCATIONBACKGROUND" type="java.lang.String">
+			<column name="educationbackground" length="20" />
+		</property>
+		<property name="HOMETOWN" type="java.lang.String">
+			<column name="hometown" length="150" />
+		</property>
+		<property name="ADDRESS" type="java.lang.String">
+			<column name="address" length="150" />
+		</property>
+		<property name="EMAIL" type="java.lang.String">
+			<column name="email" length="50" />
+		</property>
+		<property name="PHOTO" type="java.lang.String">
+			<column name="photo" length="200" />
+		</property>
+		<property name="LASTMODIFYDATE" type="date" />
+		<property name="PYCODE" type="java.lang.String">
+			<column name="pyCode" length="10" />
+		</property>
+		<property name="QTCODE" type="java.lang.String">
+			<column name="qtCode" length="10" />
+		</property>
+		<property name="WBCODE" type="java.lang.String">
+			<column name="wbCode" length="10" />
+		</property>
+		<property name="JXCODE" type="java.lang.String">
+			<column name="jxCode" length="10" />
+		</property>
+		<property name="LOGOFF" type="java.lang.String">
+			<column name="logoff" length="2" />
+		</property>
+		<property name="REMARK" type="java.lang.String">
+			<column name="remark" length="500" />
+		</property>
+		<property name="MEDICALROLES" type="java.lang.String">
+			<column name="medicalRoles" length="18" />
+		</property>
+		<property name="YBDM" type="java.lang.String">
+			<column name="ybdm" length="20" />
+		</property>
+	</class>
+</hibernate-mapping>

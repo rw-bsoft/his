@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.cdh.schemas.CDH_ChildVisitInfo"
+		table="CDH_ChildVisitInfo">
+		<id name="babyId" type="java.lang.String">
+			<column name="babyId" />
+			<generator class="assigned" />
+		</id>
+		<property name="babyName" type="java.lang.String" length="30" />
+		<property name="babySex" type="java.lang.String" length="1" />
+		<property name="babyBirth" type="date" />
+		<property name="babyIdCard" type="java.lang.String"
+			length="18" />
+		<property name="certificateNo" type="java.lang.String" length="16" />
+		<property name="babyAddress" type="java.lang.String" length="100" />
+		<property name="fatherName" type="java.lang.String" length="32" />
+		<property name="fatherJob" type="java.lang.String" length="20" />
+		<property name="fatherPhone" type="java.lang.String" length="25" />
+		<property name="fatherBirth" type="date" />
+		<property name="motherName" type="java.lang.String" length="32" />
+		<property name="motherJob" type="java.lang.String" length="20" />
+		
+		<property name="fatherEmpiId" type="java.lang.String" length="32" />
+		<property name="motherEmpiId" type="java.lang.String" length="32" />
+		
+		
+		<property name="motherPhone" type="java.lang.String"
+			length="25" />
+		<property name="motherBirth" type="date" />
+		<property name="gestation" type="java.lang.String"
+			length="32" />
+			<property name="pregnancyDisease" type="java.lang.String" length="1" />
+		<property name="otherDisease" type="java.lang.String"
+			length="30" />
+			<property name="deliveryUnit" type="java.lang.String"
+			length="70" />
+			<property name="empiId" type="java.lang.String"
+			length="32" />
+			<property name="birthStatus" type="java.lang.String" length="10" />
+		<property name="otherStatus" type="java.lang.String"
+			length="30" />
+			<property name="asphyxia" type="java.lang.String" length="1" />
+			
+			<property name="apgar1" type="java.lang.String" length="10" />
+			<property name="apgar5" type="java.lang.String" length="10" />
+			
+			<property name="apgarNew" type="java.lang.String" length="1" />
+			
+			<property name="malforMation" type="java.lang.String" length="1" />
+		<property name="malforMationDescription" type="java.lang.String"
+			length="30" />
+			<property name="hearingTest" type="java.lang.String" length="1" />
+			<property name="illnessScreening" type="java.lang.String" length="1" />
+			<property name="otherIllness" type="java.lang.String" length="50" />
+			<property name="weight" type="big_decimal" length="5" />
+			<property name="length" type="big_decimal" length="5" />
+			<property name="visitDoctor" type="java.lang.String"
+			length="20" />
+			<property name="inputUnit" type="java.lang.String" length="20" />
+			<property name="inputUser" type="java.lang.String" length="20" />
+			<property name="inputDate" type="date" />
+	    
+	
+	
+	
+	
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic alias="有科室的医生_跨机构"  codeRule="4,2,3,3,3,3,3,3" navDic="manageUnit" class="TableDictionary" supportRemote="false" filter="['and',['eq',['$','a.MZKS'],['$','d.ID']],['eq',['$','c.PERSONID'],['$','b.YGDM']],['eq',['$','a.KSDM'],['$','b.KSDM']],['notin',['$','d.OFFICECODE'],['s','select PARENTID from SYS_Office where PARENTID is not null']],['eq',['$','d.OUTPATIENTCLINIC'],['s','1']],['eq',['$','b.JGID'],['$','%user.manageUnit.id']],['eq',['$','d.ORGANIZCODE'],['$','%user.manageUnit.ref']]]" distinct="true" entry="MS_GHKS a,GY_QXKZ b,SYS_Personnel c,SYS_Office d" keyField="c.PERSONID" textField="c.PERSONNAME" queryOnly="true">
+	<properties>
+		<p name="c.PERSONID">PERSONID</p>
+		<p name="c.PYCODE">PYCODE</p>
+	</properties>
+</dic>

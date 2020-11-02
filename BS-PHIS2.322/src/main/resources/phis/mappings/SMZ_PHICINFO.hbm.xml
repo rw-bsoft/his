@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="SMZ_PHICINFO" table="SMZ_PHICINFO">
+		<id name="idCard" type="java.lang.String" length="30">
+			<column name="idCard" />
+			<generator class="assigned" />
+		</id>
+    <property name="personName"      			type="java.lang.String" length="40"/>
+    <property name="phoneNumber"      			type="java.lang.String" length="30"/>
+    <property name="zipCode" 					type="java.lang.String" length="6"/>
+    <property name="address" 					type="java.lang.String" length="100"/>
+    <property name="contact"	 				type="java.lang.String" length="20" />
+	<property name="contactPhone"				type="java.lang.String" length="20" />
+    <property name="sexCode"           	  		type="java.lang.String" length="1"/>
+    <property name="homePlace"           		type="java.lang.String" length="100"/>
+    <property name="mobileNumber"      		  	type="java.lang.String" length="30"/>
+    <property name="email"            		  	type="java.lang.String" length="30"/>
+    <property name="birthday"         			type="date"/>
+    <property name="nationalityCode"  	  		type="java.lang.String" length="3"/>
+    <property name="nationCode"     	   		type="java.lang.String" length="2"/>
+    <property name="maritalStatusCode" 		  	type="java.lang.String" length="2"/>
+    <property name="startWorkDate"      	  	type="date"/>
+    <property name="workCode"           		type="java.lang.String" length="3"/>
+    <property name="educationCode"      		type="java.lang.String" length="2"/>
+    <property name="createUnit"         		type="java.lang.String" length="16"/>
+    <property name="createUser"        	  		type="java.lang.String" length="20"/>
+    <property name="createTime"           		type="date"/>
+    <property name="lastModifyUnit"     		type="java.lang.String" length="16"/>
+    <property name="lastModifyTime"    	  		type="date"/>
+    <property name="lastModifyUser"    	  		type="java.lang.String" length="20"/>
+    <property name="ybkh"						type="string" 			length="30"/>
+    <property name="smkh"						type="string" 			length="30"/>
+</class>
+</hibernate-mapping>

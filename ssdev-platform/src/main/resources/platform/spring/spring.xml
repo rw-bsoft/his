@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/util	
+	http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<!-- set spring context to use,should be in the first -->
+	<!-- 
+	<bean class="ctd.util.AppContextHolder">
+		<property name="devMode" value="true"/>
+	</bean> 
+	-->
+	
+	<import resource="spring-hibernate.xml"/>
+	<import resource="spring-service.xml"/>
+	<import resource="spring-key.xml"/>
+	<import resource="spring-configur.xml"/> <!-- 配置管理服务 -->
+	<import resource="spring-schedule.xml"/>
+	<import resource="spring-freemarker.xml"/>
+	<!-- 域的初始化,仅平台使用 -->
+	<bean class="ctd.domain.DomainUtil" init-method="init"></bean>
+	
+	<bean id="defaultExecutor" class="ctd.net.rpc.server.executor.support.DefaultExecutor" />
+	<bean id="hibernateSupportExecutor" class="ctd.net.rpc.server.executor.support.HibernateSupportExecutor" />
+	<bean id="executorFactory" class="ctd.net.rpc.server.executor.ExecutorFactory">
+		<property name="executors">
+			<list>
+				<ref bean="defaultExecutor" />
+				<ref bean="hibernateSupportExecutor"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="dataElementDao" class="ctd.dao.support.HibernateMapSupportDAO">
+		<property name="id" value="dataElementDao"/>
+		<property name="schemaId" value="RES_DataElement"/>
+	</bean>
+	<bean id="areaDao" class="ctd.dao.support.HibernateMapSupportDAO">
+		<property name="id" value="area" />
+		<property name="schemaId" value="chis.application.ag.schemas.EHR_AreaGrid" />
+	</bean>
+	<bean id="daoFactory" class="ctd.dao.DAOFactory" >
+		<property name="defaultDaoClass" value="ctd.dao.support.HibernateMapSupportDAO"/>
+		<property name="daoList">
+			<list>
+				<ref local="dataElementDao"/>
+				<ref local="areaDao" />
+			</list>
+		</property>
+	</bean>
+	<bean id="mvcDictionaryLoader" class="ctd.mvc.controller.support.DictionaryLoader">
+		<property name="expiresSeconds" value="15" />
+	</bean>
+	<bean id="mvcLogonManager" class="platform.source.service.base.PlatformLogonManager" >
+		<property name="expiresSeconds" value="15"/>
+		<property name="aspectLogon"  ref="PlatformAspectLogon"/><!-- add by chenxr -->
+	</bean>
+	<bean id="mvcSchemaLoader" class="ctd.mvc.controller.support.SchemaLoader">
+		<property name="expiresSeconds" value="15" />
+	</bean>
+	<bean id="mvcScriptLoader" class="ctd.mvc.controller.support.ScriptLoader">
+		<property name="expiresDefinesMap">
+			<map>
+				<entry key="sencha.ext3.ext-base">
+					<util:constant static-field="ctd.util.ServletUtils.ONE_WEEK_SECONDS" />
+				</entry>
+				<entry key="sencha.ext3.ext-all">
+					<util:constant static-field="ctd.util.ServletUtils.ONE_WEEK_SECONDS" />
+				</entry>
+			</map>
+		</property>
+		<property name="expiresSeconds" value="15"/>
+	</bean>
+	<bean id="mvcSWFLoader" class="ctd.mvc.controller.support.SWFLoader" >
+		<property name="expiresDefinesMap">
+			<map>
+				<entry key="framework_4.5.1.21328">
+					<util:constant static-field="ctd.util.ServletUtils.ONE_WEEK_SECONDS" />
+				</entry>
+				<entry key="rpc_4.5.1.21328">
+					<util:constant static-field="ctd.util.ServletUtils.ONE_WEEK_SECONDS" />
+				</entry>
+				<entry key="osmf_1.0.0.16316">
+					<util:constant static-field="ctd.util.ServletUtils.ONE_WEEK_SECONDS" />
+				</entry>
+				<entry key="mx_4.5.1.21328">
+					<util:constant static-field="ctd.util.ServletUtils.ONE_WEEK_SECONDS" />
+				</entry>
+				<entry key="spark_4.5.1.21328">
+					<util:constant static-field="ctd.util.ServletUtils.ONE_WEEK_SECONDS" />
+				</entry>
+				<entry key="sparkskins_4.5.1.21328">
+					<util:constant static-field="ctd.util.ServletUtils.ONE_WEEK_SECONDS" />
+				</entry>
+				<entry key="textLayout_2.0.0.232">
+					<util:constant static-field="ctd.util.ServletUtils.ONE_WEEK_SECONDS" />
+				</entry>
+			</map>
+		</property>
+		<property name="expiresSeconds" value="15"/>
+	</bean>
+	<bean id="mvcStaticResourceLoader" class="ctd.mvc.controller.support.StaticResourceLoader">
+		<property name="expiresSeconds" value="15"/>
+	</bean>
+
+	<!--  
+	<bean id="publisherMessageStore" class="ctd.net.rpc.pub.support.BlockingQueueMessageStore" />
+	<bean id="publisher" class="ctd.net.rpc.pub.Publisher"  init-method="startWork" destroy-method="shutdown">
+		<property name="store" ref="publisherMessageStore"/>
+	</bean>
+	<bean id="SequenceCounterManager" class="ctd.sequence.SequenceCounterManager" init-method="start" destroy-method="shutdown"/>
+	-->
+	
+	<bean id="simpleSave" class="ctd.service.dao.SimpleSave"/>
+	<bean id="simpleLoad" class="ctd.service.dao.SimpleLoad"/>
+	<bean id="simpleLoadWithParentRelation" class="ctd.service.dao.SimpleLoadWithParentRelation"/>
+	<bean id="simpleRemove" class="ctd.service.dao.SimpleRemove"/>
+	<bean id="simpleQuery"  class="ctd.service.dao.SimpleQuery"/>
+	<bean id="platform.simpleSave" class="ctd.service.dao.SimpleSave"/>
+	<bean id="platform.simpleLoad" class="ctd.service.dao.SimpleLoad"/>
+	<bean id="platform.simpleLoadWithParentRelation" class="ctd.service.dao.SimpleLoadWithParentRelation"/>
+	<bean id="platform.simpleRemove" class="ctd.service.dao.SimpleRemove"/>
+	<bean id="platform.simpleQuery"  class="ctd.service.dao.SimpleQuery"/>
+	
+	<bean id="simpleReport" class="ctd.chart.service.SimpleReport"/>
+	<bean id="reportSchemaLoader" class="ctd.chart.service.ReportSchemaLoader"/>
+	<bean id="dataStandardSave" class="platform.dataset.source.DataStandardSave"/>
+	<bean id="dataStandardRemove" class="platform.dataset.source.DataStandardRemove"/>
+	<bean id="platform.dataSetElementLoad" class="platform.dataset.source.DataSetElementLoad"/>
+	<bean id="platform.dataElementLoad" class="platform.dataset.source.DataElementLoad"/>
+	<bean id="platform.elementAndGroupQuery" class="platform.dataset.source.ElementAndGroupQuery" />
+	<bean id="dataSetCatalogSave" class="platform.dataset.source.DataSetCatalogSave" />
+	<bean id="downloadDataSetZip" class="platform.dataset.source.DownloadDataSetZip" />
+	<bean id="searchSet" class="platform.dataset.source.SearchSet" />	
+	<bean id="dictionaryVerify" class="platform.dataset.source.DictionaryVerify" />
+	<bean id="platform.parseExcel" class="ctd.service.configure.ParseExcel"/>
+	<bean id="platform.qualityData" class="platform.monitor.source.QualityDataService"/>
+	<bean id="message" class="ctd.message.Message"/>
+	<bean id="activeNodeQuery" class="ctd.monitor.service.ActiveNodeQuery"/>
+	<bean id="monInfo" class="ctd.monitor.service.MonInfo"/>
+	<bean id="sqlAndSerInfo" class="platform.security.source.SqlAndSerInfo" />
+	<bean id="dictionaryUtil" class="platform.dataset.source.DictionaryUtil" />
+    <bean id="mvcPhotoLoader" class="ctd.mvc.controller.support.PhotoLoader" >
+		<property name="expiresSeconds" value="15"/>
+	</bean>
+	<bean id="mvcPhotoUpload" class="ctd.mvc.controller.support.PhotoUpload" >
+		<property name="expiresSeconds" value="15"/>
+		<property name="photoDirectory" value="temp"/>
+		<property name="imgDirectory" value="photo"/>
+		<property name="fileUploadMaxSize" value="5M"/>
+	</bean>
+	
+	<bean id="mvcFileUpload" class="ctd.mvc.controller.support.FileUploader" >
+		<property name="expiresSeconds" value="15"/>
+		<property name="fileUploadMaxSize" value="5M"/>
+		<property name="sizeMax" value="20M"/>
+		<property name="tempDirectory" value="temp"/>
+		<property name="remoterUploader" value="platform.fileUpload"/>
+	</bean>
+	
+	<bean id="welcomeService" class="ctd.service.home.HomePageService" />
+	
+	<!--用于应用切换、密码修改、头像修改 -->
+	<bean id="quickService" class="ctd.service.home.QuickService"/>
+	<bean id="settingService" class="ctd.service.home.SettingService"/>
+	<bean id="tableDicRemoter" class="ctd.mvc.dicSource.TableDicRemoterImp" scope="prototype"/>
+	
+	<!-- 下面为CHISXR加的 -->
+	<bean id="PlatformAspectLogon"  class="platform.source.service.base.PlatFormCommonAspectLogon" />
+</beans>

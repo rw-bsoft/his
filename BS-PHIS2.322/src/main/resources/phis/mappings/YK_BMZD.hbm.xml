@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="YK_BMZD" table="YK_BMZD">
+			<id name="YKLB" type="java.lang.String">
+            	<column name="YKLB"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="SBXH" type="java.lang.String" length="18" />
+        	<property name="BMXH" type="java.lang.String" length="16" />
+        	<property name="BMMC" type="java.lang.String" length="50" />
+        	<property name="KJYWBZ" type="java.lang.String" length="1" />
+</class>
+</hibernate-mapping>

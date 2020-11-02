@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic class="ctd.service.configure.dictionary.ComposeDictionaryEx" navDic="gp.@manageUnit" textItemId="roleId"
+	searchField="a.manageUnitId" iconCls="user"  distinct="true"  searchFieldEx="c.pyCode" alias="助理医生" textDic="gp.@rolelist"
+	entry="UserRoleToken a,User b,SYS_Personnel c" keyField="a.userId" textField="b.name" queryOnly="true"
+	filter="['and',['in',['$','a.roleId'],['gp.101']],['and',['eq',['$','a.userId'],['$','b.id']],['eq',['$','a.userId'],['$','c.personId']]],['eq',['$','a.domain'],['s','gp']]]">
+	<properties>
+		<p name="a.manageUnitId">manageUnit</p>
+		<p name="a.roleId">roleId</p>
+		<p name="c.pyCode">mCode</p>
+	</properties>
+</dic>
+<!-- 
+<dic navDic="manageUnit" 
+	searchField="b.post" iconCls="user"
+	entry="SYS_USERS a, SYS_UserProp b" keyField="a.userId" textField="a.userName" queryOnly="false"
+	filter="['eq',['$','a.userId'],['$','b.userId']] ">
+	<prop field="b.manaUnitId"/>
+	<prop field="b.jobId"/>
+</dic>
+-->

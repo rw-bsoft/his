@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf id="EHRMoveSubAll">
+	<table name="EHR_HealthRecord" queryField="phrId" queryParam="archiveId" fullName="chis.application.hr.schemas.EHR_HealthRecord"><!-- 默认包含字段名字和id一致 -->
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table> 
+	<table name="MDC_OldPeopleRecord" queryField="phrId" queryParam="archiveId" fullName="chis.application.ohr.schemas.MDC_OldPeopleRecord">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="MDC_OldPeopleVisit" queryField="phrId" queryParam="archiveId" fullName="chis.application.ohr.schemas.MDC_OldPeopleVisit">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="MDC_DiabetesRecord" queryField="phrId" queryParam="archiveId" fullName="chis.application.dbs.schemas.MDC_DiabetesRecord">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="MDC_HypertensionRecord" queryField="phrId" queryParam="archiveId" fullName="chis.application.hy.schemas.MDC_HypertensionRecord">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="MDC_HypertensionVisit" queryField="phrId" queryParam="archiveId"  fullName="chis.application.hy.schemas.MDC_HypertensionVisit">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="CDH_HealthCard" queryField="phrId" queryParam="archiveId" fullName="chis.application.cdh.schemas.CDH_HealthCard">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="PSY_PsychosisRecord" queryField="phrId" queryParam="archiveId" fullName="chis.application.psy.schemas.PSY_PsychosisRecord">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="MHC_PregnantRecord" queryField="phrId" queryParam="archiveId" fullName="chis.application.mhc.schemas.MHC_PregnantRecord">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="MHC_WomanRecord" queryField="phrId" queryParam="archiveId" fullName="chis.application.mhc.schemas.MHC_WomanRecord">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="DEF_IntellectDeformityRecord" queryField="phrId,closeFlag,status" queryParam="archiveId,closeFlag,status" fullName="chis.application.def.schemas.DEF_IntellectDeformityRecord">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="DEF_BrainDeformityRecord" queryField="phrId,closeFlag,status" queryParam="archiveId,closeFlag,status" fullName="chis.application.def.schemas.DEF_BrainDeformityRecord">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="DEF_LimbDeformityRecord" queryField="phrId,closeFlag,status" queryParam="archiveId,closeFlag,status" fullName="chis.application.def.schemas.DEF_LimbDeformityRecord">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="PIV_VaccinateRecord" queryField="phrId" queryParam="archiveId" fullName="chis.application.piv.schemas.PIV_VaccinateRecord">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+	</table>
+	<table name="RVC_RetiredVeteranCadresRecord" queryField="phrId" queryParam="archiveId" fullName="chis.application.rvc.schemas.RVC_RetiredVeteranCadresRecord">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="MDC_TumourPatientReportCard" queryField="phrId" queryParam="archiveId" fullName="chis.application.tr.schemas.MDC_TumourPatientReportCard">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+	<table name="MDC_TumourHighRisk" queryField="phrId" queryParam="archiveId" fullName="chis.application.tr.schemas.MDC_TumourHighRisk">
+		<column name="manaDoctorId" param="manaDoctorId"/>
+		<column name="manaUnitId" param="manaUnitId"/>
+		<column name="lastModifyUser" param="lastModifyUser"/>
+		<column name="lastModifyUnit" param="lastModifyUnit"/>
+		<column name="lastModifyDate" param="lastModifyDate"/>
+	</table>
+</conf>

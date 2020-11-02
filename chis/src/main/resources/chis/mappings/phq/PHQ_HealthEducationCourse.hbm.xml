@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.phq.schemas.PHQ_HealthEducationCourse" table="PHQ_HealthEducationCourse">
+			<id name="courseId" type="java.lang.String">
+            	<column name="courseId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="content" type="java.lang.String" length="2" />
+        	<property name="source" type="java.lang.String" length="1" />
+        	<property name="type" type="java.lang.String" length="20" />
+        	<property name="modality" type="java.lang.String" length="50" />
+        	<property name="usedTime" type="java.lang.String" length="2" />
+        	<property name="numberOfParticipants" type="java.lang.Integer" length="4"/>
+        	<property name="aspect" type="java.lang.String" length="20" />
+        	<property name="otherAspect" type="java.lang.String" length="50" />
+        	<property name="startDate" type="timestamp"  />
+        	<property name="speaker" type="java.lang.String" length="20" />
+        	<property name="sponsor" type="java.lang.String" length="20" />
+        	<property name="remark" type="java.lang.String" length="4000" />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  />
+</class>
+</hibernate-mapping>

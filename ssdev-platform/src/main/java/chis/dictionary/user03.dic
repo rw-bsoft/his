@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic  class="ctd.service.configure.dictionary.ComposeDictionaryEx"   navDic="chis.@manageUnit" distinct="true" 
+	searchField="a.manageUnitId" iconCls="user"   searchFieldEx="c.pyCode" alias="妇保医生" 
+	entry="UserRoleToken a,User b,SYS_Personnel c" keyField="a.userId" textField="b.name" queryOnly="true"
+	filter="['and',['in',['$','a.roleId'],['chis.08']],['and',['eq',['$','a.userId'],['$','b.id']],['eq',['$','a.userId'],['$','c.personId']]],['eq',['$','a.domain'],['s','chis']],['eq',['$','a.logoff'],['s','0']]]">
+	<properties>
+		<p name="a.manageUnitId">manageUnit</p>
+		<p name="c.pyCode">mCode</p>
+	</properties>
+</dic>

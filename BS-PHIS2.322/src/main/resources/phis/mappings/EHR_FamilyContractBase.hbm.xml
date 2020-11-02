@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.fhr.schemas.EHR_FamilyContractBase" table="EHR_FAMILYCONTRACTBASE">
+		<id name="FC_Id" type="java.lang.String">
+			<column name="FC_Id" />
+			<generator class="assigned" />
+		</id>
+		<property name="F_Id" type="java.lang.String" length="32" />
+		<property name="FC_Begin" type="date" />
+		<property name="FC_End" type="date" />
+		<property name="FC_Repre" type="java.lang.String" length="60" />
+		<property name="FC_Stop_Date" type="date" />
+		<property name="FC_Stop_Reason" type="java.lang.String" length="60" />
+		<property name="FC_Sign_Flag" type="java.lang.String" length="1" />
+		<property name="FC_Party" type="java.lang.String" length="60" />
+		<property name="FC_Party2" type="java.lang.String" length="60" />
+		<property name="FC_Phone" type="java.lang.String" length="60" />
+		<property name="FC_Mobile" type="java.lang.String" length="60" />
+		<property name="FC_CreateDate" type="date" />
+		<property name="FC_CreateUser" type="java.lang.String"
+			length="20" />
+		<property name="FC_CreateUnit" type="java.lang.String"
+			length="22" />
+	</class>
+</hibernate-mapping>

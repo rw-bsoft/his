@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.sch.schemas.SCH_SchistospmaManage" table="SCH_SchistospmaManage">
+			<id name="schisManageId" type="java.lang.String">
+            	<column name="schisManageId"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="regionCode" type="java.lang.String" length="25" />
+        	<property name="regionCode_text" type="java.lang.String" length="200" />
+        	<property name="patient" type="java.lang.Integer" length="9" />
+        	<property name="chemotherapy" type="java.lang.Integer" length="9" />
+        	<property name="snailFind" type="java.lang.Integer"  length="5" />
+        	<property name="snailWipeMedicine" type="java.lang.Integer"  length="5" />
+        	<property name="drinkingWaterType" type="java.lang.Integer"  length="5" />
+        	<property name="ditchHarden" type="java.lang.Integer"  length="5" />
+        	<property name="syntheticdevelop" type="java.lang.Integer"  length="5" />
+        	<property name="ditchRebuild" type="java.lang.Integer"  length="5" />
+        	<property name="farmCattleIllness" type="java.lang.Integer"  length="5" />
+        	<property name="farmCattleHealth" type="java.lang.Integer"  length="5" />
+        	<property name="methanePool" type="java.lang.Integer"  length="5" />
+        	<property name="machineReplaceCattle" type="java.lang.Integer"  length="5" />
+        	<property name="forestryKillSnail" type="java.lang.Integer"  length="5" />
+        	<property name="toilet" type="java.lang.Integer"  length="5" />
+        	<property name="registerDate" type="date"  />
+        	<property name="registerPerson" type="java.lang.String" length="20" />
+        	<property name="inputUnit" type="java.lang.String" length="20" />
+        	<property name="inputDate" type="timestamp"  />
+        	<property name="inputUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20"/>
+        	<property name="lastModifyDate" type="timestamp"  />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

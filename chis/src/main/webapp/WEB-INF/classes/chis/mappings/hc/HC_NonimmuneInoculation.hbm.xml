@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class entity-name="chis.application.hc.schemas.HC_NonimmuneInoculation" table="HC_NonimmuneInoculation">
+		<id name="recordId" length="16" type="java.lang.String">
+			<column name="recordId"/>
+			<generator class="assigned"/>
+		</id>
+		<property name="healthCheck" length="16" type="java.lang.String"/>
+		<property name="name" length="16" type="java.lang.String"/>
+		<property name="inoculationDate" type="date"/>
+		<property name="inoculationUnit" type="java.lang.String"/>
+		<property name="createUnit" length="20" type="java.lang.String"/>
+		<property name="createDate" type="timestamp"/>
+		<property name="createUser" length="20" type="java.lang.String"/>
+		<property name="lastModifyUser" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyDate" type="timestamp" />
+	</class>
+</hibernate-mapping>

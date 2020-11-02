@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="chis.application.hsr.schemas.HSR_AssistantInformation" table="HSR_AssistantInformation">
+			<id name="RecordID" type="java.lang.String">
+            	<column name="RecordID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="unitName" type="java.lang.String" length="20" />
+        	<property name="discoveryTime" type="date"  />
+        	<property name="messageType" type="java.lang.String" length="1" />
+        	<property name="detail" type="java.lang.String" length="500" />
+        	<property name="reportTime" type="date"  />
+        	<property name="reportUser" type="java.lang.String" length="20" />
+    	   	<property name="createUnit" type="java.lang.String" length="20" />
+        	<property name="createDate" type="timestamp"  />
+        	<property name="createUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUser" type="java.lang.String" length="20" />
+        	<property name="lastModifyUnit" type="java.lang.String" length="20" />
+        	<property name="lastModifyDate" type="timestamp"  /> 
+
+</class>
+</hibernate-mapping>

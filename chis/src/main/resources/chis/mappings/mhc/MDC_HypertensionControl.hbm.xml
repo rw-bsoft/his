@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.hy.schemas.MDC_HypertensionControl" table="MDC_HypertensionControl">
+		<id name="recordId" type="java.lang.String">
+			<column name="recordId"/>
+			<generator class="assigned" />
+		</id>
+		<property name="controlCondition" type="java.lang.String" length="1" />
+		<property name="veryHighRisk" type="java.lang.String" length="2" />
+		<property name="highRisk" type="java.lang.String" length="2" />
+		<property name="middleRisk" type="java.lang.String" length="2" />
+		<property name="lowRisk" type="java.lang.String" length="2" />
+	</class>
+</hibernate-mapping>

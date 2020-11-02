@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GA_Info" table="ZX_SMK_GA">
+			<id name="centerCode" type="java.lang.String">
+            	<column name="centerCode"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="xm" type="string"  />
+        	<property name="xb" type="string" />
+        	<property name="csrq" type="string"  />
+        	<property name="sfzh" type="string"/>
+        	<property name="hh" type="string" />
+        	<property name="yhzgx" type="string" />
+</class>
+</hibernate-mapping>

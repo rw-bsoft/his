@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="RES_DataSetCatalog" table="RES_DataSetCatalog">
+		<id name="CatalogId" type="java.lang.Integer">
+	    	<column name="CatalogId"/>
+			<generator class="sequence">
+            	<param name="sequence">SEQ_RES_DataSetCatalog</param>
+           	</generator>
+		</id>
+		<property name="DataStandardId" type="java.lang.String" length="16" />
+		<property name="CatalogKey" type="java.lang.String" length="20" />
+		<property name="CustomIdentify" type="java.lang.String" length="50" />
+		<property name="CatalogName" type="java.lang.String" length="50" />
+		<property name="ParentCatalogId" type="java.lang.Integer"  />
+		<property name="Status" type="java.lang.Integer"  />
+	</class>
+</hibernate-mapping>

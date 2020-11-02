@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="OMR_BL02" table="OMR_BL02">
+			<id name="BLBH" type="java.lang.Long">
+            	<column name="BLBH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="BLNR" type="blob"  />
+        	<property name="BLHT" type="blob" />
+        	<property name="JGID" type="java.lang.String" length="20" />
+</class>
+</hibernate-mapping>

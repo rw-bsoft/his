@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="SYS_UserProp" table="SYS_USERPROP">
+		<id name="id" type="java.lang.String" length="30">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+		<property name="userId" type="java.lang.String" length="30" />
+		<property name="jobId" type="java.lang.String" length="20" />
+		<property name="manaUnitId" type="java.lang.String" length="50" />
+		<property name="post" type="java.lang.String" length="50" />
+		<property name="regionCode" type="java.lang.String" length="50" />
+	</class>
+</hibernate-mapping>

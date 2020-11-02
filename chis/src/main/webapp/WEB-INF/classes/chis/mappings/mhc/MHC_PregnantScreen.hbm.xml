@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="chis.application.mhc.schemas.MHC_PregnantScreen"
+		table="MHC_PregnantScreen">
+		<id name="pregnantId" type="java.lang.String">
+			<column name="pregnantId" />
+			<generator class="assigned" />
+		</id>
+		<property name="empiId" type="java.lang.String" length="32" />
+		<property name="diagnoseDate" type="date" />
+		<property name="diagnoseResult" type="java.lang.String" length="1" />
+		<property name="screeningDate" type="date" />
+		<property name="screening" type="java.lang.String" length="1" />
+		<property name="inputDate" type="timestamp" />
+		<property name="inputUser" type="java.lang.String" length="20" />
+		<property name="inputUnit" type="java.lang.String" length="20" />
+		<property name="lastModifyUnit" type="java.lang.String" length="20"/>
+		<property name="lastModifyDate" type="timestamp" />
+		<property name="lastModifyUser" type="java.lang.String"
+			length="20" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by 9527 (9527) -->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<!-- ******************统计图 计划任务****************** 
+
+		  <bean id="statSchedule" class="chis.source.schedule.StatSchedule" />
+
+		  <bean id="statJob"
+			class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+			<property name="targetObject" ref="statSchedule" />
+			<property name="targetMethod" value="execute" />
+			<property name="concurrent" value="false" />
+		  </bean>
+
+		  <bean id="statTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+			<property name="jobDetail" ref="statJob" />
+			<property name="cronExpression" value="0 00 00 * * ?" />
+		  </bean>
+-->
+	<!-- ******************其他 计划任务****************** 
+
+		  <bean id="otherTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+			<property name="jobDetail" ref="otherJob" />
+			<property name="cronExpression" value="0 17 7 * * ?" />
+		  </bean>
+		  <bean id="otherJob"
+			class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+			<property name="targetObject" ref="otherSchedule" />
+			<property name="targetMethod" value="execute" />
+		  </bean>
+		  <bean id="otherSchedule" class="chis.source.schedule.OtherSchedule" />
+
+
+		  <bean id="tempFileCleanerTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+			<property name="jobDetail" ref="tempFileCleanerJob" />
+			<property name="cronExpression" value="0 0 0 * * ?" />
+		  </bean>
+		  <bean id="tempFileCleanerJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+			<property name="jobClass">
+			  <value>chis.source.schedule.TempFileCleaner</value>
+			</property>
+		  </bean>
+-->
+	<bean id="defEvaluateTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="defEvaluateJob" />
+		<property name="cronExpression" value="0 0 0 * * ?" />
+	</bean>
+	<bean id="defEvaluateJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="defEvaluateJobDetail" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="defEvaluateJobDetail" class="chis.source.schedule.DefEvaluateJobDetailSchedule">
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
+		 
+ 
+	<!-- 高血压年度评估  * 计划任务 -->
+	<bean id="hypertensionYearFixGroupTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="hypertensionYearFixGroupJob" />
+		<property name="cronExpression" value="0 0 0 1 * ?" />
+	</bean>
+	<bean id="hypertensionYearFixGroupJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="hypertensionYearFixGroupJobDetail" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="hypertensionYearFixGroupJobDetail" class="chis.source.schedule.hypertension.HypertensionYearFixGroupSchedule">
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
+	<!--    精神病年度评估 * 计划任务   -->
+	<bean id="psyAnnualAssessmentTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="psyAnnualAssessmentJob" />
+		<property name="cronExpression" value="0 0 0 1 1 ?" />
+	</bean>
+	<bean id="psyAnnualAssessmentJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="psyAnnualAssessmentJobDetail" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="psyAnnualAssessmentJobDetail" class="chis.source.schedule.psychosis.PsyAnnualAssessmentSchedule">
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
+  
+	<!-- @@@@@@@@@@@@追加健康检查年度提醒
+		  <bean id="healthCheckTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+			<property name="jobDetail" ref="healthCheckJob" />
+			<property name="cronExpression" value="0 0 0 1 1 ?" />
+		  </bean>
+		  <bean id="healthCheckJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+			<property name="targetObject" ref="healthCheckJobDetail" />
+			<property name="targetMethod" value="execute" />
+		  </bean>
+		  <bean id="healthCheckJobDetail" class="chis.source.schedule.HealthCheckSchedule">
+			<property name="sessionFactory" ref="mySessionFactory"/>
+		  </bean>	
+		 -->    
+	<!-- ********************健康教育提醒*********************** -->
+
+	<bean id="healthEducationTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="healthEducationJob" />
+		<property name="cronExpression" value="0 59 23 * * ?" />
+	</bean>
+	<bean id="healthEducationJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="healthEducationJobDetail" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="healthEducationJobDetail" class="chis.source.schedule.healthEducation.HealthEducationSchedule">
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
+  
+	<!-- ********************年度健康检查提醒*********************** -->
+
+	<bean id="healthCheckTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="healthCheckJob" />
+		<property name="cronExpression" value="0 0 0 1 1 ?" />
+	</bean>
+	<bean id="healthCheckJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="healthCheckJobDetail" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="healthCheckJobDetail" class="chis.source.schedule.healthCheck.HealthCheckSchedule" >
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
+  
+	<!-- ********************各机构档案数量计算*********************** -->
+
+	<bean id="healthRecordTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="healthRecordJob" />
+		<property name="cronExpression" value="0 0 0 * * ?" />
+	</bean>
+	<bean id="healthRecordJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="healthRecordJobDetail" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="healthRecordJobDetail" class="chis.source.schedule.recordNumCount.RecordNumCountSchedule" >
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
+	
+	<!--  家庭档案签约到期续签   -->
+	
+	<bean id="familyContractRenewTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="familyContractRenewJob" />
+		<property name="cronExpression" value="0 1 0 * * ?" />
+	</bean>
+	<bean id="familyContractRenewJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="familyContractRenewJobDetail" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="familyContractRenewJobDetail" class="chis.source.schedule.familyContract.FamilyContractRenewSchedule" >
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
+    
+	<!-- ******************任务列表****************** -->
+  
+	<bean id="statSchedulerFactoryBean" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="healthCheckTrigger"/>
+				<ref bean="healthEducationTrigger"/>
+				<ref bean="hypertensionYearFixGroupTrigger"/>
+				<ref bean="psyAnnualAssessmentTrigger"/>
+				<ref bean="healthRecordTrigger"/>
+				<ref bean="defEvaluateTrigger"/>
+				<ref bean="familyContractRenewTrigger"/>
+				<!--    
+					<ref bean="statTrigger" />
+					<ref bean="otherTrigger" />
+					<ref bean="tempFileCleanerTrigger" />
+					<ref bean="healthCheckTrigger"/>
+					<ref bean="defEvaluateTrigger"/>
+-->
+			</list>
+		</property>
+	</bean>
+    
+</beans>

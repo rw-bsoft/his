@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="phis.application.ccl.schemas.YJ_JCSQ_KD01" table="YJ_JCSQ_KD01">
+			<id name="SQDH" type="java.lang.Long">
+            	<column name="SQDH"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="YLLB" type="java.lang.Integer" length="2" />
+        	<property name="SSLX" type="java.lang.Integer" length="2" />
+        	<property name="ZSXX" type="java.lang.String" length="200" />
+        	<property name="XBS" type="java.lang.String" length="200" />
+        	<property name="JWS" type="java.lang.String" length="200" />
+        	<property name="GMS" type="java.lang.String" length="200" />
+        	<property name="CTXX" type="java.lang.String" length="500" />
+        	<property name="FZJC" type="java.lang.String" length="200" />
+        	<property name="TGJC" type="java.lang.String" length="200" />
+        	<property name="BZXX" type="java.lang.String" length="200" />
+        	<property name="XJ" type="java.lang.String" length="20" />
+        	<property name="XL" type="java.lang.String" length="20" />
+        	<property name="XY" type="java.lang.String" length="20" />
+        	<property name="XLV" type="java.lang.String" length="20" />
+        	<!--<property name="XBD" type="java.lang.String" length="20" />
+        	<property name="XZY" type="java.lang.String" length="20" />-->
+        	<property name="XLSJ" type="java.lang.String" length="20" />
+        	<property name="XGJC" type="java.lang.String" length="20" />
+        	<property name="DJZT" type="java.lang.Integer" length="2" />
+</class>
+</hibernate-mapping>

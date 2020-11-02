@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="EMR_JBBW" table="EMR_JBBW">
+		<id name="JBBW" type="java.lang.Long">
+			<column name="JBBW"/>
+			<generator class="assigned" />
+		</id>
+		<property name="FLXH" type="java.lang.Long" length="9"/>
+		<property name="JBXH" type="java.lang.Long" length="9"/>
+		<property name="SYBM" type="java.lang.String" length="8"/>
+		<property name="SYMC" type="java.lang.String" length="160"/>
+		<property name="PYDM" type="java.lang.String" length="20"/>
+		<property name="WBDM" type="java.lang.String" length="10"/>
+		<property name="QTDM" type="java.lang.String" length="10"/>
+		<property name="ZXBZ" type="java.lang.Integer" length="1"/>
+	</class>
+</hibernate-mapping>

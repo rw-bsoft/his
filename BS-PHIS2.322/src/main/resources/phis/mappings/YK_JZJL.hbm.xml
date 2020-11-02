@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="YK_JZJL" table="YK_JZJL">
+		<composite-id>
+			<key-property name="XTSB" column="XTSB" type="java.lang.Long"/>
+			<key-property name="CWYF" column="CWYF" type="timestamp"/>
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="QSSJ" type="timestamp"  />
+		<property name="ZZSJ" type="timestamp"  />
+	</class>
+</hibernate-mapping>

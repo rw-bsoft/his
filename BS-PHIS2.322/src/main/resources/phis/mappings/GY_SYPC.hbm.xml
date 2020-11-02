@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_SYPC" table="GY_SYPC">
+        	<composite-id>
+				<key-property name="PCBM" column="PCBM" type="java.lang.String" length="18"/>
+			</composite-id>
+        	<property name="PCMC" type="java.lang.String" length="20" />
+        	<property name="MRCS" type="java.lang.Integer" length="2" />
+        	<property name="RLZ" type="java.lang.Long" length="8" />
+        	<property name="ZXZQ" type="java.lang.Integer" length="2" />
+        	<property name="ZXSJ" type="java.lang.String" length="80" />
+        	<property name="RZXZQ" type="java.lang.String" length="32" />
+        	<property name="BZXX" type="java.lang.String" length="25" />
+</class>
+</hibernate-mapping>

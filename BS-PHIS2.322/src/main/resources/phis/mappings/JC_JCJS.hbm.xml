@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="JC_JCJS" table="JC_JCJS">
+		<composite-id>
+			<key-property name="ZYH" column="ZYH" type="java.lang.Long"/>
+			<key-property name="JSCS" column="JSCS" type="java.lang.Integer" />
+		</composite-id>
+		<property name="JGID" type="java.lang.String" length="20" />
+		<property name="JSLX" type="java.lang.Integer" length="2" />
+		<property name="KSRQ" type="timestamp"  />
+		<property name="ZZRQ" type="timestamp"  />
+		<property name="JSRQ" type="timestamp"  />
+		<property name="FYHJ" type="java.lang.Double" length="10" />
+		<property name="ZFHJ" type="java.lang.Double" length="10" />
+		<property name="JKHJ" type="java.lang.Double" length="10" />
+		<property name="FPHM" type="java.lang.String" length="20" />
+		<property name="CZGH" type="java.lang.String" length="10" />
+		<property name="JZRQ" type="timestamp"  />
+		<property name="HZRQ" type="timestamp"  />
+		<property name="TPHM" type="java.lang.String" length="8" />
+		<property name="ZFRQ" type="timestamp"  />
+		<property name="ZFGH" type="java.lang.String" length="10" />
+		<property name="ZFPB" type="java.lang.Integer" length="1" />
+		<property name="JSXM" type="java.lang.String" length="250" />
+		<property name="JSJK" type="java.lang.String" length="250" />
+		<property name="BRXZ" type="java.lang.Long" length="18" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+<dic navDic="manageUnit" 
+	searchField="b.manaUnitId" 
+	searchFieldEx="pyCode" entry="SYS_USERS a, SYS_UserProp b" keyField="a.userId" textField="a.userName" queryOnly="false" extral=" group by a.logonName, b.manaUnitId, a.userId "
+	filter="['and',['in',['$','jobId'],['50', '55', '60','system']],['$','a.userId=b.userId']] ">
+	<prop field="b.manaUnitId"/>
+</dic>
+-->
+<dic alias="用户05" class="ComposeDictionary" navDic="phis.dictionary.manageUnit" supportRemote="false"
+	searchField="a.manageUnitId" iconCls="user"   searchFieldEx="c.pyCode"
+	entry="UserRoleToken a,User b,SYS_Personnel c" keyField="a.userId" textField="b.name" queryOnly="true"
+	filter="['and',['and',['in',['$','a.roleId'],['phis.50','phis.55','phis.60']],['and',['eq',['$','a.userId'],['$','b.id']],['eq',['$','a.userId'],['$','c.PERSONID']]]],['$','a.userId=b.userId']],['eq',['$','a.status'],['s','0']]]" >
+	<properties>
+		<p name="a.manageUnitId">manageUnit</p>
+		<p name="a.roleId">roleId</p>
+	</properties>
+</dic>

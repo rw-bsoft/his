@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="GY_SSDM" table="GY_SSDM">
+        	<composite-id>
+				<key-property name="SSNM" column="SSNM" type="java.lang.Long" length="18"/>
+			</composite-id>
+        	<property name="SSDM" type="java.lang.String" length="10" />
+        	<property name="SSMC" type="java.lang.String" length="80" />
+        	<property name="SSDJ" type="java.lang.Long" length="18" />
+        	<property name="ZJDM" type="java.lang.String" length="6" />
+        	<property name="FYXH" type="java.lang.Long" length="18" />
+</class>
+</hibernate-mapping>
