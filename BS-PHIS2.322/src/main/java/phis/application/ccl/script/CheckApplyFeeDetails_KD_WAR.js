@@ -111,6 +111,10 @@ Ext.extend(phis.application.ccl.script.CheckApplyFeeDetails_KD_WAR,
 							var xlv = form.findField("XLV").getValue();//心律
 							//var xlsj = form.findField("XLSJ").getValue();//心力衰竭
 							//var xgjc = form.findField("XGJC").getValue();//X光检查
+							if(xbs.length>74){
+								Ext.MessageBox.alert("提示", "现病史最多能填 74 个汉字，当前字数 "+xbs.length+" 个！");
+								return;
+							}
 							var res = util.rmi.miniJsonRequestSync({
 										serviceId : "phis.checkApplyService",
 										serviceAction : "commitCheckApplyProject_WAR",

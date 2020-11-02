@@ -159,6 +159,7 @@
 		<module ref="phis.application.cic.CIC/CIC/CIC42" />
 		<module ref="phis.application.cic.CIC/CIC/CIC43" />
 		<module ref="phis.application.cic.CIC/CIC/CIC4301" />
+		<module ref="phis.application.cic.CIC/CIC/CIC56" />
 		<module ref="phis.application.war.WAR/WAR/WAR36" />
 		<module ref="phis.application.war.WAR/WAR/WAR41" />
 		<module ref="phis.application.war.WAR/WAR/WAR4101" />

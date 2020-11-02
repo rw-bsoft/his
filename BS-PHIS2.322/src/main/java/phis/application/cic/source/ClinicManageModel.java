@@ -5332,4 +5332,5 @@ public class ClinicManageModel {
 			throw new ModelDataOperationException("获取识别序号失败!", e);
 		}
 	}
+
 }

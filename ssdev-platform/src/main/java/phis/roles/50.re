@@ -748,6 +748,9 @@
           <module id="CIC54">
             <others/>
           </module>
+          <module id="CIC56">
+            <others/>
+          </module>
           <module id="TCM05">
             <others/>
           </module>

@@ -474,12 +474,9 @@ public class HealthRecordService extends AbstractActionService implements
 	}
 
 	/**
-	 * 更新家庭成员之间的关系。
-	 * 
-	 * @param jsonReq
-	 * @param jsonRes
-	 * @param sc
-	 * @param ctx
+	 *
+	 * @param relatedRecords
+	 * @param dao
 	 * @throws JSONException
 	 * @throws PersistentDataOperationException
 	 * @throws ServiceException
@@ -522,10 +519,9 @@ public class HealthRecordService extends AbstractActionService implements
 	/**
 	 * 处理家庭档案，如果有则判断是否更新户主，无则创建家庭档案,并返回FAMILY ID。
 	 * 
-	 * @param jsonReq
-	 * @param jsonRes
-	 * @param sc
-	 * @param ctx
+	 * @param preferRelaCode
+	 * @param personInfo
+	 * @param dao
 	 * @throws JSONException
 	 * @throws PersistentDataOperationException
 	 * @throws ModelDataOperationException
@@ -751,8 +747,8 @@ public class HealthRecordService extends AbstractActionService implements
 	 * 处理户主父亲与其他成员的关系。
 	 * 
 	 * @param relatedRecords
-	 * @param husband
-	 * @param ctx
+	 * @param father
+	 * @param dao
 	 * @throws JSONException
 	 * @throws PersistentDataOperationException
 	 * @throws ServiceException
@@ -865,8 +861,8 @@ public class HealthRecordService extends AbstractActionService implements
 	 * 处理户主母亲与其他成员的关系。
 	 * 
 	 * @param relatedRecords
-	 * @param husband
-	 * @param ctx
+	 * @param mother
+	 * @param dao
 	 * @throws JSONException
 	 * @throws PersistentDataOperationException
 	 * @throws ServiceException
@@ -982,8 +978,8 @@ public class HealthRecordService extends AbstractActionService implements
 	 * 处理户主配偶与其他家庭成员的关系。
 	 * 
 	 * @param relatedRecords
-	 * @param master
-	 * @param ctx
+	 * @param partner
+	 * @param dao
 	 * @throws JSONException
 	 * @throws PersistentDataOperationException
 	 * @throws ServiceException
@@ -1093,7 +1089,7 @@ public class HealthRecordService extends AbstractActionService implements
 	 * 
 	 * @param relatedRecords
 	 * @param master
-	 * @param ctx
+	 * @param dao
 	 * @throws JSONException
 	 * @throws PersistentDataOperationException
 	 * @throws ServiceException
@@ -1263,8 +1259,7 @@ public class HealthRecordService extends AbstractActionService implements
 	 * @param phrId
 	 * @param oldRelaCode
 	 * @param relatedRecords
-	 * @param session
-	 * @param context
+	 * @param dao
 	 * @throws JSONException
 	 * @throws PersistentDataOperationException
 	 * @throws ServiceException
@@ -1483,7 +1478,7 @@ public class HealthRecordService extends AbstractActionService implements
 	 * 保证healthRecord中包含了性别、名字信息。 并且判断记录的性别信息是否支持进行成员关系更新（性别不详无法更新）。
 	 * 
 	 * @param healthRecord
-	 * @param ctx
+	 * @param dao
 	 * @return
 	 * @throws ServiceException
 	 * @throws JSONException
@@ -2656,5 +2651,42 @@ public class HealthRecordService extends AbstractActionService implements
 			logger.error("error query healthrecord.", e);
 			throw new ServiceException(e);
 		}
+	}
+
+	/**
+	 * 新型肺炎获取基础疾病信息
+	 *
+	 * @param req
+	 * @param res
+	 * @param dao
+	 * @param ctx
+	 * @throws ServiceException
+	 */
+	public void doGetPersonDiease(Map<String, Object> req,
+								  Map<String, Object> res, BaseDAO dao, Context ctx)
+			throws ServiceException {
+		Map<String, Object> body = (Map<String, Object>) req.get("body");
+		String empiId = (String) body.get("empiId");
+		Map<String, Object> result  = new HashMap<String, Object>();
+		result.put("GXY", false);
+		result.put("TNB", false);
+		try {
+			String hql = "select diseasetext as DISEASETEXT from EHR_PastHistory where empiId= '"+empiId+"'";
+			List<Map<String, Object>> data = dao.doSqlQuery(hql, null);
+			if(data.size()>0){
+				for(int i=0;i<data.size();i++) {
+					String diseaseList_hcode = data.get(i).get("DISEASETEXT") + "";
+					if (diseaseList_hcode.indexOf("高血压") != -1) {
+						result.put("GXY", true);
+					}
+					if (diseaseList_hcode.indexOf("糖尿病") != -1) {
+						result.put("TNB", true);
+					}
+				}
+			}
+		} catch (PersistentDataOperationException e) {
+			throw new ServiceException("获取个人疾病失败!", e);
+		}
+		res.put("body", result);
 	}
 }

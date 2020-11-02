@@ -613,4 +613,7 @@
 	<!--HMS-->
 	<bean id="hai.hmsInterfaceService" class="hai.hms.HmsInterfaceService"
 		parent="phisAbstractActionService" />
+    <!--发热门诊-->
+    <bean id="phis.clinicFeverPatientService" class="phis.application.cic.source.ClinicFeverPatientService"
+          parent="phisAbstractActionService"/>
 </beans>

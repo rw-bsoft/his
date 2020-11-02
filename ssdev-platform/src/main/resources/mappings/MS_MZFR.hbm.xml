@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MS_MZFR" table="MS_MZFR">
+			<id name="SBXH" type="java.lang.Long">
+            	<column name="SBXH"/>
+            	<generator class="assigned" />
+        	</id>
+	<property name="BRID" type="java.lang.Long" length="25" />
+	<property name="EMPIID" type="java.lang.String" length="25" />
+	<property name="SJLY" type="java.lang.Integer" length="4" />
+	<property name="LYBS" type="java.lang.Integer" length="4" />
+	<property name="FZBZ" type="java.lang.Integer" length="4" />
+	<property name="T" type="java.lang.Double" length="4" />
+	<property name="YZNFR" type="java.lang.Integer" length="4" />
+	<property name="FRRQ" type="timestamp"  />
+	<property name="SSY" type="java.lang.Integer" length="10" />
+	<property name="SZY" type="java.lang.Integer" length="10" />
+	<property name="R" type="java.lang.Integer" length="10" />
+	<property name="P" type="java.lang.Integer" length="10" />
+	<property name="PAO2" type="java.lang.Long" length="10" />
+	<property name="FL" type="java.lang.Integer" length="4" />
+	<property name="KS" type="java.lang.Integer" length="4" />
+	<property name="BS" type="java.lang.Integer" length="4" />
+	<property name="LT" type="java.lang.Integer" length="4" />
+	<property name="YT" type="java.lang.Integer" length="4" />
+	<property name="FX" type="java.lang.Integer" length="4" />
+	<property name="QTZZ" type="java.lang.String" length="10" />
+	<property name="JCJB" type="java.lang.String" length="256" />
+	<property name="QTJB" type="java.lang.String" length="10" />
+	<property name="HZQX" type="java.lang.Integer" length="4" />
+	<property name="QTQX" type="java.lang.String" length="256" />
+	<property name="ZDXH" type="java.lang.String" length="256" />
+	<property name="XCGJG" type="java.lang.String" length="10" />
+	<property name="CPR" type="java.lang.Integer" length="4" />
+	<property name="YSZ" type="java.lang.Integer" length="4" />
+	<property name="SFCT" type="java.lang.Integer" length="10" />
+	<property name="RTPCR" type="java.lang.Integer" length="6" />
+	<property name="LRRY" type="java.lang.String" length="25" />
+	<property name="JGID" type="java.lang.String" length="25" />
+	<property name="LRSJ" type="timestamp"  />
+	<property name="XGR" type="java.lang.String" length="25" />
+	<property name="XGSJ" type="timestamp"  />
+</class>
+</hibernate-mapping>

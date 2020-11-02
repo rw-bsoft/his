@@ -1864,8 +1864,7 @@ public class ClinicManageService extends AbstractActionService implements
 	 * @param ctx
 	 * @throws ServiceException
 	 */
-	public void doQueryBRXX(Map<String, Object> req, Map<String, Object> res,
-							BaseDAO dao, Context ctx) throws ServiceException {
+	public void doQueryBRXX(Map<String, Object> req, Map<String, Object> res, BaseDAO dao, Context ctx) throws ServiceException {
 		ClinicManageModel cmm = new ClinicManageModel(dao);
 		try {
 			cmm.doQueryBRXX(req,res,ctx);
@@ -1884,8 +1883,7 @@ public class ClinicManageService extends AbstractActionService implements
 	 * @param ctx
 	 * @throws ServiceException
 	 */
-	public void doQuerySBXH(Map<String, Object> req, Map<String, Object> res,
-							BaseDAO dao, Context ctx) throws ServiceException {
+	public void doQuerySBXH(Map<String, Object> req, Map<String, Object> res, BaseDAO dao, Context ctx) throws ServiceException {
 		ClinicManageModel cmm = new ClinicManageModel(dao);
 		try {
 			cmm.doQuerySBXH(req,res,ctx);
@@ -1895,5 +1893,6 @@ public class ClinicManageService extends AbstractActionService implements
 			throw new ServiceException(e);
 		}
 	}
+
 }
 

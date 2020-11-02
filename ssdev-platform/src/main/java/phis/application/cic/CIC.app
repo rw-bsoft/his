@@ -1579,5 +1579,36 @@
 				<p name="entryName">phis.application.war.schemas.L_TESTRESULT</p>
 			</properties>
 		</module>
+
+		<module id="CIC56" name="发热门诊填报" script="phis.application.cic.script.frmz.ClinicFeverPatientList">
+			<properties>
+				<p name="entryName">phis.application.cic.schemas.frmz.MS_MZFR_L</p>
+				<p name="listServiceId">phis.clinicFeverPatientService</p>
+				<p name="loadInFeverlData">queryClinicFeverInfo</p>
+				<p name="refModule">phis.application.cic.CIC/CIC/CIC5601</p>
+			</properties>
+			<action id="add" name="新建" iconCls="add" />
+			<action id="updateInfo" name="修改" iconCls="update" />
+			<action id="remove" name="删除" iconCls="remove"/>
+		</module>
+		<module id="CIC5601" name="发热病人信息填报" type="1" script="phis.application.cic.script.frmz.ClinicFeverPatientModule">
+			<properties>
+				<p name="refNorthForm">phis.application.cic.CIC/CIC/CIC560101</p>
+				<p name="refSouthForm">phis.application.cic.CIC/CIC/CIC560103</p>
+			</properties>
+			<action id="import" name="调入" iconCls="add"/>
+			<action id="save" name="保存" iconCls="save"/>
+			<action id="cancel" name="关闭" iconCls="cancel"/>
+		</module>
+		<module id="CIC560101" name="基本信息" type="1" script="phis.application.cic.script.frmz.ClinicFeverPatientNouthForm">
+			<properties>
+				<p name="entryName">phis.application.cic.schemas.frmz.MS_MZFR_N</p>
+			</properties>
+		</module>
+		<module id="CIC560103" name="医技检查" type="1" script="phis.application.cic.script.frmz.ClinicFeverPatientNouthForm">
+			<properties>
+				<p name="entryName">phis.application.cic.schemas.frmz.MS_MZFR_S</p>
+			</properties>
+		</module>
 	</catagory>
 </application>

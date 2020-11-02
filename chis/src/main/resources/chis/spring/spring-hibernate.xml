@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-	
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
 	<bean id="myDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
-		
-		<!-- 正式库  -->
+
+		<!-- 正式库
 		<property name="url" value="jdbc:oracle:thin:@192.168.10.135:1521/orcl" />
 		<property name="username" value="phis21" />
-		<property name="password" value="bsoftls2017" />
-		
-		<!-- 溧水测试库
+		<property name="password" value="bsoftls2017" />   -->
+
+		<!-- 溧水测试库   -->
 		<property name="url" value="jdbc:oracle:thin:@192.168.10.4:1521/orcl" />
 		<property name="username" value="histest" />
-		<property name="password" value="password" />   -->
+		<property name="password" value="password" />
 
 		<property name="filters" value="stat" />
 		<property name="maxActive" value="200" />
@@ -32,84 +32,84 @@
 		<property name="removeAbandonedTimeout" value="1800" />
 		<property name="logAbandoned" value="true" />
 	</bean>
-  <bean id="mySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
-    <property name="dataSource" ref="myDataSource"/>
-    <property name="mappingLocations">
-      <value>classpath:/chis/mappings/**/*.hbm.xml</value>
-    </property>    
-    <property name="hibernateProperties">
-      <props>
-        <prop key="hibernate.dialect">chis.source.dialect.MyOracle10gDialect</prop>
-        <prop key="hibernate.show_sql">true</prop>
-        <prop key="hibernate.generate_statistics">true</prop>
-        <prop key="hibernate.connection.release_mode">auto</prop>
-        <prop key="hibernate.autoReconnect">true</prop>
-        <prop key="hibernate.jdbc.fetch_size">100</prop>
-        <prop key="hibernate.jdbc.batch_size">50</prop>
-        <prop key="hibernate.cache.use_query_cache">false</prop>
-        <prop key="hibernate.cache.use_second_level_cache">false</prop>
-      </props>
-    </property>
-  </bean>
-  
-  <!-- ===================DB2======================= -->
-  <!--  
-     <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
-        <property name="driverClass" value="com.ibm.db2.jcc.DB2Driver"/>  
-        <property name="jdbcUrl" value="jdbc:db2://172.16.44.2:50000/BSCHIS22"/>
-        <property name="user" value="bschis"/>
-        <property name="password" value="bschis"/>
-        <property name="minPoolSize" value="2"/>
-      <property name="maxPoolSize" value="50"/>
-      <property name="maxStatements" value="0"/>
-      <property name="initialPoolSize" value="3"/>
-      <property name="idleConnectionTestPeriod" value="120"/>
-      <property name="maxIdleTime" value="25200"/>
-     </bean>
-      <bean id="mySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
-        <property name="dataSource" ref="myDataSource"/>
-      <property name="mappingLocations">
-          <value>/WEB-INF/config/mappings/*.hbm.xml</value>
-      </property>    
-        <property name="hibernateProperties">
-             <props>
-                 <prop key="hibernate.dialect">com.bsoft.bschis.dialect.MyDB2Dialect</prop>
-                 <prop key="hibernate.show_sql">true</prop>
-                 <prop key="hibernate.generate_statistics">true</prop>
-                 <prop key="hibernate.connection.release_mode">auto</prop>
-                 <prop key="hibernate.autoReconnect">true</prop>
-             </props>
-         </property>
-      </bean>
-     -->
-  <!-- ===================MYSQL======================= -->
-  <!-- 
-      <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
-        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost/pix?useUnicode=true&amp;characterEncoding=utf-8"/>
-        <property name="user" value="root"/>
-        <property name="password" value="root"/>
-        <property name="minPoolSize" value="2"/>
-      <property name="maxPoolSize" value="50"/>
-      <property name="initialPoolSize" value="3"/>
-      <property name="idleConnectionTestPeriod" value="120"/>
-      <property name="maxIdleTime" value="25200"/>
-      </bean>
-      <bean id="mySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
-        <property name="dataSource" ref="myDataSource"/>
-      <property name="mappingLocations">
-          <value>/WEB-INF/config/mappings/*.hbm.xml</value>
-      </property>    
-        <property name="hibernateProperties">
-             <props>
-                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
-                 <prop key="hibernate.show_sql">true</prop>
-                 <prop key="hibernate.generate_statistics">true</prop>
-                 <prop key="hibernate.connection.release_mode">auto</prop>
-                 <prop key="hibernate.autoReconnect">true</prop>
-             </props>
-         </property>
-      </bean>
-     -->
- 
+	<bean id="mySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource"/>
+		<property name="mappingLocations">
+			<value>classpath:/chis/mappings/**/*.hbm.xml</value>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">chis.source.dialect.MyOracle10gDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.generate_statistics">true</prop>
+				<prop key="hibernate.connection.release_mode">auto</prop>
+				<prop key="hibernate.autoReconnect">true</prop>
+				<prop key="hibernate.jdbc.fetch_size">100</prop>
+				<prop key="hibernate.jdbc.batch_size">50</prop>
+				<prop key="hibernate.cache.use_query_cache">false</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- ===================DB2======================= -->
+	<!--
+       <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+          <property name="driverClass" value="com.ibm.db2.jcc.DB2Driver"/>
+          <property name="jdbcUrl" value="jdbc:db2://172.16.44.2:50000/BSCHIS22"/>
+          <property name="user" value="bschis"/>
+          <property name="password" value="bschis"/>
+          <property name="minPoolSize" value="2"/>
+        <property name="maxPoolSize" value="50"/>
+        <property name="maxStatements" value="0"/>
+        <property name="initialPoolSize" value="3"/>
+        <property name="idleConnectionTestPeriod" value="120"/>
+        <property name="maxIdleTime" value="25200"/>
+       </bean>
+        <bean id="mySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+          <property name="dataSource" ref="myDataSource"/>
+        <property name="mappingLocations">
+            <value>/WEB-INF/config/mappings/*.hbm.xml</value>
+        </property>
+          <property name="hibernateProperties">
+               <props>
+                   <prop key="hibernate.dialect">com.bsoft.bschis.dialect.MyDB2Dialect</prop>
+                   <prop key="hibernate.show_sql">true</prop>
+                   <prop key="hibernate.generate_statistics">true</prop>
+                   <prop key="hibernate.connection.release_mode">auto</prop>
+                   <prop key="hibernate.autoReconnect">true</prop>
+               </props>
+           </property>
+        </bean>
+       -->
+	<!-- ===================MYSQL======================= -->
+	<!--
+        <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+          <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+          <property name="jdbcUrl" value="jdbc:mysql://localhost/pix?useUnicode=true&amp;characterEncoding=utf-8"/>
+          <property name="user" value="root"/>
+          <property name="password" value="root"/>
+          <property name="minPoolSize" value="2"/>
+        <property name="maxPoolSize" value="50"/>
+        <property name="initialPoolSize" value="3"/>
+        <property name="idleConnectionTestPeriod" value="120"/>
+        <property name="maxIdleTime" value="25200"/>
+        </bean>
+        <bean id="mySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+          <property name="dataSource" ref="myDataSource"/>
+        <property name="mappingLocations">
+            <value>/WEB-INF/config/mappings/*.hbm.xml</value>
+        </property>
+          <property name="hibernateProperties">
+               <props>
+                   <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                   <prop key="hibernate.show_sql">true</prop>
+                   <prop key="hibernate.generate_statistics">true</prop>
+                   <prop key="hibernate.connection.release_mode">auto</prop>
+                   <prop key="hibernate.autoReconnect">true</prop>
+               </props>
+           </property>
+        </bean>
+       -->
+
 </beans>

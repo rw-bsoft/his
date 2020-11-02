@@ -24,24 +24,13 @@ public class ActivityAgreementFile implements IHandler {
         String id = (String) request.get("id");
         UserRoleToken user = UserRoleToken.getCurrent();
         String doctorname=user.getUserName();
-        //获取当前日期
-        Calendar rightNow = Calendar.getInstance();
-        /*用Calendar的get(int field)方法返回给定日历字段的值。HOUR 用于 12 小时制时钟 (0 - 11)，HOUR_OF_DAY 用于 24 小时制时钟。*/
-        String year = rightNow.get(Calendar.YEAR)+"";
-        String month = (rightNow.get(Calendar.MONTH)+1)+""; //第一个月从0开始，所以得到月份＋1
-        String day = rightNow.get(rightNow.DAY_OF_MONTH)+"";
-        //String hour12 = rightNow.get(rightNow.HOUR)+"";
-        String hour24 = rightNow.get(rightNow.HOUR_OF_DAY)+"";
-        String minute = rightNow.get(rightNow.MINUTE)+"";
-        //String second = rightNow.get(rightNow.SECOND)+"";
-        //String millisecond = rightNow.get(rightNow.MILLISECOND)+"";
-        //String TimeNow12 = year+"-"+month+"-"+day+" "+hour12+":"+minute+":"+second+":"+millisecond;
-        //String TimeNow24 = year+"-"+month+"-"+day+" "+hour24+":"+minute+":"+second+":"+millisecond;
-        //System.out.println("日历："+rightNow+"\n12小时制时钟："+TimeNow12+"\n24小时制时钟："+TimeNow24);
+        String year = "";
+        String month = "";
+        String day = "";
         if(id != null||!"null".equals(id)){
             //Map<String, Object> params = new HashMap<String, Object>();
             //params.put("id", id);
-            String sql = "select personName as PERSONNAME, sex as SEX, age as AGE, diagnosis as DIAGNOSIS,proposed as PROPOSED from DPC_ActivityAgreement where id='"+id+"'";
+            String sql = "select a.personname as PERSONNAME, a.sex as SEX, a.age as AGE, a.diagnosis as DIAGNOSIS,a.proposed as PROPOSED,a.cost as COST,to_char(a.operationdate,'YYYY-MM-DD') as OPERATIONDATE，b.organizname as JGMC from DPC_ActivityAgreement a,sys_organization b where a.createunit=b.organizcode and id='"+id+"'";
             try {
                 List<Map<String,Object>> resList = new ArrayList<Map<String,Object>>();
                 resList = dao.doSqlQuery(sql, null);
@@ -76,24 +65,38 @@ public class ActivityAgreementFile implements IHandler {
                     response.put("PROPOSED", result.get("PROPOSED"));
                 }
 
-                if(month.length()==1){
-                    month="0"+month;
+                if(result.get("OPERATIONDATE") == null){
+                    response.put("YEAR", "");
+                    response.put("MONTH", "");
+                    response.put("DAY", "");
+                }else{
+                    year=result.get("OPERATIONDATE").toString().substring(0,4);
+                    month=result.get("OPERATIONDATE").toString().substring(5,7);
+                    day=result.get("OPERATIONDATE").toString().substring(8,10);
+                    if(month.length()==1){
+                        month="0"+month;
+                    }
+                    if(day.length()==1){
+                        day="0"+day;
+                    }
+                    response.put("YEAR", year);
+                    response.put("MONTH", month);
+                    response.put("DAY", day);
                 }
-                if(day.length()==1){
-                    day="0"+day;
+
+                if(result.get("COST") == null){
+                    response.put("COST", "");
+                }else{
+                    response.put("COST", result.get("COST"));
                 }
-                if(hour24.length()==1){
-                    hour24="0"+hour24;
-                }
-                if(minute.length()==1){
-                    minute="0"+minute;
-                }
+
                 response.put("DOCTORNAME", doctorname);
-                response.put("YEAR", year);
-                response.put("MONTH", month);
-                response.put("DAY", day);
-                response.put("HOUR", hour24);
-                response.put("MIN", minute);
+
+                if(result.get("JGMC") == null){
+                    response.put("JGMC", "");
+                }else{
+                    response.put("JGMC", result.get("JGMC")+"口腔科");
+                }
 
             } catch (PersistentDataOperationException e) {
                 e.printStackTrace();
