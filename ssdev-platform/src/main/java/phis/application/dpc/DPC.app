@@ -120,5 +120,29 @@
         	<action id="cancel" name="取消" iconCls="common_cancel" />
         </module>
 
+        <!--补牙（RCT）治疗知情同意书病历版-->
+		<module id="DPC06" name="补牙（RCT）治疗知情同意书病历版" type="1" script="phis.application.dpc.script.FillingAgreementList">
+        	<properties>
+        		<p name="createCls">phis.application.dpc.script.FillingAgreementForm</p>
+        		<p name="updateCls">phis.application.dpc.script.FillingAgreementForm</p>
+        		<p name="entryName">phis.application.dpc.schemas.DPC_FillingAgreement</p>
+        		<p name="removeServiceId">phis.simpleRemove</p>
+        	</properties>
+        	<action id="create" name="新建" iconCls="create" ref="phis.application.dpc.DPC/DPC/DPC0601"/>
+        	<action id="update" name="查看" ref="phis.application.dpc.DPC/DPC/DPC0601" />
+        	<action id="remove" name="删除"/>
+        	<action id="print" name="打印" />
+        	<action id="refresh" name="刷新" />
+        </module>
+        <module id="DPC0601" type="1" name="补牙（RCT）治疗知情同意书病历版表单" script="phis.application.dpc.script.FillingAgreementForm" icon="default">
+        	<properties>
+        		<p name="entryName">phis.application.dpc.schemas.DPC_FillingAgreement</p>
+        		<p name="saveAction">saveFillingAgreement</p>
+        		<p name="saveServiceId">phis.FillingAgreementService</p>
+        	</properties>
+        	<action id="save" name="确定" />
+        	<action id="cancel" name="取消" iconCls="common_cancel" />
+        </module>
+
 	</catagory>
 </application>

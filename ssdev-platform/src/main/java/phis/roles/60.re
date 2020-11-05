@@ -127,7 +127,7 @@
           <others/>
         </catagory>
       </app>
-      <app id="phis.application.hos.HOS">
+     <app id="phis.application.hos.HOS">
         <catagory id="HOS"/>
         <catagory id="HOS">
           <module id="HOS03">
@@ -137,9 +137,30 @@
             <action id="reset"/>
             <action id="save"/>
           </module>
-          <module id="HOS040202">
+
+          <module id="HOS040203" />
+           <module id="HOS04020301">
+           <others/>
+          </module>
+           <module id="HOS04020302">
             <others/>
           </module>
+         <module id="HOS04020303">
+            <others/>
+          </module>
+          <module id="HOS0402030201">
+            <others/>
+          </module>
+          <module id="HOS0402030301">
+            <others/>
+          </module>
+           <module id="HOS0402030202">
+            <others/>
+          </module>
+          <module id="HOS0402030302">
+            <others/>
+          </module>
+
           <module id="HOS0403"/>
           <module id="HOS040301">
             <action id="submit"/>

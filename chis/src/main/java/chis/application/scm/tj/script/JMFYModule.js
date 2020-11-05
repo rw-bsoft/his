@@ -13,7 +13,7 @@ Ext.extend(chis.application.scm.tj.script.JMFYModule,chis.script.BizCombinedModu
 				debugger;
 				// url="http://192.168.10.201:8080/webroot/decision/view/report?viewlet=GW.cpt&op=write";
 				// url="http://10.2.202.62:8080/list/reportlist.aspx?ConType=0&clinicId=0&sqbh=404506579514&sqbh=320124001"
-				url="http://192.168.10.201:8080/webroot/decision/view/report?viewlet=homedoc_healthedu.cpt";
+				url="http://192.168.10.201:8080/webroot/decision/view/report?viewlet=homedoc_jayi.cpt";
 				// url="http://172.16.50.85:8091/"
 				if (this.panel){
 					return this.panel;

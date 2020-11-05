@@ -38,7 +38,7 @@ public class DentistryService extends AbstractActionService implements DAOSuppor
      * 新建保存拔牙知情同意书病历版
      * @param jsonReq
      * @param jsonRes
-     * @param sc
+     * @param dao
      * @param ctx
      * @throws JSONException
      */
@@ -52,7 +52,7 @@ public class DentistryService extends AbstractActionService implements DAOSuppor
      * 新建保存固定修复知情同意书
      * @param jsonReq
      * @param jsonRes
-     * @param sc
+     * @param dao
      * @param ctx
      * @throws JSONException
      */
@@ -66,7 +66,7 @@ public class DentistryService extends AbstractActionService implements DAOSuppor
      * 新建保存固定修复知情同意书
      * @param jsonReq
      * @param jsonRes
-     * @param sc
+     * @param dao
      * @param ctx
      * @throws JSONException
      */
@@ -80,7 +80,7 @@ public class DentistryService extends AbstractActionService implements DAOSuppor
      * 新建保存牙周治疗知情同意书病历版
      * @param jsonReq
      * @param jsonRes
-     * @param sc
+     * @param dao
      * @param ctx
      * @throws JSONException
      */
@@ -88,6 +88,20 @@ public class DentistryService extends AbstractActionService implements DAOSuppor
     protected void doSavePeriodontalAgreement(Map<String, Object> jsonReq, Map<String, Object> jsonRes, BaseDAO dao, Context ctx) throws ServiceException {
         DentistryModel Periodontal = new DentistryModel(dao);
         Periodontal.savePeriodontalAgreement(jsonReq, jsonRes, dao, ctx);
+    }
+
+    /**
+     * 新建保存补牙（RCT）治疗知情同意书病历版
+     * @param jsonReq
+     * @param jsonRes
+     * @param dao
+     * @param ctx
+     * @throws JSONException
+     */
+    @SuppressWarnings("unchecked")
+    protected void doSaveFillingAgreement(Map<String, Object> jsonReq, Map<String, Object> jsonRes, BaseDAO dao, Context ctx) throws ServiceException {
+        DentistryModel Filling = new DentistryModel(dao);
+        Filling.saveFillingAgreement(jsonReq, jsonRes, dao, ctx);
     }
 
 }

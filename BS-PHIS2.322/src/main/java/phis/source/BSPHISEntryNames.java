@@ -788,6 +788,7 @@ public interface BSPHISEntryNames {
 	public static final String DPC_FixedAgreement = "phis.application.dpc.schemas.DPC_FixedAgreement";
 	public static final String DPC_ActivityAgreement = "phis.application.dpc.schemas.DPC_ActivityAgreement";
 	public static final String DPC_PeriodontalAgreement = "phis.application.dpc.schemas.DPC_PeriodontalAgreement";
+	public static final String DPC_FillingAgreement = "phis.application.dpc.schemas.DPC_FillingAgreement";
 	//发热门诊
 	public static final String MS_MZFR = "phis.application.cic.schemas.frmz.MS_MZFR";
 

@@ -255,9 +255,9 @@
 			<action id="save" name="确定" group="create||update" />
 			<action id="add" name="新增" group="create" />
 		</module>
-		<module id="TJ00" name="履约统计记录" script="chis.application.scm.tj.script.LYTJModule">
+		<module id="TJ00" name="履约统计分析" script="chis.application.scm.tj.script.LYTJModule">
         </module>
-        <module id="TJ10" name="履约未建档统计" script="chis.application.scm.tj.script.JMFYModule">
+        <module id="TJ10" name="签约未建档统计" script="chis.application.scm.tj.script.QYWJDModule">
         </module>
         <module id="TJ01" name="核心指标汇总" script="chis.application.scm.tj.script.HXZBHZModule">
         </module>

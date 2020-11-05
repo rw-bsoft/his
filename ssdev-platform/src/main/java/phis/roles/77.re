@@ -55,6 +55,9 @@
           <module id="HOS10">
             <others/>
           </module>
+          <module id="HOS1001">
+            <others/>
+          </module>
         </catagory>
       </app>
       <app id="phis.application.menu.TJFX">

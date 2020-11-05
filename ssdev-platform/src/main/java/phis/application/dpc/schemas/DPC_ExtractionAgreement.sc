@@ -18,6 +18,7 @@
 	<item id="operationDate" alias="手术日期" type="datetime" xtype="datefield" queryable="true"  not-null="0" defaultValue="%server.date.date"/>
 	<item id="diagnosis" alias="疾病诊断" type="string" xtype="textarea" length="200" width="250" not-null="0"/>
 	<item id="proposed" alias="拟施手术" type="string" xtype="textarea" length="200" width="250" not-null="0"/>
+	<item id="cost" alias="费用" type="string"  width="100" not-null="0"/>
 	<item id="doctorId" alias="医生ID" type="string" length="18" not-null="1" defaultValue="%user.userId" display="0"/>
 	<item id="createUser" alias="录入人" type="string" length="20" fixed="true" update="false"
 		display="3" defaultValue="%user.userId">

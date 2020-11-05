@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<entry entityName="phis.application.dpc.schemas.DPC_PeriodontalAgreement" alias="牙周治疗知情同意书病历版">
+<entry entityName="phis.application.dpc.schemas.DPC_FillingAgreement" alias="补牙（RCT）治疗知情同意书病历版">
 	<item id="id" alias="主键" type="string" length="16" not-null="1" generator="assigned" pkey="true" hidden="true" >
 		<key>
 			<rule name="increaseId" defaultFill="0" type="increase" length="16" startPos="1"/>
@@ -12,7 +12,6 @@
 		<dic>
 			<item key="1" text="男"/>
 			<item key="2" text="女"/>
-
 		</dic>
 	</item>
 	<item id="age" alias="年龄" type="int" queryable="true" width="50" not-null="0"/>

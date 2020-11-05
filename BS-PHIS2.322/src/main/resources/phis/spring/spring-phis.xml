@@ -603,6 +603,9 @@
     <!--牙周治疗知情同意书病历版-->
     <bean id="phis.PeriodontalAgreementService" class="phis.application.dpc.source.DentistryService"
           parent="phisAbstractActionService" />
+    <!--补牙（RCT）治疗知情同意书病历版-->
+    <bean id="phis.FillingAgreementService" class="phis.application.dpc.source.DentistryService"
+          parent="phisAbstractActionService" />
     <!--孕产妇减免-->
     <bean id="phis.plwService"
         class="phis.application.plw.source.PlwService"

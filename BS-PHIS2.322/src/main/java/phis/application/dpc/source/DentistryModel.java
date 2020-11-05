@@ -44,7 +44,7 @@ public class DentistryModel {
      * 新建保存拔牙知情同意书病历版
      * @param jsonReq
      * @param jsonRes
-     * @param sc
+     * @param dao
      * @param ctx
      * @throws JSONException
      */
@@ -62,6 +62,7 @@ public class DentistryModel {
         params.put("diagnosis",(String) body.get("diagnosis"));
         params.put("operationDate",(String) body.get("operationDate"));
         params.put("proposed",(String) body.get("proposed"));
+        params.put("cost",(String) body.get("cost"));
         params.put("createUser",(String) body.get("createUser"));
         params.put("createDate",body.get("createDate"));
         params.put("createUnit",(String) body.get("createUnit"));
@@ -94,7 +95,7 @@ public class DentistryModel {
      * 新建保存固定修复知情同意书
      * @param jsonReq
      * @param jsonRes
-     * @param sc
+     * @param dao
      * @param ctx
      * @throws JSONException
      */
@@ -112,6 +113,7 @@ public class DentistryModel {
         params.put("diagnosis",(String) body.get("diagnosis"));
         params.put("operationDate",(String) body.get("operationDate"));
         params.put("proposed",(String) body.get("proposed"));
+        params.put("cost",(String) body.get("cost"));
         params.put("createUser",(String) body.get("createUser"));
         params.put("createDate",body.get("createDate"));
         params.put("createUnit",(String) body.get("createUnit"));
@@ -144,7 +146,7 @@ public class DentistryModel {
      * 新建保存活动修复知情同意书
      * @param jsonReq
      * @param jsonRes
-     * @param sc
+     * @param dao
      * @param ctx
      * @throws JSONException
      */
@@ -162,6 +164,7 @@ public class DentistryModel {
         params.put("diagnosis",(String) body.get("diagnosis"));
         params.put("operationDate",(String) body.get("operationDate"));
         params.put("proposed",(String) body.get("proposed"));
+        params.put("cost",(String) body.get("cost"));
         params.put("createUser",(String) body.get("createUser"));
         params.put("createDate",body.get("createDate"));
         params.put("createUnit",(String) body.get("createUnit"));
@@ -194,7 +197,7 @@ public class DentistryModel {
      * 新建保存牙周治疗知情同意书病历版
      * @param jsonReq
      * @param jsonRes
-     * @param sc
+     * @param dao
      * @param ctx
      * @throws JSONException
      */
@@ -212,6 +215,7 @@ public class DentistryModel {
         params.put("diagnosis",(String) body.get("diagnosis"));
         params.put("operationDate",(String) body.get("operationDate"));
         params.put("proposed",(String) body.get("proposed"));
+        params.put("cost",(String) body.get("cost"));
         params.put("createUser",(String) body.get("createUser"));
         params.put("createDate",body.get("createDate"));
         params.put("createUnit",(String) body.get("createUnit"));
@@ -233,6 +237,57 @@ public class DentistryModel {
                     params.remove("createDate");
                 }
                 dao.doSave("update", BSPHISEntryNames.DPC_PeriodontalAgreement, params, false);
+            }
+        } catch (PersistentDataOperationException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 新建保存补牙（RCT）治疗知情同意书病历版
+     * @param jsonReq
+     * @param jsonRes
+     * @param dao
+     * @param ctx
+     * @throws JSONException
+     */
+    @SuppressWarnings("unchecked")
+    protected void saveFillingAgreement(Map<String, Object> jsonReq, Map<String, Object> jsonRes, BaseDAO dao, Context ctx) throws ServiceException {
+        String op = (String) jsonReq.get("op");
+        Map<String, Object> body = (Map<String, Object>) jsonReq.get("body");
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("id", body.get("id"));
+        params.put("empiId", (String) body.get("empiId"));
+        params.put("doctorId", (String) body.get("doctorId"));
+        params.put("personName",(String) body.get("personName"));
+        params.put("age", body.get("age"));
+        params.put("sex",(String) body.get("sex"));
+        params.put("diagnosis",(String) body.get("diagnosis"));
+        params.put("operationDate",(String) body.get("operationDate"));
+        params.put("proposed",(String) body.get("proposed"));
+        params.put("cost",(String) body.get("cost"));
+        params.put("createUser",(String) body.get("createUser"));
+        params.put("createDate",body.get("createDate"));
+        params.put("createUnit",(String) body.get("createUnit"));
+        params.put("lastModifyUser",(String) body.get("lastModifyUser"));
+        params.put("lastModifyUnit",(String) body.get("lastModifyUnit"));
+        params.put("lastModifyDate",body.get("lastModifyDate"));
+
+        try {
+            if(op.equals("create")){
+                dao.doSave("create", BSPHISEntryNames.DPC_FillingAgreement, params, false);
+            }else if(op.equals("update")){
+                if(params.containsKey("createUser")){
+                    params.remove("createUser");
+                }
+                if(params.containsKey("createUnit")){
+                    params.remove("createUnit");
+                }
+                if(params.containsKey("createDate")){
+                    params.remove("createDate");
+                }
+                dao.doSave("update", BSPHISEntryNames.DPC_FillingAgreement, params, false);
             }
         } catch (PersistentDataOperationException e) {
             // TODO Auto-generated catch block

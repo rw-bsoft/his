@@ -1437,7 +1437,7 @@ public class EmpiModel implements BSPHISEntryNames {
 								parameters);
 			}
 			Map<String, Object> BRDAbody = dao
-					.doLoad("select a.MZHM as MZHM,a.BRXZ as BRXZ from MS_BRDA a where a.EMPIID=:empiId",
+					.doLoad("select a.MZHM as MZHM,a.BRXZ as BRXZ,a.BRID as BRID from MS_BRDA a where a.EMPIID=:empiId",
 							parameters);
 			if (BRDAbody != null) {
 				body.putAll(BRDAbody);
