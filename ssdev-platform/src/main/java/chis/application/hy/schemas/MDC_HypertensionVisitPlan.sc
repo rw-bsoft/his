@@ -34,6 +34,7 @@
 	<item ref="b.mobileNumber" display="1" queryable="true" />
 	<item ref="b.contactPhone" display="1" queryable="true" />  
 	<item ref="b.phoneNumber" display="1" queryable="true" />
+	<item ref="b.crowdType" display="1" queryable="true" />
 	<item ref="c.regionCode" display="1" queryable="true" />
 	<item ref="e.phrId" alias="档案编号" type="string" length="30" not-null="1"
 		display="0" />
