@@ -33,8 +33,9 @@
 	<item ref="b.idCard" display="1" queryable="true"/>
 	<item ref="b.mobileNumber" display="1" queryable="true" />
 	<item ref="b.contactPhone" display="1" queryable="true" />  
-	<item ref="b.phoneNumber" display="1" queryable="true"/>  
-	<item ref="c.regionCode" display="1" queryable="true"/>  
+	<item ref="b.phoneNumber" display="1" queryable="true"/>
+	<item ref="b.crowdType" display="1" queryable="true" />
+  <item ref="c.regionCode" display="1" queryable="true"/>
 	<item ref="e.phrId" alias="档案编码" type="string" length="30" fixed="true" colspan="2" hidden="true" display="0"/>  
 	<item ref="e.visitDoctor" alias="随访医生" type="string" length="20"
 		defaultValue="%user.userId" queryable="true" >
