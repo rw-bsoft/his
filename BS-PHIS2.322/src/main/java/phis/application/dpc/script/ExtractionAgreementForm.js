@@ -27,7 +27,6 @@ Ext.extend(phis.application.dpc.script.ExtractionAgreementForm, chis.script.BizT
         if (this.exContext.ids.empiId) {
             this.data["empiId"] = this.exContext.ids.empiId;
             var empiData = this.exContext.empiData;
-            var empiId = this.exContext.ids.empiId;
             var personName = empiData.personName;
             var age = empiData.age;
             var sexCode = empiData.sexCode;
@@ -40,18 +39,41 @@ Ext.extend(phis.application.dpc.script.ExtractionAgreementForm, chis.script.BizT
                         record = records[i].data;
                         form.findField("personName").setValue(record.personName);
                         form.findField("age").setValue(record.age);
-                        form.findField("sex").selectedIndex = record.sex;
+                        var sexKey=record.sex;
+                        var sexField=form.findField("sex");
+                        if (sexKey == 1) {
+                            sexField.setValue({
+                                key : sexKey,
+                                text : "男"
+                            });
+                        } else {
+                            sexField.setValue({
+                                key : sexKey,
+                                text : "女"
+                            });
+                        }
                         form.findField("diagnosis").setValue(record.diagnosis);
                         form.findField("operationDate").setValue(record.operationDate);
                         form.findField("proposed").setValue(record.proposed);
+                        form.findField("cost").setValue(record.cost);
                     }
                 }
             }else{
                 form.findField("personName").setValue(personName);
                 form.findField("age").setValue(age);
-                form.findField("sex").selectedIndex = sexCode;
-                form.findField("operationDate").setValue(record.operationDate);
-                form.findField("proposed").setValue(record.proposed);
+                var sexKey=sexCode;
+                var sexField=form.findField("sex");
+                if (sexKey == 1) {
+                    sexField.setValue({
+                        key : sexKey,
+                        text : "男"
+                    });
+                } else {
+                    sexField.setValue({
+                        key : sexKey,
+                        text : "女"
+                    });
+                }
             }
         }
         if (this.op == "create" && !this.initDataId) {

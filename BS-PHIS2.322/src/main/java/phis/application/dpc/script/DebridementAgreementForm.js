@@ -27,10 +27,9 @@ Ext.extend(phis.application.dpc.script.DebridementAgreementForm, chis.script.Biz
 		if (this.exContext.ids.empiId) {
 			this.data["empiId"] = this.exContext.ids.empiId;
 			var empiData = this.exContext.empiData;
-			var empiId = this.exContext.ids.empiId;
 			var personName = empiData.personName;
 			var age = empiData.age;
-			var sexCode = empiData.sexCode; 	
+			var sexCode = empiData.sexCode;
 			var form = this.form.getForm();		
 			if(this.initDataId){	
 				var record = null;
@@ -40,14 +39,38 @@ Ext.extend(phis.application.dpc.script.DebridementAgreementForm, chis.script.Biz
 						record = records[i].data;
 						form.findField("personName").setValue(record.personName);
 						form.findField("age").setValue(record.age);
-						form.findField("sex").selectedIndex = record.sex;
+						var sexKey=record.sex;
+						var sexField=form.findField("sex");
+						if (sexKey == 1) {
+							sexField.setValue({
+								key : sexKey,
+								text : "男"
+							});
+						} else {
+							sexField.setValue({
+								key : sexKey,
+								text : "女"
+							});
+						}
 						form.findField("diagnosis").setValue(record.diagnosis);
 					}
 				}
 			}else{
 				form.findField("personName").setValue(personName);
 				form.findField("age").setValue(age);
-				form.findField("sex").selectedIndex = sexCode;
+				var sexKey=sexCode;
+				var sexField=form.findField("sex");
+				if (sexKey == 1) {
+					sexField.setValue({
+						key : sexKey,
+						text : "男"
+					});
+				} else {
+					sexField.setValue({
+						key : sexKey,
+						text : "女"
+					});
+				}
 			}	
 		}
 		if (this.op == "create" && !this.initDataId) {
