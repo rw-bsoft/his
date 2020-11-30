@@ -38,6 +38,18 @@
 	<bean id="autoSendSourceJobDetail" class="phis.source.schedule.AutoSendSourceSchedule" >
 		<property name="sessionFactory" ref="mySessionFactory"/>
 	</bean>
+	<!-- ********************药品，消耗定时上传至省药品平台 每天23时上传*********************** -->
+	<bean id="SptTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="SptJob" />
+		<property name="cronExpression" value="0 0 23 * * ?"  />
+	</bean>
+	<bean id="SptJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="SptJobDetail" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="SptJobDetail" class="phis.source.schedule.SptTimeTaskSchedule" >
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
 	<!--  ************************任务列表****************** -->
 	<bean id="statSchedulerFactoryBean" lazy-init="false" autowire="no"
 		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
@@ -46,7 +58,8 @@
 				<ref bean="bedCostTrigger"/>
 				<ref bean="autoBuildSourceTrigger"/>
 				<ref bean="autoSendSourceTrigger"/>
-			</list>
-		</property>
-	</bean>
-</beans>
+				<!-- <ref bean="SptTrigger"/> -->
+                </list>
+            </property>
+        </bean>
+    </beans>
