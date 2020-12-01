@@ -6,7 +6,7 @@
 			<rule name="increaseId" type="increase" length="18" startPos="1" />
 		</key>
 	</item>
-	<item id="ZTMC" alias="组套名称"  anchor="100%" colspan="2" width="200" type="string" length="20" not-null="1"/>
+	<item id="ZTMC" alias="组套名称"  anchor="100%" colspan="2" width="200" type="string" length="40" not-null="1"/>
 	<item id="PYDM" alias="拼音码" type="string"  length="20" display="2" queryable="true" selected="true" target="ZTMC" codeType="py"/>
 	<item id="GLJB" alias="关联疾病"  anchor="100%" colspan="2" type="int" length="18" display="0" not-null="1" defaultValue="0">
 		<dic id="phis.dictionary.diseaseCode" searchField="PYDM"  listWidt="220" remote="true"></dic>
