@@ -128,11 +128,15 @@ public class HospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 			tot.put("YSXM","合计:");
 			tot.put("FYHJ",0.00);
 			//就诊统计
-			String jzsql="select a.ZZYS as YSDM ,count(1) as JZRC from zy_brry a "+
-					" where a.jgid='"+uid+"' and a.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss')"+ 
+//			String jzsql="select a.ZZYS as YSDM ,count(1) as JZRC from zy_brry a "+
+//					" where a.jgid='"+uid+"' and a.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss')"+
+//					" and  a.cyrq <=to_date('"+dateTo+"','yyyy-mm-dd HH24:mi:ss') "+
+//					" group by a.ZZYS ";
+			String jzsql="select b.YSGH as YSDM,count(distinct b.zyh) as JZRC from zy_brry a,zy_fymx b  where a.zyh = b.zyh and a.jgid= b.jgid"+
+					" and  a.jgid='"+uid+"' and a.cyrq>=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss')"+
 					" and  a.cyrq <=to_date('"+dateTo+"','yyyy-mm-dd HH24:mi:ss') "+
-					" group by a.ZZYS ";
-			List<Map<String, Object>> jzlist = ss.createSQLQuery(jzsql.toString())
+					" group by b.YSGH ";
+			List<Map<String, Object>> jzlist = ss.createSQLQuery(jzsql)
 					.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 			if(jzlist.size()==0){
 				tot.put("JZRC",0);
@@ -159,10 +163,10 @@ public class HospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 					" select a.ysgh,1 as jcdsl"+
 					" from zy_bqyz a join zy_brry b on a.jgid = b.jgid and a.zyh = b.zyh" +
 					" where a.jgid='"+uid+"' and a.xmlx = 4 and a.zfpb = 0 and a.bzxx is not null"+
-					" and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss')"+ 
+					" and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss')"+
 					" and b.cyrq <=to_date('"+dateTo+"','yyyy-mm-dd HH24:mi:ss') "+
 					" ) group by ysgh";
-			List<Map<String, Object>> jclist = ss.createSQLQuery(jcsql.toString())
+			List<Map<String, Object>> jclist = ss.createSQLQuery(jcsql)
 					.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 			if(jclist.size()==0){
 				tot.put("JCDSL",0);
@@ -178,6 +182,7 @@ public class HospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 						} catch (ControllerException e) {
 							e.printStackTrace();
 						}
+
 						data.put(one.get("YSDM")+"", temp);
 					}else{
 						data.get(one.get("YSDM")+"").put("JCDSL", one.get("JCDSL"));
@@ -185,13 +190,20 @@ public class HospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 				}
 			}
 			//处方数统计
-			String cfsql="select ZZYS as YSDM,sum(XYCFS) as XYCFS,sum(ZYCFS) as ZYCFS ,sum(CYCFS) as CYCFS from ("+
-					" select b.zzys,case a.yplx when 1 then 1 else 0 end  as XYCFS,case a.yplx when 2 then 1 else 0 end as ZYCFS,"+
+//			String cfsql="select ZZYS as YSDM,sum(XYCFS) as XYCFS,sum(ZYCFS) as ZYCFS ,sum(CYCFS) as CYCFS from ("+
+//					" select b.zzys,case a.yplx when 1 then 1 else 0 end  as XYCFS,case a.yplx when 2 then 1 else 0 end as ZYCFS,"+
+//					" case a.yplx when 3 then 1 else 0 end  as CYCFS"+
+//					" from zy_fymx a join zy_brry b on a.jgid = b.jgid and a.zyh = b.zyh where a.jgid='"+uid+"'" +
+//					" and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss')"+
+//					" and b.cyrq <=to_date('"+dateTo+"','yyyy-mm-dd HH24:mi:ss') "+
+//					" ) group by zzys";
+			String cfsql="select ysgh as YSDM,sum(XYCFS) as XYCFS,sum(ZYCFS) as ZYCFS ,sum(CYCFS) as CYCFS from ("+
+					" select a.ysgh,case a.yplx when 1 then 1 else 0 end  as XYCFS,case a.yplx when 2 then 1 else 0 end as ZYCFS,"+
 					" case a.yplx when 3 then 1 else 0 end  as CYCFS"+
 					" from zy_fymx a join zy_brry b on a.jgid = b.jgid and a.zyh = b.zyh where a.jgid='"+uid+"'" +
-					" and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss')"+ 
+					" and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss')"+
 					" and b.cyrq <=to_date('"+dateTo+"','yyyy-mm-dd HH24:mi:ss') "+
-					" ) group by zzys";
+					" ) group by ysgh";
 			List<Map<String, Object>> cflist = ss.createSQLQuery(cfsql.toString())
 					.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 			if(cflist.size()==0){
@@ -225,13 +237,19 @@ public class HospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 				}
 			}
 			//处方金额统计
-			String cfjesql="select zzys as YSDM ,fyxm as FYGB,sum(zjje) as HJJE from ("+
-					" select b.zzys as zzys,a.fyxm as fyxm,a.zjje as zjje"+
+//			String cfjesql="select zzys as YSDM ,fyxm as FYGB,sum(zjje) as HJJE from ("+
+//					" select b.zzys as zzys,a.fyxm as fyxm,a.zjje as zjje"+
+//					" from zy_fymx a join zy_brry b on a.jgid = b.jgid and a.zyh = b.zyh " +
+//					" where a.jgid='"+uid+"' and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss')"+
+//					" and b.cyrq <=to_date('"+dateTo+"','yyyy-mm-dd HH24:mi:ss')"+
+//					" ) group by zzys,fyxm";
+			String cfjesql="select ysgh as YSDM ,fyxm as FYGB,sum(zjje) as HJJE from ("+
+					" select a.ysgh,a.fyxm as fyxm,a.zjje as zjje"+
 					" from zy_fymx a join zy_brry b on a.jgid = b.jgid and a.zyh = b.zyh " +
-					" where a.jgid='"+uid+"' and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss')"+ 
+					" where a.jgid='"+uid+"' and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss')"+
 					" and b.cyrq <=to_date('"+dateTo+"','yyyy-mm-dd HH24:mi:ss')"+
-					" ) group by zzys,fyxm";
-			List<Map<String, Object>> cfjelist = ss.createSQLQuery(cfjesql.toString())
+					" ) group by ysgh,fyxm";
+			List<Map<String, Object>> cfjelist = ss.createSQLQuery(cfjesql)
 					.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 			for(Map<String, Object> one :cfjelist){
 				tot.put(one.get("FYGB")+"", df.format(tot.get(one.get("FYGB")+"")==null?Double.parseDouble(one.get("HJJE")+""):
@@ -259,15 +277,23 @@ public class HospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 				}
 			}
 			//检查特殊金额--Wangjl  中医治疗费
-			String jctsjesql="select ysdm as YSDM,sum(zyzlf) as ZYZLF from ("+
-					" select b.zzys as ysdm,"+
+//			String jctsjesql="select ysdm as YSDM,sum(zyzlf) as ZYZLF from ("+
+//					" select b.zzys as ysdm,"+
+//					" case when c.zyzlf =1  then a.zjje else 0 end as zyzlf"+
+//					" from zy_fymx a join zy_brry b on a.jgid=b.jgid and a.zyh=b.zyh"+
+//					" join gy_ylsf c on a.fyxh = c.fyxh and a.fyxm = c.fygb"+
+//					" where a.jgid='"+uid+"' and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss') "+
+//					" and  b.cyrq <=to_date('"+dateTo+"','yyyy-mm-dd HH24:mi:ss') "+
+//					" and c.zyzlf =1)  group by ysdm ";
+			String jctsjesql="select ysgh as YSDM,sum(zyzlf) as ZYZLF from ("+
+					" select a.ysgh,"+
 					" case when c.zyzlf =1  then a.zjje else 0 end as zyzlf"+
 					" from zy_fymx a join zy_brry b on a.jgid=b.jgid and a.zyh=b.zyh"+
 					" join gy_ylsf c on a.fyxh = c.fyxh and a.fyxm = c.fygb"+
 					" where a.jgid='"+uid+"' and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss') "+
 					" and  b.cyrq <=to_date('"+dateTo+"','yyyy-mm-dd HH24:mi:ss') "+
-					" and c.zyzlf =1)  group by ysdm ";
-			List<Map<String, Object>> jctsjelist = ss.createSQLQuery(jctsjesql.toString())
+					" and c.zyzlf =1)  group by ysgh ";
+			List<Map<String, Object>> jctsjelist = ss.createSQLQuery(jctsjesql)
 					.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 			if(jctsjelist.size()==0){
 				tot.put("ZYZLF", 0);
@@ -294,12 +320,17 @@ public class HospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 			}
 			
 			//收费项目
+//			String xmsql="select s.sfxm as SFXM,s.sfmc as SFMC  from gy_sfxm s ,("+
+//					" select distinct a.fyxm from zy_fymx a join zy_brry b on a.jgid = b.jgid and a.zyh = b.zyh "+
+//					" where a.jgid='"+uid+"' and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss') "+
+//					" and b.cyrq <=to_date('"+dateTo+"','yyyy-mm-dd HH24:mi:ss') "+
+//					" ) t where s.sfxm=t.fyxm order by s.sfxm";
 			String xmsql="select s.sfxm as SFXM,s.sfmc as SFMC  from gy_sfxm s ,("+
 					" select distinct a.fyxm from zy_fymx a join zy_brry b on a.jgid = b.jgid and a.zyh = b.zyh "+
 					" where a.jgid='"+uid+"' and b.cyrq >=to_date('"+dateFrom+"','yyyy-mm-dd HH24:mi:ss') "+
 					" and b.cyrq <=to_date('"+dateTo+"','yyyy-mm-dd HH24:mi:ss') "+
 					" ) t where s.sfxm=t.fyxm order by s.sfxm";
-			List<Map<String, Object>> list_column = ss.createSQLQuery(xmsql.toString())
+			List<Map<String, Object>> list_column = ss.createSQLQuery(xmsql)
 					.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 			
 			LinkedHashMap<String, ColumnModel> map = new LinkedHashMap<String, ColumnModel>();
