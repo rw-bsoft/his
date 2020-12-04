@@ -110,7 +110,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="宋体" size="18"/>
 				</textElement>
-				<text><![CDATA[时间]]></text>
+				<text><![CDATA[手术日期]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="staticText-12" x="341" y="-1" width="120" height="28" uuid="25010bc5-af93-431d-b58a-c603664377c5"/>
@@ -285,63 +285,7 @@
 				<textFieldExpression><![CDATA[$P{PROPOSED}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-23" x="461" y="465" width="50" height="28" uuid="60f45a80-6867-4d40-a2b8-e4a4bfa972e8"/>
-				<box>
-					<pen lineWidth="1.0" lineStyle="Solid"/>
-					<topPen lineWidth="1.0" lineStyle="Solid"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="宋体" size="18"/>
-				</textElement>
-				<text><![CDATA[202]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-19" x="511" y="465" width="170" height="28" uuid="92ed2642-3ca9-4fe0-b963-5db7599de9bb"/>
-				<box>
-					<pen lineWidth="1.0" lineStyle="Solid"/>
-					<topPen lineWidth="0.0" lineStyle="Solid"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
-				</box>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="宋体" size="18"/>
-				</textElement>
-				<text><![CDATA[  年     月     日]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-23" x="517" y="27" width="28" height="28" uuid="39fe175c-1eb9-452e-9424-c5680f1a2ab3"/>
-				<box>
-					<pen lineWidth="1.0" lineStyle="Solid"/>
-					<topPen lineWidth="1.0" lineStyle="Solid"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="宋体" size="18"/>
-				</textElement>
-				<text><![CDATA[年]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-25" x="653" y="27" width="28" height="28" uuid="707732cb-c5b3-4e5d-8141-fe1f87e4707d"/>
-				<box>
-					<pen lineWidth="1.0" lineStyle="Solid"/>
-					<topPen lineWidth="1.0" lineStyle="Solid"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="宋体" size="18"/>
-				</textElement>
-				<text><![CDATA[日]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-24" x="585" y="27" width="28" height="28" uuid="293de824-28db-47f6-869e-8d9425025196"/>
+				<reportElement key="staticText-24" x="581" y="27" width="30" height="28" uuid="3607c78c-5737-4366-a292-f28ed3371b95"/>
 				<box>
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
@@ -355,7 +299,7 @@
 				<text><![CDATA[月]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-23" x="545" y="27" width="40" height="28" uuid="3698d04e-f4c9-4354-a1a8-5becb4b30907"/>
+				<reportElement key="staticText-23" x="509" y="27" width="30" height="28" uuid="6e40a3ca-6e0a-421c-802f-db2c04708969"/>
 				<box>
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
@@ -366,10 +310,66 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="宋体" size="18"/>
 				</textElement>
-				<text><![CDATA[]]></text>
+				<text><![CDATA[年]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-5" x="461" y="27" width="48" height="28" uuid="516f7f86-3183-454d-9792-f07bac2ba999"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{YEAR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-6" x="539" y="27" width="42" height="28" uuid="5ea1c9b1-8157-4535-8960-9db0b7b1a8d3"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MONTH}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-7" x="611" y="27" width="40" height="28" uuid="a0171070-8f4b-4631-b0ca-6775ebe72b43"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DAY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-25" x="651" y="27" width="30" height="28" uuid="181e1e47-11a8-4626-b68d-5c251ca4ece2"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[日]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-23" x="511" y="27" width="6" height="28" uuid="3ff81e47-62a6-4ab2-a03f-727cd3f6bbd1"/>
+				<reportElement key="staticText-24" x="581" y="465" width="30" height="28" uuid="28f2825d-9e10-47a6-abf9-76e9d01a7783"/>
 				<box>
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
@@ -380,10 +380,10 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="宋体" size="18"/>
 				</textElement>
-				<text><![CDATA[]]></text>
+				<text><![CDATA[月]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-23" x="461" y="27" width="50" height="28" uuid="1fc9f95f-48d5-4efa-a50a-e49b622807c8"/>
+				<reportElement key="staticText-23" x="509" y="465" width="30" height="28" uuid="75cb5051-17b8-4daa-8520-a86d9c85f976"/>
 				<box>
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
@@ -394,10 +394,24 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="宋体" size="18"/>
 				</textElement>
-				<text><![CDATA[202]]></text>
+				<text><![CDATA[年]]></text>
 			</staticText>
-			<staticText>
-				<reportElement key="staticText-23" x="613" y="27" width="40" height="28" uuid="06f8c5af-1724-498d-975a-c4a1793f8a89"/>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-5" x="461" y="465" width="48" height="28" uuid="85f54901-4950-4ab0-8e44-f3b26ed9b29f"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{YEAR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-6" x="539" y="465" width="42" height="28" uuid="66e04ace-e9e6-4893-9657-8ceb8142fb7b"/>
 				<box>
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="1.0" lineStyle="Solid"/>
@@ -408,7 +422,35 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="宋体" size="18"/>
 				</textElement>
-				<text><![CDATA[]]></text>
+				<textFieldExpression><![CDATA[$P{MONTH}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-7" x="611" y="465" width="40" height="28" uuid="436900d5-aefd-421f-b66a-15ff456db325"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DAY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-25" x="651" y="465" width="30" height="28" uuid="d5f81d30-f7e9-475d-8690-93de0aa861b2"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18"/>
+				</textElement>
+				<text><![CDATA[日]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
