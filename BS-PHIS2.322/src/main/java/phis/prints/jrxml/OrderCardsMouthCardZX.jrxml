@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsMouthCardZX" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsMouthCard" language="groovy" pageWidth="600" pageHeight="800" columnWidth="600" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a77218c0-bf97-4129-aa94-99c7a6b48e34">
+	<property name="ireport.zoom" value="1.4641000000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
 	</parameter>
@@ -10,34 +18,42 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
 	<columnHeader>
-		<band height="27">
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="80" splitType="Stretch">
+			<subreport isUsingCache="true">
+				<reportElement key="subreport" x="144" y="44" width="446" height="20" uuid="a4cebcf9-3f34-4079-9937-9ff4b788c736"/>
+				<dataSourceExpression><![CDATA[$F{ZYHM}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "OrderCardsChildrenZX.jasper"]]></subreportExpression>
+			</subreport>
 			<staticText>
-				<reportElement x="14" y="6" width="42" height="20"/>
+				<reportElement key="staticText" x="549" y="10" width="41" height="20" uuid="58e6330f-8fa8-4018-a0f5-0e64ecab1c8f"/>
 				<box>
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[床号]]></text>
+				<text><![CDATA[备注]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="59" y="6" width="50" height="20"/>
-				<box>
-					<bottomPen lineWidth="1.0"/>
-				</box>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="102" y="44" width="28" height="20" uuid="df740668-ba6e-4c3b-9bb2-ba796cfe8982"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[姓名]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{BRNL}]]></textFieldExpression>
+			</textField>
 			<staticText>
-				<reportElement x="112" y="6" width="49" height="20"/>
-				<box>
-					<bottomPen lineWidth="1.0"/>
-				</box>
+				<reportElement key="staticText" x="130" y="44" width="12" height="20" uuid="cc498e7e-e9b0-460e-b6a7-fe30ac7e33ee"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[年龄]]></text>
+				<text><![CDATA[岁]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="165" y="6" width="173" height="20"/>
+				<reportElement key="staticText" x="144" y="10" width="173" height="20" uuid="09d0dfd4-28c5-4359-aa57-7856976a1414"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="0.0"/>
@@ -49,23 +65,7 @@
 				<text><![CDATA[医嘱名称]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="341" y="6" width="72" height="20"/>
-				<box>
-					<bottomPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[剂量]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="416" y="6" width="39" height="20"/>
-				<box>
-					<bottomPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[频次]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="459" y="6" width="71" height="20"/>
+				<reportElement key="staticText" x="478" y="10" width="71" height="20" uuid="85b02e5a-2a3a-4b5d-bf3b-610fc1634a94"/>
 				<box>
 					<bottomPen lineWidth="1.0"/>
 				</box>
@@ -73,42 +73,72 @@
 				<text><![CDATA[执行时间]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="533" y="6" width="41" height="20"/>
+				<reportElement key="staticText" x="102" y="10" width="40" height="20" uuid="c329257b-c7c8-4a50-867c-23e73bb91f34"/>
 				<box>
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[备注]]></text>
+				<text><![CDATA[年龄]]></text>
 			</staticText>
-		</band>
-	</columnHeader>
-	<detail>
-		<band height="47" splitType="Stretch">
-			<textField>
-				<reportElement x="14" y="14" width="42" height="20"/>
+			<staticText>
+				<reportElement key="staticText" x="10" y="10" width="42" height="20" uuid="08e88521-d568-4d06-bdb6-147cd192f571"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{BRCH}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="59" y="14" width="50" height="20"/>
+				<text><![CDATA[床号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="389" y="10" width="39" height="20" uuid="99585326-7a87-4169-acba-91008a1e76dc"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{BRXM}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="112" y="14" width="37" height="20"/>
+				<text><![CDATA[频次]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="10" y="44" width="42" height="20" uuid="0cf023bb-df0b-43ce-8f2d-be122c7d0431"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{BRNL}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{BRCH}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="149" y="14" width="12" height="20"/>
+				<reportElement key="staticText-1" x="428" y="10" width="50" height="20" uuid="da34c04d-812a-4f18-b6a0-4ff94dc58469"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[岁]]></text>
+				<text><![CDATA[用法]]></text>
 			</staticText>
-			<subreport>
-				<reportElement x="165" y="14" width="409" height="20"/>
-				<dataSourceExpression><![CDATA[$F{ZYHM}]]></dataSourceExpression>
-				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "OrderCardsChildrenZX.jasper"]]></subreportExpression>
-			</subreport>
+			<staticText>
+				<reportElement key="staticText" x="317" y="10" width="72" height="20" uuid="18dcb9a7-e6ae-420f-b328-e5322b764611"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[剂量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="52" y="10" width="50" height="20" uuid="a7bd5438-b544-43d6-923b-ca09782b54d1"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="52" y="44" width="50" height="20" uuid="b1aeace8-f02e-4dde-a542-dbd8dc6a44c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{BRXM}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
 </jasperReport>

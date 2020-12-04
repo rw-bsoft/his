@@ -61,6 +61,7 @@ public class OrderCardsMouthCardZX implements IHandler {
 			map.put("YCJL", map.get("YCJL") + "");
 			map.put("ZYHM", ZYHM);
 			map.put("JLDW", map.get("JLDW") == null ? "":map.get("JLDW") + "");
+			map.put("YPYF",map.get("XMMC") == null ? "":map.get("XMMC") + "");//药品用法
 			//当频次为 Q1H时 由于执行时间是 0-1-2-3-...-23 在前台执行单的执行时间显示不下 所以暂显示成00-23
 			if(((String)map.get("PCMC")).equals("Q1H")){
 				map.put("YZZXSJ", "00-23");
@@ -114,7 +115,7 @@ public class OrderCardsMouthCardZX implements IHandler {
 		/******************add by lizhi 2018-04-10根据床号排序*****************/
 		Collections.sort(records, new Comparator<Map<String, Object>>() {
             public int compare(Map<String, Object> o1, Map<String, Object> o2) {
-                Integer ch1 = Integer.valueOf(o1.get("BRCH").toString()) ;//ch1是从你list里面拿出来的一个 
+                Integer ch1 = Integer.valueOf(o1.get("BRCH").toString()) ;//ch1是从你list里面拿出来的一个
                 Integer ch2 = Integer.valueOf(o2.get("BRCH").toString()) ; //ch2是从你list里面拿出来的第二个BRCH
                 return ch1.compareTo(ch2);
             }
@@ -145,7 +146,7 @@ public class OrderCardsMouthCardZX implements IHandler {
 	}
 
 	public List<Map<String, Object>> getList(Map<String, Object> request,
-			Context ctx) throws PrintException {
+			Context ctx) {
 		BaseDAO dao = new BaseDAO(ctx);
 		UserRoleToken user = UserRoleToken.getCurrent();
 		String JGID = user.getManageUnitId();
@@ -183,8 +184,9 @@ public class OrderCardsMouthCardZX implements IHandler {
 
 				Map<String, Object> parameters = new HashMap<String, Object>();
 				// parameters.put("arr_zyh", zyh);
-				if(yzlb==5)
-					yzlb=4;
+				if(yzlb==5) {
+					yzlb = 4;
+				}
 				parameters.put("BQDM", Long.parseLong(wardId));// 当前病区
 				parameters.put("YZLB", yzlb);// 卡片类型
 				parameters.put("JGID", JGID);// 机构ID

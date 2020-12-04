@@ -1,53 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsChildrenZX" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsChildren" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e197f8eb-3d46-451e-afa9-41a0e21f440f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
 	<field name="YZMC" class="java.lang.String"/>
 	<field name="YCJL" class="java.lang.String"/>
 	<field name="PCMC" class="java.lang.String"/>
 	<field name="YZZXSJ" class="java.lang.String"/>
 	<field name="BZXX" class="java.lang.String"/>
 	<field name="JLDW" class="java.lang.String"/>
+	<field name="YPYF" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
-			<textField>
-				<reportElement x="368" y="0" width="41" height="20"/>
+		<band height="49" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="409" y="4" width="41" height="20" uuid="6929909b-1077-4f8c-9892-90bcdc9905c1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{BZXX}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{BZXX}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="251" y="0" width="39" height="20"/>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="338" y="4" width="71" height="20" uuid="04c3ae6d-29dd-4a50-b274-8fe043612672"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{PCMC}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{YZZXSJ}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="0" y="0" width="173" height="20"/>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="288" y="4" width="50" height="20" uuid="d855a28d-8550-40a2-8bed-c086d34d6617"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{YPYF}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="177" y="4" width="47" height="20" uuid="ddd7b541-5cd4-42f1-860c-a23fb241683c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{YCJL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="249" y="4" width="39" height="20" uuid="da15ffea-008b-475c-a718-83e5cf3ce949"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PCMC}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="4" y="4" width="173" height="20" uuid="3af6469a-d758-41f3-b915-666cbc475576"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YZMC}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{YZMC}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="176" y="0" width="47" height="20"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YCJL}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="294" y="0" width="71" height="20"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YZZXSJ}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="223" y="0" width="25" height="20"/>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="224" y="4" width="25" height="20" uuid="2d71d436-2ba4-4d7a-8b48-15f744a2f2de"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{JLDW}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{JLDW}]]></textFieldExpression>
 			</textField>
+			<line>
+				<reportElement key="line" x="6" y="36" width="443" height="1" uuid="7ded19e7-35d4-418e-80ec-ba22290f872e"/>
+			</line>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="8">
-			<line>
-				<reportElement x="0" y="5" width="398" height="1"/>
-			</line>
-		</band>
+		<band splitType="Stretch"/>
 	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
 </jasperReport>

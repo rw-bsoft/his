@@ -409,6 +409,8 @@ public class OrderCardsStillDripCard implements IHandler {
 				long a2 = Long.parseLong(BRCH2.replace("-", ""));
 				if (a1 > a2) {
 					return 1;
+				} else if (a1 == a2) {
+					return 0;
 				} else {
 					return -1;
 				}

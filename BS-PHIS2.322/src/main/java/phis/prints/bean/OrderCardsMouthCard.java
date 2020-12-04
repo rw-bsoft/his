@@ -63,7 +63,8 @@ public class OrderCardsMouthCard implements IHandler {
 				map.put("YCJL", map.get("YCJL") + "");
 				map.put("JLDW", map.get("JLDW") == null ? "" : map.get("JLDW")
 						+ "");
-				map.put("TimeQ1", "");
+				map.put("YPYF",map.get("XMMC") + "");//药品用法
+				//map.put("TimeQ1", "");
 				map.put("TimeQ2", "");
 				map.put("TimeQ3", "");
 				map.put("TimeQ4", "");
