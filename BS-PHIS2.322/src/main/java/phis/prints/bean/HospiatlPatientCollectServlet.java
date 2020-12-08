@@ -443,7 +443,7 @@ public class HospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 			// 获取表单参数
 			HashMap<String, Object> requestData = (HashMap<String, Object>) config
 					.get("requestData");
-			String title = "住院收入核算表";//(String) config.get("title");
+			String title = "住院收入核算表(按汇总日期统计)";//(String) config.get("title");
 			String dateFrom = (String) requestData.get("dateFrom");
 			String dateTo = (String) requestData.get("dateTo");
 			List<Object> ksdmarray = (List<Object>) requestData.get("ksdm");
