@@ -485,7 +485,7 @@ public class OutHospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 			} else {
 				l_data.clear();
 				map.clear();
-				StringBuilder sqlBuilder = new StringBuilder();
+				StringBuilder sqlBuilder;
 				// 生成表结构
 				ColumnModel cm0 = new ColumnModel();
 				cm0.setName("TOTAL");
@@ -1020,7 +1020,7 @@ public class OutHospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 		int totalWidth = 0;
 		if (!isSeparate) {
 			if (columnModel.length > 1) {
-				if ("KSMC".equals(columnModel[1].getName() + "") || "ZDMC".equals(columnModel[5].getName() + "")) {
+				if ("KSMC".equals(columnModel[1].getName() + "") ) {
 					for (int i = 0; i < columnModel.length; i++) {
 						if (columnModel[i].isHide()) {
 							continue;
@@ -1055,11 +1055,6 @@ public class OutHospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 						} else {
 							textField
 									.setHorizontalAlignment(HorizontalAlignEnum.RIGHT);
-						}
-						if("ZDMC".equals(columnModel[5].getName() + "") && i == 5){
-							textField
-								.setHorizontalAlignment(HorizontalAlignEnum.LEFT);
-							textField.setWidth(150);
 						}
 						textField.setX(totalWidth - width);
 						textField.getLineBox().getPen().setLineWidth(1f);
@@ -1125,6 +1120,7 @@ public class OutHospiatlPatientCollectServlet extends DynamicPrint_BySZ {
 			if (columnModel[i].isHide()) {
 				continue;
 			}
+
 			int width = columnModel[i].getWdith();
 			totalWidth += width;
 			if (totalWidth > columnWidth) {
