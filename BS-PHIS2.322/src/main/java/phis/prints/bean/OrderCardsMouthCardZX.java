@@ -62,6 +62,7 @@ public class OrderCardsMouthCardZX implements IHandler {
 			map.put("ZYHM", ZYHM);
 			map.put("JLDW", map.get("JLDW") == null ? "":map.get("JLDW") + "");
 			map.put("YPYF",map.get("XMMC") == null ? "":map.get("XMMC") + "");//药品用法
+			map.put("YPSL",map.get("YCSL") == null ? "" : map.get("YCSL") + "");//药品数量
 			//当频次为 Q1H时 由于执行时间是 0-1-2-3-...-23 在前台执行单的执行时间显示不下 所以暂显示成00-23
 			if(((String)map.get("PCMC")).equals("Q1H")){
 				map.put("YZZXSJ", "00-23");

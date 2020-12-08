@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsStillDripChildren" language="groovy" pageWidth="420" pageHeight="380" orientation="Landscape" columnWidth="420" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsChildren" pageWidth="480" pageHeight="380" columnWidth="480" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="21cb0db0-ad7a-471d-9bdc-6113d9916b94">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
 	<import value="net.sf.jasperreports.engine.*"/>
@@ -9,11 +12,12 @@
 	<field name="YCJL" class="java.lang.String"/>
 	<field name="PCMC" class="java.lang.String"/>
 	<field name="JLDW" class="java.lang.String"/>
-	<field name="YCSL" class="java.lang.String"/>
+	<field name="YPSL" class="java.lang.String"/>
 	<field name="ZH" class="java.lang.String"/>
 	<field name="SJBXS" class="java.lang.String"/>
 	<field name="QM" class="java.lang.String"/>
 	<field name="DS" class="java.lang.String"/>
+	<field name="YPYF" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -29,7 +33,7 @@
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="270" y="0" width="50" height="20"/>
+				<reportElement key="textField" x="353" y="0" width="50" height="20" uuid="b045c7db-b944-4114-aaaf-0f421b69af40"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -37,20 +41,20 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{SJBXS}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{SJBXS}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="180" y="0" width="40" height="20"/>
+				<reportElement key="textField" x="183" y="0" width="40" height="20" uuid="043fbd9f-d88a-4b7c-8932-a8e0051c1581"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YCJL}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{YCJL}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="220" y="0" width="20" height="20"/>
+				<reportElement key="textField" x="223" y="0" width="20" height="20" uuid="5e7c7bd3-e071-4b82-8d61-6a967b812e35"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -58,10 +62,10 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{JLDW}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{JLDW}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="20" y="0" width="160" height="20"/>
+				<reportElement key="textField" x="23" y="0" width="160" height="20" uuid="6c791090-962c-435f-be7e-cc47a341e424"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -69,10 +73,10 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YZMC}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{YZMC}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="350" y="0" width="30" height="20"/>
+				<reportElement key="textField" x="403" y="0" width="30" height="20" uuid="3430cf7e-7efd-4ef9-baf3-ef3bbdb004ee"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -80,10 +84,10 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{DS}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{DS}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="0" y="0" width="20" height="20"/>
+				<reportElement key="textField" x="3" y="0" width="20" height="20" uuid="b09ce2c0-6aa0-411c-8816-c0f350c34517"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -91,10 +95,10 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{ZH}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{ZH}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="380" y="0" width="35" height="20"/>
+				<reportElement key="textField" x="433" y="0" width="35" height="20" uuid="c37bad42-234c-401e-ad12-67815052ec33"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -102,10 +106,10 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{QM}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{QM}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="240" y="0" width="30" height="20"/>
+				<reportElement key="textField" x="243" y="0" width="30" height="20" uuid="0720165a-862a-401f-abef-7a1ad975e496"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -113,10 +117,10 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YCSL}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{YPSL}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="320" y="0" width="30" height="20"/>
+				<reportElement key="textField" x="273" y="0" width="30" height="20" uuid="3150f837-a5f8-435b-84dc-37797f37d2c7"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -124,7 +128,18 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{PCMC}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{PCMC}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="303" y="0" width="50" height="20" uuid="91190cab-9110-4f1d-bbdd-9bd3433a1908"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{YPYF}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

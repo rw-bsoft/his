@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsStillDripCard" language="groovy" pageWidth="255" pageHeight="170" orientation="Landscape" columnWidth="245" leftMargin="5" rightMargin="5" topMargin="0" bottomMargin="0" uuid="9bc3b1bb-dcf0-4bf4-bc33-9a40694023f0">
-	<property name="ireport.scriptlethandling" value="0"/>
-	<property name="ireport.encoding" value="UTF-8"/>
-	<property name="ireport.zoom" value="1.0"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsMouthCard" language="groovy" pageWidth="305" pageHeight="170" columnWidth="305" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="df729af0-9c06-4d9f-9c7e-e1350d9e03d0">
+	<property name="ireport.zoom" value="1.4641000000000013"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
@@ -17,12 +17,6 @@
 	<field name="PCMC" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<field name="Date" class="java.lang.String"/>
 	<field name="Time" class="java.lang.String"/>
-	<field name="PCMC2" class="net.sf.jasperreports.engine.JRDataSource"/>
-	<field name="Date2" class="java.lang.String"/>
-	<field name="BRNL2" class="java.lang.String"/>
-	<field name="BRXM2" class="java.lang.String"/>
-	<field name="Time2" class="java.lang.String"/>
-	<field name="BRCH2" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -36,106 +30,19 @@
 		<band splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="111" splitType="Stretch">
-			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="35" y="30" width="40" height="25" uuid="bbf193db-e00a-45ad-ba75-16e9136fb0fe"/>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font size="12"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{BRCH}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="110" y="30" width="59" height="25" uuid="3572399f-028e-4988-b3e0-500927f64b28"/>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font size="14" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{BRXM}]]></textFieldExpression>
-			</textField>
+		<band height="125" splitType="Stretch">
 			<staticText>
-				<reportElement key="staticText" x="0" y="30" width="35" height="25" uuid="ac2365d7-b5d9-41dd-8950-d7cd79b8f091"/>
+				<reportElement key="staticText" x="116" y="3" width="50" height="22" uuid="59ab1bd9-1e0b-4335-a285-ea6bd2cd1d21"/>
 				<box>
-					<leftPen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[床号：]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText" x="75" y="30" width="35" height="25" uuid="e8f8b449-6100-47cd-9cd7-bd8ae1b4c1ad"/>
-				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[姓名：]]></text>
+				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="212" y="30" width="15" height="25" uuid="1619c118-feed-4666-b30b-feafac7d013b"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="false"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{BRNL}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement key="staticText" x="179" y="30" width="33" height="25" uuid="cbc676c5-2b59-4d67-9c04-71f0e627ace1"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[年龄：]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText" x="227" y="30" width="17" height="25" uuid="d035810d-0724-4383-b818-0aca0a90d26f"/>
-				<box>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[岁]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText" x="0" y="55" width="130" height="20" uuid="4b3602c7-02e9-40c9-99e0-f64ff068d538"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[名称]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText" x="130" y="55" width="50" height="20" uuid="1b18ddd3-34a1-45e8-9984-c4a4715c1100"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[剂量]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText" x="180" y="55" width="37" height="20" uuid="fe3a3231-f66b-45eb-a85c-8c1a0d48515d"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[数量]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText" x="0" y="8" width="35" height="22" uuid="9afff3db-1588-43aa-b52e-7f1ea262c88e"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-				</box>
-				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[日期：]]></text>
-			</staticText>
-			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="35" y="8" width="74" height="22" uuid="1eb85e68-487b-4a44-ac74-029851709094"/>
+				<reportElement key="textField" x="42" y="3" width="74" height="22" uuid="e232843d-553b-4c3e-9df5-37b560cfaf46"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<bottomPen lineWidth="0.0"/>
@@ -145,8 +52,50 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
 			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="42" y="25" width="40" height="25" uuid="8225ce5d-8858-4814-a745-f470e6717a4f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BRCH}]]></textFieldExpression>
+			</textField>
 			<staticText>
-				<reportElement key="staticText" x="109" y="8" width="40" height="22" uuid="554878f4-36a7-40ad-b177-6530195a56c1"/>
+				<reportElement key="staticText" x="7" y="3" width="35" height="22" uuid="0dc29e46-2a1c-489c-a13f-5ec59c546966"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[日期：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="236" y="25" width="33" height="25" uuid="c2c8d75d-b7c5-4369-abc6-d1b9e4d02132"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[年龄：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="112" y="25" width="35" height="25" uuid="7c6f9327-ebde-43d0-bc02-9b2deb25865b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="7" y="25" width="35" height="25" uuid="57465809-c35e-479e-bf1a-35da33f5b402"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[床号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="166" y="3" width="40" height="22" uuid="2b01af67-59c8-4700-93ad-3c1a6e5239fe"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 				</box>
@@ -155,8 +104,32 @@
 				</textElement>
 				<text><![CDATA[时间：]]></text>
 			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="269" y="25" width="15" height="25" uuid="7449edf0-21de-422b-b1d7-a91adf0713a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BRNL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="147" y="25" width="59" height="25" uuid="58c8a91e-87fa-44ac-ac95-35ef4ca41e4a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BRXM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" x="284" y="25" width="17" height="25" uuid="c2aa4994-3010-4e86-bf1b-ad6571d5f8b7"/>
+				<box>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[岁]]></text>
+			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="149" y="8" width="95" height="22" uuid="acbcbbc0-dcab-4669-840b-54fd0f454dfa"/>
+				<reportElement key="textField" x="206" y="3" width="95" height="22" uuid="82866fd4-4289-4b1c-a2bc-26b54d375728"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
@@ -166,13 +139,8 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Time}]]></textFieldExpression>
 			</textField>
-			<subreport isUsingCache="true">
-				<reportElement key="subreport" x="0" y="75" width="244" height="20" uuid="e1326915-bc1e-46e2-92e8-aae8e9cfe3a1"/>
-				<dataSourceExpression><![CDATA[$F{PCMC}]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "OrderCardsStillDripChildrenOne.jasper"]]></subreportExpression>
-			</subreport>
 			<staticText>
-				<reportElement key="staticText" x="217" y="55" width="27" height="20" uuid="dc30aea5-f26c-4a09-ae98-74ff091b3a03"/>
+				<reportElement key="staticText" x="224" y="50" width="27" height="20" uuid="f3e50d3f-6e69-4393-b3df-b9d262bbb9cf"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -180,6 +148,52 @@
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[频次]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="187" y="50" width="37" height="20" uuid="1ebfbaf5-b492-4f4f-a08d-85a7194f7872"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[数量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="251" y="50" width="50" height="20" uuid="244c9177-a6d9-4aa3-9f76-ab2a4e6259f6"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[用法]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="7" y="50" width="130" height="20" uuid="0fa88725-5849-421b-9d69-1fd4657b93db"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[名称]]></text>
+			</staticText>
+			<subreport isUsingCache="true">
+				<reportElement key="subreport" x="5" y="70" width="294" height="20" uuid="9c693298-3952-47f3-bec0-7f7e37071af8"/>
+				<dataSourceExpression><![CDATA[$F{PCMC}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "OrderCardsStillDripChildrenOne.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement key="staticText" x="137" y="50" width="50" height="20" uuid="a975c790-d04f-4ed3-9206-70380745a225"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[剂量]]></text>
 			</staticText>
 		</band>
 	</detail>

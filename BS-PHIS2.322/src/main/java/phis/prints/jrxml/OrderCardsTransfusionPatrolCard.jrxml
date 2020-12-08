@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsTransfusionPatrolCard" language="groovy" pageWidth="420" pageHeight="595" orientation="Landscape" columnWidth="420" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsMouthCard" language="groovy" pageWidth="475" pageHeight="595" columnWidth="475" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="df729af0-9c06-4d9f-9c7e-e1350d9e03d0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
 	<import value="net.sf.jasperreports.engine.*"/>
@@ -15,34 +18,46 @@
 	<field name="Date" class="java.lang.String"/>
 	<field name="Time" class="java.lang.String"/>
 	<field name="AGE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
 	<detail>
 		<band height="500" splitType="Stretch">
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="152" y="60" width="46" height="20"/>
+				<reportElement key="textField" x="175" y="60" width="46" height="20" uuid="e42f3cdd-7837-4ad2-80a7-5763f413586e"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{BRCH}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{BRCH}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="41" y="60" width="65" height="20"/>
+				<reportElement key="textField" x="45" y="60" width="65" height="20" uuid="84e77c85-4143-4fc1-89f5-600dcd27ca2d"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{BRXM}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{BRXM}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText" x="107" y="60" width="44" height="20"/>
+				<reportElement key="staticText" x="130" y="60" width="44" height="20" uuid="581a8fa4-5474-46e0-858b-4af2c7c8cce6"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[床号：]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="5" y="60" width="35" height="20"/>
+				<reportElement key="staticText" x="9" y="60" width="35" height="20" uuid="db370d97-e02c-42e8-90be-290c9d94900a"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[姓名：]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="22" y="80" width="160" height="20"/>
+				<reportElement key="staticText" x="26" y="80" width="160" height="20" uuid="f079a197-d4f5-484d-8a16-17bc4cda10ae"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -53,7 +68,7 @@
 				<text><![CDATA[名称]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="182" y="80" width="60" height="20"/>
+				<reportElement key="staticText" x="186" y="80" width="60" height="20" uuid="c4177b33-fe0e-419d-919a-304d4d1c220c"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -63,7 +78,7 @@
 				<text><![CDATA[剂量]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="272" y="80" width="50" height="20"/>
+				<reportElement key="staticText" x="356" y="80" width="50" height="20" uuid="f0e0af47-ecbb-4738-aaf3-8cdeb98af61f"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -73,34 +88,34 @@
 				<text><![CDATA[时间]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="289" y="60" width="38" height="20"/>
+				<reportElement key="staticText" x="347" y="60" width="38" height="20" uuid="f9ad1441-e9ca-4cef-a6ac-74bd65e72798"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[日期：]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="329" y="60" width="83" height="20"/>
+				<reportElement key="textField" x="387" y="60" width="83" height="20" uuid="5f245fb1-a002-4243-95c8-f931a0099e38"/>
 				<box>
 					<bottomPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{Date}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
 			</textField>
 			<subreport isUsingCache="true">
-				<reportElement key="subreport" x="2" y="100" width="415" height="380"/>
+				<reportElement key="subreport" x="3" y="100" width="464" height="380" uuid="9b5d214f-7fa4-4871-8a84-d9e2f1006888"/>
 				<dataSourceExpression><![CDATA[$F{PCMC}]]></dataSourceExpression>
-				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "OrderCardsTransfusionPatrolCardChildren.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "OrderCardsTransfusionPatrolCardChildren.jasper"]]></subreportExpression>
 			</subreport>
 			<staticText>
-				<reportElement key="staticText" x="155" y="35" width="94" height="25"/>
+				<reportElement key="staticText" x="183" y="35" width="94" height="25" uuid="5c9b0c74-6a47-4299-842d-497b2a5461f7"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[输液巡视卡]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="352" y="80" width="30" height="20"/>
+				<reportElement key="staticText" x="406" y="80" width="30" height="20" uuid="0c90f5a0-f853-4f4b-87eb-9b1951b9498d"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -110,7 +125,7 @@
 				<text><![CDATA[滴速]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="382" y="80" width="35" height="20"/>
+				<reportElement key="staticText" x="436" y="80" width="35" height="20" uuid="55990ae9-1d0c-4e79-937c-3bd92fe60c67"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -120,7 +135,7 @@
 				<text><![CDATA[签名]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="2" y="80" width="20" height="20"/>
+				<reportElement key="staticText" x="6" y="80" width="20" height="20" uuid="98f6c245-0fa0-4e36-bbb3-3004e39f0df1"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -131,7 +146,7 @@
 				<text><![CDATA[组]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="322" y="80" width="30" height="20"/>
+				<reportElement key="staticText" x="276" y="80" width="30" height="20" uuid="e5a8bbd0-a146-48e4-a18a-c9f88027c137"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -141,7 +156,7 @@
 				<text><![CDATA[频次]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="242" y="80" width="30" height="20"/>
+				<reportElement key="staticText" x="246" y="80" width="30" height="20" uuid="6dc05fcf-0bfa-45b4-91f4-114f4a3cb867"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -151,17 +166,36 @@
 				<text><![CDATA[数量]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="199" y="60" width="35" height="20"/>
+				<reportElement key="staticText" x="239" y="60" width="35" height="20" uuid="511a4957-baf0-4619-81f8-5700ebdb6d80"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[年 龄：]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="235" y="60" width="53" height="20"/>
+				<reportElement key="textField" x="275" y="60" width="53" height="20" uuid="3082bf5e-5750-4c27-b46b-ccf608e5bce9"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{AGE}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AGE}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement key="staticText" x="306" y="80" width="50" height="20" uuid="18835596-04d2-4e0f-9e83-5c053a32fb27"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[用法]]></text>
+			</staticText>
 		</band>
 	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
 </jasperReport>

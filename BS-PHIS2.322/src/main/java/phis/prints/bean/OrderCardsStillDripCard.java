@@ -73,7 +73,7 @@ public class OrderCardsStillDripCard implements IHandler {
 				map.put("YCSL", map.get("YCSL") + "");
 				map.put("JLDW", map.get("JLDW") == null ? "" : map.get("JLDW")
 						+ "");
-
+				map.put("YPYF",map.get("XMMC") == null ? "":map.get("XMMC") + "");//药品用法
 				zhMap.get(YZZH + "").add(map);
 			}
 			// 取出每个组的医嘱 并分别打印到前台页面

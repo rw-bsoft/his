@@ -67,6 +67,8 @@ public class OrderCardsTransfusionPatrolCard implements IHandler {
 				map.put("YCJL", map.get("YCJL") + "");
 				map.put("JLDW", map.get("JLDW") == null ? "" : map.get("JLDW")
 						+ "");
+				map.put("YPYF",map.get("XMMC") == null ? "":map.get("XMMC") + "");//药品用法
+				map.put("YPSL",map.get("YCSL") == null ? "" : map.get("YCSL") + "");//药品数量
 				if (!map.containsKey("SJ") || map.get("SJ") == "") {
 					map.put("SJ", "");
 				}

@@ -15,6 +15,7 @@
 	<field name="BZXX" class="java.lang.String"/>
 	<field name="JLDW" class="java.lang.String"/>
 	<field name="YPYF" class="java.lang.String"/>
+	<field name="YPSL" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -30,12 +31,12 @@
 	<detail>
 		<band height="49" splitType="Stretch">
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="409" y="4" width="41" height="20" uuid="6929909b-1077-4f8c-9892-90bcdc9905c1"/>
+				<reportElement key="textField" x="439" y="4" width="41" height="20" uuid="6929909b-1077-4f8c-9892-90bcdc9905c1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{BZXX}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="338" y="4" width="71" height="20" uuid="04c3ae6d-29dd-4a50-b274-8fe043612672"/>
+				<reportElement key="textField" x="368" y="4" width="71" height="20" uuid="04c3ae6d-29dd-4a50-b274-8fe043612672"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{YZZXSJ}]]></textFieldExpression>
 			</textField>
@@ -65,8 +66,13 @@
 				<textFieldExpression><![CDATA[$F{JLDW}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement key="line" x="6" y="36" width="443" height="1" uuid="7ded19e7-35d4-418e-80ec-ba22290f872e"/>
+				<reportElement key="line" x="6" y="36" width="473" height="1" uuid="7ded19e7-35d4-418e-80ec-ba22290f872e"/>
 			</line>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="338" y="4" width="30" height="20" uuid="e5d7e6fe-79cf-4047-bf7b-177e4fb46921"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{YPSL}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>
