@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HospitalPharmacyMedicineBR" language="groovy" pageWidth="750" pageHeight="842" columnWidth="750" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HospitalPharmacyMedicineBR" language="groovy" pageWidth="750" pageHeight="900" columnWidth="750" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5b045eec-a005-41d7-868b-aae1c07fb0e7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
 		<band height="137" splitType="Stretch">
 			<textField>
-				<reportElement x="6" y="0" width="742" height="40"/>
+				<reportElement x="6" y="0" width="742" height="40" uuid="e755381b-1146-49e6-ab01-1a74ccaeebf3"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-					<font fontName="宋体" size="22" isBold="true"/>
+					<font fontName="宋体" size="21" isBold="true"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{TITLE}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{TITLE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="324" y="46" width="140" height="25"/>
+				<reportElement x="440" y="46" width="140" height="25" uuid="85b655ef-93a0-46b3-a4cc-50c9e3388f39"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -22,101 +25,10 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="宋体" size="12"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{dateForm}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{dateForm}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="6" y="107" width="175" height="30"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-					<font fontName="宋体" size="12"/>
-				</textElement>
-				<text><![CDATA[药品名称]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="281" y="107" width="60" height="30"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-					<font fontName="宋体" size="12"/>
-				</textElement>
-				<text><![CDATA[单位]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="181" y="107" width="100" height="30"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-					<font fontName="宋体" size="12"/>
-				</textElement>
-				<text><![CDATA[规格]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="341" y="107" width="127" height="30"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-					<font fontName="宋体" size="12"/>
-				</textElement>
-				<text><![CDATA[药品产地]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="468" y="107" width="100" height="30"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-					<font fontName="宋体" size="12"/>
-				</textElement>
-				<text><![CDATA[药品数量]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="568" y="107" width="80" height="30"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-					<font fontName="宋体" size="12"/>
-				</textElement>
-				<text><![CDATA[药品单价]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="648" y="107" width="100" height="30"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-					<font fontName="宋体" size="12"/>
-				</textElement>
-				<text><![CDATA[金额]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="256" y="46" width="68" height="25"/>
+				<reportElement x="372" y="46" width="68" height="25" uuid="d7364ded-8c98-4377-b0b4-3b566187eff6"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -129,7 +41,7 @@
 				<text><![CDATA[统计时间：]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="358" y="77" width="65" height="25"/>
+				<reportElement x="84" y="77" width="65" height="25" uuid="316df047-284b-4f51-a6fc-0329bfede4a8"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -142,7 +54,7 @@
 				<text><![CDATA[药房名称:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="423" y="77" width="127" height="25"/>
+				<reportElement x="149" y="77" width="127" height="25" uuid="2d763eb9-1866-4fe5-af2d-ad11cc8a75bf"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -151,10 +63,10 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="宋体" size="12"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{YFMC}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{YFMC}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="550" y="77" width="65" height="25"/>
+				<reportElement x="291" y="77" width="65" height="25" uuid="8e978e91-aa71-4e29-87a9-03be506526df"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -167,7 +79,7 @@
 				<text><![CDATA[发药方式:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="615" y="77" width="112" height="25"/>
+				<reportElement x="356" y="77" width="112" height="25" uuid="96795079-0985-4106-9e21-cdbe38fa4ecb"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -176,23 +88,23 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="宋体" size="12"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{FYFS}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{FYFS}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="464" y="46" width="22" height="25"/>
+				<reportElement x="580" y="46" width="22" height="25" uuid="24081143-adc3-4982-9d0b-ecbb893baa2f"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="0.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
 					<font fontName="宋体" size="12"/>
 				</textElement>
 				<text><![CDATA[至]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="486" y="46" width="140" height="25"/>
+				<reportElement x="602" y="46" width="140" height="25" uuid="13b8ef00-0f7f-4bf0-ba06-f51fda77692b"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -201,10 +113,10 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="宋体" size="12"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{dateTo}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{dateTo}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="6" y="77" width="63" height="25"/>
+				<reportElement x="6" y="46" width="63" height="25" uuid="25cff015-af06-44eb-81da-feb073de67c8"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -217,7 +129,7 @@
 				<text><![CDATA[病人姓名:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="69" y="77" width="114" height="25"/>
+				<reportElement x="69" y="46" width="114" height="25" uuid="eb31bc87-2a8d-4245-b3b1-4425da90de2b"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -226,10 +138,10 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="宋体" size="12"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{BRXM}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{BRXM}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="183" y="77" width="60" height="25"/>
+				<reportElement x="183" y="46" width="60" height="25" uuid="19794f72-38e9-4ca4-b5b6-112b1a3eb8e5"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -242,7 +154,7 @@
 				<text><![CDATA[住院号:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="243" y="77" width="115" height="25"/>
+				<reportElement x="243" y="46" width="115" height="25" uuid="6508bbe5-ede6-4530-af8d-00a7e0a36f06"/>
 				<box>
 					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -251,58 +163,148 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="宋体" size="12"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{ZYHM}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{ZYHM}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="483" y="77" width="65" height="25" uuid="285e688f-11d0-4c65-b25a-a9d798515a8d"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[给药方式:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="548" y="77" width="112" height="25" uuid="38278f9d-f9ce-4934-bdd7-e211e0c39a27"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{GYFS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="687" y="107" width="60" height="30" uuid="e7eff663-61bf-4e17-a483-a0cbc0dedd69"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[金额]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="107" width="100" height="30" uuid="2846bc08-96e1-42ef-8298-20e4caa1fb33"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[规格]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="567" y="107" width="60" height="30" uuid="8d47efe2-e148-4a29-a9eb-674fb6c400fd"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[药品数量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="107" width="60" height="30" uuid="a9fb5935-3686-4106-a2dd-77fd6158d2ac"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[单位]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="107" width="100" height="30" uuid="94fc6866-e649-424b-8321-ab759a443d1a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[给药方式]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="107" width="164" height="30" uuid="c0df0696-fd05-48cb-b258-1a71a2fb859b"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[药品名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="627" y="107" width="60" height="30" uuid="e6d2dad9-2ef0-41b9-8431-5ea838994a28"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[药品单价]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="107" width="138" height="30" uuid="a4117624-217f-423e-be65-9ad5a1c6b343"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[药品产地]]></text>
+			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
 		<band height="25" splitType="Stretch">
 			<break>
-				<reportElement isPrintRepeatedValues="false" x="0" y="24" width="0" height="1" isRemoveLineWhenBlank="true">
+				<reportElement isPrintRepeatedValues="false" x="0" y="24" width="0" height="1" isRemoveLineWhenBlank="true" uuid="4889774f-1f79-4b54-ba63-1d77c6cbae08">
 					<printWhenExpression><![CDATA[new Boolean($V{COLUMN_COUNT}.intValue()%32==0)]]></printWhenExpression>
 				</reportElement>
 			</break>
-			<textField>
-				<reportElement x="281" y="0" width="60" height="25"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement verticalAlignment="Middle">
-					<font fontName="宋体" size="12"/>
-				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YPDW}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="6" y="0" width="175" height="25"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement verticalAlignment="Middle">
-					<font fontName="宋体" size="12"/>
-				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YPMC}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="341" y="0" width="127" height="25"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement verticalAlignment="Middle">
-					<font fontName="宋体" size="12"/>
-				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YPCD}]]></textFieldExpression>
-			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="568" y="0" width="80" height="25"/>
+				<reportElement x="687" y="0" width="60" height="25" uuid="8ed32056-9f0f-4394-a26a-ed8934434184"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -312,10 +314,10 @@
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="宋体" size="12"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YPDJ}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{LSJE}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="468" y="0" width="100" height="25"/>
+				<reportElement x="627" y="0" width="60" height="25" uuid="0b110fa5-a394-49f0-acc6-28a1255e5575"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -325,23 +327,10 @@
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="宋体" size="12"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YPSL}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{YPDJ}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="648" y="0" width="100" height="25"/>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="宋体" size="12"/>
-				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{LSJE}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="181" y="0" width="100" height="25"/>
+			<textField>
+				<reportElement x="429" y="0" width="138" height="25" uuid="b81444df-3588-4c73-8029-68a685d2668a"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -351,18 +340,83 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="宋体" size="12"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{YPGG}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{CDMC}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="329" y="0" width="100" height="25" uuid="556f5b17-2b72-4f5f-b4ba-342741786fdb"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{YPYF}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="567" y="0" width="60" height="25" uuid="bc896235-8b29-4e88-99a7-7003f84f32fe"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{YPSL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="0" width="60" height="25" uuid="d290c373-ed62-4bd1-9fc2-86a0a220226b"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{YPDW}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="169" y="0" width="100" height="25" uuid="31a4255a-20f4-4d16-9efd-35be659676d4"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{YPGG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="0" width="164" height="25" uuid="1394c561-f91a-4185-bffc-4d7284f6fe60"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{YPMC}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
 	<pageFooter>
 		<band height="25" splitType="Stretch">
 			<textField>
-				<reportElement x="383" y="5" width="61" height="20"/>
+				<reportElement x="6" y="5" width="742" height="20" uuid="36464d62-30a5-402e-b83a-6a719cf8ce80"/>
 				<textElement textAlignment="Center">
 					<font fontName="宋体" size="12" isUnderline="false"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["第"+$V{PAGE_NUMBER}+"页"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["第"+$V{PAGE_NUMBER}+"页"]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageFooter>

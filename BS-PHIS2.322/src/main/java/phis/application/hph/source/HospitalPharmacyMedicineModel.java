@@ -32,7 +32,7 @@ public class HospitalPharmacyMedicineModel {
 	 * @createDate 2014-3-31
 	 * @description 发药
 	 * @updateInfo
-	 * @param body
+	 * @param res
 	 * @param ctx
 	 * @return
 	 * @throws ModelDataOperationException
@@ -113,15 +113,10 @@ public class HospitalPharmacyMedicineModel {
 			BaseDAO dao, Context ctx) throws ModelDataOperationException {
 		try {
 			UserRoleToken user = UserRoleToken.getCurrent();
-			String JGID = user.getManageUnitId();// 用户的机构ID
-			Map<String, Object> parameters = new HashMap<String, Object>();
-			parameters.put("jgid", JGID);
-			Long bq = 0L;
-			if (user.getProperty("wardId") != null
-					&& user.getProperty("wardId") != "") {
-				bq = Long.parseLong(user.getProperty("wardId") + "");
-			}
-			parameters.put("bqsb", bq);
+			String jgid = user.getManageUnitId();// 用户的机构ID
+			//Map<String, Object> parameters = new HashMap<String, Object>();
+			//parameters.put("jgid", jgid);
+			String bqsb = Long.parseLong(user.getProperty("wardId") + "")+"";
 			int pageSize = 25;
 			if (req.containsKey("pageSize")) {
 				pageSize = (Integer) req.get("pageSize");
@@ -132,12 +127,9 @@ public class HospitalPharmacyMedicineModel {
 			}
 
 			Map<String, Object> body = (Map<String, Object>) req.get("body");
-			StringBuffer hql = new StringBuffer(
-					"select a.YPGG as YFGG,a.YFDW as YFDW,sum(a.YPSL) as YCSL,sum(a.LSJE) as FYJE,a.YPDJ as YPDJ,a.YFSB as YFSB,a.YPXH as YPXH,e.CDMC as CDMC,b.BRXM as BRXM, d.YPMC as YPMC ")
-					.append(" from  YF_ZYFYMX a, ZY_BRRY b, YK_TYPK d, YK_CDDZ e ")
-					.append(" where a.JGID=:jgid and a.LYBQ=:bqsb and a.ZYH=b.ZYH")
-					.append(" and a.YPXH=d.YPXH")
-					.append(" and a.YPCD=e.YPCD and a.YPSL>0 ");
+			StringBuffer hql = new StringBuffer("select a.YPGG as YFGG,a.YFDW as YFDW,sum(a.YPSL) as YCSL,sum(a.LSJE) as FYJE,a.YPDJ as YPDJ,a.YFSB as YFSB,a.YPXH as YPXH,e.CDMC as CDMC," +
+					" b.BRXM as BRXM, d.YPMC as YPMC,f.XMMC as YPYF from  YF_ZYFYMX a, ZY_BRRY b, YK_TYPK d, YK_CDDZ e,ZY_YPYF f " +
+					" where a.jgid='"+jgid+"' and a.LYBQ='"+bqsb+"' and a.ZYH=b.ZYH and a.YPXH=d.YPXH and a.YPCD=e.YPCD and a.YPSL>0 and d.GYFF=f.YPYF");
 			if (body.get("dateFrom") != null) {
 				hql.append(" and to_char(a.JFRQ,'yyyy-mm-dd hh24:mi:ss')>='")
 						.append(body.get("dateFrom")).append("'");
@@ -147,31 +139,25 @@ public class HospitalPharmacyMedicineModel {
 						.append(body.get("dateTo")).append("'");
 			}
 			if (body.get("FYFS") != null && !body.get("FYFS").equals("")) {
-				hql.append(" and a.FYFS=:FYFS ");
-				parameters.put("FYFS",
-						MedicineUtils.parseLong(body.get("FYFS")));
+				hql.append(" and a.FYFS='"+body.get("FYFS")+"' ");
 			}
 			if (body.get("YF") != null && !body.get("YF").equals("")) {
-				hql.append(" and a.YFSB=:YF ");
-				parameters.put("YF", MedicineUtils.parseLong(body.get("YF")));
+				hql.append(" and a.YFSB='"+body.get("YF")+"' ");
+			}
+			if (body.get("YPYF") != null && !body.get("YPYF").equals("")) {
+				hql.append(" and f.YPYF='"+body.get("YPYF")+"' ");
 			}
 			long zyh = 0;
 			if (body.get("ZYH") != null) {
 				zyh = Long.parseLong(body.get("ZYH") + "");
 			}
-			hql.append(" and b.ZYH=:ZYH ");
-			parameters.put("ZYH", zyh);
-			hql.append("group by a.YPGG,a.YFDW,a.YPDJ,a.YFSB,a.YPXH,e.CDMC,b.BRXM,d.YPMC ");
+			hql.append(" and b.ZYH='"+zyh+"' ");
+			hql.append("group by a.YPGG,a.YFDW,a.YPDJ,a.YFSB,a.YPXH,e.CDMC,b.BRXM,d.YPMC,f.XMMC ");
 
-			int total = Integer.parseInt(dao
-					.doSqlQuery(
-							"select count(*) as COUNT from (" + hql.toString()
-									+ ")", parameters).get(0).get("COUNT")
-					+ "");
-			parameters.put("first", first * pageSize);
-			parameters.put("max", pageSize);
-			List<Map<String, Object>> list = dao.doQuery(hql.toString(),
-					parameters);
+			int total = Integer.parseInt(dao.doSqlQuery("select count(*) as COUNT from (" + hql.toString() + ")", null).get(0).get("COUNT") + "");
+			//parameters.put("first", first * pageSize);
+			//parameters.put("max", pageSize);
+			List<Map<String, Object>> list = dao.doSqlQuery(hql.toString(), null);
 			res.put("pageSize", pageSize);
 			res.put("pageNo", first);
 			res.put("totalCount", total);
@@ -221,8 +207,7 @@ public class HospitalPharmacyMedicineModel {
 			}
 			if (body.get("FYFS") != null && !body.get("FYFS").equals("")) {
 				hql.append(" and a.FYLX=:FYFS ");
-				parameters
-						.put("FYFS", MedicineUtils.parseInt(body.get("FYFS")));
+				parameters.put("FYFS", MedicineUtils.parseInt(body.get("FYFS")));
 			}
 			if (body.get("YF") != null && !body.get("YF").equals("")) {
 				hql.append(" and a.YFSB=:YF ");

@@ -1,10 +1,10 @@
-$package("phis.prints.script")
+$package("phis.prints.script");
 $import("app.desktop.Module", "util.widgets.MyRadioGroup",
-		"util.dictionary.TreeDicFactory", "util.helper.Helper")
+		"util.dictionary.TreeDicFactory", "util.helper.Helper");
 
 phis.prints.script.HospitalPharmacyMedicineBRPrintView = function(cfg) {
-	this.width = 800 
-	this.height = 500
+	this.width = 800 ;
+	this.height = 500;
 	this.ZYH = "";
 	this.printurl = util.helper.Helper.getUrl();
 	this.preview = [{
@@ -19,11 +19,11 @@ phis.prints.script.HospitalPharmacyMedicineBRPrintView = function(cfg) {
 			}, {
 				value : "3",
 				text : "EXCEL"
-			}]
-	this.conditions = []
+			}];
+	this.conditions = [];
 	phis.prints.script.HospitalPharmacyMedicineBRPrintView.superclass.constructor.apply(
 			this, [cfg])
-}
+};
 Ext.extend(phis.prints.script.HospitalPharmacyMedicineBRPrintView, app.desktop.Module, {
 	initPanel : function() {
 		this.frameId = "SimplePrint_frame_HospitalPharmacyMedicineBR";
@@ -48,48 +48,49 @@ Ext.extend(phis.prints.script.HospitalPharmacyMedicineBRPrintView, app.desktop.M
 			html : "<iframe id='"
 					+ this.frameId
 					+ "' width='100%' height='100%' onload='simplePrintMask(\"HospitalPharmacyMedicineBR\")'></iframe>"
-		})
-		this.panel = panel
-		return panel
+		});
+		this.panel = panel;
+		return panel;
 	},
 	initConditionFields : function() {
-		var items = []
-		var preview = this.createCommonDic("type")
-		preview.value = "1"
-		items.push(preview)
+		var items = [];
+		var preview = this.createCommonDic("type");
+		preview.value = "1";
+		items.push(preview);
 		items.push({
 					xtype : "button",
 					text : "生成报表",
 					iconCls : "default",
 					scope : this,
 					handler : this.doLoadReport
-				})
+				});
 		items.push({
 					xtype : "button",
 					text : "打 印",
 					iconCls : "print",
 					scope : this,
 					handler : this.doPrint
-				})
+				});
 		return items
 	},
 	doPrint : function() {
-		var form = Ext.getCmp(this.conditionFormId).getForm()
+		debugger;
+		var form = Ext.getCmp(this.conditionFormId).getForm();
 		if (!form.isValid()) {
 			return
 		}
-		var items = form.items
+		var items = form.items;
 		//var url = this.printurl + "*.print?pages=phis.prints.jrxml.HospitalPharmacyMedicineBR";
 		var pages="phis.prints.jrxml.HospitalPharmacyMedicineBR";
 		 var url="resources/"+pages+".print?type=1";
 		for (var i = 0; i < items.getCount(); i++) {
-			var f = items.get(i)
+			var f = items.get(i);
 			url += "&" + f.getName() + "=" + f.getValue()
 		}
-		url += "&dateFrom="+this.dateFrom+"&dateTo="+this.dateTo+"&FYFS="+this.FYFS+"&YF="+this.YF+"&ZYH="+this.ZYH+"&bq="+this.bq;
+		url += "&dateFrom="+this.dateFrom+"&dateTo="+this.dateTo+"&FYFS="+this.FYFS+"&YF="+this.YF+"&ZYH="+this.ZYH+"&bq="+this.bq+"&YPYF="+this.YPYF;
 		var LODOP=getLodop();
 		LODOP.PRINT_INIT("打印控件");
-		LODOP.SET_PRINT_PAGESIZE("0","","","");
+		LODOP.SET_PRINT_PAGESIZE("0","","","A4");
 		//预览LODOP.PREVIEW();
 		//预览LODOP.PRINT();
 		//LODOP.PRINT_DESIGN();
@@ -99,33 +100,33 @@ Ext.extend(phis.prints.script.HospitalPharmacyMedicineBRPrintView, app.desktop.M
 		LODOP.PREVIEW();
 	},
 	doLoadReport : function() {
-		var form = Ext.getCmp(this.conditionFormId).getForm()
+		var form = Ext.getCmp(this.conditionFormId).getForm();
 		if (!form.isValid()) {
 			return
 		}
-		var items = form.items
+		var items = form.items;
 		//var url = this.printurl + "*.print?pages=phis.prints.jrxml.HospitalPharmacyMedicineBR";
 		var pages="phis.prints.jrxml.HospitalPharmacyMedicineBR";
 		 var url="resources/"+pages+".print?type=1";
 		for (var i = 0; i < items.getCount(); i++) {
-			var f = items.get(i)
+			var f = items.get(i);
 			if (f.getName() == "type" && f.getValue() == "1") {
 				Ext.getCmp(this.mainFormId).el.mask("正在生成报表...",
 						"x-mask-loading")
 			}
 		}
 
-		url += "&temp=" + new Date().getTime()
+		url += "&temp=" + new Date().getTime();
 		document.getElementById(this.frameId).src = url
 	},
 	createCommonDic : function(flag) {
-		var fields
-		var emptyText = "请选择"
+		var fields;
+		var emptyText = "请选择";
 		if (flag == "type") {
-			fields = this.preview
+			fields = this.preview;
 			emptyText = "预览方式"
 		} else {
-			fields = []
+			fields = [];
 			flag = ""
 		}
 		var store = new Ext.data.JsonStore({
@@ -143,11 +144,11 @@ Ext.extend(phis.prints.script.HospitalPharmacyMedicineBRPrintView, app.desktop.M
 					width : 100,
 					name : flag,
 					allowBlank : false
-				})
-		return combox
+				});
+		return combox;
 	}
-})
+});
 
 simplePrintMask = function(printId) {
 	Ext.getCmp("SimplePrint_mainform_" + printId).el.unmask()
-}
+};

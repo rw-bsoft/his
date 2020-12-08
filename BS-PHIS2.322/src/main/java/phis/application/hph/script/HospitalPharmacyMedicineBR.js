@@ -8,32 +8,13 @@ phis.application.hph.script.HospitalPharmacyMedicineBR = function(cfg) {
 	this.height = 550;
 	phis.application.hph.script.HospitalPharmacyMedicineBR.superclass.constructor
 			.apply(this, [ cfg ]);
-}
+};
 Ext
 		.extend(
 				phis.application.hph.script.HospitalPharmacyMedicineBR,
 				phis.script.SimpleModule,
 				{
 					initPanel : function() {
-						// var ret = phis.script.rmi.miniJsonRequestSync({
-						// serviceId : this.serviceId,
-						// serviceAction : this.queryWardActionID
-						// });
-						// if (ret.code > 300) {
-						// this.processReturnMsg(ret.code, ret.msg,
-						// this.initPanel);
-						// return null;
-						// }
-						// var ret_lyks = util.rmi.miniJsonRequestSync({
-						// serviceId : this.serviceId,
-						// serviceAction : this.queryMedicineDepartmentActionID
-						// });
-						// if (ret_lyks.code > 300) {
-						// this.processReturnMsg(ret_lyks.code, ret_lyks.msg,
-						// this.initPanel);
-						// return null;
-						// }
-
 						if (this.panel) {
 							return this.panel;
 						}
@@ -65,7 +46,7 @@ Ext
 							tbar : this.getTbar()
 						});
 						this.panel = panel;
-						this.panel.on("afterrender", this.onReady, this)
+						this.panel.on("afterrender", this.onReady, this);
 						return panel;
 					},
 					onReady : function() {
@@ -96,14 +77,20 @@ Ext
 							"width" : 100,
 							"id" : "phis.dictionary.hairMedicineWay",
 							"emptyText" : "全部发药方式"
-						})
+						});
 						var yf = this.createDicField({
 							"width" : 100,
 							"id" : "phis.dictionary.wardPharmacy",
 							"filter" : [ 'eq', [ '$', 'item.properties.BQDM' ],
 									[ 'l', this.mainApp['phis'].wardId ] ],
 							"emptyText" : "全部药房"
-						})
+						});
+						var ypyf = this.createDicField({
+							//"src" : "ZY_BQYZ_FY.YPYF",
+							"width" : 100,
+							"id" : "phis.dictionary.drugWay",
+							"emptyText" : "全部给药方式"
+						});
 						var simple = new Ext.FormPanel({
 							labelWidth : 50, // label settings here cascade
 							title : '',
@@ -143,11 +130,16 @@ Ext
 								xtype : "label",
 								forId : "window",
 								text : "药房"
-							}, yf ]
+							}, yf, {
+								xtype : "label",
+								forId : "window",
+								text : "给药方式"
+							}, ypyf ]
 						});
 						this.simple = simple;
 						this.lx = lx;
 						this.yf = yf;
+						this.ypyf = ypyf;
 						tbar.add(simple, this.createButtons());
 						return tbar;
 					},
@@ -157,6 +149,7 @@ Ext
 						var dateTo = this.simple.items.get(3).getValue();
 						var FYFS = this.simple.items.get(5).getValue();
 						var YF = this.simple.items.get(7).getValue();
+						var YPYF = this.simple.items.get(9).getValue();
 						var bq = this.mainApp['phis'].wardId;
 
 						if (dateFrom != null && dateTo != null
@@ -186,7 +179,8 @@ Ext
 							"FYFS" : FYFS,
 							"YF" : YF,
 							"bq" : bq,
-							"FYSB" : "FY"
+							"FYSB" : "FY",
+							"YPYF" : YPYF
 						};
 
 						if (this.leftList) {
@@ -203,6 +197,7 @@ Ext
 						var dateTo = this.simple.items.get(3).getValue();
 						var FYFS = this.simple.items.get(5).getValue();
 						var YF = this.simple.items.get(7).getValue();
+						var YPYF = this.simple.items.get(9).getValue();
 						var bq = this.mainApp['phis'].wardId;
 
 						if (dateFrom != null && dateTo != null
@@ -229,7 +224,8 @@ Ext
 							"FYFS" : FYFS,
 							"YF" : YF,
 							"bq" : bq,
-							"FYSB" : "FY"
+							"FYSB" : "FY",
+							"YPYF" : YPYF
 						};
 
 						if (this.leftList) {
@@ -253,11 +249,10 @@ Ext
 						} else {
 							cls += dic.render
 						}
-						cls += "DicFactory"
-						$import(cls)
-						var factory = eval("(" + cls + ")")
-						var field = factory.createDic(dic)
-						return field
+						cls += "DicFactory";
+						$import(cls);
+						var factory = eval("(" + cls + ")");
+						return factory.createDic(dic);
 					},
 					doPrint : function() {
 						var dateFrom = this.simple.items.get(1).getValue();
@@ -268,11 +263,15 @@ Ext
 						}
 						var FYFS = this.simple.items.get(5).getValue();
 						var YF = this.simple.items.get(7).getValue();
+						var YPYF = this.simple.items.get(9).getValue();
 						if(FYFS==null||FYFS==""){
 						FYFS=0
 						}
 						if(YF==null||YF==""){
 						YF=0
+						}
+						if(YPYF==null||YPYF==""){
+							YPYF=0
 						}
 						var bq = this.mainApp['phis'].wardId;
 						var r = this.leftList.getSelectedRecord();
@@ -284,10 +283,10 @@ Ext
 						var url = "resources/" + pages + ".print?type=1";
 						url += "&dateFrom=" + dateFrom + "&dateTo=" + dateTo
 								+ "&FYFS=" + FYFS + "&YF=" + YF + "&ZYH="
-								+ ZYH + "&bq=" + bq;
+								+ ZYH + "&bq=" + bq+ "&YPYF=" + YPYF;
 						var LODOP = getLodop();
 						LODOP.PRINT_INIT("打印控件");
-						LODOP.SET_PRINT_PAGESIZE("0", "", "", "");
+						LODOP.SET_PRINT_PAGESIZE("0", "", "", "A4");
 						// 预览LODOP.PREVIEW();
 						// 预览LODOP.PRINT();
 						// LODOP.PRINT_DESIGN();
@@ -299,13 +298,13 @@ Ext
 						LODOP.SET_PRINT_MODE("PRINT_PAGE_PERCENT", "Full-Width");
 						//预览
 						LODOP.PREVIEW();
-						
-						module.initPanel();
-						module.doPrint();
+						//module.initPanel();
+						//module.doPrint();
 					},
 					doNew : function() {
 						this.simple.items.get(5).setValue("");
 						this.simple.items.get(7).setValue("");
+						this.simple.items.get(9).setValue("");
 						this.simple.items.get(1).setValue(
 								new Date().format('Y-m-d'));
 						this.simple.items.get(3).setValue(

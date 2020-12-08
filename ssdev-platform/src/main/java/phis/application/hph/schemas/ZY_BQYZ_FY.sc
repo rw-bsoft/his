@@ -4,6 +4,7 @@
 	<item ref="b.YPMC" alias="药品名称" />
 	<item ref="d.YFGG" alias="规格" renderer="onRendererNull"/>
 	<item ref="d.YFDW" alias="单位" renderer="onRendererNull"/>
+	<item id="YPYF" alias="给药方式"  type="string" />
 	<item id="CDMC" defaultValue="" virtual="true" alias="药品产地" display="1"/>
 	<item id="YCSL" alias="药品数量" type="double" length="8" precision="2" not-null="1" display="1"/>
 	<item id="FYSL" alias="实发数量" type="double" length="8" precision="2" not-null="1" display="0"/>
@@ -23,7 +24,6 @@
 	<item id="FYTS" defaultValue="0" virtual="true" display="0"/>
 	<item id="JLXH" alias="记录序号" type="long" display="0" length="18" not-null="1" generator="assigned" pkey="true"/>
 	<item id="SYBZ" alias="使用标志" type="int" length="1" not-null="1" display="0"/>
-	<item id="YPYF" alias="药品用法" type="long" length="18" not-null="1" display="0"/>
 	<item id="YPCD" defaultValue="0" virtual="true" display="0"/>
 	<item ref="c.ZSYS" display="0"/>
 	<relations>

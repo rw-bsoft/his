@@ -7,8 +7,7 @@ phis.application.hph.script.HospitalPharmacyMedicineHZ = function(cfg) {
 	this.exContext = {};
 	phis.application.hph.script.HospitalPharmacyMedicineHZ.superclass.constructor
 			.apply(this, [ cfg ]);
-}
-
+};
 Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 		phis.script.SimpleModule, {
 			initPanel : function() {
@@ -41,7 +40,7 @@ Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 					tbar : this.getTbar()
 				});
 				this.panel = panel;
-				this.panel.on("afterrender", this.onReady, this)
+				this.panel.on("afterrender", this.onReady, this);
 				return panel;
 			},
 			onReady : function() {
@@ -54,14 +53,20 @@ Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 					"width" : 100,
 					"id" : "phis.dictionary.hairMedicineWay",
 					"emptyText" : "全部发药方式"
-				})
+				});
 				var yf = this.createDicField({
 					"width" : 100,
 					"id" : "phis.dictionary.wardPharmacy",
 					"filter" : [ 'eq', [ '$', 'item.properties.BQDM' ],
 							[ 'l', this.mainApp['phis'].wardId ] ],
 					"emptyText" : "全部药房"
-				})
+				});
+				var ypyf = this.createDicField({
+					//"src" : "ZY_BQYZ_FY.YPYF",
+					"width" : 100,
+					"id" : "phis.dictionary.drugWay",
+					"emptyText" : "全部给药方式"
+				});
 				var simple = new Ext.FormPanel({
 					labelWidth : 50, // label settings here cascade
 					title : '',
@@ -101,11 +106,16 @@ Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 						xtype : "label",
 						forId : "window",
 						text : "药房"
-					}, yf ]
+					}, yf, {
+						xtype : "label",
+						forId : "window",
+						text : "给药方式"
+					}, ypyf ]
 				});
 				this.simple = simple;
 				this.lx = lx;
 				this.yf = yf;
+				this.ypyf = ypyf;
 				tbar.add(simple, this.createButtons());
 				return tbar;
 			},
@@ -125,15 +135,15 @@ Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 				return listModule;
 			},
 			doAction : function(item, e) {
-				var cmd = item.cmd
-				var script = item.script
-				cmd = cmd.charAt(0).toUpperCase() + cmd.substr(1)
+				var cmd = item.cmd;
+				var script = item.script;
+				cmd = cmd.charAt(0).toUpperCase() + cmd.substr(1);
 				if (script) {
 					$require(script, [ function() {
 						eval(script + '.do' + cmd + '.apply(this,[item,e])')
 					}, this ])
 				} else {
-					var action = this["do" + cmd]
+					var action = this["do" + cmd];
 					if (action) {
 						action.apply(this, [ item, e ])
 					}
@@ -141,21 +151,20 @@ Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 			},
 			createDicField : function(dic) {
 				if (dic.id == "phis.dictionary.department_bq") {
-					var arr = new Array();
+					var arr = [];
 					arr.push(31);
 					// dic.filter="['eq',['$map',['s','JGID']],['s','1']]";
-				}
+				};
 				var cls = "util.dictionary.";
 				if (!dic.render) {
 					cls += "Simple";
 				} else {
 					cls += dic.render
 				}
-				cls += "DicFactory"
-				$import(cls)
-				var factory = eval("(" + cls + ")")
-				var field = factory.createDic(dic)
-				return field
+				cls += "DicFactory";
+				$import(cls);
+				var factory = eval("(" + cls + ")");
+				return factory.createDic(dic);
 			},
 			doQuery : function() {
 				var body = {};
@@ -181,6 +190,7 @@ Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 				}
 				var FYFS = this.simple.items.get(5).getValue();
 				var YF = this.simple.items.get(7).getValue();
+				var YPYF = this.simple.items.get(9).getValue();
 				if (dateFrom != null && dateTo != null && dateFrom != ""
 						&& dateTo != "" && dateFrom > dateTo) {
 					Ext.MessageBox.alert("提示", "开始日期不能大于终止日期");
@@ -198,6 +208,7 @@ Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 								[ 's', 'yyyy-mm-dd hh24:mi:ss' ] ] ];
 				var FYFSCnd = [ 'eq', [ '$', "a.FYLX" ], [ 'd', FYFS ] ];
 				var YFCnd = [ 'eq', [ '$', "a.YFSB" ], [ 's', YF ] ];
+				var YPYFCnd = [ 'eq', [ '$', "a.YPYF" ], [ 'd', YPYF ] ];
 				var cnd = [];
 				if (dateFrom != null && dateFrom != "") {
 					if (cnd.length > 0) {
@@ -229,6 +240,14 @@ Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 						cnd = YFCnd;
 					}
 				}
+				if (YPYF != null && YPYF != "") {
+					body["YPYF"] = YPYF;
+					if (cnd.length > 0) {
+						cnd = [ 'and', cnd, YPYFCnd ];
+					} else {
+						cnd = YPYFCnd;
+					}
+				}
 				if (cnd.length == 0) {
 					cnd = null;
 				}
@@ -239,10 +258,12 @@ Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 			doNew : function() {
 				this.simple.items.get(5).setValue("");
 				this.simple.items.get(7).setValue("");
+				this.simple.items.get(9).setValue("");
 				this.simple.items.get(1).setValue(new Date().format('Y-m-d'));
 				this.simple.items.get(3).setValue(new Date().format('Y-m-d'));
 			},
 			doPrint : function() {
+				debugger;
 				var dateFrom = this.simple.items.get(1).getValue();
 				var dateTo = this.simple.items.get(3).getValue();
 				if (!dateFrom || !dateTo) {
@@ -251,6 +272,7 @@ Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 				}
 				var FYFS = this.simple.items.get(5).getValue();
 				var YF = this.simple.items.get(7).getValue();
+				var YPYF = this.simple.items.get(9).getValue();
 				var bq = this.mainApp['phis'].wardId;
 				var module = this.createModule("hospitalPharmacyMedicineHZ",
 						this.refHospitalPharmacyMedicineHZPrint);
@@ -258,6 +280,7 @@ Ext.extend(phis.application.hph.script.HospitalPharmacyMedicineHZ,
 				module.dateTo = dateTo;
 				module.FYFS = FYFS;
 				module.YF = YF;
+				module.YPYF = YPYF;
 				module.bq = bq;
 				module.initPanel();
 				module.doPrint();
