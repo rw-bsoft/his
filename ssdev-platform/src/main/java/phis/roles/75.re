@@ -229,6 +229,12 @@
           <module id="WAR71">
             <others/>
           </module>
+          <module id="WAR72">
+            <others/>
+          </module>
+          <module id="WAR73">
+            <others/>
+          </module>
         </catagory>
       </app>
     </apps>

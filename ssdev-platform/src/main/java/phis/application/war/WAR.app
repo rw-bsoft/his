@@ -2841,7 +2841,12 @@
 		
 		<!-- add renwei 2020-08-07 -->
 		<module id="WAR71" name="门诊基本药物使用统计" script="phis.prints.script.BasicDrugUseStatistics_MZ">
-		</module>	
+		</module>
+		<!-- add renwei 2020-12-08 -->
+		<module id="WAR72" name="门诊患者基本药物处方占比统计" script="phis.prints.script.BasicDrugUseStatistics_MZCF">
+		</module>
+		<module id="WAR73" name="住院患者基本药物使用率" script="phis.prints.script.BasicDrugUseStatistics_ZYCF">
+		</module>
 		
 		<module id="WAR99" name="病区护士评估"
 			script="phis.prints.script.WarNursesAssessPrintView">

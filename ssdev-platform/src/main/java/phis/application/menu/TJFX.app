@@ -273,7 +273,9 @@
 	</catagory>
 	
     <catagory id="JBY" name="基本药物管理" type="">	
-		<module ref="phis.application.war.WAR/WAR/WAR71" />		
+		<module ref="phis.application.war.WAR/WAR/WAR71" />
+		<module ref="phis.application.war.WAR/WAR/WAR72" />
+		<module ref="phis.application.war.WAR/WAR/WAR73" />
 	</catagory>
 		
 	<catagory id="PCM" name="处方点评管理" type="">
