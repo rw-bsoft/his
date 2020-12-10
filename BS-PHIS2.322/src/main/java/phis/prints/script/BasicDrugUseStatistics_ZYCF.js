@@ -44,7 +44,7 @@ Ext.extend(phis.prints.script.BasicDrugUseStatistics_ZYCF, app.desktop.Module, {
 	initConditionFields : function() {
 		var items = [];
 		items.push(new Ext.form.Label({
-					text : "发药日期"
+					text : "出院日期"
 				}));
 		items.push(new Ext.form.DateField({
 					name : 'beginDate',
