@@ -158,7 +158,6 @@ public class HospitalPatientSelectionModel {
 	  * 获取jsxz
 	  * 
 	  * @param req
-	  * @param res
 	  * @param ctx
 	  */
 	 public Map<String, Object> doGetjsxz(String req, Context ctx)throws ModelDataOperationException {
@@ -240,17 +239,17 @@ public class HospitalPatientSelectionModel {
 			String sql_jsxz = "";
 			if(body.get("FPHM") != null && !(body.get("FPHM")+"").equals("")){
 				sql_jsxz = " and b.JSXZ="+JSXZ;
-			}			
+			}
 			List<Map<String, Object>> FYZKBD = dao.doSqlQuery(
 							" select distinct ZYH as ZYH,JSCS as JSCS,ZYGB as ZYGB,sum(ZJJE) as ZJJE,sum(ZFJE) as ZFJE," +
 							" sum(ZLJE) as ZLJE from (SELECT b.ZYH as ZYH,b.JSCS as JSCS,a.ZYGB as ZYGB," +
 							" sum(b.ZJJE) as ZJJE,sum(b.ZFJE) as ZFJE,sum(b.ZLJE) as ZLJE FROM "+ 
-							" GY_SFXM a,ZY_FYMX b WHERE a.SFXM = b.FYXM AND b.ZYH = :ZYH AND b.JSCS = "+ jscs + sql_jsxz + 
+							" GY_SFXM a,ZY_FYMX b WHERE a.SFXM = b.FYXM AND b.ZYH = '"+ZYH+"' AND b.JSCS = "+ jscs + sql_jsxz +
 							" GROUP BY a.ZYGB,b.ZYH,b.JSCS union select "+ body.get("ZYH")+ " as ZYH,"+ jscs+ 
 							" as JSCS,ZYGB as ZYGB,0 as ZJJE,0 as ZFJE,0 as ZLJE from "+ 
 							" GY_SFXM a where a.ZYSY = 1 and a.sfxm not in (SELECT b.FYXM from "+ 
-							" ZY_FYMX b where b.ZYH = :ZYH" + sql_jsxz + ")) GROUP BY ZYH,ZYGB,JSCS order by ZYGB",
-							parameters);
+							" ZY_FYMX b where b.ZYH = '"+ZYH+"'" + sql_jsxz + ")) GROUP BY ZYH,ZYGB,JSCS order by ZYGB",
+							null);
 			SchemaUtil.setDictionaryMassageForList(FYZKBD,
 					"phis.application.hos.schemas.ZY_JSGL_LIST");
 			List<Map<String, Object>> RFYZKBD = new ArrayList<Map<String, Object>>();
@@ -687,8 +686,7 @@ public class HospitalPatientSelectionModel {
 
 	/**
 	 * 获取发票号码
-	 * 
-	 * @param req
+	 *
 	 * @param res
 	 * @param ctx
 	 */
@@ -1857,7 +1855,6 @@ public class HospitalPatientSelectionModel {
 	 * Description: 数字转化成整数
 	 * 
 	 * @param str
-	 * @param fan
 	 * @return
 	 */
 	public static String numberToZH(String str) {
