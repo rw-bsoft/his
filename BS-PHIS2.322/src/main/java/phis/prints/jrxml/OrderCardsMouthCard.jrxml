@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsMouthCard" language="groovy" pageWidth="555" pageHeight="800" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="df729af0-9c06-4d9f-9c7e-e1350d9e03d0">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderCardsMouthCard" language="groovy" pageWidth="555" pageHeight="125" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="df729af0-9c06-4d9f-9c7e-e1350d9e03d0">
 	<property name="ireport.zoom" value="1.4641000000000013"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -36,7 +36,7 @@
 	<detail>
 		<band height="125" splitType="Stretch">
 			<subreport isUsingCache="true">
-				<reportElement key="subreport" x="13" y="93" width="528" height="20" uuid="f68c9b48-4abf-41aa-9249-407c2e816ada"/>
+				<reportElement key="subreport" x="13" y="92" width="528" height="20" uuid="f68c9b48-4abf-41aa-9249-407c2e816ada"/>
 				<dataSourceExpression><![CDATA[$F{PCMC}]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "OrderCardsChildren.jasper"]]></subreportExpression>
 			</subreport>
@@ -203,7 +203,7 @@
 				<text><![CDATA[月]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="485" y="74" width="55" height="18" uuid="832d2eb6-d062-4b08-b079-878610218aae"/>
+				<reportElement key="staticText" stretchType="RelativeToTallestObject" x="485" y="74" width="55" height="18" uuid="832d2eb6-d062-4b08-b079-878610218aae"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>

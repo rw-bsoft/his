@@ -266,6 +266,9 @@ Ext.extend(phis.application.war.script.OrderCardsPrintModule,
 						LODOP.ADD_PRINT_HTM("0","0","100%","100%",rehtm);
 						LODOP.SET_PRINT_MODE ("PRINT_PAGE_PERCENT","Full-Width");
 					}else{
+						LODOP.PRINT_INIT("打印控件");
+						LODOP.SET_PRINT_PAGESIZE("1","","","A4");//148mm*210mm
+						LODOP.SET_PRINT_MODE ("PRINT_PAGE_PERCENT","Full-Width");
 						LODOP.ADD_PRINT_HTM("0","0","100%","100%",util.rmi.loadXML({url:url,httpMethod:"get"}));
 					}
 //					LODOP.SET_PRINT_MODE ("PRINT_PAGE_PERCENT","Full-Width");
