@@ -203,8 +203,6 @@ public class BasicDrugUseStatistics_ZYFile implements IHandler {
 
 	/**
 	 * 拼接整合map对象,得到结果集
-	 * @param cfzx
-	 * @param kjywcfs
 	 * @return 
 	 */
 	private  BasicDrugUseStatistics_ZYFile map_Splice(List<Map<String, Object>> ret,
