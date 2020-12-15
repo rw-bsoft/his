@@ -29,9 +29,8 @@
 	<item id="YCSL" alias="数量" type="double" length="8" precision="2" min="0.01" max="9999.99" not-null="true" width="60" defaultValue="1"/>
 	<item id="YFDW" alias=" "  width="30"  type="string" fixed="true" length="4" />
 	<item id="SYPC" alias="频次" type="string" not-null="true" length="6" width="60">
-		<!--<dic id="phis.dictionary.useRate" searchField="text" fields="key,text,MRCS,ZXSJ"
-		filter="['and',['eq',['$','item.properties.ZXZQ'],['i','1']],['eq',['$','item.properties.MRCS'],['i','1']]]" autoLoad="true"/> -->
-		<dic id="phis.dictionary.useRate" searchField="text" fields="key,text,MRCS,ZXSJ" autoLoad="true"/>
+		<dic id="phis.dictionary.useRate" searchField="text" fields="key,text,MRCS,ZXSJ"
+		filter="['and',['eq',['$','item.properties.ZXZQ'],['i','1']],['eq',['$','item.properties.MRCS'],['i','1']]]" autoLoad="true"/>
 	</item>
 	<item id="MRCS" alias="每日次数" type="int" display="0"/>
 	<item id="YZZXSJ" alias="执行时间" length="80"/>
