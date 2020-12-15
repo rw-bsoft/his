@@ -1,683 +1,499 @@
-<?xml version="1.0" encoding="UTF-8"  ?>
-<!-- Created with iReport - A designer for JasperReports -->
-<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
-<jasperReport
-		 name="report1"
-
-		 language="groovy"		 columnCount="1"
-		 printOrder="Vertical"
-		 orientation="Landscape"
-		 pageWidth="842"
-		 pageHeight="595"
-		 columnWidth="802"
-		 columnSpacing="0"
-		 leftMargin="20"
-		 rightMargin="20"
-		 topMargin="20"
-		 bottomMargin="20"
-		 whenNoDataType="NoPages"
-		 isTitleNewPage="false"
-		 isSummaryNewPage="false">
-	<property name="ireport.scriptlethandling" value="0" />
-	<property name="ireport.encoding" value="UTF-8" />
-	<import value="java.util.*" />
-	<import value="net.sf.jasperreports.engine.*" />
-	<import value="net.sf.jasperreports.engine.data.*" />
-
-
-		<background>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</background>
-		<title>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</title>
-		<pageHeader>
-			<band height="113"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="320"
-						y="48"
-						width="299"
-						height="25"
-						key="textField"/>
-					<box>					<topPen lineWidth="0.0"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a0cef736-be97-4d79-90d2-9c127bbe7edc">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="113" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="320" y="48" width="299" height="25" uuid="3ebce39f-b885-4d42-abc4-8df7b52379f9"/>
+				<box>
+					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
 					<bottomPen lineWidth="0.0"/>
-</box>
-					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font fontName="宋体" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{TJSJFW}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="240"
-						y="83"
-						width="80"
-						height="30"
-						key="staticText"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TJSJFW}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" x="240" y="83" width="80" height="30" uuid="af356bd4-eef9-4ee7-b28e-5b51f18febdf"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[处方金额]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="160"
-						y="83"
-						width="80"
-						height="30"
-						key="staticText"/>
-					<box>					<topPen lineWidth="1.0"/>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="160" y="83" width="80" height="30" uuid="66402624-7b9b-41b3-b030-c094e643202e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[处方总数]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="231"
-						y="48"
-						width="89"
-						height="25"
-						key="staticText"/>
-					<box>					<topPen lineWidth="0.0"/>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="231" y="48" width="89" height="25" uuid="70096000-832e-416f-9c8e-b10be58cc935"/>
+				<box>
+					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="0.0"/>
-</box>
-					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
 				<text><![CDATA[统计时间范围:]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="320"
-						y="83"
-						width="80"
-						height="30"
-						key="staticText"/>
-					<box>					<topPen lineWidth="1.0"/>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="320" y="83" width="80" height="30" uuid="5b44363e-28ec-4a34-8f4b-25059b689831"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[基本药物处方数]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="400"
-						y="83"
-						width="80"
-						height="30"
-						key="staticText"/>
-					<box>					<topPen lineWidth="1.0"/>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="400" y="83" width="80" height="30" uuid="e7df0672-03e6-49d4-a792-5b624304400d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[基本药物处方金额]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="480"
-						y="83"
-						width="80"
-						height="30"
-						key="staticText"/>
-					<box>					<topPen lineWidth="1.0"/>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="480" y="83" width="80" height="30" uuid="297cd2df-702a-4cf6-9a75-e11e8d06573e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[基本药物处方金额比例]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="720"
-						y="83"
-						width="82"
-						height="30"
-						key="staticText"/>
-					<box>					<topPen lineWidth="1.0"/>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="720" y="83" width="82" height="30" uuid="28fa946d-5880-400d-a0c2-9a2875d10da2"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[非基本药物处方金额比例]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="640"
-						y="83"
-						width="80"
-						height="30"
-						key="staticText"/>
-					<box>					<topPen lineWidth="1.0"/>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="640" y="83" width="80" height="30" uuid="063e0480-c364-4fa5-8002-9f0954696949"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[非基本药物处方金额]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="560"
-						y="83"
-						width="80"
-						height="30"
-						key="staticText"/>
-					<box>					<topPen lineWidth="1.0"/>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="560" y="83" width="80" height="30" uuid="df2cf82e-8235-48e4-9c4e-4f0f8d506289"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[非基本药物处方数]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="15"
-						width="801"
-						height="33"
-						key="textField"/>
-					<box>					<topPen lineWidth="0.0"/>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="0" y="15" width="801" height="33" uuid="8e3eb79a-6fbf-4661-808a-8884fdb54b25"/>
+				<box>
+					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
 					<bottomPen lineWidth="0.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="22" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{TITLE}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="80"
-						y="83"
-						width="80"
-						height="30"
-						key="staticText-1"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TITLE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-1" x="80" y="83" width="80" height="30" uuid="9a0d1535-03cc-454a-9b54-103b5255141d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[医生姓名]]></text>
-				</staticText>
-			</band>
-		</pageHeader>
-		<columnHeader>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</columnHeader>
-		<detail>
-			<band height="25"  isSplitAllowed="true" >
-				<break>
-					<reportElement
-						x="0"
-						y="24"
-						width="802"
-						height="0"
-						key="element-16"
-						isPrintRepeatedValues="false"
-						isRemoveLineWhenBlank="true">
-							<printWhenExpression><![CDATA[new Boolean($V{COLUMN_COUNT}.intValue()%32==0)]]></printWhenExpression>
-						</reportElement>
-				</break>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="240"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"
-						stretchType="RelativeToBandHeight"/>
-					<box>					<topPen lineWidth="1.0"/>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<break>
+				<reportElement key="element-16" isPrintRepeatedValues="false" x="0" y="24" width="802" height="1" isRemoveLineWhenBlank="true" uuid="51b5072e-0e29-4468-bb60-31e07b092a2c">
+					<printWhenExpression><![CDATA[new Boolean($V{COLUMN_COUNT}.intValue()%32==0)]]></printWhenExpression>
+				</reportElement>
+			</break>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" stretchType="RelativeToBandHeight" x="240" y="0" width="80" height="25" uuid="cd91648a-9c09-4718-a172-5c21c6734fc8"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{FYJE}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="400"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"
-						stretchType="RelativeToBandHeight"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FYJE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" stretchType="RelativeToBandHeight" x="400" y="0" width="80" height="25" uuid="03a33123-d35f-45ce-afa3-8c7ee9c6437d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{JYFYJE}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="320"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"
-						stretchType="RelativeToBandHeight"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JYFYJE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" stretchType="RelativeToBandHeight" x="320" y="0" width="80" height="25" uuid="db2d7b07-c112-40bd-9104-2a4fe480cd12"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{JYCFZS}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="160"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"
-						stretchType="RelativeToBandHeight"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JYCFZS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" stretchType="RelativeToBandHeight" x="160" y="0" width="80" height="25" uuid="45a8737d-98e5-4a7b-a6ea-6d5e5681d123"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{CFZS}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="480"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"
-						stretchType="RelativeToBandHeight"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CFZS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" stretchType="RelativeToBandHeight" x="480" y="0" width="80" height="25" uuid="6a5517f8-722a-4875-a2b6-1e1c9cc20c27"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{JYBL}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="560"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"
-						stretchType="RelativeToBandHeight"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JYBL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" stretchType="RelativeToBandHeight" x="560" y="0" width="80" height="25" uuid="d36e154e-dbc9-4d7d-9d16-823438ffdbb2"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{FJYCFZS}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="640"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"
-						stretchType="RelativeToBandHeight"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FJYCFZS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" stretchType="RelativeToBandHeight" x="640" y="0" width="80" height="25" uuid="8949703f-2c02-40bf-a8c2-630ea5279454"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{FJYFYJE}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="720"
-						y="0"
-						width="82"
-						height="25"
-						key="textField"
-						stretchType="RelativeToBandHeight"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FJYFYJE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" stretchType="RelativeToBandHeight" x="720" y="0" width="82" height="25" uuid="770124dd-ce61-40cb-a0f5-898f3caa0edc"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{FJYBL}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="80"
-						y="0"
-						width="80"
-						height="25"
-						key="textField-1"
-						stretchType="RelativeToBandHeight"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FJYBL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-1" stretchType="RelativeToBandHeight" x="80" y="0" width="80" height="25" uuid="38aba8d3-3325-429b-868b-e40174be4054"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{YSXM}]]></textFieldExpression>
-				</textField>
-			</band>
-		</detail>
-		<columnFooter>
-			<band height="25"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="80"
-						y="-1"
-						width="77"
-						height="25"
-						key="textField"/>
-					<box>					<topPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{YSXM}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="25" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="80" y="-1" width="77" height="25" uuid="c3e4bab4-40be-43e9-aa25-032bae6f1c1a"/>
+				<box>
+					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="0.0"/>
-</box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="宋体" size="12" isUnderline="false"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{ZB}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="39"
-						y="-1"
-						width="38"
-						height="25"
-						key="staticText"/>
-					<box>					<topPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ZB}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" x="39" y="-1" width="38" height="25" uuid="5eab6591-a2e7-4479-8f65-6574ad196bc9"/>
+				<box>
+					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="0.0"/>
-</box>
-					<textElement verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12"/>
-					</textElement>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
 				<text><![CDATA[制表:]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="711"
-						y="0"
-						width="90"
-						height="25"
-						key="textField"/>
-					<box></box>
-					<textElement verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12" isUnderline="false"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{ZBRQ}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="644"
-						y="0"
-						width="67"
-						height="25"
-						key="staticText"/>
-					<box>					<topPen lineWidth="0.0"/>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="711" y="0" width="90" height="25" uuid="52e0464e-8ff3-43f3-85eb-d0bc0e394f9f"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ZBRQ}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" x="644" y="0" width="67" height="25" uuid="9e3e1e10-fcfd-4afc-928d-9c641a2387b3"/>
+				<box>
+					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="0.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
 				<text><![CDATA[制表日期:]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="376"
-						y="0"
-						width="55"
-						height="25"
-						key="staticText"/>
-					<box>					<topPen lineWidth="0.0"/>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="376" y="0" width="55" height="25" uuid="c055e002-23b4-491a-9521-6c133a90bf7d"/>
+				<box>
+					<topPen lineWidth="0.0"/>
 					<leftPen lineWidth="0.0"/>
 					<bottomPen lineWidth="0.0"/>
 					<rightPen lineWidth="0.0"/>
-</box>
-					<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12"/>
+				</textElement>
 				<text><![CDATA[审核:]]></text>
-				</staticText>
-			</band>
-		</columnFooter>
-		<pageFooter>
-			<band height="32"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="80"
-						y="5"
-						width="721"
-						height="20"
-						key="textField"/>
-					<box></box>
-					<textElement textAlignment="Center">
-						<font fontName="宋体" size="12" isUnderline="false"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["第"+$V{PAGE_NUMBER}+"页"]]></textFieldExpression>
-				</textField>
-			</band>
-		</pageFooter>
-		<summary>
-			<band height="26"  isSplitAllowed="true" >
-				<staticText>
-					<reportElement
-						x="80"
-						y="0"
-						width="80"
-						height="25"
-						key="staticText"/>
-					<box>					<topPen lineWidth="1.0"/>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="32" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="80" y="5" width="721" height="20" uuid="330934e5-5ffa-4dd5-9aea-4570674d8b7d"/>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="12" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["第"+$V{PAGE_NUMBER}+"页"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText" x="80" y="0" width="80" height="25" uuid="4eb3a3c0-6149-40be-aab2-8b8b907bab86"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[合计:]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="320"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"/>
-					<box>					<topPen lineWidth="1.0"/>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="320" y="0" width="80" height="25" uuid="5cbdf715-be7d-41c1-9a87-abbaf5aa904f"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{JYCFZS_ALL}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="240"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{JYCFZS_ALL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="240" y="0" width="80" height="25" uuid="d4034179-d49f-4284-9320-573550d62840"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{FYJE_ALL}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="160"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FYJE_ALL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="160" y="0" width="80" height="25" uuid="b08b67d2-5053-495b-bf71-7114e5c1dd6a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{CFZS_ALL}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="400"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CFZS_ALL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="400" y="0" width="80" height="25" uuid="2aad9911-343e-4044-8f6b-9c7155618236"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{JYFYJE_ALL}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="480"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{JYFYJE_ALL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="480" y="0" width="80" height="25" uuid="89f9364f-6403-4a29-b8ff-ec7c59b48797"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{JYBL_ALL}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="560"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{JYBL_ALL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="560" y="0" width="80" height="25" uuid="eb5d159e-4783-4354-aee8-8ded6c829a5a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{FJYCFZS_ALL}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="640"
-						y="0"
-						width="80"
-						height="25"
-						key="textField"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FJYCFZS_ALL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="640" y="0" width="80" height="25" uuid="f819ecee-5b64-417c-9221-db7a53cffee6"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{FJYFYJE_ALL}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="720"
-						y="0"
-						width="82"
-						height="25"
-						key="textField"/>
-					<box>					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FJYFYJE_ALL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="720" y="0" width="82" height="25" uuid="e44c5cfb-e5cd-43dd-9da5-b42727212d7a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
-</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="宋体" size="12" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$P{FJYBL_ALL}]]></textFieldExpression>
-				</textField>
-			</band>
-		</summary>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FJYBL_ALL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
 </jasperReport>
