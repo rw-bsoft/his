@@ -4,12 +4,9 @@ import ctd.account.UserRoleToken;
 import ctd.print.IHandler;
 import ctd.print.PrintException;
 import ctd.util.context.Context;
-import phis.application.mds.source.MedicineUtils;
 import phis.source.BaseDAO;
 import phis.source.PersistentDataOperationException;
 import phis.source.utils.BSHISUtil;
-
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -57,15 +54,15 @@ public class BasicDrugUseStatistics_MZCFFile implements IHandler {
 		//String YFSB=yfsb+"";
 		//判断时间段内是否有人就诊，否则会造成除数为0
 		String isJZ="select count(*) as MZZRS from ms_ghmx where jgid='"+jgid+"' and to_char(ghsj,'yyyy-mm-dd hh24:mi:ss')>='"+dateFrom+"' " +
-				" and to_char(ghsj,'yyyy-mm-dd hh24:mi:ss')<='"+dateTo+"' and jzzt=9 ";
+				" and to_char(ghsj,'yyyy-mm-dd hh24:mi:ss')<='"+dateTo+"' and jzzt=9 and thbz='0' ";
 		BaseDAO dao = new BaseDAO();
 		Map<String,Object> brjz = dao.doSqlLoad(isJZ, null);
 		if(brjz.get("MZZRS")!="0") {
 			//就诊总人数
 			String sql_1 = "("+isJZ+") m,";
 			//基本药物使用人数
-			String sql_2 = "(select count(distinct(a.brid)) AS JYMZRS FROM  MS_CF02 b,MS_CF01 a,YK_TYPK c where c.YPXH = b.YPXH and a.CFSB = b.CFSB and a.ZFPB = 0 " +
-					" and b.ZFYP != 1 and to_char(a.FYRQ,'yyyy-mm-dd hh24:mi:ss') >= '"+dateFrom+"' and to_char(a.FYRQ,'yyyy-mm-dd hh24:mi:ss') <= '"+dateTo+"' " +
+			String sql_2 = "(select count(distinct(a.cfsb)) AS JYMZRS FROM  MS_CF02 b,MS_CF01 a,YK_TYPK c where c.YPXH = b.YPXH and a.CFSB = b.CFSB and a.ZFPB = 0 " +
+					" and b.ZFYP = 0 and to_char(a.KFRQ,'yyyy-mm-dd hh24:mi:ss') >= '"+dateFrom+"' and to_char(a.KFRQ,'yyyy-mm-dd hh24:mi:ss') <= '"+dateTo+"' " +
 					" and a.JGID ='"+jgid+"' and c.jylx=2 ) n";
 
 			StringBuffer hql = new StringBuffer("select m.mzzrs as MZZRS,n.jymzrs as JYMZRS,nvl(round(n.jymzrs*100/m.mzzrs,2),'0.00')||'%' as MZJYBL from ")
