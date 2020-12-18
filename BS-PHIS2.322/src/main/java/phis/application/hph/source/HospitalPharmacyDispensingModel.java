@@ -1370,21 +1370,36 @@ public class HospitalPharmacyDispensingModel {
 			if (req.containsKey("pageNo")) {
 				first = (Integer) req.get("pageNo") - 1;
 			}
-			//add by LIZHI 2018-03-09已退药的不查询
-			StringBuffer tyHql = new StringBuffer(
-					"select a.TYGL as TYGL ")
-					.append(" from  YF_ZYFYMX a, ZY_BRRY b")
-					.append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
-					.append(" and a.YPSL<0 ");
-			
-			StringBuffer hql1 = new StringBuffer(
-					"select b.BRCH as BRCH,b.BRXM as BRXM,d.YPMC as YPMC,d.BFGG as BFGG,d.BFDW as BFDW,e.CDMC as CDMC,sum(a.YPSL) as YPSL,a.YPDJ as YPDJ,sum(a.LSJE) as LSJE ")
-					.append(" from  YF_ZYFYMX a, ZY_BRRY b, YK_TYPK d, YK_CDDZ e ")
-					.append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
-					.append(" and a.YPXH=d.YPXH")
-					.append(" and a.YPCD=e.YPCD and a.YPSL>0 ");
+            //add by LIZHI 2018-03-09已退药的不查询
+//            StringBuffer tyHql = new StringBuffer(
+//                    "select a.TYGL as TYGL ")
+//                    .append(" from  YF_ZYFYMX a, ZY_BRRY b")
+//                    .append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
+//                    .append(" and a.YPSL<0 ");
+//
+//            StringBuffer hql1 = new StringBuffer(
+//                    "select b.BRCH as BRCH,b.BRXM as BRXM,d.YPMC as YPMC,d.BFGG as BFGG,d.BFDW as BFDW,e.CDMC as CDMC,sum(a.YPSL) as YPSL,a.YPDJ as YPDJ,sum(a.LSJE) as LSJE ")
+//                    .append(" from  YF_ZYFYMX a, ZY_BRRY b, YK_TYPK d, YK_CDDZ e ")
+//                    .append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
+//                    .append(" and a.YPXH=d.YPXH")
+//                    .append(" and a.YPCD=e.YPCD and a.YPSL>0 ");
+            StringBuffer tyHql;
+            StringBuffer hql1;
 			StringBuffer hql = new StringBuffer();
 			if(body.containsKey("JLID")){//根据提交单
+                //add by LIZHI 2018-03-09已退药的不查询
+                 tyHql = new StringBuffer(
+                        "select a.TYGL as TYGL ")
+                        .append(" from  YF_ZYFYMX a, ZY_BRRY b")
+                        .append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
+                        .append(" and a.YPSL<0 ");
+
+                 hql1 = new StringBuffer(
+                        "select b.BRCH as BRCH,b.BRXM as BRXM,d.YPMC as YPMC,d.BFGG as BFGG,d.BFDW as BFDW,e.CDMC as CDMC,sum(a.YPSL) as YPSL,a.YPDJ as YPDJ,sum(a.LSJE) as LSJE ")
+                        .append(" from  YF_ZYFYMX a, ZY_BRRY b, YK_TYPK d, YK_CDDZ e ")
+                        .append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
+                        .append(" and a.YPXH=d.YPXH")
+                        .append(" and a.YPCD=e.YPCD and a.YPSL>0 ");
 				if(body.get("JLID") != null) {
 					hql.append(" and a.JLID=:JLID");
 //					tyHql.append(" and a.JLID=:JLID");
@@ -1419,29 +1434,37 @@ public class HospitalPharmacyDispensingModel {
 					tyHql.append(" and a.QRGH=:QRGH ");
 					parameters.put("QRGH", body.get("FYGH"));
 				}
-				
+                hql.append(" group by b.BRCH,b.BRXM,d.YPMC,d.BFGG,d.BFDW,e.CDMC,a.YPSL,a.YPDJ,a.LSJE ");
+                tyHql.append(" group by a.TYGL ");
+                hql1.append(" and a.JLXH not in ("+tyHql.toString()+")");
 			}else{//根据病人
+                 hql1 = new StringBuffer(
+                        "select b.BRCH as BRCH,b.BRXM as BRXM,a.YPXH as YPXH,d.YPMC as YPMC,d.BFGG as BFGG,d.BFDW as BFDW,e.CDMC as CDMC,sum(a.YPSL) as YPSL,a.YPDJ as YPDJ,sum(a.LSJE) as LSJE ")
+                        .append(" from  YF_ZYFYMX a, ZY_BRRY b, YK_TYPK d, YK_CDDZ e ")
+                        .append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
+                        .append(" and a.YPXH=d.YPXH")
+                        .append(" and a.YPCD=e.YPCD ");
 				if (body.get("dateFrom") != null) {
 					hql.append(" and to_char(a.JFRQ,'yyyy-mm-dd hh24:mi:ss')>='")
 							.append(body.get("dateFrom")).append("'");
-					tyHql.append(" and to_char(a.JFRQ,'yyyy-mm-dd hh24:mi:ss')>='")
-							.append(body.get("dateFrom")).append("'");
+					//tyHql.append(" and to_char(a.JFRQ,'yyyy-mm-dd hh24:mi:ss')>='")
+					//		.append(body.get("dateFrom")).append("'");
 				}
 				if (body.get("dateTo") != null) {
 					hql.append(" and to_char(a.JFRQ,'yyyy-mm-dd hh24:mi:ss')<='")
 							.append(body.get("dateTo")).append("'");
-					tyHql.append(" and to_char(a.JFRQ,'yyyy-mm-dd hh24:mi:ss')<='")
-							.append(body.get("dateTo")).append("'");
+					//tyHql.append(" and to_char(a.JFRQ,'yyyy-mm-dd hh24:mi:ss')<='")
+					//		.append(body.get("dateTo")).append("'");
 				}
 				if (body.get("FYFS") != null && !body.get("FYFS").equals("")) {
 					hql.append(" and a.FYFS=:FYFS ");
-					tyHql.append(" and a.FYFS=:FYFS ");
+					//tyHql.append(" and a.FYFS=:FYFS ");
 					parameters.put("FYFS",
 							MedicineUtils.parseLong(body.get("FYFS")));
 				}
 				if (body.get("YF") != null && !body.get("YF").equals("")) {
 					hql.append(" and a.YFSB=:YF ");
-					tyHql.append(" and a.YFSB=:YF ");
+					//tyHql.append(" and a.YFSB=:YF ");
 					parameters.put("YF", MedicineUtils.parseLong(body.get("YF")));
 				}
 				long zyh = 0;
@@ -1449,26 +1472,26 @@ public class HospitalPharmacyDispensingModel {
 					zyh = Long.parseLong(body.get("ZYH") + "");
 				}
 				hql.append(" and b.ZYH=:ZYH ");
-				tyHql.append(" and b.ZYH=:ZYH ");
+				//tyHql.append(" and b.ZYH=:ZYH ");
 				parameters.put("ZYH", zyh);
 				if (body.get("FYBQ") != null && !body.get("FYBQ").equals("")) {
 					bq = MedicineUtils.parseLong(body.get("FYBQ"));
 					if(bq>0){
 						hql.append(" and a.LYBQ=:bqsb ");
-						tyHql.append(" and a.LYBQ=:bqsb ");
+						//tyHql.append(" and a.LYBQ=:bqsb ");
 						parameters.put("bqsb", bq);
 					}
 				}
 				if (body.get("FYGH") != null && !body.get("FYGH").equals("")) {
 					hql.append(" and a.QRGH=:QRGH ");
-					tyHql.append(" and a.QRGH=:QRGH ");
+					//tyHql.append(" and a.QRGH=:QRGH ");
 					parameters.put("QRGH", body.get("FYGH"));
 				}
+                hql.append(" group by b.BRCH,b.BRXM,a.YPXH,d.YPMC,d.BFGG,d.BFDW,e.CDMC,a.YPDJ ");
 			}
-			hql.append(" group by b.BRCH,b.BRXM,d.YPMC,d.BFGG,d.BFDW,e.CDMC,a.YPSL,a.YPDJ,a.LSJE ");
-			tyHql.append(" group by a.TYGL ");
-			hql1.append(" and a.JLXH not in ("+tyHql.toString()+")");
-
+//            hql.append(" group by b.BRCH,b.BRXM,d.YPMC,d.BFGG,d.BFDW,e.CDMC,a.YPSL,a.YPDJ,a.LSJE ");
+//            tyHql.append(" group by a.TYGL ");
+//            hql1.append(" and a.JLXH not in ("+tyHql.toString()+")");
 			int total = Integer.parseInt(dao
 					.doSqlQuery(
 							"select count(*) as COUNT from (" + hql1.toString() + hql.toString()
