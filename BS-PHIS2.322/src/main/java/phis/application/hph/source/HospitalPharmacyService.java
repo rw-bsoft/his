@@ -524,17 +524,26 @@ public class HospitalPharmacyService extends AbstractActionService implements DA
 	 * @param ctx
 	 * @throws ServiceException
 	 */
-	public void doQueryFyjltjd(Map<String, Object> req,
-			Map<String, Object> res, BaseDAO dao, Context ctx)
-	throws ServiceException {
+//	public void doQueryFyjltjd(Map<String, Object> req,
+//			Map<String, Object> res, BaseDAO dao, Context ctx)
+//	throws ServiceException {
+//		HospitalPharmacyDispensingModel model = new HospitalPharmacyDispensingModel(dao);
+//		List<?> cnd = (List<?>) req.get("cnd");
+//		try {
+//			List<Map<String, Object>> ret=model.queryFyjltjd(cnd,ctx);
+//			res.put("body", ret);
+//		} catch (ModelDataOperationException e) {
+//			res.put(RES_CODE, e.getCode());
+//			res.put(RES_MESSAGE, e.getMessage());
+//			throw new ServiceException(e);
+//		}
+//	}
+	public void doQueryFyjltjd(Map<String, Object> req, Map<String, Object> res, BaseDAO dao, Context ctx)
+			throws ServiceException {
 		HospitalPharmacyDispensingModel model = new HospitalPharmacyDispensingModel(dao);
-		List<?> cnd = (List<?>) req.get("cnd");
 		try {
-			List<Map<String, Object>> ret=model.queryFyjltjd(cnd,ctx);
-			res.put("body", ret);
+			model.queryFyjltjd(req, res, dao,ctx);
 		} catch (ModelDataOperationException e) {
-			res.put(RES_CODE, e.getCode());
-			res.put(RES_MESSAGE, e.getMessage());
 			throw new ServiceException(e);
 		}
 	}

@@ -28,12 +28,13 @@ import phis.source.PersistentDataOperationException;
 import phis.source.service.ServiceCode;
 import phis.source.utils.BSPHISUtil;
 import phis.source.utils.CNDHelper;
+import phis.source.utils.SchemaUtil;
 
 /**
  * 住院发药model
- * 
+ *
  * @author caijy
- * 
+ *
  */
 public class HospitalPharmacyDispensingModel {
 	protected BaseDAO dao;
@@ -45,7 +46,7 @@ public class HospitalPharmacyDispensingModel {
 	}
 
 	/**
-	 * 
+	 *
 	 * @author caijy
 	 * @createDate 2014-2-28
 	 * @description 发药
@@ -186,8 +187,8 @@ public class HospitalPharmacyDispensingModel {
 					}
 					if (map_bqyz.get("QRSJ") == null
 							|| ((Date) map_bqyz.get("QRSJ")).getTime() < (sdf
-									.parse(map_fymx.get("QRRQ") + ""))
-									.getTime()) {
+							.parse(map_fymx.get("QRRQ") + ""))
+							.getTime()) {
 						map_bqyz.put("QRSJ",
 								sdf.parse(map_fymx.get("QRRQ") + ""));
 					}
@@ -204,8 +205,8 @@ public class HospitalPharmacyDispensingModel {
 					if ((MedicineUtils.parseLong(list_bqbr.get(i).get("TJXH")) == MedicineUtils
 							.parseLong(map_fymx.get("TJXH")))
 							|| (MedicineUtils.parseLong(list_bqbr.get(i).get(
-									"ZYH")) == MedicineUtils.parseLong(map_fymx
-									.get("ZYH")))) {
+							"ZYH")) == MedicineUtils.parseLong(map_fymx
+							.get("ZYH")))) {
 						map_bqbr = list_bqbr.get(i);
 					}
 				}
@@ -228,7 +229,7 @@ public class HospitalPharmacyDispensingModel {
 								MedicineUtils.parseDouble(map_fymx.get("YPDJ"))
 										* yfbz
 										/ MedicineUtils.parseInt(map_fymx
-												.get("YFBZ"))));
+										.get("YFBZ"))));
 				// 更新库存
 				// List<Map<String, Object>> list_kcmx = new
 				// ArrayList<Map<String, Object>>();
@@ -239,7 +240,7 @@ public class HospitalPharmacyDispensingModel {
 								4,
 								MedicineUtils.parseDouble(map_fymx.get("FYSL"))
 										* MedicineUtils.parseInt(map_fymx
-												.get("YFBZ")) / yfbz));
+										.get("YFBZ")) / yfbz));
 				// list_kcmx.add(map_fymx);
 				// MedicinesPharmacyManageModel mmd = new
 				// MedicinesPharmacyManageModel(
@@ -253,7 +254,7 @@ public class HospitalPharmacyDispensingModel {
 						.queryAndLessInventory(list_fymx_temp, ctx);
 				if (list_ret == null
 						|| (list_ret.size() == 1 && list_ret.get(0)
-								.containsKey("ypxh"))) {
+						.containsKey("ypxh"))) {
 					isRollBack = false;
 					StringBuffer s_kcbg = new StringBuffer();
 					s_kcbg.append("[药品:").append(map_fymx.get("YPMC"))
@@ -297,23 +298,23 @@ public class HospitalPharmacyDispensingModel {
 							MedicineUtils.parseDouble(map_kcmx.get("YPSL"))
 									* yfbz
 									/ MedicineUtils.parseInt(map_fymx
-											.get("YFBZ"))));
+									.get("YFBZ"))));
 					map_zy_fymx.put("FYDJ", MedicineUtils.formatDouble(
 							4,
 							MedicineUtils.parseDouble(map_kcmx.get("LSJG"))
 									* MedicineUtils.parseInt(map_fymx
-											.get("YFBZ")) / yfbz));
+									.get("YFBZ")) / yfbz));
 					map_zy_fymx.put("ZJJE", MedicineUtils.formatDouble(
 							2,
 							MedicineUtils.parseDouble(map_zy_fymx.get("FYSL"))
 									* MedicineUtils.parseDouble(map_zy_fymx
-											.get("FYDJ"))));
+									.get("FYDJ"))));
 					fyje += MedicineUtils.parseDouble(map_zy_fymx.get("ZJJE"));
 					map_zy_fymx.put("ZFJE", MedicineUtils.formatDouble(
 							2,
 							zfbl
 									* MedicineUtils.parseDouble(map_zy_fymx
-											.get("ZJJE"))));
+									.get("ZJJE"))));
 					map_zy_fymx.put("YSGH", map_bqyz.get("YSGH"));
 					map_zy_fymx.put("SRGH", userid);
 					map_zy_fymx.put("QRGH", userid);
@@ -353,12 +354,12 @@ public class HospitalPharmacyDispensingModel {
 							MedicineUtils.parseDouble(map_kcmx.get("YPSL"))
 									* yfbz
 									/ MedicineUtils.parseInt(map_fymx
-											.get("YFBZ"))));
+									.get("YFBZ"))));
 					map_yf_zyfymx_data.put("YPDJ", MedicineUtils.formatDouble(
 							4,
 							MedicineUtils.parseDouble(map_kcmx.get("LSJG"))
 									* MedicineUtils.parseInt(map_fymx
-											.get("YFBZ")) / yfbz));
+									.get("YFBZ")) / yfbz));
 					map_yf_zyfymx_data.put("ZFBL", zfbl);
 					map_yf_zyfymx_data.put("QRGH", userid);
 					map_yf_zyfymx_data.put("JFRQ", d);
@@ -372,52 +373,52 @@ public class HospitalPharmacyDispensingModel {
 					map_yf_zyfymx_data.put("YZXH", map_fymx.get("YZXH"));
 					map_yf_zyfymx_data.put("YEPB", map_fymx.get("YEPB"));
 					map_yf_zyfymx_data.put("ZFPB", zfbl == 1 ? 0 : 1);// zfbl =
-																		// 1时是0
-																		// 否则是1
+					// 1时是0
+					// 否则是1
 					map_yf_zyfymx_data.put("FYFS", map_bqbr.get("FYFS"));
 					map_yf_zyfymx_data.put("LSJG", MedicineUtils.formatDouble(
 							4,
 							MedicineUtils.parseDouble(map_kcmx.get("LSJG"))
 									* MedicineUtils.parseInt(map_fymx
-											.get("YFBZ")) / yfbz));
+									.get("YFBZ")) / yfbz));
 					map_yf_zyfymx_data.put("PFJG", MedicineUtils.formatDouble(
 							4,
 							MedicineUtils.parseDouble(map_kcmx.get("PFJG"))
 									* MedicineUtils.parseInt(map_fymx
-											.get("YFBZ")) / yfbz));
+									.get("YFBZ")) / yfbz));
 					map_yf_zyfymx_data.put("JHJG", MedicineUtils.formatDouble(
 							4,
 							MedicineUtils.parseDouble(map_kcmx.get("JHJG"))
 									* MedicineUtils.parseInt(map_fymx
-											.get("YFBZ")) / yfbz));
+									.get("YFBZ")) / yfbz));
 					map_yf_zyfymx_data.put("FYJE", MedicineUtils.formatDouble(
 							2,
 							MedicineUtils.parseDouble(map_yf_zyfymx_data
 									.get("YPSL"))
 									* MedicineUtils
-											.parseDouble(map_yf_zyfymx_data
-													.get("YPDJ"))));
+									.parseDouble(map_yf_zyfymx_data
+											.get("YPDJ"))));
 					map_yf_zyfymx_data.put("LSJE", MedicineUtils.formatDouble(
 							2,
 							MedicineUtils.parseDouble(map_yf_zyfymx_data
 									.get("LSJG"))
 									* MedicineUtils
-											.parseDouble(map_yf_zyfymx_data
-													.get("YPSL"))));
+									.parseDouble(map_yf_zyfymx_data
+											.get("YPSL"))));
 					map_yf_zyfymx_data.put("PFJE", MedicineUtils.formatDouble(
 							2,
 							MedicineUtils.parseDouble(map_yf_zyfymx_data
 									.get("PFJG"))
 									* MedicineUtils
-											.parseDouble(map_yf_zyfymx_data
-													.get("YPSL"))));
+									.parseDouble(map_yf_zyfymx_data
+											.get("YPSL"))));
 					map_yf_zyfymx_data.put("JHJE", MedicineUtils.formatDouble(
 							2,
 							MedicineUtils.parseDouble(map_yf_zyfymx_data
 									.get("JHJG"))
 									* MedicineUtils
-											.parseDouble(map_yf_zyfymx_data
-													.get("YPSL"))));
+									.parseDouble(map_yf_zyfymx_data
+											.get("YPSL"))));
 					map_yf_zyfymx_data.put("YPPH", map_kcmx.get("YPPH"));
 					map_yf_zyfymx_data.put("YPXQ", map_kcmx.get("YPXQ"));
 					map_yf_zyfymx_data.put("TYGL", 0);
@@ -452,7 +453,7 @@ public class HospitalPharmacyDispensingModel {
 				}
 				if (map_bqyz.get("QRSJ") == null
 						|| ((Date) map_bqyz.get("QRSJ")).getTime() < (sdf
-								.parse(map_fymx.get("QRRQ") + "")).getTime()) {
+						.parse(map_fymx.get("QRRQ") + "")).getTime()) {
 					map_bqyz.put("QRSJ", sdf.parse(map_fymx.get("QRRQ") + ""));
 				}
 				// if (map_bqyz.get("TZSJ") != null) {
@@ -509,7 +510,7 @@ public class HospitalPharmacyDispensingModel {
 	}
 
 	/**
-	 * 
+	 *
 	 * @author caijy
 	 * @createDate 2014-2-28
 	 * @description 取整策略计算发药数量
@@ -533,11 +534,11 @@ public class HospitalPharmacyDispensingModel {
 //				Map<String, Object> map_qzcl = dao.doLoad(hql_qzcl.toString(),
 //						map_par_qzcl);
 			Map<String, Object> map_qzcl =MedicineUtils.getRecord(list_yfyp, MedicineUtils.parseLong(map_tj02.get("YPXH")), "YPXH");
-				if (map_qzcl == null) {
-					throw new ModelDataOperationException(
-							ServiceCode.CODE_DATABASE_ERROR, "取整策略查询失败");
-				}
-				qzcl = MedicineUtils.parseInt(map_qzcl.get("QZCL"));
+			if (map_qzcl == null) {
+				throw new ModelDataOperationException(
+						ServiceCode.CODE_DATABASE_ERROR, "取整策略查询失败");
+			}
+			qzcl = MedicineUtils.parseInt(map_qzcl.get("QZCL"));
 //			} catch (PersistentDataOperationException e) {
 //				MedicineUtils.throwsException(logger, "取整策略查询失败", e);
 //			}
@@ -554,7 +555,7 @@ public class HospitalPharmacyDispensingModel {
 					Map<String, Object> map_tj02_temp = list_tj02.get(j);
 					// 判断后面有没相同医嘱的同种药品,有就跳出循环
 					if (MedicineUtils.compareMaps(map_tj02_temp, new String[] {
-							"YZXH", "YPXH", "YPCD", "YPDJ" }, map_tj02,
+									"YZXH", "YPXH", "YPCD", "YPDJ" }, map_tj02,
 							new String[] { "YZXH", "YPXH", "YPCD", "YPDJ" })) {
 						isqz = 1;
 						fysl = MedicineUtils
@@ -570,7 +571,7 @@ public class HospitalPharmacyDispensingModel {
 					for (Map<String, Object> m : list_tj02) {
 						if (MedicineUtils
 								.compareMaps(m, new String[] { "YZXH", "YPXH",
-										"YPCD", "YPDJ" }, map_tj02,
+												"YPCD", "YPDJ" }, map_tj02,
 										new String[] { "YZXH", "YPXH", "YPCD",
 												"YPDJ" })) {
 							num++;
@@ -583,13 +584,13 @@ public class HospitalPharmacyDispensingModel {
 					fysl = MedicineUtils.parseDouble(Math.ceil(MedicineUtils
 							.parseDouble(map_tj02.get("YCSL")) * num))
 							- MedicineUtils.formatDouble(
-									2,
-									MedicineUtils.parseDouble(map_tj02
-											.get("YCSL")) * (num - 1));
+							2,
+							MedicineUtils.parseDouble(map_tj02
+									.get("YCSL")) * (num - 1));
 					fyje=MedicineUtils.formatDouble(2, MedicineUtils.simpleMultiply(2, Math.ceil(MedicineUtils
 							.parseDouble(map_tj02.get("YCSL")) * num), map_tj02.get("YPDJ")))-yjje+MedicineUtils.simpleMultiply(2, MedicineUtils
-									.formatDouble(2, MedicineUtils
-											.parseDouble(map_tj02.get("YCSL"))), map_tj02.get("YPDJ"));
+							.formatDouble(2, MedicineUtils
+									.parseDouble(map_tj02.get("YCSL"))), map_tj02.get("YPDJ"));
 				}
 			} else {// 不取整
 				fysl = MedicineUtils.formatDouble(2,
@@ -603,7 +604,7 @@ public class HospitalPharmacyDispensingModel {
 	}
 
 	/**
-	 * 
+	 *
 	 * @author caijy
 	 * @createDate 2014-2-28
 	 * @description 获取自付比例
@@ -654,7 +655,7 @@ public class HospitalPharmacyDispensingModel {
 	}
 
 	/**
-	 * 
+	 *
 	 * @author caijy
 	 * @createDate 2014-2-28
 	 * @description 医嘱发药全退
@@ -790,7 +791,7 @@ public class HospitalPharmacyDispensingModel {
 	}
 
 	/**
-	 * 
+	 *
 	 * @author caijy
 	 * @createDate 2014-2-28
 	 * @description 查询药房是否已经维护领药科室
@@ -825,7 +826,7 @@ public class HospitalPharmacyDispensingModel {
 	}
 
 	/**
-	 * 
+	 *
 	 * @author caijy
 	 * @createDate 2014-2-28
 	 * @description 病区待发药记录查询
@@ -885,7 +886,7 @@ public class HospitalPharmacyDispensingModel {
 	}
 
 	/**
-	 * 
+	 *
 	 * @author caijy
 	 * @createDate 2014-2-28
 	 * @description 待发药记录按病人查询
@@ -955,7 +956,7 @@ public class HospitalPharmacyDispensingModel {
 	// return ret;
 	// }
 	/**
-	 * 
+	 *
 	 * @author caijy
 	 * @createDate 2014-2-28
 	 * @description 发药药品明细查询
@@ -1034,12 +1035,12 @@ public class HospitalPharmacyDispensingModel {
 						i_kc = 1;
 						for (Map<String, Object> map_kc_temp : list_kc_temp) {
 							if (MedicineUtils.compareMaps(map_kc, new String[] {
-									"YPXH", "YPCD", "LSJG" }, map_kc_temp,
+											"YPXH", "YPCD", "LSJG" }, map_kc_temp,
 									new String[] { "YPXH", "YPCD", "LSJG" })) {
 								if (MedicineUtils.parseDouble(map_kc
 										.get("YPSL"))
 										- MedicineUtils.parseDouble(map_kc_temp
-												.get("YPSL")) - fysl < 0) {
+										.get("YPSL")) - fysl < 0) {
 									map_tj02.put("ZT", "缺药");
 									break;
 								} else {
@@ -1127,10 +1128,10 @@ public class HospitalPharmacyDispensingModel {
 		}
 		return list_tj02;
 	}
-	
-	
+
+
 	/**
-	 * 
+	 *
 	 * @author caijy
 	 * @createDate 2015-8-26
 	 * @description 获取药品自负比例
@@ -1204,9 +1205,9 @@ public class HospitalPharmacyDispensingModel {
 		} catch (PersistentDataOperationException e) {
 			MedicineUtils.throwsException(logger, "查询自负比例失败", e);
 		}
-		
+
 	}
-	
+
 	/**
 	 * 病区发药按提交单查询
 	 * @param cnd
@@ -1214,20 +1215,50 @@ public class HospitalPharmacyDispensingModel {
 	 * @return
 	 * @throws ModelDataOperationException
 	 */
-	public List<Map<String, Object>> queryFyjltjd(List<?> cnd, Context ctx)
+//	public List<Map<String, Object>> queryFyjltjd(List<?> cnd, Context ctx)
+//			throws ModelDataOperationException {
+//		UserRoleToken user = UserRoleToken.getCurrent();
+//		List<Map<String, Object>> ret = new ArrayList<Map<String, Object>>();
+//		try {
+//			if (cnd != null) {
+//				ret = dao.doList(cnd, null, BSPHISEntryNames.YF_FYJL_LSCX);
+//			}
+//		} catch (PersistentDataOperationException e) {
+//			MedicineUtils.throwsException(logger, "发药记录查询失败", e);
+//		}
+//		return ret;
+//	}
+
+	public void  queryFyjltjd(Map<String, Object> req, Map<String, Object> res, BaseDAO dao, Context ctx)
 			throws ModelDataOperationException {
 		UserRoleToken user = UserRoleToken.getCurrent();
-		List<Map<String, Object>> ret = new ArrayList<Map<String, Object>>();
+		String JGID = user.getManageUnitId();// 用户的机构ID
+		Map<String, Object> body = (Map<String, Object>) req.get("body");
+		String yfsb = MedicineUtils.parseLong(body.get("YF"))+"";
+		List<Map<String, Object>> ret ;
 		try {
-			if (cnd != null) {
-				ret = dao.doList(cnd, null, BSPHISEntryNames.YF_FYJL_LSCX);
+			StringBuffer sql = new StringBuffer();
+			sql.append("select jgid as JGID,jlid as JLID,to_char(fysj,'yyyy-mm-dd hh24:mi:ss') as FYSJ,fygh as FYGH,fybq as FYBQ,fylx as FYLX,yfsb as YFSB,fyfs as FYFS,dypb as DYPB from YF_FYJL " +
+					"where jgid='"+JGID+"' and yfsb='"+yfsb+"' ");
+			if (body.get("dateFrom") != null) {
+				sql.append(" and fysj>=to_date('").append(body.get("dateFrom")).append("'").append(",'yyyy-mm-dd hh24:mi:ss')");
 			}
+			if (body.get("dateTo") != null) {
+				sql.append(" and fysj<=to_date('").append(body.get("dateTo")).append("'").append(",'yyyy-mm-dd hh24:mi:ss')");
+			}
+			if (body.get("FYFS") != null) {
+				String fylx = MedicineUtils.parseLong(body.get("FYFS"))+"";
+				sql.append(" and FYLX='"+fylx+"' ");
+			}
+			ret = dao.doSqlQuery(sql.toString(),null);
+			SchemaUtil.setDictionaryMassageForList(ret, "phis.application.hph.schemas.YF_FYJL_LSCX");
+			res.put("body", ret);
 		} catch (PersistentDataOperationException e) {
 			MedicineUtils.throwsException(logger, "发药记录查询失败", e);
 		}
-		return ret;
+		//return ret;
 	}
-	
+
 	/**
 	 * 病区发药按病人查询
 	 * @param cnd
@@ -1339,7 +1370,7 @@ public class HospitalPharmacyDispensingModel {
 		}
 
 	}
-	
+
 	/**
 	 * 查询病人发药明细
 	 * @param req
@@ -1350,7 +1381,7 @@ public class HospitalPharmacyDispensingModel {
 	 */
 	@SuppressWarnings("unchecked")
 	public void queryBRFYXM(Map<String, Object> req, Map<String, Object> res,
-			BaseDAO dao, Context ctx) throws ModelDataOperationException {
+							BaseDAO dao, Context ctx) throws ModelDataOperationException {
 		try {
 			UserRoleToken user = UserRoleToken.getCurrent();
 			String JGID = user.getManageUnitId();// 用户的机构ID
@@ -1370,7 +1401,7 @@ public class HospitalPharmacyDispensingModel {
 			if (req.containsKey("pageNo")) {
 				first = (Integer) req.get("pageNo") - 1;
 			}
-            //add by LIZHI 2018-03-09已退药的不查询
+			//add by LIZHI 2018-03-09已退药的不查询
 //            StringBuffer tyHql = new StringBuffer(
 //                    "select a.TYGL as TYGL ")
 //                    .append(" from  YF_ZYFYMX a, ZY_BRRY b")
@@ -1383,28 +1414,27 @@ public class HospitalPharmacyDispensingModel {
 //                    .append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
 //                    .append(" and a.YPXH=d.YPXH")
 //                    .append(" and a.YPCD=e.YPCD and a.YPSL>0 ");
-            StringBuffer tyHql;
-            StringBuffer hql1;
+			StringBuffer tyHql;
+			StringBuffer hql1;
 			StringBuffer hql = new StringBuffer();
 			if(body.containsKey("JLID")){//根据提交单
-                //add by LIZHI 2018-03-09已退药的不查询
-                 tyHql = new StringBuffer(
-                        "select a.TYGL as TYGL ")
-                        .append(" from  YF_ZYFYMX a, ZY_BRRY b")
-                        .append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
-                        .append(" and a.YPSL<0 ");
+				//add by LIZHI 2018-03-09已退药的不查询
+				tyHql = new StringBuffer(
+						"select a.TYGL as TYGL ")
+						.append(" from  YF_ZYFYMX a, ZY_BRRY b")
+						.append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
+						.append(" and a.YPSL<0 ");
 
-                 hql1 = new StringBuffer(
-                        "select b.BRCH as BRCH,b.BRXM as BRXM,d.YPMC as YPMC,d.BFGG as BFGG,d.BFDW as BFDW,e.CDMC as CDMC,sum(a.YPSL) as YPSL,a.YPDJ as YPDJ,sum(a.LSJE) as LSJE ")
-                        .append(" from  YF_ZYFYMX a, ZY_BRRY b, YK_TYPK d, YK_CDDZ e ")
-                        .append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
-                        .append(" and a.YPXH=d.YPXH")
-                        .append(" and a.YPCD=e.YPCD and a.YPSL>0 ");
+				hql1 = new StringBuffer(
+						"select b.BRCH as BRCH,b.BRXM as BRXM,d.YPMC as YPMC,d.BFGG as BFGG,d.BFDW as BFDW,e.CDMC as CDMC,sum(a.YPSL) as YPSL,a.YPDJ as YPDJ,sum(a.LSJE) as LSJE ")
+						.append(" from  YF_ZYFYMX a, ZY_BRRY b, YK_TYPK d, YK_CDDZ e ")
+						.append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
+						.append(" and a.YPXH=d.YPXH")
+						.append(" and a.YPCD=e.YPCD and a.YPSL>0 ");
 				if(body.get("JLID") != null) {
-					hql.append(" and a.JLID=:JLID");
+					hql.append(" and a.JLID='"+MedicineUtils.parseLong(body.get("JLID"))+"' ");
 //					tyHql.append(" and a.JLID=:JLID");
-					parameters.put("JLID",
-							MedicineUtils.parseLong(body.get("JLID")));
+					//parameters.put("JLID",MedicineUtils.parseLong(body.get("JLID")));
 				}
 				if (body.get("dateFrom") != null) {
 					tyHql.append(" and to_char(a.JFRQ,'yyyy-mm-dd hh24:mi:ss')>='")
@@ -1415,35 +1445,34 @@ public class HospitalPharmacyDispensingModel {
 							.append(body.get("dateTo")).append("'");
 				}
 				if (body.get("FYFS") != null && !body.get("FYFS").equals("")) {
-					tyHql.append(" and a.FYFS=:FYFS ");
-					parameters.put("FYFS",
-							MedicineUtils.parseLong(body.get("FYFS")));
+					tyHql.append(" and a.FYFS='"+MedicineUtils.parseLong(body.get("FYFS"))+"' ");
+					//parameters.put("FYFS", MedicineUtils.parseLong(body.get("FYFS")));
 				}
 				if (body.get("YF") != null && !body.get("YF").equals("")) {
-					tyHql.append(" and a.YFSB=:YF ");
-					parameters.put("YF", MedicineUtils.parseLong(body.get("YF")));
+					tyHql.append(" and a.YFSB='"+MedicineUtils.parseLong(body.get("YF"))+"' ");
+					//parameters.put("YF", MedicineUtils.parseLong(body.get("YF")));
 				}
 				if (body.get("FYBQ") != null && !body.get("FYBQ").equals("")) {
 					bq = MedicineUtils.parseLong(body.get("FYBQ"));
 					if(bq>0){
-						tyHql.append(" and a.LYBQ=:bqsb ");
-						parameters.put("bqsb", bq);
+						tyHql.append(" and a.LYBQ='"+bq+"' ");
+						//parameters.put("bqsb", bq);
 					}
 				}
 				if (body.get("FYGH") != null && !body.get("FYGH").equals("")) {
-					tyHql.append(" and a.QRGH=:QRGH ");
-					parameters.put("QRGH", body.get("FYGH"));
+					tyHql.append(" and a.QRGH='"+body.get("FYGH")+"' ");
+					//parameters.put("QRGH", body.get("FYGH"));
 				}
-                hql.append(" group by b.BRCH,b.BRXM,d.YPMC,d.BFGG,d.BFDW,e.CDMC,a.YPSL,a.YPDJ,a.LSJE ");
-                tyHql.append(" group by a.TYGL ");
-                hql1.append(" and a.JLXH not in ("+tyHql.toString()+")");
+				hql.append(" group by b.BRCH,b.BRXM,d.YPMC,d.BFGG,d.BFDW,e.CDMC,a.YPSL,a.YPDJ,a.LSJE ");
+				tyHql.append(" group by a.TYGL ");
+				hql1.append(" and a.JLXH not in ("+tyHql.toString()+")");
 			}else{//根据病人
-                 hql1 = new StringBuffer(
-                        "select b.BRCH as BRCH,b.BRXM as BRXM,a.YPXH as YPXH,d.YPMC as YPMC,d.BFGG as BFGG,d.BFDW as BFDW,e.CDMC as CDMC,sum(a.YPSL) as YPSL,a.YPDJ as YPDJ,sum(a.LSJE) as LSJE ")
-                        .append(" from  YF_ZYFYMX a, ZY_BRRY b, YK_TYPK d, YK_CDDZ e ")
-                        .append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
-                        .append(" and a.YPXH=d.YPXH")
-                        .append(" and a.YPCD=e.YPCD ");
+				hql1 = new StringBuffer(
+						"select b.BRCH as BRCH,b.BRXM as BRXM,a.YPXH as YPXH,d.YPMC as YPMC,d.BFGG as BFGG,d.BFDW as BFDW,e.CDMC as CDMC,sum(a.YPSL) as YPSL,a.YPDJ as YPDJ,sum(a.LSJE) as LSJE ")
+						.append(" from  YF_ZYFYMX a, ZY_BRRY b, YK_TYPK d, YK_CDDZ e ")
+						.append(" where a.JGID=:jgid and a.ZYH=b.ZYH")
+						.append(" and a.YPXH=d.YPXH")
+						.append(" and a.YPCD=e.YPCD ");
 				if (body.get("dateFrom") != null) {
 					hql.append(" and to_char(a.JFRQ,'yyyy-mm-dd hh24:mi:ss')>='")
 							.append(body.get("dateFrom")).append("'");
@@ -1487,7 +1516,7 @@ public class HospitalPharmacyDispensingModel {
 					//tyHql.append(" and a.QRGH=:QRGH ");
 					parameters.put("QRGH", body.get("FYGH"));
 				}
-                hql.append(" group by b.BRCH,b.BRXM,a.YPXH,d.YPMC,d.BFGG,d.BFDW,e.CDMC,a.YPDJ ");
+				hql.append(" group by b.BRCH,b.BRXM,a.YPXH,d.YPMC,d.BFGG,d.BFDW,e.CDMC,a.YPDJ ");
 			}
 //            hql.append(" group by b.BRCH,b.BRXM,d.YPMC,d.BFGG,d.BFDW,e.CDMC,a.YPSL,a.YPDJ,a.LSJE ");
 //            tyHql.append(" group by a.TYGL ");
