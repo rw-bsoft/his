@@ -234,7 +234,7 @@ public class PharmacyStatisticalModel {
 		UserRoleToken user = UserRoleToken.getCurrent();
 		String jgid = user.getManageUnit().getId();
 		long yfsb=MedicineUtils.parseLong(user.getProperty("pharmacyId"));
-		System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb);
+		System.out.println("1.==============>  JGID="+jgid+",YFSB="+yfsb);
 		StringBuffer hql=new StringBuffer();
 		hql.append("select nvl(c.CKMC,'<全部>') as YPMC,a.FYCK as VIRTUAL_FIELD, count(distinct(a.CFSB)) AS CFZS,sum(b.HJJE) as FYJE  from  MS_CF02 b,MS_CF01 a left outer join YF_CKBH c on c.YFSB=a.YFSB and c.JGID=a.JGID and c.CKBH=a.FYCK  where a.CFSB = b.CFSB and  a.ZFPB = 0  and a.JGID = :jgid and a.YFSB = :yfsb and ");
 		List<Map<String,Object>> list_ret=new ArrayList<Map<String,Object>>();
@@ -268,7 +268,7 @@ public class PharmacyStatisticalModel {
 		UserRoleToken user = UserRoleToken.getCurrent();
 		String jgid = user.getManageUnit().getId();
 		long yfsb=MedicineUtils.parseLong(user.getProperty("pharmacyId"));
-		System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb);
+		System.out.println("2.==============>  JGID="+jgid+",YFSB="+yfsb);
 		StringBuffer hql_mz=new StringBuffer();
 		hql_mz.append("select nvl(d.XZMC,'<全部>') as YPMC,c.BRXZ as VIRTUAL_FIELD, count(distinct(a.CFSB)) AS CFZS,sum(b.HJJE) as FYJE  from  MS_CF02 b,MS_CF01 a, MS_BRDA c left outer join GY_BRXZ d on d.BRXZ=c.BRXZ where c.BRID = a.BRID and a.CFSB = b.CFSB and  a.ZFPB = 0  and a.JGID = :jgid and a.YFSB = :yfsb ");
 		StringBuffer hql_zy=new StringBuffer();
@@ -331,7 +331,7 @@ public class PharmacyStatisticalModel {
 		UserRoleToken user = UserRoleToken.getCurrent();
 		String jgid = user.getManageUnit().getId();
 		long yfsb=MedicineUtils.parseLong(user.getProperty("pharmacyId"));
-		System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb);
+		System.out.println("3.==============>  JGID="+jgid+",YFSB="+yfsb);
 		StringBuffer hql_mz=new StringBuffer();
 		hql_mz.append("select '' as YPMC,c.TSYP as VIRTUAL_FIELD, count(distinct(a.CFSB)) AS CFZS,sum(b.HJJE) as FYJE  FROM  MS_CF02 b,MS_CF01 a, YK_TYPK c  where c.YPXH = b.YPXH and a.CFSB = b.CFSB and  a.ZFPB = 0  and a.JGID = :jgid and a.YFSB = :yfsb ");
 		StringBuffer hql_zy=new StringBuffer();
@@ -400,7 +400,7 @@ public class PharmacyStatisticalModel {
 		UserRoleToken user = UserRoleToken.getCurrent();
 		String jgid = user.getManageUnit().getId();
 		long yfsb=MedicineUtils.parseLong(user.getProperty("pharmacyId"));
-		System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb);
+		System.out.println("4.==============>  JGID="+jgid+",YFSB="+yfsb);
 		StringBuffer hql_mz=new StringBuffer();
 		hql_mz.append("select '' as YPMC,c.JYLX as VIRTUAL_FIELD, count(distinct(a.CFSB)) AS CFZS,sum(b.HJJE) as FYJE  FROM  MS_CF02 b,MS_CF01 a, YK_TYPK c  where c.YPXH = b.YPXH and a.CFSB = b.CFSB and  a.ZFPB = 0  and a.JGID = :jgid and a.YFSB = :yfsb ");
 		StringBuffer hql_zy=new StringBuffer();
@@ -469,7 +469,7 @@ public class PharmacyStatisticalModel {
 		UserRoleToken user = UserRoleToken.getCurrent();
 		String jgid = user.getManageUnit().getId();
 		long yfsb=MedicineUtils.parseLong(user.getProperty("pharmacyId"));
-		System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb);
+		System.out.println("5.==============>  JGID="+jgid+",YFSB="+yfsb);
 		StringBuffer hql_mz=new StringBuffer();
 		hql_mz.append("select '' as YPMC,c.JYLX as VIRTUAL_FIELD, count(distinct(a.CFSB)) AS CFZS,sum(b.HJJE) as FYJE,a.ysdm as YSDM,(select d.personname from sys_personnel d where  d.personid=a.ysdm) as YSXM  FROM  MS_CF02 b,MS_CF01 a, YK_TYPK c  where c.YPXH = b.YPXH and a.CFSB = b.CFSB and  a.ZFPB = 0  and a.JGID = :jgid and a.YFSB = :yfsb ");
 		StringBuffer hql_zy=new StringBuffer();
@@ -565,7 +565,7 @@ public class PharmacyStatisticalModel {
 		UserRoleToken user = UserRoleToken.getCurrent();
 		String jgid = user.getManageUnit().getId();
 		long yfsb=MedicineUtils.parseLong(user.getProperty("pharmacyId"));
-		System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb);
+		System.out.println("6.==============>  JGID="+jgid+",YFSB="+yfsb);
 		StringBuffer hql=new StringBuffer();
 		hql.append("select nvl(c.OFFICENAME,'<全部>') as YPMC,a.KSDM as VIRTUAL_FIELD, count(distinct(a.CFSB)) AS CFZS,sum(b.HJJE) as FYJE  FROM  MS_CF02 b,MS_CF01 a left outer join SYS_Office c on c.ORGANIZCODE=a.JGID and c.ID=a.KSDM  where a.CFSB = b.CFSB and  a.ZFPB = 0  and a.JGID = :jgid and a.YFSB = :yfsb and ");
 		List<Map<String,Object>> list_ret=new ArrayList<Map<String,Object>>();
@@ -587,7 +587,7 @@ public class PharmacyStatisticalModel {
 		UserRoleToken user = UserRoleToken.getCurrent();
 		String jgid = user.getManageUnit().getId();
 		long yfsb=MedicineUtils.parseLong(user.getProperty("pharmacyId"));
-		System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb);
+		System.out.println("7.==============>  JGID="+jgid+",YFSB="+yfsb);
 		StringBuffer hql=new StringBuffer();
 		hql.append("select nvl(c.PERSONNAME,'<全部>') as YPMC,a.YSDM as VIRTUAL_FIELD, count(distinct(a.CFSB)) AS CFZS," +
 				" sum(b.HJJE) as FYJE  FROM  MS_CF02 b,MS_CF01 a left outer join SYS_Personnel c on c.PERSONID=a.YSDM " +
@@ -623,7 +623,7 @@ public class PharmacyStatisticalModel {
 		UserRoleToken user = UserRoleToken.getCurrent();
 		String jgid = user.getManageUnit().getId();
 		long yfsb=MedicineUtils.parseLong(user.getProperty("pharmacyId"));
-		System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb);
+		System.out.println("8.==============>  JGID="+jgid+",YFSB="+yfsb);
 		StringBuffer hql_mz=new StringBuffer();
 		hql_mz.append("select nvl(c.PERSONNAME,'<全部>') as YPMC,a.FYGH as VIRTUAL_FIELD, count(distinct(a.CFSB)) AS CFZS,sum(b.HJJE) as FYJE  FROM  MS_CF02 b,MS_CF01 a left outer join SYS_Personnel c on a.FYGH=c.PERSONID where  a.CFSB = b.CFSB and  a.ZFPB = 0  and a.JGID = :jgid and a.YFSB = :yfsb ");
 		StringBuffer hql_zy=new StringBuffer();
@@ -854,7 +854,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("yfsb", yfsb);
 			map_par.put("jgid", jgid);
 			map_par.put("fyck", MedicineUtils.parseInt(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",FYCK="+MedicineUtils.parseInt(key));
+			System.out.println("9.==============>  JGID="+jgid+",YFSB="+yfsb+",FYCK="+MedicineUtils.parseInt(key));
 			if(tag==0){
 				ret=getPageInfoRecord(req, map_par, hql.toString(), null);
 			}else{
@@ -887,11 +887,14 @@ public class PharmacyStatisticalModel {
 		String jgid = user.getManageUnit().getId();
 		long yfsb=MedicineUtils.parseLong(user.getProperty("pharmacyId"));
 		StringBuffer hql_mz=new StringBuffer();//统计门诊
-		hql_mz.append("select c.YPMC as YPMC, c.YPXH as YPXH, e.YFGG as YPGG, e.YFDW as YPDW,sum(b.YPSL*b.CFTS) as FYSL,sum(b.HJJE) as FYJE from  MS_CF01 a, MS_CF02 b, YK_TYPK c,YK_CDXX d,YF_YPXX e,YK_CDDZ f,MS_BRDA g where g.BRID=a.BRID and g.BRXZ=:brxz and f.YPCD=d.YPCD and d.YPCD=b.YPCD and d.YPXH=b.YPXH and d.JGID=b.JGID and a.FYBZ!=0  and a.CFSB = b.CFSB AND c.YPXH = b.YPXH AND a.ZFPB = 0 AND a.YFSB=e.YFSB and b.YPXH=e.YPXH and a.YFSB=:yfsb and a.JGID=:jgid ");
+		//hql_mz.append("select c.YPMC as YPMC, c.YPXH as YPXH, e.YFGG as YPGG, e.YFDW as YPDW,sum(b.YPSL*b.CFTS) as FYSL,sum(b.HJJE) as FYJE from  MS_CF01 a, MS_CF02 b, YK_TYPK c,YK_CDXX d,YF_YPXX e,YK_CDDZ f,MS_BRDA g where g.BRID=a.BRID and g.BRXZ=:brxz and f.YPCD=d.YPCD and d.YPCD=b.YPCD and d.YPXH=b.YPXH and d.JGID=b.JGID and a.FYBZ!=0  and a.CFSB = b.CFSB AND c.YPXH = b.YPXH AND a.ZFPB = 0 AND a.YFSB=e.YFSB and b.YPXH=e.YPXH and a.YFSB=:yfsb and a.JGID=:jgid ");
+		hql_mz.append("select c.YPMC as YPMC, c.YPXH as YPXH, e.YFGG as YPGG, e.YFDW as YPDW,sum(b.YPSL) as FYSL,sum(b.HJJE) as FYJE from  MS_CF01 a, MS_CF02 b, YK_TYPK c,YF_YPXX e,MS_BRDA g where g.BRID=a.BRID and g.BRXZ=:brxz and a.FYBZ!=0  and a.CFSB = b.CFSB AND c.YPXH = b.YPXH AND a.ZFPB = 0 AND a.YFSB=e.YFSB and b.YPXH=e.YPXH and a.YFSB=:yfsb and a.JGID=:jgid ");
 		StringBuffer hql_zy=new StringBuffer();//统计住院
-		hql_zy.append("select  b.YPMC as YPMC, b.YPXH as YPXH,c.YFGG as YPGG, c.YFDW as YPDW,sum(a.YPSL) as FYSL,sum(a.FYJE) as FYJE from YF_ZYFYMX a,YK_TYPK b,YF_YPXX c,YK_CDXX d,YK_CDDZ e,ZY_BRRY f where a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH and a.YPCD=e.YPCD and a.JGID=d.JGID and e.YPCD=d.YPCD and a.YPXH=d.YPXH and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
+		//hql_zy.append("select  b.YPMC as YPMC, b.YPXH as YPXH,c.YFGG as YPGG, c.YFDW as YPDW,sum(a.YPSL) as FYSL,sum(a.FYJE) as FYJE from YF_ZYFYMX a,YK_TYPK b,YF_YPXX c,YK_CDXX d,YK_CDDZ e,ZY_BRRY f where a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH and a.YPCD=e.YPCD and a.JGID=d.JGID and e.YPCD=d.YPCD and a.YPXH=d.YPXH and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
+		hql_zy.append("select  b.YPMC as YPMC, b.YPXH as YPXH,c.YFGG as YPGG, c.YFDW as YPDW,sum(a.YPSL) as FYSL,sum(a.FYJE) as FYJE from YF_ZYFYMX a,YK_TYPK b,YF_YPXX c,ZY_BRRY f where a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH  and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
 		StringBuffer hql_jc=new StringBuffer();//统计家床
-		hql_jc.append("select  b.YPMC as YPMC, b.YPXH as YPXH,c.YFGG as YPGG, c.YFDW as YPDW,sum(a.YPSL) as FYSL,sum(a.FYJE) as FYJE from YF_JCFYMX a,YK_TYPK b,YF_YPXX c,YK_CDXX d,YK_CDDZ e,JC_BRRY f where a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH and a.YPCD=e.YPCD and a.JGID=d.JGID and e.YPCD=d.YPCD and a.YPXH=d.YPXH and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
+		//hql_jc.append("select  b.YPMC as YPMC, b.YPXH as YPXH,c.YFGG as YPGG, c.YFDW as YPDW,sum(a.YPSL) as FYSL,sum(a.FYJE) as FYJE from YF_JCFYMX a,YK_TYPK b,YF_YPXX c,YK_CDXX d,YK_CDDZ e,JC_BRRY f where a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH and a.YPCD=e.YPCD and a.JGID=d.JGID and e.YPCD=d.YPCD and a.YPXH=d.YPXH and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
+		hql_jc.append("select  b.YPMC as YPMC, b.YPXH as YPXH,c.YFGG as YPGG, c.YFDW as YPDW,sum(a.YPSL) as FYSL,sum(a.FYJE) as FYJE from YF_JCFYMX a,YK_TYPK b,YF_YPXX c,JC_BRRY f where a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH  and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
 		//List<Map<String,Object>> list_ret=new ArrayList<Map<String,Object>>();
 		Map<String,Object> ret=new HashMap<String,Object>();
 		try {
@@ -911,7 +914,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("yfsb", yfsb);
 			map_par.put("jgid", jgid);
 			map_par.put("brxz", MedicineUtils.parseLong(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",BRXZ="+MedicineUtils.parseLong(key));
+			System.out.println("10.==============>  JGID="+jgid+",YFSB="+yfsb+",BRXZ="+MedicineUtils.parseLong(key));
 			if(fylb==1){
 				if(tag==0){
 					ret=getPageInfoRecord(req, map_par, hql_mz.toString(), null);
@@ -999,7 +1002,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("yfsb", yfsb);
 			map_par.put("jgid", jgid);
 			map_par.put("tsyp", MedicineUtils.parseInt(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",BRXZ="+MedicineUtils.parseInt(key));
+			System.out.println("11.==============>  JGID="+jgid+",YFSB="+yfsb+",BRXZ="+MedicineUtils.parseInt(key));
 			if(fylb==1){
 				if(tag==0){
 					ret=getPageInfoRecord(req, map_par, hql_mz.toString(), null);
@@ -1088,7 +1091,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("yfsb", yfsb);
 			map_par.put("jgid", jgid);
 			map_par.put("JYLX", MedicineUtils.parseInt(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",JYLX="+MedicineUtils.parseInt(key));
+			System.out.println("12.==============>  JGID="+jgid+",YFSB="+yfsb+",JYLX="+MedicineUtils.parseInt(key));
 			if(fylb==1){
 				if(tag==0){
 					ret=getPageInfoRecord(req, map_par, hql_mz.toString(), null);
@@ -1177,7 +1180,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("yfsb", yfsb);
 			map_par.put("jgid", jgid);
 			map_par.put("JYLX", MedicineUtils.parseInt(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",JYLX="+MedicineUtils.parseInt(key));
+			System.out.println("13.==============>  JGID="+jgid+",YFSB="+yfsb+",JYLX="+MedicineUtils.parseInt(key));
 			if(fylb==1){
 				if(tag==0){
 					ret=getPageInfoRecord(req, map_par, hql_mz.toString(), null);
@@ -1249,7 +1252,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("yfsb", yfsb);
 			map_par.put("jgid", jgid);
 			map_par.put("ksdm", MedicineUtils.parseLong(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",KSDM="+MedicineUtils.parseLong(key));
+			System.out.println("14.==============>  JGID="+jgid+",YFSB="+yfsb+",KSDM="+MedicineUtils.parseLong(key));
 			if(tag==0){
 				ret=getPageInfoRecord(req, map_par, hql.toString(), null);
 			}else{
@@ -1281,7 +1284,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("yfsb", yfsb);
 			map_par.put("jgid", jgid);
 			map_par.put("ysdm", key);
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",YSDM="+key);
+			System.out.println("15.==============>  JGID="+jgid+",YFSB="+yfsb+",YSDM="+key);
 			if(tag==0){
 				ret=getPageInfoRecord(req, map_par, hql.toString(), null);
 			}else{
@@ -1340,7 +1343,7 @@ public class PharmacyStatisticalModel {
 			//zhaojian 2017-08-24 解决用户账号10位时超过int类型最大值或X结尾时此处转换报错问题
 			//map_par.put("fygh", MedicineUtils.parseInt(key));
 			map_par.put("fygh", key);
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",FYGH="+key);
+			System.out.println("16.==============>  JGID="+jgid+",YFSB="+yfsb+",FYGH="+key);
 			if(fylb==1){
 				//list_ret=dao.doSqlQuery(hql_mz.toString(), map_par);
 				if(tag==0){
@@ -1458,7 +1461,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("jgid", jgid);
 			map_par.put("ypxh", ypxh);
 			map_par.put("fyck", MedicineUtils.parseInt(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",FYKC="+MedicineUtils.parseInt(key));
+			System.out.println("17.==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",FYKC="+MedicineUtils.parseInt(key));
 			list_ret=dao.doSqlQuery(hql.toString(), map_par);
 		} catch (Exception e) {
 			MedicineUtils.throwsException(logger, "药房发药统计查询失败!", e);
@@ -1487,11 +1490,14 @@ public class PharmacyStatisticalModel {
 		String jgid = user.getManageUnit().getId();
 		long yfsb=MedicineUtils.parseLong(user.getProperty("pharmacyId"));
 		StringBuffer hql_mz=new StringBuffer();//统计门诊
-		hql_mz.append("select a.CFHM as CFHM,c.YPMC as YPMC, c.YPXH as YPXH, e.YFDW as YPDW,b.YPSL*b.CFTS as FYSL,b.HJJE as FYJE,a.FYRQ as FYRQ,h.PERSONNAME as FYR ,g.BRXM as BRXM from  MS_CF01 a, MS_CF02 b, YK_TYPK c,YK_CDXX d,YF_YPXX e,YK_CDDZ f,MS_BRDA g,SYS_Personnel h where h.PERSONID=a.FYGH and b.YPXH=:ypxh and g.BRID=a.BRID and g.BRXZ=:brxz and f.YPCD=d.YPCD and d.YPCD=b.YPCD and d.YPXH=b.YPXH and d.JGID=b.JGID and a.FYBZ!=0  and a.CFSB = b.CFSB AND c.YPXH = b.YPXH AND a.ZFPB = 0 AND a.YFSB=e.YFSB and b.YPXH=e.YPXH and a.YFSB=:yfsb and a.JGID=:jgid ");
+		//hql_mz.append("select a.CFHM as CFHM,c.YPMC as YPMC, c.YPXH as YPXH, e.YFDW as YPDW,b.YPSL*b.CFTS as FYSL,b.HJJE as FYJE,a.FYRQ as FYRQ,h.PERSONNAME as FYR ,g.BRXM as BRXM from  MS_CF01 a, MS_CF02 b, YK_TYPK c,YK_CDXX d,YF_YPXX e,YK_CDDZ f,MS_BRDA g,SYS_Personnel h where h.PERSONID=a.FYGH and b.YPXH=:ypxh and g.BRID=a.BRID and g.BRXZ=:brxz and f.YPCD=d.YPCD and d.YPCD=b.YPCD and d.YPXH=b.YPXH and d.JGID=b.JGID and a.FYBZ!=0  and a.CFSB = b.CFSB AND c.YPXH = b.YPXH AND a.ZFPB = 0 AND a.YFSB=e.YFSB and b.YPXH=e.YPXH and a.YFSB=:yfsb and a.JGID=:jgid ");
+		hql_mz.append("select a.CFHM as CFHM,c.YPMC as YPMC, c.YPXH as YPXH, e.YFDW as YPDW,b.YPSL as FYSL,b.HJJE as FYJE,a.FYRQ as FYRQ,h.PERSONNAME as FYR ,g.BRXM as BRXM from  MS_CF01 a, MS_CF02 b, YK_TYPK c,YF_YPXX e,MS_BRDA g,SYS_Personnel h where h.PERSONID=a.FYGH and b.YPXH=:ypxh and g.BRID=a.BRID and g.BRXZ=:brxz and a.FYBZ!=0  and a.CFSB = b.CFSB AND c.YPXH = b.YPXH AND a.ZFPB = 0 AND a.YFSB=e.YFSB and b.YPXH=e.YPXH and a.YFSB=:yfsb and a.JGID=:jgid ");
 		StringBuffer hql_zy=new StringBuffer();//统计住院
-		hql_zy.append("select '住院发药' as CFHM, b.YPMC as YPMC, b.YPXH as YPXH,c.YFDW as YPDW,a.YPSL as FYSL,a.FYJE as FYJE,a.JFRQ as FYRQ,g.PERSONNAME as FYR,f.BRXM as BRXM from YF_ZYFYMX a,YK_TYPK b,YF_YPXX c,YK_CDXX d,YK_CDDZ e,ZY_BRRY f,SYS_Personnel g where g.PERSONID=a.QRGH and a.YPXH=:ypxh and  a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH and a.YPCD=e.YPCD and a.JGID=d.JGID and e.YPCD=d.YPCD and a.YPXH=d.YPXH and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
+		//hql_zy.append("select '住院发药' as CFHM, b.YPMC as YPMC, b.YPXH as YPXH,c.YFDW as YPDW,a.YPSL as FYSL,a.FYJE as FYJE,a.JFRQ as FYRQ,g.PERSONNAME as FYR,f.BRXM as BRXM from YF_ZYFYMX a,YK_TYPK b,YF_YPXX c,YK_CDXX d,YK_CDDZ e,ZY_BRRY f,SYS_Personnel g where g.PERSONID=a.QRGH and a.YPXH=:ypxh and  a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH and a.YPCD=e.YPCD and a.JGID=d.JGID and e.YPCD=d.YPCD and a.YPXH=d.YPXH and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
+		hql_zy.append("select '住院发药' as CFHM, b.YPMC as YPMC, b.YPXH as YPXH,c.YFDW as YPDW,a.YPSL as FYSL,a.FYJE as FYJE,a.JFRQ as FYRQ,g.PERSONNAME as FYR,f.BRXM as BRXM from YF_ZYFYMX a,YK_TYPK b,YF_YPXX c,ZY_BRRY f,SYS_Personnel g where g.PERSONID=a.QRGH and a.YPXH=:ypxh and  a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
 		StringBuffer hql_jc=new StringBuffer();//统计家床
-		hql_jc.append("select '家床发药' as CFHM, b.YPMC as YPMC, b.YPXH as YPXH,c.YFDW as YPDW,a.YPSL as FYSL,a.FYJE as FYJE,a.JFRQ as FYRQ,g.PERSONNAME as FYR,f.BRXM as BRXM from YF_ZYFYMX a,YK_TYPK b,YF_YPXX c,YK_CDXX d,YK_CDDZ e,ZY_BRRY f,SYS_Personnel g where g.PERSONID=a.QRGH and a.YPXH=:ypxh and  a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH and a.YPCD=e.YPCD and a.JGID=d.JGID and e.YPCD=d.YPCD and a.YPXH=d.YPXH and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
+		//hql_jc.append("select '家床发药' as CFHM, b.YPMC as YPMC, b.YPXH as YPXH,c.YFDW as YPDW,a.YPSL as FYSL,a.FYJE as FYJE,a.JFRQ as FYRQ,g.PERSONNAME as FYR,f.BRXM as BRXM from YF_ZYFYMX a,YK_TYPK b,YF_YPXX c,YK_CDXX d,YK_CDDZ e,ZY_BRRY f,SYS_Personnel g where g.PERSONID=a.QRGH and a.YPXH=:ypxh and  a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH and a.YPCD=e.YPCD and a.JGID=d.JGID and e.YPCD=d.YPCD and a.YPXH=d.YPXH and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
+		hql_jc.append("select '家床发药' as CFHM, b.YPMC as YPMC, b.YPXH as YPXH,c.YFDW as YPDW,a.YPSL as FYSL,a.FYJE as FYJE,a.JFRQ as FYRQ,g.PERSONNAME as FYR,f.BRXM as BRXM from YF_ZYFYMX a,YK_TYPK b,YF_YPXX c,ZY_BRRY f,SYS_Personnel g where g.PERSONID=a.QRGH and a.YPXH=:ypxh and  a.YPXH=b.YPXH and a.YFSB=c.YFSB and a.YPXH=c.YPXH and a.ZYH=f.ZYH and f.BRXZ=:brxz and a.YFSB=:yfsb and a.JGID=:jgid ");
 		List<Map<String,Object>> list_ret=new ArrayList<Map<String,Object>>();
 		try {
 			if(cnd1!=null){
@@ -1508,7 +1514,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("jgid", jgid);
 			map_par.put("ypxh", ypxh);
 			map_par.put("brxz", MedicineUtils.parseLong(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",BRXZ="+MedicineUtils.parseLong(key));
+			System.out.println("18.==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",BRXZ="+MedicineUtils.parseLong(key));
 			if(fylb==1){
 				list_ret=dao.doSqlQuery(hql_mz.toString(), map_par);
 			}else if(fylb==2){
@@ -1571,7 +1577,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("jgid", jgid);
 			map_par.put("ypxh", ypxh);
 			map_par.put("tsyp", MedicineUtils.parseInt(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",TSYP="+MedicineUtils.parseInt(key));
+			System.out.println("19.==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",TSYP="+MedicineUtils.parseInt(key));
 			if(fylb==1){
 				list_ret=dao.doSqlQuery(hql_mz.toString(), map_par);
 			}else if(fylb==2){
@@ -1635,7 +1641,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("jgid", jgid);
 			map_par.put("ypxh", ypxh);
 			map_par.put("jylx", MedicineUtils.parseInt(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",JYLX="+MedicineUtils.parseInt(key));
+			System.out.println("20.==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",JYLX="+MedicineUtils.parseInt(key));
 			if(fylb==1){
 				list_ret=dao.doSqlQuery(hql_mz.toString(), map_par);
 			}else if(fylb==2){
@@ -1699,7 +1705,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("jgid", jgid);
 			map_par.put("ypxh", ypxh);
 			map_par.put("jylx", MedicineUtils.parseInt(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",JYLX="+MedicineUtils.parseInt(key));
+			System.out.println("21.==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",JYLX="+MedicineUtils.parseInt(key));
 			if(fylb==1){
 				list_ret=dao.doSqlQuery(hql_mz.toString(), map_par);
 			}else if(fylb==2){
@@ -1749,7 +1755,7 @@ public class PharmacyStatisticalModel {
 			map_par.put("jgid", jgid);
 			map_par.put("ypxh", ypxh);
 			map_par.put("ksdm", MedicineUtils.parseLong(key));
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",KSDM="+MedicineUtils.parseLong(key));
+			System.out.println("22.==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",KSDM="+MedicineUtils.parseLong(key));
 			list_ret=dao.doSqlQuery(hql.toString(), map_par);
 		} catch (Exception e) {
 			MedicineUtils.throwsException(logger, "药房发药统计查询失败!", e);
@@ -1800,7 +1806,7 @@ public class PharmacyStatisticalModel {
 			//zhaojian 2017-08-24 解决用户账号10位时超过int类型最大值或X结尾时此处转换报错问题
 			//map_par.put("fygh", MedicineUtils.parseInt(key));
 			map_par.put("fygh", key);
-			System.out.println("==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",FYGH="+key);
+			System.out.println("23.==============>  JGID="+jgid+",YFSB="+yfsb+",YPXH="+ypxh+",FYGH="+key);
 			if(fylb==1){
 				list_ret=dao.doSqlQuery(hql_mz.toString(), map_par);
 			}else if(fylb==2){
